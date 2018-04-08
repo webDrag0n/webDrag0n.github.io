@@ -1,0 +1,23 @@
+.titleButton
+{
+	width: 100%;
+	margin: 0px;
+	padding: 10px;
+	border: 0px;
+	background-color: #fafafa;
+	font-family: Consolas;
+	font-size: 20px;
+	color: #FAB604FF;
+}
+
+.titleButton:hover
+{
+	width: 100%;
+	margin: 0px;
+	padding: 10px;
+	border: 0px;
+	background-color: #afefff91;
+	font-family: Consolas;
+	font-size: 20px;
+	color: #FAB604FF;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AI construction site</title>
+    <link rel="stylesheet" href="css/notes.css?v=<?php echo time();?>">
+    <link rel="stylesheet" href="../css/AI_eca.css?v=<?php echo time();?>">
+    <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/notes.js"></script>
+
+    <link rel="icon" href="../assets/icon.jpg" />
+</head>
+<body>
+	<header class="tm-header">
+		<div class="tm-container">
+			<img class="tm-logo" src="../assets/icon.jpg" alt="logo" width="120">
+			<div class="ecaTitle">
+				Artificial Intelligence Club
+			</div>
+
+			<nav class="tm-nav">
+				<ul>
+					<li><a href="../AI_eca.html">Home</a></li>
+
+					<li><a href="">About</a></li>
+
+					<li><a href="">Services</a></li>
+
+					<li><a href="">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+
+	</header>
+
+	<div class="tm-container">
+		<div class="tm-content">
+			<article id="tensorflowNotesTitle">
+				<div id="titleContent">
+					<img src="assets/tensorflowTitle.jpg" style="width: 100%">
+				</div>
+			</article>
+			
+			<article id="tensorflowStucture">
+				<button id="tensorflowStuctureContentToggle" class="titleButton"><strong>the basic structure of a tensorflow program</strong></button>
+				<div id="tensorflowStuctureContent" style="display: none;">
+					<img src="assets/Tensorflow_graphs.png" style="width: 100%">
+				</div>
+			</article>
+
+			<article id="u2bTensorflowTutor">
+				<button id="u2bTensorflowTutorContentToggle" class="titleButton"><strong>the first tensorflow neural network</strong></button>
+				<div id="u2bTensorflowTutorContent" style="display: none;">
+					<p class="normal_paragraph">
+						the code used in this note is <a href="code/u2bTensorflowTutor.py">u2bTensorflowTutor.py</a><br>
+						github repository: <a href="https://github.com/linzexinmasterchief/TensorflowLearn">https://github.com/linzexinmasterchief/TensorflowLearn</a><br>
+						<br>
+						this code is currently able to train and save the tensorflow models, the critical variables to be save are the "x" and "sess", x indicates the input matrix ["none", 784] (the pictures are 28 x 28 pixels large, therefore 784 pixels are used, the idea of the input layer is that the pictures are "flattened" from a two dimension matrix to a one dimension matrix. Although this operation destroyed the 2D construct of the picture, it made the picture data easier for tensorflow network to process. By the way, the parameter "none" means "any number", which means the matrix could contain any amount of images)<br>
+						<br>
+						I've made a lot of comments in the code in order for you to understand
+					</p>
+				</div>
+			</article>
+
+			<article id="usingTensorboard">
+				<button id="usingTensorboardContentToggle" class="titleButton"><strong>using tensorboard to visualize the model</strong></button>
+				<div id="usingTensorboardContent" style="display: none;">
+					<img src="assets/MyTensorboard.png" style="width: 100%">
+					<p class="code_present">
+						put this in your code after the session sess is defined:<br>
+						writer = tf.summary.FileWriter('./graphs', sess.graph)<br>
+						writer.close()<br>
+						<br>
+						use this command in the terminal to start the tensorboard at 127.0.0.1:6006<br>
+						tensorboard --logdir="./graphs"
+					</p>
+				</div>
+			</article>
+
+			<article id="dataFlowGraphs">
+				<button id="dataFlowGraphsContentToggle" class="titleButton"><strong>data flow graphs</strong></button>
+				<div id="dataFlowGraphsContent" style="display: none;">		
+					<img src="assets/tensors_flowing.gif" style="width: 35%">
+				</div>
+			</article>
+
+			<article id="convolutional_neural_network">
+				<button id="convolutional_neural_networkContentToggle" class="titleButton"><strong>the use of <i>CNN (convolutional neural network)</i></strong></button>
+				<div id="convolutional_neural_networkContent" style="display: none;">
+					<p class="normal_paragraph">
+						the use of CNN provide artificial intelligences the ability to identify structured data matrix such as pictures, in the previous approches, our AI could only first flatten the 2D picture into a 1D array, then find the patterns of 0 and 1s. However, that approach obviously destroyed some critical informations, for example: the relative postion of each object, the relationship between different parts of the picture... Therefore, we need a new model, which is CNN.<br>
+						the theory of CNN itself is pretty simple and straight forward: it is like using a magnifier to scan a map, but in the opposite way. The program will first use the smallest square: 5x5 for example, small details like curves, vertical lines, and horizontal lines. The small square will move a little at a time(1 step could be 1px, 2px .etc), the scanner square itself is also a matrix which contains the special pattern it want to detect, in each step, the matrix is the square will be doing a dot product with the square scanned by the square: this is called a convolution.<br>
+					</p>
+					<img src="assets/visualizeCNN.png" width="100%">
+					<a href="http://scs.ryerson.ca/~aharley/vis/conv/" style="padding-left: 25%;">scs.ryerson.ca/~aharley/vis/conv/</a> visualized this process.
+				</div>
+			</article>
+
+			<div id="testfield">
+				original<br>
+			</div>
+		</div>
+
+		<aside class="tm-sidebar">
+			<div>
+				<h3>other</h3>
+				<ul>
+					<a href="#tensorflowNotesTitle">tensorflow notes</a><br>
+					<a href="#tensorflowStucture">---> tensorflow structures</a><br>
+					<a href="#u2bTensorflowTutor">---> u2bTensorflowTutor</a><br>
+					<a href="#usingTensorboard">---> using tensorboard</a><br>
+					<a href="#dataFlowGraphs">---> dataFlowGraphs</a><br>
+					<a href="#convolutional_neural_network">---> convolutionalNeuralNetwork</a>
+				</ul>
+			</div>
+		</aside>
+	</div>
+
+	<div class="tm-footer">
+		&copy; copyright webDrag0n 2018
+	</div>
+</body>
+</html>

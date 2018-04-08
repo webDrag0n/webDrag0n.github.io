@@ -1,0 +1,157 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+body
+{
+	background-color: #eeeeee;
+}
+
+p
+{
+	margin: 10px;
+	margin-bottom: 10px;
+
+	padding: 5px;
+	line-height: 25px;
+}
+
+article
+{
+	background-color: #fff;
+	margin-top: 10px;
+	box-shadow: 3px 3px 3px #C4C4C4C4;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	margin-bottom: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h2, h3, h4, h5, h6
+{
+	margin-left: 20px;
+}
+
+a
+{
+    color: #486FB6FF;
+}
+
+a:link { text-decoration: none;color: #486FB6FF}
+a:visited { text-decoration: none;color: #486FB6FF}
+a:hover { text-decoration: none;color: red} 
+a:active { text-decoration: blink}
+
+.tm-container
+{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.tm-header
+{
+	background-color: #fff;
+	box-shadow: 0px 4px 4px #C4C4C4C4;
+	width: 100%;
+	position: fixed;
+	/*border-bottom: 5px solid #eeeeee;*/
+	/*border-bottom-color: linear-gradient( to right, #fff, #eeeeee);*/
+	user-select: none;
+}
+
+.tm-header::after
+{
+	background-color: #eeeeee;
+	clear: both;
+	display: block;
+}
+
+.tm-nav
+{
+	float: right;
+}
+
+.tm-nav ul li
+{
+	display: inline-block;
+}
+
+.tm-nav ul li a
+{
+	text-decoration: none;
+	padding: 10px 20px;
+	color: #303030;
+	line-height: 70px;
+}
+
+.tm-nav ul li a:hover
+{
+	color: #3e99ff;
+	background: #eeeeee;
+}
+
+.tm-logo
+{
+	float: left;
+}
+
+.tm-content
+{
+	padding-top:80px;
+	padding-bottom: 10px;
+
+	float: left;
+
+	width: 70%;
+}
+
+.ecaTitle
+{
+	text-decoration: none;
+	padding: 0px 20px;
+	color: #303030;
+	line-height: 70px;
+	float: left;
+}
+
+.tm-footer
+{
+
+	background: #fff;
+	text-align: center;
+	margin: 0px auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	width: 100%;
+
+	clear: both;
+}
+
+.tm-sidebar
+{
+	margin-top: 70px;
+
+	padding-top:80px;
+
+	width: 25%;
+
+	float: right;
+}
+
+.tm-sidebar div
+{
+	background-color: #fff;
+	padding: 30px;
+	box-shadow: 3px 3px 3px #C4C4C4C4;
+}
+
+.tm-sidebar div ul li
+{
+	margin-left: 20px;
+}
