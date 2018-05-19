@@ -44,7 +44,7 @@ a
 
 a:link { text-decoration: none;color: #486FB6FF}
 a:visited { text-decoration: none;color: #486FB6FF}
-a:hover { text-decoration: none;color: red} 
+a:hover { text-decoration: none;color: red;background-color: #eeeeee} 
 a:active { text-decoration: blink}
 
 .tm-container
