@@ -38,13 +38,6 @@
 					<img src="assets/tensorflowTitle.jpg" style="width: 100%" alt="loading picture...">
 				</div>
 			</article>
-			
-			<article id="tensorflowStucture">
-				<button id="tensorflowStuctureContentToggle" class="titleButton"><strong>the basic structure of a tensorflow program</strong></button>
-				<div id="tensorflowStuctureContent" style="display: none;">
-					<img src="assets/Tensorflow_graphs.png" style="width: 100%" alt="loading picture...">
-				</div>
-			</article>
 
 			<article id="u2bTensorflowTutor">
 				<button id="u2bTensorflowTutorContentToggle" class="titleButton"><strong>the first tensorflow neural network</strong></button>
@@ -63,7 +56,8 @@
 			<article id="usingTensorboard">
 				<button id="usingTensorboardContentToggle" class="titleButton"><strong>using tensorboard to visualize the model</strong></button>
 				<div id="usingTensorboardContent" style="display: none;">
-					<img src="assets/MyTensorboard.png" style="width: 100%" alt="loading picture...">
+					<img src="assets/tensors_flowing.gif" style="width: 40%" alt="loading picture...">
+					<img src="assets/Tensorflow_graphs.png" style="width: 55%" alt="loading picture...">
 					<p class="code_present">
 						put this in your code after the session sess is defined:<br>
 						writer = tf.summary.FileWriter('./graphs', sess.graph)<br>
@@ -72,13 +66,6 @@
 						use this command in the terminal to start the tensorboard at 127.0.0.1:6006<br>
 						tensorboard --logdir="./graphs"
 					</p>
-				</div>
-			</article>
-
-			<article id="dataFlowGraphs">
-				<button id="dataFlowGraphsContentToggle" class="titleButton"><strong>data flow graphs</strong></button>
-				<div id="dataFlowGraphsContent" style="display: none;">		
-					<img src="assets/tensors_flowing.gif" style="width: 35%" alt="loading picture...">
 				</div>
 			</article>
 
@@ -120,10 +107,8 @@
 				<h3>MENU</h3>
 				<ul>
 					<a href="#tensorflowNotesTitle">tensorflow notes</a><br>
-					<a href="#tensorflowStucture">---> tensorflow structures</a><br>
 					<a href="#u2bTensorflowTutor">---> u2bTensorflowTutor</a><br>
 					<a href="#usingTensorboard">---> using tensorboard</a><br>
-					<a href="#dataFlowGraphs">---> dataFlowGraphs</a><br>
 					<a href="#convolutional_neural_network">---> convolutionalNeuralNetwork</a><br>
 					<a href="#kaggleDigitRecognization">---> kaggle digit recognization</a><br>
 				</ul>
