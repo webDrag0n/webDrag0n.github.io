@@ -41,7 +41,7 @@
 
 			<article id="u2bTensorflowTutor">
 				<button id="u2bTensorflowTutorContentToggle" class="titleButton"><strong>the first tensorflow neural network</strong></button>
-				<div id="u2bTensorflowTutorContent" style="display: none;">
+				<div class="hiddenRecord" id="u2bTensorflowTutorContent">
 					<p class="normal_paragraph">
 						the code used in this note is <a href="code/u2bTensorflowTutor.py">u2bTensorflowTutor.py</a><br>
 						github repository: <a href="https://github.com/linzexinmasterchief/TensorflowLearn">https://github.com/linzexinmasterchief/TensorflowLearn</a><br>
@@ -55,11 +55,11 @@
 
 			<article id="usingTensorboard">
 				<button id="usingTensorboardContentToggle" class="titleButton"><strong>using tensorboard to visualize the model</strong></button>
-				<div id="usingTensorboardContent" style="display: none;">
+				<div class="hiddenRecord" id="usingTensorboardContent">
 					<img src="assets/tensors_flowing.gif" style="width: 40%" alt="loading picture...">
 					<img src="assets/Tensorflow_graphs.png" style="width: 55%" alt="loading picture...">
+					<p class="normal_paragraph">put this in your code after the session sess is defined:</p>
 					<p class="code_present">
-						put this in your code after the session sess is defined:<br>
 						writer = tf.summary.FileWriter('./graphs', sess.graph)<br>
 						writer.close()<br>
 						<br>
@@ -71,7 +71,7 @@
 
 			<article id="convolutional_neural_network">
 				<button id="convolutional_neural_networkContentToggle" class="titleButton"><strong>the use of <i>CNN (convolutional neural network)</i></strong></button>
-				<div id="convolutional_neural_networkContent" style="display: none;">
+				<div class="hiddenRecord" id="convolutional_neural_networkContent">
 					<p class="normal_paragraph">
 						the use of CNN provide artificial intelligences the ability to identify structured data matrix such as pictures, in the previous approches, our AI could only first flatten the 2D picture into a 1D array, then find the patterns of 0 and 1s. However, that approach obviously destroyed some critical informations, for example: the relative postion of each object, the relationship between different parts of the picture... Therefore, we need a new model, which is CNN.<br>
 						the theory of CNN itself is pretty simple and straight forward: it is like using a magnifier to scan a map, but in the opposite way. The program will first use the smallest square: 5x5 for example, small details like curves, vertical lines, and horizontal lines. The small square will move a little at a time(1 step could be 1px, 2px .etc), the scanner square itself is also a matrix which contains the special pattern it want to detect, in each step, the matrix is the square will be doing a dot product with the square scanned by the square: this is called a convolution.<br>
@@ -83,7 +83,7 @@
 
 			<article id="kaggleDigitRecognization">
 				<button id="kaggleDigitRecognizationContentToggle" class="titleButton"><strong>kaggle digit recognization project</strong></button>
-				<div id="kaggleDigitRecognizationContent" style="display: none;">
+				<div class="hiddenRecord" id="kaggleDigitRecognizationContent">
 					<p class="normal_paragraph">
 						<a href="https://github.com/linzexinmasterchief/kaggleRepository">The finished version of kaggle recognization project source code</a>
 						should be able to run on any machine with tensorflow installed, both cpu and gpu version should work as predicted.<br>
@@ -96,7 +96,7 @@
 
 			<!-- <article id="id">
 				<button id="idContentToggle" class="titleButton"><strong>Title here</strong></button>
-				<div id="idContent" style="display: none;">
+				<div class="hiddenRecord" id="idContent">
 					content
 				</div>
 			</article> -->

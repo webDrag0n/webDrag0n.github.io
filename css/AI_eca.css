@@ -49,6 +49,30 @@ a:visited { text-decoration: none;color: #486FB6FF}
 a:hover { text-decoration: none;color: red;background-color: #eeeeee} 
 a:active { text-decoration: blink}
 
+
+
+
+
+
+.sectionContentList
+{
+	padding-left: 50px;
+	padding-bottom: 30px;
+}
+
+.code_present
+{
+	/* background-color: rgb(185, 185, 144); */
+	background-color: #ccc;
+	border-radius: 0px;
+	padding: 20px;
+	border: 10px;
+	margin: 0px;
+}
+
+
+
+
 .tm-container
 {
 	width: 1200px;

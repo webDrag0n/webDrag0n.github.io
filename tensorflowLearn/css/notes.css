@@ -21,3 +21,8 @@
 	font-size: 20px;
 	color: #FAB604FF;
 }
+
+.hiddenRecord
+{
+	display: none;
+}
