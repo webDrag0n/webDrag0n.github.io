@@ -49,6 +49,27 @@ a:visited { text-decoration: none;color: #486FB6FF}
 a:hover { text-decoration: none;color: red;background-color: #eeeeee} 
 a:active { text-decoration: blink}
 
+.linkButton
+{
+	/* text-decoration: line-through; */
+	border-radius: 5px;
+	padding: 10px;
+	padding-bottom: 5px;
+	/* border: 10px; */
+	margin-left: 30px;
+	/* margin-bottom: 5px; */
+	color: #fff;
+	background: #00aeff;
+	/* line-height: 5px; */
+	box-shadow: 0px 2px 2px #77aeff;
+}
+
+.linkButton:hover
+{
+	color: #fff;
+	background: #eb7819;
+	box-shadow: 0px 2px 2px #eb7819;
+}
 
 
 
