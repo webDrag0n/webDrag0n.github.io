@@ -63,7 +63,9 @@ a:active { text-decoration: blink}
 .code_present
 {
 	/* background-color: rgb(185, 185, 144); */
-	background-color: #ccc;
+	color: darkcyan;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-color: #dddddd;
 	border-radius: 0px;
 	padding: 20px;
 	border: 10px;
