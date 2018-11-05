@@ -21,7 +21,8 @@ p
 article
 {
 	background-color: #fff;
-	margin-top: 10px;
+    margin-top: 10px;
+    padding: 10px;
 	box-shadow: 3px 3px 3px #C4C4C4C4;
 }
 
@@ -51,17 +52,20 @@ a:active { text-decoration: blink}
 
 .linkButton
 {
-	/* text-decoration: line-through; */
-	border-radius: 5px;
-	padding: 10px;
-	padding-bottom: 5px;
-	/* border: 10px; */
-	margin-left: 30px;
-	/* margin-bottom: 5px; */
-	color: #fff;
+    margin:0px;
+    margin-left: 20px;
+    padding: 8px;
 	background: #00aeff;
-	/* line-height: 5px; */
-	box-shadow: 0px 2px 2px #77aeff;
+	line-height: 5px;
+    box-shadow: 0px 2px 2px #77aeff;
+    color: #fff;
+}
+
+.linkButton p
+{
+	margin: 0px;
+	padding: 0px;
+    line-height: 0px;
 }
 
 .linkButton:hover
