@@ -33,7 +33,7 @@
 
 			<article id="what_is_a_decision_tree">
 				<h3>What is a decision tree?</h3>
-                <p class="code_present" style="font-family:fantasy">
+                <p class="code_present" style="font-family:fantasy; font-size: 20px;">
                     Decision tree learning uses a decision tree (as a predictive model) 
                     to go from observations about an item (represented in the branches) to conclusions about the 
                     item's target value (represented in the leaves). It is one of the predictive modelling 
@@ -66,8 +66,18 @@
                 </p>
                 <p>
                     ID3 is a algorithm designed particularly for growing a decision tree. It is invented by John Ross Quinlan 
-                    in 1986 and it is the first effective algorithm to accomplish the mission.
+                    in 1986 and it is the first effective algorithm to accomplish the mission. The algorithm uses the concept 
+                    of kept reducing the information entropy of the whole tree system until it reaches 0. That is, always pick 
+                    the field that will has the largest information gain \ lowest information entropy on the subtree after 
+                    splitting next branch.
                 </p>
+                <img style="width: 60%; padding-left: 20px" src="assets/efficienceOfDecisionTree.png">
+                <h4>Information Entropy</h4>
+                <img style="width: 60%; padding-left: 20px" src="assets/InformationEntropy.png">
+                <br>
+                <div style="margin: 20px;">
+                    <a class="linkButton" href="https://www.cise.ufl.edu/~ddd/cap6635/Fall-97/Short-papers/2.htm">A simple example of how ID3 works</a>
+                </div>
             </article>
 
 		</div>
