@@ -52,6 +52,8 @@ a:active { text-decoration: blink}
 
 .linkButton
 {
+    font-family: monospace;
+    font-size: 15px;
     margin:0px;
     margin-left: 20px;
     padding: 8px;
@@ -88,7 +90,7 @@ a:active { text-decoration: blink}
 .code_present
 {
 	/* background-color: rgb(185, 185, 144); */
-	color: darkcyan;
+    color: darkcyan;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	background-color: #dddddd;
 	border-radius: 0px;
@@ -187,14 +189,11 @@ a:active { text-decoration: blink}
 }
 
 .tm-sidebar
-{
-	margin-top: 70px;
-
-	padding-top:80px;
-
-	width: 25%;
-
-	float: right;
+{   
+    position:fixed;
+    right:50px;
+    top:90px;
+    width:350px;
 }
 
 .tm-sidebar div
