@@ -42,12 +42,12 @@ h2, h3, h4, h5, h6
 
 a
 {
-    color: #486FB6FF;
+    color: #fff;
 }
 
-a:link { text-decoration: none;color: #486FB6FF}
-a:visited { text-decoration: none;color: #486FB6FF}
-a:hover { text-decoration: none;color: red;background-color: #eeeeee} 
+a:link { text-decoration: none;color: #fff}
+a:visited { text-decoration: none;color: #fff}
+a:hover { text-decoration: none;color: #fff;background-color: #486FB6FF} 
 a:active { text-decoration: blink}
 
 .linkButton
