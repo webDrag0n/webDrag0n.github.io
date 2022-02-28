@@ -1,2 +1,2 @@
-# linzexinmasterchief.github.io
-This repository stores the files used by AIC website
+# webDrag0n.github.io
+This repository stores the files used by personal portfolio website
