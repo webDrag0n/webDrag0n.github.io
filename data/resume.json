@@ -1,0 +1,135 @@
+{
+    "profile": {
+        "name": "Lin Zexin",
+        "chineseName": "林泽昕",
+        "title": "Computer Engineering Student & AI Researcher",
+        "email": "linzexinmasterchief@gmail.com",
+        "phone": "+86 18926033169",
+        "location": "Shenzhen, China",
+        "github": "https://github.com/linzexinmasterchief",
+        "linkedin": "",
+        "website": "https://webdrag0n.github.io",
+        "summary": "I am a Computer Engineering student at CUHK-Shenzhen with a passion for AI, Computer Graphics, and Game Development. I love building intelligent systems and immersive virtual worlds.",
+        "about": "I am an undergraduate student at The Chinese University of Hong Kong, Shenzhen, majoring in Computer Engineering. My academic journey has led me to explore the fascinating intersections of Artificial Intelligence and Computer Graphics. I have hands-on experience in developing character control systems for metaverse applications and analyzing network security data. I am proficient in Python, C#, and Java, and I enjoy solving complex problems through code.",
+        "avatar": "assets/me01.png"
+    },
+    "education": [
+        {
+            "school": "The Chinese University of Hong Kong, Shenzhen",
+            "degree": "B.Eng. in Computer Engineering",
+            "date": "2020.09 - Present",
+            "description": "Focusing on Computer Vision, Graphics, and AI."
+        },
+        {
+            "school": "Loughborough University",
+            "degree": "B.Sc. in Computer Science and Artificial Intelligence",
+            "date": "2019.09 - 2020.06",
+            "description": "First year of undergraduate studies."
+        },
+        {
+            "school": "Shenzhen College of International Education (SCIE)",
+            "degree": "High School Diploma",
+            "date": "2016 - 2019",
+            "description": ""
+        }
+    ],
+    "experience": [
+        {
+            "company": "CUHK-Shenzhen Human Cloud Lab",
+            "role": "Research Intern & Group Leader",
+            "date": "2021.07 - Present",
+            "description": "Led the Character Controller development group for the 'CUHK-Shenzhen Metaverse' project. Completed the character control system and full system integration.",
+            "technologies": ["Unity", "C#", "Animation"]
+        },
+        {
+            "company": "Peng Cheng Laboratory",
+            "role": "Network Security Analysis Intern",
+            "date": "2020.06 - 2020.10",
+            "description": "Collaborated on building the initial server environment (Redis, Spark, Docker, Neo4j). Developed a subsystem to extract AS autonomous domain relationships from DNS logs, enabling a complete pipeline from raw logs to graph database visualization.",
+            "technologies": ["Python", "Spark", "Neo4j", "Docker"]
+        },
+        {
+            "company": "Cloudream Technology Co., Ltd.",
+            "role": "Data Engineering Intern",
+            "date": "2018.06 - 2018.09",
+            "description": "Developed automated tools using Python for face recognition data cleaning and rough edge annotation, significantly improving team efficiency. The tool was recognized and adopted by the company.",
+            "technologies": ["Python", "OpenCV", "Data Processing"]
+        }
+    ],
+    "skills": [
+        {
+            "category": "Programming Languages",
+            "items": ["Python", "Java", "C/C++", "C#", "JavaScript", "PHP"]
+        },
+        {
+            "category": "AI & Data Science",
+            "items": ["PyTorch", "NumPy", "Matplotlib", "Spark", "Neo4j"]
+        },
+        {
+            "category": "Development & Tools",
+            "items": ["Git", "Docker", "Linux", "MySQL", "Redis"]
+        },
+        {
+            "category": "Graphics & Game Dev",
+            "items": ["Unity", "Blender (Modeling, UV, Texture)", "OpenGL"]
+        },
+        {
+            "category": "Hardware",
+            "items": ["Arduino", "Raspberry Pi"]
+        }
+    ],
+    "projects": [
+        {
+            "name": "ECA AI Website",
+            "description": "My Embodied Conversational Agent (ECA) project website.",
+            "link": "AI_ECA/ECA_main.html",
+            "technologies": ["HTML", "CSS", "Python"]
+        },
+        {
+            "name": "Knowledge Base",
+            "description": "My personal knowledge base and notes.",
+            "link": "https://webdrag0n.github.io/Knowledge-Base/#/page/%E6%9E%97%E6%B3%BD%E6%98%95%E7%AE%80%E4%BB%8B",
+            "technologies": ["Markdown", "Documentation"]
+        },
+        {
+            "name": "CUHK-Shenzhen Metaverse",
+            "description": "A campus metaverse project. Led the character controller team.",
+            "link": "#",
+            "technologies": ["Unity", "C#"]
+        },
+        {
+            "name": "DNS Log Analysis System",
+            "description": "A system to extract and visualize AS relationships from massive DNS logs.",
+            "link": "#",
+            "technologies": ["Python", "Spark", "Neo4j"]
+        },
+        {
+            "name": "Auto Data Cleaning Tool",
+            "description": "Automated tool for face recognition dataset preparation.",
+            "link": "#",
+            "technologies": ["Python", "OpenCV"]
+        }
+    ],
+    "awards": [
+        {
+            "title": "MakeX Robotics Challenge - 1st Prize",
+            "date": "2017",
+            "description": "World Robot Conference (Beijing). Team Leader & Programmer."
+        },
+        {
+            "title": "Fobisia Coding Competition - 1st Prize",
+            "date": "2018",
+            "description": "Python coding competition. Team Leader."
+        },
+        {
+            "title": "IELTS",
+            "date": "2019",
+            "description": "Overall Band 7.0 (Reading & Listening > 8.0)"
+        },
+        {
+            "title": "Hult Prize",
+            "date": "2020",
+            "description": "Campus Finalist"
+        }
+    ]
+}
