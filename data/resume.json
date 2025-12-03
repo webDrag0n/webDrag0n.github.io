@@ -11,7 +11,7 @@
         "website": "https://webdrag0n.github.io",
         "summary": "I am a Computer Engineering student at CUHK-Shenzhen with a passion for AI, Computer Graphics, and Game Development. I love building intelligent systems and immersive virtual worlds.",
         "about": "I am an undergraduate student at The Chinese University of Hong Kong, Shenzhen, majoring in Computer Engineering. My academic journey has led me to explore the fascinating intersections of Artificial Intelligence and Computer Graphics. I have hands-on experience in developing character control systems for metaverse applications and analyzing network security data. I am proficient in Python, C#, and Java, and I enjoy solving complex problems through code.",
-        "avatar": "assets/me01.png"
+        "avatar": "assets/lzx_fancy_cut.png"
     },
     "education": [
         {
@@ -81,7 +81,7 @@
     "projects": [
         {
             "name": "ECA AI Website",
-            "description": "My Embodied Conversational Agent (ECA) project website.",
+            "description": "My high school AI club project website.",
             "link": "AI_ECA/ECA_main.html",
             "technologies": ["HTML", "CSS", "Python"]
         },

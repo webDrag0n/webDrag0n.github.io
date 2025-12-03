@@ -1,99 +1,157 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AI construction site</title>
-    <link rel="stylesheet" href="css/AI_eca.css?v=<?php echo time();?>">
-    <link rel="icon" href="assets/topBarIcon.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Construction Site | Lin Zexin</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/topBarIcon.png" />
+    <style>
+        /* Specific styles for resource lists */
+        .resource-list {
+            list-style: none;
+            padding: 0;
+        }
+        .resource-list li {
+            margin-bottom: 10px;
+        }
+        .resource-list a {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: var(--card-bg);
+            border-radius: 4px;
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        .resource-list a:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+            transform: translateX(5px);
+        }
+        .sidebar-menu {
+            position: sticky;
+            top: 20px;
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 4px;
+        }
+        .sidebar-menu h3 {
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+        .sidebar-menu a {
+            display: block;
+            margin-bottom: 10px;
+            color: #94a3b8;
+        }
+        .sidebar-menu a:hover {
+            color: var(--accent-color);
+        }
+        .content-grid {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 40px;
+        }
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            .sidebar-menu {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
-	<header class="tm-header">
-		<div class="tm-container">
-			<img class="tm-logo" src="assets/icon.jpg" alt="logo" width="120">
-			<div class="ecaTitle">
-				Artificial Intelligence Club
-			</div>
 
-			<nav class="tm-nav">
-                <ul>
-					<li><a href="../index.html">Back to me</a></li>
-                    <li><a href="aboutPage/about.html">About</a></li>
+    <header class="container" style="min-height: auto; padding: 40px 20px;">
+        <div class="project-top">
+            <a href="../index.html" class="btn">← Back to Home</a>
+        </div>
+        <h1 class="hero-name" style="font-size: 3rem; margin-top: 20px;">AI Construction Site</h1>
+        <p class="hero-description">Resources and materials for the Artificial Intelligence Club.</p>
+    </header>
+
+    <main class="container content-grid">
+        <div class="main-content">
+            <section id="intro">
+                <img src="assets/installation01.png" style="width: 100%; border-radius: 4px; margin-bottom: 30px;" alt="AI Construction Site">
+            </section>
+
+            <section id="ECA_section">
+                <h2 class="section-title">ECA Content</h2>
+                <ul class="resource-list">
+                    <li><a href="assets/presentation_files/Class00 - FirstIntro.pptx">📄 Class 00 - FirstIntro (PPTX)</a></li>
+                    <li><a href="assets/presentation_files/Class01 - NaiveBayes.pptx">📄 Class 01 - NaiveBayes (PPTX)</a></li>
+                    <li><a href="assets/ECA_codes/knn.py">🐍 K-NN Python Implementation</a></li>
+                    <li><a href="https://github.com/linzexinmasterchief/JupyterNotebooks/blob/master/AIC/K-NN_with_iris_dataset.ipynb" target="_blank">📓 K-NN Jupyter Notebook</a></li>
+                    <li><a href="http://sklearn.apachecn.org/cn/0.19.0/" target="_blank">🌐 Scikit-learn Chinese Documentation</a></li>
+                    <li><a href="http://scikit-learn.org/stable/documentation.html" target="_blank">🌐 Scikit-learn English Documentation</a></li>
+                    <li><a href="pointersRelated/pointers.html">🔗 Pointers Introduction</a></li>
+                    <li><a href="decisionTrees/intro.html">🔗 Decision Trees</a></li>
                 </ul>
-			</nav>
-		</div>
+            </section>
 
-	</header>
+            <section id="tensorflow_section">
+                <h2 class="section-title">Tensorflow Resources</h2>
+                <ul class="resource-list">
+                    <li><a href="tensorflowLearn/notes.html">📝 Notes about Tensorflow</a></li>
+                    <li><a href="https://github.com/chiphuyen/stanford-tensorflow-tutorials" target="_blank">🎓 Stanford Tensorflow Tutorial Notes</a></li>
+                    <li><a href="https://tensorflow.google.cn/" target="_blank">🌐 Tensorflow China Website</a></li>
+                    <li><a href="http://playground.tensorflow.org" target="_blank">🎮 Google Tensorflow Playground</a></li>
+                    <li><a href="https://medium.com/@o.kroeger/tensorflow-mnist-and-your-own-handwritten-digits-4d1cd32bbab4" target="_blank">✍️ Tutorial: MNIST & Handwritten Digits</a></li>
+                </ul>
+            </section>
 
-	<div class="tm-container">
-		<div class="tm-content">
-			<article>
-				<h1 style="padding-left: 20px;font-family: unset;padding-top: 20px;">
-					WELECOME TO ARTIFICIAL INTELLIGENCE CONSTRUCTION SITE
-				</h1>
-				<img src="assets/installation01.png" style="width: 100%;">
-			</article>
+            <section id="numpy_section">
+                <h2 class="section-title">Basic Numpy</h2>
+                <ul class="resource-list">
+                    <li><a href="http://www.numpy.org/" target="_blank">🌐 Numpy Library Intro</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Softmax_function" target="_blank">🧮 Softmax Function</a></li>
+                </ul>
+            </section>
 
-			<article id="ECA_section">
-				<h2>ECA content</h2>
-                    <p><a class="linkButton" href="assets/presentation_files/Class00 - FirstIntro.pptx">FirstIntro</a></p>
-                    <p><a class="linkButton" href="assets/presentation_files/Class01 - NaiveBayes.pptx">NaiveBayes</a></p>
-                    <p><a class="linkButton" href="assets/ECA_codes/knn.py">K-NN python implement</a></p>
-                    <p><a class="linkButton" href="https://github.com/linzexinmasterchief/JupyterNotebooks/blob/master/AIC/K-NN_with_iris_dataset.ipynb">K-NN jupyter notebook</a></p>
-                    <p><a class="linkButton" href="http://sklearn.apachecn.org/cn/0.19.0/">Scikit-learn Chinese documentation</a></p>
-                    <p><a class="linkButton" href="http://scikit-learn.org/stable/documentation.html">Scikit-learn English documentation</a></p>
-                    <p><a class="linkButton" href="pointersRelated/pointers.html">Pointers introduction</a></p>
-                    <p><a class="linkButton" href="decisionTrees/intro.html">Decision trees</a>
-			</article>
+            <section id="kaggle_section">
+                <h2 class="section-title">Kaggle Competitions</h2>
+                <ul class="resource-list">
+                    <li><a href="https://www.kaggle.com/c/digit-recognizer" target="_blank">🏆 Digit Recognizer</a></li>
+                    <li><a href="https://www.kaggle.com/c/titanic" target="_blank">🚢 Titanic</a></li>
+                </ul>
+            </section>
 
-			<article id="tensorflow_section">
-				<h2>Tensorflow Resources</h2>
-					<p><a class="linkButton" href="tensorflowLearn/notes.html">Notes about tensorflow</a></p>
-					<p><a class="linkButton" href="https://github.com/chiphuyen/stanford-tensorflow-tutorials">Stanford tensorflow tutorial notes</a></p>
-					<p><a class="linkButton" href="https://tensorflow.google.cn/">Tensorflow China website</a></p>
-					----------------------------------[ use vpn to visit sites below ]----------------------------------</p>
-					<p><a class="linkButton" href="http://playground.tensorflow.org">Google tensorflow playground</a></p>
-					<p><a class="linkButton" href="https://medium.com/@o.kroeger/tensorflow-mnist-and-your-own-handwritten-digits-4d1cd32bbab4">Tutorial of Tensorflow, MNIST and your own handwritten digits</a></p>
-			</article>
+            <section id="interesting_gitrepo_section">
+                <h2 class="section-title">Interesting GitHub Repos</h2>
+                <ul class="resource-list">
+                    <li><a href="https://github.com/exacity/deeplearningbook-chinese" target="_blank">📚 Deep Learning Book (Chinese)</a></li>
+                    <li><a href="https://github.com/hunkim/DeepLearningZeroToAll" target="_blank">🎓 Deep Learning Zero To All</a></li>
+                    <li><a href="https://github.com/kailashahirwar/cheatsheets-ai" target="_blank">📑 AI Cheatsheets</a></li>
+                    <li><a href="https://github.com/jiqizhixin/Artificial-Intelligence-Terminology" target="_blank">📖 AI Terminology</a></li>
+                </ul>
+            </section>
+        </div>
 
-			<article id="numpy_section">
-				<h2>Basic Numpy</h2>
-					<p><a class="linkButton" href="http://www.numpy.org/">Numpy library intro</a></p>
-					<p><a class="linkButton" href="https://en.wikipedia.org/wiki/Softmax_function">Softmax</a></p>
-			</article>
+        <aside>
+            <div class="sidebar-menu">
+                <h3>Menu</h3>
+                <a href="#ECA_section">ECA Content</a>
+                <a href="#tensorflow_section">Tensorflow</a>
+                <a href="#numpy_section">Numpy</a>
+                <a href="#kaggle_section">Kaggle</a>
+                <a href="#interesting_gitrepo_section">GitHub Repos</a>
+            </div>
+            <div style="margin-top: 20px;">
+                <img src="assets/installation01_sketch.png" style="width: 100%; border-radius: 4px; opacity: 0.7;" alt="Sketch">
+            </div>
+        </aside>
+    </main>
 
-			<article id="kaggle_section">
-				<h2>Kaggle</h2>
-					<p><a class="linkButton" href="https://www.kaggle.com/c/digit-recognizer">DigitRecognization</a></p>
-					<p><a class="linkButton" href="https://www.kaggle.com/c/titanic">Titanic</a></p>
-			</article>
+    <footer>
+        <p>&copy; 2018-2025 Lin Zexin</p>
+    </footer>
 
-			<article id="interesting_gitrepo_section">
-				<h2>Other interesting github repositories</h2>
-					<p><a class="linkButton" href="https://github.com/exacity/deeplearningbook-chinese">Deeplearningbook-chinese</a></p>
-					<p><a class="linkButton" href="https://github.com/hunkim/DeepLearningZeroToAll">DeepLearningZeroToAll</a></p>
-					<p><a class="linkButton" href="https://github.com/kailashahirwar/cheatsheets-ai">Cheatsheets-ai</a></p>
-					<p><a class="linkButton" href="https://github.com/jiqizhixin/Artificial-Intelligence-Terminology">Artificial-Intelligence-Terminology</a></p>
-					<p><a class="linkButton" href="https://github.com/jiqizhixin/AI-Terminology-page">AI-Terminology-page</a> (same content as above, but difference display)</p>
-			</article>
-		</div>
-
-		<!-- padding-top: 0px is especially for this sidebar since a drawing will be put on it -->
-		<aside class="tm-sidebar" style="padding-top: 0px;">
-			<img src="assets/installation01_sketch.png" style="width: 100%">
-			<div>
-				<h3>MENU</h3>
-				<p><a class="linkButton" href="#ECA_section">ECA section</a>
-				<p><a class="linkButton" href="#tensorflow_section">tensorflow section</a><br>
-				<p><a class="linkButton" href="#numpy_section">numpy section</a><br>
-				<p><a class="linkButton" href="#kaggle_section">kaggle section</a><br>
-				<p><a class="linkButton" href="#interesting_gitrepo_section">interesting gitrepo section</a>
-			</div>
-		</aside>
-	</div>
-
-	<footer class="tm-footer">
-		&copy; copyright webDrag0n 2018
-	</footer>
 </body>
 </html>

@@ -1,98 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AI construction site</title>
-    <link rel="stylesheet" href="../css/AI_eca.css?v=<?php echo time();?>">
-    <link rel="icon" href="../assets/topBarIcon.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Trees | AI Construction Site</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../assets/topBarIcon.png" />
 </head>
 <body>
-	<header class="tm-header">
-		<div class="tm-container">
-			<img class="tm-logo" src="../assets/icon.jpg" alt="logo" width="120">
-			<div class="ecaTitle">
-				Artificial Intelligence Club
-			</div>
+    <header class="container" style="min-height: auto; padding: 40px 20px;">
+        <div class="project-top">
+            <a href="../ECA_main.html" class="btn">← Back to AI Site</a>
+        </div>
+        <h1 class="hero-name" style="font-size: 3rem; margin-top: 20px;">Decision Trees</h1>
+    </header>
+    <main class="container">
+        <article id="what_is_a_decision_tree">
+            <h2 class="section-title">What is a decision tree?</h2>
+            <blockquote style="border-left: 4px solid var(--accent-color); padding-left: 20px; color: #cbd5e1; font-style: italic; margin-bottom: 20px;">
+                Decision tree learning uses a decision tree (as a predictive model) 
+                to go from observations about an item (represented in the branches) to conclusions about the 
+                item's target value (represented in the leaves). It is one of the predictive modelling 
+                approaches used in statistics, data mining and machine learning. Tree models where the target 
+                variable can take a discrete set of values are called classification trees; in these tree 
+                structures, leaves represent class labels and branches represent conjunctions of features that 
+                lead to those class labels. Decision trees where the target variable can take continuous values 
+                (typically real numbers) are called regression trees. 
+            </blockquote>
+            <div style="text-align: right; margin-bottom: 20px;">
+                <a href="https://en.wikipedia.org/wiki/Decision_tree_learning" target="_blank">[ Wikipedia ]</a>
+            </div>
+            <p style="color: #94a3b8;">
+                Decision Tree is almost the easiest thing to understand among all AI algorithms, since it is exactly the 
+                same logic as how a normal human being consider things. The decisions are made base on many different 
+                given conditions, and through decision tree, what we want is to find the best decision to make.
+            </p>
+        </article>
 
-			<nav class="tm-nav">
-				<ul>
-					<li><a href="../ECA_main.html">Home</a></li>
-					<li><a href="../aboutPage/about.html">About</a></li>
-				</ul>
-			</nav>
-		</div>
-
-	</header>
-
-	<div class="tm-container">
-		<div class="tm-content">
-			<article>
-				<h2>Decision Trees</h2>
-			</article>
-
-			<article id="what_is_a_decision_tree">
-				<h3>What is a decision tree?</h3>
-                <p class="code_present" style="font-family:fantasy; font-size: 20px;">
-                    Decision tree learning uses a decision tree (as a predictive model) 
-                    to go from observations about an item (represented in the branches) to conclusions about the 
-                    item's target value (represented in the leaves). It is one of the predictive modelling 
-                    approaches used in statistics, data mining and machine learning. Tree models where the target 
-                    variable can take a discrete set of values are called classification trees; in these tree 
-                    structures, leaves represent class labels and branches represent conjunctions of features that 
-                    lead to those class labels. Decision trees where the target variable can take continuous values 
-                    (typically real numbers) are called regression trees. 
-                </p>
-                <div>
-                    <a style="float:right; padding: 10px" href="https://en.wikipedia.org/wiki/Decision_tree_learning">
-                        [ https://en.wikipedia.org/wiki/Decision_tree_learning ]
-                    </a>
-                </div>
-                <p>></p>
-                <p>
-                    Decision Tree is almost the easiest thing to understand among all AI algorithms, since it is exactly the 
-                    same logic as how a normal human being consider things. The decisions are made base on many different 
-                    given conditions, and through decision tree, what we want is to find the best decision to make.
-                </p>
-            </article>
-            
-            <article id="the_ID3_algorithm">
-                <h3>The ID3 algorithm</h3>
-                <p>Clearly, when making decisions, we always want to be more efficient. Which means, the amount of levels 
-                    of decisions is better to be less. Nobody would be satisfied with an AI that makes the correct decision
-                    to make after doing 1000 comparisons while there is only one field of condition is relevant to the 
-                    final decision. Therefore, we need a good algorithm to decide which field is the best field to split
-                    a new branch at. This, is when the ID3 algorithm comes in.
-                </p>
-                <p>
-                    ID3 is a algorithm designed particularly for growing a decision tree. It is invented by John Ross Quinlan 
-                    in 1986 and it is the first effective algorithm to accomplish the mission. The algorithm uses the concept 
-                    of kept reducing the information entropy of the whole tree system until it reaches 0. That is, always pick 
-                    the field that will has the largest information gain \ lowest information entropy on the subtree after 
-                    splitting next branch.
-                </p>
-                <img style="width: 60%; padding-left: 20px" src="assets/efficienceOfDecisionTree.png">
-                <h4>Information Entropy</h4>
-                <img style="width: 60%; padding-left: 20px" src="assets/InformationEntropy.png">
-                <br>
-                <div style="margin: 20px;">
-                    <a class="linkButton" href="https://www.cise.ufl.edu/~ddd/cap6635/Fall-97/Short-papers/2.htm">A simple example of how ID3 works</a>
-                </div>
-            </article>
-
-		</div>
-
-		<aside class="tm-sidebar">
-			<div>
-                <h3>MENU</h3>
-                <p><a class="linkButton" href="#what_is_a_decision_tree">What is a decision tree?</a></p>
-                <p><a class="linkButton" href="#the_ID3_algorithm">The ID3 algorithm</a></p>
-			</div>
-		</aside>
-	</div>
-
-	<footer class="tm-footer">
-		&copy; copyright webDrag0n 2018
-	</footer>
+        <article id="the_ID3_algorithm" style="margin-top: 60px;">
+            <h2 class="section-title">The ID3 algorithm</h2>
+            <p style="color: #94a3b8; margin-bottom: 20px;">Clearly, when making decisions, we always want to be more efficient. Which means, the amount of levels 
+                of decisions is better to be less. Nobody would be satisfied with an AI that makes the correct decision
+                to make after doing 1000 comparisons while there is only one field of condition is relevant to the 
+                final decision. Therefore, we need a good algorithm to decide which field is the best field to split
+                a new branch at. This, is when the ID3 algorithm comes in.
+            </p>
+            <p style="color: #94a3b8; margin-bottom: 20px;">
+                ID3 is a algorithm designed particularly for growing a decision tree. It is invented by John Ross Quinlan 
+                in 1986 and it is the first effective algorithm to accomplish the mission. The algorithm uses the concept 
+                of kept reducing the information entropy of the whole tree system until it reaches 0. That is, always pick 
+                the field that will has the largest information gain \ lowest information entropy on the subtree after 
+                splitting next branch.
+            </p>
+            <img style="max-width: 100%; margin: 20px 0;" src="assets/efficienceOfDecisionTree.png">
+            <h3 style="color: #f8fafc; margin-bottom: 15px;">Information Entropy</h3>
+            <img style="max-width: 100%; margin: 20px 0;" src="assets/InformationEntropy.png">
+            <br>
+            <div style="margin: 20px;">
+                <a class="btn" href="https://www.cise.ufl.edu/~ddd/cap6635/Fall-97/Short-papers/2.htm" target="_blank">A simple example of how ID3 works</a>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2018-2025 Lin Zexin</p>
+    </footer>
 </body>
 </html>

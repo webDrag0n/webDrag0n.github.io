@@ -1,70 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AI construction site</title>
-    <link rel="stylesheet" href="../css/AI_eca.css?v=<?php echo time();?>">
-    <link rel="icon" href="../assets/topBarIcon.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Search Tree | AI Construction Site</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../assets/topBarIcon.png" />
 </head>
 <body>
-	<header class="tm-header">
-		<div class="tm-container">
-			<img class="tm-logo" src="../assets/icon.jpg" alt="logo" width="120">
-			<div class="ecaTitle">
-				Artificial Intelligence Club
-			</div>
-
-			<nav class="tm-nav">
-				<ul>
-					<li><a href="../ECA_main.html">Home</a></li>
-					<li><a href="../aboutPage/about.html">About</a></li>
-				</ul>
-			</nav>
-		</div>
-
-	</header>
-
-	<div class="tm-container">
-		<div class="tm-content">
-			<article>
-				<h2>Binary Search Tree</h2>
-			</article>
-
-			<article>
-				<h3>What is a BST?</h3>
-                <p class="code_present" style="font-family:fantasy; font-size: 20px;">
-                    a particular type of container: data structures that store "items" (such as numbers, names etc.) 
-                    in memory. They allow fast lookup, addition and removal of items, and can be used to implement 
-                    either dynamic sets of items, or lookup tables that allow finding an item by its key (e.g., 
-                    finding the phone number of a person by name).
-                </p>
-                <div>
-                    <a style="float:right; padding: 10px" href="https://en.wikipedia.org/wiki/Binary_search_tree">
-                        [ https://en.wikipedia.org/wiki/Binary_search_tree ]
-                    </a>
-                </div>
-                <p>></p>
-                <p>
-                    The creation of binary search tree is very similiar to binary search, the method of searching through
-                    the data set is same: after each comparison, divide the dataset into two different parts which on part 
-                    contains the target and the other one don't. Therefore the other part of the dataset could be ignored 
-                    in further process and saved a lot of time.
-                </p>
-                <img style="width: 40%; padding-left: 20px" src="assets/BST_Intro.png">
-			</article>
-
-		</div>
-
-		<aside class="tm-sidebar">
-			<div>
-				<h3>MENU</h3>
-			</div>
-		</aside>
-	</div>
-
-	<footer class="tm-footer">
-		&copy; copyright webDrag0n 2018
-	</footer>
+    <header class="container" style="min-height: auto; padding: 40px 20px;">
+        <div class="project-top">
+            <a href="../ECA_main.html" class="btn">← Back to AI Site</a>
+        </div>
+        <h1 class="hero-name" style="font-size: 3rem; margin-top: 20px;">Binary Search Tree</h1>
+    </header>
+    <main class="container">
+        <article>
+            <h2 class="section-title">What is a BST?</h2>
+            <blockquote style="border-left: 4px solid var(--accent-color); padding-left: 20px; color: #cbd5e1; font-style: italic; margin-bottom: 20px;">
+                a particular type of container: data structures that store "items" (such as numbers, names etc.) 
+                in memory. They allow fast lookup, addition and removal of items, and can be used to implement 
+                either dynamic sets of items, or lookup tables that allow finding an item by its key (e.g., 
+                finding the phone number of a person by name).
+            </blockquote>
+            <div style="text-align: right; margin-bottom: 20px;">
+                <a href="https://en.wikipedia.org/wiki/Binary_search_tree" target="_blank">[ Wikipedia ]</a>
+            </div>
+            <p style="color: #94a3b8; margin-bottom: 20px;">
+                The creation of binary search tree is very similiar to binary search, the method of searching through
+                the data set is same: after each comparison, divide the dataset into two different parts which on part 
+                contains the target and the other one don't. Therefore the other part of the dataset could be ignored 
+                in further process and saved a lot of time.
+            </p>
+            <img style="max-width: 100%; margin: 20px 0;" src="assets/BST_Intro.png">
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2018-2025 Lin Zexin</p>
+    </footer>
 </body>
 </html>

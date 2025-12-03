@@ -1,123 +1,141 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AI construction site</title>
-    <link rel="stylesheet" href="css/notes.css?v=<?php echo time();?>">
-    <link rel="stylesheet" href="../css/AI_eca.css?v=<?php echo time();?>">
-    <script type="text/javascript" src="../scripts/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="scripts/notes.js"></script>
-
-    <link rel="icon" href="../assets/topBarIcon.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tensorflow Notes | AI Construction Site</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../assets/topBarIcon.png" />
+    <style>
+        details {
+            background-color: var(--card-bg);
+            border-radius: 4px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        summary {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--text-color);
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+        details[open] summary::after {
+            content: '-';
+        }
+        .details-content {
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+            color: #94a3b8;
+        }
+        .details-content img {
+            max-width: 100%;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .code_present {
+            background: #0f172a;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #e2e8f0;
+            overflow-x: auto;
+        }
+    </style>
 </head>
 <body>
-	<header class="tm-header">
-		<div class="tm-container">
-			<img class="tm-logo" src="../assets/icon.jpg" alt="logo" width="120">
-			<div class="ecaTitle">
-				Artificial Intelligence Club
-			</div>
+    <header class="container" style="min-height: auto; padding: 40px 20px;">
+        <div class="project-top">
+            <a href="../ECA_main.html" class="btn">← Back to AI Site</a>
+        </div>
+        <h1 class="hero-name" style="font-size: 3rem; margin-top: 20px;">Tensorflow Notes</h1>
+    </header>
+    <main class="container">
+        <section>
+            <div style="margin-bottom: 40px;">
+                <img src="assets/tensorflowTitle.jpg" style="width: 100%; border-radius: 4px;" alt="Tensorflow Title">
+            </div>
 
-			<nav class="tm-nav">
-				<ul>
-					<li><a href="../ECA_main.html">Home</a></li>
-					<li><a href="../aboutPage/about.html">About</a></li>
-					<!-- <li><a href="../servicePage/service.html">Services</a></li>
-					<li><a href="../contactPage/contact.html">Contact</a></li> -->
-				</ul>
-			</nav>
-		</div>
+            <details>
+                <summary>The First Tensorflow Neural Network</summary>
+                <div class="details-content">
+                    <p>
+                        The code used in this note is <a href="code/u2bTensorflowTutor.py">u2bTensorflowTutor.py</a><br>
+                        GitHub repository: <a href="https://github.com/linzexinmasterchief/TensorflowLearn" target="_blank">https://github.com/linzexinmasterchief/TensorflowLearn</a>
+                    </p>
+                    <p>
+                        This code is currently able to train and save the tensorflow models. The critical variables to be saved are "x" and "sess". x indicates the input matrix ["none", 784] (the pictures are 28 x 28 pixels large, therefore 784 pixels are used. The idea of the input layer is that the pictures are "flattened" from a two dimension matrix to a one dimension matrix. Although this operation destroyed the 2D construct of the picture, it made the picture data easier for tensorflow network to process. By the way, the parameter "none" means "any number", which means the matrix could contain any amount of images).
+                    </p>
+                    <p>I've made a lot of comments in the code in order for you to understand.</p>
+                </div>
+            </details>
 
-	</header>
+            <details>
+                <summary>Using Tensorboard to Visualize the Model</summary>
+                <div class="details-content">
+                    <img src="assets/tensors_flowing.gif" style="width: 40%" alt="Tensors Flowing">
+                    <img src="assets/Tensorflow_graphs.png" style="width: 55%" alt="Tensorflow Graphs">
+                    <p>Put this in your code after the session sess is defined:</p>
+                    <div class="code_present">
+                        writer = tf.summary.FileWriter('./graphs', sess.graph)<br>
+                        writer.close()
+                    </div>
+                    <p>Use this command in the terminal to start the tensorboard at 127.0.0.1:6006</p>
+                    <div class="code_present">
+                        tensorboard --logdir="./graphs"
+                    </div>
+                </div>
+            </details>
 
-	<div class="tm-container">
-		<div class="tm-content">
-			<article id="tensorflowNotesTitle">
-				<div id="titleContent">
-					<img src="assets/tensorflowTitle.jpg" style="width: 100%" alt="loading picture...">
-				</div>
-			</article>
+            <details>
+                <summary>The Use of CNN (Convolutional Neural Network)</summary>
+                <div class="details-content">
+                    <p>
+                        The use of CNN provide artificial intelligences the ability to identify structured data matrix such as pictures. In the previous approaches, our AI could only first flatten the 2D picture into a 1D array, then find the patterns of 0 and 1s. However, that approach obviously destroyed some critical informations, for example: the relative postion of each object, the relationship between different parts of the picture... Therefore, we need a new model, which is CNN.
+                    </p>
+                    <p>
+                        The theory of CNN itself is pretty simple and straight forward: it is like using a magnifier to scan a map, but in the opposite way. The program will first use the smallest square: 5x5 for example, small details like curves, vertical lines, and horizontal lines. The small square will move a little at a time (1 step could be 1px, 2px etc), the scanner square itself is also a matrix which contains the special pattern it want to detect, in each step, the matrix is the square will be doing a dot product with the square scanned by the square: this is called a convolution.
+                    </p>
+                    <img src="assets/visualizeCNN.png" width="100%" alt="Visualize CNN">
+                    <p><a href="http://scs.ryerson.ca/~aharley/vis/conv/" target="_blank">scs.ryerson.ca/~aharley/vis/conv/</a> visualized this process.</p>
+                </div>
+            </details>
 
-			<article id="u2bTensorflowTutor">
-				<button id="u2bTensorflowTutorContentToggle" class="titleButton"><strong>the first tensorflow neural network</strong></button>
-				<div class="hiddenRecord" id="u2bTensorflowTutorContent">
-					<p class="normal_paragraph">
-						the code used in this note is <a href="code/u2bTensorflowTutor.py">u2bTensorflowTutor.py</a><br>
-						github repository: <a href="https://github.com/linzexinmasterchief/TensorflowLearn">https://github.com/linzexinmasterchief/TensorflowLearn</a><br>
-						<br>
-						this code is currently able to train and save the tensorflow models, the critical variables to be save are the "x" and "sess", x indicates the input matrix ["none", 784] (the pictures are 28 x 28 pixels large, therefore 784 pixels are used, the idea of the input layer is that the pictures are "flattened" from a two dimension matrix to a one dimension matrix. Although this operation destroyed the 2D construct of the picture, it made the picture data easier for tensorflow network to process. By the way, the parameter "none" means "any number", which means the matrix could contain any amount of images)<br>
-						<br>
-						I've made a lot of comments in the code in order for you to understand
-					</p>
-				</div>
-			</article>
+            <details>
+                <summary>Kaggle Digit Recognization Project</summary>
+                <div class="details-content">
+                    <p>
+                        <a href="https://github.com/linzexinmasterchief/JupyterNotebooks/tree/master/Kaggle/KaggleDigitRecognise" target="_blank">The finished version of kaggle recognization project source code</a>
+                        should be able to run on any machine with tensorflow installed, both cpu and gpu version should work as predicted.
+                    </p>
+                    <p>
+                        The basic theory of the project is just as simple as a normal CNN we learned in ECA.
+                    </p>
+                    <p>
+                        <a href="https://www.kaggle.com/c/digit-recognizer" target="_blank">The kaggle page of this project</a> just in case anyone is interested.
+                    </p>
+                    <img src="assets/kaggleScore.PNG" style="width: 100%" alt="Kaggle Score">
+                </div>
+            </details>
 
-			<article id="usingTensorboard">
-				<button id="usingTensorboardContentToggle" class="titleButton"><strong>using tensorboard to visualize the model</strong></button>
-				<div class="hiddenRecord" id="usingTensorboardContent">
-					<img src="assets/tensors_flowing.gif" style="width: 40%" alt="loading picture...">
-					<img src="assets/Tensorflow_graphs.png" style="width: 55%" alt="loading picture...">
-					<p class="normal_paragraph">put this in your code after the session sess is defined:</p>
-					<p class="code_present">
-						writer = tf.summary.FileWriter('./graphs', sess.graph)<br>
-						writer.close()<br>
-						<br>
-						use this command in the terminal to start the tensorboard at 127.0.0.1:6006<br>
-						tensorboard --logdir="./graphs"
-					</p>
-				</div>
-			</article>
-
-			<article id="convolutional_neural_network">
-				<button id="convolutional_neural_networkContentToggle" class="titleButton"><strong>the use of <i>CNN (convolutional neural network)</i></strong></button>
-				<div class="hiddenRecord" id="convolutional_neural_networkContent">
-					<p class="normal_paragraph">
-						the use of CNN provide artificial intelligences the ability to identify structured data matrix such as pictures, in the previous approches, our AI could only first flatten the 2D picture into a 1D array, then find the patterns of 0 and 1s. However, that approach obviously destroyed some critical informations, for example: the relative postion of each object, the relationship between different parts of the picture... Therefore, we need a new model, which is CNN.<br>
-						the theory of CNN itself is pretty simple and straight forward: it is like using a magnifier to scan a map, but in the opposite way. The program will first use the smallest square: 5x5 for example, small details like curves, vertical lines, and horizontal lines. The small square will move a little at a time(1 step could be 1px, 2px .etc), the scanner square itself is also a matrix which contains the special pattern it want to detect, in each step, the matrix is the square will be doing a dot product with the square scanned by the square: this is called a convolution.<br>
-					</p>
-					<img src="assets/visualizeCNN.png" width="100%" alt="loading picture...">
-					<a href="http://scs.ryerson.ca/~aharley/vis/conv/" style="padding-left: 25%;">scs.ryerson.ca/~aharley/vis/conv/</a> visualized this process.
-				</div>
-			</article>
-
-			<article id="kaggleDigitRecognization">
-				<button id="kaggleDigitRecognizationContentToggle" class="titleButton"><strong>kaggle digit recognization project</strong></button>
-				<div class="hiddenRecord" id="kaggleDigitRecognizationContent">
-					<p class="normal_paragraph">
-						<a href="https://github.com/linzexinmasterchief/JupyterNotebooks/tree/master/Kaggle/KaggleDigitRecognise">The finished version of kaggle recognization project source code</a>
-						should be able to run on any machine with tensorflow installed, both cpu and gpu version should work as predicted.<br>
-						The basic theory of the project is just as simple as a normal CNN we learned in ECA.<br>
-						<a href="https://www.kaggle.com/c/digit-recognizer">The kaggle page of this project</a> just in case anyone is interested.
-					</p>
-					<img src="assets/kaggleScore.PNG" style="width: 100%" alt="loading picture...">
-				</div>
-			</article>
-
-			<!-- <article id="id">
-				<button id="idContentToggle" class="titleButton"><strong>Title here</strong></button>
-				<div class="hiddenRecord" id="idContent">
-					content
-				</div>
-			</article> -->
-		</div>
-
-		<aside class="tm-sidebar">
-			<div>
-				<h3>MENU</h3>
-				<ul>
-					<a href="#tensorflowNotesTitle">tensorflow notes</a><br>
-					<a href="#u2bTensorflowTutor">---> u2bTensorflowTutor</a><br>
-					<a href="#usingTensorboard">---> using tensorboard</a><br>
-					<a href="#convolutional_neural_network">---> convolutionalNeuralNetwork</a><br>
-					<a href="#kaggleDigitRecognization">---> kaggle digit recognization</a><br>
-				</ul>
-			</div>
-		</aside>
-	</div>
-
-	<div class="tm-footer">
-		&copy; copyright webDrag0n 2018
-	</div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2018-2025 Lin Zexin</p>
+    </footer>
 </body>
 </html>
