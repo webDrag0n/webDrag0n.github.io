@@ -1,135 +1,378 @@
 {
-    "profile": {
-        "name": "Lin Zexin",
-        "chineseName": "林泽昕",
-        "title": "Computer Engineering Student & AI Researcher",
-        "email": "linzexinmasterchief@gmail.com",
-        "phone": "+86 18926033169",
-        "location": "Shenzhen, China",
-        "github": "https://github.com/linzexinmasterchief",
-        "linkedin": "",
-        "website": "https://webdrag0n.github.io",
-        "summary": "I am a Computer Engineering student at CUHK-Shenzhen with a passion for AI, Computer Graphics, and Game Development. I love building intelligent systems and immersive virtual worlds.",
-        "about": "I am an undergraduate student at The Chinese University of Hong Kong, Shenzhen, majoring in Computer Engineering. My academic journey has led me to explore the fascinating intersections of Artificial Intelligence and Computer Graphics. I have hands-on experience in developing character control systems for metaverse applications and analyzing network security data. I am proficient in Python, C#, and Java, and I enjoy solving complex problems through code.",
-        "avatar": "assets/lzx_fancy_cut.png"
+    "en": {
+        "profile": {
+            "name": "Lin Zexin",
+            "title": "AI Researcher & Computer Engineer",
+            "email": "zexinlin@link.cuhk.edu.cn",
+            "phone": "+86 18926033169",
+            "location": "Shenzhen, China",
+            "github": "https://github.com/linzexinmasterchief",
+            "website": "https://webdrag0n.github.io",
+            "summary": "I am a Master's student in AI & Robotics at CUHK-Shenzhen, specializing in Embodied AI, Cognitive Architectures, and High-Performance Computing. I have extensive experience in building autonomous agent systems, simulation environments, and large-scale data analysis pipelines.",
+            "about": "I am currently pursuing a Master's degree in Artificial Intelligence and Robotics at The Chinese University of Hong Kong, Shenzhen, where I also serve as the Class Monitor. My research interests lie in Embodied AI, Cognitive Architectures, and Robotics. I have led multiple research projects involving autonomous agents, VLM hallucination evaluation, and UAV control systems. I am passionate about bridging the gap between high-level cognitive reasoning and low-level physical control.",
+            "avatar": "assets/lzx_fancy_cut.png"
+        },
+        "education": [
+            {
+                "school": "The Chinese University of Hong Kong, Shenzhen",
+                "degree": "M.Sc. in Artificial Intelligence and Robotics",
+                "date": "2024.09 - Present",
+                "description": "Class Monitor"
+            },
+            {
+                "school": "The Chinese University of Hong Kong, Shenzhen",
+                "degree": "B.Eng. in Computer Engineering",
+                "date": "2020.09 - 2024.07",
+                "description": ""
+            },
+            {
+                "school": "Loughborough University",
+                "degree": "B.Sc. in Computer Science and Artificial Intelligence",
+                "date": "2019.09 - 2020.06",
+                "description": "First year of undergraduate studies"
+            },
+            {
+                "school": "Shenzhen College of International Education (SCIE)",
+                "degree": "High School Diploma",
+                "date": "2016 - 2019",
+                "description": ""
+            }
+        ],
+        "publications": [
+            {
+                "title": "Alice: A General Purpose Cognitive Architecture for Continuous Reasoning and Hierarchical Decision-Making",
+                "venue": "FGCS 2026 (Under Review)",
+                "authors": "Zexin Lin, Xiaoqiang Ji",
+                "role": "1st Author",
+                "description": "Project Lead. Designed and implemented the autonomous cross-scenario embodied agent system and its subsystems. Implemented local deployment on high-performance computing systems. Wrote the paper."
+            },
+            {
+                "title": "DIQ-H: Evaluating Hallucination Persistence in VLMs Under Temporal Visual Degradation",
+                "venue": "Arxiv",
+                "authors": "Zexin Lin, Hanwen Wan, Yebin Zhong, Yuanke Dou, Xiaoqiang Ji",
+                "role": "1st Author",
+                "description": "Project Lead. Designed and implemented VLM hallucination evaluation methods. Implemented local deployment on high-performance computing systems. Wrote the paper."
+            },
+            {
+                "title": "A Learning-based Control Methodology for Transitioning VTOL UAVs",
+                "venue": "Arxiv",
+                "authors": "Zexin Lin, Yebin Zhong, Hanwen Wan, Jiu Cheng, Zhenglong Sun, Xiaoqiang Ji",
+                "role": "1st Author",
+                "description": "Project Lead. Designed and conducted experiments. Analyzed and visualized results. Wrote the paper."
+            },
+            {
+                "title": "Towards Physics Aware Embodied Control with Graph based Object-centric Learning",
+                "venue": "TCPS 2025",
+                "authors": "Hanwen Wan, Yixuan Deng, Donghao Wu, Yifei Chen, Zexin Lin, Jialu Liu, Jiangfan Yu, Xiaoqiang Ji",
+                "role": "Co-author",
+                "description": "Provided High-Performance Computing system platform support."
+            },
+            {
+                "title": "What is the Relationship Between Virtual Reality Tourism and On-site Tourism? Analyzing the Dimensions of Tourist Perceived Value in the VR World Based on the Grounded Theory",
+                "venue": "ICT 2023",
+                "authors": "Zhou Li, Jinjing Chen, Zexin Lin",
+                "role": "2nd Author",
+                "award": "Best Paper Award",
+                "description": "Designed and implemented experiments. Wrote the paper."
+            },
+            {
+                "title": "Design and Implementation of a VTOL UAV and its Digital Twin",
+                "venue": "IEEE ROBIO 2023",
+                "authors": "Yebin Zhong, Xizheng Huang, Zexin Lin, Jiayu Chen and Xiaoqiang Ji",
+                "role": "2nd Author",
+                "description": "Designed and implemented the digital twin system and experiments. Analyzed and visualized results. Wrote the paper."
+            },
+            {
+                "title": "A Peek at Metaverse Society from Web 3.0 Games: A Preliminary Case Study of Dark Forest",
+                "venue": "IEEE MMSP 2022",
+                "authors": "Zexin Lin, Nanjun Yao, Xiao Wu, Lin Wang",
+                "role": "1st Author",
+                "award": "Top 10% Paper Award",
+                "description": "Designed and implemented the data extraction, cleaning, and analysis pipeline. Wrote the paper."
+            },
+            {
+                "title": "Freedom and Restraint in Dark Forest: A Peek at the Metaverse Through a Blockchain Game",
+                "venue": "IEEE TCSS 2022",
+                "authors": "Nanjun Yao, Zexin Lin, Xiao Wu, Lin Wang",
+                "role": "2nd Author",
+                "description": "Designed and implemented the data extraction, cleaning, and analysis pipeline. Wrote the paper."
+            }
+        ],
+        "research_experience": [
+            {
+                "project": "Long-term Memory Agent Project",
+                "description": "Designed and implemented an agent architecture with emotional and cognitive continuity. Built a memory system prototype with multi-level long-term memory writing, retrieval, and update mechanisms. Built and maintained agent experimental platforms, integrating LLMs, vector databases, and affective computing modules. Developed emotional interaction and self-awareness test environments to validate continuous memory and state evolution in multi-turn interactions."
+            },
+            {
+                "project": "VTOL UAV Project",
+                "description": "Built and maintained server environments, deployed Unity Editor, Unity ML-Agents, CUDA, and Python environments. Developed simulation environments and simulated VTOL UAVs (PID & Neural Network controllers). Designed and implemented validation experiments for simulated and real VTOL UAVs. Implemented full-duplex communication interfaces between hardware/simulation and simulation/RL models."
+            },
+            {
+                "project": "High-Performance Computing Project",
+                "description": "Built and maintained high-performance server hardware and development environments (GPU/CPU selection, network management, CUDA, Redis, Spark, C++, Python, Java, Jupyter, Docker). Participated in system design and data structure setup. Developed backend modules like databases and high-performance C++ matrix operations."
+            },
+            {
+                "project": "CUHK-Shenzhen Virtual Campus Project",
+                "description": "Completed and integrated the character control system for 'CUHKSZ Metaverse'. Included Unity C# controller scripts, character animation, state machines, and communication interfaces."
+            },
+            {
+                "project": "Peng Cheng Laboratory Research",
+                "description": "Collaborated on building server environments (Redis, Spark, Python, Java, Jupyter, Docker, Neo4j). Proposed and developed a subsystem for extracting AS autonomous system relationships from DNS logs."
+            },
+            {
+                "project": "Academic Service",
+                "description": "Technical Reviewer for International Conference on AI and Robotics, IEEE ROBIO."
+            }
+        ],
+        "experience": [
+            {
+                "company": "Shenzhen AutoGame Technology Co., Ltd.",
+                "role": "AI Algorithm Engineer Intern",
+                "date": "2024.11 - 2025.11",
+                "description": "Responsible for Agent System Architecture Design & Backend Development. Implemented stable long-term multi-turn dialogue and active behavior pattern updates."
+            },
+            {
+                "company": "CUHK-Shenzhen Robotics & AI Lab",
+                "role": "Research Assistant (Xiaoqiang Ji's Group)",
+                "date": "2022.03 - 2024.10",
+                "description": "Mainly responsible for High-Performance Computing System Construction, Robot Simulation Platform Development, and Embodied Agent System Development."
+            },
+            {
+                "company": "CUHK-Shenzhen Human Cloud Lab",
+                "role": "Character Controller Group Lead Intern",
+                "date": "2021.07 - 2022.03",
+                "description": "Responsible for developing the character control system for the 'CUHKSZ Metaverse' project."
+            },
+            {
+                "company": "Peng Cheng Laboratory",
+                "role": "Network Security Analysis Intern",
+                "date": "2020.06 - 2020.10",
+                "description": "Member of the Analysis Group in the Network Security Department, responsible for data analysis."
+            }
+        ],
+        "awards": [
+            {
+                "title": "IEEE MMSP 2022 Top 10% Paper Award",
+                "date": "2022"
+            },
+            {
+                "title": "ICT 2023 Best Paper Award",
+                "date": "2023"
+            },
+            {
+                "title": "Diligentia College LiXing Research Project Outstanding Paper Award",
+                "date": ""
+            },
+            {
+                "title": "CUHK-Shenzhen 2023-2024 Outstanding Student Leader",
+                "date": "2024"
+            }
+        ],
+        "skills": [
+            {
+                "category": "Programming Languages",
+                "items": ["Python", "C++", "C#", "Java", "JavaScript"]
+            },
+            {
+                "category": "AI & Robotics",
+                "items": ["PyTorch", "Unity ML-Agents", "ROS", "LLMs", "Cognitive Architectures"]
+            },
+            {
+                "category": "Development & Tools",
+                "items": ["Git", "Docker", "Linux", "CUDA", "Redis", "Spark", "Neo4j"]
+            },
+            {
+                "category": "Graphics & Simulation",
+                "items": ["Unity", "Blender", "Digital Twin"]
+            }
+        ]
     },
-    "education": [
-        {
-            "school": "The Chinese University of Hong Kong, Shenzhen",
-            "degree": "B.Eng. in Computer Engineering",
-            "date": "2020.09 - Present",
-            "description": "Focusing on Computer Vision, Graphics, and AI."
+    "zh": {
+        "profile": {
+            "name": "林泽昕",
+            "title": "AI研究员 & 计算机工程师",
+            "email": "zexinlin@link.cuhk.edu.cn",
+            "phone": "+86 18926033169",
+            "location": "中国深圳",
+            "github": "https://github.com/linzexinmasterchief",
+            "website": "https://webdrag0n.github.io",
+            "summary": "我是香港中文大学（深圳）人工智能与机器人专业的硕士研究生，专注于具身智能、认知架构和高性能计算。我在构建自主智能体系统、仿真环境和大规模数据分析流程方面拥有丰富的经验。",
+            "about": "我目前在香港中文大学（深圳）攻读人工智能与机器人硕士学位，并担任班长。我的研究兴趣在于具身智能、认知架构和机器人技术。我领导了多个涉及自主智能体、VLM幻觉评估和无人机控制系统的研究项目。我热衷于弥合高层认知推理与底层物理控制之间的鸿沟。",
+            "avatar": "assets/lzx_fancy_cut.png"
         },
-        {
-            "school": "Loughborough University",
-            "degree": "B.Sc. in Computer Science and Artificial Intelligence",
-            "date": "2019.09 - 2020.06",
-            "description": "First year of undergraduate studies."
-        },
-        {
-            "school": "Shenzhen College of International Education (SCIE)",
-            "degree": "High School Diploma",
-            "date": "2016 - 2019",
-            "description": ""
-        }
-    ],
-    "experience": [
-        {
-            "company": "CUHK-Shenzhen Human Cloud Lab",
-            "role": "Research Intern & Group Leader",
-            "date": "2021.07 - Present",
-            "description": "Led the Character Controller development group for the 'CUHK-Shenzhen Metaverse' project. Completed the character control system and full system integration.",
-            "technologies": ["Unity", "C#", "Animation"]
-        },
-        {
-            "company": "Peng Cheng Laboratory",
-            "role": "Network Security Analysis Intern",
-            "date": "2020.06 - 2020.10",
-            "description": "Collaborated on building the initial server environment (Redis, Spark, Docker, Neo4j). Developed a subsystem to extract AS autonomous domain relationships from DNS logs, enabling a complete pipeline from raw logs to graph database visualization.",
-            "technologies": ["Python", "Spark", "Neo4j", "Docker"]
-        },
-        {
-            "company": "Cloudream Technology Co., Ltd.",
-            "role": "Data Engineering Intern",
-            "date": "2018.06 - 2018.09",
-            "description": "Developed automated tools using Python for face recognition data cleaning and rough edge annotation, significantly improving team efficiency. The tool was recognized and adopted by the company.",
-            "technologies": ["Python", "OpenCV", "Data Processing"]
-        }
-    ],
-    "skills": [
-        {
-            "category": "Programming Languages",
-            "items": ["Python", "Java", "C/C++", "C#", "JavaScript", "PHP"]
-        },
-        {
-            "category": "AI & Data Science",
-            "items": ["PyTorch", "NumPy", "Matplotlib", "Spark", "Neo4j"]
-        },
-        {
-            "category": "Development & Tools",
-            "items": ["Git", "Docker", "Linux", "MySQL", "Redis"]
-        },
-        {
-            "category": "Graphics & Game Dev",
-            "items": ["Unity", "Blender (Modeling, UV, Texture)", "OpenGL"]
-        },
-        {
-            "category": "Hardware",
-            "items": ["Arduino", "Raspberry Pi"]
-        }
-    ],
-    "projects": [
-        {
-            "name": "ECA AI Website",
-            "description": "My high school AI club project website.",
-            "link": "AI_ECA/ECA_main.html",
-            "technologies": ["HTML", "CSS", "Python"]
-        },
-        {
-            "name": "Knowledge Base",
-            "description": "My personal knowledge base and notes.",
-            "link": "https://webdrag0n.github.io/Knowledge-Base/#/page/%E6%9E%97%E6%B3%BD%E6%98%95%E7%AE%80%E4%BB%8B",
-            "technologies": ["Markdown", "Documentation"]
-        },
-        {
-            "name": "CUHK-Shenzhen Metaverse",
-            "description": "A campus metaverse project. Led the character controller team.",
-            "link": "#",
-            "technologies": ["Unity", "C#"]
-        },
-        {
-            "name": "DNS Log Analysis System",
-            "description": "A system to extract and visualize AS relationships from massive DNS logs.",
-            "link": "#",
-            "technologies": ["Python", "Spark", "Neo4j"]
-        },
-        {
-            "name": "Auto Data Cleaning Tool",
-            "description": "Automated tool for face recognition dataset preparation.",
-            "link": "#",
-            "technologies": ["Python", "OpenCV"]
-        }
-    ],
-    "awards": [
-        {
-            "title": "MakeX Robotics Challenge - 1st Prize",
-            "date": "2017",
-            "description": "World Robot Conference (Beijing). Team Leader & Programmer."
-        },
-        {
-            "title": "Fobisia Coding Competition - 1st Prize",
-            "date": "2018",
-            "description": "Python coding competition. Team Leader."
-        },
-        {
-            "title": "IELTS",
-            "date": "2019",
-            "description": "Overall Band 7.0 (Reading & Listening > 8.0)"
-        },
-        {
-            "title": "Hult Prize",
-            "date": "2020",
-            "description": "Campus Finalist"
-        }
-    ]
+        "education": [
+            {
+                "school": "香港中文大学(深圳)",
+                "degree": "人工智能与机器人研究生",
+                "date": "2024.09 – 至今",
+                "description": "担任班长"
+            },
+            {
+                "school": "香港中文大学(深圳)",
+                "degree": "计算机工程本科",
+                "date": "2020.09 – 2024.7",
+                "description": ""
+            },
+            {
+                "school": "拉夫堡大学",
+                "degree": "计算机科学与人工智能本科",
+                "date": "2019.9 - 2020.6",
+                "description": ""
+            },
+            {
+                "school": "深圳国际交流学院 (SCIE)",
+                "degree": "高中",
+                "date": "2016 - 2019",
+                "description": ""
+            }
+        ],
+        "publications": [
+            {
+                "title": "Alice: A General Purpose Cognitive Architecture for Continuous Reasoning and Hierarchical Decision-Making",
+                "venue": "FGCS 2026 (Under Review)",
+                "authors": "Zexin Lin, Xiaoqiang Ji",
+                "role": "第一作者",
+                "description": "项目负责人、自主跨场景具身智能体系统及各个子系统设计与实现、高性能计算系统本地部署实现、论文撰写。"
+            },
+            {
+                "title": "DIQ-H: Evaluating Hallucination Persistence in VLMs Under Temporal Visual Degradation",
+                "venue": "Arxiv",
+                "authors": "Zexin Lin, Hanwen Wan, Yebin Zhong, Yuanke Dou, Xiaoqiang Ji",
+                "role": "第一作者",
+                "description": "项目负责人、VLM幻觉评测方法设计与实现、高性能计算系统本地部署实现、论文撰写。"
+            },
+            {
+                "title": "A Learning-based Control Methodology for Transitioning VTOL UAVs",
+                "venue": "Arxiv",
+                "authors": "Zexin Lin, Yebin Zhong, Hanwen Wan, Jiu Cheng, Zhenglong Sun, Xiaoqiang Ji",
+                "role": "第一作者",
+                "description": "项目负责人、实验设计与实施、结果分析和可视化，论文撰写。"
+            },
+            {
+                "title": "Towards Physics Aware Embodied Control with Graph based Object-centric Learning",
+                "venue": "TCPS 2025",
+                "authors": "Hanwen Wan, Yixuan Deng, Donghao Wu, Yifei Chen, Zexin Lin, Jialu Liu, Jiangfan Yu, Xiaoqiang Ji",
+                "role": "合作作者",
+                "description": "高性能计算系统平台支持。"
+            },
+            {
+                "title": "What is the Relationship Between Virtual Reality Tourism and On-site Tourism? Analyzing the Dimensions of Tourist Perceived Value in the VR World Based on the Grounded Theory",
+                "venue": "ICT 2023",
+                "authors": "Zhou Li, Jinjing Chen, Zexin Lin",
+                "role": "第二作者",
+                "award": "Best Paper Award",
+                "description": "实验设计与实现，论文撰写。"
+            },
+            {
+                "title": "Design and Implementation of a VTOL UAV and its Digital Twin",
+                "venue": "IEEE ROBIO 2023",
+                "authors": "Yebin Zhong, Xizheng Huang, Zexin Lin, Jiayu Chen and Xiaoqiang Ji",
+                "role": "第二作者",
+                "description": "数字孪生系统及实验设计与实施、结果分析与可视化、论文撰写。"
+            },
+            {
+                "title": "A Peek at Metaverse Society from Web 3.0 Games: A Preliminary Case Study of Dark Forest",
+                "venue": "IEEE MMSP 2022",
+                "authors": "Zexin Lin, Nanjun Yao, Xiao Wu, Lin Wang",
+                "role": "第一作者",
+                "award": "Top 10% Paper Award",
+                "description": "设计并实现了数据提取、清理和分析管线、论文撰写。"
+            },
+            {
+                "title": "Freedom and Restraint in Dark Forest: A Peek at the Metaverse Through a Blockchain Game",
+                "venue": "IEEE TCSS 2022",
+                "authors": "Nanjun Yao, Zexin Lin, Xiao Wu, Lin Wang",
+                "role": "第二作者",
+                "description": "设计并实现了数据提取、清理和分析管线、论文撰写。"
+            }
+        ],
+        "research_experience": [
+            {
+                "project": "长期记忆智能体项目",
+                "description": "设计并实现了具备情感与认知连续性的智能体架构，构建了记忆系统原型，实现多层次长期记忆的写入、检索与更新机制。搭建并维护智能体实验平台，集成大语言模型、向量数据库与情感计算模块。开发了情感交互与自我认知测试环境，用于验证智能体在多轮交互中的持续记忆与状态演化能力。"
+            },
+            {
+                "project": "垂直起降无人机项目",
+                "description": "搭建并维护服务器环境，部署Unity编辑器、Unity ml-agent框架、CUDA、python开发环境。开发了仿真环境和仿真VTOL 无人机，包括PID 控制器和神经网络控制器。 设计并实现了模拟和真实垂直起降无人机验证实验。实现了硬件与仿真、仿真和强化学习模型之间的全双工通信接口。"
+            },
+            {
+                "project": "高性能计算项目",
+                "description": "构建和维护高性能服务器硬件和开发环境，包括GPU/CPU选型、网络管理、CUDA、redis、spark。C++、python和java开发环境、jupyter Notebook、docker等。参与系统设计和数据结构搭建。开发数据库、高性能C++矩阵运算等后端模块。"
+            },
+            {
+                "project": "香港中文大学（深圳）虚拟校园项目",
+                "description": "完成并集成“CUHKSZ Metaverse”项目中的角色控制系统。包括Unity C#控制器脚本、角色动画、状态机和通信接口。"
+            },
+            {
+                "project": "鹏城实验室科研",
+                "description": "与同事合作搭建服务器环境，包括redis、spark、python和java开发环境、jupyter Notebook、docker、neo4j等。提出并开发了一个从DNS解析日志中提取AS自治域关系的子系统。"
+            },
+            {
+                "project": "学术服务",
+                "description": "International Conference on AI and Robotics, IEEE ROBIO 技术审稿人"
+            }
+        ],
+        "experience": [
+            {
+                "company": "深圳奥拓盖姆科技有限公司",
+                "role": "AI算法工程师实习",
+                "date": "2024.11 - 2025.11",
+                "description": "主要负责智能体系统总架构设计与后端工程开发，实现了长期稳定的多轮对话、主动行为模式更新等。"
+            },
+            {
+                "company": "香港中文大学（深圳）机器人与人工智能实验室",
+                "role": "冀晓强项目组成员",
+                "date": "2022.3 - 2024.10",
+                "description": "主要负责高性能计算系统构建，机器人仿真平台开发与具身智能体系统开发。"
+            },
+            {
+                "company": "香港中文大学（深圳）人云实验室",
+                "role": "角色控制器开发组组长实习",
+                "date": "2021.7 - 2022.3",
+                "description": "负责开发“港中深Metaverse”项目的角色控制系统。"
+            },
+            {
+                "company": "鹏城实验室",
+                "role": "网络安全部门分析组成员实习",
+                "date": "2020.6 - 2020.10",
+                "description": "负责数据分析。"
+            }
+        ],
+        "awards": [
+            {
+                "title": "IEEE MMSP 2022, 前10%优秀论文奖",
+                "date": "2022"
+            },
+            {
+                "title": "ICT 2023, 优秀论文奖",
+                "date": "2023"
+            },
+            {
+                "title": "Diligentia College LiXing Research Project，优秀论文奖",
+                "date": ""
+            },
+            {
+                "title": "香港中文大学（深圳）2023-2024优秀学生干部",
+                "date": "2024"
+            }
+        ],
+        "skills": [
+            {
+                "category": "编程语言",
+                "items": ["Python", "C++", "C#", "Java", "JavaScript"]
+            },
+            {
+                "category": "人工智能与机器人",
+                "items": ["PyTorch", "Unity ML-Agents", "ROS", "LLMs", "Cognitive Architectures"]
+            },
+            {
+                "category": "开发与工具",
+                "items": ["Git", "Docker", "Linux", "CUDA", "Redis", "Spark", "Neo4j"]
+            },
+            {
+                "category": "图形与仿真",
+                "items": ["Unity", "Blender", "Digital Twin"]
+            }
+        ]
+    }
 }
