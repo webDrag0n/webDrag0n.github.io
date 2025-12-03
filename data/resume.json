@@ -61,6 +61,13 @@
                 "description": "Project Lead. Designed and conducted experiments. Analyzed and visualized results. Wrote the paper."
             },
             {
+                "title": "EmbodiedAgent: A Scalable Hierarchical Approach to Overcome Practical Challenge in Multi-Robot Control",
+                "venue": "IROS 2025",
+                "authors": "Hanwen Wan, Yifei Chen, Yixuan Deng, Zeyu Wei, Dongrui Li, Zexin Lin, Donghao Wu, Jiu Cheng, Xiaoqiang Ji",
+                "role": "Co-author",
+                "description": "Provided High-Performance Computing system platform support."
+            },
+            {
                 "title": "Towards Physics Aware Embodied Control with Graph based Object-centric Learning",
                 "venue": "TCPS 2025",
                 "authors": "Hanwen Wan, Yixuan Deng, Donghao Wu, Yifei Chen, Zexin Lin, Jialu Liu, Jiangfan Yu, Xiaoqiang Ji",
@@ -247,6 +254,13 @@
                 "authors": "Zexin Lin, Yebin Zhong, Hanwen Wan, Jiu Cheng, Zhenglong Sun, Xiaoqiang Ji",
                 "role": "第一作者",
                 "description": "项目负责人、实验设计与实施、结果分析和可视化，论文撰写。"
+            },
+            {
+                "title": "EmbodiedAgent: A Scalable Hierarchical Approach to Overcome Practical Challenge in Multi-Robot Control",
+                "venue": "IROS 2025",
+                "authors": "Hanwen Wan, Yifei Chen, Yixuan Deng, Zeyu Wei, Dongrui Li, Zexin Lin, Donghao Wu, Jiu Cheng, Xiaoqiang Ji",
+                "role": "合作作者",
+                "description": "高性能计算系统平台支持。"
             },
             {
                 "title": "Towards Physics Aware Embodied Control with Graph based Object-centric Learning",
