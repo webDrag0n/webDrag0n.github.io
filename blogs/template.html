@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Title - Interactive Scientific Paper</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- MathJax for Mathematical Formulas -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- Mermaid for Flowcharts -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'dark',
+            securityLevel: 'loose',
+            fontFamily: 'Inter',
+            themeVariables: {
+                primaryColor: '#1e293b',
+                primaryTextColor: '#f8fafc',
+                primaryBorderColor: '#38bdf8',
+                lineColor: '#94a3b8',
+                secondaryColor: '#0f172a',
+                tertiaryColor: '#1e293b'
+            }
+        });
+    </script>
+
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-color: #f8fafc;
+            --accent-color: #38bdf8;
+            --secondary-text: #94a3b8;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --glow-color: rgba(56, 189, 248, 0.3);
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Abstract / Background Effects */
+        .ambient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 15% 50%, rgba(56, 189, 248, 0.04) 0%, transparent 50%),
+                radial-gradient(circle at 85% 30%, rgba(16, 185, 129, 0.04) 0%, transparent 50%);
+        }
+
+        /* Container & Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        /* Header / Hero */
+        .hero {
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, #f8fafc, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-meta {
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .abstract {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 3rem auto;
+            max-width: 800px;
+            text-align: left;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .abstract strong {
+            color: var(--accent-color);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* Sidebar TOC */
+        .sidebar {
+            position: sticky;
+            top: 2rem;
+            padding: 1.5rem;
+            background: rgba(30, 41, 59, 0.3);
+            border-left: 2px solid var(--border-color);
+            height: max-content;
+            max-height: calc(100vh - 4rem);
+            overflow-y: auto;
+        }
+
+        .sidebar h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-text);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .toc-list {
+            list-style: none;
+        }
+
+        .toc-list li {
+            margin-bottom: 0.75rem;
+        }
+
+        .toc-list a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+            opacity: 0.7;
+        }
+
+        .toc-list a:hover {
+            opacity: 1;
+            color: var(--accent-color);
+        }
+
+        /* Content Area */
+        .content {
+            padding-bottom: 6rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin: 4rem 0 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            margin: 2.5rem 0 1rem;
+            color: #f1f5f9;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* Callouts / Info Blocks */
+        .callout {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            background: rgba(56, 189, 248, 0.05);
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .callout-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--accent-color);
+        }
+
+        /* Blockquotes for Quotes */
+        blockquote {
+            margin: 2rem 0;
+            padding: 1.5rem 2rem;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--secondary-text);
+            border-left: 4px solid #cbd5e1;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* Images and SVG Containers */
+        figure, .svg-container {
+            margin: 3rem 0;
+            text-align: center;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        figcaption {
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+            color: var(--secondary-text);
+        }
+
+        /* SVG Inner Styling Framework */
+        svg {
+            max-width: 100%;
+            height: auto;
+            overflow: visible;
+        }
+        
+        .svg-node {
+            fill: #1e293b;
+            stroke: var(--accent-color);
+            stroke-width: 2;
+            rx: 8;
+        }
+
+        .svg-text {
+            fill: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            text-anchor: middle;
+            dominant-baseline: middle;
+        }
+
+        .svg-text-title {
+            fill: var(--accent-color);
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .svg-text-sub {
+            fill: var(--secondary-text);
+            font-size: 12px;
+        }
+
+        .svg-edge {
+            stroke: var(--secondary-text);
+            stroke-width: 2;
+            fill: none;
+            marker-end: url(#arrowhead);
+            transition: stroke 0.3s, stroke-width 0.3s;
+        }
+
+        .svg-edge-active {
+            stroke: var(--accent-color);
+            stroke-width: 3;
+            marker-end: url(#arrowhead-active);
+        }
+
+        .svg-group-box {
+            fill: rgba(255, 255, 255, 0.02);
+            stroke: var(--border-color);
+            stroke-width: 1;
+            stroke-dasharray: 4 4;
+            rx: 12;
+        }
+
+        /* Interactive Hover on SVG */
+        .interactive-group {
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        .interactive-group:hover .svg-node {
+            fill: rgba(56, 189, 248, 0.1);
+            filter: drop-shadow(0 0 8px var(--glow-color));
+        }
+
+        /* Mermaid Overrides */
+        .mermaid {
+            margin: 3rem 0;
+            text-align: center;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Code Blocks */
+        pre {
+            background: #1e293b !important;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            overflow-x: auto;
+            margin: 2rem 0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+        }
+
+        code {
+            font-family: 'Fira Code', 'Courier New', monospace;
+            color: #e2e8f0;
+        }
+
+        p code, li code {
+            background: rgba(255,255,255,0.1);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #38bdf8;
+        }
+
+        /* Nav back */
+        .nav-back {
+            display: inline-block;
+            margin-top: 2rem;
+            margin-left: 2rem;
+            color: var(--secondary-text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .nav-back:hover {
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="ambient-bg"></div>
+
+    <a href="../index.html" class="nav-back">← Back to Home</a>
+
+    <header class="hero">
+        <h1 class="hero-title">Blog Title Placeholder</h1>
+        <div class="hero-meta">
+            <span>Date Placeholder</span>
+            <span>Reading Time: X min</span>
+            <span>Category: AI / Organization</span>
+        </div>
+        
+        <div class="abstract">
+            <strong>TL;DR</strong>
+            <p style="margin-bottom: 0;">Abstract text goes here. Summarizes the key insights of the post in a few compelling sentences.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <h3>Table of Contents</h3>
+            <ul class="toc-list" id="toc">
+                <!-- TOC dynamically or statically placed here -->
+                <li><a href="#section1">1. Section One</a></li>
+                <li><a href="#section2">2. Section Two</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <section id="section1">
+                <h2>1. First Major Section</h2>
+                <p>Content goes here. Mathematical formulas like <span class="math inline">\( L = \sum P(x_t | x_{<t}) \)</span> can be embedded inline or as a block.</p>
+            </section>
+            
+            <!-- SVG Template Block -->
+            <div class="svg-container">
+                <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8" />
+                        </marker>
+                        <marker id="arrowhead-active" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#38bdf8" />
+                        </marker>
+                    </defs>
+                    
+                    <!-- Background Boundary -->
+                    <rect class="svg-group-box" x="50" y="50" width="700" height="300" />
+                    <text class="svg-text svg-text-sub" x="400" y="30">System Boundary Example</text>
+                    
+                    <!-- Nodes -->
+                    <g class="interactive-group">
+                        <rect class="svg-node" x="150" y="150" width="120" height="60" />
+                        <text class="svg-text svg-text-title" x="210" y="170">Node A</text>
+                        <text class="svg-text svg-text-sub" x="210" y="190">Input</text>
+                    </g>
+                    
+                    <g class="interactive-group">
+                        <rect class="svg-node" x="530" y="150" width="120" height="60" />
+                        <text class="svg-text svg-text-title" x="590" y="170">Node B</text>
+                        <text class="svg-text svg-text-sub" x="590" y="190">Output</text>
+                    </g>
+                    
+                    <!-- Edges -->
+                    <path class="svg-edge svg-edge-active" d="M 270 180 C 400 180, 400 180, 520 180" />
+                </svg>
+                <figcaption>Figure 1: Example illustrative SVG framework for custom architectures.</figcaption>
+            </div>
+
+            <!-- Mermaid Example Block -->
+            <div class="mermaid">
+                graph LR
+                A[Observe] --> B[Memory]
+                B --> C[Plan]
+                C --> D[Action]
+                D -.-> A
+            </div>
+            <figcaption style="text-align:center; margin-top:-2rem; margin-bottom:3rem;">Figure 2: Example Mermaid diagram.</figcaption>
+
+        </main>
+    </div>
+
+    <!-- Smooth Scrolling for TOC -->
+    <script>
+        document.querySelectorAll('.toc-list a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

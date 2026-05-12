@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limitations of Current Agents - AI Series</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'dark',
+            securityLevel: 'loose',
+            fontFamily: 'Inter',
+            themeVariables: { primaryColor: '#1e293b', primaryTextColor: '#f8fafc', primaryBorderColor: '#38bdf8', lineColor: '#94a3b8', secondaryColor: '#0f172a', tertiaryColor: '#1e293b' }
+        });
+    </script>
+
+    <style>
+        :root { --bg-color: #0f172a; --text-color: #f8fafc; --accent-color: #38bdf8; --secondary-text: #94a3b8; --card-bg: rgba(30, 41, 59, 0.7); --border-color: rgba(255, 255, 255, 0.1); --glow-color: rgba(56, 189, 248, 0.3); }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.7; overflow-x: hidden; }
+        .ambient-bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -1; background: radial-gradient(circle at 15% 50%, rgba(56, 189, 248, 0.04) 0%, transparent 50%), radial-gradient(circle at 85% 30%, rgba(16, 185, 129, 0.04) 0%, transparent 50%); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: 1fr 3fr; gap: 4rem; align-items: start; }
+        @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+        .hero { padding: 6rem 2rem 4rem; text-align: center; max-width: 900px; margin: 0 auto; }
+        .hero-title { font-size: 3rem; font-weight: 800; line-height: 1.2; margin-bottom: 1.5rem; background: linear-gradient(to right, #f8fafc, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-meta { color: var(--secondary-text); font-size: 0.9rem; display: flex; justify-content: center; gap: 2rem; }
+        .abstract { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; margin: 3rem auto; max-width: 800px; text-align: left; backdrop-filter: blur(10px); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); }
+        .abstract strong { color: var(--accent-color); display: block; margin-bottom: 0.5rem; font-size: 1.1rem; }
+        .sidebar { position: sticky; top: 2rem; padding: 1.5rem; background: rgba(30, 41, 59, 0.3); border-left: 2px solid var(--border-color); height: max-content; }
+        .sidebar h3 { font-size: 1rem; margin-bottom: 1rem; color: var(--secondary-text); text-transform: uppercase; letter-spacing: 0.05em; }
+        .toc-list { list-style: none; }
+        .toc-list li { margin-bottom: 0.75rem; }
+        .toc-list a { color: var(--text-color); text-decoration: none; font-size: 0.95rem; transition: color 0.2s; opacity: 0.7; }
+        .toc-list a:hover { opacity: 1; color: var(--accent-color); }
+        .content { padding-bottom: 6rem; }
+        h2 { font-size: 2rem; margin: 4rem 0 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-color); }
+        h3 { font-size: 1.4rem; margin: 2.5rem 0 1rem; color: #f1f5f9; }
+        p { margin-bottom: 1.5rem; font-size: 1.1rem; }
+        .callout { margin: 2rem 0; padding: 1.5rem; border-radius: 8px; background: rgba(56, 189, 248, 0.05); border-left: 4px solid var(--accent-color); }
+        .callout-title { font-weight: 600; margin-bottom: 0.5rem; color: var(--accent-color); }
+        blockquote { margin: 2rem 0; padding: 1.5rem 2rem; font-size: 1.2rem; font-style: italic; color: var(--secondary-text); border-left: 4px solid #cbd5e1; background: rgba(255, 255, 255, 0.02); border-radius: 0 8px 8px 0; }
+        figure, .svg-container { margin: 3rem 0; text-align: center; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2); overflow: hidden; }
+        figcaption { margin-top: 1.5rem; font-size: 0.95rem; color: var(--secondary-text); }
+        svg { max-width: 100%; height: auto; overflow: visible; }
+        .svg-node { fill: #1e293b; stroke: var(--accent-color); stroke-width: 2; rx: 8; }
+        .svg-text { fill: var(--text-color); font-family: 'Inter', sans-serif; font-size: 14px; text-anchor: middle; dominant-baseline: middle; }
+        .svg-text-title { fill: var(--accent-color); font-weight: 600; font-size: 16px; }
+        .svg-text-sub { fill: var(--secondary-text); font-size: 12px; }
+        .svg-edge { stroke: var(--secondary-text); stroke-width: 2; fill: none; marker-end: url(#arrowhead); transition: stroke 0.3s, stroke-width 0.3s; }
+        .svg-edge-active { stroke: var(--accent-color); stroke-width: 3; marker-end: url(#arrowhead-active); }
+        .svg-group-box { fill: rgba(255, 255, 255, 0.02); stroke: var(--border-color); stroke-width: 1; stroke-dasharray: 4 4; rx: 12; }
+        .interactive-group { cursor: pointer; transition: opacity 0.3s; }
+        .interactive-group:hover .svg-node { fill: rgba(56, 189, 248, 0.1); filter: drop-shadow(0 0 8px var(--glow-color)); }
+        .mermaid { margin: 3rem 0; text-align: center; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; display: flex; justify-content: center; }
+        .nav-back { display: inline-block; margin-top: 2rem; margin-left: 2rem; color: var(--secondary-text); text-decoration: none; transition: color 0.3s; }
+        .nav-back:hover { color: var(--text-color); }
+    </style>
+</head>
+<body>
+    <div class="ambient-bg"></div>
+
+    <a href="../index.html" class="nav-back">← Back to Home</a>
+
+    <header class="hero">
+        <h1 class="hero-title">为什么现有智能体还无法替代大型组织</h1>
+        <div class="hero-meta">
+            <span>May 17, 2026</span>
+            <span>Reading Time: 13 min</span>
+            <span>Category: Agent Architecture</span>
+        </div>
+        
+        <div class="abstract">
+            <strong>TL;DR</strong>
+            <p style="margin-bottom: 0;">当前智能体(Agent)虽然具备了处理微切分任务的高智力表现，但它们之所以距离真正的大规模组织还有显著鸿沟，其核心不在于推理模块“算力不足”，而在于缺乏<strong>长期自治与自我维护的主动运行闭环</strong>。当前的Agent本质上是“高智能的响应式脚本”，而非“活”在持续时间轴上的自治生态系。</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <h3>Table of Contents</h3>
+            <ul class="toc-list" id="toc">
+                <li><a href="#micro-tasks">1. 现有Agent的专长与边界</a></li>
+                <li><a href="#organization-needs">2. 大型复杂组织真正需要什么</a></li>
+                <li><a href="#prompt-to-stop">3. 即抛运行：Prompt-Task-Stop循环</a></li>
+                <li><a href="#autonomy-vs-inference">4. 为什么“自治”优先于“推理”</a></li>
+                <li><a href="#existence">5. Agent缺失的最根本属性：“存在性”</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+
+            <section id="micro-tasks">
+                <h2>1. 现有Agent的专长与边界</h2>
+                <p>如果你在现阶段使用过自动代码生成、资料分析或微调度规划的Agent，你会发现它们极其卓越。然而这些卓越的表象建立在一个特定的隐性假设之上——较短且上下文极其严密限定的任务周期界限。它们是极度优秀的执行器（Executor），胜任微任务和小工作流串联。</p>
+            </section>
+
+            <section id="organization-needs">
+                <h2>2. 大型复杂组织真正需要什么</h2>
+                <p>相比于能写一千行漂亮代码的单一模块，一个百人级或万人级企业立足的核心资产，并不是随时可供调用的高频推理，而是<strong>长期稳定的状态维持、多层多主轴目标的隐式协同、对噪声容忍的异步运行网络，和自我修复机制底盘</strong>。</p>
+            </section>
+
+            <section id="prompt-to-stop">
+                <h2>3. 即抛运行：Prompt-Task-Stop循环</h2>
+                <p>这种反差暴露了我们现有人工智能架构底层逻辑的被动性。在当前的架构设计中，绝大多数的Agent运行在典型的单点触发流中。</p>
+                
+                <div class="mermaid">
+                    graph TD
+                    subgraph 现有的 Agent 执行流
+                        A[被动唤醒: Prompt/API] --> B[任务加载与推演]
+                        B --> C[工具调用]
+                        C --> D[任务返回]
+                        D --> E((系统挂起 - Stop))
+                    end
+                </div>
+                <figcaption style="text-align:center; margin-top:-2rem; margin-bottom:3rem;">图 1: 经典的单周期工具型智能体调用链结结构。系统并不持有真正的流逝时间概念。</figcaption>
+            </section>
+
+            <section id="autonomy-vs-inference">
+                <h2>4. 为什么“自治”优先于“推理”</h2>
+                <p>一次性的高智商推理可能能写出一段优美的量子力学系统代码，却无法在无任务输入的三个月时间里，每天检查代码在多服务器运行下的边界隐患，并根据最新发现的运维日历做出规划，然后主动拉起相关网络通信协议自我修正。真正的主动组织并不依赖指令下达，而是基于状态偏离做出的稳态回复系统行为。</p>
+            </section>
+
+            <section id="existence">
+                <h2>5. Agent缺失的最根本属性：“存在性”</h2>
+                <p>因此我们可以得到结论：目前大放异彩的Agent系统，由于不处在一种绵延连续的时间线中进行消耗和演进，它们<strong>并不具备系统级“存在性”</strong>。</p>
+                <blockquote> 当前绝大多数的智能体，它会进行深度“思考（Think）”，但它并不知道该怎样持续地“存活（Exist / Be Alive）”。</blockquote>
+
+                <div class="svg-container">
+                    <svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:transparent;stop-opacity:1" />
+                                <stop offset="50%" style="stop-color:rgba(56, 189, 248, 0.4);stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:transparent;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <!-- Timeline -->
+                        <rect x="50" y="260" width="700" height="4" fill="#334155" />
+                        <text class="svg-text svg-text-sub" x="750" y="280">Time</text>
+
+                        <!-- Agent A Task -->
+                        <g class="interactive-group">
+                            <rect class="svg-node" x="150" y="80" width="100" height="120" rx="8" stroke="#f43f5e" fill="rgba(244, 63, 94, 0.1)"/>
+                            <text class="svg-text svg-text-title" x="200" y="120" fill="#f43f5e">单轨 Agent</text>
+                            <text class="svg-text svg-text-sub" x="200" y="150">唤醒 -> 休眠</text>
+                            <path class="svg-edge" d="M 200 200 v 60" style="stroke:#f43f5e; marker-end:none;" stroke-dasharray="4" />
+                        </g>
+
+                        <!-- Agent B Task -->
+                        <g class="interactive-group">
+                            <rect class="svg-node" x="400" y="60" width="300" height="160" rx="8" stroke="#38bdf8" fill="rgba(56, 189, 248, 0.05)"/>
+                            <text class="svg-text svg-text-title" x="550" y="100" fill="#38bdf8">连续存在（Persistent）组织实体</text>
+                            <text class="svg-text svg-text-sub" x="550" y="130">主动检查 -> 后台学习 -> 跨期任务</text>
+                            <rect x="400" y="180" width="300" height="40" fill="url(#grad2)" />
+                            
+                            <path class="svg-edge" d="M 450 220 v 40" style="stroke:#38bdf8; marker-end:none;" stroke-dasharray="2" />
+                            <path class="svg-edge" d="M 650 220 v 40" style="stroke:#38bdf8; marker-end:none;" stroke-dasharray="2" />
+                        </g>
+                    </svg>
+                    <figcaption>图 2: 单次映射函数（左）与持续存在的异步生命线（右）的时间流对比。</figcaption>
+                </div>
+
+                <p>这种存在性的剥离，使得记忆无法产生真实的化学沉淀积累成稳定的数字人格，使得组织内部反馈体系无法产生信任节点，从而将组织协同降低为冰冷的API互调。一旦进入长线混沌周期运作系统便分崩离析。</p>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        document.querySelectorAll('.toc-list a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) { e.preventDefault(); document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' }); });
+        });
+    </script>
+</body>
+</html>

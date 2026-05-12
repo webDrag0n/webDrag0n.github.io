@@ -24,6 +24,7 @@ function renderAll(lang) {
     renderEducation(data.education);
     renderExperience(data.experience);
     renderResearchExperience(data.research_experience);
+    renderBlogs(data.blogs);
     renderPublications(data.publications);
     renderSkills(data.skills);
     renderAwards(data.awards);
@@ -37,6 +38,7 @@ function updateStaticText(lang) {
             skillsIntro: "Here are a few technologies I've been working with recently:",
             experienceTitle: "Where I've Worked",
             researchTitle: "Research Experience",
+            blogsTitle: "Blogs & Articles",
             publicationsTitle: "Publications",
             educationTitle: "Education",
             awardsTitle: "Awards",
@@ -51,6 +53,7 @@ function updateStaticText(lang) {
             skillsIntro: "最近我正在使用的技术：",
             experienceTitle: "工作经历",
             researchTitle: "科研经验",
+            blogsTitle: "博客与文章",
             publicationsTitle: "发表论文",
             educationTitle: "教育经历",
             awardsTitle: "奖项",
@@ -67,6 +70,7 @@ function updateStaticText(lang) {
     document.getElementById('skills-intro').textContent = t.skillsIntro;
     document.getElementById('experience-title').textContent = t.experienceTitle;
     document.getElementById('research-title').textContent = t.researchTitle;
+    document.getElementById('blogs-title').textContent = t.blogsTitle;
     document.getElementById('publications-title').textContent = t.publicationsTitle;
     document.getElementById('education-title').textContent = t.educationTitle;
     document.getElementById('awards-title').textContent = t.awardsTitle;
@@ -147,6 +151,25 @@ function renderResearchExperience(research) {
             <p class="job-desc">${item.description}</p>
         `;
         container.appendChild(div);
+    });
+}
+
+function renderBlogs(blogs) {
+    const container = document.getElementById('blogs-list');
+    if (!container || !blogs) return;
+    container.innerHTML = '';
+
+    blogs.forEach(blog => {
+        const item = document.createElement('div');
+        item.className = 'timeline-item';
+        
+        item.innerHTML = `
+            <h3 class="job-title"><a href="${blog.url}" target="_blank" style="color: var(--text-color); text-decoration: none;">${blog.title}</a></h3>
+            <div class="job-date">${blog.date}</div>
+            <p class="job-desc">${blog.description}</p>
+            <a href="${blog.url}" class="btn" style="padding: 5px 10px; font-size: 0.8rem; margin-top: 10px;">Read More</a>
+        `;
+        container.appendChild(item);
     });
 }
 
