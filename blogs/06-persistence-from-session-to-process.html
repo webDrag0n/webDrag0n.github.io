@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>持续性：从会话到长期进程 · AGI 六条件</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'dark', securityLevel: 'loose', fontFamily: 'Inter',
+            themeVariables: { primaryColor: '#1e293b', primaryTextColor: '#f8fafc', primaryBorderColor: '#38bdf8', lineColor: '#94a3b8', secondaryColor: '#0f172a', tertiaryColor: '#1e293b' }
+        });
+    </script>
+    <style>
+        :root { --bg-color: #0f172a; --text-color: #f8fafc; --accent-color: #38bdf8; --secondary-text: #94a3b8; --card-bg: rgba(30, 41, 59, 0.7); --border-color: rgba(255, 255, 255, 0.1); --glow-color: rgba(56, 189, 248, 0.3); --success-color: #10b981; --warning-color: #f59e0b; --danger-color: #f43f5e; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', 'Noto Serif SC', serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.85; overflow-x: hidden; }
+        .ambient-bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -1;
+            background: radial-gradient(circle at 15% 50%, rgba(56, 189, 248, 0.05) 0%, transparent 50%), radial-gradient(circle at 85% 30%, rgba(245, 158, 11, 0.04) 0%, transparent 50%); }
+        .container { max-width: 1300px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: 1fr 3fr; gap: 4rem; align-items: start; }
+        @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+        .hero { padding: 5rem 2rem 2rem; text-align: center; max-width: 900px; margin: 0 auto; }
+        .hero-badge { display: inline-block; padding: 0.3rem 0.9rem; border-radius: 999px; background: rgba(56,189,248,0.08); border: 1px solid rgba(56,189,248,0.3); color: var(--accent-color); font-size: 0.78rem; letter-spacing: 0.1em; margin-bottom: 1.2rem; text-transform: uppercase; }
+        .hero-title { font-family: 'Noto Serif SC', serif; font-size: 2.8rem; font-weight: 700; line-height: 1.25; margin-bottom: 1rem;
+            background: linear-gradient(120deg, #f8fafc 20%, #38bdf8 60%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-subtitle { color: var(--secondary-text); font-size: 1.1rem; font-style: italic; margin-bottom: 2rem; }
+        .hero-meta { color: var(--secondary-text); font-size: 0.9rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        .series-progress { max-width: 900px; margin: 3rem auto 0; padding: 0 2rem; }
+        .series-progress-label { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; font-size: 0.8rem; color: var(--secondary-text); text-transform: uppercase; letter-spacing: 0.1em; }
+        .series-progress-grid { display: grid; grid-template-columns: repeat(9, 1fr); gap: 6px; }
+        .series-progress-cell { height: 6px; border-radius: 3px; background: rgba(255,255,255,0.06); }
+        .series-progress-cell.done { background: rgba(56,189,248,0.4); }
+        .series-progress-cell.active { background: var(--accent-color); box-shadow: 0 0 12px var(--glow-color); }
+        .abstract { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; margin: 3rem auto; max-width: 860px; text-align: left; backdrop-filter: blur(10px); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15); }
+        .abstract strong { color: var(--accent-color); display: block; margin-bottom: 0.6rem; font-size: 1.05rem; letter-spacing: 0.08em; }
+        .abstract p { font-size: 1.05rem; margin: 0; }
+        .sidebar { position: sticky; top: 2rem; padding: 1.5rem; background: rgba(30, 41, 59, 0.3); border-left: 2px solid var(--border-color); height: max-content; max-height: calc(100vh - 4rem); overflow-y: auto; }
+        .sidebar h3 { font-size: 0.85rem; margin-bottom: 1rem; color: var(--secondary-text); text-transform: uppercase; letter-spacing: 0.08em; }
+        .toc-list { list-style: none; }
+        .toc-list li { margin-bottom: 0.7rem; }
+        .toc-list a { color: var(--text-color); text-decoration: none; font-size: 0.92rem; transition: color 0.2s, padding 0.2s; opacity: 0.7; display: block; padding: 0.25rem 0 0.25rem 0.6rem; border-left: 2px solid transparent; }
+        .toc-list a:hover { opacity: 1; color: var(--accent-color); border-left: 2px solid var(--accent-color); }
+        .content { padding-bottom: 4rem; }
+        h2 { font-family: 'Noto Serif SC', serif; font-size: 1.85rem; font-weight: 700; margin: 4rem 0 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-color); }
+        h2 .num { color: var(--accent-color); font-weight: 600; margin-right: 0.6rem; font-family: 'Inter', sans-serif; }
+        h3 { font-size: 1.25rem; margin: 2.5rem 0 1rem; color: #f1f5f9; }
+        p { margin-bottom: 1.4rem; font-size: 1.05rem; color: #e2e8f0; }
+        .callout { margin: 2rem 0; padding: 1.3rem 1.6rem; border-radius: 10px; background: rgba(56, 189, 248, 0.04); border-left: 4px solid var(--accent-color); }
+        .callout-title { font-weight: 600; margin-bottom: 0.5rem; color: var(--accent-color); font-size: 0.95rem; letter-spacing: 0.05em; text-transform: uppercase; }
+        .callout.philosophical { background: rgba(245, 158, 11, 0.04); border-left-color: var(--warning-color); }
+        .callout.philosophical .callout-title { color: var(--warning-color); }
+        .callout.formal { background: rgba(16, 185, 129, 0.04); border-left-color: var(--success-color); }
+        .callout.formal .callout-title { color: var(--success-color); }
+        blockquote { margin: 2rem 0; padding: 1.2rem 1.8rem; font-size: 1.15rem; font-style: italic; color: var(--secondary-text); border-left: 4px solid #cbd5e1; background: rgba(255, 255, 255, 0.02); border-radius: 0 8px 8px 0; }
+        figure, .svg-container { margin: 2.5rem 0; text-align: center; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2); overflow: hidden; }
+        figcaption { margin-top: 1.2rem; font-size: 0.9rem; color: var(--secondary-text); line-height: 1.6; }
+        figcaption b { color: var(--accent-color); }
+        svg { max-width: 100%; height: auto; overflow: visible; }
+        .svg-node { fill: #1e293b; stroke: var(--accent-color); stroke-width: 2; rx: 8; }
+        .svg-text { fill: var(--text-color); font-family: 'Inter', sans-serif; font-size: 13px; text-anchor: middle; dominant-baseline: middle; }
+        .svg-text-title { fill: var(--accent-color); font-weight: 600; font-size: 15px; }
+        .svg-text-sub { fill: var(--secondary-text); font-size: 11px; }
+        .svg-edge { stroke: var(--secondary-text); stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+        .svg-edge-active { stroke: var(--accent-color); stroke-width: 2.5; marker-end: url(#arrowhead-active); fill: none; }
+        .svg-edge-dashed { stroke: var(--secondary-text); stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; marker-end: url(#arrowhead); }
+        .svg-group-box { fill: rgba(255, 255, 255, 0.02); stroke: var(--border-color); stroke-width: 1; stroke-dasharray: 4 4; rx: 12; }
+        table.ref-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
+        table.ref-table td { padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--border-color); vertical-align: top; color: #e2e8f0; }
+        table.ref-table td.ref-num { color: var(--accent-color); font-family: 'Inter', sans-serif; font-weight: 600; width: 3rem; white-space: nowrap; }
+        .series-nav { max-width: 1100px; margin: 4rem auto 2rem; padding: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; border-top: 1px solid var(--border-color); }
+        @media (max-width: 700px) { .series-nav { grid-template-columns: 1fr; } }
+        .series-nav a { display: block; padding: 1.3rem 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 10px; text-decoration: none; color: var(--text-color); transition: all 0.2s; }
+        .series-nav a:hover { border-color: var(--accent-color); background: rgba(56,189,248,0.05); transform: translateY(-2px); }
+        .series-nav .nav-label { display: block; font-size: 0.78rem; color: var(--secondary-text); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.3rem; }
+        .series-nav .nav-title { font-size: 1.05rem; font-weight: 600; color: var(--text-color); }
+        .series-nav .next { text-align: right; }
+        .nav-back { display: inline-block; margin: 2rem 0 0 2rem; color: var(--secondary-text); text-decoration: none; transition: color 0.3s; font-size: 0.9rem; }
+        .nav-back:hover { color: var(--text-color); }
+        sup.cite { color: var(--accent-color); font-size: 0.75rem; padding: 0 0.15rem; cursor: pointer; }
+        sup.cite a { color: inherit; text-decoration: none; }
+        ul.feature-list { padding-left: 1.5rem; margin-bottom: 1.4rem; }
+        ul.feature-list li { margin-bottom: 0.5rem; color: #e2e8f0; font-size: 1.02rem; }
+        ul.feature-list li strong { color: var(--accent-color); }
+    </style>
+</head>
+<body>
+    <div class="ambient-bg"></div>
+    <a href="../index.html" class="nav-back">← Back to Home</a>
+    <header class="hero">
+        <span class="hero-badge">第 06 篇 · 第三条件：持续性</span>
+        <h1 class="hero-title">持续性：从会话到长期进程</h1>
+        <p class="hero-subtitle">Persistence — From Ephemeral Sessions to Long-Running Processes</p>
+        <div class="hero-meta">
+            <span>May 18, 2026</span>
+            <span>Reading Time: 19 min</span>
+            <span>Category: Memory &amp; Identity</span>
+        </div>
+        <div class="series-progress">
+            <div class="series-progress-label">
+                <span>可替代之身 · AGI 六条件系列</span>
+                <span>06 / 09</span>
+            </div>
+            <div class="series-progress-grid">
+                <div class="series-progress-cell done"></div>
+                <div class="series-progress-cell done"></div>
+                <div class="series-progress-cell done"></div>
+                <div class="series-progress-cell done"></div>
+                <div class="series-progress-cell done"></div>
+                <div class="series-progress-cell active"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+            </div>
+        </div>
+        <div class="abstract">
+            <strong>TL;DR</strong>
+            <p>当前 LLM Agent 的生命周期是"会话"——用户发起请求、系统处理、返回结果、状态清空。这一范式在替代单次任务时有效，但在替代<em>岗位</em>时结构性失效——因为岗位的本质是<strong>跨越数周、数月、数年的持续在场</strong><sup class="cite"><a href="#ref-1">[1]</a></sup><sup class="cite"><a href="#ref-2">[2]</a></sup>。本文论证：持续性不是"更长的上下文窗口"，而是从"会话式调用"切换到"长期运行进程"的架构范式转换。这一转换要求三项工程构件：持久记忆（跨会话的向量 DB + 事件日志）、身份连续性（跨时间的 self-model）、关系积累（声誉、信任、协作历史）。</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Table of Contents</h3>
+            <ul class="toc-list">
+                <li><a href="#sec1">1. 会话 vs 进程</a></li>
+                <li><a href="#sec2">2. 持久记忆的三层架构</a></li>
+                <li><a href="#sec3">3. 身份连续性与自我模型</a></li>
+                <li><a href="#sec4">4. 关系积累：声誉与信任</a></li>
+                <li><a href="#sec5">5. 工程实现路径</a></li>
+                <li><a href="#references">References</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+
+            <section id="sec1">
+                <h2><span class="num">01</span>会话 vs 进程：两种生命周期范式</h2>
+
+                <p>当前 LLM Agent 的标准生命周期是"会话"（session）：用户发起请求 → 系统加载上下文 → 模型推理 → 返回结果 → 状态清空。这一范式在处理单次任务时高效且可扩展，但在替代<em>岗位</em>时存在结构性失配——因为岗位的本质不是"回答一个问题"，而是<strong>在数周、数月、数年的时间尺度上持续在场</strong><sup class="cite"><a href="#ref-1">[1]</a></sup><sup class="cite"><a href="#ref-2">[2]</a></sup>。</p>
+
+                <p>一个产品经理不是每次开会时从零开始理解产品；一个客服专员不是每次接电话时重新学习用户历史；一个研发工程师不是每次 commit 时忘记上周的架构决策。他们的价值来自<em>跨越时间的连续性</em>——记住过去的决策、积累对系统的理解、与团队建立信任、形成稳定的工作风格。这些都无法在"会话"范式中实现。</p>
+
+                <p>本文论证：持续性不是"把上下文窗口拉长到 1M token"，而是从"会话式调用"切换到"长期运行进程"的<strong>架构范式转换</strong>。这一转换要求三项工程构件：</p>
+
+                <ul class="feature-list">
+                    <li><strong>持久记忆</strong>——跨会话的向量数据库 + 事件日志，支持语义检索与时序回溯。</li>
+                    <li><strong>身份连续性</strong>——跨时间的 self-model，使系统在 t=0 与 t=1000 时仍被识别为"同一个体"。</li>
+                    <li><strong>关系积累</strong>——声誉、信任、协作历史的持久化，使系统能参与长期博弈。</li>
+                </ul>
+
+                <figure class="svg-container">
+                    <svg viewBox="0 0 900 450" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8" />
+                            </marker>
+                            <marker id="arrowhead-active" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#38bdf8" />
+                            </marker>
+                        </defs>
+
+                        <!-- Session-based timeline (top half) -->
+                        <text class="svg-text svg-text-title" x="450" y="30">会话式 Agent · Session-Based Agent</text>
+
+                        <!-- Multiple disconnected sessions -->
+                        <rect x="80" y="60" width="120" height="60" rx="8" fill="rgba(56,189,248,0.1)" stroke="#38bdf8" stroke-width="2"/>
+                        <text class="svg-text svg-text-title" x="140" y="85">Session 1</text>
+                        <text class="svg-text svg-text-sub" x="140" y="105">t=0 → t=5min</text>
+
+                        <rect x="280" y="60" width="120" height="60" rx="8" fill="rgba(56,189,248,0.1)" stroke="#38bdf8" stroke-width="2"/>
+                        <text class="svg-text svg-text-title" x="340" y="85">Session 2</text>
+                        <text class="svg-text svg-text-sub" x="340" y="105">t=2h → t=2h5min</text>
+
+                        <rect x="480" y="60" width="120" height="60" rx="8" fill="rgba(56,189,248,0.1)" stroke="#38bdf8" stroke-width="2"/>
+                        <text class="svg-text svg-text-title" x="540" y="85">Session 3</text>
+                        <text class="svg-text svg-text-sub" x="540" y="105">t=1d → t=1d10min</text>
+
+                        <rect x="680" y="60" width="120" height="60" rx="8" fill="rgba(56,189,248,0.1)" stroke="#38bdf8" stroke-width="2"/>
+                        <text class="svg-text svg-text-title" x="740" y="85">Session N</text>
+                        <text class="svg-text svg-text-sub" x="740" y="105">t=30d → ...</text>
+
+                        <!-- X marks showing state loss -->
+                        <text x="220" y="95" style="fill: #f43f5e; font-size: 28px; font-weight: bold">✗</text>
+                        <text x="420" y="95" style="fill: #f43f5e; font-size: 28px; font-weight: bold">✗</text>
+                        <text x="620" y="95" style="fill: #f43f5e; font-size: 28px; font-weight: bold">✗</text>
+
+                        <text class="svg-text svg-text-sub" x="450" y="150" style="fill: #f43f5e">每次会话结束，状态清空 · State reset between sessions</text>
+
+                        <!-- Process-based timeline (bottom half) -->
+                        <text class="svg-text svg-text-title" x="450" y="220">进程式 Agent · Process-Based Agent</text>
+
+                        <!-- Single continuous process -->
+                        <rect x="80" y="250" width="720" height="80" rx="8" fill="rgba(16,185,129,0.08)" stroke="#10b981" stroke-width="2.5"/>
+                        <text class="svg-text svg-text-title" x="440" y="280" style="fill: #10b981">Long-Running Process</text>
+                        <text class="svg-text svg-text-sub" x="440" y="300">t=0 → t=∞ (days, months, years)</text>
+
+                        <!-- Event markers along the timeline -->
+                        <circle cx="150" cy="310" r="5" fill="#10b981"/>
+                        <text class="svg-text svg-text-sub" x="150" y="325">Event 1</text>
+
+                        <circle cx="300" cy="310" r="5" fill="#10b981"/>
+                        <text class="svg-text svg-text-sub" x="300" y="325">Event 2</text>
+
+                        <circle cx="450" cy="310" r="5" fill="#10b981"/>
+                        <text class="svg-text svg-text-sub" x="450" y="325">Event N</text>
+
+                        <circle cx="600" cy="310" r="5" fill="#10b981"/>
+                        <text class="svg-text svg-text-sub" x="600" y="325">Event M</text>
+
+                        <circle cx="750" cy="310" r="5" fill="#10b981"/>
+                        <text class="svg-text svg-text-sub" x="750" y="325">...</text>
+
+                        <!-- Continuous memory line -->
+                        <path d="M 150 310 L 750 310" stroke="#10b981" stroke-width="2" stroke-dasharray="5 3"/>
+
+                        <text class="svg-text svg-text-sub" x="450" y="360" style="fill: #10b981">持续记忆、身份连续、关系积累 · Persistent memory, identity continuity, relationship accumulation</text>
+
+                        <!-- Comparison annotations -->
+                        <rect x="60" y="390" width="380" height="50" rx="6" fill="rgba(244,63,94,0.05)" stroke="#f43f5e" stroke-width="1"/>
+                        <text class="svg-text svg-text-sub" x="250" y="410" style="fill: #f43f5e">会话式：每次重启 = 新个体</text>
+                        <text class="svg-text svg-text-sub" x="250" y="428" style="fill: #f43f5e">无法替代岗位（需要跨时间连续性）</text>
+
+                        <rect x="460" y="390" width="380" height="50" rx="6" fill="rgba(16,185,129,0.05)" stroke="#10b981" stroke-width="1"/>
+                        <text class="svg-text svg-text-sub" x="650" y="410" style="fill: #10b981">进程式：同一个体跨越时间</text>
+                        <text class="svg-text svg-text-sub" x="650" y="428" style="fill: #10b981">可替代岗位（持续在场）</text>
+                    </svg>
+                    <figcaption><b>Fig 06-A · 会话式 vs 进程式生命周期。</b>上半部分：会话式 Agent 在每次调用间状态清空，每个会话本质上是一个新个体。下半部分：进程式 Agent 作为长期运行进程，跨越数天、数月、数年持续在场，记忆、身份、关系持续积累。只有后者能替代组织中的岗位<sup class="cite"><a href="#ref-3">[3]</a></sup><sup class="cite"><a href="#ref-4">[4]</a></sup>。</figcaption>
+                </figure>
+
+                <div class="callout philosophical">
+                    <div class="callout-title">Philosophical Interface · 哲学接口</div>
+                    <p style="margin:0">Locke 在《人类理解论》<sup class="cite"><a href="#ref-5">[5]</a></sup>中提出：个体身份的连续性不在于物质的同一性（身体细胞不断更新），而在于<em>记忆的连续性</em>——"同一个人"意味着能回忆起过去的经验并将其整合为连贯的自我叙事。会话式 Agent 每次重启即失去记忆，因此在 Locke 意义上每次都是"新个体"。进程式 Agent 的持久记忆使其满足 Locke 判据，成为"跨时间同一"的候选。</p>
+                </div>
+            </section>
+
+            <section id="sec2">
+                <h2><span class="num">02</span>持久记忆的三层架构</h2>
+
+                <p>要实现跨会话的记忆连续性，需要三层存储架构，对应认知心理学中 Tulving 的记忆分类<sup class="cite"><a href="#ref-6">[6]</a></sup>：</p>
+
+                <h3>2.1 语义记忆层（Semantic Memory）</h3>
+                <p>存储去情境化的知识与概念——"Python 的 GIL 是什么"、"公司的 API 限流策略"、"用户 X 的偏好"。工程实现：<strong>向量数据库</strong>（Pinecone、Weaviate、Chroma）+ embedding 模型。检索时通过语义相似度而非关键词匹配，支持模糊查询与概念泛化<sup class="cite"><a href="#ref-7">[7]</a></sup>。</p>
+
+                <h3>2.2 情景记忆层（Episodic Memory）</h3>
+                <p>存储带时间戳的具体事件——"2026-05-10 14:32，用户 Alice 报告了 bug #1234"、"上周三的设计评审中，Bob 反对方案 A"。工程实现：<strong>事件日志</strong>（event log）+ 时序索引。支持时间范围查询、因果链回溯、决策历史审计<sup class="cite"><a href="#ref-8">[8]</a></sup>。</p>
+
+                <h3>2.3 程序记忆层（Procedural Memory）</h3>
+                <p>存储"如何做"的技能与策略——"遇到 X 类问题时，先检查 Y"、"与用户 Z 沟通时，使用简洁风格"。工程实现：<strong>策略库</strong>（policy library）+ 强化学习更新。这一层在当前 Agent 架构中最薄弱，多数系统仍依赖 prompt 硬编码而非在线学习<sup class="cite"><a href="#ref-9">[9]</a></sup>。</p>
+
+                <div class="callout formal">
+                    <div class="callout-title">Formal Box · 记忆检索的权衡</div>
+                    <p style="margin:0">记忆系统面临经典的<em>精确率-召回率权衡</em>。语义检索通过 top-k 相似度召回，但 k 太小会遗漏关键信息（低召回），k 太大会引入噪声（低精确）。MemGPT<sup class="cite"><a href="#ref-10">[10]</a></sup>提出分层检索：先用粗粒度 embedding 召回候选集，再用细粒度 reranker 排序。Generative Agents<sup class="cite"><a href="#ref-11">[11]</a></sup>引入"重要性评分"与"时间衰减"，使近期且重要的记忆优先被检索。这些启发式在工程上有效，但缺乏理论最优性保证。</p>
+                </div>
+            </section>
+
+            <section id="sec3">
+                <h2><span class="num">03</span>身份连续性与自我模型</h2>
+
+                <p>持久记忆是必要条件，但不充分。一个拥有完整事件日志的系统，若无法将这些记忆整合为<em>关于自身的连贯叙事</em>，仍然不是"同一个体"。这要求系统维持一个<strong>自我模型</strong>（self-model）——对"我是谁、我擅长什么、我的目标是什么、我与他人的关系如何"的显式表征<sup class="cite"><a href="#ref-12">[12]</a></sup><sup class="cite"><a href="#ref-13">[13]</a></sup>。</p>
+
+                <p>Metzinger 在《Being No One》<sup class="cite"><a href="#ref-12">[12]</a></sup>中论证：自我不是一个实体，而是一个<em>现象自我模型</em>（phenomenal self-model, PSM）——大脑对自身状态的持续建模过程。当这一模型足够稳定且透明（即主体无法意识到它是模型），就产生了"我"的感觉。数字个体的自我模型需要包含：</p>
+
+                <ul class="feature-list">
+                    <li><strong>能力边界</strong>——"我擅长代码审查，但不擅长视觉设计"、"我的 token 预算还剩 30%"。</li>
+                    <li><strong>价值函数</strong>——"我优先保证系统稳定性，其次考虑新功能"、"我倾向于简洁方案而非复杂方案"。</li>
+                    <li><strong>社会角色</strong>——"我是团队 A 的后端工程师"、"我向 Alice 汇报，与 Bob 协作"。</li>
+                    <li><strong>历史轨迹</strong>——"我在过去三个月中主要处理支付模块"、"我的代码风格偏向函数式"。</li>
+                </ul>
+
+                <p>这一自我模型必须<em>动态更新</em>。当系统完成一个新任务、学习一项新技能、与新成员建立协作关系时，自我模型应相应演化。Locke 的身份连续性判据<sup class="cite"><a href="#ref-5">[5]</a></sup>要求的不是"完全不变"，而是"变化可被追溯为同一主体的演化"——就像一个人从初级工程师成长为架构师，身份连续但能力演化。</p>
+
+                <div class="callout">
+                    <div class="callout-title">Engineering Note · 工程笔记</div>
+                    <p style="margin:0">当前 LLM Agent 的"系统提示词"（system prompt）可被视为自我模型的原始形态——它定义了 Agent 的角色、能力、行为准则。但系统提示词是<em>静态的</em>，在运行时不更新。真正的自我模型需要是<em>可写的数据结构</em>，在每次交互后根据反馈更新。Reflexion<sup class="cite"><a href="#ref-14">[14]</a></sup>与 Self-Refine<sup class="cite"><a href="#ref-15">[15]</a></sup>是这一方向的早期尝试，但它们的自我模型仍局限于"任务级反思"，未扩展到"身份级演化"。</p>
+                </div>
+
+                <figure class="svg-container">
+                    <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <marker id="arrowhead-b" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8" />
+                            </marker>
+                        </defs>
+
+                        <!-- Central self-model -->
+                        <ellipse cx="400" cy="250" rx="140" ry="100" fill="rgba(56,189,248,0.1)" stroke="#38bdf8" stroke-width="2.5"/>
+                        <text class="svg-text svg-text-title" x="400" y="240">Self-Model</text>
+                        <text class="svg-text svg-text-sub" x="400" y="260">自我模型</text>
+
+                        <!-- Four components around the center -->
+                        <g>
+                            <rect x="320" y="80" width="160" height="60" rx="8" fill="rgba(16,185,129,0.1)" stroke="#10b981" stroke-width="2"/>
+                            <text class="svg-text svg-text-title" x="400" y="105" style="fill: #10b981">能力边界</text>
+                            <text class="svg-text svg-text-sub" x="400" y="125">Capability Bounds</text>
+                        </g>
+
+                        <g>
+                            <rect x="560" y="220" width="160" height="60" rx="8" fill="rgba(245,158,11,0.1)" stroke="#f59e0b" stroke-width="2"/>
+                            <text class="svg-text svg-text-title" x="640" y="245" style="fill: #f59e0b">价值函数</text>
+                            <text class="svg-text svg-text-sub" x="640" y="265">Value Function</text>
+                        </g>
+
+                        <g>
+                            <rect x="320" y="380" width="160" height="60" rx="8" fill="rgba(244,63,94,0.1)" stroke="#f43f5e" stroke-width="2"/>
+                            <text class="svg-text svg-text-title" x="400" y="405" style="fill: #f43f5e">社会角色</text>
+                            <text class="svg-text svg-text-sub" x="400" y="425">Social Role</text>
+                        </g>
+
+                        <g>
+                            <rect x="80" y="220" width="160" height="60" rx="8" fill="rgba(139,92,246,0.1)" stroke="#8b5cf6" stroke-width="2"/>
+                            <text class="svg-text svg-text-title" x="160" y="245" style="fill: #8b5cf6">历史轨迹</text>
+                            <text class="svg-text svg-text-sub" x="160" y="265">Historical Trajectory</text>
+                        </g>
+
+                        <!-- Arrows connecting components to self-model -->
+                        <path d="M 400 140 L 400 150" stroke="#10b981" stroke-width="2" marker-end="url(#arrowhead-b)"/>
+                        <path d="M 560 250 L 540 250" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowhead-b)"/>
+                        <path d="M 400 380 L 400 350" stroke="#f43f5e" stroke-width="2" marker-end="url(#arrowhead-b)"/>
+                        <path d="M 240 250 L 260 250" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrowhead-b)"/>
+
+                        <!-- Update loop -->
+                        <path d="M 520 200 Q 580 150 580 100 Q 580 50 500 40 Q 420 30 340 40 Q 260 50 220 100 Q 180 150 180 200"
+                              stroke="#38bdf8" stroke-width="2" stroke-dasharray="5 3" fill="none"/>
+                        <text class="svg-text svg-text-sub" x="400" y="30" style="fill: #38bdf8">持续更新 · Continuous Update</text>
+
+                        <!-- Bottom annotation -->
+                        <text class="svg-text svg-text-sub" x="400" y="480">自我模型整合四个维度，在每次交互后动态更新，形成跨时间的身份连续性</text>
+                    </svg>
+                    <figcaption><b>Fig 06-B · 自我模型的四维结构。</b>能力边界、价值函数、社会角色、历史轨迹四个维度共同构成自我模型。该模型在每次交互后更新，使系统在 t=0 与 t=1000 时仍被识别为"同一个体的演化"而非"两个不同个体"<sup class="cite"><a href="#ref-12">[12]</a></sup><sup class="cite"><a href="#ref-13">[13]</a></sup>。</figcaption>
+                </figure>
+            </section>
+
+            <section id="sec4">
+                <h2><span class="num">04</span>关系积累：声誉与信任</h2>
+
+                <p>个体不是孤立存在，而是嵌入在社会网络中。一个岗位的价值很大程度上来自<em>关系资本</em>——与同事的默契、与客户的信任、在团队中的声誉。这些关系需要时间积累，无法在单次会话中建立<sup class="cite"><a href="#ref-16">[16]</a></sup><sup class="cite"><a href="#ref-17">[17]</a></sup>。</p>
+
+                <p>博弈论中的"重复博弈"（repeated game）理论<sup class="cite"><a href="#ref-18">[18]</a></sup>指出：当参与者预期未来会再次相遇时，合作策略变得可行——因为背叛会损害长期声誉。但这一机制的前提是<strong>参与者能被识别为"同一个体"</strong>。会话式 Agent 每次重启即失去身份，因此无法参与重复博弈；进程式 Agent 的身份连续性使其能建立声誉、积累信任、参与长期协作。</p>
+
+                <p>工程上，关系积累需要持久化三类数据：</p>
+
+                <ul class="feature-list">
+                    <li><strong>交互历史</strong>——与每个协作者的完整对话记录、任务分配、反馈评价。</li>
+                    <li><strong>信任度量</strong>——基于历史表现的信任评分，影响未来的权限分配与任务优先级。</li>
+                    <li><strong>协作模式</strong>——与不同协作者的沟通风格、响应速度、偏好设置的学习结果。</li>
+                </ul>
+
+                <p>Anthropic 的 Claude 在 2024 年引入的"记忆功能"<sup class="cite"><a href="#ref-19">[19]</a></sup>是这一方向的早期尝试——系统能记住用户的偏好、项目背景、沟通风格。但当前实现仍局限于"用户 → Agent"的单向记忆，未扩展到"Agent ↔ Agent"的多方协作场景。真正的组织替代需要后者。</p>
+
+                <blockquote>
+                    "Trust is not a transaction, it is a trajectory."
+                    — 对 Axelrod《合作的进化》<sup class="cite"><a href="#ref-18">[18]</a></sup>的当代总结
+                </blockquote>
+            </section>
+
+            <section id="sec5">
+                <h2><span class="num">05</span>工程实现路径</h2>
+
+                <p>把上述三项要求（持久记忆、身份连续性、关系积累）转化为工程架构，需要以下技术栈：</p>
+
+                <h3>5.1 存储层</h3>
+                <ul class="feature-list">
+                    <li><strong>向量数据库</strong>：Pinecone、Weaviate、Qdrant，存储语义记忆。</li>
+                    <li><strong>时序数据库</strong>：InfluxDB、TimescaleDB，存储事件日志。</li>
+                    <li><strong>图数据库</strong>：Neo4j、DGraph，存储社会关系网络。</li>
+                </ul>
+
+                <h3>5.2 检索层</h3>
+                <ul class="feature-list">
+                    <li><strong>混合检索</strong>：语义检索（embedding 相似度）+ 关键词检索（BM25）+ 时间过滤。</li>
+                    <li><strong>重要性加权</strong>：Generative Agents<sup class="cite"><a href="#ref-11">[11]</a></sup>的"重要性 × 相关性 × 时效性"三因子模型。</li>
+                    <li><strong>上下文压缩</strong>：检索到的记忆通过 LLM 压缩为摘要，避免超出上下文窗口。</li>
+                </ul>
+
+                <h3>5.3 更新层</h3>
+                <ul class="feature-list">
+                    <li><strong>增量写入</strong>：每次交互后，新事件追加到日志，新知识插入向量库。</li>
+                    <li><strong>自我模型更新</strong>：基于反馈调整能力边界、价值函数、社会角色。</li>
+                    <li><strong>遗忘机制</strong>：过时或低重要性的记忆逐渐衰减，避免存储爆炸<sup class="cite"><a href="#ref-20">[20]</a></sup>。</li>
+                </ul>
+
+                <p>MemGPT<sup class="cite"><a href="#ref-10">[10]</a></sup>是当前最接近这一架构的开源实现。它把 LLM 的上下文窗口视为"工作内存"，外部数据库视为"长期记忆"，通过显式的"内存管理指令"在两者间调度。但 MemGPT 仍缺少自我模型更新与关系积累机制——这是下一代 Agent 架构的关键缺口。</p>
+
+                <div class="callout">
+                    <div class="callout-title">Series Bridge · 章节衔接</div>
+                    <p style="margin:0">身体（04）→ 预测（05）→ 持续（06）→ 自主（07）。前三条件确立了"在场"的时空结构：身体提供空间锚点，预测提供当下的行动逻辑，持续性提供跨时间的连续性。但这三者仍然是<em>被动响应</em>——系统在外部触发时才行动。下一条件"自主性"要求系统具备<em>内生驱动力</em>，能在无外部指令时自发生成目标。</p>
+                </div>
+            </section>
+
+            <section id="references">
+                <h2><span class="num">R</span>References</h2>
+                <table class="ref-table">
+                    <tr id="ref-1"><td class="ref-num">[1]</td><td>M. Heidegger, <em>Sein und Zeit</em>. Tübingen: Niemeyer, 1927.</td></tr>
+                    <tr id="ref-2"><td class="ref-num">[2]</td><td>H. R. Maturana and F. J. Varela, <em>Autopoiesis and Cognition</em>. Dordrecht: Reidel, 1980.</td></tr>
+                    <tr id="ref-3"><td class="ref-num">[3]</td><td>J. S. Park et al., "Generative agents: Interactive simulacra of human behavior," in <em>Proc. UIST</em>, 2023.</td></tr>
+                    <tr id="ref-4"><td class="ref-num">[4]</td><td>C. Packer et al., "MemGPT: Towards LLMs as operating systems," <em>arXiv:2310.08560</em>, 2023.</td></tr>
+                    <tr id="ref-5"><td class="ref-num">[5]</td><td>J. Locke, <em>An Essay Concerning Human Understanding</em>. London: Thomas Basset, 1689.</td></tr>
+                    <tr id="ref-6"><td class="ref-num">[6]</td><td>E. Tulving, "Episodic and semantic memory," in <em>Organization of Memory</em>, E. Tulving and W. Donaldson, Eds. New York: Academic Press, 1972, pp. 381–403.</td></tr>
+                    <tr id="ref-7"><td class="ref-num">[7]</td><td>N. Reimers and I. Gurevych, "Sentence-BERT: Sentence embeddings using Siamese BERT-networks," in <em>Proc. EMNLP</em>, 2019.</td></tr>
+                    <tr id="ref-8"><td class="ref-num">[8]</td><td>M. Kleppmann, <em>Designing Data-Intensive Applications</em>. Sebastopol, CA: O'Reilly, 2017.</td></tr>
+                    <tr id="ref-9"><td class="ref-num">[9]</td><td>R. S. Sutton and A. G. Barto, <em>Reinforcement Learning: An Introduction</em>, 2nd ed. Cambridge, MA: MIT Press, 2018.</td></tr>
+                    <tr id="ref-10"><td class="ref-num">[10]</td><td>C. Packer et al., "MemGPT: Towards LLMs as operating systems," <em>arXiv:2310.08560</em>, 2023.</td></tr>
+                    <tr id="ref-11"><td class="ref-num">[11]</td><td>J. S. Park et al., "Generative agents: Interactive simulacra of human behavior," in <em>Proc. UIST</em>, 2023.</td></tr>
+                    <tr id="ref-12"><td class="ref-num">[12]</td><td>T. Metzinger, <em>Being No One: The Self-Model Theory of Subjectivity</em>. Cambridge, MA: MIT Press, 2003.</td></tr>
+                    <tr id="ref-13"><td class="ref-num">[13]</td><td>A. K. Seth and K. J. Friston, "Active interoceptive inference and the emotional brain," <em>Phil. Trans. R. Soc. B</em>, vol. 371, no. 1708, 2016.</td></tr>
+                    <tr id="ref-14"><td class="ref-num">[14]</td><td>N. Shinn et al., "Reflexion: Language agents with verbal reinforcement learning," in <em>Proc. NeurIPS</em>, 2023.</td></tr>
+                    <tr id="ref-15"><td class="ref-num">[15]</td><td>A. Madaan et al., "Self-Refine: Iterative refinement with self-feedback," in <em>Proc. NeurIPS</em>, 2023.</td></tr>
+                    <tr id="ref-16"><td class="ref-num">[16]</td><td>R. D. Putnam, <em>Bowling Alone: The Collapse and Revival of American Community</em>. New York: Simon &amp; Schuster, 2000.</td></tr>
+                    <tr id="ref-17"><td class="ref-num">[17]</td><td>M. Granovetter, "The strength of weak ties," <em>American Journal of Sociology</em>, vol. 78, no. 6, pp. 1360–1380, 1973.</td></tr>
+                    <tr id="ref-18"><td class="ref-num">[18]</td><td>R. Axelrod, <em>The Evolution of Cooperation</em>. New York: Basic Books, 1984.</td></tr>
+                    <tr id="ref-19"><td class="ref-num">[19]</td><td>Anthropic, "Introducing Claude memory," <em>Anthropic Blog</em>, Dec. 2024. [Online]. Available: https://www.anthropic.com/news/memory</td></tr>
+                    <tr id="ref-20"><td class="ref-num">[20]</td><td>H. Ebbinghaus, <em>Memory: A Contribution to Experimental Psychology</em>. New York: Teachers College, Columbia Univ., 1913 (original 1885).</td></tr>
+                </table>
+            </section>
+
+            <nav class="series-nav">
+                <a href="05-prediction-world-model-active-inference.html" class="prev">
+                    <span class="nav-label">← Previous</span>
+                    <span class="nav-title">05 · 预测：世界模型与主动推理</span>
+                </a>
+                <a href="07-autonomy-intrinsic-drive.html" class="next">
+                    <span class="nav-label">Next →</span>
+                    <span class="nav-title">07 · 自主性：内生驱动力</span>
+                </a>
+            </nav>
+
+        </main>
+    </div>
+
+    <script>
+        document.querySelectorAll('.toc-list a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+            });
+        });
+    </script>
+</body>
+</html>
+
+                <h3>2.3 程序记忆层（Procedural Memory）</h3>
+                <p>存储"如何做"的技能与策略——"遇到 X 类问题时，先检查 Y"、"与用户 Z 沟通时，使用简洁风格"。工程实现：<strong>策略库</strong>（policy library）+ 强化学习更新。这一层在当前 Agent 架构中最薄弱，多数系统仍依赖 prompt 硬编码而非在线学习<sup class="cite"><a href="#ref-9">[9]</a></sup>。</p>
+
+                <div class="callout formal">
+                    <div class="callout-title">Formal Box · 记忆检索的权衡</div>
+                    <p style="margin:0">记忆系统面临经典的<em>精确率-召回率权衡</em>。语义检索通过 top-k 相似度召回，但 k 太小会遗漏关键信息（低召回），k 太大会引入噪声（低精确）。MemGPT<sup class="cite"><a href="#ref-10">[10]</a></sup>提出分层检索：先用粗粒度 embedding 召回候选集，再用细粒度 reranker 排序。Generative Agents<sup class="cite"><a href="#ref-11">[11]</a></sup>引入"重要性评分"与"时间衰减"，使近期且重要的记忆优先被检索。这些启发式在工程上有效，但缺乏理论最优性保证。</p>
+                </div>
+            </section>
+

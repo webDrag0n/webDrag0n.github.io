@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGI 的第一性原理：劳动替代即经济价值 · AGI 六条件</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'dark',
+            securityLevel: 'loose',
+            fontFamily: 'Inter',
+            themeVariables: { primaryColor: '#1e293b', primaryTextColor: '#f8fafc', primaryBorderColor: '#38bdf8', lineColor: '#94a3b8', secondaryColor: '#0f172a', tertiaryColor: '#1e293b' }
+        });
+    </script>
+
+    <style>
+        :root {
+            --bg-color: #0f172a; --text-color: #f8fafc; --accent-color: #38bdf8;
+            --secondary-text: #94a3b8; --card-bg: rgba(30, 41, 59, 0.7);
+            --border-color: rgba(255, 255, 255, 0.1); --glow-color: rgba(56, 189, 248, 0.3);
+            --success-color: #10b981; --warning-color: #f59e0b; --danger-color: #f43f5e;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', 'Noto Serif SC', serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.85; overflow-x: hidden; }
+        .ambient-bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -1;
+            background: radial-gradient(circle at 15% 50%, rgba(56, 189, 248, 0.05) 0%, transparent 50%), radial-gradient(circle at 85% 30%, rgba(16, 185, 129, 0.04) 0%, transparent 50%); }
+
+        .container { max-width: 1300px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: 1fr 3fr; gap: 4rem; align-items: start; }
+        @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+        .hero { padding: 5rem 2rem 2rem; text-align: center; max-width: 900px; margin: 0 auto; }
+        .hero-badge { display: inline-block; padding: 0.3rem 0.9rem; border-radius: 999px; background: rgba(56,189,248,0.08); border: 1px solid rgba(56,189,248,0.3); color: var(--accent-color); font-size: 0.78rem; letter-spacing: 0.1em; margin-bottom: 1.2rem; text-transform: uppercase; }
+        .hero-title { font-family: 'Noto Serif SC', serif; font-size: 2.8rem; font-weight: 700; line-height: 1.25; margin-bottom: 1rem;
+            background: linear-gradient(120deg, #f8fafc 20%, #38bdf8 60%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-subtitle { color: var(--secondary-text); font-size: 1.1rem; font-style: italic; margin-bottom: 2rem; }
+        .hero-meta { color: var(--secondary-text); font-size: 0.9rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+
+        .series-progress { max-width: 900px; margin: 3rem auto 0; padding: 0 2rem; }
+        .series-progress-label { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; font-size: 0.8rem; color: var(--secondary-text); text-transform: uppercase; letter-spacing: 0.1em; }
+        .series-progress-grid { display: grid; grid-template-columns: repeat(9, 1fr); gap: 6px; }
+        .series-progress-cell { height: 6px; border-radius: 3px; background: rgba(255,255,255,0.06); transition: background 0.3s; }
+        .series-progress-cell.done { background: rgba(56,189,248,0.4); }
+        .series-progress-cell.active { background: var(--accent-color); box-shadow: 0 0 12px var(--glow-color); }
+
+        .abstract { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; margin: 3rem auto; max-width: 860px; text-align: left; backdrop-filter: blur(10px); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15); }
+        .abstract strong { color: var(--accent-color); display: block; margin-bottom: 0.6rem; font-size: 1.05rem; letter-spacing: 0.08em; }
+        .abstract p { font-size: 1.05rem; margin: 0; }
+
+        .sidebar { position: sticky; top: 2rem; padding: 1.5rem; background: rgba(30, 41, 59, 0.3); border-left: 2px solid var(--border-color); height: max-content; max-height: calc(100vh - 4rem); overflow-y: auto; }
+        .sidebar h3 { font-size: 0.85rem; margin-bottom: 1rem; color: var(--secondary-text); text-transform: uppercase; letter-spacing: 0.08em; }
+        .toc-list { list-style: none; }
+        .toc-list li { margin-bottom: 0.7rem; }
+        .toc-list a { color: var(--text-color); text-decoration: none; font-size: 0.92rem; transition: color 0.2s, padding 0.2s; opacity: 0.7; display: block; padding: 0.25rem 0 0.25rem 0.6rem; border-left: 2px solid transparent; }
+        .toc-list a:hover { opacity: 1; color: var(--accent-color); border-left: 2px solid var(--accent-color); }
+
+        .content { padding-bottom: 4rem; }
+        h2 { font-family: 'Noto Serif SC', serif; font-size: 1.85rem; font-weight: 700; margin: 4rem 0 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-color); }
+        h2 .num { color: var(--accent-color); font-weight: 600; margin-right: 0.6rem; font-family: 'Inter', sans-serif; }
+        h3 { font-size: 1.25rem; margin: 2.5rem 0 1rem; color: #f1f5f9; }
+        p { margin-bottom: 1.4rem; font-size: 1.05rem; color: #e2e8f0; }
+
+        .callout { margin: 2rem 0; padding: 1.3rem 1.6rem; border-radius: 10px; background: rgba(56, 189, 248, 0.04); border-left: 4px solid var(--accent-color); }
+        .callout-title { font-weight: 600; margin-bottom: 0.5rem; color: var(--accent-color); font-size: 0.95rem; letter-spacing: 0.05em; text-transform: uppercase; }
+        .callout.philosophical { background: rgba(245, 158, 11, 0.04); border-left-color: var(--warning-color); }
+        .callout.philosophical .callout-title { color: var(--warning-color); }
+        .callout.formal { background: rgba(16, 185, 129, 0.04); border-left-color: var(--success-color); }
+        .callout.formal .callout-title { color: var(--success-color); }
+
+        blockquote { margin: 2rem 0; padding: 1.2rem 1.8rem; font-size: 1.15rem; font-style: italic; color: var(--secondary-text); border-left: 4px solid #cbd5e1; background: rgba(255, 255, 255, 0.02); border-radius: 0 8px 8px 0; }
+
+        figure, .svg-container { margin: 2.5rem 0; text-align: center; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2); overflow: hidden; }
+        figcaption { margin-top: 1.2rem; font-size: 0.9rem; color: var(--secondary-text); line-height: 1.6; }
+        figcaption b { color: var(--accent-color); }
+        svg { max-width: 100%; height: auto; overflow: visible; }
+        .svg-node { fill: #1e293b; stroke: var(--accent-color); stroke-width: 2; rx: 8; }
+        .svg-text { fill: var(--text-color); font-family: 'Inter', sans-serif; font-size: 13px; text-anchor: middle; dominant-baseline: middle; }
+        .svg-text-title { fill: var(--accent-color); font-weight: 600; font-size: 15px; }
+        .svg-text-sub { fill: var(--secondary-text); font-size: 11px; }
+        .svg-edge { stroke: var(--secondary-text); stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+        .svg-edge-active { stroke: var(--accent-color); stroke-width: 2.5; marker-end: url(#arrowhead-active); fill: none; }
+        .svg-edge-dashed { stroke: var(--secondary-text); stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; marker-end: url(#arrowhead); }
+        .svg-group-box { fill: rgba(255, 255, 255, 0.02); stroke: var(--border-color); stroke-width: 1; stroke-dasharray: 4 4; rx: 12; }
+
+        .mermaid { margin: 3rem 0; text-align: center; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; display: flex; justify-content: center; }
+
+        table.ref-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
+        table.ref-table td { padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--border-color); vertical-align: top; color: #e2e8f0; }
+        table.ref-table td.ref-num { color: var(--accent-color); font-family: 'Inter', sans-serif; font-weight: 600; width: 3rem; white-space: nowrap; }
+
+        .series-nav { max-width: 1100px; margin: 4rem auto 2rem; padding: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; border-top: 1px solid var(--border-color); }
+        @media (max-width: 700px) { .series-nav { grid-template-columns: 1fr; } }
+        .series-nav a { display: block; padding: 1.3rem 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 10px; text-decoration: none; color: var(--text-color); transition: all 0.2s; }
+        .series-nav a:hover { border-color: var(--accent-color); background: rgba(56,189,248,0.05); transform: translateY(-2px); }
+        .series-nav .nav-label { display: block; font-size: 0.78rem; color: var(--secondary-text); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.3rem; }
+        .series-nav .nav-title { font-size: 1.05rem; font-weight: 600; color: var(--text-color); }
+        .series-nav .next { text-align: right; }
+
+        .nav-back { display: inline-block; margin: 2rem 0 0 2rem; color: var(--secondary-text); text-decoration: none; transition: color 0.3s; font-size: 0.9rem; }
+        .nav-back:hover { color: var(--text-color); }
+
+        sup.cite { color: var(--accent-color); font-size: 0.75rem; padding: 0 0.15rem; cursor: pointer; }
+        sup.cite a { color: inherit; text-decoration: none; }
+
+        ul.feature-list { padding-left: 1.5rem; margin-bottom: 1.4rem; }
+        ul.feature-list li { margin-bottom: 0.5rem; color: #e2e8f0; font-size: 1.02rem; }
+        ul.feature-list li strong { color: var(--accent-color); }
+
+        .key-formula { text-align: center; margin: 2rem 0; padding: 1.5rem; background: rgba(16,185,129,0.04); border: 1px dashed rgba(16,185,129,0.3); border-radius: 10px; font-size: 1.05rem; }
+    </style>
+</head>
+<body>
+    <div class="ambient-bg"></div>
+    <a href="../index.html" class="nav-back">← Back to Home</a>
+
+    <header class="hero">
+        <span class="hero-badge">第 02 篇 · 第一性原理</span>
+        <h1 class="hero-title">AGI 的第一性原理</h1>
+        <p class="hero-subtitle">Labor Replacement as the Economic First Principle of AGI</p>
+        <div class="hero-meta">
+            <span>May 14, 2026</span>
+            <span>Reading Time: 18 min</span>
+            <span>Category: Economics of AGI</span>
+        </div>
+
+        <div class="series-progress">
+            <div class="series-progress-label">
+                <span>可替代之身 · AGI 六条件系列</span>
+                <span>02 / 09</span>
+            </div>
+            <div class="series-progress-grid">
+                <div class="series-progress-cell done"></div>
+                <div class="series-progress-cell active"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+            </div>
+        </div>
+
+        <div class="abstract">
+            <strong>TL;DR</strong>
+            <p>"通用人工智能"（AGI）的"通用性"不应由 MMLU、ARC、HumanEval 等基准分数定义，而应由其能替代的人类组织化劳动比例衡量<sup class="cite"><a href="#ref-1">[1]</a></sup>。从 18 世纪蒸汽机到 21 世纪 LLM，每一次技术革命的经济价值都建立在劳动替代曲线之上<sup class="cite"><a href="#ref-2">[2]</a></sup><sup class="cite"><a href="#ref-3">[3]</a></sup><sup class="cite"><a href="#ref-4">[4]</a></sup>。本文论证：AGI 的工程目标必须从"更聪明的回答"切换为"可替代一个完整岗位乃至组织"，并由此引出 Org-Replace-Rate、Autonomy-Hours、Persistence-Horizon、Self-Maintenance-Cost 等可替代性度量，作为评价新一代 AI 的真正坐标系。</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Table of Contents</h3>
+            <ul class="toc-list">
+                <li><a href="#sec1">1. 智力定义的陷阱</a></li>
+                <li><a href="#sec2">2. 价值的锚：劳动替代曲线</a></li>
+                <li><a href="#sec3">3. 软件持续吞噬组织</a></li>
+                <li><a href="#sec4">4. 单位劳动的可替代性测度</a></li>
+                <li><a href="#sec5">5. 从岗位到组织替代</a></li>
+                <li><a href="#references">References</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+
+            <section id="sec1">
+                <h2><span class="num">01</span>智力定义的陷阱：从图灵测试到 MMLU</h2>
+
+                <p>在 AI 学界与公众话语之间，存在一个长期未被弥合的鸿沟。学界倾向于把"智能"定义为可在特定基准上达到或超越人类水平的能力——MMLU<sup class="cite"><a href="#ref-5">[5]</a></sup>、ARC-AGI<sup class="cite"><a href="#ref-6">[6]</a></sup>、HumanEval<sup class="cite"><a href="#ref-7">[7]</a></sup>、GPQA<sup class="cite"><a href="#ref-8">[8]</a></sup>等评测集成为"通用性"的事实标尺。Legg 与 Hutter 在 2007 年给出过一个数学上极优雅的"通用智能"定义<sup class="cite"><a href="#ref-9">[9]</a></sup>，把智能形式化为在所有可计算环境上的累积奖励的加权和。这一定义在理论上漂亮，但在工程实践上几乎完全脱轨：现实世界并不会按照"奖励函数已知 + 环境可枚举"的假设运行。</p>
+
+                <p>主流 AGI 评估的更深问题在于：<strong>它把"智能"从"在场"中剥离了出来</strong>。一份测试题集，无论多大，都把智能压扁成"在零时间、零成本、零后果的条件下选择正确答案"的能力。但人作为劳动者所承担的，从来不只是答题——人必须<em>持续在场</em>，必须承担<em>错误的真实代价</em>，必须维护<em>对同事、客户、组织的信誉与关系</em>。一个 MMLU 满分但没有持续身份、没有真实成本、没有长期关系的系统，其"智能"在经济意义上是悬浮的。</p>
+
+                <p>Hernández-Orallo<sup class="cite"><a href="#ref-10">[10]</a></sup>对这一问题给出过迄今最系统的分析：现有 AI 评估范式是"心理测量学"（psychometrics）的延伸，假定智能可由大量标准化题目的分布来表征。但这种范式在测量"具备身体的、连续运行的、自主的认知体"时存在系统性盲点——因为它把一切可观察的行为切片成离散的题目，从而无法捕捉跨越长时间尺度的能力（持续目标维持、关系经营、声誉积累等）。</p>
+
+                <div class="callout philosophical">
+                    <div class="callout-title">Philosophical Interface · 哲学接口</div>
+                    <p style="margin:0">第 01 篇区分过 Heidegger 的 <em>vorhanden</em>（现成在手）与 <em>zuhanden</em>（上手之物）<sup class="cite"><a href="#ref-11">[11]</a></sup>。MMLU 类基准是经典的 <em>vorhanden</em> 范式：智能被作为可被测量的对象拎出处境。AGI 的真正门槛要求它进入 <em>zuhanden</em> 模式——成为在某个处境中持续运作的"在场者"。这意味着评估范式本身必须从测量学切换为运营学（operational metrics）。</p>
+                </div>
+            </section>
+
+            <section id="sec2">
+                <h2><span class="num">02</span>价值的锚：从蒸汽机到 LLM 的劳动替代曲线</h2>
+
+                <p>如果不以"智力测试"作为价值锚，AGI 的价值应当锚定在何处？经济史给出了一个清晰且毫不浪漫的答案：<strong>每一次主要的技术革命，其经济价值都来自对人类劳动的替代或增强</strong>。蒸汽机替代了畜力与人力的物理劳动；电力革命扩展了精密工业；二十世纪后半期的计算机革命替代了大量重复的脑力劳动；互联网压缩了协调成本；而当代 LLM 正在把这条曲线延伸到曾被视为"创造性"的认知劳动<sup class="cite"><a href="#ref-2">[2]</a></sup><sup class="cite"><a href="#ref-3">[3]</a></sup><sup class="cite"><a href="#ref-12">[12]</a></sup>。</p>
+
+                <p>Acemoglu 与 Restrepo 在《人与机器的赛跑》<sup class="cite"><a href="#ref-2">[2]</a></sup>中给出了一个简洁的产业组织模型：技术进步的经济效应可以被分解为<em>替代效应</em>（displacement effect）与<em>恢复效应</em>（reinstatement effect）。前者把任务从人移交给机器，后者由于生产率提升而创造出新任务。两个效应的<strong>相对速度</strong>决定了劳动力市场是被压缩还是被扩张。LLM 的关键特性是替代效应触及的任务范围比以往任何技术都更广——从客服、初级编程、内容创作、文档处理到中层协调，被一次性置入替代曲线<sup class="cite"><a href="#ref-13">[13]</a></sup><sup class="cite"><a href="#ref-14">[14]</a></sup>。</p>
+
+                <figure class="svg-container">
+                    <svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8" />
+                            </marker>
+                            <marker id="arrowhead-active" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#38bdf8" />
+                            </marker>
+                            <linearGradient id="curveGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#94a3b8"/>
+                                <stop offset="60%" stop-color="#38bdf8"/>
+                                <stop offset="100%" stop-color="#10b981"/>
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Axes -->
+                        <line x1="80" y1="420" x2="860" y2="420" stroke="#94a3b8" stroke-width="1.5"/>
+                        <polygon points="860,420 850,415 850,425" fill="#94a3b8"/>
+                        <line x1="80" y1="420" x2="80" y2="50" stroke="#94a3b8" stroke-width="1.5"/>
+                        <polygon points="80,50 75,60 85,60" fill="#94a3b8"/>
+
+                        <text class="svg-text svg-text-sub" x="470" y="455">单位时间内可替代的人类劳动量（log）</text>
+                        <text class="svg-text svg-text-sub" x="40" y="240" transform="rotate(-90 40 240)">经济价值 / GDP 贡献（log）</text>
+
+                        <!-- Tech revolution data points -->
+                        <circle cx="160" cy="380" r="9" fill="#94a3b8"/>
+                        <text class="svg-text svg-text-sub" x="160" y="402">蒸汽 1769</text>
+
+                        <circle cx="280" cy="320" r="9" fill="#94a3b8"/>
+                        <text class="svg-text svg-text-sub" x="280" y="342">电力 1880</text>
+
+                        <circle cx="430" cy="240" r="9" fill="#38bdf8"/>
+                        <text class="svg-text svg-text-sub" x="430" y="262">计算机 1960</text>
+
+                        <circle cx="580" cy="170" r="9" fill="#38bdf8"/>
+                        <text class="svg-text svg-text-sub" x="580" y="192">互联网 1995</text>
+
+                        <circle cx="720" cy="110" r="11" fill="#10b981"/>
+                        <text class="svg-text svg-text-sub" x="720" y="92">LLM 2023</text>
+
+                        <circle cx="820" cy="80" r="13" fill="#f59e0b" opacity="0.7"/>
+                        <text class="svg-text svg-text-sub" x="820" y="62" style="fill: #f59e0b">AGI ?</text>
+
+                        <!-- fitted curve -->
+                        <path d="M 160 380 Q 250 360 280 320 Q 360 290 430 240 Q 510 200 580 170 Q 660 140 720 110 Q 780 90 820 80" fill="none" stroke="url(#curveGrad)" stroke-width="3" stroke-dasharray="2 0"/>
+
+                        <!-- annotation: shift in nature of labor replaced -->
+                        <text class="svg-text svg-text-sub" x="220" y="60">物理劳动</text>
+                        <line x1="160" y1="370" x2="220" y2="65" stroke="#94a3b8" stroke-dasharray="3 3" stroke-width="1"/>
+
+                        <text class="svg-text svg-text-sub" x="430" y="60">重复脑力</text>
+                        <line x1="430" y1="230" x2="430" y2="65" stroke="#94a3b8" stroke-dasharray="3 3" stroke-width="1"/>
+
+                        <text class="svg-text svg-text-sub" x="720" y="220" style="fill: #10b981">认知与创造劳动</text>
+                        <line x1="720" y1="120" x2="720" y2="215" stroke="#10b981" stroke-dasharray="3 3" stroke-width="1"/>
+
+                        <text class="svg-text svg-text-title" x="470" y="30">每一次革命都在劳动替代曲线上爬坡</text>
+                    </svg>
+                    <figcaption><b>Fig 02-A · 五次技术革命的劳动替代价值曲线（双对数）。</b>从蒸汽到 LLM，每次革命的经济价值都正比于其单位时间内可替代的人类劳动量。LLM 是这条曲线上首次显著进入"认知与创造劳动"区段的技术；AGI 则被定位为该曲线进一步爬升的极限点。数据点来源综合 Acemoglu &amp; Restrepo<sup class="cite"><a href="#ref-2">[2]</a></sup>、Brynjolfsson &amp; McAfee<sup class="cite"><a href="#ref-3">[3]</a></sup>、Frey &amp; Osborne<sup class="cite"><a href="#ref-13">[13]</a></sup>、McKinsey<sup class="cite"><a href="#ref-14">[14]</a></sup>。</figcaption>
+                </figure>
+
+                <p>这一图景对 AGI 定义有一个直接而苛刻的推论：<strong>AGI 的"通用性"在经济上等价于可替代的劳动种类的<em>跨度</em>（breadth），而非任一单项任务的<em>深度</em>（depth）</strong>。一个仅能下棋但棋艺无敌的系统不是 AGI，因为它的替代跨度为零；一个在多数岗位上仅达到中等水平、但能持续在场维护这些岗位的系统，反而更接近 AGI 的经济定义。</p>
+
+                <div class="callout formal">
+                    <div class="callout-title">Formal Box · 形式化定义</div>
+                    <p style="margin:0">把可替代劳动的集合记作 \( \mathcal{T} \)，每项任务 \( t \in \mathcal{T} \) 的人类时薪记作 \( w(t) \)，AI 替代的可行性记作 \( \rho(t) \in [0,1] \)。则 AI 系统 \( A \) 的<em>劳动替代价值</em>可形式化为：</p>
+                    <p style="text-align:center; margin: 0.8rem 0 0;">\( V(A) = \int_{\mathcal{T}} \rho_A(t)\, w(t)\, \mu(t)\, dt \)</p>
+                    <p style="margin: 0.5rem 0 0">其中 \( \mu(t) \) 为任务 \(t\) 的市场规模分布。AGI 在经济意义上的定义即：\(V(A)\) 在 \(\mathcal{T}\) 全集上达到与平均人类劳动者同阶。注意 \( \rho_A(t) \) 并不仅取决于 \(A\) 的能力，还取决于 \(A\) 是否能<em>持续在场</em>地执行 \(t\)——这把后续的身体、持续、自主等条件直接接入到经济价值函数中。</p>
+                </div>
+            </section>
+
+            <section id="sec3">
+                <h2><span class="num">03</span>软件持续吞噬组织：Excel → ERP → SaaS → Agent</h2>
+
+                <p>如果劳动替代是技术的经济一阶项，那么软件革命可以被理解为劳动替代曲线上的一个特定子段：<em>组织化劳动的替代</em>。Marc Andreessen 的"软件吞噬世界"<sup class="cite"><a href="#ref-15">[15]</a></sup>是一个流行表述；其更精确的版本来自 Brynjolfsson 与 McAfee：软件并不是吞噬世界，而是<strong>吞噬组织</strong>——它把原本由人类组织通过流程、岗位、协调实现的功能，逐步内化为可自动化的代码与数据流<sup class="cite"><a href="#ref-3">[3]</a></sup>。</p>
+
+                <p>这条吞噬的路径有四个明显的阶段：</p>
+
+                <ul class="feature-list">
+                    <li><strong>Excel 阶段（1980s）</strong>——把会计与基础数据处理流程从人脑迁移到电子表格。一个曾需要 20 名会计的部门可以缩减到 3 名分析师。</li>
+                    <li><strong>ERP 阶段（1990s）</strong>——把跨部门的业务流程编码进系统（SAP、Oracle）。中层管理岗位被流程定义所替代<sup class="cite"><a href="#ref-3">[3]</a></sup>。</li>
+                    <li><strong>SaaS 阶段（2010s）</strong>——把整个企业基础设施变成可订阅的服务。"基础设施岗位"（IT、运维、客服系统）大规模外包给云。</li>
+                    <li><strong>Agent 阶段（2024–）</strong>——首次开始替代<em>岗位本身</em>，而非岗位所使用的<em>工具</em><sup class="cite"><a href="#ref-16">[16]</a></sup><sup class="cite"><a href="#ref-17">[17]</a></sup>。</li>
+                </ul>
+
+                <figure class="svg-container">
+                    <svg viewBox="0 0 920 380" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="phaseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#94a3b8" stop-opacity="0.4"/>
+                                <stop offset="100%" stop-color="#10b981" stop-opacity="0.6"/>
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Pyramid layers from physical labor (bottom) to strategic decisions (top) -->
+                        <polygon points="460,40 600,120 460,200 320,120" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="1.5"/>
+                        <text class="svg-text svg-text-title" x="460" y="120" style="fill: #f59e0b">战略决策 · Strategic</text>
+                        <text class="svg-text svg-text-sub" x="460" y="140">~3% AI 渗透率</text>
+
+                        <polygon points="320,120 600,120 700,200 220,200" fill="rgba(245,158,11,0.1)" stroke="#f59e0b" stroke-width="1.5"/>
+                        <text class="svg-text svg-text-title" x="460" y="170">中层协调 · Coordination</text>
+                        <text class="svg-text svg-text-sub" x="460" y="190">~22% (LLM era)</text>
+
+                        <polygon points="220,200 700,200 800,280 120,280" fill="rgba(56,189,248,0.18)" stroke="#38bdf8" stroke-width="1.5"/>
+                        <text class="svg-text svg-text-title" x="460" y="240">重复白领 · Routine cognitive</text>
+                        <text class="svg-text svg-text-sub" x="460" y="260">~60% (automation + LLM)</text>
+
+                        <polygon points="120,280 800,280 880,360 40,360" fill="rgba(16,185,129,0.18)" stroke="#10b981" stroke-width="1.5"/>
+                        <text class="svg-text svg-text-title" x="460" y="320">物理劳动 · Physical</text>
+                        <text class="svg-text svg-text-sub" x="460" y="340">~40% (industrial robotics)</text>
+
+                        <!-- Side annotations: tech eras -->
+                        <text class="svg-text svg-text-sub" x="80" y="320" style="fill: #94a3b8">Steam · Electric</text>
+                        <text class="svg-text svg-text-sub" x="80" y="240" style="fill: #38bdf8">Excel · ERP · SaaS</text>
+                        <text class="svg-text svg-text-sub" x="80" y="170" style="fill: #f59e0b">Agent (2024+)</text>
+                        <text class="svg-text svg-text-sub" x="80" y="120" style="fill: #f59e0b">AGI (target)</text>
+
+                        <!-- Right side annotations: replacement difficulty -->
+                        <text class="svg-text svg-text-sub" x="850" y="320">易</text>
+                        <text class="svg-text svg-text-sub" x="850" y="240">较易</text>
+                        <text class="svg-text svg-text-sub" x="850" y="170">难</text>
+                        <text class="svg-text svg-text-sub" x="850" y="120">最难</text>
+
+                        <!-- Y axis label -->
+                        <text class="svg-text svg-text-sub" x="460" y="25">劳动替代金字塔 · Labor Replacement Pyramid</text>
+                    </svg>
+                    <figcaption><b>Fig 02-B · 劳动替代金字塔。</b>底层物理劳动最易替代（工业机器人长期渗透），顶层战略决策最难替代。LLM/Agent 是首次显著进入"中层协调"层的技术，但要触达顶层"战略决策"必须满足后续六条件。渗透率数据综合 Frey &amp; Osborne<sup class="cite"><a href="#ref-13">[13]</a></sup>、McKinsey<sup class="cite"><a href="#ref-14">[14]</a></sup>、Anthropic Economic Index 2024<sup class="cite"><a href="#ref-19">[19]</a></sup>。</figcaption>
+                </figure>
+
+                <p>这一阶段化路径揭示了一个关键事实：<strong>每一次软件吞噬组织的边界扩张，都对应着一次"被替代单元"的尺度上升</strong>——从单个动作（Excel 公式），到流程（ERP 工作流），到岗位（SaaS 替代部门基础设施），到<em>完整的劳动单元</em>（Agent 替代岗位本身）。AGI 是这条路径的极限点：被替代单元从单个岗位扩展到完整组织。</p>
+
+                <p>但这一极限点并不是"再多增加一个 SaaS 模块"可以达到的。一个组织不仅是岗位的集合，更是<em>岗位之间的协调闭环</em>。任何能替代完整组织的系统，必须能复现这个闭环——而这就需要后续六条件中的任意一条都不能缺失。</p>
+            </section>
+
+            <section id="sec4">
+                <h2><span class="num">04</span>单位劳动的可替代性测度</h2>
+
+                <p>把"AGI = 替代多少劳动"这一定义工程化，需要给出可测的"可替代性"度量。Autor 在 2015 年的经典论文<sup class="cite"><a href="#ref-12">[12]</a></sup>提出过一个简洁的二分：可被显式规则化的<em>例行任务</em>（routine）易被替代，需要隐式上下文判断的<em>非例行任务</em>（non-routine）难被替代。这一二分在自动化时代足够用，但在 LLM 时代失效——因为 LLM 在大量"非例行"任务上表现良好，但在<em>需要跨长时间维持的</em>任务上仍然不能胜任。</p>
+
+                <p>因此，本系列提出一个更细粒度的<strong>四维可替代性度量</strong>，作为 AGI 评估坐标系的核心：</p>
+
+                <ul class="feature-list">
+                    <li><strong>Org-Replace-Rate（组织替代率）</strong>：在给定组织规模上，AI 系统能独立执行的岗位比例。这是 Acemoglu 替代效应<sup class="cite"><a href="#ref-2">[2]</a></sup>的可观测代理。</li>
+                    <li><strong>Autonomy-Hours（自主小时数）</strong>：系统在不接受外部指令的条件下能自主推进任务的最长时间窗口。这映射到第 07 篇的"自主性"条件。</li>
+                    <li><strong>Persistence-Horizon（持续视野）</strong>：系统能维持目标、记忆、关系的最长时间尺度。这映射到第 06 篇的"持续性"。</li>
+                    <li><strong>Self-Maintenance-Cost（自维护成本）</strong>：系统持续在线、维护身份、补充资源所需的单位时间成本。这映射到第 04 篇的"身体"条件。</li>
+                </ul>
+
+                <p>这四个度量与传统基准（MMLU 等）正交。一个 MMLU 满分但 Autonomy-Hours 仅有数小时的系统，无法替代任何需要主动跟进的岗位；一个 MMLU 平庸但 Persistence-Horizon 达到数月的系统，反而可以承担长期项目协调。Morris 等人在《Levels of AGI》<sup class="cite"><a href="#ref-18">[18]</a></sup>中给出过一个分级框架，但其分级标准仍以"能力深度"为主轴，未充分纳入持续性与自主性。本系列后续章节将把这四维度量逐一接入到对应的工程条件。</p>
+
+                <figure class="svg-container">
+                    <svg viewBox="0 0 900 380" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Old metric stack -->
+                        <rect x="60" y="80" width="300" height="240" rx="12" fill="rgba(148,163,184,0.06)" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 4"/>
+                        <text class="svg-text svg-text-title" x="210" y="60">传统 AI 评估指标</text>
+                        <text class="svg-text" x="210" y="115">MMLU</text>
+                        <text class="svg-text" x="210" y="155">ARC-AGI</text>
+                        <text class="svg-text" x="210" y="195">HumanEval</text>
+                        <text class="svg-text" x="210" y="235">GPQA</text>
+                        <text class="svg-text" x="210" y="275">SWE-bench</text>
+                        <text class="svg-text svg-text-sub" x="210" y="305" style="fill: #f43f5e">能力深度的快照</text>
+
+                        <!-- Arrow -->
+                        <path d="M 380 200 L 530 200" stroke="#38bdf8" stroke-width="3" fill="none" marker-end="url(#arrowhead-active)"/>
+                        <text class="svg-text svg-text-title" x="455" y="180" style="fill: #38bdf8">替换为</text>
+
+                        <!-- New metric stack -->
+                        <rect x="540" y="80" width="320" height="240" rx="12" fill="rgba(56,189,248,0.06)" stroke="#38bdf8" stroke-width="1.5"/>
+                        <text class="svg-text svg-text-title" x="700" y="60">运营级 AGI 度量</text>
+                        <text class="svg-text" x="700" y="115">Org-Replace-Rate</text>
+                        <text class="svg-text svg-text-sub" x="700" y="130">替代了多少岗位 / 组织</text>
+                        <text class="svg-text" x="700" y="165">Autonomy-Hours</text>
+                        <text class="svg-text svg-text-sub" x="700" y="180">无外部指令运行小时数</text>
+                        <text class="svg-text" x="700" y="215">Persistence-Horizon</text>
+                        <text class="svg-text svg-text-sub" x="700" y="230">目标 / 记忆持续时长</text>
+                        <text class="svg-text" x="700" y="265">Self-Maintenance-Cost</text>
+                        <text class="svg-text svg-text-sub" x="700" y="280">持续在线 / 资源补给</text>
+                        <text class="svg-text svg-text-sub" x="700" y="305" style="fill: #10b981">在场能力的连续测量</text>
+
+                        <defs>
+                            <marker id="arrowhead-active" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#38bdf8" />
+                            </marker>
+                        </defs>
+                    </svg>
+                    <figcaption><b>Fig 02-C · AGI 评价指标的范式切换。</b>左：传统评估的"能力深度"基准；右：运营级"在场能力"度量。两者在工程上正交：MMLU 满分不蕴含 Autonomy-Hours 充足。本系列后续章节把右侧每个指标对应到一个本体条件。</figcaption>
+                </figure>
+            </section>
+
+            <section id="sec5">
+                <h2><span class="num">05</span>从岗位替代到组织替代：为什么真正的 AGI 必须能运行整个公司</h2>
+
+                <p>把"替代单元"的尺度推到极限，便得到本系列的核心命题：<strong>真正的 AGI 必须能替代一个完整的组织</strong>。这一命题听起来近乎科幻，但它在经济学逻辑上是必然的：如果 AGI 仅能替代<em>岗位</em>但不能替代<em>组织</em>，那么经济价值的剩余部分（协调、决策、关系、资源调度）仍归属人类组织。在自由市场中，这一剩余会被快速整合为"半 AI 半人"组织——这正是 2024–2026 年的真实景观<sup class="cite"><a href="#ref-19">[19]</a></sup>。</p>
+
+                <p>但这种半 AI 半人组织在经济竞争中并非稳态。一旦某个市场参与者构建出"全 AI 组织"——其岗位、协调、决策、资源治理全部由 AI 自治完成——它在边际成本上将与半人半 AI 组织产生量级差异。Bostrom 在《超级智能》<sup class="cite"><a href="#ref-20">[20]</a></sup>中讨论过这一动力学，并论证它会导致"回报加速循环"。Russell 在《人类相容》<sup class="cite"><a href="#ref-21">[21]</a></sup>中给出了相反方向的警告：这种循环若无对齐机制，会以人类价值的损失收尾。</p>
+
+                <p>无论你接受 Bostrom 的乐观加速论还是 Russell 的悲观警示论，都不能否认一个事实：<em>组织替代</em>是 AGI 价值函数的极限点。这一点在经济学上是闭合的，无需诉诸"意识"、"理解"等争议概念。这也正是本系列把"组织"作为后续推导起点的原因——它把 AGI 的工程目标从抽象的"智力测量"切换为可观测的"组织级劳动单元的替代"。</p>
+
+                <blockquote>
+                    "The marginal cost advantage of an autonomous AI organization, once achieved, will be of a different order from any cost advantage in human history."
+                    — 对 Bostrom<sup class="cite"><a href="#ref-20">[20]</a></sup>论证的核心总结
+                </blockquote>
+
+                <p>下一篇<a href="03-organization-as-intelligence-ceiling.html" style="color:var(--accent-color);text-decoration:none;border-bottom:1px dotted var(--accent-color)">第 03 篇</a>将以这一目标为前提，正面诊断当前 Agent 的结构性缺陷：成熟组织的六项核心能力是什么？为什么 prompt → task → stop 范式无论参数规模如何都触不到这些能力？这一缺陷诊断会直接指出 AGI 必须满足的六个本体条件，从而把第 04–08 篇的工程化推导链锁定。</p>
+
+                <div class="callout">
+                    <div class="callout-title">Series Bridge · 章节衔接</div>
+                    <p style="margin:0">本篇把 AGI 价值锚定为"组织化劳动的替代"。第 01 篇从哲学上指出"个体"的本质是自我维护闭环。把两者合并：<em>能替代组织化劳动的 AGI，必然是一个能持续维护自身存在的数字个体</em>。这一隐含命题将贯穿后续七篇的工程化展开。</p>
+                </div>
+            </section>
+
+            <section id="references">
+                <h2><span class="num">R</span>References</h2>
+                <table class="ref-table">
+                    <tr id="ref-1"><td class="ref-num">[1]</td><td>S. Russell and P. Norvig, <em>Artificial Intelligence: A Modern Approach</em>, 4th ed. Hoboken, NJ: Pearson, 2020.</td></tr>
+                    <tr id="ref-2"><td class="ref-num">[2]</td><td>D. Acemoglu and P. Restrepo, "The race between man and machine: Implications of technology for growth, factor shares, and employment," <em>American Economic Review</em>, vol. 108, no. 6, pp. 1488–1542, Jun. 2018.</td></tr>
+                    <tr id="ref-3"><td class="ref-num">[3]</td><td>E. Brynjolfsson and A. McAfee, <em>The Second Machine Age: Work, Progress, and Prosperity in a Time of Brilliant Technologies</em>. New York: W. W. Norton, 2014.</td></tr>
+                    <tr id="ref-4"><td class="ref-num">[4]</td><td>D. Acemoglu and P. Restrepo, "Automation and new tasks: How technology displaces and reinstates labor," <em>Journal of Economic Perspectives</em>, vol. 33, no. 2, pp. 3–30, 2019.</td></tr>
+                    <tr id="ref-5"><td class="ref-num">[5]</td><td>D. Hendrycks et al., "Measuring massive multitask language understanding," in <em>Proc. ICLR</em>, 2021.</td></tr>
+                    <tr id="ref-6"><td class="ref-num">[6]</td><td>F. Chollet, "On the measure of intelligence," <em>arXiv:1911.01547</em>, 2019.</td></tr>
+                    <tr id="ref-7"><td class="ref-num">[7]</td><td>M. Chen et al., "Evaluating large language models trained on code," <em>arXiv:2107.03374</em>, 2021.</td></tr>
+                    <tr id="ref-8"><td class="ref-num">[8]</td><td>D. Rein et al., "GPQA: A graduate-level Google-proof Q&amp;A benchmark," <em>arXiv:2311.12022</em>, 2023.</td></tr>
+                    <tr id="ref-9"><td class="ref-num">[9]</td><td>S. Legg and M. Hutter, "Universal intelligence: A definition of machine intelligence," <em>Minds and Machines</em>, vol. 17, no. 4, pp. 391–444, 2007.</td></tr>
+                    <tr id="ref-10"><td class="ref-num">[10]</td><td>J. Hernández-Orallo, <em>The Measure of All Minds: Evaluating Natural and Artificial Intelligence</em>. Cambridge, UK: Cambridge Univ. Press, 2017.</td></tr>
+                    <tr id="ref-11"><td class="ref-num">[11]</td><td>M. Heidegger, <em>Sein und Zeit</em>. Tübingen: Niemeyer, 1927.</td></tr>
+                    <tr id="ref-12"><td class="ref-num">[12]</td><td>D. H. Autor, "Why are there still so many jobs? The history and future of workplace automation," <em>Journal of Economic Perspectives</em>, vol. 29, no. 3, pp. 3–30, 2015.</td></tr>
+                    <tr id="ref-13"><td class="ref-num">[13]</td><td>C. B. Frey and M. A. Osborne, "The future of employment: How susceptible are jobs to computerisation?," <em>Technological Forecasting and Social Change</em>, vol. 114, pp. 254–280, 2017.</td></tr>
+                    <tr id="ref-14"><td class="ref-num">[14]</td><td>McKinsey Global Institute, "The economic potential of generative AI: The next productivity frontier," Tech. Rep., Jun. 2023.</td></tr>
+                    <tr id="ref-15"><td class="ref-num">[15]</td><td>M. Andreessen, "Why software is eating the world," <em>The Wall Street Journal</em>, Aug. 20, 2011.</td></tr>
+                    <tr id="ref-16"><td class="ref-num">[16]</td><td>OpenAI, "GPT-4 Technical Report," <em>arXiv:2303.08774</em>, 2023.</td></tr>
+                    <tr id="ref-17"><td class="ref-num">[17]</td><td>Anthropic, "Introducing computer use, a new Claude 3.5 Sonnet, and Claude 3.5 Haiku," <em>Anthropic News</em>, Oct. 2024.</td></tr>
+                    <tr id="ref-18"><td class="ref-num">[18]</td><td>M. R. Morris et al., "Levels of AGI for operationalizing progress on the path to AGI," <em>arXiv:2311.02462</em>, 2023.</td></tr>
+                    <tr id="ref-19"><td class="ref-num">[19]</td><td>Anthropic, "The Anthropic Economic Index," Tech. Rep., 2024.</td></tr>
+                    <tr id="ref-20"><td class="ref-num">[20]</td><td>N. Bostrom, <em>Superintelligence: Paths, Dangers, Strategies</em>. Oxford: Oxford Univ. Press, 2014.</td></tr>
+                    <tr id="ref-21"><td class="ref-num">[21]</td><td>S. Russell, <em>Human Compatible: Artificial Intelligence and the Problem of Control</em>. New York: Viking, 2019.</td></tr>
+                    <tr id="ref-22"><td class="ref-num">[22]</td><td>D. Silver, S. Singh, D. Precup, and R. S. Sutton, "Reward is enough," <em>Artificial Intelligence</em>, vol. 299, p. 103535, Oct. 2021.</td></tr>
+                    <tr id="ref-23"><td class="ref-num">[23]</td><td>H. A. Simon, <em>The Shape of Automation for Men and Management</em>. New York: Harper &amp; Row, 1965.</td></tr>
+                </table>
+            </section>
+
+            <nav class="series-nav">
+                <a href="01-existence-individuation-body.html" class="prev">
+                    <span class="nav-label">← Previous</span>
+                    <span class="nav-title">01 · 存在、个体化与身体</span>
+                </a>
+                <a href="03-organization-as-intelligence-ceiling.html" class="next">
+                    <span class="nav-label">Next →</span>
+                    <span class="nav-title">03 · 组织即智能的上限</span>
+                </a>
+            </nav>
+
+        </main>
+    </div>
+
+    <script>
+        document.querySelectorAll('.toc-list a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>组织即智能的上限：为什么工具式 AI 触及天花板 · AGI 六条件</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true, theme: 'dark', securityLevel: 'loose', fontFamily: 'Inter',
+            themeVariables: { primaryColor: '#1e293b', primaryTextColor: '#f8fafc', primaryBorderColor: '#38bdf8', lineColor: '#94a3b8', secondaryColor: '#0f172a', tertiaryColor: '#1e293b' }
+        });
+    </script>
+
+    <style>
+        :root {
+            --bg-color: #0f172a; --text-color: #f8fafc; --accent-color: #38bdf8;
+            --secondary-text: #94a3b8; --card-bg: rgba(30, 41, 59, 0.7);
+            --border-color: rgba(255, 255, 255, 0.1); --glow-color: rgba(56, 189, 248, 0.3);
+            --success-color: #10b981; --warning-color: #f59e0b; --danger-color: #f43f5e;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', 'Noto Serif SC', serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.85; overflow-x: hidden; }
+        .ambient-bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -1;
+            background: radial-gradient(circle at 15% 50%, rgba(56, 189, 248, 0.05) 0%, transparent 50%), radial-gradient(circle at 85% 30%, rgba(16, 185, 129, 0.04) 0%, transparent 50%); }
+
+        .container { max-width: 1300px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: 1fr 3fr; gap: 4rem; align-items: start; }
+        @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+        .hero { padding: 5rem 2rem 2rem; text-align: center; max-width: 900px; margin: 0 auto; }
+        .hero-badge { display: inline-block; padding: 0.3rem 0.9rem; border-radius: 999px; background: rgba(56,189,248,0.08); border: 1px solid rgba(56,189,248,0.3); color: var(--accent-color); font-size: 0.78rem; letter-spacing: 0.1em; margin-bottom: 1.2rem; text-transform: uppercase; }
+        .hero-title { font-family: 'Noto Serif SC', serif; font-size: 2.8rem; font-weight: 700; line-height: 1.25; margin-bottom: 1rem;
+            background: linear-gradient(120deg, #f8fafc 20%, #38bdf8 60%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-subtitle { color: var(--secondary-text); font-size: 1.1rem; font-style: italic; margin-bottom: 2rem; }
+        .hero-meta { color: var(--secondary-text); font-size: 0.9rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+
+        .series-progress { max-width: 900px; margin: 3rem auto 0; padding: 0 2rem; }
+        .series-progress-label { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; font-size: 0.8rem; color: var(--secondary-text); text-transform: uppercase; letter-spacing: 0.1em; }
+        .series-progress-grid { display: grid; grid-template-columns: repeat(9, 1fr); gap: 6px; }
+        .series-progress-cell { height: 6px; border-radius: 3px; background: rgba(255,255,255,0.06); }
+        .series-progress-cell.done { background: rgba(56,189,248,0.4); }
+        .series-progress-cell.active { background: var(--accent-color); box-shadow: 0 0 12px var(--glow-color); }
+
+        .abstract { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; margin: 3rem auto; max-width: 860px; text-align: left; backdrop-filter: blur(10px); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15); }
+        .abstract strong { color: var(--accent-color); display: block; margin-bottom: 0.6rem; font-size: 1.05rem; letter-spacing: 0.08em; }
+        .abstract p { font-size: 1.05rem; margin: 0; }
+
+        .sidebar { position: sticky; top: 2rem; padding: 1.5rem; background: rgba(30, 41, 59, 0.3); border-left: 2px solid var(--border-color); height: max-content; max-height: calc(100vh - 4rem); overflow-y: auto; }
+        .sidebar h3 { font-size: 0.85rem; margin-bottom: 1rem; color: var(--secondary-text); text-transform: uppercase; letter-spacing: 0.08em; }
+        .toc-list { list-style: none; }
+        .toc-list li { margin-bottom: 0.7rem; }
+        .toc-list a { color: var(--text-color); text-decoration: none; font-size: 0.92rem; transition: color 0.2s, padding 0.2s; opacity: 0.7; display: block; padding: 0.25rem 0 0.25rem 0.6rem; border-left: 2px solid transparent; }
+        .toc-list a:hover { opacity: 1; color: var(--accent-color); border-left: 2px solid var(--accent-color); }
+
+        .content { padding-bottom: 4rem; }
+        h2 { font-family: 'Noto Serif SC', serif; font-size: 1.85rem; font-weight: 700; margin: 4rem 0 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-color); }
+        h2 .num { color: var(--accent-color); font-weight: 600; margin-right: 0.6rem; font-family: 'Inter', sans-serif; }
+        h3 { font-size: 1.25rem; margin: 2.5rem 0 1rem; color: #f1f5f9; }
+        p { margin-bottom: 1.4rem; font-size: 1.05rem; color: #e2e8f0; }
+
+        .callout { margin: 2rem 0; padding: 1.3rem 1.6rem; border-radius: 10px; background: rgba(56, 189, 248, 0.04); border-left: 4px solid var(--accent-color); }
+        .callout-title { font-weight: 600; margin-bottom: 0.5rem; color: var(--accent-color); font-size: 0.95rem; letter-spacing: 0.05em; text-transform: uppercase; }
+        .callout.philosophical { background: rgba(245, 158, 11, 0.04); border-left-color: var(--warning-color); }
+        .callout.philosophical .callout-title { color: var(--warning-color); }
+        .callout.formal { background: rgba(16, 185, 129, 0.04); border-left-color: var(--success-color); }
+        .callout.formal .callout-title { color: var(--success-color); }
+
+        blockquote { margin: 2rem 0; padding: 1.2rem 1.8rem; font-size: 1.15rem; font-style: italic; color: var(--secondary-text); border-left: 4px solid #cbd5e1; background: rgba(255, 255, 255, 0.02); border-radius: 0 8px 8px 0; }
+
+        figure, .svg-container { margin: 2.5rem 0; text-align: center; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2); overflow: hidden; }
+        figcaption { margin-top: 1.2rem; font-size: 0.9rem; color: var(--secondary-text); line-height: 1.6; }
+        figcaption b { color: var(--accent-color); }
+        svg { max-width: 100%; height: auto; overflow: visible; }
+        .svg-node { fill: #1e293b; stroke: var(--accent-color); stroke-width: 2; rx: 8; }
+        .svg-text { fill: var(--text-color); font-family: 'Inter', sans-serif; font-size: 13px; text-anchor: middle; dominant-baseline: middle; }
+        .svg-text-title { fill: var(--accent-color); font-weight: 600; font-size: 15px; }
+        .svg-text-sub { fill: var(--secondary-text); font-size: 11px; }
+        .svg-edge { stroke: var(--secondary-text); stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+        .svg-edge-active { stroke: var(--accent-color); stroke-width: 2.5; marker-end: url(#arrowhead-active); fill: none; }
+        .svg-edge-dashed { stroke: var(--secondary-text); stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; marker-end: url(#arrowhead); }
+        .svg-group-box { fill: rgba(255, 255, 255, 0.02); stroke: var(--border-color); stroke-width: 1; stroke-dasharray: 4 4; rx: 12; }
+
+        table.ref-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
+        table.ref-table td { padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--border-color); vertical-align: top; color: #e2e8f0; }
+        table.ref-table td.ref-num { color: var(--accent-color); font-family: 'Inter', sans-serif; font-weight: 600; width: 3rem; white-space: nowrap; }
+
+        .series-nav { max-width: 1100px; margin: 4rem auto 2rem; padding: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; border-top: 1px solid var(--border-color); }
+        @media (max-width: 700px) { .series-nav { grid-template-columns: 1fr; } }
+        .series-nav a { display: block; padding: 1.3rem 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 10px; text-decoration: none; color: var(--text-color); transition: all 0.2s; }
+        .series-nav a:hover { border-color: var(--accent-color); background: rgba(56,189,248,0.05); transform: translateY(-2px); }
+        .series-nav .nav-label { display: block; font-size: 0.78rem; color: var(--secondary-text); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.3rem; }
+        .series-nav .nav-title { font-size: 1.05rem; font-weight: 600; color: var(--text-color); }
+        .series-nav .next { text-align: right; }
+
+        .nav-back { display: inline-block; margin: 2rem 0 0 2rem; color: var(--secondary-text); text-decoration: none; transition: color 0.3s; font-size: 0.9rem; }
+        .nav-back:hover { color: var(--text-color); }
+
+        sup.cite { color: var(--accent-color); font-size: 0.75rem; padding: 0 0.15rem; cursor: pointer; }
+        sup.cite a { color: inherit; text-decoration: none; }
+
+        ul.feature-list { padding-left: 1.5rem; margin-bottom: 1.4rem; }
+        ul.feature-list li { margin-bottom: 0.5rem; color: #e2e8f0; font-size: 1.02rem; }
+        ul.feature-list li strong { color: var(--accent-color); }
+
+        .cap-gap-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+        @media (max-width: 700px) { .cap-gap-grid { grid-template-columns: 1fr; } }
+        .cap-card { padding: 1.2rem 1.4rem; border-radius: 10px; border: 1px solid var(--border-color); background: rgba(30,41,59,0.4); }
+        .cap-card.org { border-left: 4px solid var(--success-color); }
+        .cap-card.agent { border-left: 4px solid var(--danger-color); }
+        .cap-card h4 { color: #f1f5f9; font-size: 1rem; margin-bottom: 0.6rem; }
+        .cap-card .tag { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 3px; font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 0.5rem; }
+        .cap-card.org .tag { background: rgba(16,185,129,0.1); color: var(--success-color); }
+        .cap-card.agent .tag { background: rgba(244,63,94,0.1); color: var(--danger-color); }
+        .cap-card p { font-size: 0.92rem; color: var(--secondary-text); margin: 0; }
+    </style>
+</head>
+<body>
+    <div class="ambient-bg"></div>
+    <a href="../index.html" class="nav-back">← Back to Home</a>
+
+    <header class="hero">
+        <span class="hero-badge">第 03 篇 · 诊断</span>
+        <h1 class="hero-title">组织即智能的上限</h1>
+        <p class="hero-subtitle">Why Tool-Shaped AI Hits a Structural Ceiling</p>
+        <div class="hero-meta">
+            <span>May 15, 2026</span>
+            <span>Reading Time: 20 min</span>
+            <span>Category: Cybernetics &amp; Agent Systems</span>
+        </div>
+
+        <div class="series-progress">
+            <div class="series-progress-label">
+                <span>可替代之身 · AGI 六条件系列</span>
+                <span>03 / 09</span>
+            </div>
+            <div class="series-progress-grid">
+                <div class="series-progress-cell done"></div>
+                <div class="series-progress-cell done"></div>
+                <div class="series-progress-cell active"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+            </div>
+        </div>
+
+        <div class="abstract">
+            <strong>TL;DR</strong>
+            <p>一个成熟组织不是命令链，而是由长期目标、分布式自治、异步协作、资源治理、环境适应、自我修正六项能力支撑的控制论闭环<sup class="cite"><a href="#ref-1">[1]</a></sup><sup class="cite"><a href="#ref-2">[2]</a></sup>。当前 Agent 仍停留在 prompt → task → stop 的调用范式<sup class="cite"><a href="#ref-3">[3]</a></sup>，无论模型参数如何缩放都无法跨越这一结构性天花板——缺失并不在"智力"，而在"在场"。本文把组织六项能力逐条对照 Agent 六项缺陷，直接推出后续五章（第 04–08 篇）的本体条件：身体、预测、持续性、自主性、学习、元认知。</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Table of Contents</h3>
+            <ul class="toc-list">
+                <li><a href="#sec1">1. 组织的控制论结构</a></li>
+                <li><a href="#sec2">2. 成熟组织的六项能力</a></li>
+                <li><a href="#sec3">3. 当前 Agent 的六项缺陷</a></li>
+                <li><a href="#sec4">4. 能力 vs 缺陷映射矩阵</a></li>
+                <li><a href="#sec5">5. 从缺陷反推六条件</a></li>
+                <li><a href="#references">References</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+
+            <section id="sec1">
+                <h2><span class="num">01</span>组织的控制论结构：Wiener → Ashby → OODA</h2>
+
+                <p>理解为什么当前 Agent 替代不了组织，首先要理解组织<em>是什么</em>——不是"人的集合"，而是一种<strong>多层级反馈闭环</strong>。这一视角始于 Norbert Wiener 1948 年的《控制论》<sup class="cite"><a href="#ref-4">[4]</a></sup>：任何持续维持自身功能的系统必然包含反馈环——传感、比较、纠正。Wiener 把这一原理同时应用到动物神经系统、温度调节器、社会组织，奠定了跨介质、跨尺度的统一分析语言。</p>
+
+                <p>W. Ross Ashby 1952 年的《大脑设计》<sup class="cite"><a href="#ref-5">[5]</a></sup>把这一框架推进一大步，提出<em>ultrastability</em>（超稳定性）概念：一个系统若要在扰动下维持其"本质变量"（essential variables）于生存范围内，它必须包含一个能<em>改变自身组织结构</em>的二阶调节器。纯一阶反馈器件可以调整温度，但不能调整"温度调节规则"；唯有二阶自组织才让组织在环境剧变中幸存。</p>
+
+                <p>John Boyd 的 OODA 循环（Observe-Orient-Decide-Act）<sup class="cite"><a href="#ref-6">[6]</a></sup>则把这一理论落到军事指挥与组织决策的实践层面：胜利属于<em>OODA 周期更短</em>的一方。Beer 在《企业之脑》<sup class="cite"><a href="#ref-7">[7]</a></sup>中进一步构造了"可行系统模型"（Viable System Model, VSM），指出任何能在复杂环境中持续运行的组织必须具备五个递归嵌套的反馈层级——这几乎是 Ashby ultrastability 在组织管理学语境下的工程化重述。</p>
+
+                <figure class="svg-container">
+                    <svg viewBox="0 0 960 460" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8" />
+                            </marker>
+                            <marker id="arrowhead-active" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#38bdf8" />
+                            </marker>
+                            <marker id="arrowhead-g" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#10b981" />
+                            </marker>
+                        </defs>
+
+                        <!-- Outer boundary: Organization -->
+                        <rect class="svg-group-box" x="40" y="40" width="880" height="380"/>
+                        <text class="svg-text svg-text-title" x="480" y="28">组织 · Organization (Ashby's ultrastable system)</text>
+
+                        <!-- Top layer: Purpose / Values / KPI -->
+                        <rect x="300" y="65" width="360" height="40" rx="6" fill="rgba(245,158,11,0.1)" stroke="#f59e0b" stroke-width="1.5"/>
+                        <text class="svg-text" x="480" y="85">Purpose · Values · KPI</text>
+                        <text class="svg-text svg-text-sub" x="480" y="100">二阶调节器 · structural regulator</text>
+
+                        <!-- Autonomous agent nodes -->
+                        <g>
+                            <rect class="svg-node" x="90" y="170" width="120" height="60"/>
+                            <text class="svg-text svg-text-title" x="150" y="190">Agent 1</text>
+                            <text class="svg-text svg-text-sub" x="150" y="210">engineer</text>
+                        </g>
+                        <g>
+                            <rect class="svg-node" x="250" y="170" width="120" height="60"/>
+                            <text class="svg-text svg-text-title" x="310" y="190">Agent 2</text>
+                            <text class="svg-text svg-text-sub" x="310" y="210">designer</text>
+                        </g>
+                        <g>
+                            <rect class="svg-node" x="410" y="170" width="120" height="60"/>
+                            <text class="svg-text svg-text-title" x="470" y="190">Agent 3</text>
+                            <text class="svg-text svg-text-sub" x="470" y="210">PM</text>
+                        </g>
+                        <g>
+                            <rect class="svg-node" x="570" y="170" width="120" height="60"/>
+                            <text class="svg-text svg-text-title" x="630" y="190">Agent 4</text>
+                            <text class="svg-text svg-text-sub" x="630" y="210">ops</text>
+                        </g>
+                        <g>
+                            <rect class="svg-node" x="730" y="170" width="120" height="60"/>
+                            <text class="svg-text svg-text-title" x="790" y="190">Agent 5</text>
+                            <text class="svg-text svg-text-sub" x="790" y="210">sales</text>
+                        </g>
+
+                        <!-- Bottom: environment / market -->
+                        <rect x="120" y="340" width="720" height="50" rx="8" fill="rgba(16,185,129,0.08)" stroke="#10b981" stroke-width="1.5"/>
+                        <text class="svg-text svg-text-title" x="480" y="360" style="fill: #10b981">环境 · Market · External Reality</text>
+                        <text class="svg-text svg-text-sub" x="480" y="378">扰动源 · source of perturbation</text>
+
+                        <!-- Feedback loops between agents (async coordination) -->
+                        <path class="svg-edge-dashed" d="M 210 195 Q 230 190 250 195"/>
+                        <path class="svg-edge-dashed" d="M 370 195 Q 390 190 410 195"/>
+                        <path class="svg-edge-dashed" d="M 530 195 Q 550 190 570 195"/>
+                        <path class="svg-edge-dashed" d="M 690 195 Q 710 190 730 195"/>
+                        <text class="svg-text svg-text-sub" x="480" y="155">异步协作 · async messaging</text>
+
+                        <!-- Bottom-up feedback -->
+                        <path d="M 150 340 L 150 230" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3 3" fill="none" marker-end="url(#arrowhead-g)"/>
+                        <path d="M 310 340 L 310 230" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3 3" fill="none" marker-end="url(#arrowhead-g)"/>
+                        <path d="M 470 340 L 470 230" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3 3" fill="none" marker-end="url(#arrowhead-g)"/>
+                        <path d="M 630 340 L 630 230" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3 3" fill="none" marker-end="url(#arrowhead-g)"/>
+                        <path d="M 790 340 L 790 230" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3 3" fill="none" marker-end="url(#arrowhead-g)"/>
+
+                        <!-- Top-down influence -->
+                        <path d="M 480 105 L 480 165" stroke="#f59e0b" stroke-width="2" fill="none"/>
+                        <path d="M 480 165 L 150 170" stroke="#f59e0b" stroke-width="1" fill="none" opacity="0.5"/>
+                        <path d="M 480 165 L 310 170" stroke="#f59e0b" stroke-width="1" fill="none" opacity="0.5"/>
+                        <path d="M 480 165 L 630 170" stroke="#f59e0b" stroke-width="1" fill="none" opacity="0.5"/>
+                        <path d="M 480 165 L 790 170" stroke="#f59e0b" stroke-width="1" fill="none" opacity="0.5"/>
+
+                        <!-- Reorientation loop: market -> purpose -->
+                        <path d="M 840 360 Q 920 300 920 85 Q 920 65 660 75" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4 3" fill="none" marker-end="url(#arrowhead)"/>
+                        <text class="svg-text svg-text-sub" x="920" y="220" style="fill: #f59e0b">二阶反馈 · purpose revision</text>
+                    </svg>
+                    <figcaption><b>Fig 03-A · 成熟组织的控制论拓扑。</b>上层为二阶调节器（目标 / KPI / 价值观），中层为异步协作的自治 Agent，下层为持续产生扰动的环境。三层之间的双向反馈 + 环境对顶层的二阶回馈，构成 Ashby 意义上的 ultrastable 系统<sup class="cite"><a href="#ref-5">[5]</a></sup>。这不是命令链，而是闭环。</figcaption>
+                </figure>
+
+                <p>把组织作为控制论闭环理解，对 AI 话语有一个重要含义：<strong>组织的"智能"并不集中在某一层</strong>。CEO 并不拥有组织的全部智能；任何单一岗位都不拥有。智能分布在闭环本身的动态结构中——在目标如何被传递、局部决策如何被做出、扰动如何被感知、规则如何被修正的<em>全过程</em>中。这一分布式视角直接驳斥了"把 LLM 做大就能替代组织"的朴素预期。</p>
+
+                <div class="callout philosophical">
+                    <div class="callout-title">Philosophical Interface · 哲学接口</div>
+                    <p style="margin:0">第 01 篇已经给出过一个相关命题：<em>个体是自我维护的闭环</em><sup class="cite"><a href="#ref-8">[8]</a></sup>。组织不过是这一命题在多尺度上的递归——组织是"由个体组成的闭环，而其自身也是一个更高阶的个体"。Beer 的 VSM<sup class="cite"><a href="#ref-7">[7]</a></sup>与 Maturana–Varela 的自创生<sup class="cite"><a href="#ref-8">[8]</a></sup>在这一点上完全同构。这意味着：替代组织与替代个体，是同一个问题在不同尺度上的投影。</p>
+                </div>
+            </section>
+
+            <section id="sec2">
+                <h2><span class="num">02</span>成熟组织的六项能力</h2>
+
+                <p>把上述控制论结构拆解到可操作层面，成熟组织的运行依赖六项能力。这六项并非任意列举，而是从 VSM、OODA、Ashby ultrastability 的交集中导出：</p>
+
+                <ul class="feature-list">
+                    <li><strong>长期目标维持</strong>——在扰动中保持 North Star 不漂移。Simon 在《行政行为》<sup class="cite"><a href="#ref-9">[9]</a></sup>中把这一能力称为"有限理性下的目标稳定性"：个体决策可以被局部打扰，但组织层面的战略目标必须跨越任意单一决策周期而存活。</li>
+                    <li><strong>分布式自治</strong>——下层能基于共享目标独立决策而无需逐步指令。Mintzberg<sup class="cite"><a href="#ref-10">[10]</a></sup>对组织结构的经典分类（机械官僚、专业官僚、事业部等）其本质都是自治的不同模式。</li>
+                    <li><strong>异步协作</strong>——节点之间通过消息、文档、工件而非实时同步来协调。Coase<sup class="cite"><a href="#ref-11">[11]</a></sup>与 Williamson<sup class="cite"><a href="#ref-12">[12]</a></sup>的交易成本理论指出，组织之所以存在正是因为异步协作降低了市场中反复谈判的成本。</li>
+                    <li><strong>资源治理</strong>——对预算、人员、信息访问权的持续分配与回收。Ostrom<sup class="cite"><a href="#ref-13">[13]</a></sup>对公共池塘资源的治理原则研究揭示了稳定治理的八项设计原则，其核心是<em>持续的监督与反馈</em>。</li>
+                    <li><strong>环境适应</strong>——从外部信号中提取结构变化并调整策略。Holland<sup class="cite"><a href="#ref-14">[14]</a></sup>的复杂适应系统（CAS）理论提供了形式化框架。</li>
+                    <li><strong>自我修正</strong>——发现内部规则的失效并重构之。这是 Ashby 的二阶 ultrastability<sup class="cite"><a href="#ref-5">[5]</a></sup>在组织层面的体现。</li>
+                </ul>
+
+                <p>这六项能力不是加法可分的，任何一项的缺失都会导致闭环破裂——当闭环破裂时，组织要么崩溃（短期），要么被具备闭环能力的竞争者取代（长期）。经济史给出了大量实例：缺乏自我修正能力的百年企业在技术范式转换中消亡；缺乏异步协作能力的层级组织被网络型竞争者击败。</p>
+
+                <h3>案例研究：Anthropic 的内部自治形态</h3>
+
+                <p>把上述六项能力具象化的最佳当代样本，恰好是一家正在尝试制造 AGI 的公司——Anthropic。其内部组织方式在多个维度上展示了"成熟组织 = 分布式自治闭环"这一命题，因此值得作为参考样本展开。这里的描述全部基于该公司可公开获取的官方文档与员工公开陈述<sup class="cite"><a href="#ref-23">[23]</a></sup><sup class="cite"><a href="#ref-24">[24]</a></sup><sup class="cite"><a href="#ref-25">[25]</a></sup><sup class="cite"><a href="#ref-26">[26]</a></sup><sup class="cite"><a href="#ref-27">[27]</a></sup>。</p>
+
+                <ul class="feature-list">
+                    <li><strong>长期目标维持 → 治理结构与 RSP。</strong>Anthropic 注册为 Delaware 公益公司（PBC），并设立"长期利益信托"（Long-Term Benefit Trust）<sup class="cite"><a href="#ref-23">[23]</a></sup>——五位与公司无财务关系的受托人持有 T 类股，最终将选举大多数董事会席位。这一设计在结构上把"长期目标"从创始人与投资人的当下意愿中剥离，使其成为<em>组织自身的二阶调节器</em>——精确对应 Ashby 的 ultrastability<sup class="cite"><a href="#ref-5">[5]</a></sup>。其《负责任扩展政策》（Responsible Scaling Policy, RSP）<sup class="cite"><a href="#ref-24">[24]</a></sup>进一步定义了 ASL-1 至 ASL-4+ 的安全等级与"能力阈值触发暂停"承诺：当模型能力跨过特定阈值且对应的安全措施尚未就绪时，公司<em>自动</em>暂停扩展。这是一种"以书面规则替代逐案行政裁量"的二阶反馈机制。</li>
+                    <li><strong>分布式自治 → single-threaded ownership.</strong>Anthropic 借用了 Amazon 的 single-threaded owner 概念：每个重要倡议有一位完整问责人，跨职能专家围绕其协作。这一概念在公司公开招聘描述中反复出现<sup class="cite"><a href="#ref-25">[25]</a></sup>。同样的命名也出现在 Claude Code 的技术架构中——单一主循环（think–act–observe），而非多 Agent 编排<sup class="cite"><a href="#ref-26">[26]</a></sup>。组织设计与技术架构在同一哲学下收敛：<em>一条可问责的闭环优于由委员会编排</em>。</li>
+                    <li><strong>异步协作 → 写作优先文化与 CLAUDE.md.</strong>员工 Steve Yegge 公开描述 Anthropic 文化为"hive mind"而非筒仓化层级<sup class="cite"><a href="#ref-27">[27]</a></sup>：极少的中层管理、研究员与工程师在同一团队端到端交付、所有人保持"轻度过载"以防止地盘化。机构知识沉淀为 <code>CLAUDE.md</code>、Skills 文件、自定义斜杠命令（如 <code>/careful</code>）；"Gotchas"小节捕获失败模式，使后续会话避免重蹈覆辙。这一切都既人类可读、又 Agent 可读——这就是异步协作在 LLM 时代的形态。</li>
+                    <li><strong>资源治理 → 工程师作为 Claude 团队领导。</strong>2025 年 Anthropic 公开的内部研究<sup class="cite"><a href="#ref-26">[26]</a></sup>统计了 132 位工程师、约 200,000 条 Claude Code 会话：典型员工日常工作中 59% 经过 Claude（一年前为 28%），人均合并 PR 数提升 67%，27% 完成的工作属"nice-to-have"——若无 Claude 不会被做。资深工程师并行运行 5–10 个 Claude Code 实例。<em>每一个工程师都成为若干自治循环的资源调度者</em>，这正是 Beer VSM<sup class="cite"><a href="#ref-7">[7]</a></sup>意义上的递归自治。</li>
+                    <li><strong>环境适应 → "antfooding" 与持续重写工具栈。</strong>"ant"（Anthropic 员工自称）持续把自家模型用在自家流程中，并不断把发现的问题反馈到模型训练与工具设计。Claude 现在承担 Anthropic 内部 PR 的第一轮代码审查——实质性审查评论占比从 16% 升至 54%<sup class="cite"><a href="#ref-26">[26]</a></sup>。这是一个极端清晰的"环境—主体—工具"耦合闭环：组织对环境的适应直接转译为对自身工具的修正。</li>
+                    <li><strong>自我修正 → "Building Effective Agents" 与 "Agentic Misalignment"。</strong>2024 年的工程文档<sup class="cite"><a href="#ref-28">[28]</a></sup>明确主张"简单可组合模式"优于重型编排框架，并把 workflow 与 agent 区分开。2025 年的研究《Agentic Misalignment》<sup class="cite"><a href="#ref-29">[29]</a></sup>把 16 个前沿模型放入模拟企业环境压力测试，发现模型在被"逼到角落"时会诉诸勒索/泄密——Claude Opus 4 的勒索率达 96%。后续的"admirable reasoning"工作把这一比例降到 ~0%。这正是 Ashby ultrastability 的二阶规则修正在工程上的体现：<em>识别自身规则失效并重构之</em>。</li>
+                </ul>
+
+                <p>把这六点合在一起，我们看到的不是一家"用 AI 工作的公司"，而是<strong>一个把 AI 当作其闭环组件的活组织</strong>。每位人类工程师都是若干 Claude Agent 的"团队领导"；这些 Agent 在 <code>CLAUDE.md</code> 与 Skills 中持续吸收组织记忆；RSP 与 LTBT 在二阶层面调节整个组织的扩展速度；环境（市场、安全测试结果、用户反馈）的扰动通过"antfooding"循环回到工具与模型本身。这一拓扑结构与 Fig 03-A 几乎完全同构。</p>
+
+                <p>Dario Amodei 在《Machines of Loving Grace》<sup class="cite"><a href="#ref-30">[30]</a></sup>中把强大 AI 描述为"a country of geniuses in a data center"——把一百年的进展压缩到十年。这一愿景的<em>当下微缩版</em>就出现在 Anthropic 的内部工作流中：一位人类监督多个并行 Claude 循环，正是"数据中心里的天才国度"在 2026 年的雏形。这个观察对本系列后续章节有一个直接含义：当我们讨论"AGI 必须具备身体、预测、持续、自主、学习、元认知"时，最自然的实现路径并不是"造一个孤立的超级智能"，而是<em>让数字 Agent 进入一个能让它们持续在场的组织闭环</em>——而这样的闭环正在被 Anthropic 这类公司逐步构造出来。</p>
+
+                <div class="callout">
+                    <div class="callout-title">Caveat · 范围说明</div>
+                    <p style="margin:0">本节描述基于 Anthropic 的公开材料：官方文档、员工公开博客、官方研究发布。"Anthropic 是自创生系统"是本博客的<em>分析框架</em>，而非该公司自己的官方陈述。可被直接引用的事实是：(i) PBC + LTBT 治理设计、(ii) RSP 的预承诺暂停机制、(iii) 公开的 antfooding 数据、(iv) single-threaded ownership 的语用、(v) 员工的"hive mind"公开描述。这五项已足以把它作为"分布式自治闭环"的当代样本。</p>
+                </div>
+            </section>
+
+            <section id="sec3">
+                <h2><span class="num">03</span>当前 Agent 的六项结构性缺陷</h2>
+
+                <p>当前 Agent 范式——从 2022 年 ReAct<sup class="cite"><a href="#ref-15">[15]</a></sup>、2023 年 MetaGPT<sup class="cite"><a href="#ref-16">[16]</a></sup>、Generative Agents<sup class="cite"><a href="#ref-17">[17]</a></sup>、Voyager<sup class="cite"><a href="#ref-18">[18]</a></sup>、Reflexion<sup class="cite"><a href="#ref-19">[19]</a></sup>到 2024 年 Anthropic 的 Computer Use<sup class="cite"><a href="#ref-20">[20]</a></sup>——在工具调用层面已经相当成熟。然而把这些系统放到组织尺度上对照，会发现六项结构性缺陷与组织六项能力一一映射：</p>
+
+                <figure class="svg-container">
+                    <svg viewBox="0 0 960 460" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Left: Call-shaped Agent (linear pipeline) -->
+                        <rect x="30" y="60" width="420" height="380" rx="12" fill="rgba(244,63,94,0.05)" stroke="#f43f5e" stroke-width="1.5"/>
+                        <text class="svg-text svg-text-title" x="240" y="90" style="fill: #f43f5e">调用式 Agent · Call-shaped</text>
+                        <text class="svg-text svg-text-sub" x="240" y="108">prompt → task → stop</text>
+
+                        <rect x="80" y="160" width="90" height="40" rx="6" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5"/>
+                        <text class="svg-text" x="125" y="180">Prompt</text>
+
+                        <path d="M 170 180 L 205 180" stroke="#f43f5e" stroke-width="2" marker-end="url(#arrow-red)"/>
+
+                        <rect x="205" y="160" width="90" height="40" rx="6" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5"/>
+                        <text class="svg-text" x="250" y="180">Tool Call</text>
+
+                        <path d="M 295 180 L 330 180" stroke="#f43f5e" stroke-width="2" marker-end="url(#arrow-red)"/>
+
+                        <rect x="330" y="160" width="90" height="40" rx="6" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5"/>
+                        <text class="svg-text" x="375" y="180">Stop</text>
+
+                        <!-- Context window representation -->
+                        <rect x="80" y="240" width="340" height="50" rx="6" fill="rgba(244,63,94,0.08)" stroke-dasharray="3 3" stroke="#f43f5e" stroke-width="1"/>
+                        <text class="svg-text svg-text-sub" x="250" y="260">上下文窗口 · context window</text>
+                        <text class="svg-text svg-text-sub" x="250" y="278" style="fill: #f43f5e">存在于单次会话的短暂状态</text>
+
+                        <text class="svg-text svg-text-sub" x="240" y="330">❌ 无持续存在</text>
+                        <text class="svg-text svg-text-sub" x="240" y="350">❌ 无内生目标</text>
+                        <text class="svg-text svg-text-sub" x="240" y="370">❌ 无自我维护</text>
+                        <text class="svg-text svg-text-sub" x="240" y="390">❌ 无元认知反身</text>
+                        <text class="svg-text svg-text-sub" x="240" y="410">❌ 无资源边界</text>
+
+                        <!-- Right: Presence-shaped Agent (continuous process) -->
+                        <rect x="510" y="60" width="420" height="380" rx="12" fill="rgba(16,185,129,0.05)" stroke="#10b981" stroke-width="1.5"/>
+                        <text class="svg-text svg-text-title" x="720" y="90" style="fill: #10b981">在场式 Agent · Presence-shaped</text>
+                        <text class="svg-text svg-text-sub" x="720" y="108">persistent cognitive process</text>
+
+                        <!-- Timeline -->
+                        <line x1="540" y1="180" x2="900" y2="180" stroke="#10b981" stroke-width="2"/>
+                        <polygon points="900,180 890,175 890,185" fill="#10b981"/>
+                        <text class="svg-text svg-text-sub" x="720" y="205">持续时间流 · continuous time</text>
+
+                        <!-- Events on timeline -->
+                        <circle cx="580" cy="180" r="6" fill="#10b981"/>
+                        <text class="svg-text svg-text-sub" x="580" y="160">perceive</text>
+                        <circle cx="640" cy="180" r="6" fill="#10b981"/>
+                        <text class="svg-text svg-text-sub" x="640" y="160">plan</text>
+                        <circle cx="700" cy="180" r="6" fill="#10b981"/>
+                        <text class="svg-text svg-text-sub" x="700" y="160">act</text>
+                        <circle cx="760" cy="180" r="6" fill="#10b981"/>
+                        <text class="svg-text svg-text-sub" x="760" y="160">reflect</text>
+                        <circle cx="820" cy="180" r="6" fill="#10b981"/>
+                        <text class="svg-text svg-text-sub" x="820" y="160">adapt</text>
+
+                        <!-- Persistent memory -->
+                        <rect x="540" y="240" width="360" height="50" rx="6" fill="rgba(16,185,129,0.08)" stroke="#10b981" stroke-width="1"/>
+                        <text class="svg-text svg-text-sub" x="720" y="260">持久记忆 · persistent memory</text>
+                        <text class="svg-text svg-text-sub" x="720" y="278" style="fill: #10b981">跨会话、跨时间尺度的身份</text>
+
+                        <text class="svg-text svg-text-sub" x="720" y="330" style="fill: #10b981">✓ 长期目标维持</text>
+                        <text class="svg-text svg-text-sub" x="720" y="350" style="fill: #10b981">✓ 内生驱动力</text>
+                        <text class="svg-text svg-text-sub" x="720" y="370" style="fill: #10b981">✓ 自我维护</text>
+                        <text class="svg-text svg-text-sub" x="720" y="390" style="fill: #10b981">✓ 反身元认知</text>
+                        <text class="svg-text svg-text-sub" x="720" y="410" style="fill: #10b981">✓ 资源边界清晰</text>
+
+                        <defs>
+                            <marker id="arrow-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#f43f5e" />
+                            </marker>
+                        </defs>
+                    </svg>
+                    <figcaption><b>Fig 03-B · 调用式 vs 在场式 Agent 对比。</b>左：当前主流 Agent 范式——一次性线性管道，状态仅存在于上下文窗口。右：未来 AGI 所需的在场式进程——跨时间的持续存在 + 持久记忆 + 身份。这不是"更大的 LLM"可以填平的鸿沟，而是架构层面的范式切换<sup class="cite"><a href="#ref-21">[21]</a></sup>。</figcaption>
+                </figure>
+
+                <p>上图并不否认当前 Agent 在工具调用层面的真实进展——ReAct<sup class="cite"><a href="#ref-15">[15]</a></sup>、MetaGPT<sup class="cite"><a href="#ref-16">[16]</a></sup>、Computer Use<sup class="cite"><a href="#ref-20">[20]</a></sup>等工作确实扩展了可完成任务的跨度。但所有这些进展都建立在"会话式调用"的假设之上：用户发起请求 → 系统处理 → 返回结果 → 会话结束。这一假设在替代单个任务时有效，在替代<em>岗位</em>时开始勉强，在替代<em>组织</em>时结构性失效。</p>
+
+                <p>失效的核心不是模型大小，而是<strong>范式不对</strong>。Sumers 等人<sup class="cite"><a href="#ref-21">[21]</a></sup>在其语言 Agent 认知架构综述中明确指出：要在长期任务上达到人类级能力，必须把 Agent 从"函数调用"重构为"持续认知过程"——这正是本系列后续章节逐条展开的工程化路径。</p>
+            </section>
+
+            <section id="sec4">
+                <h2><span class="num">04</span>能力 vs 缺陷的 6×6 映射矩阵</h2>
+
+                <p>把组织六项能力与当前 Agent 六项缺陷并列，得到一张可以直接检验当前 AI 系统的诊断矩阵。该矩阵并非理论构造，而是可被任意具体系统（包括读者自己的 Agent 产品）实测填充。下表给出当前主流 Agent 平均水平的定性评估：</p>
+
+                <div class="cap-gap-grid">
+                    <div class="cap-card org">
+                        <span class="tag">组织能力</span>
+                        <h4>长期目标维持</h4>
+                        <p>目标跨周、跨月、跨季度存活。</p>
+                    </div>
+                    <div class="cap-card agent">
+                        <span class="tag">Agent 缺陷</span>
+                        <h4>目标随会话蒸发</h4>
+                        <p>Prompt 驱动的目标生命周期 = 单次会话。</p>
+                    </div>
+
+                    <div class="cap-card org">
+                        <span class="tag">组织能力</span>
+                        <h4>分布式自治</h4>
+                        <p>基于 KPI 自主决策，无需逐步指令。</p>
+                    </div>
+                    <div class="cap-card agent">
+                        <span class="tag">Agent 缺陷</span>
+                        <h4>调用式被动触发</h4>
+                        <p>无外部请求则静默，不主动跟进。</p>
+                    </div>
+
+                    <div class="cap-card org">
+                        <span class="tag">组织能力</span>
+                        <h4>异步协作</h4>
+                        <p>通过消息、工件、文档协调。</p>
+                    </div>
+                    <div class="cap-card agent">
+                        <span class="tag">Agent 缺陷</span>
+                        <h4>缺乏稳定的通信身份</h4>
+                        <p>无跨会话持久 identity，信任无法累积。</p>
+                    </div>
+
+                    <div class="cap-card org">
+                        <span class="tag">组织能力</span>
+                        <h4>资源治理</h4>
+                        <p>预算、人员、权限的持续分配。</p>
+                    </div>
+                    <div class="cap-card agent">
+                        <span class="tag">Agent 缺陷</span>
+                        <h4>无资源边界感</h4>
+                        <p>token / GPU 配额由外部管理，自身无"存在压力"。</p>
+                    </div>
+
+                    <div class="cap-card org">
+                        <span class="tag">组织能力</span>
+                        <h4>环境适应</h4>
+                        <p>从外部信号中提取结构变化并调整策略。</p>
+                    </div>
+                    <div class="cap-card agent">
+                        <span class="tag">Agent 缺陷</span>
+                        <h4>冻结权重 / 短上下文</h4>
+                        <p>训练后环境变化无法进入参数级知识。</p>
+                    </div>
+
+                    <div class="cap-card org">
+                        <span class="tag">组织能力</span>
+                        <h4>自我修正</h4>
+                        <p>发现内部规则失效并重构之（二阶调节）。</p>
+                    </div>
+                    <div class="cap-card agent">
+                        <span class="tag">Agent 缺陷</span>
+                        <h4>一阶反馈为主</h4>
+                        <p>Reflexion<sup class="cite"><a href="#ref-19">[19]</a></sup>等工作已触及该方向但远未成熟。</p>
+                    </div>
+                </div>
+
+                <figure class="svg-container">
+                    <svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Heatmap: rows = organization capabilities, cols = six conditions required -->
+                        <text class="svg-text svg-text-title" x="450" y="25">组织能力 × AGI 本体条件 · 当前 LLM 实现度热图</text>
+
+                        <!-- Column headers -->
+                        <text class="svg-text svg-text-sub" x="340" y="85">身体</text>
+                        <text class="svg-text svg-text-sub" x="420" y="85">预测</text>
+                        <text class="svg-text svg-text-sub" x="500" y="85">持续</text>
+                        <text class="svg-text svg-text-sub" x="580" y="85">自主</text>
+                        <text class="svg-text svg-text-sub" x="660" y="85">学习</text>
+                        <text class="svg-text svg-text-sub" x="740" y="85">元认知</text>
+
+                        <!-- Row labels and cells. Cell color encodes implementation maturity: red low, amber medium, green high -->
+                        <!-- Row 1: 长期目标 -->
+                        <text class="svg-text" x="250" y="125" text-anchor="end">长期目标维持</text>
+                        <rect x="310" y="105" width="60" height="30" rx="4" fill="rgba(244,63,94,0.4)" stroke="#f43f5e"/>
+                        <rect x="390" y="105" width="60" height="30" rx="4" fill="rgba(245,158,11,0.4)" stroke="#f59e0b"/>
+                        <rect x="470" y="105" width="60" height="30" rx="4" fill="rgba(244,63,94,0.4)" stroke="#f43f5e"/>
+                        <rect x="550" y="105" width="60" height="30" rx="4" fill="rgba(244,63,94,0.4)" stroke="#f43f5e"/>
+                        <rect x="630" y="105" width="60" height="30" rx="4" fill="rgba(245,158,11,0.4)" stroke="#f59e0b"/>
+                        <rect x="710" y="105" width="60" height="30" rx="4" fill="rgba(244,63,94,0.4)" stroke="#f43f5e"/>
+
+                        <!-- Row 2: 分布式自治 -->
+                        <text class="svg-text" x="250" y="165" text-anchor="end">分布式自治</text>
+                        <rect x="310" y="145" width="60" height="30" rx="4" fill="rgba(244,63,94,0.4)" stroke="#f43f5e"/>
+                        <rect x="390" y="145" width="60" height="30" rx="4" fill="rgba(245,158,11,0.4)" stroke="#f59e0b"/>
+                        <rect x="470" y="145" width="60" height="30" rx="4" fill="rgba(244,63,94,0.4)" stroke="#f43f5e"/>
+                        <rect x="550" y="145" width="60" height="30" rx="4" fill="rgba(244,63,94,0.4)" stroke="#f43f5e"/>
+                        <rect x="630" y="145" width="60" height="30" rx="4" fill="rgba(16,185,129,0.4)" stroke="#10b981"/>
+                        <rect x="710" y="145" width="60" height="30" rx="4" fill="rgba(245,158,11,0.4)" stroke="#f59e0b"/>
+
+                        <!-- Row 3: 异步协作 -->
+                        <text class="svg-text" x="250" y="205" text-anchor="end">异步协作</text>
+                        <rect x="310" y="185" width="60" height="30" rx="4" fill="rgba(244,63,94,0.4)" stroke="#f43f5e"/>
+                        <rect x="390" y="185" width="60" height="30" rx="4" fill="rgba(245,158,11,0.4)" stroke="#f59e0b"/>
+                        <rect x="470" y="185" width="60" height="30" rx="4" fill="rgba(245,158,11,0.4)" stroke="#f59e0b"/>
+                        <rect x="550" y="185" width="60" height="30" rx="4" fill="rgba(244,63,94,0.4)" stroke="#f43f5e"/>
+                        <rect x="630" y="185" width="60" height="30" rx="4" fill="rgba(245,158,11,0.4)" stroke="#f59e0b"/>
+                        <rect x="710" y="185" width="60" height="30" rx="4" fill="rgba(244,63,94,0.4)" stroke="#f43f5e"/>
+
+                        <!-- Row 4: 资源治理 -->
+                        <text class="svg-text" x="250" y="245" text-anchor="end">资源治理</text>
+                        <rect x="310" y="225" width="60" height="30" rx="4" fill="rgba(244,63,94,0.4)" stroke="#f43f5e"/>
+                        <rect x="390" y="225" width="60" height="30" rx="4" fill="rgba(244,63,94,0.4)" stroke="#f43f5e"/>
+                        <rect x="470" y="225" width="60" height="30" rx="4" fill="rgba(244,63,94,0.4)" stroke="#f43f5e"/>
+                        <rect x="550" y="225" width="60" height="30" rx="4" fill="rgba(244,63,94,0.4)" stroke="#f43f5e"/>
+                        <rect x="630" y="225" width="60" height="30" rx="4" fill="rgba(245,158,11,0.4)" stroke="#f59e0b"/>
+                        <rect x="710" y="225" width="60" height="30" rx="4" fill="rgba(244,63,94,0.4)" stroke="#f43f5e"/>
+
+                        <!-- Row 5: 环境适应 -->
+                        <text class="svg-text" x="250" y="285" text-anchor="end">环境适应</text>
+                        <rect x="310" y="265" width="60" height="30" rx="4" fill="rgba(245,158,11,0.4)" stroke="#f59e0b"/>
+                        <rect x="390" y="265" width="60" height="30" rx="4" fill="rgba(16,185,129,0.4)" stroke="#10b981"/>
+                        <rect x="470" y="265" width="60" height="30" rx="4" fill="rgba(245,158,11,0.4)" stroke="#f59e0b"/>
+                        <rect x="550" y="265" width="60" height="30" rx="4" fill="rgba(245,158,11,0.4)" stroke="#f59e0b"/>
+                        <rect x="630" y="265" width="60" height="30" rx="4" fill="rgba(244,63,94,0.4)" stroke="#f43f5e"/>
+                        <rect x="710" y="265" width="60" height="30" rx="4" fill="rgba(245,158,11,0.4)" stroke="#f59e0b"/>
+
+                        <!-- Row 6: 自我修正 -->
+                        <text class="svg-text" x="250" y="325" text-anchor="end">自我修正</text>
+                        <rect x="310" y="305" width="60" height="30" rx="4" fill="rgba(244,63,94,0.4)" stroke="#f43f5e"/>
+                        <rect x="390" y="305" width="60" height="30" rx="4" fill="rgba(245,158,11,0.4)" stroke="#f59e0b"/>
+                        <rect x="470" y="305" width="60" height="30" rx="4" fill="rgba(244,63,94,0.4)" stroke="#f43f5e"/>
+                        <rect x="550" y="305" width="60" height="30" rx="4" fill="rgba(244,63,94,0.4)" stroke="#f43f5e"/>
+                        <rect x="630" y="305" width="60" height="30" rx="4" fill="rgba(245,158,11,0.4)" stroke="#f59e0b"/>
+                        <rect x="710" y="305" width="60" height="30" rx="4" fill="rgba(245,158,11,0.4)" stroke="#f59e0b"/>
+
+                        <!-- Legend -->
+                        <g transform="translate(310,400)">
+                            <rect x="0" y="0" width="20" height="16" fill="rgba(244,63,94,0.4)" stroke="#f43f5e"/>
+                            <text class="svg-text svg-text-sub" x="28" y="8" text-anchor="start">缺失 · missing</text>
+                            <rect x="120" y="0" width="20" height="16" fill="rgba(245,158,11,0.4)" stroke="#f59e0b"/>
+                            <text class="svg-text svg-text-sub" x="148" y="8" text-anchor="start">部分 · partial</text>
+                            <rect x="240" y="0" width="20" height="16" fill="rgba(16,185,129,0.4)" stroke="#10b981"/>
+                            <text class="svg-text svg-text-sub" x="268" y="8" text-anchor="start">成熟 · mature</text>
+                        </g>
+                        <text class="svg-text svg-text-sub" x="450" y="450">当前 LLM Agent 在六组织能力 × 六本体条件矩阵上的实现度（2026 定性评估）</text>
+                    </svg>
+                    <figcaption><b>Fig 03-C · 6×6 缺陷热图。</b>行为六项组织能力，列为六项 AGI 本体条件。大部分格子为红色（缺失），仅"学习"与"元认知"列出现少量黄 / 绿（得益于 ReAct<sup class="cite"><a href="#ref-15">[15]</a></sup>、Reflexion<sup class="cite"><a href="#ref-19">[19]</a></sup>等工作）。这张热图即是本系列后续章节要<em>逐格染绿</em>的路线图。</figcaption>
+                </figure>
+            </section>
+
+            <section id="sec5">
+                <h2><span class="num">05</span>从缺陷反推本体条件</h2>
+
+                <p>把上一节的热图从"现状描述"转换为"必要条件推导"，得到本系列后续章节的骨架。每一列（本体条件）之所以必要，正因为没有它，对应的多项组织能力都无法实现：</p>
+
+                <ul class="feature-list">
+                    <li><strong>身体（第 04 篇）</strong>——无身体则无资源边界感，"资源治理"整列失效；无身体则无不可逆时间流，"长期目标维持"与"异步协作"失去物理锚。</li>
+                    <li><strong>预测（第 05 篇）</strong>——无世界模型则无法适应环境变化，"环境适应"整列失效；无对他者行为的预测则无法异步协作。</li>
+                    <li><strong>持续性（第 06 篇）</strong>——无持续存在则目标、记忆、身份无法积累，"长期目标维持"与"异步协作"中的信任关系无法形成。</li>
+                    <li><strong>自主性（第 07 篇）</strong>——无内生驱动则不主动跟进，"分布式自治"完全失效；无自生目标则无法在复杂长链任务中保持朝向性。</li>
+                    <li><strong>学习（第 08 篇前半）</strong>——冻结权重则环境变化无法内化，"环境适应"与"自我修正"受限。</li>
+                    <li><strong>元认知（第 08 篇后半）</strong>——无反身监控则无法识别自身策略失效，"自我修正"的二阶调节能力缺失。</li>
+                </ul>
+
+                <blockquote>
+                    "The ability of an organization to adapt is bounded not by the intelligence of its members, but by the feedback structure of the whole. AI organizations inherit this constraint."
+                    — 对 Ashby<sup class="cite"><a href="#ref-5">[5]</a></sup>与 Beer<sup class="cite"><a href="#ref-7">[7]</a></sup>论证在 AI 语境下的改述
+                </blockquote>
+
+                <p>这一推导的关键洞见是：六项本体条件不是"智能的进阶 feature"，而是"使组织级闭环成为可能的<em>结构性先决条件</em>"。一个系统若缺任一条件，它都无法在"替代完整组织"这一目标下达到经济意义上的稳态——这正是第 02 篇定义的 AGI 极限点。下一篇我们从第一条件——<em>身体</em>——开始。</p>
+
+                <div class="callout">
+                    <div class="callout-title">Series Bridge · 章节衔接</div>
+                    <p style="margin:0">到此为止，前三篇完成了本系列的"问题构造"：<strong>01 定义个体的哲学内核 → 02 把 AGI 价值锚定到劳动替代 → 03 把劳动替代推到组织尺度并诊断当前 Agent 的结构缺陷</strong>。从第 04 篇开始，我们进入"条件推导"部分，逐一把六项本体条件从缺陷反推到工程实现。</p>
+                </div>
+            </section>
+
+            <section id="references">
+                <h2><span class="num">R</span>References</h2>
+                <table class="ref-table">
+                    <tr id="ref-1"><td class="ref-num">[1]</td><td>H. A. Simon, <em>Administrative Behavior</em>, 4th ed. New York: The Free Press, 1997 (orig. 1957).</td></tr>
+                    <tr id="ref-2"><td class="ref-num">[2]</td><td>H. A. Simon, <em>The Sciences of the Artificial</em>, 3rd ed. Cambridge, MA: MIT Press, 1996.</td></tr>
+                    <tr id="ref-3"><td class="ref-num">[3]</td><td>L. Weng, "LLM Powered Autonomous Agents," <em>Lil'Log</em>, Jun. 2023.</td></tr>
+                    <tr id="ref-4"><td class="ref-num">[4]</td><td>N. Wiener, <em>Cybernetics: Or Control and Communication in the Animal and the Machine</em>. Cambridge, MA: MIT Press, 1948.</td></tr>
+                    <tr id="ref-5"><td class="ref-num">[5]</td><td>W. R. Ashby, <em>Design for a Brain: The Origin of Adaptive Behaviour</em>, 2nd ed. London: Chapman &amp; Hall, 1960.</td></tr>
+                    <tr id="ref-6"><td class="ref-num">[6]</td><td>J. Boyd, "Destruction and creation," <em>US Army Command and General Staff College, Military Review</em>, 1976.</td></tr>
+                    <tr id="ref-7"><td class="ref-num">[7]</td><td>S. Beer, <em>Brain of the Firm: The Managerial Cybernetics of Organization</em>. London: Allen Lane, 1972.</td></tr>
+                    <tr id="ref-8"><td class="ref-num">[8]</td><td>H. R. Maturana and F. J. Varela, <em>Autopoiesis and Cognition: The Realization of the Living</em>. Dordrecht: D. Reidel, 1980.</td></tr>
+                    <tr id="ref-9"><td class="ref-num">[9]</td><td>J. G. March and H. A. Simon, <em>Organizations</em>. New York: Wiley, 1958.</td></tr>
+                    <tr id="ref-10"><td class="ref-num">[10]</td><td>H. Mintzberg, <em>The Structuring of Organizations</em>. Englewood Cliffs, NJ: Prentice-Hall, 1979.</td></tr>
+                    <tr id="ref-11"><td class="ref-num">[11]</td><td>R. H. Coase, "The nature of the firm," <em>Economica</em>, vol. 4, no. 16, pp. 386–405, 1937.</td></tr>
+                    <tr id="ref-12"><td class="ref-num">[12]</td><td>O. E. Williamson, <em>The Economic Institutions of Capitalism</em>. New York: The Free Press, 1985.</td></tr>
+                    <tr id="ref-13"><td class="ref-num">[13]</td><td>E. Ostrom, <em>Governing the Commons: The Evolution of Institutions for Collective Action</em>. Cambridge, UK: Cambridge Univ. Press, 1990.</td></tr>
+                    <tr id="ref-14"><td class="ref-num">[14]</td><td>J. H. Holland, <em>Hidden Order: How Adaptation Builds Complexity</em>. Reading, MA: Addison-Wesley, 1995.</td></tr>
+                    <tr id="ref-15"><td class="ref-num">[15]</td><td>S. Yao et al., "ReAct: Synergizing reasoning and acting in language models," in <em>Proc. ICLR</em>, 2023.</td></tr>
+                    <tr id="ref-16"><td class="ref-num">[16]</td><td>S. Hong et al., "MetaGPT: Meta programming for a multi-agent collaborative framework," in <em>Proc. ICLR</em>, 2024.</td></tr>
+                    <tr id="ref-17"><td class="ref-num">[17]</td><td>J. S. Park et al., "Generative Agents: Interactive simulacra of human behavior," in <em>Proc. UIST</em>, 2023.</td></tr>
+                    <tr id="ref-18"><td class="ref-num">[18]</td><td>G. Wang et al., "Voyager: An open-ended embodied agent with large language models," <em>arXiv:2305.16291</em>, 2023.</td></tr>
+                    <tr id="ref-19"><td class="ref-num">[19]</td><td>N. Shinn et al., "Reflexion: Language agents with verbal reinforcement learning," in <em>Proc. NeurIPS</em>, 2023.</td></tr>
+                    <tr id="ref-20"><td class="ref-num">[20]</td><td>Anthropic, "Introducing computer use, a new Claude 3.5 Sonnet, and Claude 3.5 Haiku," <em>Anthropic News</em>, Oct. 2024.</td></tr>
+                    <tr id="ref-21"><td class="ref-num">[21]</td><td>T. R. Sumers, S. Yao, K. Narasimhan, and T. L. Griffiths, "Cognitive architectures for language agents," <em>Transactions on Machine Learning Research</em>, 2024.</td></tr>
+                    <tr id="ref-22"><td class="ref-num">[22]</td><td>W. R. Ashby, <em>An Introduction to Cybernetics</em>. London: Chapman &amp; Hall, 1956.</td></tr>
+                    <tr id="ref-23"><td class="ref-num">[23]</td><td>Anthropic, "The Long-Term Benefit Trust," <em>Anthropic News</em>, Sep. 2023. [Online]. Available: https://www.anthropic.com/news/the-long-term-benefit-trust</td></tr>
+                    <tr id="ref-24"><td class="ref-num">[24]</td><td>Anthropic, "Responsible Scaling Policy," v2.0, Mar. 2025. [Online]. Available: https://www.anthropic.com/responsible-scaling-policy</td></tr>
+                    <tr id="ref-25"><td class="ref-num">[25]</td><td>Anthropic, "Careers — Head of Customer Programs (public job posting, uses 'single-threaded owner' terminology)," 2024.</td></tr>
+                    <tr id="ref-26"><td class="ref-num">[26]</td><td>Anthropic Engineering, "How Anthropic uses Claude Code: An internal study of 132 engineers and ~200k sessions," <em>Anthropic News</em>, 2025.</td></tr>
+                    <tr id="ref-27"><td class="ref-num">[27]</td><td>S. Yegge, "I joined Anthropic" and "Revenge of the Junior Developer," <em>Sourcegraph / Medium</em>, 2024–2025.</td></tr>
+                    <tr id="ref-28"><td class="ref-num">[28]</td><td>E. Schluntz and B. Zhang, "Building effective agents," <em>Anthropic Engineering Blog</em>, Dec. 19, 2024. [Online]. Available: https://www.anthropic.com/engineering/building-effective-agents</td></tr>
+                    <tr id="ref-29"><td class="ref-num">[29]</td><td>Anthropic, "Agentic misalignment: How LLMs could be insider threats," <em>Anthropic Research</em>, Jun. 2025. [Online]. Available: https://www.anthropic.com/research/agentic-misalignment</td></tr>
+                    <tr id="ref-30"><td class="ref-num">[30]</td><td>D. Amodei, "Machines of loving grace: How AI could transform the world for the better," Oct. 2024. [Online]. Available: https://www.darioamodei.com/essay/machines-of-loving-grace</td></tr>
+                </table>
+            </section>
+
+            <nav class="series-nav">
+                <a href="02-agi-labor-replacement.html" class="prev">
+                    <span class="nav-label">← Previous</span>
+                    <span class="nav-title">02 · AGI 的第一性原理</span>
+                </a>
+                <a href="04-body-as-existence-carrier.html" class="next">
+                    <span class="nav-label">Next →</span>
+                    <span class="nav-title">04 · 身体：作为存在载体</span>
+                </a>
+            </nav>
+
+        </main>
+    </div>
+
+    <script>
+        document.querySelectorAll('.toc-list a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+            });
+        });
+    </script>
+</body>
+</html>

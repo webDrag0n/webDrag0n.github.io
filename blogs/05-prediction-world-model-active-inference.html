@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>预测：世界模型、主动推理与对未来的建模 · AGI 六条件</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'dark', securityLevel: 'loose', fontFamily: 'Inter',
+            themeVariables: { primaryColor: '#1e293b', primaryTextColor: '#f8fafc', primaryBorderColor: '#38bdf8', lineColor: '#94a3b8', secondaryColor: '#0f172a', tertiaryColor: '#1e293b' }
+        });
+    </script>
+
+    <style>
+        :root { --bg-color: #0f172a; --text-color: #f8fafc; --accent-color: #38bdf8; --secondary-text: #94a3b8; --card-bg: rgba(30, 41, 59, 0.7); --border-color: rgba(255, 255, 255, 0.1); --glow-color: rgba(56, 189, 248, 0.3); --success-color: #10b981; --warning-color: #f59e0b; --danger-color: #f43f5e; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', 'Noto Serif SC', serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.85; overflow-x: hidden; }
+        .ambient-bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -1;
+            background: radial-gradient(circle at 15% 50%, rgba(16, 185, 129, 0.05) 0%, transparent 50%), radial-gradient(circle at 85% 30%, rgba(56, 189, 248, 0.04) 0%, transparent 50%); }
+
+        .container { max-width: 1300px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: 1fr 3fr; gap: 4rem; align-items: start; }
+        @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+        .hero { padding: 5rem 2rem 2rem; text-align: center; max-width: 900px; margin: 0 auto; }
+        .hero-badge { display: inline-block; padding: 0.3rem 0.9rem; border-radius: 999px; background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.3); color: var(--success-color); font-size: 0.78rem; letter-spacing: 0.1em; margin-bottom: 1.2rem; text-transform: uppercase; }
+        .hero-title { font-family: 'Noto Serif SC', serif; font-size: 2.8rem; font-weight: 700; line-height: 1.25; margin-bottom: 1rem;
+            background: linear-gradient(120deg, #f8fafc 20%, #10b981 60%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-subtitle { color: var(--secondary-text); font-size: 1.1rem; font-style: italic; margin-bottom: 2rem; }
+        .hero-meta { color: var(--secondary-text); font-size: 0.9rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+
+        .series-progress { max-width: 900px; margin: 3rem auto 0; padding: 0 2rem; }
+        .series-progress-label { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; font-size: 0.8rem; color: var(--secondary-text); text-transform: uppercase; letter-spacing: 0.1em; }
+        .series-progress-grid { display: grid; grid-template-columns: repeat(9, 1fr); gap: 6px; }
+        .series-progress-cell { height: 6px; border-radius: 3px; background: rgba(255,255,255,0.06); }
+        .series-progress-cell.done { background: rgba(56,189,248,0.4); }
+        .series-progress-cell.active { background: var(--success-color); box-shadow: 0 0 12px rgba(16,185,129,0.4); }
+
+        .abstract { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; margin: 3rem auto; max-width: 860px; text-align: left; backdrop-filter: blur(10px); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15); }
+        .abstract strong { color: var(--accent-color); display: block; margin-bottom: 0.6rem; font-size: 1.05rem; letter-spacing: 0.08em; }
+        .abstract p { font-size: 1.05rem; margin: 0; }
+
+        .sidebar { position: sticky; top: 2rem; padding: 1.5rem; background: rgba(30, 41, 59, 0.3); border-left: 2px solid var(--border-color); height: max-content; max-height: calc(100vh - 4rem); overflow-y: auto; }
+        .sidebar h3 { font-size: 0.85rem; margin-bottom: 1rem; color: var(--secondary-text); text-transform: uppercase; letter-spacing: 0.08em; }
+        .toc-list { list-style: none; }
+        .toc-list li { margin-bottom: 0.7rem; }
+        .toc-list a { color: var(--text-color); text-decoration: none; font-size: 0.92rem; transition: color 0.2s, padding 0.2s; opacity: 0.7; display: block; padding: 0.25rem 0 0.25rem 0.6rem; border-left: 2px solid transparent; }
+        .toc-list a:hover { opacity: 1; color: var(--accent-color); border-left: 2px solid var(--accent-color); }
+
+        .content { padding-bottom: 4rem; }
+        h2 { font-family: 'Noto Serif SC', serif; font-size: 1.85rem; font-weight: 700; margin: 4rem 0 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-color); }
+        h2 .num { color: var(--success-color); font-weight: 600; margin-right: 0.6rem; font-family: 'Inter', sans-serif; }
+        h3 { font-size: 1.25rem; margin: 2.5rem 0 1rem; color: #f1f5f9; }
+        p { margin-bottom: 1.4rem; font-size: 1.05rem; color: #e2e8f0; }
+
+        .callout { margin: 2rem 0; padding: 1.3rem 1.6rem; border-radius: 10px; background: rgba(56, 189, 248, 0.04); border-left: 4px solid var(--accent-color); }
+        .callout-title { font-weight: 600; margin-bottom: 0.5rem; color: var(--accent-color); font-size: 0.95rem; letter-spacing: 0.05em; text-transform: uppercase; }
+        .callout.philosophical { background: rgba(245, 158, 11, 0.04); border-left-color: var(--warning-color); }
+        .callout.philosophical .callout-title { color: var(--warning-color); }
+        .callout.formal { background: rgba(16, 185, 129, 0.04); border-left-color: var(--success-color); }
+        .callout.formal .callout-title { color: var(--success-color); }
+
+        blockquote { margin: 2rem 0; padding: 1.2rem 1.8rem; font-size: 1.15rem; font-style: italic; color: var(--secondary-text); border-left: 4px solid #cbd5e1; background: rgba(255, 255, 255, 0.02); border-radius: 0 8px 8px 0; }
+
+        figure, .svg-container { margin: 2.5rem 0; text-align: center; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2); overflow: hidden; }
+        figcaption { margin-top: 1.2rem; font-size: 0.9rem; color: var(--secondary-text); line-height: 1.6; }
+        figcaption b { color: var(--accent-color); }
+        svg { max-width: 100%; height: auto; overflow: visible; }
+        .svg-node { fill: #1e293b; stroke: var(--accent-color); stroke-width: 2; rx: 8; }
+        .svg-text { fill: var(--text-color); font-family: 'Inter', sans-serif; font-size: 13px; text-anchor: middle; dominant-baseline: middle; }
+        .svg-text-title { fill: var(--accent-color); font-weight: 600; font-size: 15px; }
+        .svg-text-sub { fill: var(--secondary-text); font-size: 11px; }
+        .svg-edge { stroke: var(--secondary-text); stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+        .svg-edge-active { stroke: var(--accent-color); stroke-width: 2.5; marker-end: url(#arrowhead-active); fill: none; }
+        .svg-edge-dashed { stroke: var(--secondary-text); stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; marker-end: url(#arrowhead); }
+        .svg-group-box { fill: rgba(255, 255, 255, 0.02); stroke: var(--border-color); stroke-width: 1; stroke-dasharray: 4 4; rx: 12; }
+
+        table.ref-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
+        table.ref-table td { padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--border-color); vertical-align: top; color: #e2e8f0; }
+        table.ref-table td.ref-num { color: var(--accent-color); font-family: 'Inter', sans-serif; font-weight: 600; width: 3rem; white-space: nowrap; }
+
+        .series-nav { max-width: 1100px; margin: 4rem auto 2rem; padding: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; border-top: 1px solid var(--border-color); }
+        @media (max-width: 700px) { .series-nav { grid-template-columns: 1fr; } }
+        .series-nav a { display: block; padding: 1.3rem 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 10px; text-decoration: none; color: var(--text-color); transition: all 0.2s; }
+        .series-nav a:hover { border-color: var(--accent-color); background: rgba(56,189,248,0.05); transform: translateY(-2px); }
+        .series-nav .nav-label { display: block; font-size: 0.78rem; color: var(--secondary-text); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.3rem; }
+        .series-nav .nav-title { font-size: 1.05rem; font-weight: 600; color: var(--text-color); }
+        .series-nav .next { text-align: right; }
+
+        .nav-back { display: inline-block; margin: 2rem 0 0 2rem; color: var(--secondary-text); text-decoration: none; transition: color 0.3s; font-size: 0.9rem; }
+        .nav-back:hover { color: var(--text-color); }
+
+        sup.cite { color: var(--accent-color); font-size: 0.75rem; padding: 0 0.15rem; cursor: pointer; }
+        sup.cite a { color: inherit; text-decoration: none; }
+
+        ul.feature-list { padding-left: 1.5rem; margin-bottom: 1.4rem; }
+        ul.feature-list li { margin-bottom: 0.5rem; color: #e2e8f0; font-size: 1.02rem; }
+        ul.feature-list li strong { color: var(--success-color); }
+
+        .key-formula { text-align: center; margin: 2rem 0; padding: 1.5rem; background: rgba(16,185,129,0.04); border: 1px dashed rgba(16,185,129,0.3); border-radius: 10px; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+    <div class="ambient-bg"></div>
+    <a href="../index.html" class="nav-back">← Back to Home</a>
+
+    <header class="hero">
+        <span class="hero-badge">第 05 篇 · 第二条件：预测</span>
+        <h1 class="hero-title">预测：世界模型与主动推理</h1>
+        <p class="hero-subtitle">Prediction as the Mathematical Equivalent of Existence</p>
+        <div class="hero-meta">
+            <span>May 17, 2026</span>
+            <span>Reading Time: 22 min</span>
+            <span>Category: Active Inference &amp; World Models</span>
+        </div>
+
+        <div class="series-progress">
+            <div class="series-progress-label">
+                <span>可替代之身 · AGI 六条件系列</span>
+                <span>05 / 09</span>
+            </div>
+            <div class="series-progress-grid">
+                <div class="series-progress-cell done"></div>
+                <div class="series-progress-cell done"></div>
+                <div class="series-progress-cell done"></div>
+                <div class="series-progress-cell done"></div>
+                <div class="series-progress-cell active"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+            </div>
+        </div>
+
+        <div class="abstract">
+            <strong>TL;DR</strong>
+            <p>Friston 的自由能原理（Free Energy Principle, FEP）给出了一个数学上惊人简洁的论断：<em>任何持续维持自身存在的系统必然最小化感知预测误差</em><sup class="cite"><a href="#ref-1">[1]</a></sup>。这意味着"预测能力"不是智能的一个可选模块，而是<strong>存在的数学等价条件</strong>——一个具备身体（第 04 篇）的系统，若不对未来建模，就必然解体。本文把 Helmholtz 的无意识推断、Rao &amp; Ballard 的 predictive coding、Ha &amp; Schmidhuber 的 World Models、LeCun 的 JEPA 与 Pearl 的反事实推理统一在主动推理框架下，并指出当前 LLM 的"预测"停留在 token 层面，离 state-level / model-level 世界模型仍有结构性差距。</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Table of Contents</h3>
+            <ul class="toc-list">
+                <li><a href="#sec1">1. 活下去等价于预测</a></li>
+                <li><a href="#sec2">2. 自由能原理与主动推理</a></li>
+                <li><a href="#sec3">3. 三层预测：外部、他者、自我</a></li>
+                <li><a href="#sec4">4. World Models 的工程谱系</a></li>
+                <li><a href="#sec5">5. LLM 预测的层级缺口</a></li>
+                <li><a href="#references">References</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+
+            <section id="sec1">
+                <h2><span class="num">01</span>活下去等价于预测：一个 19 世纪的命题</h2>
+
+                <p>"生物体的感知本质上是一种无意识推断。" ——这是 Hermann von Helmholtz 在 1867 年《生理光学手册》<sup class="cite"><a href="#ref-2">[2]</a></sup>中提出的命题。感知并不是把外部刺激"原样"传入脑的被动过程；它是一个<em>生成模型</em>持续对感官输入做出假设、然后与真实输入进行比对的过程。我们"看到"的是模型的输出，不是视网膜上的像素。</p>
+
+                <p>Helmholtz 的这一命题在一百五十年后被两条独立的线索严格化。一条是神经科学：Rao &amp; Ballard 1999 年的 predictive coding<sup class="cite"><a href="#ref-3">[3]</a></sup>指出视觉皮层的分层结构可被解释为<em>高层预测低层、低层把预测误差回传高层</em>的信号流；这一假设在其后获得了大量实验支持<sup class="cite"><a href="#ref-4">[4]</a></sup><sup class="cite"><a href="#ref-5">[5]</a></sup>。另一条是理论物理与信息论：Friston 把"最小化预测误差"推广为一条更一般的原理——<strong>任何维持自身存在的系统必然最小化其感知的变分自由能</strong><sup class="cite"><a href="#ref-1">[1]</a></sup>。</p>
+
+                <p>这一原理对 AGI 的重要性怎么强调都不为过。它把"预测"从"一个有用的认知技能"提升为<em>存在的结构性必然</em>。承接第 04 篇：一旦系统具备身体（不可逆时间 + 可耗资源 + 持续维护），它就<strong>不得不</strong>预测——因为若不预测，它的行动将无法把资源消耗维持在生存阈值之上。</p>
+
+                <div class="key-formula">
+                    \( \text{Existence}(x)\ \implies\ x \text{ minimizes } \mathcal{F}[q(s), p(o, s)]\ \text{ where } \mathcal{F} = \mathbb{E}_q[\log q(s) - \log p(o, s)] \)
+                </div>
+
+                <p>这里 \(s\) 是外部世界（与自身）的隐状态，\(o\) 是感知，\(q(s)\) 是系统对 \(s\) 的后验信念，\(p(o,s)\) 是系统的生成模型。\(\mathcal{F}\) 是变分自由能——在凸优化意义下，\(\mathcal{F}\) 最小化即 \(q(s)\) 逼近真实后验 \(p(s|o)\)，也即<em>预测误差最小化</em>。Friston 的论点是：任何持续维持马尔可夫毯（第 04 篇意义上的"身体"）的系统都在事实上执行这一最小化——否则它会解体。</p>
+
+                <div class="callout philosophical">
+                    <div class="callout-title">Philosophical Interface · 哲学接口</div>
+                    <p style="margin:0">这一命题与 Heidegger 的"在世存在"<sup class="cite"><a href="#ref-6">[6]</a></sup>有一个深刻的对应。Dasein 之所以能"理解"世界，不是因为它拥有一组关于世界的陈述知识，而是因为它<em>已经把自己投射入未来</em>（Heidegger 称之为"投射性"，Entwurf）。Friston 的自由能原理把这一现象学描述翻译为数学：系统与世界的关系本身就是一个持续的预测行为；没有预测就没有在世。这也与 Clark 的"预测心智"命题<sup class="cite"><a href="#ref-7">[7]</a></sup>完全一致。</p>
+                </div>
+            </section>
+
+            <section id="sec2">
+                <h2><span class="num">02</span>自由能原理与主动推理环</h2>
+
+                <p>自由能原理有一个关键的工程化推论：<strong>系统可以通过两条路径最小化 \(\mathcal{F}\)——改变信念或改变世界</strong>。前者是<em>感知推断</em>（更新 \(q(s)\)），后者是<em>主动推理</em>（选择动作 \(a\) 使未来观测更符合预测）<sup class="cite"><a href="#ref-1">[1]</a></sup><sup class="cite"><a href="#ref-8">[8]</a></sup>。这两条路径共同构成主动推理环（active inference loop），在 Fig 05-A 中可视化。</p>
+
+                <figure class="svg-container">
+                    <svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8" />
+                            </marker>
+                            <marker id="arrowhead-g" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#10b981" />
+                            </marker>
+                        </defs>
+
+                        <!-- Outer environment -->
+                        <rect class="svg-group-box" x="40" y="50" width="820" height="400"/>
+                        <text class="svg-text svg-text-sub" x="60" y="70" text-anchor="start">环境 · Environment (hidden states s)</text>
+
+                        <!-- Markov blanket boundary -->
+                        <ellipse cx="450" cy="260" rx="320" ry="150" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4 4"/>
+                        <text class="svg-text svg-text-sub" x="450" y="110" style="fill: #f59e0b">Markov Blanket · 身体边界</text>
+
+                        <!-- Four nodes in circular arrangement -->
+                        <g>
+                            <rect x="190" y="225" width="140" height="70" rx="10" fill="rgba(56,189,248,0.1)" stroke="#38bdf8" stroke-width="2"/>
+                            <text class="svg-text svg-text-title" x="260" y="250">感知 · Sensing</text>
+                            <text class="svg-text svg-text-sub" x="260" y="270">observation o</text>
+                            <text class="svg-text svg-text-sub" x="260" y="285">via sensory organs</text>
+                        </g>
+
+                        <g>
+                            <rect x="380" y="160" width="140" height="70" rx="10" fill="rgba(56,189,248,0.1)" stroke="#38bdf8" stroke-width="2"/>
+                            <text class="svg-text svg-text-title" x="450" y="185">生成模型 · Generative</text>
+                            <text class="svg-text svg-text-sub" x="450" y="205">q(s) prior + p(o|s)</text>
+                            <text class="svg-text svg-text-sub" x="450" y="220">internal world model</text>
+                        </g>
+
+                        <g>
+                            <rect x="570" y="225" width="140" height="70" rx="10" fill="rgba(16,185,129,0.1)" stroke="#10b981" stroke-width="2"/>
+                            <text class="svg-text svg-text-title" x="640" y="250" style="fill: #10b981">预测 · Prediction</text>
+                            <text class="svg-text svg-text-sub" x="640" y="270">ô = E_q[p(o|s)]</text>
+                            <text class="svg-text svg-text-sub" x="640" y="285">future / counterfactual</text>
+                        </g>
+
+                        <g>
+                            <rect x="380" y="320" width="140" height="70" rx="10" fill="rgba(245,158,11,0.1)" stroke="#f59e0b" stroke-width="2"/>
+                            <text class="svg-text svg-text-title" x="450" y="345" style="fill: #f59e0b">动作 · Action</text>
+                            <text class="svg-text svg-text-sub" x="450" y="365">a* = argmin F</text>
+                            <text class="svg-text svg-text-sub" x="450" y="380">active inference</text>
+                        </g>
+
+                        <!-- Arrows connecting nodes: perception -> model -> prediction -> action -> env -> perception -->
+                        <path d="M 330 260 Q 360 250 380 225" class="svg-edge-active"/>
+                        <path d="M 520 200 Q 560 220 570 260" class="svg-edge-active"/>
+                        <path d="M 640 300 Q 620 335 520 355" stroke="#10b981" stroke-width="2.5" fill="none" marker-end="url(#arrowhead-g)"/>
+                        <path d="M 380 355 Q 320 340 260 300" stroke="#f59e0b" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)"/>
+
+                        <!-- Prediction error feedback loop -->
+                        <path d="M 260 260 Q 300 300 380 280 L 380 245" stroke="#f43f5e" stroke-width="2" stroke-dasharray="5 3" fill="none" marker-end="url(#arrowhead)"/>
+                        <text class="svg-text svg-text-sub" x="340" y="300" style="fill: #f43f5e">预测误差 ε</text>
+
+                        <!-- Free energy formula -->
+                        <rect x="660" y="350" width="180" height="80" rx="8" fill="rgba(16,185,129,0.05)" stroke="#10b981" stroke-width="1" stroke-dasharray="3 3"/>
+                        <text class="svg-text svg-text-title" x="750" y="375" style="fill: #10b981; font-size: 13px">Variational Free Energy</text>
+                        <text class="svg-text svg-text-sub" x="750" y="395" style="font-size: 10px">F = D_KL[q(s) || p(s|o)]</text>
+                        <text class="svg-text svg-text-sub" x="750" y="410" style="font-size: 10px">    - log p(o)</text>
+                        <text class="svg-text svg-text-sub" x="750" y="425" style="font-size: 10px">minimize via a or q</text>
+
+                        <!-- Environment label -->
+                        <text class="svg-text svg-text-sub" x="100" y="400" style="fill: #94a3b8">external state s</text>
+
+                        <!-- Title -->
+                        <text class="svg-text svg-text-title" x="450" y="30" style="font-size: 16px">主动推理环 · Active Inference Loop</text>
+                    </svg>
+                    <figcaption><b>Fig 05-A · 主动推理环。</b>系统通过感知接收观测 \(o\)，生成模型预测 \(\hat{o}\)，预测误差 \(\varepsilon=o-\hat{o}\) 驱动<em>两条</em>最小化路径：（1）更新信念 \(q(s)\)（感知推断），（2）选择动作 \(a^*\) 改变未来观测（主动推理）。两路径共同最小化变分自由能 \(\mathcal{F}\)<sup class="cite"><a href="#ref-1">[1]</a></sup><sup class="cite"><a href="#ref-8">[8]</a></sup>。虚线椭圆是第 04 篇意义上的马尔可夫毯（身体边界）。</figcaption>
+                </figure>
+
+                <p>把第 04 篇的身体定义代入主动推理框架，我们得到一个关键结论：<strong>身体 + 主动推理 = 存在最小单元</strong>。没有身体，预测无处落地；没有预测，身体无法维持。两者在结构上互为对方的充要条件。任何一个能被称为"在场"的系统都必须同时具备这两项——这也正是第 04、05 两篇在本系列中紧挨的逻辑原因。</p>
+
+                <div class="callout formal">
+                    <div class="callout-title">Formal Box · 自由能最小化的两种路径</div>
+                    <p style="margin:0">最小化 \(\mathcal{F}\) 可被分解为：(a) <em>感知推断</em>——调整 \(q(s)\) 使之接近真实后验 \(p(s|o)\)，这对应权重/信念更新；(b) <em>主动推理</em>——选择 \(a^*=\arg\min_a \mathcal{F}(a)\)，使未来观测分布更符合先验偏好。两路径都是 \(\mathcal{F}\) 的梯度下降，差别仅在变量：前者对信念求梯度，后者对动作求梯度。工程上这两路径分别对应"更新世界模型"与"规划动作序列"——正是任何持续 Agent 都必须同时做的两件事。</p>
+                </div>
+            </section>
+
+            <section id="sec3">
+                <h2><span class="num">03</span>三层预测对象：外部、他者、自我</h2>
+
+                <p>主动推理要求系统对三个层级的隐状态建模。这三个层级共享数学结构但在工程上有截然不同的挑战：</p>
+
+                <ul class="feature-list">
+                    <li><strong>外部世界（Environment）</strong>——物理/社会/市场环境的动力学。典型工程实现：World Models<sup class="cite"><a href="#ref-9">[9]</a></sup>、Dreamer<sup class="cite"><a href="#ref-10">[10]</a></sup>、AlphaZero 的 MCTS 搜索<sup class="cite"><a href="#ref-11">[11]</a></sup>。</li>
+                    <li><strong>其他主体（Others）</strong>——他人意图、竞争对手策略、用户偏好。需要"心灵理论"（Theory of Mind）层面的递归建模：我预测你预测我预测你…… Premack &amp; Woodruff 的工作<sup class="cite"><a href="#ref-12">[12]</a></sup>是其心理学奠基；Rabinowitz 等人的 ToMnet<sup class="cite"><a href="#ref-13">[13]</a></sup>是工程化尝试。</li>
+                    <li><strong>自我（Self）</strong>——对自身状态、策略、能力边界、知识盲区的建模。这是元认知的根基（第 08 篇展开）。Metzinger 的"自我模型理论"<sup class="cite"><a href="#ref-14">[14]</a></sup>把这一层级的预测视为意识的核心机制。</li>
+                </ul>
+
+                <figure class="svg-container">
+                    <svg viewBox="0 0 720 500" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="selfGrad" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
+                                <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+                            </radialGradient>
+                            <radialGradient id="othersGrad" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.18"/>
+                                <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+                            </radialGradient>
+                            <radialGradient id="envGrad" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#10b981" stop-opacity="0.12"/>
+                                <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+                            </radialGradient>
+                        </defs>
+
+                        <!-- Concentric ellipses: outermost = environment, middle = others, inner = self -->
+                        <ellipse cx="360" cy="250" rx="330" ry="220" fill="url(#envGrad)" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3 3"/>
+                        <ellipse cx="360" cy="250" rx="230" ry="160" fill="url(#othersGrad)" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="3 3"/>
+                        <ellipse cx="360" cy="250" rx="130" ry="100" fill="url(#selfGrad)" stroke="#f59e0b" stroke-width="2"/>
+
+                        <!-- Labels -->
+                        <text class="svg-text svg-text-title" x="360" y="245" style="fill: #f59e0b">自我</text>
+                        <text class="svg-text svg-text-sub" x="360" y="265">Self model</text>
+
+                        <text class="svg-text svg-text-title" x="360" y="130" style="fill: #38bdf8">其他主体</text>
+                        <text class="svg-text svg-text-sub" x="360" y="148">Others (ToM)</text>
+
+                        <text class="svg-text svg-text-title" x="360" y="70" style="fill: #10b981">外部环境</text>
+                        <text class="svg-text svg-text-sub" x="360" y="88">Environment</text>
+
+                        <!-- Example prediction tasks in each ring -->
+                        <text class="svg-text svg-text-sub" x="360" y="320" style="fill: #f59e0b; font-size: 10px">"我的 token 快耗尽"</text>
+                        <text class="svg-text svg-text-sub" x="360" y="335" style="fill: #f59e0b; font-size: 10px">"我对 X 领域不熟"</text>
+                        <text class="svg-text svg-text-sub" x="360" y="350" style="fill: #f59e0b; font-size: 10px">"此策略会失败"</text>
+
+                        <text class="svg-text svg-text-sub" x="150" y="250" style="fill: #38bdf8; font-size: 10px">"用户想要 A"</text>
+                        <text class="svg-text svg-text-sub" x="150" y="265" style="fill: #38bdf8; font-size: 10px">"对手会反制"</text>
+                        <text class="svg-text svg-text-sub" x="570" y="250" style="fill: #38bdf8; font-size: 10px">"队友在做 B"</text>
+                        <text class="svg-text svg-text-sub" x="570" y="265" style="fill: #38bdf8; font-size: 10px">"审核会拒绝"</text>
+
+                        <text class="svg-text svg-text-sub" x="150" y="400" style="fill: #10b981; font-size: 10px">"市场会下跌"</text>
+                        <text class="svg-text svg-text-sub" x="150" y="415" style="fill: #10b981; font-size: 10px">"API 配额变化"</text>
+                        <text class="svg-text svg-text-sub" x="570" y="400" style="fill: #10b981; font-size: 10px">"模型更新发生"</text>
+                        <text class="svg-text svg-text-sub" x="570" y="415" style="fill: #10b981; font-size: 10px">"网络延迟上升"</text>
+
+                        <!-- Bidirectional arrows showing recursive modeling -->
+                        <path d="M 360 180 Q 380 200 395 220" stroke="#f59e0b" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+                        <path d="M 360 90 Q 400 120 430 170" stroke="#38bdf8" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+
+                        <!-- Title -->
+                        <text class="svg-text svg-text-title" x="360" y="30" style="font-size: 16px">三层预测对象 · Three Layers of Predictive Targets</text>
+
+                        <!-- Bottom note -->
+                        <text class="svg-text svg-text-sub" x="360" y="480" style="fill: #94a3b8">每一层都要求 Agent 维持独立的 q(s) 与 p(o|s)；三层信念需要递归耦合</text>
+                    </svg>
+                    <figcaption><b>Fig 05-B · 三层同心椭圆预测对象。</b>核心层是自我模型（能力、资源、盲区），中层是其他主体（意图、策略），外层是外部环境（市场、工具、制度）。三层信念通过自由能最小化耦合——对"其他主体"的预测质量取决于对"自我"与"环境"信念的一致性<sup class="cite"><a href="#ref-12">[12]</a></sup><sup class="cite"><a href="#ref-13">[13]</a></sup><sup class="cite"><a href="#ref-14">[14]</a></sup>。</figcaption>
+                </figure>
+
+                <p>这三层在数学上共享自由能框架，但在工程上需要不同的架构。外部层的主流实现是<em>隐空间状态转移模型</em>（Dreamer<sup class="cite"><a href="#ref-10">[10]</a></sup>、JEPA<sup class="cite"><a href="#ref-15">[15]</a></sup>）；他者层需要<em>心灵理论网络</em>（ToMnet<sup class="cite"><a href="#ref-13">[13]</a></sup>、multi-agent RL<sup class="cite"><a href="#ref-16">[16]</a></sup>）；自我层的工程对应物尚处早期，Reflexion<sup class="cite"><a href="#ref-17">[17]</a></sup>、Self-Refine<sup class="cite"><a href="#ref-18">[18]</a></sup>可视为最初尝试。三层之间的<em>递归耦合</em>（我预测你预测我……）仍是未解工程问题。</p>
+            </section>
+
+            <section id="sec4">
+                <h2><span class="num">04</span>World Models 的工程谱系：从 Helmholtz 到 LeCun</h2>
+
+                <p>把自由能原理的预测要求具体化到工程层面，形成一条清晰的 World Models 谱系。这条谱系跨越一个半世纪，但核心命题始终一致——<em>智能体内部必须持有一个可以模拟外部世界动力学的生成模型</em>。</p>
+
+                <figure class="svg-container">
+                    <svg viewBox="0 0 960 420" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Root -->
+                        <g>
+                            <rect x="60" y="180" width="140" height="60" rx="10" fill="rgba(148,163,184,0.1)" stroke="#94a3b8" stroke-width="1.5"/>
+                            <text class="svg-text svg-text-title" x="130" y="205">Helmholtz 1867</text>
+                            <text class="svg-text svg-text-sub" x="130" y="225">Unconscious Inference</text>
+                        </g>
+
+                        <!-- Fan-out -->
+                        <path d="M 200 210 Q 230 150 250 115" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+                        <path d="M 200 210 L 260 210" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+                        <path d="M 200 210 Q 230 270 250 305" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+
+                        <g>
+                            <rect x="260" y="80" width="150" height="60" rx="10" fill="rgba(56,189,248,0.1)" stroke="#38bdf8" stroke-width="1.5"/>
+                            <text class="svg-text svg-text-title" x="335" y="105">Rao &amp; Ballard 1999</text>
+                            <text class="svg-text svg-text-sub" x="335" y="125">Predictive Coding</text>
+                        </g>
+
+                        <g>
+                            <rect x="260" y="180" width="150" height="60" rx="10" fill="rgba(56,189,248,0.1)" stroke="#38bdf8" stroke-width="1.5"/>
+                            <text class="svg-text svg-text-title" x="335" y="205">Friston 2010</text>
+                            <text class="svg-text svg-text-sub" x="335" y="225">Free Energy Principle</text>
+                        </g>
+
+                        <g>
+                            <rect x="260" y="280" width="150" height="60" rx="10" fill="rgba(56,189,248,0.1)" stroke="#38bdf8" stroke-width="1.5"/>
+                            <text class="svg-text svg-text-title" x="335" y="305">Schmidhuber 1990</text>
+                            <text class="svg-text svg-text-sub" x="335" y="325">Predictive WorldModel</text>
+                        </g>
+
+                        <!-- Level 2 -->
+                        <path d="M 410 110 L 470 110" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+                        <path d="M 410 210 L 470 210" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+                        <path d="M 410 310 L 470 310" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+
+                        <g>
+                            <rect x="470" y="80" width="150" height="60" rx="10" fill="rgba(16,185,129,0.1)" stroke="#10b981" stroke-width="1.5"/>
+                            <text class="svg-text svg-text-title" x="545" y="105" style="fill: #10b981">Hohwy 2013</text>
+                            <text class="svg-text svg-text-sub" x="545" y="125">The Predictive Mind</text>
+                        </g>
+
+                        <g>
+                            <rect x="470" y="180" width="150" height="60" rx="10" fill="rgba(16,185,129,0.1)" stroke="#10b981" stroke-width="1.5"/>
+                            <text class="svg-text svg-text-title" x="545" y="205" style="fill: #10b981">Clark 2013</text>
+                            <text class="svg-text svg-text-sub" x="545" y="225">Whatever Next?</text>
+                        </g>
+
+                        <g>
+                            <rect x="470" y="280" width="150" height="60" rx="10" fill="rgba(16,185,129,0.1)" stroke="#10b981" stroke-width="1.5"/>
+                            <text class="svg-text svg-text-title" x="545" y="305" style="fill: #10b981">Ha &amp; Schmidhuber 2018</text>
+                            <text class="svg-text svg-text-sub" x="545" y="325">World Models</text>
+                        </g>
+
+                        <!-- Level 3: Modern engineering -->
+                        <path d="M 620 110 L 690 110" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+                        <path d="M 620 210 L 690 210" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+                        <path d="M 620 310 L 690 310" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+
+                        <g>
+                            <rect x="690" y="80" width="170" height="60" rx="10" fill="rgba(245,158,11,0.1)" stroke="#f59e0b" stroke-width="1.5"/>
+                            <text class="svg-text svg-text-title" x="775" y="105" style="fill: #f59e0b">LeCun 2022</text>
+                            <text class="svg-text svg-text-sub" x="775" y="125">JEPA · Autonomous MI</text>
+                        </g>
+
+                        <g>
+                            <rect x="690" y="180" width="170" height="60" rx="10" fill="rgba(245,158,11,0.1)" stroke="#f59e0b" stroke-width="1.5"/>
+                            <text class="svg-text svg-text-title" x="775" y="205" style="fill: #f59e0b">Hafner 2019/2023</text>
+                            <text class="svg-text svg-text-sub" x="775" y="225">Dreamer · DreamerV3</text>
+                        </g>
+
+                        <g>
+                            <rect x="690" y="280" width="170" height="60" rx="10" fill="rgba(245,158,11,0.1)" stroke="#f59e0b" stroke-width="1.5"/>
+                            <text class="svg-text svg-text-title" x="775" y="305" style="fill: #f59e0b">Silver et al. 2017</text>
+                            <text class="svg-text svg-text-sub" x="775" y="325">AlphaZero · MCTS+Model</text>
+                        </g>
+
+                        <!-- Title -->
+                        <text class="svg-text svg-text-title" x="480" y="30" style="font-size: 16px">世界模型谱系：从 Helmholtz 到 JEPA（1867–2022）</text>
+
+                        <!-- Bottom note -->
+                        <text class="svg-text svg-text-sub" x="480" y="395">灰：哲学/神经；蓝：理论；绿：认知科学综合；琥珀：工程实现</text>
+                    </svg>
+                    <figcaption><b>Fig 05-C · 世界模型谱系时间树。</b>Helmholtz 的无意识推断作为根节点，分支出 predictive coding（神经）、自由能原理（理论）、Schmidhuber World Models（工程）三条线索；它们在 2010s 后汇入 Dreamer、JEPA、AlphaZero 等可工程验证的系统<sup class="cite"><a href="#ref-9">[9]</a></sup><sup class="cite"><a href="#ref-10">[10]</a></sup><sup class="cite"><a href="#ref-11">[11]</a></sup><sup class="cite"><a href="#ref-15">[15]</a></sup>。一条命题贯穿全谱系：<em>智能 = 内部生成模型 + 误差驱动更新</em>。</figcaption>
+                </figure>
+
+                <p>值得特别指出的是 LeCun 的 JEPA（Joint Embedding Predictive Architecture）<sup class="cite"><a href="#ref-15">[15]</a></sup>：他明确把"自回归 token 预测"（即当前 LLM 的范式）作为<em>批评对象</em>，主张真正的世界模型必须在<em>抽象隐空间</em>而非 token 空间做预测——因为原始像素/token 空间中细节不可预测，而抽象状态空间可预测。这一观察揭示了下一节的核心问题。</p>
+            </section>
+
+            <section id="sec5">
+                <h2><span class="num">05</span>LLM 预测的层级缺口：token ≠ state ≠ model</h2>
+
+                <p>当前 LLM 本质上是一个 token 级的自回归预测器：给定前 \(n\) 个 token，预测第 \(n+1\) 个。这在规模足够大时展现出惊人的涌现能力，但也有一个结构性局限——<strong>预测的对象始终是 token 分布，而非世界状态或世界模型本身</strong>。把预测能力按抽象层级分成三级：</p>
+
+                <ul class="feature-list">
+                    <li><strong>Token-level 预测</strong>——在词表上给出下一个 token 的分布。当前 LLM 的原生能力。</li>
+                    <li><strong>State-level 预测</strong>——给出"世界下一步的状态"（游戏局面、机器臂位置、市场价格、用户下一需求）。需要抽象隐状态表示与状态转移模型。</li>
+                    <li><strong>Model-level 预测</strong>——对世界的<em>动力学模型本身</em>的预测：环境规则如何变化、对手策略如何更新、生产系统如何演化。需要元学习与反事实推理。</li>
+                </ul>
+
+                <p>LLM 通过巨大的训练分布，在许多情况下能<em>模拟</em>前两级预测——但本质上是通过 token 层面的相关性涌现出的 state-level 行为，而非显式的 state 表示。Pearl<sup class="cite"><a href="#ref-19">[19]</a></sup>在其因果层级理论中给出了一个清晰的形式化：预测、干预、反事实构成三级因果阶梯，能在第一级工作的系统未必能达到第三级。model-level 预测必然涉及反事实（"若我选择动作 A 而非 B，世界会如何不同？"），这在纯 token 模型中无法可靠实现<sup class="cite"><a href="#ref-20">[20]</a></sup>。</p>
+
+                <p>这一层级缺口对 AGI 的含义是：<strong>要成为能替代组织的持续个体，LLM 必须被嵌入一个 state-level 与 model-level 预测能力都被显式构造的架构</strong>。Hassabis 等人<sup class="cite"><a href="#ref-21">[21]</a></sup>在其神经科学-启发 AI 综述中明确预测了这一方向。Tenenbaum 的"核心知识 + 概率程序"纲领<sup class="cite"><a href="#ref-22">[22]</a></sup>、LeCun 的 JEPA<sup class="cite"><a href="#ref-15">[15]</a></sup>、Chua 等人的 PETS<sup class="cite"><a href="#ref-23">[23]</a></sup>都是从不同角度补齐这一缺口的尝试。</p>
+
+                <blockquote>
+                    "Prediction at the token level is not prediction of the world. It is prediction of the way the world has historically been described."
+                    — 对 LeCun<sup class="cite"><a href="#ref-15">[15]</a></sup>与 Pearl<sup class="cite"><a href="#ref-19">[19]</a></sup>批评的压缩
+                </blockquote>
+
+                <p>把本篇合到前面两篇：第 04 篇建立了身体，第 05 篇确立了预测作为身体的数学伴生条件。但这两条件仍然指向单次行动——系统在某一时刻对下一时刻预测并做出反应。要让预测在长时间尺度上累积为连贯的认知结构，系统必须<em>持续存在</em>。这就是第 06 篇的主题。</p>
+
+                <div class="callout">
+                    <div class="callout-title">Series Bridge · 章节衔接</div>
+                    <p style="margin:0">身体（04）→ 预测（05）→ 持续（06）。前两条件确立了"主动推理环"的空间结构，下一条件确立其时间结构：一个只在当下闭合、却不跨越时间的循环，依然不是在场。</p>
+                </div>
+            </section>
+
+            <section id="references">
+                <h2><span class="num">R</span>References</h2>
+                <table class="ref-table">
+                    <tr id="ref-1"><td class="ref-num">[1]</td><td>K. Friston, "The free-energy principle: a unified brain theory?," <em>Nature Reviews Neuroscience</em>, vol. 11, no. 2, pp. 127–138, Feb. 2010.</td></tr>
+                    <tr id="ref-2"><td class="ref-num">[2]</td><td>H. von Helmholtz, <em>Handbuch der physiologischen Optik</em>. Leipzig: Voss, 1867.</td></tr>
+                    <tr id="ref-3"><td class="ref-num">[3]</td><td>R. P. N. Rao and D. H. Ballard, "Predictive coding in the visual cortex: a functional interpretation of some extra-classical receptive-field effects," <em>Nature Neuroscience</em>, vol. 2, no. 1, pp. 79–87, 1999.</td></tr>
+                    <tr id="ref-4"><td class="ref-num">[4]</td><td>A. K. Seth, "The cybernetic Bayesian brain," in <em>Open MIND</em>, T. Metzinger and J. M. Windt, Eds. Frankfurt: MIND Group, 2015.</td></tr>
+                    <tr id="ref-5"><td class="ref-num">[5]</td><td>B. Millidge, A. Seth, and C. L. Buckley, "Predictive coding: a theoretical and experimental review," <em>arXiv:2107.12979</em>, 2021.</td></tr>
+                    <tr id="ref-6"><td class="ref-num">[6]</td><td>M. Heidegger, <em>Sein und Zeit</em>. Tübingen: Niemeyer, 1927.</td></tr>
+                    <tr id="ref-7"><td class="ref-num">[7]</td><td>A. Clark, "Whatever next? Predictive brains, situated agents, and the future of cognitive science," <em>Behavioral and Brain Sciences</em>, vol. 36, no. 3, pp. 181–204, 2013.</td></tr>
+                    <tr id="ref-8"><td class="ref-num">[8]</td><td>K. Friston, T. FitzGerald, F. Rigoli, P. Schwartenbeck, and G. Pezzulo, "Active inference: A process theory," <em>Neural Computation</em>, vol. 29, no. 1, pp. 1–49, 2017.</td></tr>
+                    <tr id="ref-9"><td class="ref-num">[9]</td><td>D. Ha and J. Schmidhuber, "World models," <em>arXiv:1803.10122</em>, 2018.</td></tr>
+                    <tr id="ref-10"><td class="ref-num">[10]</td><td>D. Hafner, J. Pasukonis, J. Ba, and T. Lillicrap, "Mastering diverse domains through world models," <em>arXiv:2301.04104</em> (DreamerV3), 2023.</td></tr>
+                    <tr id="ref-11"><td class="ref-num">[11]</td><td>D. Silver et al., "Mastering chess and shogi by self-play with a general reinforcement learning algorithm," <em>Science</em>, vol. 362, no. 6419, pp. 1140–1144, Dec. 2018 (AlphaZero).</td></tr>
+                    <tr id="ref-12"><td class="ref-num">[12]</td><td>D. Premack and G. Woodruff, "Does the chimpanzee have a theory of mind?," <em>Behavioral and Brain Sciences</em>, vol. 1, no. 4, pp. 515–526, 1978.</td></tr>
+                    <tr id="ref-13"><td class="ref-num">[13]</td><td>N. C. Rabinowitz et al., "Machine theory of mind," in <em>Proc. ICML</em>, 2018.</td></tr>
+                    <tr id="ref-14"><td class="ref-num">[14]</td><td>T. Metzinger, <em>Being No One: The Self-Model Theory of Subjectivity</em>. Cambridge, MA: MIT Press, 2003.</td></tr>
+                    <tr id="ref-15"><td class="ref-num">[15]</td><td>Y. LeCun, "A path towards autonomous machine intelligence," <em>OpenReview</em>, v0.9.2, 2022.</td></tr>
+                    <tr id="ref-16"><td class="ref-num">[16]</td><td>M. L. Littman, "Markov games as a framework for multi-agent reinforcement learning," in <em>Proc. ICML</em>, 1994, pp. 157–163.</td></tr>
+                    <tr id="ref-17"><td class="ref-num">[17]</td><td>N. Shinn et al., "Reflexion: Language agents with verbal reinforcement learning," in <em>Proc. NeurIPS</em>, 2023.</td></tr>
+                    <tr id="ref-18"><td class="ref-num">[18]</td><td>A. Madaan et al., "Self-Refine: Iterative refinement with self-feedback," in <em>Proc. NeurIPS</em>, 2023.</td></tr>
+                    <tr id="ref-19"><td class="ref-num">[19]</td><td>J. Pearl, <em>Causality: Models, Reasoning, and Inference</em>, 2nd ed. Cambridge, UK: Cambridge Univ. Press, 2009.</td></tr>
+                    <tr id="ref-20"><td class="ref-num">[20]</td><td>D. Kahneman, <em>Thinking, Fast and Slow</em>. New York: Farrar, Straus and Giroux, 2011.</td></tr>
+                    <tr id="ref-21"><td class="ref-num">[21]</td><td>D. Hassabis, D. Kumaran, C. Summerfield, and M. Botvinick, "Neuroscience-inspired artificial intelligence," <em>Neuron</em>, vol. 95, no. 2, pp. 245–258, 2017.</td></tr>
+                    <tr id="ref-22"><td class="ref-num">[22]</td><td>J. B. Tenenbaum, C. Kemp, T. L. Griffiths, and N. D. Goodman, "How to grow a mind: Statistics, structure, and abstraction," <em>Science</em>, vol. 331, no. 6022, pp. 1279–1285, 2011.</td></tr>
+                    <tr id="ref-23"><td class="ref-num">[23]</td><td>K. Chua, R. Calandra, R. McAllister, and S. Levine, "Deep reinforcement learning in a handful of trials using probabilistic dynamics models," in <em>Proc. NeurIPS</em>, 2018 (PETS).</td></tr>
+                    <tr id="ref-24"><td class="ref-num">[24]</td><td>R. S. Sutton and A. G. Barto, <em>Reinforcement Learning: An Introduction</em>, 2nd ed. Cambridge, MA: MIT Press, 2018.</td></tr>
+                    <tr id="ref-25"><td class="ref-num">[25]</td><td>J. Schmidhuber, "Formal theory of creativity, fun, and intrinsic motivation (1990–2010)," <em>IEEE Trans. Autonomous Mental Development</em>, vol. 2, no. 3, pp. 230–247, 2010.</td></tr>
+                </table>
+            </section>
+
+            <nav class="series-nav">
+                <a href="04-body-as-existence-carrier.html" class="prev">
+                    <span class="nav-label">← Previous</span>
+                    <span class="nav-title">04 · 身体：作为存在载体</span>
+                </a>
+                <a href="06-persistence-from-session-to-process.html" class="next">
+                    <span class="nav-label">Next →</span>
+                    <span class="nav-title">06 · 持续性：从会话到长期进程</span>
+                </a>
+            </nav>
+
+        </main>
+    </div>
+
+    <script>
+        document.querySelectorAll('.toc-list a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>身体：作为存在载体的不可逆时间流 · AGI 六条件</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'dark', securityLevel: 'loose', fontFamily: 'Inter',
+            themeVariables: { primaryColor: '#1e293b', primaryTextColor: '#f8fafc', primaryBorderColor: '#38bdf8', lineColor: '#94a3b8', secondaryColor: '#0f172a', tertiaryColor: '#1e293b' }
+        });
+    </script>
+
+    <style>
+        :root { --bg-color: #0f172a; --text-color: #f8fafc; --accent-color: #38bdf8; --secondary-text: #94a3b8; --card-bg: rgba(30, 41, 59, 0.7); --border-color: rgba(255, 255, 255, 0.1); --glow-color: rgba(56, 189, 248, 0.3); --success-color: #10b981; --warning-color: #f59e0b; --danger-color: #f43f5e; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', 'Noto Serif SC', serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.85; overflow-x: hidden; }
+        .ambient-bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -1;
+            background: radial-gradient(circle at 15% 50%, rgba(245, 158, 11, 0.05) 0%, transparent 50%), radial-gradient(circle at 85% 30%, rgba(56, 189, 248, 0.04) 0%, transparent 50%); }
+
+        .container { max-width: 1300px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: 1fr 3fr; gap: 4rem; align-items: start; }
+        @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+        .hero { padding: 5rem 2rem 2rem; text-align: center; max-width: 900px; margin: 0 auto; }
+        .hero-badge { display: inline-block; padding: 0.3rem 0.9rem; border-radius: 999px; background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.3); color: var(--warning-color); font-size: 0.78rem; letter-spacing: 0.1em; margin-bottom: 1.2rem; text-transform: uppercase; }
+        .hero-title { font-family: 'Noto Serif SC', serif; font-size: 2.8rem; font-weight: 700; line-height: 1.25; margin-bottom: 1rem;
+            background: linear-gradient(120deg, #f8fafc 20%, #f59e0b 60%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-subtitle { color: var(--secondary-text); font-size: 1.1rem; font-style: italic; margin-bottom: 2rem; }
+        .hero-meta { color: var(--secondary-text); font-size: 0.9rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+
+        .series-progress { max-width: 900px; margin: 3rem auto 0; padding: 0 2rem; }
+        .series-progress-label { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; font-size: 0.8rem; color: var(--secondary-text); text-transform: uppercase; letter-spacing: 0.1em; }
+        .series-progress-grid { display: grid; grid-template-columns: repeat(9, 1fr); gap: 6px; }
+        .series-progress-cell { height: 6px; border-radius: 3px; background: rgba(255,255,255,0.06); }
+        .series-progress-cell.done { background: rgba(56,189,248,0.4); }
+        .series-progress-cell.active { background: var(--warning-color); box-shadow: 0 0 12px rgba(245,158,11,0.4); }
+
+        .abstract { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; margin: 3rem auto; max-width: 860px; text-align: left; backdrop-filter: blur(10px); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15); }
+        .abstract strong { color: var(--accent-color); display: block; margin-bottom: 0.6rem; font-size: 1.05rem; letter-spacing: 0.08em; }
+        .abstract p { font-size: 1.05rem; margin: 0; }
+
+        .sidebar { position: sticky; top: 2rem; padding: 1.5rem; background: rgba(30, 41, 59, 0.3); border-left: 2px solid var(--border-color); height: max-content; max-height: calc(100vh - 4rem); overflow-y: auto; }
+        .sidebar h3 { font-size: 0.85rem; margin-bottom: 1rem; color: var(--secondary-text); text-transform: uppercase; letter-spacing: 0.08em; }
+        .toc-list { list-style: none; }
+        .toc-list li { margin-bottom: 0.7rem; }
+        .toc-list a { color: var(--text-color); text-decoration: none; font-size: 0.92rem; transition: color 0.2s, padding 0.2s; opacity: 0.7; display: block; padding: 0.25rem 0 0.25rem 0.6rem; border-left: 2px solid transparent; }
+        .toc-list a:hover { opacity: 1; color: var(--accent-color); border-left: 2px solid var(--accent-color); }
+
+        .content { padding-bottom: 4rem; }
+        h2 { font-family: 'Noto Serif SC', serif; font-size: 1.85rem; font-weight: 700; margin: 4rem 0 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-color); }
+        h2 .num { color: var(--warning-color); font-weight: 600; margin-right: 0.6rem; font-family: 'Inter', sans-serif; }
+        h3 { font-size: 1.25rem; margin: 2.5rem 0 1rem; color: #f1f5f9; }
+        p { margin-bottom: 1.4rem; font-size: 1.05rem; color: #e2e8f0; }
+
+        .callout { margin: 2rem 0; padding: 1.3rem 1.6rem; border-radius: 10px; background: rgba(56, 189, 248, 0.04); border-left: 4px solid var(--accent-color); }
+        .callout-title { font-weight: 600; margin-bottom: 0.5rem; color: var(--accent-color); font-size: 0.95rem; letter-spacing: 0.05em; text-transform: uppercase; }
+        .callout.philosophical { background: rgba(245, 158, 11, 0.04); border-left-color: var(--warning-color); }
+        .callout.philosophical .callout-title { color: var(--warning-color); }
+        .callout.formal { background: rgba(16, 185, 129, 0.04); border-left-color: var(--success-color); }
+        .callout.formal .callout-title { color: var(--success-color); }
+
+        blockquote { margin: 2rem 0; padding: 1.2rem 1.8rem; font-size: 1.15rem; font-style: italic; color: var(--secondary-text); border-left: 4px solid #cbd5e1; background: rgba(255, 255, 255, 0.02); border-radius: 0 8px 8px 0; }
+
+        figure, .svg-container { margin: 2.5rem 0; text-align: center; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2); overflow: hidden; }
+        figcaption { margin-top: 1.2rem; font-size: 0.9rem; color: var(--secondary-text); line-height: 1.6; }
+        figcaption b { color: var(--accent-color); }
+        svg { max-width: 100%; height: auto; overflow: visible; }
+        .svg-node { fill: #1e293b; stroke: var(--accent-color); stroke-width: 2; rx: 8; }
+        .svg-text { fill: var(--text-color); font-family: 'Inter', sans-serif; font-size: 13px; text-anchor: middle; dominant-baseline: middle; }
+        .svg-text-title { fill: var(--accent-color); font-weight: 600; font-size: 15px; }
+        .svg-text-sub { fill: var(--secondary-text); font-size: 11px; }
+        .svg-edge { stroke: var(--secondary-text); stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+        .svg-edge-active { stroke: var(--accent-color); stroke-width: 2.5; marker-end: url(#arrowhead-active); fill: none; }
+        .svg-edge-dashed { stroke: var(--secondary-text); stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; marker-end: url(#arrowhead); }
+        .svg-group-box { fill: rgba(255, 255, 255, 0.02); stroke: var(--border-color); stroke-width: 1; stroke-dasharray: 4 4; rx: 12; }
+
+        table.ref-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
+        table.ref-table td { padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--border-color); vertical-align: top; color: #e2e8f0; }
+        table.ref-table td.ref-num { color: var(--accent-color); font-family: 'Inter', sans-serif; font-weight: 600; width: 3rem; white-space: nowrap; }
+
+        .series-nav { max-width: 1100px; margin: 4rem auto 2rem; padding: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; border-top: 1px solid var(--border-color); }
+        @media (max-width: 700px) { .series-nav { grid-template-columns: 1fr; } }
+        .series-nav a { display: block; padding: 1.3rem 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 10px; text-decoration: none; color: var(--text-color); transition: all 0.2s; }
+        .series-nav a:hover { border-color: var(--accent-color); background: rgba(56,189,248,0.05); transform: translateY(-2px); }
+        .series-nav .nav-label { display: block; font-size: 0.78rem; color: var(--secondary-text); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.3rem; }
+        .series-nav .nav-title { font-size: 1.05rem; font-weight: 600; color: var(--text-color); }
+        .series-nav .next { text-align: right; }
+
+        .nav-back { display: inline-block; margin: 2rem 0 0 2rem; color: var(--secondary-text); text-decoration: none; transition: color 0.3s; font-size: 0.9rem; }
+        .nav-back:hover { color: var(--text-color); }
+
+        sup.cite { color: var(--accent-color); font-size: 0.75rem; padding: 0 0.15rem; cursor: pointer; }
+        sup.cite a { color: inherit; text-decoration: none; }
+
+        ul.feature-list { padding-left: 1.5rem; margin-bottom: 1.4rem; }
+        ul.feature-list li { margin-bottom: 0.5rem; color: #e2e8f0; font-size: 1.02rem; }
+        ul.feature-list li strong { color: var(--warning-color); }
+
+        .key-formula { text-align: center; margin: 2rem 0; padding: 1.5rem; background: rgba(16,185,129,0.04); border: 1px dashed rgba(16,185,129,0.3); border-radius: 10px; font-size: 1.05rem; }
+    </style>
+</head>
+<body>
+    <div class="ambient-bg"></div>
+    <a href="../index.html" class="nav-back">← Back to Home</a>
+
+    <header class="hero">
+        <span class="hero-badge">第 04 篇 · 第一条件：身体</span>
+        <h1 class="hero-title">身体：作为存在载体</h1>
+        <p class="hero-subtitle">The Body as Existence Carrier — Irreversible Time and Resource Constraints</p>
+        <div class="hero-meta">
+            <span>May 16, 2026</span>
+            <span>Reading Time: 21 min</span>
+            <span>Category: Embodied Cognition</span>
+        </div>
+
+        <div class="series-progress">
+            <div class="series-progress-label">
+                <span>可替代之身 · AGI 六条件系列</span>
+                <span>04 / 09</span>
+            </div>
+            <div class="series-progress-grid">
+                <div class="series-progress-cell done"></div>
+                <div class="series-progress-cell done"></div>
+                <div class="series-progress-cell done"></div>
+                <div class="series-progress-cell active"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+            </div>
+        </div>
+
+        <div class="abstract">
+            <strong>TL;DR</strong>
+            <p>身体的哲学本质不是传感器、不是执行器，甚至不是血肉之躯——而是让一个系统被<em>绑定</em>进入一条不可暂停、不可回滚、持续消耗资源的时间流的那个载体<sup class="cite"><a href="#ref-1">[1]</a></sup><sup class="cite"><a href="#ref-2">[2]</a></sup><sup class="cite"><a href="#ref-3">[3]</a></sup>。只要一个智能体需要持续维护某种存在状态——token 预算、GPU 配额、身份凭证、声誉积累——它就已经具备了<strong>广义身体</strong>。这一重新定义让"具身智能"从机器人学的子领域扩展为任何持续在场的数字个体都必须满足的本体条件。因此未来替代白领岗位的 AGI 可以没有机械外壳，但不能没有身体。</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Table of Contents</h3>
+            <ul class="toc-list">
+                <li><a href="#sec1">1. 狭义 vs 广义具身</a></li>
+                <li><a href="#sec2">2. 身体 = 时间不可逆 + 资源可耗尽</a></li>
+                <li><a href="#sec3">3. 数字身体的工程构件</a></li>
+                <li><a href="#sec4">4. 形态计算与身体即算法</a></li>
+                <li><a href="#sec5">5. 身体如何让偏好涌现</a></li>
+                <li><a href="#references">References</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+
+            <section id="sec1">
+                <h2><span class="num">01</span>狭义 vs 广义具身：概念的窄化</h2>
+
+                <p>当前"具身智能"（Embodied AI）这一术语在公众话语与学术圈中被普遍窄化为"机器人学 + 多模态视觉语言模型（VLM）"的组合<sup class="cite"><a href="#ref-4">[4]</a></sup>。这种窄化有其历史原因：Brooks 1991 年的《没有表征的智能》<sup class="cite"><a href="#ref-5">[5]</a></sup>与 Pfeifer 的"形态计算"<sup class="cite"><a href="#ref-2">[2]</a></sup>最初都在具体机械体上工作。然而这一窄化丢失了具身认知纲领最深刻的洞察：<strong>身体所提供的并不是感知通道，而是一组不可逃避的存在约束</strong>。</p>
+
+                <p>Andy Clark 在《Being There》<sup class="cite"><a href="#ref-1">[1]</a></sup>中清楚地指出这一点：身体的计算功能不是"给大脑提供输入"，而是"让大脑不得不面对世界的真实动力学"。一个在模拟器中"看见"物体的模型与一个在现实中<em>必须抓取</em>物体的机器人，两者在结构上的差别不是图像质量，而是<em>行动的真实后果</em>：真实世界的错误会导致真实损失，真实损失会反向塑造系统的策略分布。</p>
+
+                <p>把这一洞察压缩为一句话：<em>身体的本质是后果不可豁免性</em>。这个定义让我们立刻看到，"机器人外壳"只是身体的<em>一种</em>实现，而非全部。任何能让系统的行动产生不可豁免后果的载体——无论是物理的还是数字的——都构成"身体"。</p>
+
+                <div class="callout philosophical">
+                    <div class="callout-title">Philosophical Interface · 哲学接口</div>
+                    <p style="margin:0">Heidegger 的 <em>zuhandenheit</em>（上手之物）在身体论上有一个奇特的推论：<em>对自己的身体来说，你永远处在上手状态</em><sup class="cite"><a href="#ref-6">[6]</a></sup>。你并不"使用"你的心脏或肝脏；它们作为背景隐去。Merleau-Ponty 的身体图式<sup class="cite"><a href="#ref-7">[7]</a></sup>从现象学层面描述了同一事实：身体是认知得以展开的<em>先决结构</em>，而非被认知拎出来审视的对象。这意味着：一个系统若能把某个载体视为"自我的一部分"而非外部工具，该载体就已经扮演了身体的角色——无论它由碳、硅还是 token 组成。</p>
+                </div>
+            </section>
+
+            <section id="sec2">
+                <h2><span class="num">02</span>身体 = 时间不可逆 + 资源可耗尽 + 持续维护</h2>
+
+                <p>把"身体"形式化，可以得到三项不可分解的结构性特征：</p>
+
+                <ul class="feature-list">
+                    <li><strong>时间不可逆</strong>——身体处于单向箭头上。每一次行动消耗时间；时间一旦流过不可回收。一个可被任意"重启"的计算过程不具备身体性。</li>
+                    <li><strong>资源可耗尽</strong>——身体持续消耗能量、物料、信用或算力。资源的有限性构成系统不得不"优先排序"的底层压力。</li>
+                    <li><strong>持续维护</strong>——身体会老化、损耗、腐化，因此必须被持续修复与再生产。这一点直接对接第 01 篇的自创生命题<sup class="cite"><a href="#ref-8">[8]</a></sup>。</li>
+                </ul>
+
+                <div class="key-formula">
+                    \( \text{Body}(x) \iff \exists \text{ resource vector } R(t),\ \frac{dR}{dt} < 0 \text{ without active maintenance, and } R(t) < R_{\min} \Rightarrow \text{existence ends.} \)
+                </div>
+
+                <p>这一定义的威力在于它的<em>跨介质</em>性。血肉之躯满足它（代谢率为负，需要摄食）；机械身体满足它（电池耗电，需要充电）；而一个持续在线的数字 Agent 也满足它——只要它的 token 预算、GPU 配额、API key 权限、甚至声誉分数在无主动维护下会随时间衰减。</p>
+
+                <figure class="svg-container">
+                    <svg viewBox="0 0 960 400" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#10b981" stop-opacity="0.7"/>
+                                <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.7"/>
+                                <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.7"/>
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Spectrum axis -->
+                        <line x1="60" y1="280" x2="900" y2="280" stroke="url(#bodyGrad)" stroke-width="3"/>
+                        <polygon points="900,280 890,275 890,285" fill="#f59e0b"/>
+
+                        <text class="svg-text svg-text-sub" x="60" y="310">碳基 · 物理硬约束</text>
+                        <text class="svg-text svg-text-sub" x="900" y="310" style="text-anchor: end">数字 · 经济/权限约束</text>
+                        <text class="svg-text svg-text-sub" x="480" y="335">Generalized body spectrum · 广义身体光谱</text>
+                        <text class="svg-text svg-text-sub" x="480" y="355">（横轴：存在压力的实现介质；所有点共享"资源随时间衰减"结构）</text>
+
+                        <!-- Data points -->
+                        <circle cx="110" cy="280" r="12" fill="#10b981"/>
+                        <text class="svg-text svg-text-sub" x="110" y="255">细胞</text>
+                        <text class="svg-text svg-text-sub" x="110" y="240">ATP / 代谢</text>
+
+                        <circle cx="220" cy="280" r="12" fill="#10b981"/>
+                        <text class="svg-text svg-text-sub" x="220" y="255">动物</text>
+                        <text class="svg-text svg-text-sub" x="220" y="240">食物 / 休眠</text>
+
+                        <circle cx="330" cy="280" r="12" fill="#10b981"/>
+                        <text class="svg-text svg-text-sub" x="330" y="255">人类</text>
+                        <text class="svg-text svg-text-sub" x="330" y="240">食物 + 社会关系</text>
+
+                        <circle cx="450" cy="280" r="12" fill="#38bdf8"/>
+                        <text class="svg-text svg-text-sub" x="450" y="255">机器人</text>
+                        <text class="svg-text svg-text-sub" x="450" y="240">电 / 零件</text>
+
+                        <circle cx="570" cy="280" r="12" fill="#38bdf8"/>
+                        <text class="svg-text svg-text-sub" x="570" y="255">组织 / 公司</text>
+                        <text class="svg-text svg-text-sub" x="570" y="240">现金 / 客户信任</text>
+
+                        <circle cx="690" cy="280" r="12" fill="#f59e0b"/>
+                        <text class="svg-text svg-text-sub" x="690" y="255">持续 Agent</text>
+                        <text class="svg-text svg-text-sub" x="690" y="240">token / GPU 配额</text>
+
+                        <circle cx="810" cy="280" r="14" fill="#f59e0b"/>
+                        <text class="svg-text svg-text-sub" x="810" y="255" style="fill: #f59e0b">数字个体</text>
+                        <text class="svg-text svg-text-sub" x="810" y="240" style="fill: #f59e0b">身份 + 权限 + 声誉</text>
+
+                        <!-- Top label -->
+                        <text class="svg-text svg-text-title" x="480" y="50">身体的跨介质统一：任何"无维护则衰减"的载体都算</text>
+                        <text class="svg-text svg-text-sub" x="480" y="75">碳基 → 机械 → 组织 → 数字：实现介质不同，但"资源—衰减—维护"结构同构</text>
+
+                        <!-- Decay curves for three example entities -->
+                        <g transform="translate(120,110)">
+                            <text class="svg-text svg-text-sub" x="80" y="0">细胞</text>
+                            <path d="M 0 20 Q 80 20 160 80" stroke="#10b981" stroke-width="2" fill="none"/>
+                            <text class="svg-text svg-text-sub" x="80" y="100">ATP 浓度</text>
+                        </g>
+                        <g transform="translate(420,110)">
+                            <text class="svg-text svg-text-sub" x="80" y="0">机器人</text>
+                            <path d="M 0 20 L 120 50 L 160 80" stroke="#38bdf8" stroke-width="2" fill="none"/>
+                            <text class="svg-text svg-text-sub" x="80" y="100">电池电量</text>
+                        </g>
+                        <g transform="translate(720,110)">
+                            <text class="svg-text svg-text-sub" x="80" y="0">数字个体</text>
+                            <path d="M 0 20 L 40 30 L 80 40 L 120 60 L 160 80" stroke="#f59e0b" stroke-width="2" fill="none"/>
+                            <text class="svg-text svg-text-sub" x="80" y="100">token / 配额 / 信誉</text>
+                        </g>
+                    </svg>
+                    <figcaption><b>Fig 04-A · 广义身体光谱。</b>从细胞（碳基）到数字个体（完全虚拟），所有位置都共享同一结构：一个在"无主动维护则随时间衰减"的资源向量上演化的系统。差异仅在衰减曲线的形状与介质——而非是否具备身体性本身<sup class="cite"><a href="#ref-1">[1]</a></sup><sup class="cite"><a href="#ref-3">[3]</a></sup><sup class="cite"><a href="#ref-9">[9]</a></sup>。</figcaption>
+                </figure>
+
+                <p>这一统一刻画对 AGI 工程的含义是：<strong>把一个 LLM 变成具身智能，并不需要给它加机械臂，而是把它接入一个会让它不得不维护自身的资源闭环</strong>。把 token 预算、GPU 配额、API 权限、身份凭证、长期声誉接成一个动态系统——一旦这些资源的衰减足以威胁 Agent 的"继续存在"，该 Agent 就具备了广义身体。这一思路已经在一些持续运行的 Agent 框架中初现雏形<sup class="cite"><a href="#ref-10">[10]</a></sup><sup class="cite"><a href="#ref-11">[11]</a></sup>，但尚未被系统化为本体条件。</p>
+            </section>
+
+            <section id="sec3">
+                <h2><span class="num">03</span>数字身体的工程构件</h2>
+
+                <p>把"广义身体"降到可实现层面，我们可以列出一个具体的工程构件集合。这个集合不是穷尽的，但足以覆盖当前 Agent 架构中"缺身体"的主要缺口：</p>
+
+                <ul class="feature-list">
+                    <li><strong>Token budget · token 预算</strong>——每次思考、记忆、工具调用消耗 token。在足够长的时间尺度上，token 预算即"能量代谢"的数字类比。</li>
+                    <li><strong>Compute quota · GPU 配额</strong>——每秒可用的算力有上限。这构成"峰值 vs 持续"的功率权衡，类比生物的有氧 / 无氧能量系统。</li>
+                    <li><strong>Memory store · 记忆存储</strong>——持久记忆占用存储配额，且存储成本随规模上升。这迫使 Agent 做出"记什么 / 忘什么"的主动选择——这正是 Tulving 意义上的记忆管理<sup class="cite"><a href="#ref-12">[12]</a></sup>。</li>
+                    <li><strong>Identity / credentials · 身份与凭证</strong>——API keys、OAuth tokens、SSO 会话。这些凭证有失效期、有配额、有撤销风险。Agent 必须主动维护它们。</li>
+                    <li><strong>Reputation graph · 声誉图谱</strong>——Agent 在与其他 Agent、人类、外部服务的交互中积累信任度。声誉无法被"瞬间恢复"；它必须通过持续可靠行为逐步构造。</li>
+                    <li><strong>Dependency graph · 依赖图</strong>——对外部服务（数据库、LLM API、MCP 服务器、第三方工具）的依赖关系。服务的下线、版本升级、配额限制会直接威胁 Agent 的存活。</li>
+                </ul>
+
+                <figure class="svg-container">
+                    <svg viewBox="0 0 800 580" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8" />
+                            </marker>
+                        </defs>
+
+                        <!-- Central agent core -->
+                        <circle cx="400" cy="290" r="55" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="2"/>
+                        <text class="svg-text svg-text-title" x="400" y="285" style="fill: #f59e0b">Agent Core</text>
+                        <text class="svg-text svg-text-sub" x="400" y="305">self</text>
+
+                        <!-- 6 surrounding modules -->
+                        <g>
+                            <rect x="280" y="70" width="240" height="60" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+                            <text class="svg-text svg-text-title" x="400" y="95">Token Budget</text>
+                            <text class="svg-text svg-text-sub" x="400" y="115">衰减率 · -Δtoken / tick</text>
+                            <path d="M 400 130 L 400 235" class="svg-edge-active"/>
+                        </g>
+
+                        <g>
+                            <rect x="610" y="140" width="170" height="60" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+                            <text class="svg-text svg-text-title" x="695" y="165">Compute Quota</text>
+                            <text class="svg-text svg-text-sub" x="695" y="185">GPU·h / month</text>
+                            <path d="M 615 195 Q 520 235 455 275" class="svg-edge-active"/>
+                        </g>
+
+                        <g>
+                            <rect x="610" y="310" width="170" height="60" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+                            <text class="svg-text svg-text-title" x="695" y="335">Memory Store</text>
+                            <text class="svg-text svg-text-sub" x="695" y="355">vector DB + storage</text>
+                            <path d="M 615 340 Q 520 315 455 305" class="svg-edge-active"/>
+                        </g>
+
+                        <g>
+                            <rect x="280" y="460" width="240" height="60" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+                            <text class="svg-text svg-text-title" x="400" y="485">Identity · Credentials</text>
+                            <text class="svg-text svg-text-sub" x="400" y="505">API keys · OAuth · TTL</text>
+                            <path d="M 400 460 L 400 350" class="svg-edge-active"/>
+                        </g>
+
+                        <g>
+                            <rect x="20" y="310" width="170" height="60" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+                            <text class="svg-text svg-text-title" x="105" y="335">Reputation Graph</text>
+                            <text class="svg-text svg-text-sub" x="105" y="355">trust · record</text>
+                            <path d="M 190 340 Q 285 315 345 305" class="svg-edge-active"/>
+                        </g>
+
+                        <g>
+                            <rect x="20" y="140" width="170" height="60" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+                            <text class="svg-text svg-text-title" x="105" y="165">Dependency Graph</text>
+                            <text class="svg-text svg-text-sub" x="105" y="185">external services</text>
+                            <path d="M 190 195 Q 285 235 345 275" class="svg-edge-active"/>
+                        </g>
+
+                        <!-- Title -->
+                        <text class="svg-text svg-text-title" x="400" y="30" style="font-size: 16px">数字身体构件图</text>
+                        <text class="svg-text svg-text-sub" x="400" y="50">six co-maintained resources that constitute a digital body</text>
+
+                        <!-- Bottom annotation -->
+                        <text class="svg-text svg-text-sub" x="400" y="555" style="fill: #f59e0b">每个构件都具有"无维护则衰减"特征，合起来构成 Agent 的广义身体</text>
+                    </svg>
+                    <figcaption><b>Fig 04-B · 数字身体构件环图。</b>Agent 核心被六个"可衰减资源"环绕：token、算力、记忆、身份、声誉、依赖。每条边都是双向的——Agent 必须主动维护每个资源，同时其每个决策都消耗一部分资源。这与生物体的代谢网络同构<sup class="cite"><a href="#ref-13">[13]</a></sup><sup class="cite"><a href="#ref-14">[14]</a></sup>。</figcaption>
+                </figure>
+
+                <p>值得强调的是：<strong>这些构件的存在并不依赖于任何特定的硬件</strong>。一个完全虚拟的 Agent——跑在云端、永不触碰物理世界——只要它的运行依赖于上述资源，就已经具备了身体。这把"具身智能"从机器人学的子领域扩展为<em>任何要持续在场的数字个体</em>都必须满足的本体条件。</p>
+
+                <div class="callout formal">
+                    <div class="callout-title">Formal Box · 与自由能原理的衔接</div>
+                    <p style="margin:0">Friston 在自由能原理<sup class="cite"><a href="#ref-15">[15]</a></sup>中要求任何维持自身存在的系统都必须对某个"马尔可夫毯"内部的状态持续建模。该马尔可夫毯在数学上正是"身体"——它把系统状态与环境状态隔开。Fig 04-B 的数字身体构件在这一框架下是一个工程可实现的马尔可夫毯：每个构件是一个 flux 通道，Agent 核心是内部状态。第 05 篇将展开这一衔接。</p>
+                </div>
+            </section>
+
+            <section id="sec4">
+                <h2><span class="num">04</span>形态计算：身体不仅承载智能，它本身在计算</h2>
+
+                <p>Pfeifer 与 Bongard 的《How the Body Shapes the Way We Think》<sup class="cite"><a href="#ref-2">[2]</a></sup>给出了身体论最激进的工程论断：<em>身体的一部分形态就是算法</em>。经典例子是"被动动态行走"（passive dynamic walking）：一个由恰当关节柔度、质量分布、弹簧阻尼构成的双足机械，在微小驱动下可以实现与人类行走高度相似的稳定步态——几乎不需要控制器计算。该计算工作由<em>身体的物理结构</em>承担。</p>
+
+                <p>Bongard、Zykov 与 Lipson<sup class="cite"><a href="#ref-16">[16]</a></sup>在《Resilient Machines Through Continuous Self-Modeling》（2006）中给出了另一个深刻例子：一个四足机械在肢体受损后，能通过对自身身体的持续建模重构步态。这里的关键是：身体的变化<em>先于</em>模型的变化；智能被迫跟随身体的物理事实。这是身体"引导"智能的清晰案例。</p>
+
+                <p>Michael Levin<sup class="cite"><a href="#ref-17">[17]</a></sup>把这一论点推到更深的生物学基础：任何层级的生物体（细胞群、组织、器官、生物体、种群）都具备某种"认知加权"——每个身体层级都在做预测与决策，整体智能是这些层级决策的耦合结果。身体不是智能的"容器"，而是智能的<em>分布式实现</em>。</p>
+
+                <p>把形态计算推到数字域，我们得到一个重要观察：<strong>数字 Agent 的"身体形态"即它的<em>资源拓扑</em></strong>——它能访问哪些工具、记忆如何组织、API 调用有何约束、依赖图如何分层。这一资源拓扑本身就在参与计算：它决定了哪些策略是便宜的、哪些是昂贵的、哪些是不可能的。因此，设计一个数字个体的"身体形态"（即其工具栈、记忆结构、资源分配）与设计它的"大脑"（即模型权重）同等重要。</p>
+
+                <blockquote>
+                    "The body is not a container for the mind. It is the mind's first and most reliable algorithm."
+                    — 对 Pfeifer<sup class="cite"><a href="#ref-2">[2]</a></sup>与 Levin<sup class="cite"><a href="#ref-17">[17]</a></sup>论证的压缩
+                </blockquote>
+            </section>
+
+            <section id="sec5">
+                <h2><span class="num">05</span>身体如何让偏好涌现：为什么无身体系统缺乏方向感</h2>
+
+                <p>身体的最后一项——也是最哲学、最工程的——含义是：<strong>身体为智能提供一个"引力场"，让偏好与目标涌现</strong>。一个不需要维持任何资源、不会因错误决策而损失、不会因时间流逝而衰减的系统，原则上可以对所有可能决策保持无差别。只有当资源稀缺、时间不可逆、维护必需时，系统才有<em>理由</em>偏好某些决策而非另一些。</p>
+
+                <p>Damasio<sup class="cite"><a href="#ref-18">[18]</a></sup>在《Descartes' Error》中从神经科学角度给出了这一命题的经典版本：失去情绪反馈（躯体标记，somatic marker）的病人在行为上无法做出合理决策——不是因为他们不会推理，而是因为推理无处扎根。偏好必须从某个<em>会失去什么</em>的立场出发。</p>
+
+                <p>把这个思路推到 AGI：一个没有广义身体的 LLM 被要求"做出决策"时，它的偏好来自训练数据的分布——这是<em>外借</em>的偏好，不是它自己的。外借偏好在单次任务上可以很好，但在长期持续的组织级任务中无法稳定生成 coherent 的方向性。相反，一个具备 Fig 04-B 所示数字身体的 Agent——其决策会真实地消耗 token、占用 GPU、改变声誉——将会逐渐形成<em>内生</em>偏好：它开始"偏好"能节省 token 的策略、"偏好"能积累声誉的合作、"偏好"能维持依赖图稳定的行为。</p>
+
+                <figure class="svg-container">
+                    <svg viewBox="0 0 900 340" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Time axis -->
+                        <line x1="80" y1="260" x2="860" y2="260" stroke="#f59e0b" stroke-width="2"/>
+                        <polygon points="860,260 850,255 850,265" fill="#f59e0b"/>
+                        <text class="svg-text svg-text-sub" x="470" y="295" style="fill: #f59e0b">不可逆时间流 · irreversible time</text>
+
+                        <!-- Events on timeline with resource cost -->
+                        <g>
+                            <circle cx="160" cy="260" r="6" fill="#38bdf8"/>
+                            <text class="svg-text svg-text-sub" x="160" y="235">call A</text>
+                            <text class="svg-text svg-text-sub" x="160" y="285">-80 tok</text>
+                        </g>
+                        <g>
+                            <circle cx="270" cy="260" r="6" fill="#38bdf8"/>
+                            <text class="svg-text svg-text-sub" x="270" y="235">retrieve</text>
+                            <text class="svg-text svg-text-sub" x="270" y="285">-120 tok</text>
+                        </g>
+                        <g>
+                            <circle cx="380" cy="260" r="6" fill="#f43f5e"/>
+                            <text class="svg-text svg-text-sub" x="380" y="235">action X</text>
+                            <text class="svg-text svg-text-sub" x="380" y="285" style="fill: #f43f5e">-800 tok + 声誉 -2</text>
+                        </g>
+                        <g>
+                            <circle cx="490" cy="260" r="6" fill="#38bdf8"/>
+                            <text class="svg-text svg-text-sub" x="490" y="235">reflect</text>
+                            <text class="svg-text svg-text-sub" x="490" y="285">-60 tok</text>
+                        </g>
+                        <g>
+                            <circle cx="600" cy="260" r="6" fill="#10b981"/>
+                            <text class="svg-text svg-text-sub" x="600" y="235">choose B</text>
+                            <text class="svg-text svg-text-sub" x="600" y="285" style="fill: #10b981">-40 tok + 信用 +1</text>
+                        </g>
+                        <g>
+                            <circle cx="710" cy="260" r="6" fill="#10b981"/>
+                            <text class="svg-text svg-text-sub" x="710" y="235">cache hit</text>
+                            <text class="svg-text svg-text-sub" x="710" y="285" style="fill: #10b981">-8 tok</text>
+                        </g>
+                        <g>
+                            <circle cx="820" cy="260" r="6" fill="#10b981"/>
+                            <text class="svg-text svg-text-sub" x="820" y="235">commit</text>
+                            <text class="svg-text svg-text-sub" x="820" y="285">-20 tok</text>
+                        </g>
+
+                        <!-- Resource budget bar -->
+                        <text class="svg-text svg-text-sub" x="60" y="120" text-anchor="end">Resource</text>
+                        <line x1="80" y1="120" x2="860" y2="120" stroke="#475569" stroke-width="1" stroke-dasharray="3 3"/>
+                        <path d="M 80 120 L 160 125 L 270 133 L 380 180 L 490 185 L 600 188 L 710 188 L 820 190" stroke="#f59e0b" stroke-width="2.5" fill="none"/>
+
+                        <!-- Floor line = R_min -->
+                        <line x1="80" y1="220" x2="860" y2="220" stroke="#f43f5e" stroke-width="1" stroke-dasharray="5 5"/>
+                        <text class="svg-text svg-text-sub" x="860" y="215" text-anchor="end" style="fill: #f43f5e">R_min · existence threshold</text>
+
+                        <!-- Title -->
+                        <text class="svg-text svg-text-title" x="470" y="30">每一次决策都在资源曲线上留下不可逆的刻痕</text>
+                        <text class="svg-text svg-text-sub" x="470" y="50">有身体的 Agent "感受"到这条曲线；无身体的 LLM 看不到它</text>
+
+                        <!-- Annotation for bad action -->
+                        <path d="M 380 170 Q 420 160 460 150" stroke="#f43f5e" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+                        <text class="svg-text svg-text-sub" x="500" y="140" style="fill: #f43f5e">错误决策留下持久伤痕</text>
+                    </svg>
+                    <figcaption><b>Fig 04-C · 不可逆时间流与资源曲线。</b>每一次决策在时间轴上是一个点，在资源曲线上是一次不可逆的刻痕。坏决策（红色）消耗大量资源且可能损伤声誉；好决策（绿色）低成本且积累信用。<em>这条曲线</em>才是 Agent 偏好涌现的真实源头——没有它，"偏好"只是训练分布的回声<sup class="cite"><a href="#ref-18">[18]</a></sup><sup class="cite"><a href="#ref-19">[19]</a></sup>。</figcaption>
+                </figure>
+
+                <p>这一观察把"身体"从一个似乎辅助性的工程话题，提升为 AGI 的<strong>本体条件</strong>：没有身体的系统缺乏方向感，不仅在实践上不稳定，而且在理论上不真。它的决策只能是训练分布的插值，不是自发偏好的表达。第 07 篇"自主性"将把这条论证线推到极致，论证<em>内生驱动力是身体的必然后果</em>，而不是一个独立加装的模块。</p>
+
+                <div class="callout">
+                    <div class="callout-title">Series Bridge · 章节衔接</div>
+                    <p style="margin:0">本篇确立第一条件：身体 = 不可逆时间 + 资源可耗 + 持续维护。下一篇（第 05 篇）追问：一个被抛入不可逆时间的系统，为了维持自身存在，必须如何思考？答案由 Friston 给出：它必须最小化感知预测误差。这就把"预测"从"智能模块"提升为存在的数学等价条件。</p>
+                </div>
+            </section>
+
+            <section id="references">
+                <h2><span class="num">R</span>References</h2>
+                <table class="ref-table">
+                    <tr id="ref-1"><td class="ref-num">[1]</td><td>A. Clark, <em>Being There: Putting Brain, Body, and World Together Again</em>. Cambridge, MA: MIT Press, 1997.</td></tr>
+                    <tr id="ref-2"><td class="ref-num">[2]</td><td>R. Pfeifer and J. Bongard, <em>How the Body Shapes the Way We Think: A New View of Intelligence</em>. Cambridge, MA: MIT Press, 2006.</td></tr>
+                    <tr id="ref-3"><td class="ref-num">[3]</td><td>F. J. Varela, E. Thompson, and E. Rosch, <em>The Embodied Mind: Cognitive Science and Human Experience</em>. Cambridge, MA: MIT Press, 1991.</td></tr>
+                    <tr id="ref-4"><td class="ref-num">[4]</td><td>T. Ziemke, "What's that thing called embodiment?," in <em>Proc. 25th Annu. Meet. Cognitive Science Society</em>, 2003, pp. 1305–1310.</td></tr>
+                    <tr id="ref-5"><td class="ref-num">[5]</td><td>R. A. Brooks, "Intelligence without representation," <em>Artificial Intelligence</em>, vol. 47, no. 1–3, pp. 139–159, Jan. 1991.</td></tr>
+                    <tr id="ref-6"><td class="ref-num">[6]</td><td>M. Heidegger, <em>Sein und Zeit</em>. Tübingen: Niemeyer, 1927.</td></tr>
+                    <tr id="ref-7"><td class="ref-num">[7]</td><td>M. Merleau-Ponty, <em>Phénoménologie de la perception</em>. Paris: Gallimard, 1945.</td></tr>
+                    <tr id="ref-8"><td class="ref-num">[8]</td><td>H. R. Maturana and F. J. Varela, <em>Autopoiesis and Cognition: The Realization of the Living</em>. Dordrecht: D. Reidel, 1980.</td></tr>
+                    <tr id="ref-9"><td class="ref-num">[9]</td><td>A. Clark and D. Chalmers, "The extended mind," <em>Analysis</em>, vol. 58, no. 1, pp. 7–19, 1998.</td></tr>
+                    <tr id="ref-10"><td class="ref-num">[10]</td><td>C. Packer et al., "MemGPT: Towards LLMs as operating systems," <em>arXiv:2310.08560</em>, 2023.</td></tr>
+                    <tr id="ref-11"><td class="ref-num">[11]</td><td>J. S. Park et al., "Generative Agents: Interactive simulacra of human behavior," in <em>Proc. UIST</em>, 2023.</td></tr>
+                    <tr id="ref-12"><td class="ref-num">[12]</td><td>E. Tulving, "Memory and consciousness," <em>Canadian Psychology</em>, vol. 26, no. 1, pp. 1–12, 1985.</td></tr>
+                    <tr id="ref-13"><td class="ref-num">[13]</td><td>M. L. Anderson, "Embodied cognition: A field guide," <em>Artificial Intelligence</em>, vol. 149, no. 1, pp. 91–130, 2003.</td></tr>
+                    <tr id="ref-14"><td class="ref-num">[14]</td><td>M. Wilson, "Six views of embodied cognition," <em>Psychonomic Bulletin &amp; Review</em>, vol. 9, no. 4, pp. 625–636, 2002.</td></tr>
+                    <tr id="ref-15"><td class="ref-num">[15]</td><td>K. Friston, "The free-energy principle: a unified brain theory?," <em>Nature Reviews Neuroscience</em>, vol. 11, no. 2, pp. 127–138, 2010.</td></tr>
+                    <tr id="ref-16"><td class="ref-num">[16]</td><td>J. Bongard, V. Zykov, and H. Lipson, "Resilient machines through continuous self-modeling," <em>Science</em>, vol. 314, no. 5802, pp. 1118–1121, Nov. 2006.</td></tr>
+                    <tr id="ref-17"><td class="ref-num">[17]</td><td>M. Levin, "Technological approach to mind everywhere: An experimentally-grounded framework for understanding diverse bodies and minds," <em>Frontiers in Systems Neuroscience</em>, vol. 16, p. 768201, 2022.</td></tr>
+                    <tr id="ref-18"><td class="ref-num">[18]</td><td>A. R. Damasio, <em>Descartes' Error: Emotion, Reason, and the Human Brain</em>. New York: Putnam, 1994.</td></tr>
+                    <tr id="ref-19"><td class="ref-num">[19]</td><td>E. Thompson, <em>Mind in Life: Biology, Phenomenology, and the Sciences of Mind</em>. Cambridge, MA: Harvard Univ. Press, 2007.</td></tr>
+                    <tr id="ref-20"><td class="ref-num">[20]</td><td>L. Shapiro, <em>Embodied Cognition</em>. London: Routledge, 2011.</td></tr>
+                    <tr id="ref-21"><td class="ref-num">[21]</td><td>J. Haugeland, "Mind embodied and embedded," in <em>Having Thought: Essays in the Metaphysics of Mind</em>. Cambridge, MA: Harvard Univ. Press, 1998, pp. 207–237.</td></tr>
+                    <tr id="ref-22"><td class="ref-num">[22]</td><td>M. Hoffmann and R. Pfeifer, "The implications of embodiment for behavior and cognition: Animal and robotic case studies," in <em>The Implications of Embodiment: Cognition and Communication</em>, W. Tschacher and C. Bergomi, Eds. Exeter, UK: Imprint Academic, 2011, pp. 31–58.</td></tr>
+                    <tr id="ref-23"><td class="ref-num">[23]</td><td>J. J. Gibson, <em>The Ecological Approach to Visual Perception</em>. Boston: Houghton Mifflin, 1979.</td></tr>
+                </table>
+            </section>
+
+            <nav class="series-nav">
+                <a href="03-organization-as-intelligence-ceiling.html" class="prev">
+                    <span class="nav-label">← Previous</span>
+                    <span class="nav-title">03 · 组织即智能的上限</span>
+                </a>
+                <a href="05-prediction-world-model-active-inference.html" class="next">
+                    <span class="nav-label">Next →</span>
+                    <span class="nav-title">05 · 预测：世界模型与主动推理</span>
+                </a>
+            </nav>
+
+        </main>
+    </div>
+
+    <script>
+        document.querySelectorAll('.toc-list a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+            });
+        });
+    </script>
+</body>
+</html>

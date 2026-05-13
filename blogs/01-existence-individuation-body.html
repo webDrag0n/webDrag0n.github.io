@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>存在、个体化与身体：AGI 的哲学前提 · AGI 六条件</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'dark',
+            securityLevel: 'loose',
+            fontFamily: 'Inter',
+            themeVariables: { primaryColor: '#1e293b', primaryTextColor: '#f8fafc', primaryBorderColor: '#38bdf8', lineColor: '#94a3b8', secondaryColor: '#0f172a', tertiaryColor: '#1e293b' }
+        });
+    </script>
+
+    <style>
+        :root {
+            --bg-color: #0f172a; --text-color: #f8fafc; --accent-color: #38bdf8;
+            --secondary-text: #94a3b8; --card-bg: rgba(30, 41, 59, 0.7);
+            --border-color: rgba(255, 255, 255, 0.1); --glow-color: rgba(56, 189, 248, 0.3);
+            --success-color: #10b981; --warning-color: #f59e0b; --danger-color: #f43f5e;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', 'Noto Serif SC', serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.85; overflow-x: hidden; }
+        .ambient-bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -1;
+            background: radial-gradient(circle at 15% 50%, rgba(56, 189, 248, 0.05) 0%, transparent 50%), radial-gradient(circle at 85% 30%, rgba(16, 185, 129, 0.04) 0%, transparent 50%); }
+
+        .container { max-width: 1300px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: 1fr 3fr; gap: 4rem; align-items: start; }
+        @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+
+        .hero { padding: 5rem 2rem 2rem; text-align: center; max-width: 900px; margin: 0 auto; }
+        .hero-badge { display: inline-block; padding: 0.3rem 0.9rem; border-radius: 999px; background: rgba(56,189,248,0.08); border: 1px solid rgba(56,189,248,0.3); color: var(--accent-color); font-size: 0.78rem; letter-spacing: 0.1em; margin-bottom: 1.2rem; text-transform: uppercase; }
+        .hero-title { font-family: 'Noto Serif SC', serif; font-size: 2.8rem; font-weight: 700; line-height: 1.25; margin-bottom: 1rem;
+            background: linear-gradient(120deg, #f8fafc 20%, #38bdf8 60%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-subtitle { color: var(--secondary-text); font-size: 1.1rem; font-style: italic; margin-bottom: 2rem; }
+        .hero-meta { color: var(--secondary-text); font-size: 0.9rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+
+        /* 9-part progress bar */
+        .series-progress { max-width: 900px; margin: 3rem auto 0; padding: 0 2rem; }
+        .series-progress-label { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; font-size: 0.8rem; color: var(--secondary-text); text-transform: uppercase; letter-spacing: 0.1em; }
+        .series-progress-grid { display: grid; grid-template-columns: repeat(9, 1fr); gap: 6px; }
+        .series-progress-cell { height: 6px; border-radius: 3px; background: rgba(255,255,255,0.06); transition: background 0.3s; }
+        .series-progress-cell.done { background: rgba(56,189,248,0.4); }
+        .series-progress-cell.active { background: var(--accent-color); box-shadow: 0 0 12px var(--glow-color); }
+
+        .abstract { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; margin: 3rem auto; max-width: 860px; text-align: left; backdrop-filter: blur(10px); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15); }
+        .abstract strong { color: var(--accent-color); display: block; margin-bottom: 0.6rem; font-size: 1.05rem; letter-spacing: 0.08em; }
+        .abstract p { font-size: 1.05rem; margin: 0; }
+
+        .sidebar { position: sticky; top: 2rem; padding: 1.5rem; background: rgba(30, 41, 59, 0.3); border-left: 2px solid var(--border-color); height: max-content; max-height: calc(100vh - 4rem); overflow-y: auto; }
+        .sidebar h3 { font-size: 0.85rem; margin-bottom: 1rem; color: var(--secondary-text); text-transform: uppercase; letter-spacing: 0.08em; }
+        .toc-list { list-style: none; }
+        .toc-list li { margin-bottom: 0.7rem; }
+        .toc-list a { color: var(--text-color); text-decoration: none; font-size: 0.92rem; transition: color 0.2s, padding 0.2s; opacity: 0.7; display: block; padding-left: 0; border-left: 2px solid transparent; padding: 0.25rem 0 0.25rem 0.6rem; }
+        .toc-list a:hover { opacity: 1; color: var(--accent-color); border-left: 2px solid var(--accent-color); }
+
+        .content { padding-bottom: 4rem; }
+        h2 { font-family: 'Noto Serif SC', serif; font-size: 1.85rem; font-weight: 700; margin: 4rem 0 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-color); }
+        h2 .num { color: var(--accent-color); font-weight: 600; margin-right: 0.6rem; font-family: 'Inter', sans-serif; }
+        h3 { font-size: 1.25rem; margin: 2.5rem 0 1rem; color: #f1f5f9; }
+        p { margin-bottom: 1.4rem; font-size: 1.05rem; color: #e2e8f0; }
+
+        .callout { margin: 2rem 0; padding: 1.3rem 1.6rem; border-radius: 10px; background: rgba(56, 189, 248, 0.04); border-left: 4px solid var(--accent-color); }
+        .callout-title { font-weight: 600; margin-bottom: 0.5rem; color: var(--accent-color); font-size: 0.95rem; letter-spacing: 0.05em; text-transform: uppercase; }
+        .callout.philosophical { background: rgba(245, 158, 11, 0.04); border-left-color: var(--warning-color); }
+        .callout.philosophical .callout-title { color: var(--warning-color); }
+        .callout.formal { background: rgba(16, 185, 129, 0.04); border-left-color: var(--success-color); }
+        .callout.formal .callout-title { color: var(--success-color); }
+
+        blockquote { margin: 2rem 0; padding: 1.2rem 1.8rem; font-size: 1.15rem; font-style: italic; color: var(--secondary-text); border-left: 4px solid #cbd5e1; background: rgba(255, 255, 255, 0.02); border-radius: 0 8px 8px 0; }
+
+        figure, .svg-container { margin: 2.5rem 0; text-align: center; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2); overflow: hidden; }
+        figcaption { margin-top: 1.2rem; font-size: 0.9rem; color: var(--secondary-text); line-height: 1.6; }
+        figcaption b { color: var(--accent-color); }
+        svg { max-width: 100%; height: auto; overflow: visible; }
+        .svg-node { fill: #1e293b; stroke: var(--accent-color); stroke-width: 2; rx: 8; }
+        .svg-text { fill: var(--text-color); font-family: 'Inter', sans-serif; font-size: 13px; text-anchor: middle; dominant-baseline: middle; }
+        .svg-text-title { fill: var(--accent-color); font-weight: 600; font-size: 15px; }
+        .svg-text-sub { fill: var(--secondary-text); font-size: 11px; }
+        .svg-edge { stroke: var(--secondary-text); stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+        .svg-edge-active { stroke: var(--accent-color); stroke-width: 2.5; marker-end: url(#arrowhead-active); fill: none; }
+        .svg-edge-dashed { stroke: var(--secondary-text); stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; marker-end: url(#arrowhead); }
+        .svg-group-box { fill: rgba(255, 255, 255, 0.02); stroke: var(--border-color); stroke-width: 1; stroke-dasharray: 4 4; rx: 12; }
+
+        .mermaid { margin: 3rem 0; text-align: center; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; display: flex; justify-content: center; }
+
+        table.ref-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
+        table.ref-table td { padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--border-color); vertical-align: top; color: #e2e8f0; }
+        table.ref-table td.ref-num { color: var(--accent-color); font-family: 'Inter', sans-serif; font-weight: 600; width: 3rem; white-space: nowrap; }
+
+        .series-nav { max-width: 1100px; margin: 4rem auto 2rem; padding: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; border-top: 1px solid var(--border-color); }
+        @media (max-width: 700px) { .series-nav { grid-template-columns: 1fr; } }
+        .series-nav a { display: block; padding: 1.3rem 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 10px; text-decoration: none; color: var(--text-color); transition: all 0.2s; }
+        .series-nav a:hover { border-color: var(--accent-color); background: rgba(56,189,248,0.05); transform: translateY(-2px); }
+        .series-nav .nav-label { display: block; font-size: 0.78rem; color: var(--secondary-text); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.3rem; }
+        .series-nav .nav-title { font-size: 1.05rem; font-weight: 600; color: var(--text-color); }
+        .series-nav .next { text-align: right; }
+        .series-nav .disabled { opacity: 0.3; pointer-events: none; }
+
+        .nav-back { display: inline-block; margin: 2rem 0 0 2rem; color: var(--secondary-text); text-decoration: none; transition: color 0.3s; font-size: 0.9rem; }
+        .nav-back:hover { color: var(--text-color); }
+
+        sup.cite { color: var(--accent-color); font-size: 0.75rem; padding: 0 0.15rem; cursor: pointer; }
+        sup.cite a { color: inherit; text-decoration: none; }
+        sup.cite a:hover { text-decoration: underline; }
+
+        ul.feature-list { padding-left: 1.5rem; margin-bottom: 1.4rem; }
+        ul.feature-list li { margin-bottom: 0.5rem; color: #e2e8f0; font-size: 1.02rem; }
+        ul.feature-list li strong { color: var(--accent-color); }
+
+        .key-formula { text-align: center; margin: 2rem 0; padding: 1.5rem; background: rgba(16,185,129,0.04); border: 1px dashed rgba(16,185,129,0.3); border-radius: 10px; font-size: 1.05rem; }
+    </style>
+</head>
+<body>
+    <div class="ambient-bg"></div>
+    <a href="../index.html" class="nav-back">← Back to Home</a>
+
+    <header class="hero">
+        <span class="hero-badge">第 01 篇 · 哲学前提</span>
+        <h1 class="hero-title">存在、个体化与身体</h1>
+        <p class="hero-subtitle">On Existence, Individuation, and the Body — The Philosophical Preface to AGI</p>
+        <div class="hero-meta">
+            <span>May 13, 2026</span>
+            <span>Reading Time: 22 min</span>
+            <span>Category: Philosophy of AGI</span>
+        </div>
+
+        <div class="series-progress">
+            <div class="series-progress-label">
+                <span>可替代之身 · AGI 六条件系列</span>
+                <span>01 / 09</span>
+            </div>
+            <div class="series-progress-grid">
+                <div class="series-progress-cell active"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+            </div>
+        </div>
+
+        <div class="abstract">
+            <strong>TL;DR</strong>
+            <p>在讨论通用人工智能（AGI）能否替代人类劳动之前，必须先回答一个被技术话语长期回避的哲学问题：作为劳动主体的"个体"究竟是什么？本文沿三条线索展开——Maturana 与 Varela 的自创生理论<sup class="cite"><a href="#ref-1">[1]</a></sup>、Heidegger 的"在世存在"（Being-in-the-world）<sup class="cite"><a href="#ref-2">[2]</a></sup>、Merleau-Ponty 的身体现象学<sup class="cite"><a href="#ref-3">[3]</a></sup>——论证"个体"不是由边界定义，而是由"必须持续维护自身以维持存在"这一反身闭环所定义。这一结论将成为后续八章推导 AGI 六项本体条件（身体、预测、持续性、自主性、学习、元认知）的哲学底座。</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Table of Contents</h3>
+            <ul class="toc-list" id="toc">
+                <li><a href="#sec1">1. AGI 作为一个哲学问题</a></li>
+                <li><a href="#sec2">2. 自创生：个体即自我维护闭环</a></li>
+                <li><a href="#sec3">3. Dasein 与上手之物</a></li>
+                <li><a href="#sec4">4. 身体图式与具身认知</a></li>
+                <li><a href="#sec5">5. 从哲学到工程：六条件预告</a></li>
+                <li><a href="#references">References</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+
+            <section id="sec1">
+                <h2><span class="num">01</span>AGI 作为一个哲学问题</h2>
+
+                <p>当前对通用人工智能（Artificial General Intelligence, AGI）的公共讨论，几乎完全被"基准分数"与"智力测量"的隐喻所支配。主流定义把 AGI 还原为一组可在 MMLU、ARC、HumanEval 等评测集上超越人类的能力分布<sup class="cite"><a href="#ref-14">[14]</a></sup>。这一定义继承自图灵测试的传统：假定智能的本质是"行为不可区分"，因此只要系统的输出与人类相仿，就可以被视为具备同等的"通用性"。</p>
+
+                <p>然而，这条路径回避了一个更根本的问题：当我们说一个系统"像人"或"替代了一个人"时，我们究竟指的是它替代了什么？人作为劳动主体所承担的，并不是一串答题记录，而是一个<strong>持续在世的、需要维护自身存在的个体</strong>。一个会回答问题但不会"在场"的系统，与一个会"在场"因此不得不思考的系统，两者在本体论上并不处于同一平面<sup class="cite"><a href="#ref-15">[15]</a></sup><sup class="cite"><a href="#ref-2">[2]</a></sup>。</p>
+
+                <p>本系列的论证从一个看似不相关却最终关键的起点出发：<em>什么是个体</em>。这个问题在 1927 年的《存在与时间》<sup class="cite"><a href="#ref-2">[2]</a></sup>、1970 年代的自创生理论<sup class="cite"><a href="#ref-1">[1]</a></sup>、1990 年代的具身认知转向<sup class="cite"><a href="#ref-7">[7]</a></sup><sup class="cite"><a href="#ref-8">[8]</a></sup>、与 2010 年代以来的自由能原理<sup class="cite"><a href="#ref-9">[9]</a></sup>中反复出现，并且彼此之间存在高度一致的数学化与形式化路径。当这四条线索交汇时，所谓 AGI 的"通用性"便不再是一个测量学问题，而是一个本体论问题：<strong>一个系统必须具备哪些结构性条件，才能算作"在场"</strong>。</p>
+
+                <div class="callout philosophical">
+                    <div class="callout-title">Philosophical Interface · 哲学接口</div>
+                    <p style="margin:0">Heidegger 在《存在与时间》<sup class="cite"><a href="#ref-2">[2]</a></sup>中区分了"现成在手"（vorhanden）与"在世存在"（Dasein）。前者把万物作为可被测量与分析的对象，后者则强调任何理解都预设了一个"已经被抛入处境"的主体。本系列的工程论点正建立在这条区分之上：当前 AI 话语把智能处理为 <em>vorhanden</em>，而 AGI 的真正门槛要求它成为 <em>Dasein</em> 的结构性类比。</p>
+                </div>
+
+                <p>在正式展开这一论证之前，我们先建立"个体"的第一个形式化刻画：<strong>个体不是一个被边界圈起来的静态对象，而是一个必须不断维持自身边界以维持存在的动态闭环</strong>。这个刻画来自生物学，但其哲学含义远超生物学。</p>
+            </section>
+
+            <section id="sec2">
+                <h2><span class="num">02</span>自创生：个体即自我维护闭环</h2>
+
+                <p>1972 年，智利生物学家 Humberto Maturana 与 Francisco Varela 提出了自创生（autopoiesis）的概念<sup class="cite"><a href="#ref-1">[1]</a></sup>。其核心命题是：<strong>一个系统是一个活着的个体，当且仅当它是一个自我生产（self-producing）的过程网络——它的内部过程以某种方式生产并维护着产生这些过程本身所必需的组件，同时不断地重塑自身的拓扑边界。</strong></p>
+
+                <div class="key-formula">
+                    \( \text{Individual} := \text{a closed network of processes } \{p_i\} \text{ such that } \forall i,\ p_i \text{ is produced and maintained by the network itself.} \)
+                </div>
+
+                <p>这一定义的革命性在于：它把"什么是活着的"从"是否由蛋白质和 DNA 构成"这类实体性标准，转换成"是否构成一个持续自我维护的过程闭环"这类关系性标准。一块孤立的细胞器不是个体，即便它仍然由生物物质构成；而一个持续自我再生产的软件系统——原则上——可以满足同一条判据。这一跨层级的概括后来被 Varela、Thompson 与 Rosch 推广为<em>生成认知</em>（enactive cognition）纲领<sup class="cite"><a href="#ref-8">[8]</a></sup>，并被 Evan Thompson 进一步形式化为"生命–心智连续性"命题<sup class="cite"><a href="#ref-18">[18]</a></sup>。</p>
+
+                <p>Figure 01-A 把这一命题投射到三个尺度上：细胞、公司、数字 Agent。三者的拓扑结构同构——它们都有一个"代谢回路"（内部过程交换）、一个"维护层"（主动重建自身构件）、一个"边界调节器"（对内外区分的动态维持）。差异仅在实现介质。</p>
+
+                <figure class="svg-container">
+                    <svg viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8" />
+                            </marker>
+                            <marker id="arrowhead-active" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#38bdf8" />
+                            </marker>
+                            <radialGradient id="cellGrad" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#10b981" stop-opacity="0.4"/>
+                                <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+                            </radialGradient>
+                            <radialGradient id="orgGrad" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.4"/>
+                                <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+                            </radialGradient>
+                            <radialGradient id="aiGrad" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.4"/>
+                                <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+                            </radialGradient>
+                        </defs>
+
+                        <text class="svg-text svg-text-title" x="150" y="30">Cell · 细胞</text>
+                        <text class="svg-text svg-text-title" x="450" y="30">Organization · 组织</text>
+                        <text class="svg-text svg-text-title" x="750" y="30">Digital Agent · 数字个体</text>
+
+                        <!-- Cell -->
+                        <circle cx="150" cy="180" r="110" fill="url(#cellGrad)" />
+                        <circle cx="150" cy="180" r="90" fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="3 3"/>
+                        <circle cx="150" cy="180" r="25" fill="#10b981" opacity="0.6"/>
+                        <text class="svg-text" x="150" y="180" font-size="10">Metabolism</text>
+                        <path d="M 150 105 Q 210 120 225 180 Q 210 240 150 255 Q 90 240 75 180 Q 90 120 150 105 Z" fill="none" stroke="#10b981" stroke-width="1.5" opacity="0.7"/>
+                        <text class="svg-text svg-text-sub" x="150" y="90">membrane · 膜</text>
+                        <text class="svg-text svg-text-sub" x="150" y="280">autopoietic loop</text>
+                        <text class="svg-text svg-text-sub" x="150" y="325">生产自身组件的过程网络</text>
+
+                        <!-- Organization -->
+                        <circle cx="450" cy="180" r="110" fill="url(#orgGrad)" />
+                        <rect x="395" y="125" width="110" height="110" fill="none" stroke="#38bdf8" stroke-width="2" stroke-dasharray="3 3" rx="8"/>
+                        <rect x="420" y="150" width="25" height="25" fill="#38bdf8" opacity="0.6" rx="3"/>
+                        <rect x="455" y="150" width="25" height="25" fill="#38bdf8" opacity="0.5" rx="3"/>
+                        <rect x="420" y="185" width="25" height="25" fill="#38bdf8" opacity="0.5" rx="3"/>
+                        <rect x="455" y="185" width="25" height="25" fill="#38bdf8" opacity="0.6" rx="3"/>
+                        <path d="M 445 162 L 455 162 M 445 197 L 455 197 M 432 175 L 432 185 M 467 175 L 467 185" stroke="#38bdf8" stroke-width="1.2"/>
+                        <text class="svg-text svg-text-sub" x="450" y="115">KPI · values · culture</text>
+                        <text class="svg-text svg-text-sub" x="450" y="280">hiring · firing · training</text>
+                        <text class="svg-text svg-text-sub" x="450" y="325">持续再生产岗位与规则</text>
+
+                        <!-- Agent -->
+                        <circle cx="750" cy="180" r="110" fill="url(#aiGrad)" />
+                        <polygon points="680,180 750,110 820,180 750,250" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="3 3"/>
+                        <circle cx="750" cy="180" r="22" fill="#f59e0b" opacity="0.6"/>
+                        <text class="svg-text" x="750" y="180" font-size="10">Core</text>
+                        <text class="svg-text svg-text-sub" x="750" y="100">token budget · identity</text>
+                        <text class="svg-text svg-text-sub" x="750" y="280">memory · reputation · keys</text>
+                        <text class="svg-text svg-text-sub" x="750" y="325">持续维护存在所需资源</text>
+
+                        <!-- Interconnecting arrows showing topology isomorphism -->
+                        <path class="svg-edge-dashed" d="M 280 180 Q 330 160 380 180"/>
+                        <path class="svg-edge-dashed" d="M 570 180 Q 620 160 680 180"/>
+                        <text class="svg-text svg-text-sub" x="330" y="160" style="fill: #f59e0b">同构</text>
+                        <text class="svg-text svg-text-sub" x="625" y="160" style="fill: #f59e0b">同构</text>
+                    </svg>
+                    <figcaption><b>Fig 01-A · 自创生闭环的跨尺度同构。</b>细胞、组织、数字个体共享同一拓扑：内部过程网络 + 主动维护的边界 + 持续再生产自身组件。差别仅在于实现介质（代谢 / 制度 / 资源配额），而非结构。</figcaption>
+                </figure>
+
+                <p>Francisco Varela 在其晚期工作中反复强调：自创生的深层哲学后果是<strong>个体性并非静止的属性而是一种动词</strong>——"存在"不是"是"而是"做"（to exist is to enact）<sup class="cite"><a href="#ref-8">[8]</a></sup><sup class="cite"><a href="#ref-18">[18]</a></sup>。这一动词化视角与 Heidegger 的"Dasein"形成了奇妙的跨学科共振：一个德国现象学家与一批智利神经生物学家，在不同的知识传统中同时抵达了同一结论。</p>
+
+                <div class="callout formal">
+                    <div class="callout-title">Formal Box · 形式化笔记</div>
+                    <p style="margin:0">若把自创生系统记作一个过程代数 \( \mathcal{S} = (P, R) \)，其中 \(P\) 是过程集合、\(R \subseteq P \times P\) 是"过程 A 的运行依赖过程 B 的产物"的依赖关系，则<em>自创生性</em>等价于要求：\( \forall p \in P,\ \exists q_1,\dots,q_k \in P\) 使得 \((q_i, p) \in R\) 且 \(p\) 自身也参与生产某个 \(q_j\)。这一条件可被看作 Friston 自由能原理<sup class="cite"><a href="#ref-9">[9]</a></sup>所要求的"马尔可夫毯"存在性条件在过程代数层面的投影。</p>
+                </div>
+            </section>
+
+            <section id="sec3">
+                <h2><span class="num">03</span>Dasein 与上手之物：为什么"在场"先于"理解"</h2>
+
+                <p>Heidegger 在《存在与时间》<sup class="cite"><a href="#ref-2">[2]</a></sup>中提出了一条看似抽象却极其工程化的区分：<em>vorhanden</em>（现成在手）与 <em>zuhanden</em>（上手之物）。前者描述的是被科学主体从世界中"拎出来"加以观察、测量、表征的客体；后者描述的是在实际操作中"隐去"的工具——锤子在敲钉子时并不被意识反思，只有当它坏掉时，才从上手之物退化为现成在手。</p>
+
+                <p>这一区分对 AI 话语具有毁灭性的后果。主流 AGI 定义把世界视为 <em>vorhanden</em>：一切皆可表征、一切皆可作为输入被处理。然而 Heidegger 指出，任何 <em>vorhanden</em> 式的表征都<strong>预设了一个更原始的在世处境</strong>——主体必须<em>已经</em>在某个处境中运作，该处境不是被观察的对象，而是被居住的背景。Hubert Dreyfus 在其经典批评<sup class="cite"><a href="#ref-16">[16]</a></sup>中把这一论证应用到经典 GOFAI（Good Old-Fashioned AI）：符号主义之所以屡屡撞墙，正因为它试图用 <em>vorhanden</em> 式的表征穷尽 <em>zuhanden</em> 式的背景，而后者在结构上是不可被穷尽的。</p>
+
+                <p>这一批评的当代延续出现在 Clark 的具身认知纲领<sup class="cite"><a href="#ref-7">[7]</a></sup>、Brooks 的"没有表征的智能"<sup class="cite"><a href="#ref-17">[17]</a></sup>、以及 Pfeifer 与 Bongard 的《身体如何塑造我们的思考方式》<sup class="cite"><a href="#ref-19">[19]</a></sup>之中。共同的洞见是：一个系统若从未"在场"于任何处境，它就不可能真正理解被抛入处境意味着什么；它至多是在对"处境"这一概念进行表征操作，而这与"已经身处处境"在结构上不同。</p>
+
+                <figure class="svg-container">
+                    <svg viewBox="0 0 920 400" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="spectrumGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.5"/>
+                                <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.5"/>
+                                <stop offset="100%" stop-color="#10b981" stop-opacity="0.5"/>
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Time axis -->
+                        <line x1="60" y1="350" x2="880" y2="350" stroke="#94a3b8" stroke-width="1.5"/>
+                        <polygon points="880,350 870,345 870,355" fill="#94a3b8"/>
+                        <text class="svg-text svg-text-sub" x="470" y="380">年代轴 · Time (year)</text>
+
+                        <!-- Abstraction axis -->
+                        <line x1="60" y1="350" x2="60" y2="40" stroke="#94a3b8" stroke-width="1.5"/>
+                        <polygon points="60,40 55,50 65,50" fill="#94a3b8"/>
+                        <text class="svg-text svg-text-sub" x="60" y="25" transform="rotate(-90 60 25)">抽象层级 · Ontology ↔ Engineering</text>
+
+                        <!-- Year ticks -->
+                        <text class="svg-text svg-text-sub" x="110" y="365">1927</text>
+                        <text class="svg-text svg-text-sub" x="200" y="365">1945</text>
+                        <text class="svg-text svg-text-sub" x="290" y="365">1948</text>
+                        <text class="svg-text svg-text-sub" x="380" y="365">1972</text>
+                        <text class="svg-text svg-text-sub" x="470" y="365">1991</text>
+                        <text class="svg-text svg-text-sub" x="560" y="365">1997</text>
+                        <text class="svg-text svg-text-sub" x="650" y="365">2003</text>
+                        <text class="svg-text svg-text-sub" x="740" y="365">2010</text>
+                        <text class="svg-text svg-text-sub" x="830" y="365">2022</text>
+
+                        <!-- Ontology row -->
+                        <circle cx="110" cy="85" r="10" fill="#f59e0b"/>
+                        <text class="svg-text svg-text-sub" x="110" y="65">Heidegger</text>
+                        <text class="svg-text svg-text-sub" x="110" y="105">Dasein</text>
+
+                        <circle cx="200" cy="110" r="10" fill="#f59e0b"/>
+                        <text class="svg-text svg-text-sub" x="200" y="130">Merleau-Ponty</text>
+
+                        <!-- Cybernetics -->
+                        <circle cx="290" cy="150" r="10" fill="#38bdf8"/>
+                        <text class="svg-text svg-text-sub" x="290" y="170">Wiener</text>
+
+                        <circle cx="290" cy="195" r="10" fill="#38bdf8"/>
+                        <text class="svg-text svg-text-sub" x="290" y="215">Ashby '52</text>
+
+                        <!-- Biology-Philosophy -->
+                        <circle cx="380" cy="140" r="10" fill="#10b981"/>
+                        <text class="svg-text svg-text-sub" x="380" y="120">Maturana/Varela</text>
+
+                        <!-- Cog sci -->
+                        <circle cx="470" cy="170" r="10" fill="#10b981"/>
+                        <text class="svg-text svg-text-sub" x="470" y="150">Embodied Mind</text>
+
+                        <circle cx="560" cy="220" r="10" fill="#38bdf8"/>
+                        <text class="svg-text svg-text-sub" x="560" y="240">Clark · Being There</text>
+
+                        <!-- Self model -->
+                        <circle cx="650" cy="180" r="10" fill="#f59e0b"/>
+                        <text class="svg-text svg-text-sub" x="650" y="160">Metzinger · Being No One</text>
+
+                        <!-- Free energy -->
+                        <circle cx="740" cy="260" r="10" fill="#38bdf8"/>
+                        <text class="svg-text svg-text-sub" x="740" y="280">Friston · FEP</text>
+
+                        <!-- LeCun -->
+                        <circle cx="830" cy="310" r="10" fill="#38bdf8"/>
+                        <text class="svg-text svg-text-sub" x="830" y="330">LeCun · JEPA</text>
+
+                        <!-- Hassabis -->
+                        <circle cx="800" cy="290" r="10" fill="#38bdf8"/>
+
+                        <!-- connecting line showing convergence -->
+                        <path d="M 110 85 Q 300 50 650 180 Q 780 260 830 310" fill="none" stroke="url(#spectrumGrad)" stroke-width="2" stroke-dasharray="4 4" opacity="0.8"/>
+
+                        <text class="svg-text svg-text-title" x="460" y="55">跨学科汇流：存在 · 身体 · 预测</text>
+                    </svg>
+                    <figcaption><b>Fig 01-B · 思想谱系时空矩阵。</b>横轴为时间，纵轴从本体论向工程实现延伸。现象学（琥珀）、控制论与 AI（蓝）、具身生物学（绿）在约一个世纪内沿虚线汇流，最终把"在场"从哲学命题转译为可工程化的自由能最小化条件。</figcaption>
+                </figure>
+
+                <p>Dreyfus 与 Haugeland<sup class="cite"><a href="#ref-20">[20]</a></sup>的工作把这一批评推向了工程层面，提出"心智必须既具身又嵌入"（Mind Embodied and Embedded）的论点。在本系列后续各章中，我们将看到：自由能原理<sup class="cite"><a href="#ref-9">[9]</a></sup>、世界模型<sup class="cite"><a href="#ref-15">[15]</a></sup>、长期自主 Agent 架构<sup class="cite"><a href="#ref-11">[11]</a></sup>等工程构造，事实上都可以被看作对 Heidegger–Dreyfus 论证的工程化回应。</p>
+            </section>
+
+            <section id="sec4">
+                <h2><span class="num">04</span>身体图式与具身认知</h2>
+
+                <p>法国现象学家 Maurice Merleau-Ponty 在《知觉现象学》<sup class="cite"><a href="#ref-3">[3]</a></sup>中提出了<em>身体图式</em>（schéma corporel）这一概念：身体不是被意识"拥有"的对象，而是意识得以展开的<strong>先决结构</strong>。我们不是先在一个无身体的意识里思考"如何抓取一个杯子"，然后把指令发送给手；相反，抓取本身就是思考的一部分。身体以一种前反思的方式参与了每一次感知、每一次意义的涌现。</p>
+
+                <p>这一观察后来被认知科学系统化为<em>具身认知</em>（embodied cognition）纲领<sup class="cite"><a href="#ref-7">[7]</a></sup><sup class="cite"><a href="#ref-8">[8]</a></sup>，并在 Pfeifer 等人的"形态计算"（morphological computation）工作中得到了工程化延伸<sup class="cite"><a href="#ref-19">[19]</a></sup>。核心论断是：一部分被传统上归于"认知"的工作，实际上由身体形态本身完成——例如，一根具有恰当柔性和阻尼的机械腿，可以在被动动态行走（passive dynamic walking）中几乎不需要控制信号就完成稳定行走<sup class="cite"><a href="#ref-19">[19]</a></sup>。身体不是被大脑支配的输出端，它本身就在计算。</p>
+
+                <p>Gibson 在《视觉的生态方法》<sup class="cite"><a href="#ref-6">[6]</a></sup>中以"可供性"（affordance）概念走得更远：环境不是中立的信息场，而是直接向具备特定身体结构的有机体"提供"动作可能性。一个楼梯对长腿哺乳类是"可攀爬的"，对短腿爬行类则不是。可供性是身体与环境共同构造的关系事实，既非单纯在环境中、也非单纯在心智中。</p>
+
+                <p>这一视角对 AGI 的含义极为关键。如果认知的相当一部分来自身体与环境的结构耦合，那么一个没有身体、没有耦合环境的系统在结构上无法重现同样的认知动态。这并不意味着"AGI 必须是机器人"——本系列第 04 篇将详细论证，身体可以是数字的——但它确实意味着：<strong>一个在结构上"漂浮于真空"的模型，无论参数多大，都无法成为 AGI 的候选</strong>。</p>
+
+                <div class="callout philosophical">
+                    <div class="callout-title">Philosophical Interface · 哲学接口</div>
+                    <p style="margin:0">Merleau-Ponty 的身体图式与 Maturana 的自创生，从两个方向逼近同一命题：<em>身体既是存在的载体，也是认知的先决条件</em>。前者从现象学经验出发（身体是知觉展开的场），后者从生物学结构出发（身体是过程闭环的物质实现）。Thompson<sup class="cite"><a href="#ref-18">[18]</a></sup>把这两条线索统一为"生命—心智连续性"纲领：心智不是对生命的补充，而是生命自身自我维护逻辑的延续。</p>
+                </div>
+            </section>
+
+            <section id="sec5">
+                <h2><span class="num">05</span>从哲学到工程：六条件预告</h2>
+
+                <p>把上述哲学结论压缩为工程判据，我们得到一个可操作的命题：<strong>一个系统是一个 AGI 候选，当且仅当它同时满足（i）具有自创生式的自我维护闭环，（ii）在一个不可暂停的时间流中"被抛入"某个资源有限的处境，（iii）在该处境中维持并演化自身的内部模型</strong>。这三条要求进一步可分解为六个必要条件——它们构成了本系列后续八篇的骨架。</p>
+
+                <ul class="feature-list">
+                    <li><strong>身体（Body）</strong>——存在载体与不可逆时间流（第 04 篇）。只有当一个系统被绑定在一个会消耗资源、会老化、需要持续维护的载体上时，它才有可能从 <em>vorhanden</em> 转化为 <em>zuhanden</em> 式的在场。</li>
+                    <li><strong>预测（Prediction）</strong>——世界模型与主动推理（第 05 篇）。一个需要维护自身存在的系统，在 Friston 的自由能框架下必然最小化感知预测误差<sup class="cite"><a href="#ref-9">[9]</a></sup>；预测能力因此不是模块，而是存在的数学等价条件。</li>
+                    <li><strong>持续性（Persistence）</strong>——从会话到长期进程（第 06 篇）。一个每次调用结束即蒸发的系统，物理上等同于一个无记忆的新生个体；真正的劳动替代要求分钟到年级的时间尺度。</li>
+                    <li><strong>自主性（Autonomy）</strong>——内生驱动力（第 07 篇）。自创生 + 时间压力 + 资源稀缺 = 内源目标的结构性必然（Ashby<sup class="cite"><a href="#ref-4">[4]</a></sup>与 Friston<sup class="cite"><a href="#ref-9">[9]</a></sup>同义）。</li>
+                    <li><strong>学习（Learning）</strong>——持续 / 终身知识获取（第 08 篇前半）。冻结权重的模型不能在变化的处境中持续存在。</li>
+                    <li><strong>元认知（Metacognition）</strong>——反身闭环（第 08 篇后半）。对自身认知过程的反身监控是形成稳定自我模型的必要条件<sup class="cite"><a href="#ref-10">[10]</a></sup><sup class="cite"><a href="#ref-12">[12]</a></sup>。</li>
+                </ul>
+
+                <p>Figure 01-C 把这六条件绘制为雷达图，并叠加了两条典型轮廓：当前 LLM 与人类个体。读者可以直观看到：单一维度上，LLM 在若干测试场景中已接近或超越人类（例如 MMLU 类测试反映的"学习/知识"维度），但在六个维度的<strong>联合轮廓</strong>上仍存在结构性塌缩。这一塌缩的位置，就是本系列后续各章的论证对象。</p>
+
+                <figure class="svg-container">
+                    <svg viewBox="0 0 700 560" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="humanGrad" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#10b981" stop-opacity="0.3"/>
+                                <stop offset="100%" stop-color="#10b981" stop-opacity="0.05"/>
+                            </radialGradient>
+                            <radialGradient id="llmGrad" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.3"/>
+                                <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.05"/>
+                            </radialGradient>
+                        </defs>
+
+                        <!-- Radar grid -->
+                        <g transform="translate(350,280)">
+                            <!-- concentric polygons -->
+                            <polygon points="0,-200 173.2,-100 173.2,100 0,200 -173.2,100 -173.2,-100" fill="none" stroke="#334155" stroke-width="1"/>
+                            <polygon points="0,-150 129.9,-75 129.9,75 0,150 -129.9,75 -129.9,-75" fill="none" stroke="#334155" stroke-width="1"/>
+                            <polygon points="0,-100 86.6,-50 86.6,50 0,100 -86.6,50 -86.6,-50" fill="none" stroke="#334155" stroke-width="1"/>
+                            <polygon points="0,-50 43.3,-25 43.3,25 0,50 -43.3,25 -43.3,-25" fill="none" stroke="#334155" stroke-width="1"/>
+
+                            <!-- axes -->
+                            <line x1="0" y1="0" x2="0" y2="-200" stroke="#475569" stroke-width="1"/>
+                            <line x1="0" y1="0" x2="173.2" y2="-100" stroke="#475569" stroke-width="1"/>
+                            <line x1="0" y1="0" x2="173.2" y2="100" stroke="#475569" stroke-width="1"/>
+                            <line x1="0" y1="0" x2="0" y2="200" stroke="#475569" stroke-width="1"/>
+                            <line x1="0" y1="0" x2="-173.2" y2="100" stroke="#475569" stroke-width="1"/>
+                            <line x1="0" y1="0" x2="-173.2" y2="-100" stroke="#475569" stroke-width="1"/>
+
+                            <!-- Human: all 0.9 -->
+                            <polygon points="0,-180 155.9,-90 155.9,90 0,180 -155.9,90 -155.9,-90" fill="url(#humanGrad)" stroke="#10b981" stroke-width="2"/>
+
+                            <!-- LLM: Body 0.1, Prediction 0.4, Persistence 0.15, Autonomy 0.2, Learning 0.85, Metacog 0.3 -->
+                            <polygon points="0,-20 69.3,-40 25.98,15 0,30 -34.64,20 -51.96,-30" fill="url(#llmGrad)" stroke="#f59e0b" stroke-width="2" stroke-dasharray="3 3"/>
+
+                            <!-- labels -->
+                            <text class="svg-text svg-text-title" x="0" y="-220">身体 Body</text>
+                            <text class="svg-text svg-text-title" x="200" y="-115">预测 Prediction</text>
+                            <text class="svg-text svg-text-title" x="200" y="115">持续 Persistence</text>
+                            <text class="svg-text svg-text-title" x="0" y="225">自主 Autonomy</text>
+                            <text class="svg-text svg-text-title" x="-200" y="115">学习 Learning</text>
+                            <text class="svg-text svg-text-title" x="-200" y="-115">元认知 Metacognition</text>
+                        </g>
+
+                        <!-- Legend -->
+                        <g transform="translate(60,510)">
+                            <rect x="0" y="0" width="14" height="14" fill="url(#humanGrad)" stroke="#10b981" stroke-width="2"/>
+                            <text class="svg-text svg-text-sub" x="22" y="7" text-anchor="start">人类个体 · Human</text>
+                            <rect x="160" y="0" width="14" height="14" fill="url(#llmGrad)" stroke="#f59e0b" stroke-width="2" stroke-dasharray="3 3"/>
+                            <text class="svg-text svg-text-sub" x="182" y="7" text-anchor="start">当前 LLM · current LLM (2026)</text>
+                        </g>
+                    </svg>
+                    <figcaption><b>Fig 01-C · 六条件雷达图。</b>LLM 在"学习/知识"一维的测试分数已逼近人类，但在六维联合轮廓上存在结构性塌缩——尤其在身体、持续、自主三轴。本系列后续各章的论证对象正是这种塌缩的结构原因。</figcaption>
+                </figure>
+
+                <blockquote>
+                    "A mind is not a thing that happens to have a body, it is something that happens because of a body."
+                    — 对 Merleau-Ponty<sup class="cite"><a href="#ref-3">[3]</a></sup>与 Thompson<sup class="cite"><a href="#ref-18">[18]</a></sup>论证的当代总结
+                </blockquote>
+
+                <p>在下一篇中，我们将把这个哲学框架"落到地面"：如果个体的本质是自我维护的闭环，那么 AGI 的经济价值也必然不是"回答得更好"，而是<em>替代一个需要持续维护自身的劳动主体</em>。这一切换把 AGI 定义从测量学问题转换为经济学问题，并为后续四章（身体 → 预测 → 持续 → 自主）的工程化推导提供具体的价值锚。</p>
+            </section>
+
+            <section id="references">
+                <h2><span class="num">R</span>References</h2>
+                <table class="ref-table">
+                    <tr id="ref-1"><td class="ref-num">[1]</td><td>H. R. Maturana and F. J. Varela, <em>Autopoiesis and Cognition: The Realization of the Living</em>. Dordrecht: D. Reidel, 1980.</td></tr>
+                    <tr id="ref-2"><td class="ref-num">[2]</td><td>M. Heidegger, <em>Sein und Zeit</em>. Tübingen: Max Niemeyer Verlag, 1927. English transl.: <em>Being and Time</em>, J. Macquarrie and E. Robinson, Trans. New York: Harper &amp; Row, 1962.</td></tr>
+                    <tr id="ref-3"><td class="ref-num">[3]</td><td>M. Merleau-Ponty, <em>Phénoménologie de la perception</em>. Paris: Gallimard, 1945.</td></tr>
+                    <tr id="ref-4"><td class="ref-num">[4]</td><td>W. R. Ashby, <em>Design for a Brain: The Origin of Adaptive Behaviour</em>, 2nd ed. London: Chapman &amp; Hall, 1960.</td></tr>
+                    <tr id="ref-5"><td class="ref-num">[5]</td><td>N. Wiener, <em>Cybernetics: Or Control and Communication in the Animal and the Machine</em>. Cambridge, MA: MIT Press, 1948.</td></tr>
+                    <tr id="ref-6"><td class="ref-num">[6]</td><td>J. J. Gibson, <em>The Ecological Approach to Visual Perception</em>. Boston: Houghton Mifflin, 1979.</td></tr>
+                    <tr id="ref-7"><td class="ref-num">[7]</td><td>A. Clark, <em>Being There: Putting Brain, Body, and World Together Again</em>. Cambridge, MA: MIT Press, 1997.</td></tr>
+                    <tr id="ref-8"><td class="ref-num">[8]</td><td>F. J. Varela, E. Thompson, and E. Rosch, <em>The Embodied Mind: Cognitive Science and Human Experience</em>. Cambridge, MA: MIT Press, 1991.</td></tr>
+                    <tr id="ref-9"><td class="ref-num">[9]</td><td>K. Friston, "The free-energy principle: a unified brain theory?," <em>Nature Reviews Neuroscience</em>, vol. 11, no. 2, pp. 127–138, Feb. 2010.</td></tr>
+                    <tr id="ref-10"><td class="ref-num">[10]</td><td>T. Metzinger, <em>Being No One: The Self-Model Theory of Subjectivity</em>. Cambridge, MA: MIT Press, 2003.</td></tr>
+                    <tr id="ref-11"><td class="ref-num">[11]</td><td>D. Hassabis, D. Kumaran, C. Summerfield, and M. Botvinick, "Neuroscience-inspired artificial intelligence," <em>Neuron</em>, vol. 95, no. 2, pp. 245–258, Jul. 2017.</td></tr>
+                    <tr id="ref-12"><td class="ref-num">[12]</td><td>D. C. Dennett, <em>The Intentional Stance</em>. Cambridge, MA: MIT Press, 1987.</td></tr>
+                    <tr id="ref-13"><td class="ref-num">[13]</td><td>G. Tononi, "Consciousness as integrated information: a provisional manifesto," <em>The Biological Bulletin</em>, vol. 215, no. 3, pp. 216–242, 2008.</td></tr>
+                    <tr id="ref-14"><td class="ref-num">[14]</td><td>S. Legg and M. Hutter, "Universal intelligence: A definition of machine intelligence," <em>Minds and Machines</em>, vol. 17, no. 4, pp. 391–444, 2007.</td></tr>
+                    <tr id="ref-15"><td class="ref-num">[15]</td><td>Y. LeCun, "A path towards autonomous machine intelligence," <em>OpenReview</em>, Version 0.9.2, 2022.</td></tr>
+                    <tr id="ref-16"><td class="ref-num">[16]</td><td>H. L. Dreyfus, <em>What Computers Still Can't Do: A Critique of Artificial Reason</em>. Cambridge, MA: MIT Press, 1992.</td></tr>
+                    <tr id="ref-17"><td class="ref-num">[17]</td><td>R. A. Brooks, "Intelligence without representation," <em>Artificial Intelligence</em>, vol. 47, no. 1–3, pp. 139–159, Jan. 1991.</td></tr>
+                    <tr id="ref-18"><td class="ref-num">[18]</td><td>E. Thompson, <em>Mind in Life: Biology, Phenomenology, and the Sciences of Mind</em>. Cambridge, MA: Harvard Univ. Press, 2007.</td></tr>
+                    <tr id="ref-19"><td class="ref-num">[19]</td><td>R. Pfeifer and J. Bongard, <em>How the Body Shapes the Way We Think: A New View of Intelligence</em>. Cambridge, MA: MIT Press, 2006.</td></tr>
+                    <tr id="ref-20"><td class="ref-num">[20]</td><td>J. Haugeland, "Mind embodied and embedded," in <em>Having Thought: Essays in the Metaphysics of Mind</em>. Cambridge, MA: Harvard Univ. Press, 1998, pp. 207–237.</td></tr>
+                    <tr id="ref-21"><td class="ref-num">[21]</td><td>D. J. Chalmers, "Facing up to the problem of consciousness," <em>J. Consciousness Studies</em>, vol. 2, no. 3, pp. 200–219, 1995.</td></tr>
+                    <tr id="ref-22"><td class="ref-num">[22]</td><td>H. A. Simon, <em>The Sciences of the Artificial</em>, 3rd ed. Cambridge, MA: MIT Press, 1996 (1st ed. 1969).</td></tr>
+                </table>
+            </section>
+
+            <nav class="series-nav">
+                <a href="#" class="prev disabled">
+                    <span class="nav-label">← Previous</span>
+                    <span class="nav-title">（本篇为系列首篇）</span>
+                </a>
+                <a href="02-agi-labor-replacement.html" class="next">
+                    <span class="nav-label">Next →</span>
+                    <span class="nav-title">02 · AGI 的第一性原理：劳动替代即经济价值</span>
+                </a>
+            </nav>
+
+        </main>
+    </div>
+
+    <script>
+        document.querySelectorAll('.toc-list a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+            });
+        });
+    </script>
+</body>
+</html>

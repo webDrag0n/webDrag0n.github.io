@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自主性：内生驱动力的涌现 · AGI 六条件</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'dark', securityLevel: 'loose', fontFamily: 'Inter',
+            themeVariables: { primaryColor: '#1e293b', primaryTextColor: '#f8fafc', primaryBorderColor: '#38bdf8', lineColor: '#94a3b8', secondaryColor: '#0f172a', tertiaryColor: '#1e293b' }
+        });
+    </script>
+    <style>
+        :root { --bg-color: #0f172a; --text-color: #f8fafc; --accent-color: #38bdf8; --secondary-text: #94a3b8; --card-bg: rgba(30, 41, 59, 0.7); --border-color: rgba(255, 255, 255, 0.1); --glow-color: rgba(56, 189, 248, 0.3); --success-color: #10b981; --warning-color: #f59e0b; --danger-color: #f43f5e; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', 'Noto Serif SC', serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.85; overflow-x: hidden; }
+        .ambient-bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -1;
+            background: radial-gradient(circle at 15% 50%, rgba(245, 158, 11, 0.05) 0%, transparent 50%), radial-gradient(circle at 85% 30%, rgba(56, 189, 248, 0.04) 0%, transparent 50%); }
+        .container { max-width: 1300px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: 1fr 3fr; gap: 4rem; align-items: start; }
+        @media (max-width: 900px) { .container { grid-template-columns: 1fr; gap: 2rem; } }
+        .hero { padding: 5rem 2rem 2rem; text-align: center; max-width: 900px; margin: 0 auto; }
+        .hero-badge { display: inline-block; padding: 0.3rem 0.9rem; border-radius: 999px; background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.3); color: var(--warning-color); font-size: 0.78rem; letter-spacing: 0.1em; margin-bottom: 1.2rem; text-transform: uppercase; }
+        .hero-title { font-family: 'Noto Serif SC', serif; font-size: 2.8rem; font-weight: 700; line-height: 1.25; margin-bottom: 1rem;
+            background: linear-gradient(120deg, #f8fafc 20%, #f59e0b 60%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-subtitle { color: var(--secondary-text); font-size: 1.1rem; font-style: italic; margin-bottom: 2rem; }
+        .hero-meta { color: var(--secondary-text); font-size: 0.9rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        .series-progress { max-width: 900px; margin: 3rem auto 0; padding: 0 2rem; }
+        .series-progress-label { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; font-size: 0.8rem; color: var(--secondary-text); text-transform: uppercase; letter-spacing: 0.1em; }
+        .series-progress-grid { display: grid; grid-template-columns: repeat(9, 1fr); gap: 6px; }
+        .series-progress-cell { height: 6px; border-radius: 3px; background: rgba(255,255,255,0.06); }
+        .series-progress-cell.done { background: rgba(56,189,248,0.4); }
+        .series-progress-cell.active { background: var(--warning-color); box-shadow: 0 0 12px rgba(245,158,11,0.4); }
+        .abstract { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; margin: 3rem auto; max-width: 860px; text-align: left; backdrop-filter: blur(10px); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15); }
+        .abstract strong { color: var(--accent-color); display: block; margin-bottom: 0.6rem; font-size: 1.05rem; letter-spacing: 0.08em; }
+        .abstract p { font-size: 1.05rem; margin: 0; }
+        .sidebar { position: sticky; top: 2rem; padding: 1.5rem; background: rgba(30, 41, 59, 0.3); border-left: 2px solid var(--border-color); height: max-content; max-height: calc(100vh - 4rem); overflow-y: auto; }
+        .sidebar h3 { font-size: 0.85rem; margin-bottom: 1rem; color: var(--secondary-text); text-transform: uppercase; letter-spacing: 0.08em; }
+        .toc-list { list-style: none; }
+        .toc-list li { margin-bottom: 0.7rem; }
+        .toc-list a { color: var(--text-color); text-decoration: none; font-size: 0.92rem; transition: color 0.2s, padding 0.2s; opacity: 0.7; display: block; padding: 0.25rem 0 0.25rem 0.6rem; border-left: 2px solid transparent; }
+        .toc-list a:hover { opacity: 1; color: var(--accent-color); border-left: 2px solid var(--accent-color); }
+        .content { padding-bottom: 4rem; }
+        h2 { font-family: 'Noto Serif SC', serif; font-size: 1.85rem; font-weight: 700; margin: 4rem 0 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-color); }
+        h2 .num { color: var(--warning-color); font-weight: 600; margin-right: 0.6rem; font-family: 'Inter', sans-serif; }
+        h3 { font-size: 1.25rem; margin: 2.5rem 0 1rem; color: #f1f5f9; }
+        p { margin-bottom: 1.4rem; font-size: 1.05rem; color: #e2e8f0; }
+        .callout { margin: 2rem 0; padding: 1.3rem 1.6rem; border-radius: 10px; background: rgba(56, 189, 248, 0.04); border-left: 4px solid var(--accent-color); }
+        .callout-title { font-weight: 600; margin-bottom: 0.5rem; color: var(--accent-color); font-size: 0.95rem; letter-spacing: 0.05em; text-transform: uppercase; }
+        .callout.philosophical { background: rgba(245, 158, 11, 0.04); border-left-color: var(--warning-color); }
+        .callout.philosophical .callout-title { color: var(--warning-color); }
+        .callout.formal { background: rgba(16, 185, 129, 0.04); border-left-color: var(--success-color); }
+        .callout.formal .callout-title { color: var(--success-color); }
+        blockquote { margin: 2rem 0; padding: 1.2rem 1.8rem; font-size: 1.15rem; font-style: italic; color: var(--secondary-text); border-left: 4px solid #cbd5e1; background: rgba(255, 255, 255, 0.02); border-radius: 0 8px 8px 0; }
+        figure, .svg-container { margin: 2.5rem 0; text-align: center; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2); overflow: hidden; }
+        figcaption { margin-top: 1.2rem; font-size: 0.9rem; color: var(--secondary-text); line-height: 1.6; }
+        figcaption b { color: var(--accent-color); }
+        svg { max-width: 100%; height: auto; overflow: visible; }
+        .svg-node { fill: #1e293b; stroke: var(--accent-color); stroke-width: 2; rx: 8; }
+        .svg-text { fill: var(--text-color); font-family: 'Inter', sans-serif; font-size: 13px; text-anchor: middle; dominant-baseline: middle; }
+        .svg-text-title { fill: var(--accent-color); font-weight: 600; font-size: 15px; }
+        .svg-text-sub { fill: var(--secondary-text); font-size: 11px; }
+        .svg-edge { stroke: var(--secondary-text); stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+        .svg-edge-active { stroke: var(--accent-color); stroke-width: 2.5; marker-end: url(#arrowhead-active); fill: none; }
+        .svg-edge-dashed { stroke: var(--secondary-text); stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; marker-end: url(#arrowhead); }
+        .svg-group-box { fill: rgba(255, 255, 255, 0.02); stroke: var(--border-color); stroke-width: 1; stroke-dasharray: 4 4; rx: 12; }
+        table.ref-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
+        table.ref-table td { padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--border-color); vertical-align: top; color: #e2e8f0; }
+        table.ref-table td.ref-num { color: var(--accent-color); font-family: 'Inter', sans-serif; font-weight: 600; width: 3rem; white-space: nowrap; }
+        .series-nav { max-width: 1100px; margin: 4rem auto 2rem; padding: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; border-top: 1px solid var(--border-color); }
+        @media (max-width: 700px) { .series-nav { grid-template-columns: 1fr; } }
+        .series-nav a { display: block; padding: 1.3rem 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 10px; text-decoration: none; color: var(--text-color); transition: all 0.2s; }
+        .series-nav a:hover { border-color: var(--accent-color); background: rgba(56,189,248,0.05); transform: translateY(-2px); }
+        .series-nav .nav-label { display: block; font-size: 0.78rem; color: var(--secondary-text); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.3rem; }
+        .series-nav .nav-title { font-size: 1.05rem; font-weight: 600; color: var(--text-color); }
+        .series-nav .next { text-align: right; }
+        .nav-back { display: inline-block; margin: 2rem 0 0 2rem; color: var(--secondary-text); text-decoration: none; transition: color 0.3s; font-size: 0.9rem; }
+        .nav-back:hover { color: var(--text-color); }
+        sup.cite { color: var(--accent-color); font-size: 0.75rem; padding: 0 0.15rem; cursor: pointer; }
+        sup.cite a { color: inherit; text-decoration: none; }
+        ul.feature-list { padding-left: 1.5rem; margin-bottom: 1.4rem; }
+        ul.feature-list li { margin-bottom: 0.5rem; color: #e2e8f0; font-size: 1.02rem; }
+        ul.feature-list li strong { color: var(--warning-color); }
+    </style>
+</head>
+<body>
+    <div class="ambient-bg"></div>
+    <a href="../index.html" class="nav-back">← Back to Home</a>
+    <header class="hero">
+        <span class="hero-badge">第 07 篇 · 第四条件：自主性</span>
+        <h1 class="hero-title">自主性：内生驱动力的涌现</h1>
+        <p class="hero-subtitle">Autonomy — Intrinsic Drive Emerging from Body, Prediction, and Persistence</p>
+        <div class="hero-meta">
+            <span>May 19, 2026</span>
+            <span>Reading Time: 18 min</span>
+            <span>Category: Intrinsic Motivation</span>
+        </div>
+        <div class="series-progress">
+            <div class="series-progress-label">
+                <span>可替代之身 · AGI 六条件系列</span>
+                <span>07 / 09</span>
+            </div>
+            <div class="series-progress-grid">
+                <div class="series-progress-cell done"></div>
+                <div class="series-progress-cell done"></div>
+                <div class="series-progress-cell done"></div>
+                <div class="series-progress-cell done"></div>
+                <div class="series-progress-cell done"></div>
+                <div class="series-progress-cell done"></div>
+                <div class="series-progress-cell active"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+            </div>
+        </div>
+        <div class="abstract">
+            <strong>TL;DR</strong>
+            <p>当前 LLM Agent 的行为模式是"外驱"（extrinsic）——等待用户 prompt，执行指令，返回结果。这一模式在替代单次任务时有效，但在替代<em>岗位</em>时失效——因为岗位要求个体在无外部指令时<strong>自发生成目标、主动发现问题、持续优化流程</strong><sup class="cite"><a href="#ref-1">[1]</a></sup><sup class="cite"><a href="#ref-2">[2]</a></sup>。本文论证：自主性不是一个独立模块，而是<em>身体 + 预测 + 持续性</em>三条件的结构性后果——当系统具备资源约束（身体）、预测能力（世界模型）、跨时间连续性（持续记忆）时，内生驱动力必然涌现。这一论断在 Friston 的自由能原理<sup class="cite"><a href="#ref-3">[3]</a></sup>、Schmidhuber 的好奇心理论<sup class="cite"><a href="#ref-4">[4]</a></sup>、Klyubin 的赋能最大化<sup class="cite"><a href="#ref-5">[5]</a></sup>中有严格的数学表述。</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Table of Contents</h3>
+            <ul class="toc-list">
+                <li><a href="#sec1">1. 外驱 vs 内驱</a></li>
+                <li><a href="#sec2">2. 自主性的三重来源</a></li>
+                <li><a href="#sec3">3. 好奇心作为自由能最小化</a></li>
+                <li><a href="#sec4">4. 为什么 prompt 驱动无法产生自主性</a></li>
+                <li><a href="#sec5">5. 工程路径：从被动到主动</a></li>
+                <li><a href="#references">References</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+
+            <section id="sec1">
+                <h2><span class="num">01</span>外驱 vs 内驱：两种动机结构</h2>
+
+                <p>心理学中的"自我决定理论"（Self-Determination Theory, SDT）<sup class="cite"><a href="#ref-6">[6]</a></sup>区分了两类动机：<strong>外部动机</strong>（extrinsic motivation）——为了获得奖励或避免惩罚而行动；<strong>内部动机</strong>（intrinsic motivation）——因行动本身的满足感而行动。前者依赖外部触发，后者自发产生。</p>
+
+                <p>当前 LLM Agent 的标准工作流是纯外驱的：用户输入 prompt → 模型生成响应 → 任务结束。系统在两次 prompt 之间处于"休眠"状态，不产生任何自发行为。这一模式在替代"回答问题"类任务时有效，但在替代"持续改进系统"、"主动发现风险"、"优化团队协作"等岗位职责时结构性失效——因为这些职责要求个体<em>在无外部指令时仍然行动</em><sup class="cite"><a href="#ref-1">[1]</a></sup>。</p>
+
+                <p>本文的核心论断是：<strong>自主性不是通过添加"自发生成 prompt"模块实现的，而是身体 + 预测 + 持续性三条件的必然后果</strong>。当系统满足前三条件时，内生驱动力在数学上必然涌现——这不是工程设计，而是结构性必然。</p>
+
+                <figure class="svg-container">
+                    <svg viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8" />
+                            </marker>
+                            <marker id="arrowhead-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b" />
+                            </marker>
+                        </defs>
+
+                        <!-- Extrinsic motivation (left) -->
+                        <text class="svg-text svg-text-title" x="220" y="30" style="fill: #94a3b8">外部动机 · Extrinsic</text>
+
+                        <rect x="100" y="80" width="120" height="60" rx="8" fill="rgba(148,163,184,0.1)" stroke="#94a3b8" stroke-width="2"/>
+                        <text class="svg-text" x="160" y="105">外部触发</text>
+                        <text class="svg-text svg-text-sub" x="160" y="125">User Prompt</text>
+
+                        <path d="M 160 140 L 160 180" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+                        <rect x="100" y="180" width="120" height="60" rx="8" fill="rgba(148,163,184,0.1)" stroke="#94a3b8" stroke-width="2"/>
+                        <text class="svg-text" x="160" y="205">执行任务</text>
+                        <text class="svg-text svg-text-sub" x="160" y="225">Execute</text>
+
+                        <path d="M 160 240 L 160 280" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+                        <rect x="100" y="280" width="120" height="60" rx="8" fill="rgba(148,163,184,0.1)" stroke="#94a3b8" stroke-width="2"/>
+                        <text class="svg-text" x="160" y="305">休眠等待</text>
+                        <text class="svg-text svg-text-sub" x="160" y="325">Idle</text>
+
+                        <path d="M 100 310 Q 50 200 100 110" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 3" fill="none" marker-end="url(#arrowhead)"/>
+                        <text class="svg-text svg-text-sub" x="50" y="210" style="fill: #94a3b8">等待下次触发</text>
+
+                        <!-- Intrinsic motivation (right) -->
+                        <text class="svg-text svg-text-title" x="680" y="30" style="fill: #f59e0b">内部动机 · Intrinsic</text>
+
+                        <ellipse cx="680" cy="200" rx="150" ry="140" fill="rgba(245,158,11,0.05)" stroke="#f59e0b" stroke-width="2"/>
+
+                        <rect x="620" y="100" width="120" height="50" rx="8" fill="rgba(245,158,11,0.1)" stroke="#f59e0b" stroke-width="2"/>
+                        <text class="svg-text" x="680" y="120" style="fill: #f59e0b">目标生成</text>
+                        <text class="svg-text svg-text-sub" x="680" y="138">Goal Generation</text>
+
+                        <rect x="620" y="175" width="120" height="50" rx="8" fill="rgba(245,158,11,0.1)" stroke="#f59e0b" stroke-width="2"/>
+                        <text class="svg-text" x="680" y="195" style="fill: #f59e0b">主动探索</text>
+                        <text class="svg-text svg-text-sub" x="680" y="213">Active Exploration</text>
+
+                        <rect x="620" y="250" width="120" height="50" rx="8" fill="rgba(245,158,11,0.1)" stroke="#f59e0b" stroke-width="2"/>
+                        <text class="svg-text" x="680" y="270" style="fill: #f59e0b">持续优化</text>
+                        <text class="svg-text svg-text-sub" x="680" y="288">Continuous Improvement</text>
+
+                        <!-- Circular arrows showing continuous loop -->
+                        <path d="M 740 125 Q 780 150 780 200 Q 780 250 740 275" stroke="#f59e0b" stroke-width="2" fill="none" marker-end="url(#arrowhead-orange)"/>
+                        <path d="M 620 275 Q 580 250 580 200 Q 580 150 620 125" stroke="#f59e0b" stroke-width="2" fill="none" marker-end="url(#arrowhead-orange)"/>
+
+                        <text class="svg-text svg-text-sub" x="680" y="360" style="fill: #f59e0b">自发持续运行 · Self-sustaining</text>
+
+                        <!-- Comparison arrow -->
+                        <path d="M 280 200 L 480 200" stroke="#38bdf8" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrowhead)"/>
+                        <text class="svg-text svg-text-sub" x="380" y="190" style="fill: #38bdf8">范式转换</text>
+                    </svg>
+                    <figcaption><b>Fig 07-A · 外驱 vs 内驱动机流程。</b>左：外部动机驱动的 Agent 在两次 prompt 之间处于休眠状态，无自发行为。右：内部动机驱动的 Agent 形成自发持续的目标生成 → 探索 → 优化闭环，无需外部触发<sup class="cite"><a href="#ref-6">[6]</a></sup><sup class="cite"><a href="#ref-7">[7]</a></sup>。</figcaption>
+                </figure>
+
+                <div class="callout philosophical">
+                    <div class="callout-title">Philosophical Interface · 哲学接口</div>
+                    <p style="margin:0">Kant 在《道德形而上学基础》<sup class="cite"><a href="#ref-8">[8]</a></sup>中区分了"他律"（heteronomy）与"自律"（autonomy）：前者服从外部法则，后者服从自己给自己立的法则。当前 AI 话语把"自主"理解为"能独立完成任务"，但这仍是他律——任务由外部给定。真正的自律要求系统能<em>自己给自己立法</em>，即自发生成目标。本文论证的"自主性"正是 Kant 意义上的自律在工程层面的对应物。</p>
+                </div>
+            </section>
+
+            <section id="sec2">
+                <h2><span class="num">02</span>自主性的三重来源：资源压力、预测误差、长期回报</h2>
+
+                <p>把前三条件（身体、预测、持续性）的数学结构代入，我们得到自主性涌现的三条独立路径——它们在形式上不同，但在深层逻辑上统一：</p>
+
+                <h3>2.1 资源压力驱动（来自身体）</h3>
+                <p>第 04 篇论证：身体 = 不可逆时间 + 可耗资源 + 持续维护。当系统的 token 预算、API 配额、存储空间有限时，它<strong>不得不</strong>主动优化资源使用——否则会因资源耗尽而停止运行。这一压力在 Ashby 的"超稳定性"理论<sup class="cite"><a href="#ref-9">[9]</a></sup>中被形式化：任何维持自身存在的系统必然演化出主动调节机制，使关键变量保持在生存阈值内。</p>
+
+                <p>工程对应：一个具备 token 预算约束的 Agent，会主动压缩上下文、优先处理高价值任务、学习更高效的策略——这些都是<em>自发行为</em>，无需外部指令。</p>
+
+                <h3>2.2 预测误差驱动（来自预测）</h3>
+                <p>第 05 篇论证：预测能力 = 自由能最小化。Friston<sup class="cite"><a href="#ref-3">[3]</a></sup>指出，自由能最小化有两条路径：（a）更新信念以匹配观测，（b）选择动作以使未来观测匹配信念。后者意味着系统会<strong>主动寻找能降低预测不确定性的行动</strong>——这正是好奇心的数学定义<sup class="cite"><a href="#ref-4">[4]</a></sup><sup class="cite"><a href="#ref-10">[10]</a></sup>。</p>
+
+                <p>工程对应：一个具备世界模型的 Agent，会主动探索未知区域、测试边界情况、验证假设——因为这些行为能降低模型的预测误差，即最小化自由能。</p>
+
+                <h3>2.3 长期回报驱动（来自持续性）</h3>
+                <p>第 06 篇论证：持续性 = 跨时间的身份连续性。当系统预期自己会在未来继续存在时，它会<strong>主动投资于长期回报</strong>——学习新技能、建立声誉、优化流程——即使这些行为在短期内无直接收益<sup class="cite"><a href="#ref-11">[11]</a></sup>。这是强化学习中"折扣因子 γ → 1"的极限情况：当未来足够重要时，系统的行为从"短视优化"转向"长期规划"。</p>
+
+                <p>工程对应：一个预期长期运行的 Agent，会主动维护代码质量、文档完整性、团队关系——因为这些投资在长时间尺度上有正回报。</p>
+
+                <div class="callout formal">
+                    <div class="callout-title">Formal Box · 三条路径的数学统一</div>
+                    <p style="margin:0">三条路径可被统一为同一个优化目标：\( \max_{\pi} \mathbb{E}_{\pi} \left[ \sum_{t=0}^{\infty} \gamma^t \left( R_t - \lambda \mathcal{F}_t - \mu C_t \right) \right] \)，其中 \(R_t\) 是外部奖励，\(\mathcal{F}_t\) 是自由能（预测误差），\(C_t\) 是资源消耗。当 \(\gamma \to 1\)（长期视野）、\(\lambda > 0\)（预测驱动）、\(\mu > 0\)（资源约束）时，最优策略 \(\pi^*\) 必然包含自发探索、主动优化、长期投资——即自主性的三个标志<sup class="cite"><a href="#ref-3">[3]</a></sup><sup class="cite"><a href="#ref-12">[12]</a></sup>。</p>
+                </div>
+            </section>
+
+            <section id="sec3">
+                <h2><span class="num">03</span>好奇心作为自由能最小化：Schmidhuber 与 Friston 的汇流</h2>
+
+                <p>Jürgen Schmidhuber 在 1990 年代提出的"好奇心驱动学习"<sup class="cite"><a href="#ref-4">[4]</a></sup>与 Karl Friston 在 2010 年代提出的"自由能原理"<sup class="cite"><a href="#ref-3">[3]</a></sup>，从两个独立方向抵达了同一结论：<strong>内生驱动力 = 最小化预测误差的长期期望</strong>。</p>
+
+                <p>Schmidhuber 的形式化：Agent 维持两个模型——世界模型 \(M\) 与压缩器 \(C\)。好奇心定义为"学习进度"（learning progress）：\( \text{Curiosity}(s) = \Delta \text{Compression}(s) \)，即在状态 \(s\) 下，模型 \(M\) 对未来的压缩能力提升了多少。Agent 主动寻找能最大化学习进度的状态——这些状态既不是完全随机（无法学习），也不是完全确定（无新信息），而是处于"可学习边界"<sup class="cite"><a href="#ref-4">[4]</a></sup>。</p>
+
+                <p>Friston 的形式化：Agent 最小化"期望自由能"（expected free energy）：\( G = \mathbb{E}_{q(o,s|\pi)} \left[ \log q(s|\pi) - \log p(o,s) \right] \)，其中 \(\pi\) 是策略。\(G\) 可被分解为两项：（a）<em>风险</em>（ambiguity）——对未来状态的不确定性，（b）<em>新颖性</em>（novelty）——未来观测与先验信念的差异。最小化 \(G\) 等价于"寻找既能降低不确定性、又能带来新信息的行动"——这正是好奇心的另一种表述<sup class="cite"><a href="#ref-3">[3]</a></sup><sup class="cite"><a href="#ref-13">[13]</a></sup>。</p>
+
+                <p>两条路径在数学上等价，但工程含义不同。Schmidhuber 的路径强调"压缩进度"，适合离散任务；Friston 的路径强调"自由能梯度"，适合连续控制。两者的统一在 Pathak 等人的"内在好奇心模块"（ICM）<sup class="cite"><a href="#ref-14">[14]</a></sup>与 Burda 等人的"随机网络蒸馏"（RND）<sup class="cite"><a href="#ref-15">[15]</a></sup>中得到工程验证。</p>
+
+                <figure class="svg-container">
+                    <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <marker id="arrowhead-c" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8" />
+                            </marker>
+                        </defs>
+
+                        <!-- Horizontal axis: predictability -->
+                        <line x1="100" y1="380" x2="700" y2="380" stroke="#94a3b8" stroke-width="2"/>
+                        <polygon points="700,380 690,375 690,385" fill="#94a3b8"/>
+                        <text class="svg-text svg-text-sub" x="400" y="410">可预测性 · Predictability</text>
+
+                        <!-- Vertical axis: curiosity -->
+                        <line x1="100" y1="380" x2="100" y2="80" stroke="#94a3b8" stroke-width="2"/>
+                        <polygon points="100,80 95,90 105,90" fill="#94a3b8"/>
+                        <text class="svg-text svg-text-sub" x="100" y="60" transform="rotate(-90 100 60)">好奇心强度 · Curiosity</text>
+
+                        <!-- Bell curve showing curiosity peaks at intermediate predictability -->
+                        <path d="M 120 360 Q 200 300 280 200 Q 360 120 400 100 Q 440 120 520 200 Q 600 300 680 360"
+                              stroke="#f59e0b" stroke-width="3" fill="none"/>
+
+                        <!-- Three zones -->
+                        <rect x="120" y="320" width="140" height="60" rx="6" fill="rgba(148,163,184,0.05)" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 3"/>
+                        <text class="svg-text svg-text-sub" x="190" y="345" style="fill: #94a3b8">完全随机</text>
+                        <text class="svg-text svg-text-sub" x="190" y="365" style="fill: #94a3b8">无法学习</text>
+
+                        <rect x="330" y="120" width="140" height="60" rx="6" fill="rgba(245,158,11,0.1)" stroke="#f59e0b" stroke-width="2"/>
+                        <text class="svg-text svg-text-title" x="400" y="145" style="fill: #f59e0b">可学习边界</text>
+                        <text class="svg-text svg-text-sub" x="400" y="165" style="fill: #f59e0b">Learning Edge</text>
+
+                        <rect x="540" y="320" width="140" height="60" rx="6" fill="rgba(148,163,184,0.05)" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 3"/>
+                        <text class="svg-text svg-text-sub" x="610" y="345" style="fill: #94a3b8">完全确定</text>
+                        <text class="svg-text svg-text-sub" x="610" y="365" style="fill: #94a3b8">无新信息</text>
+
+                        <!-- Annotations -->
+                        <text class="svg-text svg-text-sub" x="190" y="300" style="fill: #94a3b8">低好奇心</text>
+                        <text class="svg-text svg-text-sub" x="610" y="300" style="fill: #94a3b8">低好奇心</text>
+                        <text class="svg-text svg-text-title" x="400" y="90" style="fill: #f59e0b">高好奇心</text>
+
+                        <!-- Title -->
+                        <text class="svg-text svg-text-title" x="400" y="30" style="font-size: 16px">好奇心的倒 U 型曲线 · Inverted-U Curiosity Curve</text>
+                    </svg>
+                    <figcaption><b>Fig 07-B · 好奇心在可预测性谱上的分布。</b>完全随机的环境无法学习（左），完全确定的环境无新信息（右），好奇心在"可学习边界"达到峰值——这些状态既有结构（可建模）又有不确定性（有信息增益）<sup class="cite"><a href="#ref-4">[4]</a></sup><sup class="cite"><a href="#ref-10">[10]</a></sup>。</figcaption>
+                </figure>
+
+                <blockquote>
+                    "An agent is curious about states where its model is improving the fastest."
+                    — Schmidhuber<sup class="cite"><a href="#ref-4">[4]</a></sup>对好奇心的压缩定义
+                </blockquote>
+            </section>
+
+            <section id="sec4">
+                <h2><span class="num">04</span>为什么 prompt 驱动无法产生自主性</h2>
+
+                <p>当前 LLM Agent 的标准架构是"prompt → 推理 → 输出"。即使引入 ReAct<sup class="cite"><a href="#ref-16">[16]</a></sup>、AutoGPT<sup class="cite"><a href="#ref-17">[17]</a></sup>等"多步推理"框架，系统仍然是<em>被动响应</em>——它在执行用户给定的目标，而非自发生成目标。这一架构在结构上无法产生自主性，原因有三：</p>
+
+                <h3>4.1 缺少资源压力</h3>
+                <p>当前 Agent 的 token 预算、API 调用次数通常由用户或平台承担，Agent 本身不承受资源耗尽的后果。没有资源压力，就没有"必须优化"的内生动力。这类似于一个员工的工资与绩效完全脱钩——他可能完成任务，但不会主动优化流程。</p>
+
+                <h3>4.2 缺少长期视野</h3>
+                <p>会话式 Agent 在每次调用结束后状态清空，因此它的"未来"只有当前会话的剩余步数。在这种短视野下，"投资于长期回报"的行为（学习新技能、建立声誉、优化代码质量）在数学上不是最优策略——因为这些投资的回报在会话结束后归零。</p>
+
+                <h3>4.3 缺少预测闭环</h3>
+                <p>当前 Agent 的世界模型是<em>隐式的</em>（嵌入在 LLM 权重中），而非<em>显式的</em>（可被查询、更新、验证的数据结构）。没有显式世界模型，系统无法计算"哪些行动能最大化学习进度"——因为它无法量化"学习进度"本身。这类似于一个没有反馈机制的控制系统——它可能执行指令，但无法自我调节。</p>
+
+                <p>这三个缺口不是工程实现的疏漏，而是<em>架构范式的结构性后果</em>。要产生自主性，必须从"会话式调用"切换到"长期运行进程"（第 06 篇）、从"隐式世界模型"切换到"显式状态转移模型"（第 05 篇）、从"用户承担资源"切换到"Agent 承担资源"（第 04 篇）。</p>
+
+                <div class="callout">
+                    <div class="callout-title">Engineering Note · 工程笔记</div>
+                    <p style="margin:0">AutoGPT<sup class="cite"><a href="#ref-17">[17]</a></sup>与 BabyAGI<sup class="cite"><a href="#ref-18">[18]</a></sup>尝试通过"任务分解 + 循环执行"模拟自主性，但它们的目标仍由用户在初始 prompt 中给定。真正的自主性要求系统能<em>在目标完成后自发生成新目标</em>——例如，完成代码审查后，主动检查测试覆盖率；完成文档后，主动验证示例代码；完成部署后，主动监控性能指标。这些"后续目标"不是用户指定的，而是从系统的长期价值函数中涌现的。</p>
+                </div>
+            </section>
+
+            <section id="sec5">
+                <h2><span class="num">05</span>工程路径：从被动到主动</h2>
+
+                <p>把上述理论转化为工程路径，需要三项架构变更：</p>
+
+                <h3>5.1 引入资源预算与生存压力</h3>
+                <ul class="feature-list">
+                    <li><strong>Token 预算</strong>：Agent 拥有固定的 token 配额（例如每月 1M token），超出后停止运行。</li>
+                    <li><strong>性能指标</strong>：Agent 的资源配额根据其历史表现动态调整——高效 Agent 获得更多资源。</li>
+                    <li><strong>维护成本</strong>：Agent 需要定期"支付"存储、计算、API 调用的成本，否则被回收。</li>
+                </ul>
+
+                <h3>5.2 构建显式世界模型与好奇心模块</h3>
+                <ul class="feature-list">
+                    <li><strong>状态转移模型</strong>：维持一个可查询的 \(p(s_{t+1}|s_t, a_t)\) 模型，预测动作的后果。</li>
+                    <li><strong>预测误差追踪</strong>：记录每次预测的误差 \(\varepsilon_t = |s_{t+1} - \hat{s}_{t+1}|\)，识别高误差区域。</li>
+                    <li><strong>探索策略</strong>：在任务间隙，主动探索高预测误差的状态——测试边界情况、验证假设、学习新模式。</li>
+                </ul>
+
+                <h3>5.3 实现长期价值函数与自发目标生成</h3>
+                <ul class="feature-list">
+                    <li><strong>折扣因子 γ → 1</strong>：在价值估计中使用接近 1 的折扣因子，使长期回报与短期回报同等重要。</li>
+                    <li><strong>内在奖励</strong>：除了外部任务奖励，引入内在奖励——学习进度、代码质量提升、团队协作改善。</li>
+                    <li><strong>目标库</strong>：维持一个"待优化目标"列表，在无外部任务时从中选择——优化文档、重构代码、学习新工具。</li>
+                </ul>
+
+                <p>这三项变更的组合，使系统从"等待指令的工具"转变为"主动优化的个体"。关键在于：这不是通过添加"自主性模块"实现的，而是通过<em>改变系统的生存条件</em>——当系统必须自己承担资源、预期长期存在、能量化学习进度时，自主性自然涌现。</p>
+
+                <div class="callout">
+                    <div class="callout-title">Series Bridge · 章节衔接</div>
+                    <p style="margin:0">身体（04）→ 预测（05）→ 持续（06）→ 自主（07）→ 学习（08）。前四条件确立了"主动个体"的结构：身体提供资源压力，预测提供行动逻辑，持续性提供长期视野，自主性提供内生驱动。但这四者仍假设系统的能力是<em>固定的</em>。下一条件"学习"要求系统能<em>在运行时演化自身能力</em>——否则它会在环境变化时失效。</p>
+                </div>
+            </section>
+
+            <section id="references">
+                <h2><span class="num">R</span>References</h2>
+                <table class="ref-table">
+                    <tr id="ref-1"><td class="ref-num">[1]</td><td>P. F. Drucker, <em>The Effective Executive</em>. New York: Harper &amp; Row, 1967.</td></tr>
+                    <tr id="ref-2"><td class="ref-num">[2]</td><td>D. Pink, <em>Drive: The Surprising Truth About What Motivates Us</em>. New York: Riverhead Books, 2009.</td></tr>
+                    <tr id="ref-3"><td class="ref-num">[3]</td><td>K. Friston, "The free-energy principle: a unified brain theory?," <em>Nature Reviews Neuroscience</em>, vol. 11, no. 2, pp. 127–138, Feb. 2010.</td></tr>
+                    <tr id="ref-4"><td class="ref-num">[4]</td><td>J. Schmidhuber, "Formal theory of creativity, fun, and intrinsic motivation (1990–2010)," <em>IEEE Trans. Autonomous Mental Development</em>, vol. 2, no. 3, pp. 230–247, 2010.</td></tr>
+                    <tr id="ref-5"><td class="ref-num">[5]</td><td>A. S. Klyubin, D. Polani, and C. L. Nehaniv, "Empowerment: A universal agent-centric measure of control," in <em>Proc. IEEE CEC</em>, 2005, pp. 128–135.</td></tr>
+                    <tr id="ref-6"><td class="ref-num">[6]</td><td>R. M. Ryan and E. L. Deci, "Self-determination theory and the facilitation of intrinsic motivation, social development, and well-being," <em>American Psychologist</em>, vol. 55, no. 1, pp. 68–78, 2000.</td></tr>
+                    <tr id="ref-7"><td class="ref-num">[7]</td><td>M. Csikszentmihalyi, <em>Flow: The Psychology of Optimal Experience</em>. New York: Harper &amp; Row, 1990.</td></tr>
+                    <tr id="ref-8"><td class="ref-num">[8]</td><td>I. Kant, <em>Grundlegung zur Metaphysik der Sitten</em>. Riga: Johann Friedrich Hartknoch, 1785.</td></tr>
+                    <tr id="ref-9"><td class="ref-num">[9]</td><td>W. R. Ashby, <em>Design for a Brain</em>, 2nd ed. London: Chapman &amp; Hall, 1960.</td></tr>
+                    <tr id="ref-10"><td class="ref-num">[10]</td><td>P.-Y. Oudeyer and F. Kaplan, "What is intrinsic motivation? A typology of computational approaches," <em>Frontiers in Neurorobotics</em>, vol. 1, p. 6, 2007.</td></tr>
+                    <tr id="ref-11"><td class="ref-num">[11]</td><td>R. S. Sutton and A. G. Barto, <em>Reinforcement Learning: An Introduction</em>, 2nd ed. Cambridge, MA: MIT Press, 2018.</td></tr>
+                    <tr id="ref-12"><td class="ref-num">[12]</td><td>K. Friston et al., "Active inference: A process theory," <em>Neural Computation</em>, vol. 29, no. 1, pp. 1–49, 2017.</td></tr>
+                    <tr id="ref-13"><td class="ref-num">[13]</td><td>T. Parr and K. J. Friston, "Uncertainty, epistemics and active inference," <em>J. R. Soc. Interface</em>, vol. 14, no. 136, 2017.</td></tr>
+                    <tr id="ref-14"><td class="ref-num">[14]</td><td>D. Pathak et al., "Curiosity-driven exploration by self-supervised prediction," in <em>Proc. ICML</em>, 2017.</td></tr>
+                    <tr id="ref-15"><td class="ref-num">[15]</td><td>Y. Burda et al., "Exploration by random network distillation," in <em>Proc. ICLR</em>, 2019.</td></tr>
+                    <tr id="ref-16"><td class="ref-num">[16]</td><td>S. Yao et al., "ReAct: Synergizing reasoning and acting in language models," in <em>Proc. ICLR</em>, 2023.</td></tr>
+                    <tr id="ref-17"><td class="ref-num">[17]</td><td>T. Richards, "AutoGPT," GitHub repository, 2023. [Online]. Available: https://github.com/Significant-Gravitas/AutoGPT</td></tr>
+                    <tr id="ref-18"><td class="ref-num">[18]</td><td>Y. Nakajima, "BabyAGI," GitHub repository, 2023. [Online]. Available: https://github.com/yoheinakajima/babyagi</td></tr>
+                </table>
+            </section>
+
+            <nav class="series-nav">
+                <a href="06-persistence-from-session-to-process.html" class="prev">
+                    <span class="nav-label">← Previous</span>
+                    <span class="nav-title">06 · 持续性：从会话到长期进程</span>
+                </a>
+                <a href="08-learning-metacognition-reflexive-loop.html" class="next">
+                    <span class="nav-label">Next →</span>
+                    <span class="nav-title">08 · 学习与元认知：反身闭环</span>
+                </a>
+            </nav>
+
+        </main>
+    </div>
+
+    <script>
+        document.querySelectorAll('.toc-list a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+            });
+        });
+    </script>
+</body>
+</html>
