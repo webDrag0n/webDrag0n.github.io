@@ -10,6 +10,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" href="../assets/topBarIcon.png" />
     <style>
+        /* Top Navigation Bar */
+        .top-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
+        .top-nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+        .top-nav-brand { font-size: 1.1rem; font-weight: 700; letter-spacing: 0.1em; color: var(--accent-color); text-decoration: none; padding: 6px 12px; border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 6px; transition: all 0.2s; }
+        .top-nav-brand:hover { background: rgba(56, 189, 248, 0.08); }
+        .top-nav-links { display: flex; list-style: none; gap: 8px; flex: 1; justify-content: center; margin: 0; padding: 0; }
+        .top-nav-links li { margin: 0; }
+        .top-nav-links a { display: inline-block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; font-size: 0.92rem; font-weight: 500; border-radius: 6px; transition: all 0.2s; position: relative; }
+        .top-nav-links a:hover { color: var(--accent-color); background: rgba(56, 189, 248, 0.06); }
+        .top-nav-links a.active { color: var(--accent-color); background: rgba(56, 189, 248, 0.1); }
+        .top-nav-links a.active::after { content: ""; position: absolute; left: 20%; right: 20%; bottom: -2px; height: 2px; background: var(--accent-color); border-radius: 2px; }
+        body { padding-top: 64px; }
+        @media (max-width: 768px) { .top-nav-inner { padding: 0 16px; gap: 12px; } .top-nav-links a { padding: 6px 10px; font-size: 0.82rem; } .top-nav-brand { padding: 4px 8px; font-size: 0.95rem; } }
+
         /* Specific styles for resource lists */
         .resource-list {
             list-style: none;
@@ -68,10 +82,19 @@
 </head>
 <body>
 
-    <header class="container" style="min-height: auto; padding: 40px 20px;">
-        <div class="project-top">
-            <a href="../index.html" class="btn">← Back to Home</a>
+    <nav class="top-nav">
+        <div class="top-nav-inner">
+            <a href="../index.html" class="top-nav-brand">LZX</a>
+            <ul class="top-nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../blogs/index.html">Blog</a></li>
+                <li><a href="ECA_main.html" class="active">Knowledge Base</a></li>
+            </ul>
         </div>
+    </nav>
+
+    <header class="container" style="min-height: auto; padding: 40px 20px;">
         <h1 class="hero-name" style="font-size: 3rem; margin-top: 20px;">AI Construction Site</h1>
         <p class="hero-description">Resources and materials for the Artificial Intelligence Club.</p>
     </header>

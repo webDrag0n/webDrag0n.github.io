@@ -219,40 +219,58 @@
         ],
         "blogs": [
             {
-                "title": "Individuals, Organizations, and Autonomy: Why Complex Systems Form 'Organizations'",
-                "description": "Explores how complex systems inevitably form organizational structures when facing limited resources, long-term goals, and task complexity. Organizations are autonomous feedback systems, not command chains.",
+                "title": "Existence, Individuation, and the Body: The Philosophical Preface to AGI",
+                "description": "Sets the philosophical foundation for the series by tracing three lineages — Maturana-Varela's autopoiesis, Heidegger's Being-in-the-world, Merleau-Ponty's body phenomenology — to argue that an individual is not defined by boundary but by the reflexive loop of self-maintenance.",
                 "date": "2026-05-13",
-                "url": "./blogs/01-individuals-organizations-autonomy.html"
+                "url": "./blogs/01-existence-individuation-body.html"
             },
             {
-                "title": "AI's First Principles: Why AI's Ultimate Value is Organizational Replacement",
-                "description": "Analyzes how AI's economic value fundamentally comes from replacing human labor and organizational capacity. The evolution of AI is about enabling fewer people to control larger organizational power.",
+                "title": "AGI's First Principle: Labor Replacement as Economic Value",
+                "description": "Argues that AGI's 'generality' should not be measured by MMLU or ARC scores but by the proportion of organized human labor it can replace. Anchors the engineering target from 'better answers' to 'replace a complete role and eventually a whole organization'.",
+                "date": "2026-05-14",
+                "url": "./blogs/02-agi-labor-replacement.html"
+            },
+            {
+                "title": "Organization as the Ceiling of Intelligence: Why Tool-Shaped AI Hits a Structural Wall",
+                "description": "Diagnoses the six structural deficits of current call-shaped agents against the six capabilities of mature organizations, with Anthropic's PBC + LTBT + RSP + antfooding model as a concrete case study of distributed autonomous loops.",
                 "date": "2026-05-15",
-                "url": "./blogs/02-ai-organizational-replacement.html"
+                "url": "./blogs/03-organization-as-intelligence-ceiling.html"
             },
             {
-                "title": "Why Current Agents Cannot Yet Replace Large Organizations",
-                "description": "Examines why existing agents, despite their capabilities, cannot replace complex organizations. The core issue is not intelligence but the lack of long-term autonomy and continuous existence.",
+                "title": "Body as Existence Carrier: Irreversible Time and Resource Constraints",
+                "description": "Reframes the body as not a robot shell but any carrier that binds an agent to irreversible time and depletable resources. Token budget, GPU quota, identity, reputation form a 'digital body' for purely virtual agents.",
+                "date": "2026-05-16",
+                "url": "./blogs/04-body-as-existence-carrier.html"
+            },
+            {
+                "title": "Prediction: World Models, Active Inference, and the Mathematical Equivalent of Existence",
+                "description": "Friston's free energy principle establishes prediction as not an optional module but the mathematical condition of existence itself. Unifies Helmholtz, predictive coding, World Models, JEPA into one framework.",
                 "date": "2026-05-17",
-                "url": "./blogs/03-agents-limitations.html"
+                "url": "./blogs/05-prediction-world-model-active-inference.html"
             },
             {
-                "title": "Autonomous Intelligence Must Possess Continuous Driving Force",
-                "description": "Argues that true autonomous intelligence requires internal driving forces to sustain itself, not external goal assignment. Discusses how existence pressure creates long-term behavioral patterns.",
+                "title": "Persistence: From Ephemeral Sessions to Long-Running Processes",
+                "description": "An agent that vanishes after each session is physically equivalent to a memory-less newborn. Decomposes time scales into token / turn / task / lifetime levels, and outlines persistent memory + identity + relationship architecture.",
+                "date": "2026-05-18",
+                "url": "./blogs/06-persistence-from-session-to-process.html"
+            },
+            {
+                "title": "Autonomy: From Instructions to Intrinsic Drive",
+                "description": "Autonomy is not 'no one giving commands' but 'must self-generate commands'. Derives intrinsic goals from body + irreversible time + resource scarcity using Ashby's ultrastability and Friston's free energy framework.",
                 "date": "2026-05-19",
-                "url": "./blogs/04-continuous-driving-force.html"
+                "url": "./blogs/07-autonomy-intrinsic-drive.html"
             },
             {
-                "title": "Why Embodied Intelligence Core is Not Robots but 'Existence Pressure'",
-                "description": "Reveals that embodied AI's true essence lies not in mechanical robotics but in the pressure of continuous existence. This pressure drives learning, adaptation, and organizational formation.",
+                "title": "Learning and Metacognition: The Reflexive Loop",
+                "description": "A frozen-weight model cannot be AGI. Combines continual / lifelong learning with Flavell-Nelson-Narens metacognition to argue that the reflexive loop is the precondition of self-model and stable identity.",
+                "date": "2026-05-20",
+                "url": "./blogs/08-learning-metacognition-reflexive-loop.html"
+            },
+            {
+                "title": "Synthesis: The Six Conditions of Digital Individuality",
+                "description": "The six conditions are not an additive feature list but a mutually-constitutive closed loop. Provides an engineering roadmap from current LLM agents to full digital individuals, plus open questions on alignment, rights, and multi-agent civilization.",
                 "date": "2026-05-21",
-                "url": "./blogs/05-embodiment-existence-pressure.html"
-            },
-            {
-                "title": "Why Future AI Will Evolve Into Long-Term Digital Individuals",
-                "description": "Synthesizes previous arguments to explain why AI's ultimate form will be persistent digital entities with organizational capacity, long-term goals, and continuous existence.",
-                "date": "2026-05-23",
-                "url": "./blogs/06-future-ai-digital-individuals.html"
+                "url": "./blogs/09-synthesis-digital-individual.html"
             }
         ]
     },
@@ -476,40 +494,58 @@
         ],
         "blogs": [
             {
-                "title": "个体、组织与自治：为什么复杂系统最终会形成'组织'",
-                "description": "探讨复杂系统在资源有限、目标长期化、任务复杂化后如何必然地形成组织结构。组织的本质是自治反馈系统，而不是命令链。",
+                "title": "存在、个体化与身体：AGI 的哲学前提",
+                "description": "沿 Maturana–Varela 的自创生、Heidegger 的在世存在、Merleau-Ponty 的身体现象学三条线索，论证个体不是由边界定义，而是由『持续维护自身以维持存在』的反身闭环所定义。为后续六章 AGI 本体条件铺设哲学地基。",
                 "date": "2026-05-13",
-                "url": "./blogs/01-individuals-organizations-autonomy.html"
+                "url": "./blogs/01-existence-individuation-body.html"
             },
             {
-                "title": "人工智能的第一性原理：为什么AI的终极价值是组织替代",
-                "description": "分析人工智能的经济价值如何从根本上来源于对人类劳动力与组织能力的替代。AI发展的方向始终是让更少的人控制更大的组织能力。",
+                "title": "AGI 的第一性原理：劳动替代即经济价值",
+                "description": "主张 AGI 的『通用性』不应由 MMLU 或 ARC 分数定义，而应由它能替代的组织化劳动比例衡量。把 AGI 工程目标从『更聪明的回答』切换为『替代完整岗位乃至组织』。",
+                "date": "2026-05-14",
+                "url": "./blogs/02-agi-labor-replacement.html"
+            },
+            {
+                "title": "组织即智能的上限：为什么工具式 AI 触及天花板",
+                "description": "把成熟组织的六项能力逐条对照当前 Agent 的六项结构缺陷，并以 Anthropic 的 PBC + LTBT + RSP + antfooding 体系为例，展示分布式自治闭环的真实当代样本。",
                 "date": "2026-05-15",
-                "url": "./blogs/02-ai-organizational-replacement.html"
+                "url": "./blogs/03-organization-as-intelligence-ceiling.html"
             },
             {
-                "title": "为什么现有智能体还无法替代大型组织",
-                "description": "分析为什么现有Agent虽然具备一定能力，但仍无法替代复杂组织。核心原因不在于智力不足，而在于缺乏长期自治能力和持续存在能力。",
+                "title": "身体：作为存在载体的不可逆时间流",
+                "description": "重新定义『身体』：不是机械外壳，而是让智能体被绑定在不可暂停、不可回滚、持续消耗资源的时间流中的载体。token 预算、GPU 配额、身份、声誉构成纯虚拟 Agent 的『数字身体』。",
+                "date": "2026-05-16",
+                "url": "./blogs/04-body-as-existence-carrier.html"
+            },
+            {
+                "title": "预测：世界模型、主动推理与对未来的建模",
+                "description": "Friston 自由能原理把预测从『一个智能模块』提升为『存在的数学等价条件』。统一 Helmholtz、predictive coding、World Models、JEPA 于主动推理框架，指出 LLM token 级预测的结构缺口。",
                 "date": "2026-05-17",
-                "url": "./blogs/03-agents-limitations.html"
+                "url": "./blogs/05-prediction-world-model-active-inference.html"
             },
             {
-                "title": "自治智能为什么必须具备持续驱动力",
-                "description": "论证真正的自治智能必须拥有能够长期维持自身运行的内部驱动力。自治的本质并不是自由，而是必须维持自身存在。",
+                "title": "持续性：从会话到长期进程",
+                "description": "每次会话即蒸发的 Agent 在物理上等同于无记忆的新生个体。把时间尺度分为 token / 回合 / 任务 / 生命四级，并讨论持久记忆 + 身份连续性 + 关系积累的工程架构。",
+                "date": "2026-05-18",
+                "url": "./blogs/06-persistence-from-session-to-process.html"
+            },
+            {
+                "title": "自主性：从指令到内生驱动",
+                "description": "自主不是『没人下命令』，而是『自己必须生成命令』。基于 Ashby ultrastability 与 Friston 自由能框架，从身体 + 不可逆时间 + 资源稀缺推出内生目标的结构性必然。",
                 "date": "2026-05-19",
-                "url": "./blogs/04-continuous-driving-force.html"
+                "url": "./blogs/07-autonomy-intrinsic-drive.html"
             },
             {
-                "title": "为什么具身智能的核心不是机器人而是'存在压力'",
-                "description": "揭示具身AI的真正本质不在机械机器人，而在于持续存在的压力。这种压力驱动学习、适应和组织形成。",
+                "title": "学习与元认知：反身闭环",
+                "description": "冻结权重的模型不能成为 AGI。把在线 / 持续 / 终身学习与 Flavell–Nelson-Narens 元认知模型合并，论证反身闭环是自我模型与长期身份的必要条件。",
+                "date": "2026-05-20",
+                "url": "./blogs/08-learning-metacognition-reflexive-loop.html"
+            },
+            {
+                "title": "综合：数字个体的六条件",
+                "description": "六条件不是并列 feature list 而是相互构成的闭环。给出从当前 LLM Agent 到完整数字个体的工程路线图，并探讨对齐、权利、多智能体文明等开放问题。",
                 "date": "2026-05-21",
-                "url": "./blogs/05-embodiment-existence-pressure.html"
-            },
-            {
-                "title": "为什么未来AI会演化为长期持续存在的数字个体",
-                "description": "综合前面的论点，解释为什么AI的终极形式将是具有组织能力、长期目标和持续存在的永久实体。",
-                "date": "2026-05-23",
-                "url": "./blogs/06-future-ai-digital-individuals.html"
+                "url": "./blogs/09-synthesis-digital-individual.html"
             }
         ]
     }

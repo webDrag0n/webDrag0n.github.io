@@ -13,10 +13,20 @@
 </head>
 <body>
 
-    <header class="container">
-        <div style="text-align: right; margin-bottom: 20px;">
-            <button id="lang-toggle" class="btn" style="padding: 5px 15px; font-size: 0.9rem;">EN | 中</button>
+    <nav class="top-nav">
+        <div class="top-nav-inner">
+            <a href="index.html" class="top-nav-brand">LZX</a>
+            <ul class="top-nav-links">
+                <li><a href="index.html" class="active" data-nav="home">Home</a></li>
+                <li><a href="index.html#about" data-nav="about">About</a></li>
+                <li><a href="blogs/index.html" data-nav="blog">Blog</a></li>
+                <li><a href="AI_ECA/ECA_main.html" data-nav="kb">Knowledge Base</a></li>
+            </ul>
+            <button id="lang-toggle" class="btn top-nav-lang">EN | 中</button>
         </div>
+    </nav>
+
+    <header class="container">
         <div class="hero-content">
             <div class="hero-greeting" id="hero-greeting">Hi, my name is</div>
             <h1 class="hero-name" id="hero-name">Lin Zexin</h1>

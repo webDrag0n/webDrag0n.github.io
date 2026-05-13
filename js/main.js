@@ -46,7 +46,11 @@ function updateStaticText(lang) {
             contactHeading: "Get In Touch",
             contactDesc: "I'm currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
             contactBtn: "Say Hello",
-            heroGreeting: "Hi, my name is"
+            heroGreeting: "Hi, my name is",
+            navHome: "Home",
+            navAbout: "About",
+            navBlog: "Blog",
+            navKb: "Knowledge Base"
         },
         zh: {
             aboutTitle: "关于我",
@@ -61,11 +65,20 @@ function updateStaticText(lang) {
             contactHeading: "保持联系",
             contactDesc: "我目前正在寻找新的机会，欢迎随时联系。无论您有问题还是只是想打个招呼，我都会尽力回复！",
             contactBtn: "打个招呼",
-            heroGreeting: "你好，我是"
+            heroGreeting: "你好，我是",
+            navHome: "主页",
+            navAbout: "个人介绍",
+            navBlog: "博客",
+            navKb: "知识库"
         }
     };
 
     const t = texts[lang];
+    document.querySelectorAll('[data-nav]').forEach(a => {
+        const key = a.getAttribute('data-nav');
+        const map = { home: t.navHome, about: t.navAbout, blog: t.navBlog, kb: t.navKb };
+        if (map[key]) a.textContent = map[key];
+    });
     document.getElementById('about-title').textContent = t.aboutTitle;
     document.getElementById('skills-intro').textContent = t.skillsIntro;
     document.getElementById('experience-title').textContent = t.experienceTitle;

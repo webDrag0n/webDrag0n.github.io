@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog · Lin Zexin</title>
+    <meta name="description" content="Blog posts by Lin Zexin on AGI, cognitive architectures, and embodied intelligence.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/topBarIcon.png">
+
+    <style>
+        :root {
+            --bg-color: #0f172a; --text-color: #e2e8f0; --accent-color: #38bdf8;
+            --secondary-text: #94a3b8; --card-bg: rgba(30, 41, 59, 0.55);
+            --border-color: rgba(255, 255, 255, 0.08); --glow-color: rgba(56, 189, 248, 0.3);
+            --success-color: #10b981; --warning-color: #f59e0b;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', 'Noto Serif SC', serif; background: var(--bg-color); color: var(--text-color); line-height: 1.7; padding-top: 64px; overflow-x: hidden; }
+
+        /* Top nav (same as index.html) */
+        .top-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
+        .top-nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+        .top-nav-brand { font-size: 1.1rem; font-weight: 700; letter-spacing: 0.1em; color: var(--accent-color); text-decoration: none; padding: 6px 12px; border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 6px; transition: all 0.2s; }
+        .top-nav-brand:hover { background: rgba(56, 189, 248, 0.08); }
+        .top-nav-links { display: flex; list-style: none; gap: 8px; flex: 1; justify-content: center; }
+        .top-nav-links a { display: inline-block; padding: 8px 16px; color: #cbd5e1; text-decoration: none; font-size: 0.92rem; font-weight: 500; border-radius: 6px; transition: all 0.2s; position: relative; }
+        .top-nav-links a:hover { color: var(--accent-color); background: rgba(56, 189, 248, 0.06); }
+        .top-nav-links a.active { color: var(--accent-color); background: rgba(56, 189, 248, 0.1); }
+        .top-nav-links a.active::after { content: ""; position: absolute; left: 20%; right: 20%; bottom: -2px; height: 2px; background: var(--accent-color); border-radius: 2px; }
+        .top-nav-lang { padding: 6px 14px; font-size: 0.85rem; background: transparent; border: 1px solid var(--accent-color); color: var(--accent-color); border-radius: 4px; cursor: pointer; font-weight: 500; transition: all 0.2s; }
+        .top-nav-lang:hover { background: rgba(56, 189, 248, 0.1); }
+
+        .ambient-bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -1;
+            background: radial-gradient(circle at 15% 50%, rgba(56, 189, 248, 0.04) 0%, transparent 50%), radial-gradient(circle at 85% 30%, rgba(16, 185, 129, 0.04) 0%, transparent 50%); }
+
+        .page-container { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem; }
+
+        /* Hero */
+        .blog-hero { text-align: center; padding: 3rem 1rem 2rem; max-width: 900px; margin: 0 auto; }
+        .blog-hero-badge { display: inline-block; padding: 0.3rem 0.9rem; border-radius: 999px; background: rgba(56,189,248,0.08); border: 1px solid rgba(56,189,248,0.3); color: var(--accent-color); font-size: 0.78rem; letter-spacing: 0.1em; margin-bottom: 1.2rem; text-transform: uppercase; }
+        .blog-hero-title { font-family: 'Noto Serif SC', serif; font-size: 2.6rem; font-weight: 700; line-height: 1.25; margin-bottom: 1rem; background: linear-gradient(120deg, #f8fafc 20%, #38bdf8 60%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .blog-hero-subtitle { color: var(--secondary-text); font-size: 1.05rem; font-style: italic; margin-bottom: 1.5rem; }
+        .blog-hero-desc { color: #cbd5e1; font-size: 1rem; max-width: 720px; margin: 0 auto; }
+
+        /* Series header */
+        .series-header { margin-top: 4rem; padding: 2rem 1.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; backdrop-filter: blur(10px); }
+        .series-header h2 { font-family: 'Noto Serif SC', serif; font-size: 1.5rem; font-weight: 700; color: #f8fafc; margin-bottom: 0.5rem; }
+        .series-header .series-tag { color: var(--accent-color); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.8rem; display: inline-block; }
+        .series-header p { color: var(--secondary-text); font-size: 0.95rem; }
+        .series-progress-grid { display: grid; grid-template-columns: repeat(9, 1fr); gap: 4px; margin-top: 1rem; }
+        .series-progress-cell { height: 4px; border-radius: 2px; background: rgba(56,189,248,0.4); }
+
+        /* Blog list grid */
+        .blog-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 2rem; }
+
+        .blog-card { display: block; padding: 1.5rem 1.8rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 10px; text-decoration: none; color: var(--text-color); transition: all 0.25s; position: relative; overflow: hidden; backdrop-filter: blur(10px); }
+        .blog-card::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--accent-color); opacity: 0; transition: opacity 0.25s; }
+        .blog-card:hover { border-color: rgba(56, 189, 248, 0.5); transform: translateX(4px); background: rgba(30, 41, 59, 0.8); }
+        .blog-card:hover::before { opacity: 1; }
+
+        .blog-card-head { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 0.6rem; flex-wrap: wrap; }
+        .blog-card-num { color: var(--accent-color); font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.08em; }
+        .blog-card-date { color: var(--secondary-text); font-size: 0.82rem; margin-left: auto; }
+        .blog-card-title { font-family: 'Noto Serif SC', serif; font-size: 1.25rem; font-weight: 700; color: #f1f5f9; line-height: 1.35; margin-bottom: 0.6rem; flex: 1 0 100%; order: 10; }
+        .blog-card-desc { color: var(--secondary-text); font-size: 0.95rem; line-height: 1.65; }
+        .blog-card-arrow { display: inline-block; margin-top: 0.8rem; color: var(--accent-color); font-size: 0.88rem; font-weight: 500; }
+        .blog-card-arrow::after { content: " →"; transition: transform 0.2s; display: inline-block; }
+        .blog-card:hover .blog-card-arrow::after { transform: translateX(4px); }
+
+        footer { text-align: center; padding: 3rem 1rem; color: #64748b; font-size: 0.88rem; border-top: 1px solid var(--border-color); margin-top: 4rem; }
+
+        @media (max-width: 768px) {
+            .top-nav-inner { padding: 0 16px; gap: 12px; }
+            .top-nav-links a { padding: 6px 10px; font-size: 0.82rem; }
+            .blog-hero-title { font-size: 2rem; }
+            .page-container { padding: 2rem 1rem; }
+            .blog-card { padding: 1.2rem 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="ambient-bg"></div>
+
+    <nav class="top-nav">
+        <div class="top-nav-inner">
+            <a href="../index.html" class="top-nav-brand">LZX</a>
+            <ul class="top-nav-links">
+                <li><a href="../index.html" data-nav="home">Home</a></li>
+                <li><a href="../index.html#about" data-nav="about">About</a></li>
+                <li><a href="index.html" class="active" data-nav="blog">Blog</a></li>
+                <li><a href="../AI_ECA/ECA_main.html" data-nav="kb">Knowledge Base</a></li>
+            </ul>
+            <button id="lang-toggle" class="top-nav-lang">EN | 中</button>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <header class="blog-hero">
+            <span class="blog-hero-badge" data-i18n="blogBadge">Writings</span>
+            <h1 class="blog-hero-title" data-i18n="blogTitle">博客与文章</h1>
+            <p class="blog-hero-subtitle" data-i18n="blogSubtitle">On AGI, Cognitive Architectures, and the Philosophy of Artificial Minds</p>
+            <p class="blog-hero-desc" data-i18n="blogDesc">长文为主，跨学科引用，论文级视觉呈现。当前主打系列：《可替代之身 · AGI 六条件》——从劳动替代命题反推出 AGI 必须具备的六项本体条件。</p>
+        </header>
+
+        <section class="series-header">
+            <span class="series-tag" data-i18n="seriesTag">Flagship Series · 9 Parts</span>
+            <h2 data-i18n="seriesTitle">可替代之身：从劳动替代命题反推 AGI 的六个本体条件</h2>
+            <p data-i18n="seriesDesc">Body, Prediction, Persistence, Autonomy, Learning, Metacognition — the six irreducible requirements for artificial general intelligence, derived from first principles of economic value and philosophical ontology.</p>
+            <div class="series-progress-grid">
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+                <div class="series-progress-cell"></div>
+            </div>
+        </section>
+
+        <div class="blog-grid" id="blog-grid"></div>
+    </div>
+
+    <footer>
+        <p>Designed &amp; Built by Lin Zexin</p>
+    </footer>
+
+    <script>
+        const blogData = {
+            en: [
+                { num: "01", title: "Existence, Individuation, and the Body: The Philosophical Preface to AGI", date: "2026-05-13", desc: "Sets the philosophical foundation for the series by tracing three lineages — Maturana-Varela's autopoiesis, Heidegger's Being-in-the-world, Merleau-Ponty's body phenomenology — to argue that an individual is not defined by boundary but by the reflexive loop of self-maintenance.", url: "01-existence-individuation-body.html" },
+                { num: "02", title: "AGI's First Principle: Labor Replacement as Economic Value", date: "2026-05-14", desc: "Argues that AGI's 'generality' should not be measured by MMLU or ARC scores but by the proportion of organized human labor it can replace. Anchors the engineering target from 'better answers' to 'replace a complete role and eventually a whole organization'.", url: "02-agi-labor-replacement.html" },
+                { num: "03", title: "Organization as the Ceiling of Intelligence: Why Tool-Shaped AI Hits a Structural Wall", date: "2026-05-15", desc: "Diagnoses the six structural deficits of current call-shaped agents against the six capabilities of mature organizations, with Anthropic's PBC + LTBT + RSP + antfooding model as a concrete case study of distributed autonomous loops.", url: "03-organization-as-intelligence-ceiling.html" },
+                { num: "04", title: "Body as Existence Carrier: Irreversible Time and Resource Constraints", date: "2026-05-16", desc: "Reframes the body as not a robot shell but any carrier that binds an agent to irreversible time and depletable resources. Token budget, GPU quota, identity, reputation form a 'digital body' for purely virtual agents.", url: "04-body-as-existence-carrier.html" },
+                { num: "05", title: "Prediction: World Models, Active Inference, and the Mathematical Equivalent of Existence", date: "2026-05-17", desc: "Friston's free energy principle establishes prediction as not an optional module but the mathematical condition of existence itself. Unifies Helmholtz, predictive coding, World Models, JEPA into one framework.", url: "05-prediction-world-model-active-inference.html" },
+                { num: "06", title: "Persistence: From Ephemeral Sessions to Long-Running Processes", date: "2026-05-18", desc: "An agent that vanishes after each session is physically equivalent to a memory-less newborn. Decomposes time scales into token / turn / task / lifetime levels, and outlines persistent memory + identity + relationship architecture.", url: "06-persistence-from-session-to-process.html" },
+                { num: "07", title: "Autonomy: From Instructions to Intrinsic Drive", date: "2026-05-19", desc: "Autonomy is not 'no one giving commands' but 'must self-generate commands'. Derives intrinsic goals from body + irreversible time + resource scarcity using Ashby's ultrastability and Friston's free energy framework.", url: "07-autonomy-intrinsic-drive.html" },
+                { num: "08", title: "Learning and Metacognition: The Reflexive Loop", date: "2026-05-20", desc: "A frozen-weight model cannot be AGI. Combines continual / lifelong learning with Flavell-Nelson-Narens metacognition to argue that the reflexive loop is the precondition of self-model and stable identity.", url: "08-learning-metacognition-reflexive-loop.html" },
+                { num: "09", title: "Synthesis: The Six Conditions of Digital Individuality", date: "2026-05-21", desc: "The six conditions are not an additive feature list but a mutually-constitutive closed loop. Provides an engineering roadmap from current LLM agents to full digital individuals, plus open questions on alignment, rights, and multi-agent civilization.", url: "09-synthesis-digital-individual.html" }
+            ],
+            zh: [
+                { num: "01", title: "存在、个体化与身体：AGI 的哲学前提", date: "2026-05-13", desc: "沿 Maturana–Varela 的自创生、Heidegger 的在世存在、Merleau-Ponty 的身体现象学三条线索，论证个体不是由边界定义，而是由『持续维护自身以维持存在』的反身闭环所定义。为后续六章 AGI 本体条件铺设哲学地基。", url: "01-existence-individuation-body.html" },
+                { num: "02", title: "AGI 的第一性原理：劳动替代即经济价值", date: "2026-05-14", desc: "主张 AGI 的『通用性』不应由 MMLU 或 ARC 分数定义，而应由它能替代的组织化劳动比例衡量。把 AGI 工程目标从『更聪明的回答』切换为『替代完整岗位乃至组织』。", url: "02-agi-labor-replacement.html" },
+                { num: "03", title: "组织即智能的上限：为什么工具式 AI 触及天花板", date: "2026-05-15", desc: "把成熟组织的六项能力逐条对照当前 Agent 的六项结构缺陷，并以 Anthropic 的 PBC + LTBT + RSP + antfooding 体系为例，展示分布式自治闭环的真实当代样本。", url: "03-organization-as-intelligence-ceiling.html" },
+                { num: "04", title: "身体：作为存在载体的不可逆时间流", date: "2026-05-16", desc: "重新定义『身体』：不是机械外壳，而是让智能体被绑定在不可暂停、不可回滚、持续消耗资源的时间流中的载体。token 预算、GPU 配额、身份、声誉构成纯虚拟 Agent 的『数字身体』。", url: "04-body-as-existence-carrier.html" },
+                { num: "05", title: "预测：世界模型、主动推理与对未来的建模", date: "2026-05-17", desc: "Friston 自由能原理把预测从『一个智能模块』提升为『存在的数学等价条件』。统一 Helmholtz、predictive coding、World Models、JEPA 于主动推理框架，指出 LLM token 级预测的结构缺口。", url: "05-prediction-world-model-active-inference.html" },
+                { num: "06", title: "持续性：从会话到长期进程", date: "2026-05-18", desc: "每次会话即蒸发的 Agent 在物理上等同于无记忆的新生个体。把时间尺度分为 token / 回合 / 任务 / 生命四级，并讨论持久记忆 + 身份连续性 + 关系积累的工程架构。", url: "06-persistence-from-session-to-process.html" },
+                { num: "07", title: "自主性：从指令到内生驱动", date: "2026-05-19", desc: "自主不是『没人下命令』，而是『自己必须生成命令』。基于 Ashby ultrastability 与 Friston 自由能框架，从身体 + 不可逆时间 + 资源稀缺推出内生目标的结构性必然。", url: "07-autonomy-intrinsic-drive.html" },
+                { num: "08", title: "学习与元认知：反身闭环", date: "2026-05-20", desc: "冻结权重的模型不能成为 AGI。把在线 / 持续 / 终身学习与 Flavell–Nelson-Narens 元认知模型合并，论证反身闭环是自我模型与长期身份的必要条件。", url: "08-learning-metacognition-reflexive-loop.html" },
+                { num: "09", title: "综合：数字个体的六条件", date: "2026-05-21", desc: "六条件不是并列 feature list 而是相互构成的闭环。给出从当前 LLM Agent 到完整数字个体的工程路线图，并探讨对齐、权利、多智能体文明等开放问题。", url: "09-synthesis-digital-individual.html" }
+            ]
+        };
+
+        const i18n = {
+            en: {
+                navHome: "Home", navAbout: "About", navBlog: "Blog", navKb: "Knowledge Base",
+                blogBadge: "Writings", blogTitle: "Blog & Articles", blogSubtitle: "On AGI, Cognitive Architectures, and the Philosophy of Artificial Minds",
+                blogDesc: "Long-form essays with cross-disciplinary citations and paper-grade visuals. Flagship series: The Replaceable Self — The Six Ontological Conditions of AGI Derived from Labor Replacement.",
+                seriesTag: "Flagship Series · 9 Parts",
+                seriesTitle: "The Replaceable Self: Deriving the Six Ontological Conditions of AGI from the Labor-Replacement Thesis",
+                seriesDesc: "Body, Prediction, Persistence, Autonomy, Learning, Metacognition — the six irreducible requirements for artificial general intelligence, derived from first principles of economic value and philosophical ontology.",
+                readMore: "Read →"
+            },
+            zh: {
+                navHome: "主页", navAbout: "个人介绍", navBlog: "博客", navKb: "知识库",
+                blogBadge: "写作", blogTitle: "博客与文章", blogSubtitle: "关于 AGI、认知架构与人工心智的哲学",
+                blogDesc: "长文为主，跨学科引用，论文级视觉呈现。当前主打系列：《可替代之身 · AGI 六条件》——从劳动替代命题反推出 AGI 必须具备的六项本体条件。",
+                seriesTag: "主打系列 · 9 篇",
+                seriesTitle: "可替代之身：从劳动替代命题反推 AGI 的六个本体条件",
+                seriesDesc: "身体、预测、持续、自主、学习、元认知——从经济价值的第一性原理与哲学本体论出发，推导出 AGI 必须满足的六项不可约条件。",
+                readMore: "阅读 →"
+            }
+        };
+
+        let currentLang = localStorage.getItem('lang') || 'en';
+
+        function render() {
+            const t = i18n[currentLang];
+            const blogs = blogData[currentLang];
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key]) el.textContent = t[key];
+            });
+            document.querySelectorAll('[data-nav]').forEach(a => {
+                const key = a.getAttribute('data-nav');
+                const map = { home: t.navHome, about: t.navAbout, blog: t.navBlog, kb: t.navKb };
+                if (map[key]) a.textContent = map[key];
+            });
+
+            const grid = document.getElementById('blog-grid');
+            grid.innerHTML = '';
+            blogs.forEach(b => {
+                const a = document.createElement('a');
+                a.href = b.url;
+                a.className = 'blog-card';
+                a.innerHTML = `
+                    <div class="blog-card-head">
+                        <span class="blog-card-num">#${b.num}</span>
+                        <span class="blog-card-date">${b.date}</span>
+                        <h3 class="blog-card-title">${b.title}</h3>
+                    </div>
+                    <p class="blog-card-desc">${b.desc}</p>
+                    <span class="blog-card-arrow">${t.readMore.replace(' →', '')}</span>
+                `;
+                grid.appendChild(a);
+            });
+        }
+
+        document.getElementById('lang-toggle').addEventListener('click', () => {
+            currentLang = currentLang === 'en' ? 'zh' : 'en';
+            localStorage.setItem('lang', currentLang);
+            render();
+        });
+
+        render();
+    </script>
+</body>
+</html>
