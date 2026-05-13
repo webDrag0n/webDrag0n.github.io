@@ -26,8 +26,22 @@
         </div>
     </nav>
 
-    <main class="container" style="padding-top: 100px;">
-        <section id="about">
+    <main class="container with-sidebar" style="padding-top: 100px;">
+        <aside class="sidebar">
+            <h3>Table of Contents</h3>
+            <ul class="toc-list" id="toc">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#blogs">Blogs & Articles</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#research-experience">Research Experience</a></li>
+                <li><a href="#experience">Where I've Worked</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#awards">Awards</a></li>
+            </ul>
+        </aside>
+        
+        <div class="main-content">
+            <section id="about">
             <h2 class="section-title" id="about-title">About Me</h2>
             <div class="about-grid">
                 <div class="about-text">
@@ -86,6 +100,7 @@
                 <!-- Awards will be injected here -->
             </div>
         </section>
+        </div>
     </main>
 
     <footer>
