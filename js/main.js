@@ -79,26 +79,22 @@ function updateStaticText(lang) {
         const map = { home: t.navHome, about: t.navAbout, blog: t.navBlog, kb: t.navKb };
         if (map[key]) a.textContent = map[key];
     });
-    document.getElementById('about-title').textContent = t.aboutTitle;
-    document.getElementById('skills-intro').textContent = t.skillsIntro;
-    document.getElementById('experience-title').textContent = t.experienceTitle;
-    document.getElementById('research-title').textContent = t.researchTitle;
-    document.getElementById('blogs-title').textContent = t.blogsTitle;
-    document.getElementById('publications-title').textContent = t.publicationsTitle;
-    document.getElementById('education-title').textContent = t.educationTitle;
-    document.getElementById('awards-title').textContent = t.awardsTitle;
-    document.getElementById('contact-title').textContent = t.contactTitle;
-    document.getElementById('contact-heading').textContent = t.contactHeading;
-    document.getElementById('contact-desc').textContent = t.contactDesc;
-    document.getElementById('contact-btn').textContent = t.contactBtn;
-    document.getElementById('hero-greeting').textContent = t.heroGreeting;
+    document.getElementById('contact-title') && (document.getElementById('contact-title').textContent = t.contactTitle);
+    document.getElementById('contact-heading') && (document.getElementById('contact-heading').textContent = t.contactHeading);
+    document.getElementById('contact-desc') && (document.getElementById('contact-desc').textContent = t.contactDesc);
+    document.getElementById('contact-btn') && (document.getElementById('contact-btn').textContent = t.contactBtn);
+    document.getElementById('hero-greeting') && (document.getElementById('hero-greeting').textContent = t.heroGreeting);
 }
 
 function renderProfile(profile, lang) {
-    document.getElementById('hero-name').textContent = profile.name;
-    document.getElementById('hero-title').textContent = profile.title;
-    document.getElementById('hero-desc').textContent = profile.summary;
-    document.getElementById('about-desc').textContent = profile.about;
+    const nameEl = document.getElementById('hero-name');
+    if (nameEl) nameEl.textContent = profile.name;
+    const titleEl = document.getElementById('hero-title');
+    if (titleEl) titleEl.textContent = profile.title;
+    const descEl = document.getElementById('hero-desc');
+    if (descEl) descEl.textContent = profile.summary;
+    const aboutDescEl = document.getElementById('about-desc');
+    if (aboutDescEl) aboutDescEl.textContent = profile.about;
     
     const avatarImg = document.getElementById('about-avatar');
     if (avatarImg) avatarImg.src = profile.avatar;
