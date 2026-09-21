@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年09月21日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年09月21日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>阿里 Qwen 团队 9 月 19 日发布实时同传模型 Qwen3.8-LiveTranslate，60 种语言平均延迟压到 2.3 秒，成为本周最热的开源发布；具身智能方向持续火热，Show-Harness 让 VLM 直接"玩"机器人，并同步开源了 Awesome Multimodal Embodied Agents 综述列表；推理效率方面 When2Think 和 ASPIRE 分别从"何时思考"与"投机解码"两端降低推理成本。sindresorhus/awesome 主仓库 PR 仍处于暂停清理期，但社区新兴的 AI Agent / 具身智能 awesome 列表增长迅猛。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 Hot · 开源模型发布</div>
+    <div class="title"><a href="https://qwen.ai/blog?id=qwen3.8-livetranslate">Qwen3.8-LiveTranslate：阿里发布实时同传模型，60 语言平均延迟仅 2.3 秒</a></div>
+    <div class="summary">Qwen 团队 9 月 19 日发布新一代实时同声传译模型 Qwen3.8-LiveTranslate。基于 Interleave 架构，模型可在说话人仍在讲话时同步输出翻译文本与语音，支持可选视频帧输入。平均延迟（LAAL）从 2.8s 降至 2.3s，覆盖 60 种语言；新能力包括实时说话人分离与归属、更稳定的声音克隆、源文-译文同步输出。在忠实度、流畅度与简洁性上全面提升，被视为开源同传方向的重要一步。</div>
+    <div class="tags">
+      <span class="tag hot">🔥 热门</span>
+      <span class="tag">多模态</span>
+      <span class="tag">语音翻译</span>
+      <span class="tag">开源</span>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 Hot · 具身智能</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.10522">Show-Harness：一个 VLM Agent 就能"玩"机器人</a></div>
+    <div class="summary">NUS ShowLab 提出 Show-Harness——一个具身 Harness，通过紧凑的语义接口把 VLM 的意图映射为动作，让基础视觉语言模型零样本操控真实机器人与 GUI。离散语义动作由具体载体模块解释执行，支持跨机器人、跨界面的零样本部署与高效微调。团队同步开源了 <strong>Awesome Multimodal Embodied Agents</strong> 综述仓库，系统梳理从 computer-use 到 robot-use 的 Agent + 机器人全景。</div>
+    <div class="tags">
+      <span class="tag hot">🔥 热门</span>
+      <span class="tag">具身智能</span>
+      <span class="tag">VLM</span>
+      <span class="tag">机器人</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>LLM / 推理</div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CL · 2026-09</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.19671">When2Think：为混合推理模型学习难度感知的长度控制</a></div>
+    <div class="summary">提出混合推理的后训练框架，通过实例级难度感知控制（IDAC）机制动态分配计算资源，在单一模型内平衡 System 1（直接回答）与 System 2（深度推理），让模型"该想才想"，显著降低简单问题上的过度思考开销。</div>
+    <div class="tags">
+      <span class="tag">LLM</span>
+      <span class="tag">高效推理</span>
+      <span class="tag">HuggingFace Daily</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.LG/cs.CL/cs.DC · 2026-09-16</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.17943">ASPIRE：面向长上下文 LLM 推理的异步批量自投机解码</a></div>
+    <div class="summary">长上下文推理的瓶颈在于注意力机制反复读取 KV cache 导致解码受内存带宽限制。ASPIRE 通过异步批量自投机解码（Asynchronous Batched Self-Speculative Decoding）提升长上下文服务的吞吐与效率，是本月推理系统方向的代表性工作。</div>
+    <div class="tags">
+      <span class="tag">推理优化</span>
+      <span class="tag">投机解码</span>
+      <span class="tag">长上下文</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CL · 2026-09</div>
+    <div class="title"><a href="https://arxiv.org/html/2609.18849">Ask the Tool, Don't Guess：Agent 的工具调用本身记录着进度</a></div>
+    <div class="summary">研究 SWE-agent 类编程智能体如何利用工具调用中的进度信号：进度条、tail、重定向等细节会显著影响 agent 对任务状态的判断。论文主张"问工具而不是猜"，为设计更可靠的 agent 工具接口提供了实证依据。</div>
+    <div class="tags">
+      <span class="tag">Agent</span>
+      <span class="tag">工具调用</span>
+      <span class="tag">SWE</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态 / VLM</div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CV · 2026-09</div>
+    <div class="title"><a href="https://arxiv.org/html/2609.15863">LynnReal-Omni：面向智能体场景的原生多模态视频生成</a></div>
+    <div class="summary">针对视频扩散模型难以精确控制、长镜头外观与交互漂移的问题，LynnReal-Omni 采用分块（chunk-wise）生成：每一步以前序视频上下文为条件生成 17 帧新画面，实现长时序一致的可控视频生成，面向 agentic 应用场景。</div>
+    <div class="tags">
+      <span class="tag">视频生成</span>
+      <span class="tag">多模态</span>
+      <span class="tag">世界模型</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CV · 2026-09</div>
+    <div class="title"><a href="https://arxiv.org/html/2609.15683">V-ICAL Bench：评估多模态智能体的视频上下文学习能力</a></div>
+    <div class="summary">提出视频上下文学习（Video In-Context Learning）基准：多模态 agent 需要从视频示范中提炼可执行策略、在新视觉状态中进行落地，并依据环境反馈迭代修正动作。该基准系统考察 VLM agent "看视频学做事"的能力边界。</div>
+    <div class="tags">
+      <span class="tag">VLM</span>
+      <span class="tag">基准</span>
+      <span class="tag">上下文学习</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>具身智能 / 机器人</div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.RO · 2026-09-17</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.19138">In-Context Robot Learning with VLM Agents（GPT-Policy）</a></div>
+    <div class="summary">真实机器人实验表明：即使没有机器人动作标签，人类视频示范也能提升任务完成率；在接触敏感任务上，对齐的动作参考带来进一步增益。该工作被视为通过上下文学习实现机器人自适应（GPT-Policy）的重要一步。</div>
+    <div class="tags">
+      <span class="tag">机器人学习</span>
+      <span class="tag">VLM Agent</span>
+      <span class="tag">上下文学习</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.RO · 2026-09-16</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.19340">ViLoMan：人形机器人视觉-本体感知全身移动操作技能学习</a></div>
+    <div class="summary">面向人形机器人的全身 loco-manipulation，融合视觉与本体感知学习统一的移动操作技能，在多种真实任务上验证，展示了人形机器人从"会走"到"边走边干活"的最新进展。</div>
+    <div class="tags">
+      <span class="tag">人形机器人</span>
+      <span class="tag">移动操作</span>
+      <span class="tag">强化学习</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📚</span>开源与 Awesome 列表动态</div>
+
+  <div class="card">
+    <div class="source">GitHub · showlab · 2026-09 新发</div>
+    <div class="title"><a href="https://github.com/showlab/Awesome-Multimodal-Embodied-Agent">Awesome Multimodal Embodied Agents：从 Computer-Use 到 Robot-Use</a></div>
+    <div class="summary">NUS ShowLab 随 Show-Harness 论文同步发布的综述型 awesome 列表，系统梳理多模态具身智能体全景：GUI agent、computer-use、robot-use、VLA 模型等。本月新上榜，增长迅速，是跟踪"Agent + 机器人"交叉领域的优质入口。</div>
+    <div class="tags">
+      <span class="tag hot">🆕 新上榜</span>
+      <span class="tag">awesome list</span>
+      <span class="tag">具身智能</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · VoltAgent · 持续更新</div>
+    <div class="title"><a href="https://github.com/VoltAgent/awesome-ai-agent-papers">awesome-ai-agent-papers：2026 年 AI Agent 论文精选</a></div>
+    <div class="summary">专注收录 2026 年 AI agent 研究论文的精选列表，覆盖 agent 工程、记忆、评测、工作流与自治系统。团队每周从 arXiv 数百篇新论文中筛选与 agent 生态直接相关的工作并分类整理，近期活跃度与 star 增长明显。</div>
+    <div class="tags">
+      <span class="tag">awesome list</span>
+      <span class="tag">Agent</span>
+      <span class="tag">论文合集</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · RUC-NLPIR · 持续更新</div>
+    <div class="title"><a href="https://github.com/RUC-NLPIR/Awesome-Long-Horizon-Agents">Awesome-Long-Horizon-Agents：长程智能体路线图</a></div>
+    <div class="summary">人大 NLPIR 维护的长程 agent 论文列表，近期新增 LiteGUI（RL 蒸馏紧凑型 GUI agent）、Revisiting DAgger in the Era of LLM-Agents、SOD（小模型 agent 逐步在策略蒸馏）等 2026 新工作，是长程规划与 agent 训练方向的高质量索引。</div>
+    <div class="tags">
+      <span class="tag">awesome list</span>
+      <span class="tag">长程 Agent</span>
+      <span class="tag">GUI Agent</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · sindresorhus/awesome</div>
+    <div class="title"><a href="https://github.com/sindresorhus/awesome">主 awesome 仓库动态：PR 清理暂停中，AI 子列表生态外溢</a></div>
+    <div class="summary">sindresorhus/awesome（487k+ stars）主仓库 PR 仍处于暂停状态以便维护者清理积压，近一周无新列表合并进入主索引。AI 相关的 curated list 生态持续向独立组织外溢：awesome-llm-apps（132k+ stars，新增 Agent Skills 板块）、awesome-ai-agents-2026 系列、以及围绕 coding agent skills 的新兴工具集成为本月 GitHub Trending 的主力。</div>
+    <div class="tags">
+      <span class="tag">awesome</span>
+      <span class="tag">社区动态</span>
+      <span class="tag">GitHub Trending</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>本周的主线很清晰：<strong>"实时化"与"具身化"</strong>。Qwen3.8-LiveTranslate 把同传延迟压到接近人类同传译员的水平，而且走开源路线，对教育、会议、跨语直播都是实打实的利好；另一边，Show-Harness、GPT-Policy、ViLoMan 三篇论文指向同一个判断——VLM 正在从"看懂世界"跨到"动手改造世界"，而 Awesome Multimodal Embodied Agents 这类新列表的出现，说明这个交叉领域已经积累到需要地图的规模了。推理侧，When2Think 和 ASPIRE 代表两种互补的省钱思路：少想一点 vs 猜快一点。另外值得注意的是 sindresorhus/awesome 主仓库 PR 持续暂停，AI 领域的精选列表生态正在去中心化，优质的垂直 awesome list（agent 论文、长程 agent、具身智能）比主索引更值得日常跟踪。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-09-21</p>
+</div>
+
+</div>
+</body>
+</html>

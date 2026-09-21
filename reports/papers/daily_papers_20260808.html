@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年08月08日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年08月08日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>本周 AI 圈密集发布：Meta 推出 Muse Spark 1.2 及首款编码 Agent「Muse Code」正面挑战 Claude Code；DeepSeek V4-Flash 以 MIT 协议开源、每百万 token 仅 $0.14 改写性价比规则。论文方面，AgentOPSD 提出无需 Critic 的递归自蒸馏方法解决长程 Agent RL 信用分配难题，DeepVoyager-VL 则首次将视觉保留在搜索循环内。开源生态持续爆发——1M token 上下文已成旗舰标配。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🏭</span>产业重磅</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 本周最热</div>
+    <div class="card" style="margin-bottom:0;border:none;box-shadow:none;padding:0;">
+      <div class="source">Meta AI Research · 2026-08-05</div>
+      <div class="title"><a href="https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2" target="_blank">Meta 发布 Muse Spark 1.2 + Muse Code：正面挑战 Claude Code</a></div>
+      <div class="summary">Meta 四个月内第三款模型，1M token 上下文，专为编码与 Agent 任务优化。配套推出终端编码 Agent「Muse Code」，可并行调度子 Agent 处理大型代码库，Terminal-Bench 2.1 得分 82.9%，定价为 Claude Code 的四分之一。</div>
+      <div class="tags">
+        <span class="tag hot">产业热点</span>
+        <span class="tag">LLM</span>
+        <span class="tag">Coding Agent</span>
+        <span class="tag">Meta</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">DeepSeek · 2026-07-31</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.01837" target="_blank">DeepSeek V4-Flash 正式发布：MIT 开源，百万 token 仅 $0.14</a></div>
+    <div class="summary">284B MoE / 13B 激活参数，112 tok/s 推理速度。Agent 基准超越 V4-Pro，编码能力领先 Opus 4.8，价格仅为后者的 1%。MIT 协议开放权重，成为当前性价比最高的旗舰级开源模型。</div>
+    <div class="tags">
+      <span class="tag hot">开源突破</span>
+      <span class="tag">LLM</span>
+      <span class="tag">MoE</span>
+      <span class="tag">DeepSeek</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>前沿论文</div>
+
+  <div class="card">
+    <div class="source">arXiv:2608.05987 · HuggingFace 🔥22</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.05987" target="_blank">AgentOPSD：无需 Critic 的递归自蒸馏，破解 Agent RL 信用分配难题</a></div>
+    <div class="summary">针对长程多轮 Agent 任务中稀疏奖励难以追溯关键决策的问题，提出递归式 turn-level 信用分配方法。通过聚合 token 级 teacher-student log-prob 差异，在 log-odds 空间递归更新贝叶斯信念状态，无需训练额外 Critic 网络。</div>
+    <div class="tags">
+      <span class="tag">LLM</span>
+      <span class="tag">强化学习</span>
+      <span class="tag">AI Agent</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2608.01827 · 北大 + 华为云 + HKUST(GZ)</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.01827" target="_blank">DeepVoyager-VL：将视觉保留在搜索循环内的多模态 Agent</a></div>
+    <div class="summary">指出现有多模态搜索 Agent 的架构缺陷——视觉仅附加在输入或输出端，而非贯穿搜索过程。提出 Vision-in-the-Loop 范式，让视觉信号全程参与搜索决策，显著提升知识密集型开放世界任务的推理深度。</div>
+    <div class="tags">
+      <span class="tag">多模态</span>
+      <span class="tag">VLM</span>
+      <span class="tag">AI Agent</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2608.03979</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.03979" target="_blank">Video-DeepResearch：从静态图像到连续视频流的深度研究 Agent</a></div>
+    <div class="summary">将多模态 Agent 从静态图像扩展至连续视频流，要求密集时空定位与开放网络探索相结合，标志着多模态深度搜索进入视频时代。</div>
+    <div class="tags">
+      <span class="tag">多模态</span>
+      <span class="tag">视频理解</span>
+      <span class="tag">AI Agent</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2608.02990</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.02990" target="_blank">EmbodiedVAE：解耦视频 VAE 实现高效可控的具身操控</a></div>
+    <div class="summary">提出面向机器人操控的解耦视频 VAE，以高压缩率实现优于 SOTA 2dB PSNR 的重建质量，并支持更精细的动作控制，为具身智能的视频表征学习提供新思路。</div>
+    <div class="tags">
+      <span class="tag">具身智能</span>
+      <span class="tag">机器人</span>
+      <span class="tag">视频生成</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2608.00146 · Google</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.00146" target="_blank">DiffusionGemma：用不到 10% 训练预算将 AR 模型转为扩散 LLM</a></div>
+    <div class="summary">Google 推出基于 Gemma 的扩散语言模型。两阶段训练管线仅消耗原 AR 模型不到 10% 的训练 token 预算，通过 SFT 教会模型双向去噪，开辟了扩散模型在文本生成领域的新路径。</div>
+    <div class="tags">
+      <span class="tag">LLM 架构</span>
+      <span class="tag">扩散模型</span>
+      <span class="tag">Google</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔧</span>开源工具与生态</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 2026-08</div>
+    <div class="title"><a href="https://github.com/openai/openai-agents-python" target="_blank">OpenAI Agents SDK：轻量级多 Agent 框架持续领跑</a></div>
+    <div class="summary">OpenAI 官方 Agent SDK 支持 100+ LLM 提供商，已成为 GitHub AI Agent 生态的标杆项目。MCP 协议（已捐赠 Linux 基金会）被 Anthropic、OpenAI、Microsoft、Google 联合采纳，AI Agent 互操作标准加速统一。</div>
+    <div class="tags">
+      <span class="tag">开源工具</span>
+      <span class="tag">AI Agent</span>
+      <span class="tag">MCP</span>
+      <span class="tag">OpenAI</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 2026-08</div>
+    <div class="title"><a href="https://github.com/meta/muse-code" target="_blank">Muse Code 开源：Meta 的终端编码 Agent</a></div>
+    <div class="summary">随 Muse Spark 1.2 发布的终端编码 Agent，支持跨大型仓库规划、编码与验证，可并行启动多个子 Agent 协同工作。macOS/Linux 一键安装，直接对标 Claude Code。</div>
+    <div class="tags">
+      <span class="tag">开源工具</span>
+      <span class="tag">Coding Agent</span>
+      <span class="tag">Meta</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+  本周 AI 领域呈现出三个清晰趋势：<br><br>
+  <strong>1. AI Coding Agent 大战全面打响。</strong>Meta Muse Code 以 Claude Code 四分之一的价格入局，加上 Grok Build 和 OpenCode（19.5 万星）的开源碾压，终端编码 Agent 正从「辅助工具」进化为「自主工程师」。谁能把 Agent Loop 做得更稳、更便宜，谁就赢得开发者。<br><br>
+  <strong>2. 开源模型的性价比竞赛白热化。</strong>DeepSeek V4-Flash 以 MIT 协议和 $0.14/M 的价格，让「百万 token 上下文」不再是奢侈品。Kimi K3 开源权重、Qwen3.8-Max 紧随其后——中国团队的开放策略正在重塑全球 LLM 供给格局。<br><br>
+  <strong>3. Agent RL 的基础问题受到重视。</strong>AgentOPSD 解决的信用分配问题，本质上是让 Agent 在 50 步任务中「知道哪两步真正起了作用」——这是从「能跑通」到「跑得好」的关键跃迁。DeepVoyager-VL 和 Video-DeepResearch 则将多模态 Agent 推入视觉深度搜索的新阶段。<br><br>
+  <strong>4. 监管压力持续上升。</strong>EU AI Act 高风险义务 8 月 2 日全面生效，白宫 8 月 4 日召集 Meta/Anthropic/Google/OpenAI 讨论 rogue AI agent 安全问题——技术狂奔与治理博弈的张力在 2026 年夏天达到新高。
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-08</p>
+</div>
+
+</div>
+</body>
+</html>

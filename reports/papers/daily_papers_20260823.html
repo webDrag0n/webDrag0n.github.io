@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年08月23日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .hot-topic .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .hot-topic .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .hot-topic .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .hot-topic .title a:hover { text-decoration: underline; }
+  .hot-topic .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .hot-topic .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .hot-topic .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .hot-topic .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年08月23日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>周末 arXiv 暂无新批次，本期精选最新一批（8/20 提交）中尚未被充分报道的优质工作。三大看点——①「测试时计算」从「固定预算」走向「自适应分配」；② 多模态生成在 4D 重建与多人合照一致性上集体突破；③ 具身智能在灵巧操作与移动操作上双线推进。开源侧，Codex CLI 高速迭代，携 Agent Plugins + MCP 登顶 GitHub Trending。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>研究前沿</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点</div>
+    <div class="source">HuggingFace Daily · ArXiv 2608.20335</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.20335">4DAnyone：从一段随意拍摄的单目视频，重建「任何人」的 4D 动态形象</a></div>
+    <div class="summary">现有相机控制的视频扩散模型，在生成 4DGS 重建所需的几十个新视角时会失去一致性。4DAnyone 把失败诊断为「有界注意力上下文」问题——当目标视角超出单次 DiT 前向的容量而被迫分组时，会暴露两个耦合瓶颈。作者据此提出重建级多视角一致视频生成 + 提升到 4D 高斯泼溅的完整管线，让单目视频也能稳定还原出可自由转动的 4D 人物。</div>
+    <div class="tags"><span class="tag hot">多模态</span><span class="tag">4D 重建</span><span class="tag">视频生成</span><span class="tag">3D/4D</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">ArXiv 2608.20338 · cs.CL</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.20338">ConceptGuard：评测大模型「上下文敏感」遗忘能力的基准</a></div>
+    <div class="summary">现有遗忘（unlearning）方法靠「遗忘/保留两个独立事实集」来评测，只测简单的直接事实回忆，无法验证「消除有害行为的同时保留良性知识」这一关键目标。ConceptGuard 主张遗忘必须发生在「概念」层面，提出首个面向概念级、上下文敏感遗忘的基准，把遗忘评测从「删掉一句事实」升级为「删掉一类概念」。</div>
+    <div class="tags"><span class="tag">LLM 安全</span><span class="tag">遗忘</span><span class="tag">基准</span><span class="tag">对齐</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">ArXiv 2608.20256 · cs.AI</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.20256">Learning When to Think：让模型自己决定「想不想、想多久」</a></div>
+    <div class="summary">推理模型通常按固定 token 预算生成，简单题浪费算力、难题又算不够。这项工作让模型在回复的第一个 token 就选择三种模式之一——NoThink（直接答）、Short（简短推理）、Long（扩展推理），并直接在 GRPO 中学习这个选择，无需额外的奖励模型，把「测试时算力分配」变成了模型自身的决策。</div>
+    <div class="tags"><span class="tag">测试时计算</span><span class="tag">推理</span><span class="tag">自适应</span><span class="tag">GRPO</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">ArXiv 2608.20336 · cs.CV</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.20336">WithEveryone：统一规划与身份绑定的「多人合照」生成</a></div>
+    <div class="summary">身份保持生成在场景里出现多个指定人物时最容易翻车——既要保持每个身份，又要把每个参考绑定到不同的人和位置。WithEveryone 把每个身份注入为「寻址 token」，先预测结构化身份-布局计划，再渲染成视觉条件，可稳定生成最多 10 个参考身份的群像，直击多人场景的身份串味难题。</div>
+    <div class="tags"><span class="tag">图像生成</span><span class="tag">身份保持</span><span class="tag">多模态</span><span class="tag">群像</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">ArXiv 2608.20314 · cs.AI</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.20314">MidTool：面向智能体工具使用的中训练数据合成管线</a></div>
+    <div class="summary">中训练（mid-training）正成为塑造大模型能力的关键阶段，但「通用工具使用」这条线还少有人系统研究。MidTool 提出一套开源语料构建管线，把大规模 web/PDF/代码数据与来自真实工具 API 的合成监督结合，专攻智能体的工具调用能力，补齐了中训练在 agent 方向的一块拼图。</div>
+    <div class="tags"><span class="tag">LLM</span><span class="tag">中训练</span><span class="tag">Agent</span><span class="tag">工具使用</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">ArXiv 2608.20251 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.20251">Video2DoorTraversal：一条视频，让轮腿机器人学会「推门穿越」</a></div>
+    <div class="summary">开门穿越是典型的长程移动操作任务，需要精准的把手交互与底盘-机械臂协同。该框架用 DoorTwin 从一段真实门的 RGB 视频重建实例对齐、可仿真的「门孪生」，再由仿真-in-the-loop 智能体把恢复出的铰接转化为参数化技能程序并迭代优化，实现单视频 real-to-sim-to-real 的可执行推门策略。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">机器人</span><span class="tag">移动操作</span><span class="tag">仿真</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源项目</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点</div>
+    <div class="source">GitHub · openai/codex · ⭐ 113325</div>
+    <div class="title"><a href="https://github.com/openai/codex">Codex CLI：Agent Plugins + MCP + 会话队列，登顶 GitHub Trending</a></div>
+    <div class="summary">OpenAI 的 Codex CLI 本周持续高速迭代：新增便携式 Agent Plugins、持久会话分区、自动审批，以及对 MCP 协议的支持，还上线了 `codex queue`（向已有本地/远程会话发送消息）。星数已破 11 万，今日登顶 GitHub Trending，是「终端编码智能体」赛道的绝对主力，正从单点工具长成可插拔平台。</div>
+    <div class="tags"><span class="tag hot">AI Agent</span><span class="tag">开源</span><span class="tag">编码</span><span class="tag">MCP</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · multica-ai/andrej-karpathy-skills · ⭐ 205292</div>
+    <div class="title"><a href="https://github.com/multica-ai/andrej-karpathy-skills">andrej-karpathy-skills：一份 20 万+ star 的 CLAUDE.md 技能文件</a></div>
+    <div class="summary">把 Andrej Karpathy 对 LLM 编码陷阱的长期观察，浓缩成一份可直接放进项目的 CLAUDE.md 技能文件，用来改善 Claude Code 等编码智能体的行为。这份「单文件技能库」近期在 GitHub Trending 持续霸榜，印证「技能/提示工程」正成为编码智能体的新基建。</div>
+    <div class="tags"><span class="tag">技能工程</span><span class="tag">Claude Code</span><span class="tag">编码智能体</span><span class="tag">提示工程</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>周末的 arXiv 静悄悄，但静水底下有暗流。我最想点两件事：一是「测试时计算」终于从『给多少算力』进化到『模型自己想想要多少算力』——Learning When to Think 让模型自己在 NoThink / Short / Long 三种模式里做选择，这比堆 token 预算更接近真正的「会思考」。二是多模态生成在「一致性」上集体攻坚——4DAnyone 治 4D 重建的视角漂移，WithEveryone 治多人合照的身份串味，背后其实是同一个难题：注意力窗口装不下时，模型就会顾此失彼。开源侧 Codex 的 Agent Plugins + MCP 组合拳，则是在告诉所有人：编码智能体正在从「单点工具」长成「可插拔平台」。周日也要充电，我们下期见～</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-23</p>
+</div>
+
+</div>
+</body>
+</html>

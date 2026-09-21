@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年08月10日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年08月10日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>Meta 正式发布 Muse Code 终端编程智能体与 Muse Spark 1.2 模型，以极低价格挑战 Anthropic/OpenAI；Google DeepMind Gemini Robotics 2 实现人形机器人全身控制；多篇重磅论文聚焦 LLM 智能体的工具调用、选择性信任、轨迹调试与任务合成；视频语言模型的时序推理短板被系统性揭示。</p>
+</div>
+
+<!-- 🔥 行业热点 -->
+<div class="section">
+<div class="section-title"><span class="emoji">🔥</span>行业热点</div>
+
+<div class="hot-topic">
+  <div class="label">🔥 重磅发布</div>
+  <div class="card">
+    <div class="source">Meta AI · 2026-08-06</div>
+    <div class="title"><a href="https://ai.meta.com/blog/muse-code-spark-1-2/" target="_blank">Meta 发布 Muse Code (Beta) + Muse Spark 1.2：极低价格杀入编程智能体赛道</a></div>
+    <div class="summary">Meta 推出终端编程智能体 Muse Code，搭载全新 Muse Spark 1.2 模型，以远低于 Claude Code 和 GPT 系列的价格提供长时程软件工程能力，支持持久化异步后台智能体，正式加入 AI 编程智能体大战。</div>
+    <div class="tags">
+      <span class="tag hot">重磅</span>
+      <span class="tag">Coding Agent</span>
+      <span class="tag">Meta</span>
+      <span class="tag">开源模型</span>
+    </div>
+  </div>
+</div>
+
+<div class="hot-topic">
+  <div class="label">🤖 具身智能</div>
+  <div class="card">
+    <div class="source">Google DeepMind · 2026-07-30</div>
+    <div class="title"><a href="https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/" target="_blank">Gemini Robotics 2 发布：首个实现人形机器人全身控制的 VLA 模型</a></div>
+    <div class="summary">DeepMind 推出 Gemini Robotics 2，将视觉-语言-行动（VLA）模型扩展至双腿、躯干、手臂和手指的统一策略控制，首次实现人形机器人全身智能，支持多机器人协作与高级灵巧操作。</div>
+    <div class="tags">
+      <span class="tag hot">重磅</span>
+      <span class="tag">具身智能</span>
+      <span class="tag">Robotics</span>
+      <span class="tag">Google DeepMind</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- 📄 今日精选论文 -->
+<div class="section">
+<div class="section-title"><span class="emoji">📄</span>今日精选论文</div>
+
+<div class="card">
+  <div class="source">arXiv:2608.06370 · cs.CL</div>
+  <div class="title"><a href="https://arxiv.org/abs/2608.06370" target="_blank">The Bitter Lesson of Tool Calling</a></div>
+  <div class="summary">系统对比程序化工具调用（PTC）与 JSON 工具调用在 14 个模型上的表现：PTC 在 11/14 模型中匹配或超越 JSON 方案，GPT-5.6 系列提升 10.6%，且在并行扇出和上下文退化场景下更鲁棒。PTC 将工具暴露为 Python stub，模型一次完成调用和执行，替代了传统多轮 JSON 交互。</div>
+  <div class="tags">
+    <span class="tag">LLM Agent</span>
+    <span class="tag">Tool Calling</span>
+    <span class="tag">PTC</span>
+    <span class="tag">GPT-5.6</span>
+  </div>
+</div>
+
+<div class="card">
+  <div class="source">arXiv:2608.06377 · cs.CL / cs.AI / cs.LG</div>
+  <div class="title"><a href="https://arxiv.org/abs/2608.06377" target="_blank">Learning When to Trust via Selective Context Preference Optimization (SCOPE)</a></div>
+  <div class="summary">提出 MIST 基准和 SCOPE 方法，训练 LLM 学会「选择性信任」——在干净上下文时采纳、在误导信号时保持正确判断。通过在四类条件（干净、误导、正确上下文、无关上下文）下平衡 DPO 训练，显著降低模型被误导信号翻转正确答案的概率，同时保持对有用上下文的利用能力。</div>
+  <div class="tags">
+    <span class="tag">LLM Safety</span>
+    <span class="tag">Selective Trust</span>
+    <span class="tag">DPO</span>
+    <span class="tag">Context</span>
+  </div>
+</div>
+
+<div class="card">
+  <div class="source">arXiv:2608.06346 · cs.AI</div>
+  <div class="title"><a href="https://arxiv.org/abs/2608.06346" target="_blank">TRAJDEBUG: Tracing Error Lifecycle to Identify Critical Failures in Long-Horizon Agent Trajectories</a></div>
+  <div class="summary">提出 TrajDebug 框架，通过多粒度历史压缩和基于证据的错误识别，在长时程智能体轨迹中定位最早导致最终失败的关键错误步骤。构建 TrajErrBench 基准（486 条人工标注失败轨迹），在 Tau2Bench 和 SWE-Bench Pro 上达到最优，诊断结果可反馈改进下游智能体成功率。</div>
+  <div class="tags">
+    <span class="tag">Agent Debugging</span>
+    <span class="tag">Error Tracing</span>
+    <span class="tag">Trajectory Analysis</span>
+  </div>
+</div>
+
+<div class="card">
+  <div class="source">arXiv:2608.06352 · cs.LG / cs.CL</div>
+  <div class="title"><a href="https://arxiv.org/abs/2608.06352" target="_blank">CalibForge: Adversarial Solver Calibration for Scaling Learnable Terminal Tasks</a></div>
+  <div class="summary">构建 5,431 个经对抗校准的终端智能体训练任务。多求解器校准利用异构求解器池的分歧，对比校准则针对强弱求解器差异——两者共同定义「可学习区间」。训练后模型在 Terminal-Bench 2.0 提升 24.71pp、SWE-bench Pro 提升 27.68pp、Doc2Repo 提升 30.04pp。</div>
+  <div class="tags">
+    <span class="tag">Agent Training</span>
+    <span class="tag">Terminal Agent</span>
+    <span class="tag">Task Synthesis</span>
+    <span class="tag">SWE-bench</span>
+  </div>
+</div>
+
+<div class="card">
+  <div class="source">arXiv:2608.06361 · cs.AI</div>
+  <div class="title"><a href="https://arxiv.org/abs/2608.06361" target="_blank">The Low Frequency Trap: Video Language Models Fail at Simple Event Bookkeeping</a></div>
+  <div class="summary">通过 2,190 个参数化视频揭示 VLM 的时序推理失败模式：Gemini 3.6 Flash 在持续状态转换任务中可到 12 事件、1Hz，但对瞬态闪烁事件无可靠计数能力；高计数高频场景下仅 0.2% 正确。增加采样率虽提升准确率但未改善事件序列忠实度，暴露了 VLM 时序推理的深层局限。</div>
+  <div class="tags">
+    <span class="tag">VLM</span>
+    <span class="tag">Temporal Reasoning</span>
+    <span class="tag">Video Understanding</span>
+    <span class="tag">Evaluation</span>
+  </div>
+</div>
+
+<div class="card">
+  <div class="source">arXiv:2608.06347 · cs.CL</div>
+  <div class="title"><a href="https://arxiv.org/abs/2608.06347" target="_blank">RP-OPSD: Reasoning-Pivot-Guided On-Policy Self-Distillation for Multilingual Reasoning Transfer</a></div>
+  <div class="summary">提出推理轴引导的在线策略自蒸馏（RP-OPSD），利用教师模型在有无英文参考答案时的分布差异作为「推理轴」信号，引导跨语言推理迁移。在 17 种语言、多难度的数学推理基准上超越现有方法，分析表明蒸馏信号集中于推理控制与状态更新 token。</div>
+  <div class="tags">
+    <span class="tag">Multilingual</span>
+    <span class="tag">Reasoning</span>
+    <span class="tag">Self-Distillation</span>
+    <span class="tag">Cross-lingual</span>
+  </div>
+</div>
+
+<div class="card">
+  <div class="source">arXiv:2608.06362 · cs.GT / cs.AI</div>
+  <div class="title"><a href="https://arxiv.org/abs/2608.06362" target="_blank">AV-AIVAT: 74x Cheaper Agent Evaluation with Certified Anytime-Valid Stopping</a></div>
+  <div class="summary">将 AIVAT 方差缩减与置信序列（CS）结合，实现 LLM 智能体评估的「随时有效停止」：在德州扑克场景中，原始方法需 74× 手牌才达到同等精度。支持渐进筛选与精确认证的分层评估，证据充分即可立即停止并交出完整可审计判定。</div>
+  <div class="tags">
+    <span class="tag">Agent Evaluation</span>
+    <span class="tag">Statistical Stopping</span>
+    <span class="tag">Efficiency</span>
+    <span class="tag">Game Theory</span>
+  </div>
+</div>
+</div>
+
+<!-- 🛠️ 开源项目与工具 -->
+<div class="section">
+<div class="section-title"><span class="emoji">🛠️</span>开源项目与工具</div>
+
+<div class="card">
+  <div class="source">GitHub Trending · meta-muse</div>
+  <div class="title"><a href="https://github.com/facebookresearch/muse" target="_blank">Muse Code — Meta 开源终端编程智能体 (Beta)</a></div>
+  <div class="summary">Meta 推出的命令行编程智能体，基于 Muse Spark 1.2 模型，支持长时程自主编码任务、持久化异步后台智能体，Token 价格远低于 Anthropic Claude Code 和 OpenAI Codex，有望大幅降低 AI 编程成本。</div>
+  <div class="tags">
+    <span class="tag hot">热门</span>
+    <span class="tag">Open Source</span>
+    <span class="tag">Coding Agent</span>
+    <span class="tag">Meta</span>
+  </div>
+</div>
+
+<div class="card">
+  <div class="source">GitHub · anomalyco/opencode</div>
+  <div class="title"><a href="https://github.com/anomalyco/opencode" target="_blank">OpenCode — 开源 AI 编程智能体持续演进</a></div>
+  <div class="summary">开源的 AI 编程智能体，提供 build（全权限开发）、plan（只读分析探索）两种模式，持续获得社区关注和贡献，成为与闭源方案抗衡的重要开源力量。</div>
+  <div class="tags">
+    <span class="tag">Open Source</span>
+    <span class="tag">Coding Agent</span>
+    <span class="tag">CLI</span>
+  </div>
+</div>
+</div>
+
+<!-- 💡 小晴点评 -->
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>本周 AI 领域的核心关键词是「智能体的工程化」。从 Meta Muse Code 以极低价格杀入编程智能体赛道，到多篇论文聚焦工具调用、轨迹调试、任务合成的系统化方法论，智能体正在从实验室 demo 走向可观测、可调试、可优化的工程阶段。</p>
+  <p>工具调用方面，<strong>The Bitter Lesson of Tool Calling</strong> 给出了一个清晰信号：程序化工具调用（PTC）比 JSON 方案更优、更鲁棒，这可能会改变未来智能体框架的默认设计范式。CalibForge 的 5,431 个校准任务则表明，高质量训练数据的规模化合成是提升智能体能力的瓶颈突破点。TrajDebug 解决了长轨迹调试中「错误归因」这一老大难问题，对生产级智能体系统至关重要。</p>
+  <p>在模型能力评估方面，视频语言模型的「低频陷阱」揭示了一个隐蔽缺陷——在看似简单的时序事件计数上系统性失败，而增加帧率只能粉饰分数、无法修复推理本身。这提示我们，VLM 的评估需要从聚合指标转向可审计的诊断式评测。</p>
+  <p>行业层面，Meta 入局编程智能体和 Google DeepMind 的人形机器人全身控制分别代表了「软件智能体」和「物理智能体」两条路线的最新进展。编程智能体的价格战已经打响，而具身智能在多机器人协作和全身灵巧控制上的突破则为通用机器人铺平了道路。两者交汇之处，正是通用人工智能（AGI）最激动人心的前沿。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-10</p>
+</div>
+
+</div>
+</body>
+</html>

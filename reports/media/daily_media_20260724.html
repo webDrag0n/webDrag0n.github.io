@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年07月24日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年07月24日 · 周四</div>
+  <div class="subtitle">中文AI媒体精选 · 机器之心 / 量子位 / 新智元 / 36氪 / 赛博禅心 等</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>OpenAI将2030年前算力支出上调至7500亿美元并首次自建数据中心，AMD砸50亿美元投资Anthropic挑战英伟达生态，Kimi K3因算力爆满暂停C端订阅——算力军备竞赛全面升级。WAIC 2026收官，具身智能取代大模型参数竞赛成为全场焦点，物理AI从炫技走向量产落地。</p>
+</div>
+
+<!-- 🔥 今日头条 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">🚀 BREAKING</div>
+    <div class="source">澎湃新闻 · IT之家 · 量子位 · 华尔街日报</div>
+    <div class="title"><a href="https://www.thepaper.cn/detail/33640649" target="_blank">OpenAI将算力支出上调至7500亿美元，首次自建200亿美元数据中心</a></div>
+    <div class="summary">OpenAI于7月22日宣布将截至2030年的算力支出预期从此前6000亿美元大幅上调至7500亿美元，增幅达25%。同期启动佐治亚州「Project Camellia」数据中心项目，总投资超200亿美元，规划3.2吉瓦电力容量。这是OpenAI首次以主设计师身份自建数据中心，标志着其算力布局从「租客」向「地主」的战略级转型，也折射出全球AI基础设施竞赛的白热化。</div>
+    <div class="tags">
+      <span class="tag hot">重磅</span>
+      <span class="tag">#算力</span>
+      <span class="tag">#OpenAI</span>
+      <span class="tag">#基础设施</span>
+    </div>
+  </div>
+</div>
+
+<!-- 大模型 & 芯片 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 &amp; 芯片</div>
+
+  <div class="card">
+    <div class="source">ZAKER · IT之家 · 财联社 · 量子位</div>
+    <div class="title"><a href="https://www.ithome.com/0/980/309.htm" target="_blank">AMD拟投资Anthropic 50亿美元并签数百亿美元AI服务器大单，直接挑战英伟达</a></div>
+    <div class="summary">7月22日，AMD与Anthropic签署历史性协议：AMD将向Anthropic投资最高50亿美元，并签署价值数百亿美元的AI服务器采购协议，部署最新Instinct MI450芯片，总量达2吉瓦。此举标志着AMD以「投资+供货」绑定模式打入AI核心战场，正面挑战英伟达在AI芯片领域的统治地位。</div>
+    <div class="tags">
+      <span class="tag hot">重磅</span>
+      <span class="tag">#芯片</span>
+      <span class="tag">#AMD</span>
+      <span class="tag">#Anthropic</span>
+      <span class="tag">#融资</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪 · 每日经济新闻 · 量子位 · 机器之心</div>
+    <div class="title"><a href="https://36kr.com/p/3903312040052611" target="_blank">Kimi K3算力爆满暂停C端订阅，月之暗面筹备赴港IPO年收入破3亿美元</a></div>
+    <div class="summary">月之暗面7月16日发布2.8万亿参数开源模型Kimi K3，在Artificial Analysis综合评测中以57分排名全球第三，仅次于Claude Fable 5和GPT-5.6 Sol。然而流量洪峰导致算力告急，7月19日被迫暂停C端新用户订阅。与此同时公司年收入突破3亿美元，正筹备6个月内在港上市。7月27日K3将以开放权重形式正式发布。</div>
+    <div class="tags">
+      <span class="tag hot">热议</span>
+      <span class="tag">#大模型</span>
+      <span class="tag">#Kimi</span>
+      <span class="tag">#开源</span>
+      <span class="tag">#IPO</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪 · 机器之心 · 知乎</div>
+    <div class="title"><a href="https://36kr.com/p/3905190414878340" target="_blank">DeepSeek V4正式版7月中旬上线，秘密自研推理芯片推进一年，估值达500亿美元</a></div>
+    <div class="summary">DeepSeek V4 Pro/Flash双版本正式上线，支持百万Token上下文，SWE-bench达80.6%。创新性引入API峰谷定价机制，高峰期价格翻倍。更值得关注的是其推理芯片项目已秘密推进一年，正接洽芯片设计及晶圆代工厂商，试图从模型层向上游芯片层延伸，构建软硬一体闭环。</div>
+    <div class="tags">
+      <span class="tag">#DeepSeek</span>
+      <span class="tag">#大模型</span>
+      <span class="tag">#自研芯片</span>
+      <span class="tag">#开源</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">IT之家 · 虎嗅 · 环球网 · 量子位</div>
+    <div class="title"><a href="https://www.huxiu.com/ainews/13970.html" target="_blank">马斯克官宣Grok 4.6：2万亿参数模型下周完成初始训练</a></div>
+    <div class="summary">7月18日，马斯克透露xAI下一代旗舰模型Grok 4.6参数规模达2万亿，即将完成初始训练。此前1.5万亿参数的Grok 4.5已奠定基座，4.6将进一步拉高参数天花板。xAI持续以极致规模路线追赶GPT与Claude阵营。</div>
+    <div class="tags">
+      <span class="tag">#大模型</span>
+      <span class="tag">#Grok</span>
+      <span class="tag">#xAI</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">51CTO · 量子位 · CSDN</div>
+    <div class="title"><a href="https://www.51cto.com/aigc/11922.html" target="_blank">Google发布Gemini 3.6 Flash：更强编程能力、更低Token消耗</a></div>
+    <div class="summary">Google DeepMind于7月21日正式发布Gemini 3.6 Flash，定位为兼顾前沿智能与推理效率的「工作马」模型。在编程、推理等核心任务上显著提升，同时大幅降低Token消耗成本，AI Agent场景成为重点优化方向。</div>
+    <div class="tags">
+      <span class="tag">#Gemini</span>
+      <span class="tag">#Google</span>
+      <span class="tag">#多模态</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">Hugging Face · Poolside · CSDN</div>
+    <div class="title"><a href="https://huggingface.co/poolside/Laguna-S-2.1" target="_blank">Poolside发布Laguna S 2.1：118B参数开源编程模型，专攻Agent编程</a></div>
+    <div class="summary">Poolside发布Laguna S 2.1，118B总参、8B激活的MoE架构开源编程模型，专为Agentic Coding和长程任务设计。同期发布33B轻量版Laguna XS 2.1可本地运行，进一步降低开发者门槛，叫板中国开源编程模型阵营。</div>
+    <div class="tags">
+      <span class="tag">#编程模型</span>
+      <span class="tag">#开源</span>
+      <span class="tag">#Agent</span>
+    </div>
+  </div>
+</div>
+
+<!-- 具身智能 & 机器人 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能 &amp; 机器人</div>
+
+  <div class="card">
+    <div class="source">量子位 · 36氪 · 新智元 · 每日经济新闻</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/07/455963.html" target="_blank">WAIC 2026收官：具身智能取代参数竞赛成全场焦点，物理AI从炫技走向量产</a></div>
+    <div class="summary">为期四天的WAIC 2026在上海落幕。今年最大变化：大模型参数对比和榜单排名几乎消失，取而代之的是机械臂运转声和「已量产」「已部署」的标识。具身智能展位大幅增加，酷哇科技发布行业首个双层智能体世界模型，日冕+远图官宣万台级物理AI部署计划。行业评价维度从「能做什么」转向「能交付什么」。</div>
+    <div class="tags">
+      <span class="tag hot">焦点</span>
+      <span class="tag">#WAIC</span>
+      <span class="tag">#具身智能</span>
+      <span class="tag">#世界模型</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 投资界 · 香港商报</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/07/456178.html" target="_blank">酷哇科技WAIC首发双层智能体世界模型：物理世界+人类社会认知双引擎</a></div>
+    <div class="summary">酷哇科技在WAIC 2026上展示COOWAM双层智能体世界模型——底层CooWAIM处理物理规律，上层Urban VLM理解社会规则。现场机械臂完成长程饮品制作，重载四足机器狗X0首秀，展现从单体智能走向城市级多智能体协同的野心。</div>
+    <div class="tags">
+      <span class="tag">#世界模型</span>
+      <span class="tag">#具身智能</span>
+      <span class="tag">#WAIC</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/07/456728.html" target="_blank">日冕+远图官宣物理AI万台级部署计划，闭环跑通从基模到产线</a></div>
+    <div class="summary">专注物理世界基础模型的日冕开物与服务器制造龙头远图未来科技联手，在WAIC期间官宣万台级具身智能部署计划。先在服务器制造场景验证「超级工站」，2027年百台级，最终实现万台级规模——物理AI从实验室走向产线落地的标志性事件。</div>
+    <div class="tags">
+      <span class="tag">#物理AI</span>
+      <span class="tag">#具身智能</span>
+      <span class="tag">#产业化</span>
+    </div>
+  </div>
+</div>
+
+<!-- AI应用 & 产品 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📱</span>AI应用 &amp; 产品</div>
+
+  <div class="card">
+    <div class="source">晚点LatePost · 雪球 · IT之家</div>
+    <div class="title"><a href="https://app.myzaker.com/news/article.php?pk=6a5b5d018e9f0918fd0a08ac" target="_blank">字节豆包手机助手第二代WAIC正式发布，首批备货数十万台</a></div>
+    <div class="summary">据晚点LatePost报道，字节跳动在WAIC 2026正式发布第二代豆包手机，首批备货数十万台。该机型7月15日获生成式AI服务备案，团队正与各头部应用厂商谈判开放AI可调用接口。这标志着字节AI硬件战略从技术验证迈入规模量产阶段。</div>
+    <div class="tags">
+      <span class="tag">#AI手机</span>
+      <span class="tag">#字节跳动</span>
+      <span class="tag">#豆包</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">赛博禅心 · Anthropic官方</div>
+    <div class="title"><a href="https://www.jintiankansha.me/column/Jw0FKj6ccg" target="_blank">Claude Code推出手机远程控制功能，Max用户研究预览版上线</a></div>
+    <div class="summary">Anthropic为Claude Code推出Remote Control新功能，允许开发者在手机上远程监控和控制Claude Code终端任务，Max订阅用户已可体验研究预览版。让AI编程助手从「桌面绑定」走向「移动管理」。</div>
+    <div class="tags">
+      <span class="tag">#Claude</span>
+      <span class="tag">#开发工具</span>
+      <span class="tag">#AI编程</span>
+    </div>
+  </div>
+</div>
+
+<!-- 行业动态 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📊</span>行业动态 &amp; 算力</div>
+
+  <div class="card">
+    <div class="source">Z Potentials · 量子位</div>
+    <div class="title"><a href="https://www.jintiankansha.me/column/nFoKTsfbgo" target="_blank">Microsoft收紧GPU供应，小型AI客户等待期或延续至2026年底</a></div>
+    <div class="summary">据Z Potentials报道，微软正在收紧GPU供应配额，优先保障大型战略客户，小型AI企业和初创公司的算力等待期可能延续至2026年底。在全球AI算力军备竞赛背景下，算力资源的「贫富差距」正在加剧。</div>
+    <div class="tags">
+      <span class="tag">#算力</span>
+      <span class="tag">#微软</span>
+      <span class="tag">#GPU</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>这两天AI圈的核心关键词只有一个：<strong>算力</strong>。OpenAI将2030年算力预算暴增至7500亿美元并首次自建数据中心，AMD斥50亿美元绑定Anthropic挑战英伟达——算力军备竞赛已经从「拼采购」升级到「拼基建」。与此同时，Kimi K3因算力不足被迫停服、微软对小型客户收紧GPU供给，说明算力稀缺正在重塑行业格局：<strong>有算力者得天下，无算力者被淘汰</strong>。另一条主线是<strong>具身智能的产业化拐点</strong>。WAIC 2026上大模型参数竞赛退潮，取而代之的是机械臂的实际运转和「已量产」的标签——物理AI正在从实验室论文走向工厂产线。酷哇的双层世界模型、日冕的万台部署计划，都在回答同一个问题：AI如何真正创造物理世界的价值。最后，DeepSeek从模型层向上渗透芯片层、字节豆包手机走向规模量产，中国AI的「软硬一体」路径正在加速成型。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026年07月24日 · 数据覆盖07.22–07.23</p>
+</div>
+
+</div>
+</body>
+</html>

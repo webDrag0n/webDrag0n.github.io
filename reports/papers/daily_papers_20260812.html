@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年08月12日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年08月12日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今天的 AI 圈可谓「安全与智能齐飞」——研究者发现可以窃取闭源 LLM 的加密推理链，Evo-Bench 让我们看到 LLM 自己进化 agent 框架的可能；多模态领域，视频世界模型和 MLLM 特征可解释性双双突破；机器人方面，小米机器人基础模型 Xiaomi-Robotics-1 在 HF 持续霸榜。DARPA 的 AI 驾驶 F-16 也完成首飞，AI 正从屏幕走向真实世界。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔬</span>前沿论文</div>
+
+  <!-- Hot Topic -->
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.09867" target="_blank">Stealing Reasoning Traces from Proprietary LLM APIs</a></div>
+    <div class="source">arXiv 2608.09867 · 2026-08-10 · HuggingFace Trending</div>
+    <div class="summary">研究者发现了一个严重的架构漏洞：弱模型可以作为"解密预言机"，提取 OpenAI、Anthropic、Google 等闭源 LLM 的加密推理链（chain-of-thought）。这意味着各大厂商声称保护的思维链实际上并不安全——只要同一厂商提供另一个较弱模型，就能反向解码出强模型的推理过程。这项发现对 LLM API 的安全性提出了严峻挑战。</div>
+    <div class="tags">
+      <span class="tag hot">安全漏洞</span>
+      <span class="tag">LLM 安全</span>
+      <span class="tag">CoT 隐私</span>
+      <span class="tag">API 攻击</span>
+    </div>
+  </div>
+
+  <!-- Paper 2 -->
+  <div class="card">
+    <div class="source">arXiv 2608.09096 · 2026-08-11 · HuggingFace Trending #1</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.09096" target="_blank">Evo-Bench: Can Language Models Improve Agent Harness?</a></div>
+    <div class="summary">首个评估 LLM "自我进化 agent 框架"能力的基准！固定策略模型不变，只让 LLM 改写 agent 的 harness（工具管理、上下文调度、状态追踪、错误恢复层），看它能否让同一个策略模型跑得更强。覆盖 Search、Office、General 三大场景，包含 448 个评测任务。研究揭示了一个关键发现：合成 harness 可以作为可迁移的推理结构，持续提升不同策略模型的性能。代码已开源。</div>
+    <div class="tags">
+      <span class="tag">AI Agent</span>
+      <span class="tag">自进化</span>
+      <span class="tag">Benchmark</span>
+      <span class="tag">开源</span>
+    </div>
+  </div>
+
+  <!-- Paper 3 -->
+  <div class="card">
+    <div class="source">arXiv 2608.08621 · 2026-08-09</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.08621" target="_blank">Business Arena: Benchmarking LLM Agents in a Realistic Marketplace</a></div>
+    <div class="summary">LLM Agent 也能开网店了？Business Arena 构建了一个逼真的跨境电商模拟环境，AI agent 需要长期经营一家店铺——从供应商采购、定价、营销到客户服务。考验的是 agent 的长期规划、风险管理和多步决策能力。与简单问答不同，这里一步走错可能满盘皆输。</div>
+    <div class="tags">
+      <span class="tag">AI Agent</span>
+      <span class="tag">经济模拟</span>
+      <span class="tag">决策 Benchmark</span>
+    </div>
+  </div>
+
+  <!-- Paper 4 -->
+  <div class="card">
+    <div class="source">arXiv 2608.09926 · 2026-08-10</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.09926" target="_blank">Learning How the World Evolves: Extrapolative Video World Models via Latent Dynamics Reasoning</a></div>
+    <div class="summary">现有视频扩散模型只会"画像素"，不懂物理规律。这篇工作提出在潜空间中对世界动力学显式建模，让模型真正理解物体随时间如何运动变化，而不是死记硬背像素变换。结果：生成的视频不仅画面逼真，物理上也更合理——杯子倒了水会洒，球弹起来符合动量守恒。</div>
+    <div class="tags">
+      <span class="tag">世界模型</span>
+      <span class="tag">视频生成</span>
+      <span class="tag">物理推理</span>
+      <span class="tag">扩散模型</span>
+    </div>
+  </div>
+
+  <!-- Paper 5 -->
+  <div class="card">
+    <div class="source">arXiv 2608.09928 · 2026-08-10</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.09928" target="_blank">Multimodal Model Diffing for Feature Discovery and Control</a></div>
+    <div class="summary">MLLM 的可解释性一直是个黑箱难题。本文提出"模型差分"方法：对比两个 MLLM 的隐藏状态，精确定位哪些神经元/特征负责特定视觉理解行为。就像 git diff 对比代码，这个方法可以 diff 两个模型，找出"这个模型为什么能看到猫而那个不能"的根源。对模型审计、偏见检测和特征编辑都有重要意义。</div>
+    <div class="tags">
+      <span class="tag">多模态</span>
+      <span class="tag">可解释性</span>
+      <span class="tag">模型审计</span>
+      <span class="tag">MLLM</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能 & 机器人</div>
+
+  <div class="card">
+    <div class="source">arXiv 2607.15330 · 2026-07 · HuggingFace Trending Papers</div>
+    <div class="title"><a href="https://huggingface.co/papers/2607.15330" target="_blank">Xiaomi-Robotics-1: A Robot Foundation Model</a></div>
+    <div class="summary">小米发布机器人基础模型！两阶段训练：先在 1700+ 场景的大规模 embodiment-free 数据上预训练，再在跨形态（含 7200+ 小时真机遥操作数据）上后训练。关键发现：预训练阶段的 scaling law 可以直接迁移到后训练，模型越大、数据越多，真机泛化越强。在多项仿真基准上达到 SOTA，且仅需极少数据即可适配新任务。</div>
+    <div class="tags">
+      <span class="tag">机器人基础模型</span>
+      <span class="tag">具身智能</span>
+      <span class="tag">Scaling Law</span>
+      <span class="tag">小米</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">DARPA / U.S. Air Force · 2026-07-16</div>
+    <div class="title"><a href="https://www.darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16" target="_blank">DARPA 完成首次 AI 自主驾驶 F-16 战斗机飞行测试</a></div>
+    <div class="summary">DARPA 和美国空军在埃格林空军基地完成了历史性测试：一架经过 VENOM 自主套件改装的 F-16 战斗机，在 AI 完全自主控制下完成飞行，人类试飞员仅在一旁监控。这标志着 AI 从数字世界走向真实高风险的物理系统——战斗机不仅要飞，还要在瞬息万变的战场环境中做决策。</div>
+    <div class="tags">
+      <span class="tag">自主系统</span>
+      <span class="tag">军事 AI</span>
+      <span class="tag">F-16</span>
+      <span class="tag">DARPA</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔧</span>开源 & 分布式训练</div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.09907 · 2026-08-10</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.09907" target="_blank">DistMoE: Private-data Rehearsal-free Routing in Mixture-of-Experts for Distributed Instruction Tuning</a></div>
+    <div class="summary">多模态大模型（MLLM）要在不同机构的数据上联合微调，但谁也不想把私有数据交出来。DistMoE 提出了一种无需数据共享的 MoE 路由方法——各机构在本地训练 expert，只交换路由信息。既保护了数据隐私，又实现了跨域知识融合。对医疗、金融等数据敏感的 MLLM 应用场景意义重大。</div>
+    <div class="tags">
+      <span class="tag">联邦学习</span>
+      <span class="tag">MoE</span>
+      <span class="tag">隐私保护</span>
+      <span class="tag">分布式训练</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+  今天的 AI 研究有几个明显的趋势信号——<strong>安全</strong>正在从边缘话题走向中心舞台。窃取推理链的漏洞暴露了当前 LLM API 架构的深层缺陷，大厂们引以为傲的"加密思维链"可能在更弱的自家模型面前形同虚设。这不仅是技术问题，更是一场信任危机。<br><br>
+  <strong>Agent 的自我进化</strong>是另一个超级有趣的方向。Evo-Bench 让我们看到，未来的 agent 不仅仅是执行任务的工具，它们可能自己会写更好的自己。当 agent 学会了改进自己的"操作系统"，人类工程师的角色会发生怎样的变化？<br><br>
+  在<strong>机器人</strong>领域，小米的 Robotics-1 和 DARPA 的 AI F-16 代表了两个极端：一个在实验室里用大数据堆出通用能力，一个直接在战斗机上验证极限场景。两条路线都在快速推进，2026 年的夏天，AI 正在加速「出圈」——从聊天框走向物理世界。
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-12 08:00 CST</p>
+</div>
+
+</div>
+</body>
+</html>

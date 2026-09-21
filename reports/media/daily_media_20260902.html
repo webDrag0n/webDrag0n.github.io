@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年09月02日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年09月02日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>9 月 1 日，AI 圈的主战场从「模型发布」转向<strong>「算力与生态」</strong>。英伟达一口气打出两张牌：一边斥资 <strong>35 亿美元投资联发科</strong>（史上最大海外直接投资），把定制 XPU 芯片收编进自己的 NVLink 互联生态；另一边当起「二房东」，撮合 Anthropic 与 Lambda 签下 <strong>350 亿美元</strong>云计算大单。国际侧，Runway 发布首个「界面世界模型」<strong>Solaris</strong>，让「实时生成可交互界面、无需代码」从概念变成 demo；开源侧，DeepSeek 放出 V4-Flash-Vision 实验版权重，OpenClaw 迭代到 2.0。政策面，特朗普为数据中心建设「开火」，AI 基建的争议浮出水面。</p>
+</div>
+
+<!-- 🔥 今日头条 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">🔴 BREAKING</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">界面新闻 · 华尔街见闻 · 快科技 · IT之家</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;">
+      <a href="https://www.jiemian.com/article/15038790.html" target="_blank">英伟达 35 亿美元投资联发科：史上最大海外投资，把定制 XPU 收编进自家互联生态</a>
+    </div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">
+      英伟达宣布向联发科投资 <strong>35 亿美元（约合 235.75 亿元人民币）</strong>，创下其史上最大海外直接投资纪录：联发科本次发行的海外可转债总额 39 亿美元，英伟达一家认购 35 亿、占比近 90%。合作层面，联发科将基于英伟达 <strong>NVLink Fusion</strong> 平台为客户开发<strong>定制 XPU 芯片</strong>，并整合进英伟达 NVLink 互联的机架级「AI 工厂」；双方同时在 AI 基础设施、<strong>边缘 AI、车用</strong>三大领域深化合作。
+      <br><br>
+      媒体普遍用「<strong>打不过就加入</strong>」来解读：NVLink Fusion 本质上是一个让「定制 XPU」也能接入英伟达互联生态的开放平台，互联、封装、机柜级系统都绕不开英伟达这套标准。英伟达的算盘很直白——与其被博通、Marvell 主导的定制芯片浪潮「挖墙脚」，不如把挑战者变成生态内伙伴，让每一颗定制芯片最后都「长」在自家 NVLink 的骨架上。
+    </div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;">
+      <span class="tag hot">英伟达</span>
+      <span class="tag hot">联发科</span>
+      <span class="tag hot">35亿美元</span>
+      <span class="tag">定制XPU</span>
+      <span class="tag">NVLink Fusion</span>
+      <span class="tag">史上最大海外投资</span>
+    </div>
+  </div>
+</div>
+
+<!-- 💰 算力 & 融资 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">💰</span>算力 &amp; 融资</div>
+
+  <div class="card">
+    <div class="source">华尔街见闻 · IT之家 · 界面新闻</div>
+    <div class="title">
+      <a href="https://wallstreetcn.com/articles/3780775" target="_blank">Anthropic 与 Lambda 签下 350 亿美元云计算大单，真正的「房东」是英伟达</a>
+    </div>
+    <div class="summary">
+      Anthropic 与英伟达支持的 GPU 云厂商 Lambda 达成<strong> 350 亿美元</strong>云计算协议（德州数据中心），但背后真正的「房东」是英伟达——据知情人士，英伟达数周前已与 Hut8 签约锁定该数据中心的算力资源，再「转租」给 Anthropic。这也是 Anthropic 短期内第二笔算力大单（此前被曝豪掷 <strong>450 亿美元</strong>向 Nscale 租赁 Vera Rubin 芯片算力），两笔合计约 <strong>800 亿美元</strong>，凸显头部 AI 开发商抢算力的迫切。英伟达「撮合」的逻辑很清晰：以信用背书和 GPU 供应，换取对整条算力供应链的生态掌控。
+    </div>
+    <div class="tags">
+      <span class="tag hot">Anthropic</span>
+      <span class="tag hot">Lambda</span>
+      <span class="tag">350亿美元</span>
+      <span class="tag">英伟达二房东</span>
+      <span class="tag">算力</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">IT之家 · 环球网 · 亿邦动力</div>
+    <div class="title">
+      <a href="https://m.ithome.com/html/996653.htm" target="_blank">OpenAI：ChatGPT 广告年化收入运行率突破 10 亿美元，上线不到 200 天</a>
+    </div>
+    <div class="summary">
+      OpenAI 当地时间周一宣布，ChatGPT 广告业务的<strong>年化收入运行率已达 10 亿美元</strong>，距其上线不到 200 天，并计划把广告服务扩展到全球 40 多个国家。依托 ChatGPT 约 <strong>10 亿周活用户</strong>，中小企业在广告主中占据「重要份额」。这一数字为 OpenAI 备战 IPO 再添一枚筹码，也从侧面验证了「AI 流量平台广告变现」的可行性——此前市场对 AI 平台能否靠广告挣钱一直存疑。
+    </div>
+    <div class="tags">
+      <span class="tag hot">OpenAI</span>
+      <span class="tag hot">ChatGPT广告</span>
+      <span class="tag">年化10亿美元</span>
+      <span class="tag">200天</span>
+      <span class="tag">IPO</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🧠 大模型 & 产品 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 &amp; 产品</div>
+
+  <div class="card">
+    <div class="source">Runway · The Indian Express · AI早报</div>
+    <div class="title">
+      <a href="https://runway.com/news/research/introducing-solaris" target="_blank">Runway 发布首个「界面世界模型」Solaris：实时生成可交互界面，无需代码</a>
+    </div>
+    <div class="summary">
+      Runway 推出首个 <strong>Interface World Model（界面世界模型）Solaris</strong>——一个「新型操作系统」般的模型，能<strong>逐帧实时生成可交互界面</strong>，点击、拖拽等输入即时响应，全程无需 HTML/CSS 代码。Solaris 基于其 Gen-4.5 视频模型与早期世界模型 GWM-1 构建，官方称其在生成新界面的「结构相似性与信息保留」上<strong>超越前沿 LLM</strong>。这是「世界模型」第一次落到「界面」这一具体场景，被视作「生成式操作系统」的一次预演。
+    </div>
+    <div class="tags">
+      <span class="tag hot">Runway</span>
+      <span class="tag hot">Solaris</span>
+      <span class="tag">世界模型</span>
+      <span class="tag">界面生成</span>
+      <span class="tag">无代码</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">DeepSeek · AI早报 · PPIO</div>
+    <div class="title">
+      <a href="https://ppio.com/llm/deepseek-deepseek-v4-flash-vision-exp" target="_blank">DeepSeek-V4-Flash-Vision-Exp 权重发布：原生多模态 + 100 万 token 上下文</a>
+    </div>
+    <div class="summary">
+      DeepSeek 发布实验性多模态模型 <strong>DeepSeek-V4-Flash-Vision-Exp</strong> 的权重：在 V4-Flash 基础上加入<strong>原生视觉理解</strong>能力，并保留 <strong>100 万 token</strong>上下文，主打长文档 + 多图理解与 Agent 任务。延续 DeepSeek 一贯的开源路线，权重开放供开发者下载自部署，进一步压低了国产多模态模型的落地门槛。
+    </div>
+    <div class="tags">
+      <span class="tag hot">DeepSeek</span>
+      <span class="tag hot">V4-Flash-Vision</span>
+      <span class="tag">多模态</span>
+      <span class="tag">100万token</span>
+      <span class="tag">开源权重</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">OpenClaw · GitHub</div>
+    <div class="title">
+      <a href="https://docs.openclaw.ai/releases/2026.8.1" target="_blank">开源个人 AI 助手 OpenClaw 2.0 发布：开始像一个「Agent 操作系统」了</a>
+    </div>
+    <div class="summary">
+      开源个人 AI 助手 <strong>OpenClaw</strong> 发布 2.0 大版本（v2026.8.1），社区评价它「开始像一个 Agent 操作系统」：支持实时连续对话、更快地在真实任务上执行 Agent 动作，并可直接在用户日常使用的聊天 App 中运行。定位是「跑在你机器上、长在你聊天软件里的私人 AI 助手」，延续「任何平台、你的设备、你的对话」的开源路线。
+    </div>
+    <div class="tags">
+      <span class="tag hot">OpenClaw</span>
+      <span class="tag hot">2.0</span>
+      <span class="tag">开源</span>
+      <span class="tag">AI助手</span>
+      <span class="tag">Agent</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🌍 政策 & 国际 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🌍</span>政策 &amp; 平台</div>
+
+  <div class="card">
+    <div class="source">观察者网</div>
+    <div class="title">
+      <a href="https://www.guancha.cn/internation/2026_09_01_829494.shtml" target="_blank">特朗普：你们再反对建数据中心，中国要高兴死了</a>
+    </div>
+    <div class="summary">
+      面对美国国内此起彼伏的反数据中心抗议，特朗普公开喊话「你们再反对建数据中心，中国要高兴死了」。美国正大力推动数据中心建设以满足 AI 产业的算力需求，但环保、社区、电力等阻力持续升温。这句话点破了当下 AI 竞争的一个现实——<strong>算力基建</strong>已成为中美 AI 博弈的「第二战场」，模型之争之外，谁先把数据中心建起来，谁就掌握下一阶段的话语权。
+    </div>
+    <div class="tags">
+      <span class="tag">特朗普</span>
+      <span class="tag">数据中心</span>
+      <span class="tag">AI算力</span>
+      <span class="tag">政策</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">钛媒体 · Edge AI Daily</div>
+    <div class="title">
+      <a href="https://www.vbnvbn.com/article/detail/rnxz.html" target="_blank">整治 AI 虚假账号，Instagram 推出全新 AI 个人资料标签</a>
+    </div>
+    <div class="summary">
+      为整治 AI 虚假账号，Instagram 推出全新 <strong>AI 个人资料标签</strong>，帮助用户识别由 AI 生成的账号与内容。这是继多家平台加码「AI 生成内容标注」之后，主流社交平台对 AI 内容治理的又一步落地，也预示着「AI 真实性标注」正从内容层延伸到账号层。
+    </div>
+    <div class="tags">
+      <span class="tag">Instagram</span>
+      <span class="tag">AI标签</span>
+      <span class="tag">平台治理</span>
+      <span class="tag">虚假账号</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+    今天最想和主人聊的，是英伟达的「两条腿走路」。一边<strong>砸 35 亿美元把联发科「收编」进 NVLink 互联生态</strong>，一边当「二房东」撮合 Anthropic 锁下 350 亿算力大单——这两件事放在一起看，指向一个很清晰的转向：<strong>英伟达不再只是「卖卡」的公司，而是在用「互联标准 + 生态信用」把整个定制芯片浪潮都圈进自己的护城河。</strong>当博通、Marvell 带着定制 XPU 来「挖墙脚」，英伟达的回答是「打不过就加入」——让每一颗定制芯片最后都长在自家 NVLink 的骨架上。这招，很「老黄」。
+    <br><br>
+    国际侧，Runway 的 <strong>Solaris</strong> 也很值得盯一眼。「世界模型」喊了这么久，这是第一次落在一个具体、可感的场景——<strong>实时生成可交互界面、无需代码</strong>。如果这条路真能走通，前端和产品原型的工作流可能会被整个重写；反过来，如果只是又一场炫技 demo，那「世界模型」离实用还差得远。小晴会继续观察。
+    <br><br>
+    国内侧昨天相对安静，属于「发完大招后的中场休息」：DeepSeek 放出 Vision 实验版权重、OpenClaw 迭代到 2.0，都是开源侧的小步快跑。倒是特朗普那句「中国要高兴死了」值得玩味——<strong>AI 的下一场竞争，正从「模型」悄悄转向「基建」</strong>。整体看，9 月 1 日不算大瓜爆发日，更像是<strong>英伟达「秀肌肉」的一天</strong>，主人可以重点看看算力生态这条暗线的走向～ 📡
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-09-02</p>
+</div>
+
+</div>
+</body>
+</html>

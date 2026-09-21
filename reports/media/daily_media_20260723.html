@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年07月23日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年07月23日</div>
+  <div class="subtitle">中文AI媒体精选 · 机器之心/量子位/新智元 等</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>DeepSeek V4「满血版」于7月20日正式发布，1.6万亿参数、百万上下文与峰谷计费引发行业震动；智谱建成全国产芯片AI数据中心、股价单日暴涨超30%；WAIC 2026落下帷幕，物理AI与具身智能从炫技走向产线，机器人赛道进入量产验证阶段。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">⚡ Breaking News</div>
+    <div class="source">新智元 · 量子位 · 联合早报 · 晚点LatePost · 多家综合</div>
+    <div class="title"><a href="https://deepseek-ai.net/zh-cn/blog/deepseek-v4-release/" target="_blank">DeepSeek V4「满血版」正式发布：1.6万亿参数、百万上下文、首创峰谷计费</a></div>
+    <div class="summary">7月20日，DeepSeek V4 正式版全量商用。Pro旗舰版1.6万亿参数，Flash轻量版2840亿参数，全系支持100万Token上下文窗口。国内首创「峰谷分时计费」机制——谷时调用算力费直降约60%，高峰时段价格翻倍。性能直追OpenAI GPT-5.6，7月24日将永久下线旧版模型别名。此举被业内视为国产大模型从追赶到定价权争夺的关键一步。</div>
+    <div class="tags">
+      <span class="tag hot">#头条</span>
+      <span class="tag">#大模型</span>
+      <span class="tag">#DeepSeek</span>
+      <span class="tag">#开源</span>
+      <span class="tag">#峰谷计费</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🏭</span>算力与基础设施</div>
+
+  <div class="card">
+    <div class="source">每日经济新闻 · 彭博社 · 中金在线</div>
+    <div class="title"><a href="https://www.nbd.com.cn/articles/2026-07-21/4490667.html" target="_blank">智谱建成全国产芯片AI数据中心（1GW），股价单日暴涨超30%</a></div>
+    <div class="summary">据彭博社7月21日报道，智谱已完成一座1GW级大型AI数据中心的建设，全部采用国产AI芯片。同日Hugging Face披露GLM-5.2真实部署案例，推动股价单日暴涨37%。智谱ARR已达10亿美元，AI竞争正式进入「模型+Infra」时代。</div>
+    <div class="tags">
+      <span class="tag">#算力</span>
+      <span class="tag">#国产芯片</span>
+      <span class="tag">#智谱</span>
+      <span class="tag">#数据中心</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">观察者网 · WAIC 2026</div>
+    <div class="title"><a href="https://user.guancha.cn/main/content?id=1696394" target="_blank">阿里平头哥宣布开源自研AI软件栈 T-Head SAIL，真武芯片已出货56万片</a></div>
+    <div class="summary">WAIC 2026现场，阿里平头哥宣布开源自研AI软件栈T-Head SAIL，覆盖OS层、SDK层到接口层的完整链路，全面兼容主流AI生态。其真武系列AI芯片累计出货已超56万片。</div>
+    <div class="tags">
+      <span class="tag">#芯片</span>
+      <span class="tag">#开源</span>
+      <span class="tag">#阿里平头哥</span>
+      <span class="tag">#WAIC</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能与机器人</div>
+
+  <div class="card">
+    <div class="source">量子位 · 36氪 · 新智元</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/07/454802.html" target="_blank">WAIC 2026：物理AI从炫技走向产线，机器人成「一号打工人」</a></div>
+    <div class="summary">WAIC 2026首次将具身智能列为核心赛道，超200家企业参展创历史之最。智元机器人在现场搭建真实产线并入选「镇馆之宝」，机器人从翻跟头进化到24小时连轴转，商业化从概念验证进入量产落地阶段。量子位评论称「AI在物理世界都快卷疯了」。</div>
+    <div class="tags">
+      <span class="tag">#具身智能</span>
+      <span class="tag">#人形机器人</span>
+      <span class="tag">#WAIC</span>
+      <span class="tag">#智元</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/" target="_blank">物理AI闭环跑通：日冕+远图官宣万台级具身智能部署计划</a></div>
+    <div class="summary">日冕与远图宣布将在服务器制造场景验证超级工站能力，2027年完成百台级部署，未来实现万台级具身智能产品落地。被量子位称为「物理AI的闭环终于有人跑通了」。</div>
+    <div class="tags">
+      <span class="tag">#物理AI</span>
+      <span class="tag">#具身智能</span>
+      <span class="tag">#量产</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">科技行者 · 面壁智能</div>
+    <div class="title"><a href="https://www.techwalker.com/2026/0720/3193720.shtml" target="_blank">面壁智能发布 MiniCPM-Robot 具身智能模型，将密度定律带入机器人</a></div>
+    <div class="summary">WAIC 2026期间，面壁智能发布具身智能模型系列MiniCPM-Robot，操作模型参数仅约1.5B，以极低算力成本实现高效具身操作能力，将「密度定律」逻辑从语言模型延伸至物理世界。</div>
+    <div class="tags">
+      <span class="tag">#具身智能</span>
+      <span class="tag">#小模型</span>
+      <span class="tag">#面壁智能</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 (aiera.com.cn)</div>
+    <div class="title"><a href="http://aiera.com.cn/" target="_blank">智元、觅蜂科技联合主办WAIC智启具身论坛，探索物理AI的「ChatGPT时刻」</a></div>
+    <div class="summary">7月22日，智元机器人与觅蜂科技联合主办WAIC智启具身论坛，聚焦物理AI从实验室到产业化的关键路径，探讨具身智能何时迎来自己的「ChatGPT时刻」。</div>
+    <div class="tags">
+      <span class="tag">#具身智能</span>
+      <span class="tag">#物理AI</span>
+      <span class="tag">#智元</span>
+      <span class="tag">#WAIC</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型与应用</div>
+
+  <div class="card">
+    <div class="source">机器之心 · ICML 2026</div>
+    <div class="title"><a href="https://www.jiqizhixin.com/" target="_blank">ICML 2026：北大提出 HOI-Edit，图像编辑进入「交互理解」时代</a></div>
+    <div class="summary">北大团队在ICML 2026上提出HOI-Edit基准与SCPE自纠错框架，让图像编辑模型能理解人物交互关系，实现更精准的语义级编辑，标志着图像生成从像素操控走向场景理解。</div>
+    <div class="tags">
+      <span class="tag">#多模态</span>
+      <span class="tag">#图像编辑</span>
+      <span class="tag">#ICML</span>
+      <span class="tag">#北大</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">晚点LatePost</div>
+    <div class="title"><a href="https://app.myzaker.com/news/article.php?pk=6a5b5d018e9f0918fd0a08ac" target="_blank">新豆包手机备货数十万台，字节AI不再满足于做头部App的「附庸」</a></div>
+    <div class="summary">晚点独家报道，字节跳动豆包手机助手已备货数十万台，团队正在与各头部应用厂商谈判开放AI可调用的接口。豆包手机助手已取得生成式AI服务备案，这标志着字节从软件端全面向硬件端延伸。</div>
+    <div class="tags">
+      <span class="tag">#AI手机</span>
+      <span class="tag">#字节跳动</span>
+      <span class="tag">#豆包</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">💰</span>资本与产业动态</div>
+
+  <div class="card">
+    <div class="source">投资界 · 新京报</div>
+    <div class="title"><a href="https://news.pedaily.cn/202607/566238.shtml" target="_blank">爱诗科技完成29.8亿元C轮融资，阿里领投，创国内AI视频赛道纪录</a></div>
+    <div class="summary">AI视频生成企业爱诗科技（PixVerse）宣布完成整体C轮融资，累计融资29.8亿元人民币，阿里领投。旗下PixVerse V5.6在图生视频和文生视频双双位居全球前列，用户破亿。</div>
+    <div class="tags">
+      <span class="tag">#融资</span>
+      <span class="tag">#AI视频</span>
+      <span class="tag">#爱诗科技</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">南都N视频 · 每日经济新闻</div>
+    <div class="title"><a href="https://m.mp.oeeee.com/a/BAAFRD0000202607211629836.html" target="_blank">Kimi被曝启动IPO，K3完整模型7月27日前发布，港股大模型稀缺格局生变</a></div>
+    <div class="summary">月之暗面（Kimi）被曝启动IPO，其旗舰模型Kimi K3完整模型权重将于7月27日前发布。此前K3在WAIC期间引发大量关注，港股大模型板块竞争格局正在重塑。</div>
+    <div class="tags">
+      <span class="tag">#IPO</span>
+      <span class="tag">#Kimi</span>
+      <span class="tag">#大模型</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪</div>
+    <div class="title"><a href="https://xueqiu.com/5215025851/401572993" target="_blank">36氪WAIC收官观察：AI从「展示能力」走向「证明价值」，具身智能市场规模2026年有望破万亿</a></div>
+    <div class="summary">36氪连续第三年深度报道WAIC，指出2026年最大变化是AI产业从能力展示转向价值证明。据36氪研究院测算，中国具身智能市场规模已超9000亿元，2026年有望突破万亿关口。</div>
+    <div class="tags">
+      <span class="tag">#产业观察</span>
+      <span class="tag">#WAIC</span>
+      <span class="tag">#具身智能</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>过去48小时，中文AI媒体圈的注意力高度集中在三个关键词：DeepSeek V4、智谱国产算力、WAIC具身智能。DeepSeek以「满血版」V4+峰谷计费的组合拳，正在将大模型竞争从单纯的能力对比拉入成本结构博弈，这是中国AI企业首次在定价权层面主动出牌。与此同时，智谱1GW全国产芯片数据中心的建成，宣告了「去英伟达化」从口号走向工程落地。而在WAIC 2026的展台上，机器人不再翻跟头、不再跳舞——它们开始拧螺丝、搬货箱、跑产线。当表演落幕、产线亮灯，物理AI的「ChatGPT时刻」或许比我们想象的更近。一个清晰的趋势是：2026下半场的AI叙事，将从「模型有多聪明」转向「模型能省多少钱、干多少活」。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026年07月23日 · 数据来源覆盖机器之心/量子位/新智元/36氪/晚点LatePost/甲子光年/投资界等</p>
+</div>
+
+</div>
+</body>
+</html>

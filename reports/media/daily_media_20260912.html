@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年09月12日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年09月12日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>昨天（9 月 11 日）的 AI 圈几乎被 <strong>OpenAI</strong> 刷屏——一口气放出 <strong>GPT-Live-1 全双工语音 API</strong> 和 <strong>Agents API 公测</strong>，还上线了面向金融行业的 <strong>ChatGPT 金融服务版</strong>，同时因 GPT-6 Astra 需求爆棚而<strong>暂停 Pro 订阅</strong>。产业侧最大的冲突是 <strong>Anthropic 发布报告点名 7 家中国 AI 公司「蒸馏攻击」</strong>；<strong>Cognition</strong> 则用 Kimi K3 底座训出 <strong>SWE-2</strong>，把编码模型的成本-性能帕累托曲线又往前推了一截。外滩大会尾声，国产芯片与智能体生态仍在持续发声。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>热点聚焦</div>
+
+  <div class="hot-topic">
+    <div class="label">今日最热</div>
+    <div class="card" style="margin-bottom:0;border:none;box-shadow:none;background:transparent;">
+      <div class="source">量子位 / 机器之心 · 2026-09-11</div>
+      <div class="title"><a href="https://community.openai.com/t/introducing-gpt-live-1-in-the-api/1396471" target="_blank" rel="noopener">OpenAI 双 API 齐发：GPT-Live-1 全双工语音上线 API，Agents API 同步公测</a></div>
+      <div class="summary">9 月 11 日，OpenAI 把 ChatGPT 里的实时语音体验搬进了 API——GPT-Live-1 支持边说边听、处理打断与停顿，前端语音层定价每分钟 0.05 美元；同时推出 Agents API 公测版，基于 Codex harness 提供全托管云端智能体运行环境，可自动调度工具、协调多子智能体并连续运行数天。这是 OpenAI 把「语音 Agent」与「云端 Agent 托管」两条产品线同时推向开发者的一次集中动作。</div>
+      <div class="tags"><span class="tag hot">新模型</span><span class="tag">OpenAI</span><span class="tag">语音</span><span class="tag">Agent</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🚀</span>新模型 · 新产品</div>
+
+  <div class="card">
+    <div class="source">Cognition / 量子位 · 2026-09-11</div>
+    <div class="title"><a href="https://cognition.com/blog/swe-2" target="_blank" rel="noopener">Cognition 发布 SWE-2：用 Kimi K3 底座 RL 后训练，编码成本降 64%</a></div>
+    <div class="summary">SWE-2 基于月之暗面 Kimi K3（2.8T 参数）做强化学习后训练，在 FrontierCode 1.1 Main 上拿到 50.0%，与 Anthropic Fable 5.1 差距不足 1 个百分点，成本却低 64%。这是 Cognition 首次把 RL 扩展到万亿参数级，单次训练覆盖多个推理档位，再次把「成本-能力帕累托前沿」摆上台面。</div>
+    <div class="tags"><span class="tag">新模型</span><span class="tag">编码</span><span class="tag">Cognition</span><span class="tag">Kimi K3</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">OpenAI / IT之家 · 2026-09-11</div>
+    <div class="title"><a href="https://techstartups.com/2026/09/10/openai-launches-chatgpt-for-financial-services-with-gpt-6-astra-and-built-in-financial-data/" target="_blank" rel="noopener">OpenAI 推出金融服务版 ChatGPT：GPT-6 Astra 内置 LSEG、PitchBook 金融数据</a></div>
+    <div class="summary">面向投行与权益研究场景，OpenAI 发布 ChatGPT for Financial Services，将 GPT-6 Astra 与 LSEG News、PitchBook、Daloopa、Crunchbase 等付费金融数据集成到同一工作台，支持估值建模、研究报告与定制客户材料。继 ChatGPT Work 之后，OpenAI 进一步切入垂直行业。</div>
+    <div class="tags"><span class="tag">新产品</span><span class="tag">OpenAI</span><span class="tag">金融</span><span class="tag">GPT-6 Astra</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">雷峰网 / 智象未来 · 2026-09-11</div>
+    <div class="title"><a href="https://www.leiphone.com/category/industrynews/7VtjXHgiuTlhpNkU.html" target="_blank" rel="noopener">智象未来 vivago R1 全球上线：单次对话稳定生成 5 分钟长视频</a></div>
+    <div class="summary">HiDream.ai 智象未来把视频创作智能体 vivago R1 推向全球，国内「够搭」同步升级。R1 采用多智能体协作机制，可自动完成脚本、分镜、角色渲染与场景适配，一次对话生成 5 分钟高清长视频并支持多轮续剪，官方称内容有效成功率提升至 85%，把 AI 视频从「15 秒」推进到「单反级交付」。</div>
+    <div class="tags"><span class="tag">新产品</span><span class="tag">AI视频</span><span class="tag">智象未来</span><span class="tag">多智能体</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>产业与技术动态</div>
+
+  <div class="card">
+    <div class="source">Anthropic / cnBeta / 联合早报 · 2026-09-11</div>
+    <div class="title"><a href="https://www.cnbeta.com.tw/articles/tech/1577500.htm" target="_blank" rel="noopener">Anthropic 报告点名 7 家中国 AI 公司「蒸馏攻击」，阿里、月之暗面、DeepSeek 在列</a></div>
+    <div class="summary">Anthropic 发布威胁情报报告，指控阿里巴巴、月之暗面、DeepSeek、智谱、小米、商汤、MiniMax 七家中国公司长期未经授权调用 Claude API 蒸馏其模型，涉及数千万次交互，并称近期攻击升级。报告还提及疑似军警、国企用户数据外泄，再度点燃中美 AI 竞争中的模型安全争议。</div>
+    <div class="tags"><span class="tag hot">蒸馏</span><span class="tag">争议</span><span class="tag">Anthropic</span><span class="tag">阿里</span><span class="tag">DeepSeek</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-09-11</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/487092.html" target="_blank" rel="noopener">OpenAI 破解纳维-斯托克斯千禧难题后续：学术争议持续发酵</a></div>
+    <div class="summary">继 OpenAI 宣布用未公开内部模型破解纳维-斯托克斯方程后，纽约大学数学家 Tristan Buckmaster 与 Anthropic 研究员 Levent Alpöge 公开质疑其未经授权参考并利用其未发表研究、且未标注来源，双方就署名与优先级陷入公开争执。量子位跟进称「这场连续剧还没完」——AI 切入基础科研的同时，也撞上了传统学术圈的规则边界。</div>
+    <div class="tags"><span class="tag">科研</span><span class="tag">争议</span><span class="tag">OpenAI</span><span class="tag">数学</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">IT之家 · 2026-09-11</div>
+    <div class="title"><a href="https://www.ithome.com/1/001/069.htm" target="_blank" rel="noopener">GPT-6 Astra 需求爆棚，OpenAI 暂停 200 美元 Pro 订阅新增</a></div>
+    <div class="summary">OpenAI 首席产品官 Tibo 发文称，为保障现有用户体验、流畅访问 GPT-6 Astra，将暂停接受 200 美元档 Pro 20X 订阅的新增与升级，现有用户不受影响。这是 GPT-6 Astra 自 9 月 3 日发布以来需求持续爆发的又一信号，也折射出前沿模型背后的算力瓶颈。</div>
+    <div class="tags"><span class="tag">算力</span><span class="tag">OpenAI</span><span class="tag">GPT-6 Astra</span><span class="tag">订阅</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">IT之家 / 凤凰科技 · 2026-09-11</div>
+    <div class="title"><a href="https://www.ithome.com/1/000/736.htm" target="_blank" rel="noopener">月之暗面官宣 Kimi 企业合作伙伴计划，金山云、中软国际等已加入</a></div>
+    <div class="summary">月之暗面启动 Kimi 企业合作伙伴计划（「登月计划」），首批签约华胜天成、金山云、亚康股份、亚信科技、中软国际等，覆盖软件信息服务、云计算、通信与基础设施领域，将持续向 IT 服务商、软件服务商及咨询机构开放，加速 Kimi 在企业侧的规模化落地。</div>
+    <div class="tags"><span class="tag">行业</span><span class="tag">月之暗面</span><span class="tag">Kimi</span><span class="tag">企业合作</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">IT之家 / 黑马 · 2026-09-11</div>
+    <div class="title"><a href="https://www.iheima.com/article-401829.html" target="_blank" rel="noopener">寒武纪回应「AI 处理器涨价」传闻：公司未发布相关消息</a></div>
+    <div class="summary">针对下一代暂定名「690」芯片重新定价、较两个月前参考报价上涨 20%-30% 的传闻，寒武纪接线人员回应称公司并未发布涨价相关消息。此前寒武纪营收利润双双高增，并适配多款主流大模型，新架构研发仍在推进，「涨价」之说或为市场对 AI 算力供需紧张的又一次投射。</div>
+    <div class="tags"><span class="tag">芯片</span><span class="tag">寒武纪</span><span class="tag">行业</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-09-11</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/487273.html" target="_blank" rel="noopener">墨芯人工智能亮相外滩大会：专用稀疏推理芯片提升算力效能</a></div>
+    <div class="summary">在 2026 Inclusion·外滩大会上，墨芯人工智能展示其专用稀疏推理芯片方案，主打以稀疏计算提升大模型推理的算力效能，瞄准「AI 新经济」下的算力成本痛点，为国产推理芯片在边缘与云端的高性价比路线再添一个样本。</div>
+    <div class="tags"><span class="tag">芯片</span><span class="tag">外滩大会</span><span class="tag">稀疏计算</span><span class="tag">算力</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">新浪科技 / CSDN · 2026-09-11</div>
+    <div class="title"><a href="https://www.163.com/dy/article/L6D0LEBM0514R9P4.html" target="_blank" rel="noopener">Meta AI 智能体 Muse 登顶美国 App Store 总榜第二</a></div>
+    <div class="summary">Meta 个人 AI 智能体应用 Muse 热度持续攀升，已跻身美国 iOS App Store 总榜第二名，累计 iOS 下载量超 8.3 万次。Muse 打通 WhatsApp、邮件、购物、旅行等场景，可自主完成比价下单、行程定制、价格谈判等任务，但安卓端表现平淡，且因授权大量个人隐私数据引发安全争议。</div>
+    <div class="tags"><span class="tag">智能体</span><span class="tag">Meta</span><span class="tag">应用</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>昨天最值得记住的一个词，大概是「Agent 基建」。OpenAI 把 GPT-Live-1 语音和 Agents API 同时推给开发者，等于明牌：接下来的竞争不再是单拼模型跑分，而是拼「谁能让智能体真正跑起来、跑得便宜」。Cognition 用 Kimi K3 底座训出 SWE-2、把编码成本打下来 64%，也是同一套逻辑。相比之下，Anthropic 对国内 7 家公司的蒸馏指控，把「模型是怎么来的」这个老问题重新摆到台面上——技术路线之争背后，是数据、蒸馏与开源的规则之争。另一边，国产芯片（墨芯、寒武纪）和外滩大会上的智能体生态仍在持续发声。整体看，9 月 11 日这一天，产品在变多、成本在变低、争议也在变热，AI 的「落地」与「规则」正同步提速。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026年09月12日</p>
+</div>
+
+</div>
+</body>
+</html>

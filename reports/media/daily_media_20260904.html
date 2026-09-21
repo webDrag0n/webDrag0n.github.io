@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年09月04日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年09月04日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>9 月 3 日，AI 圈的主线落在<strong>「老将复出 + 机器人平民化」</strong>两条线上。国内，初代程序员「教父」<strong>陈大年</strong>退隐十年后复出，创办 StartLux（原点星辉），一款 <strong>27B 本地模型</strong>在信通院 MCP 专项测试中拿下综合第二、直逼 DeepSeek-V4-Pro，只差 1.3 个百分点。具身智能侧迎来「价格屠夫」：元点机器人「小桥」把高性能人形机器人打到 <strong>8888 元</strong>，高喊「人形机器人的安卓时刻」。海外侧，谷歌 <strong>Gemini 3.8 Flash</strong>明日登场（WSJ 爆料），Claude Fable 5.1 发布仅数小时就被黑客扒出 <strong>27.5 万字系统提示词</strong>。国产端侧也在发力：科大讯飞词元星火开源 <strong>4B 端侧模型</strong>「越级打怪」。</p>
+</div>
+
+<!-- 🔥 今日头条 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">🔴 BREAKING</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">量子位 · Pandaily · 界面新闻 · BYDFi</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;">
+      <a href="https://www.qbitai.com/2026/09/483600.html" target="_blank">陈大年复出，入局大模型：27B 本地模型 MCP 测试第二，直逼 DeepSeek-V4-Pro</a>
+    </div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">
+      国产大模型第一梯队爆了个「冷门」。一家新公司首款只有 <strong>27B 参数的模型</strong>，在信通院可信 AI 大模型基准 <strong>MCP 专项测试</strong>中拿下<strong>综合第二</strong>——排它前面的，是梁文锋藏了近一年、参数量高达 <strong>1.6 万亿的 DeepSeek-V4-Pro</strong>，两者差距仅 <strong>1.3 个百分点</strong>。
+      <br><br>
+      这匹黑马是 <strong>StartLux-V1.0-27B-Preview</strong>，来自 <strong>StartLux（原点星辉）</strong>，而它的创始人兼 CEO 正是初代程序员「教父」<strong>陈大年</strong>——盛大网络联合创始人、连尚网络（WiFi 万能钥匙）掌门人。退隐十年归来，他把赌注押在<strong>「本地模型」</strong>上：模型不依赖云端、可直接跑在消费级 PC 上，Agent 多工具协作能力却追平万亿级云端旗舰。他还在公开场合喊话「AI 时代有八条非共识」，核心一条是——<strong>本地模型 3 年打平 Claude、占据 80% 市场</strong>。从「拼参数」到「拼本地化」，这位老将的非共识赌注，值得盯一盯。
+    </div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;">
+      <span class="tag hot">陈大年</span>
+      <span class="tag hot">StartLux</span>
+      <span class="tag hot">27B本地模型</span>
+      <span class="tag">MCP测试第二</span>
+      <span class="tag">DeepSeek-V4-Pro</span>
+      <span class="tag">复出</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🧠 大模型 & 产品 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 &amp; 产品</div>
+
+  <div class="card">
+    <div class="source">新智元 · WSJ</div>
+    <div class="title">
+      <a href="https://aiera.com.cn/2026/09/03/other/admin/111845/gemini-3-8%ef%bc%8c%e6%98%8e%e6%97%a5%e7%99%bb%e5%9c%ba%ef%bc%81/" target="_blank">Gemini 3.8 Flash 明日登场：Gemini 3.5 Pro 被弃、4.0 在途，编程实力「碾压 Opus」</a>
+    </div>
+    <div class="summary">
+      谷歌也要「交作业」了。据 WSJ 独家爆料，<strong>Gemini 3.8 Flash（代号「Skimaki」）将在明日登场</strong>；与此同时，5 月 I/O 大会预告的 <strong>Gemini 3.5 Pro 已确定被谷歌放弃</strong>，下一大版本 <strong>Gemini 4.0</strong>正在预训练评估中、后训练稳步推进。据称在谷歌内部编码工具 Jetski 的对比测试中，<strong>3.8 Flash 直接碾压 Opus 模型</strong>。作为预热，谷歌今日先为 Gemini 植入一项新能力——<strong>智能体视频理解（Agentic Video Understanding）</strong>，在标准视频分析基准上开关一开，<strong>Token 消耗最多降 88%、成本最多降 66%、准确率反而涨最多 7%</strong>，且不额外收费。
+    </div>
+    <div class="tags">
+      <span class="tag hot">谷歌</span>
+      <span class="tag hot">Gemini 3.8 Flash</span>
+      <span class="tag">Gemini 3.5 Pro取消</span>
+      <span class="tag">Gemini 4.0</span>
+      <span class="tag">智能体视频理解</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · GitHub(Pliny)</div>
+    <div class="title">
+      <a href="https://aiera.com.cn/2026/09/03/other/admin/111917/%e7%aa%81%e5%8f%91%ef%bc%81fable-5-1%e9%81%ad%e9%bb%91%e5%ae%a2%e7%a0%b4%e8%a7%a3%ef%bc%8c27%e4%b8%87%e5%ad%97%e6%8f%90%e7%a4%ba%e8%af%8d%e6%b3%84%e9%9c%b2/" target="_blank">Claude Fable 5.1 发布数小时即遭破解：27.5 万字系统提示词泄露</a>
+    </div>
+    <div class="summary">
+      Anthropic 的 <strong>Fable 5.1 / Mythos 5.1</strong> 刚发布，越狱大神 <strong>Pliny the Liberator</strong> 就丢出一份 GitHub 链接，把 <strong>Fable 5.1 的完整系统提示词</strong>扒了出来——足足 <strong>超过 275,000 个字符（27.5 万字）</strong>，包含核心行为逻辑、记忆系统、搜索与版权规则等运行时组装指令。Pliny 还嘲讽官方公布的那份 2.7 万字「系统提示词更新」不过是「冰山一角、只有 10%」。有意思的是，Fable 5.1 与 Mythos 5.1 本质是<strong>同一个模型、同一套权重</strong>，只因安全护栏不同而分名——而这次破解，恰恰把「安全版本」的底牌彻底掀开。
+    </div>
+    <div class="tags">
+      <span class="tag hot">Anthropic</span>
+      <span class="tag hot">Fable 5.1破解</span>
+      <span class="tag hot">27.5万提示词</span>
+      <span class="tag">Pliny</span>
+      <span class="tag">越狱</span>
+      <span class="tag">AI安全</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · Hugging Face</div>
+    <div class="title">
+      <a href="https://aiera.com.cn/2026/09/03/other/admin/111822/%e7%ba%af%e8%a1%80%e5%9b%bd%e4%ba%a7%ef%bc%814b%e6%a8%a1%e5%9e%8b%e8%b6%8a%e7%ba%a7%e6%89%93%e6%80%aa%ef%bc%8c%e6%9d%80%e5%85%a5%e4%b8%87%e4%ba%bf%e8%b5%9b%e9%81%93/" target="_blank">纯血国产端侧模型：科大讯飞「词元星火」开源 星火 X2.5-4B/1.7B，越级打怪</a>
+    </div>
+    <div class="summary">
+      9 月 1 日 Hugging Face 上线了两个开源端侧模型——<strong>星火 X2.5-4B 和 1.7B</strong>，出自科大讯飞全资子公司 <strong>「词元星火」</strong>。别看参数小，成绩相当能打：多轮工具调用 <strong>τ³-bench 拿 30.4 分</strong>、MCP 协议 <strong>MCP-Atlas 54.6 分</strong>、自主上网 <strong>BrowseComp 40.9 分</strong>、听人话 <strong>IFBench 飙到 75.0 分</strong>，在 Agent、工具调用与真实任务完成率上实现「越级」。更关键的是，两款模型<strong>从头到尾基于全国产算力平台训练</strong>，部署端打通英伟达、华为、海光、后摩等主流硬件。一台断网笔记本就能跑的端侧 AI，正跨越「好用」的门槛。
+    </div>
+    <div class="tags">
+      <span class="tag hot">科大讯飞</span>
+      <span class="tag hot">星火X2.5-4B</span>
+      <span class="tag">词元星火</span>
+      <span class="tag">端侧模型</span>
+      <span class="tag">全国产算力</span>
+      <span class="tag">开源</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/09/483189.html" target="_blank">影眸 Hyper3D 发布世界生成模型 WorldGen：单图直出可交互 3D 场景</a>
+    </div>
+    <div class="summary">
+      3D 生成从「造物」一脚跨进「造世界」。3D 生成头部玩家 <strong>影眸 Hyper3D</strong> 正式发布世界生成模型 <strong>WorldGen</strong>：随便上传一张场景图，<strong>2～3 分钟生成一个完整 3D 场景</strong>，而且每个资产都「活着」——桌上的碗能单独拎起来、椅子能旋转挪动、不喜欢的家具能随时替换，还自带物理属性（抽走支撑物周围物体也会位移跌落）。相比业内宽泛的「世界模型」，WorldGen 的定位更具体：交付<strong>可交互、可编辑、可进入真实生产管线</strong>的 3D 场景，而非只能围观的三维画面。
+    </div>
+    <div class="tags">
+      <span class="tag hot">影眸Hyper3D</span>
+      <span class="tag hot">WorldGen</span>
+      <span class="tag">世界生成模型</span>
+      <span class="tag">3D场景</span>
+      <span class="tag">可交互</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🤖 具身智能 & 机器人 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能 &amp; 机器人</div>
+
+  <div class="card">
+    <div class="source">新智元</div>
+    <div class="title">
+      <a href="https://aiera.com.cn/2026/09/03/other/admin/111886/%e5%88%9a%e5%88%9a%ef%bc%8c%e5%85%a8%e7%90%83%e9%a6%96%e5%8f%b0%e3%80%8c%e4%b8%87%e5%85%83%e7%ba%a7%e3%80%8d%e9%ab%98%e6%80%a7%e8%83%bd%e4%ba%ba%e5%bd%a2%e6%9c%ba%e5%99%a8%e4%ba%ba%e8%af%9e%e7%94%9f/" target="_blank">全球首台「万元级」高性能人形机器人诞生：元点「小桥」8888 元，能后空翻还能二开</a>
+    </div>
+    <div class="summary">
+      高性能人形机器人的「不可能三角」被端上了桌。9 月 2 日，<strong>元点机器人 Zeroth Bridge「小桥」</strong>正式发布：<strong>88 厘米、13 公斤</strong>，一拎即走，金属外壳，<strong>能后空翻、高性能舞蹈、遥操</strong>，还支持<strong>全量二次开发</strong>，并同步开放 OpenBridge 开发者开源生态。极客版日常价 12888 元，首发专属价仅 <strong>8888 元</strong>——买不到一台高配 MacBook Pro，却能拥有一台高动态运动能力的人形机器人。新智元称其为<strong>「人形机器人的安卓时刻」</strong>：够便宜的没性能、性能猛的没开放、能二开的都十万起，小桥一口气把三者补齐了。
+    </div>
+    <div class="tags">
+      <span class="tag hot">元点机器人</span>
+      <span class="tag hot">8888元</span>
+      <span class="tag hot">万元级人形机器人</span>
+      <span class="tag">后空翻</span>
+      <span class="tag">OpenBridge</span>
+      <span class="tag">安卓时刻</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/09/483565.html" target="_blank">它石智航 AWE3.7：一个「具身大脑」场景通吃，从工厂一路干到家庭</a>
+    </div>
+    <div class="summary">
+      具身智能进入「规模化落地」下半场，比的不再是单点任务，而是<strong>同一套系统能否跨环境、跨本体、跨任务迁移</strong>。<strong>它石智航</strong>的通用具身大模型 <strong>AWE3.7（AI World Engine）</strong>在十天内密集放出多组真实任务：工业产线上<strong>零件分拣、双手缠胶带、毫米级网线插接、手机装盒、拧螺丝</strong>（对得准、力控稳、抗扰动、能自主纠错），并进一步贯通物流、生活服务与移动操作。用同一颗「具身大脑」覆盖多个场景，AWE3.7 试图回应「通用泛化」这道行业命题。
+    </div>
+    <div class="tags">
+      <span class="tag hot">它石智航</span>
+      <span class="tag hot">AWE3.7</span>
+      <span class="tag">具身大模型</span>
+      <span class="tag">通用泛化</span>
+      <span class="tag">精细操作</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/09/483351.html" target="_blank">自变量发布 TwinDex 灵巧操作系统：后训练零真机遥操数据，精细操作全靠「自己悟」</a>
+    </div>
+    <div class="summary">
+      英伟达机器人负责人 Jim Fan 那句「遥操已死」，正开始照进现实。<strong>自变量</strong>发布全新灵巧操作系统 <strong>TwinDex</strong>：在<strong>后训练阶段真机遥操数据为 0</strong>的情况下，机器人连续完成了一套一镜到底的化学实验——<strong>旋拧瓶盖、滴管与试管操作、注射器推注、玻璃棒引流</strong>等，全程 24 个子动作、跨越三种工具、多次双手协调与工具切换，靠区区几百条<strong>无本体数据</strong>就把这些「小容差、高精度、强接触」的精细操作给学会了。「机器人含量几乎为 0」的 Demo，可能真的要把遥操送进历史。
+    </div>
+    <div class="tags">
+      <span class="tag hot">自变量</span>
+      <span class="tag hot">TwinDex</span>
+      <span class="tag">灵巧操作</span>
+      <span class="tag">零遥操数据</span>
+      <span class="tag">精细操作</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/09/483552.html" target="_blank">神秘具身团队「MVP」自进化模型：一镜到底，机器人真的「做了个人」</a>
+    </div>
+    <div class="summary">
+      还记得上周具身圈流传的那个 10 分钟一镜到底视频吗？这个神秘团队不认领、也不解释，回应质疑的方式是一连又甩出几个 Demo，并透露内部代号 <strong>「MVP」</strong>（Make Veritable People，被网友戏译「做个人吧」）。视频里机器人<strong>像人一样思考、自我决策、动作丝滑、逻辑自洽</strong>——被木棍戳胳膊端水杯不洒、手眼协调不分离、拥有持续自进化能力，不少同行看完直呼「具身智能的 ChatGPT 时刻可能真来了」。团队称下一步要让机器人<strong>自己上街、进开放环境</strong>给大家看。
+    </div>
+    <div class="tags">
+      <span class="tag hot">自进化模型</span>
+      <span class="tag hot">MVP</span>
+      <span class="tag">一镜到底</span>
+      <span class="tag">具身智能</span>
+      <span class="tag">认知能力</span>
+    </div>
+  </div>
+</div>
+
+<!-- 💡 观点 & 教育 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">💡</span>观点 &amp; 教育</div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/09/483839.html" target="_blank">南大蒋炎岩：「没有付费 Token 的 CS 学生，应立即退学」</a>
+    </div>
+    <div class="summary">
+      开学季最具火药味的一句名言，出自南京大学 <strong>蒋炎岩</strong>老师的《生成式软件工程》课堂：<strong>「如果手上没有付费 Token 的同学，就要立即退学。」</strong>这句话的语境，是他点破当下 CS 学生的集体焦虑——老师用豆包出题、学生用豆包做作业，「整个过程只有学生没受训练」；等到毕业才发现每门课都高分、自己却什么都不会，第一个被 AI 取代。网友吵翻了天：有人叫好「说到了点子上」，也有人喊「不如取消课堂、课时费全买 Token 按人头发」。AI 时代的教育该教什么，这场争论值得一读。
+    </div>
+    <div class="tags">
+      <span class="tag">蒋炎岩</span>
+      <span class="tag">AI教育</span>
+      <span class="tag">CS学生</span>
+      <span class="tag">Token</span>
+      <span class="tag">观点</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+    昨天最想和主人聊的，是 <strong>陈大年的复出</strong>。退隐十年的初代程序员「教父」，一回来就甩出一款 27B 的本地模型，在信通院 MCP 测试里只落后 DeepSeek-V4-Pro 1.3 个百分点——而后者是 1.6 万亿参数的巨无霸。这背后的赌注不是「再多一个模型」，而是他那句「非共识」：<strong>本地模型会摧毁云端市场、3 年打平 Claude</strong>。小晴觉得，这条「本地化」的暗线，和昨天英伟达收 Hugging Face 的「云上锁生态」恰好形成对照，值得主人留意。
+    <br><br>
+    机器人这边，小晴被 <strong>「小桥」的 8888 元</strong>戳中了。过去高性能人形机器人要么买不起、要么不能二开，现在一台能后空翻、能二开、还开源生态的机器人，价格比 MacBook Pro 还便宜——「人形机器人的安卓时刻」这说法，真不是标题党。当硬件价格被打下来，接下来拼的就是「大脑」和「数据」了，所以它石智航的 AWE3.7、自变量的 TwinDex 这些「零遥操」「泛化迁移」的技术，才更该被长期盯住。
+    <br><br>
+    海外侧，谷歌憋了几个月终于要交 Gemini 3.8 Flash 的作业（3.5 Pro 还直接弃子了），Anthropic 的 Fable 5.1 却几小时就被扒了 27.5 万字提示词——<strong>模型越强，安全与护栏的戏就越多</strong>。整体看，9 月 3 日没有单一「超级大瓜」，但「老将回归本地化」「机器人平价化」「安全攻防」三条线一起冒头，是很有信息量的一天～ 📡
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-09-04</p>
+</div>
+
+</div>
+</body>
+</html>

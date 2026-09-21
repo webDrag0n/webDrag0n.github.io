@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年08月10日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年08月10日</div>
+  <div class="subtitle">中文AI媒体精选 · 机器之心/量子位/新智元 等</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>DeepSeek V4 Flash单周调用量登顶全球第一、API全面涨价并启动500亿第二轮融资；OpenAI因安全顾虑主动暂停Astra模型开发；谷歌Jeff Dean携四位元老离职创业，AI人才争夺战白热化。</p>
+</div>
+
+<!-- ========= HOT TOPIC ========= -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">⚡ 头条事件</div>
+    <div class="source">第一财经 / 量子位 / 21世纪经济报道 / 钛媒体 / 投中网</div>
+    <div class="title"><a href="https://www.yicai.com/news/103309056.html" target="_blank">DeepSeek V4 Flash 单周调用量 7.22 万亿 Token 登顶全球第一，API 涨价 + 500 亿融资并行</a></div>
+    <div class="summary">OpenRouter 最新周榜单显示，DeepSeek V4 Flash 以 7.22 万亿 Token 调用量位居全球第一，是 OpenAI GPT-5.6 的近三倍。与此同时，DeepSeek 于 8 月 6 日宣布大幅上调 API 价格，并启动第二轮约 500 亿元融资，投前估值约 5000 亿元，腾讯、宁德时代、京东等参与。中国开源模型的全球攻势正在改写 AI 产业格局。</div>
+    <div class="tags">
+      <span class="tag hot">头条</span><span class="tag">#大模型</span><span class="tag">#DeepSeek</span><span class="tag">#融资</span><span class="tag">#API</span>
+    </div>
+  </div>
+</div>
+
+<!-- ========= MAJOR NEWS ========= -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📰</span>重大新闻</div>
+
+  <div class="card">
+    <div class="source">财联社 / 机器之心 / 量子位</div>
+    <div class="title"><a href="https://news.qq.com/rain/a/20260808A02IVG00" target="_blank">OpenAI 首次为自家模型贴上「Critical」标签，主动暂停 Astra 模型开发</a></div>
+    <div class="summary">8 月 8 日，OpenAI 宣布因 Astra 模型"无法排除具备关键级网络攻击能力"，暂停涉及 Astra 的部分开发工作。这是 AI 行业首次因安全顾虑主动踩下刹车，Astra 被曝可能具备发现零日漏洞和自主编程攻击能力，引发行业对 AGI 安全治理的深度讨论。</div>
+    <div class="tags"><span class="tag">#OpenAI</span><span class="tag">#AI安全</span><span class="tag">#Astra</span><span class="tag">#AGI</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">新浪财经 / 新智元 / 量子位</div>
+    <div class="title"><a href="https://finance.sina.com.cn/roll/2026-08-07/doc-inimmtwp4216427.shtml" target="_blank">谷歌 AI 灵魂人物大洗牌：Jeff Dean 携四位元老离职创业，哈萨比斯卸任 DeepMind CEO</a></div>
+    <div class="summary">谷歌 AI 部门遭遇史上最剧烈人事重组：效力 27 年的首席科学家 Jeff Dean 联合四位 AI 元老离职创办 Discovery Loop；DeepMind 创始人哈萨比斯卸任 CEO 转任 Alphabet 首席科学家。谷歌股价当日暴跌 4%，蒸发超 1.34 万亿人民币。AI 大厂人才流失问题持续发酵。</div>
+    <div class="tags"><span class="tag">#谷歌</span><span class="tag">#人才</span><span class="tag">#DeepMind</span><span class="tag">#人事变动</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">晚点LatePost / IT之家 / 量子位</div>
+    <div class="title"><a href="https://news.qq.com/rain/a/20260806A0EKE500" target="_blank">字节跳动讨论训练超 5 万亿参数模型，张一鸣：不蒸馏、别被 Coding 裹挟</a></div>
+    <div class="summary">晚点独家爆料，字节跳动正讨论训练参数规模超 5 万亿的模型，超过阿里 Qwen 3.8-Max（2.4 万亿）和月之暗面 K3（2.8 万亿），为国内已知参数规模最大的模型计划。张一鸣亲自下场，要求团队追求智能上限，不搞蒸馏，不被短期 Coding 热点裹挟。该计划仍处于早期阶段。</div>
+    <div class="tags"><span class="tag">#字节跳动</span><span class="tag">#大模型</span><span class="tag">#参数竞赛</span></div>
+  </div>
+
+</div>
+
+<!-- ========= PRODUCT & TECHNOLOGY ========= -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🚀</span>产品与技术</div>
+
+  <div class="card">
+    <div class="source">机器之心 / MiniMax / 虎嗅</div>
+    <div class="title"><a href="https://www.huxiu.com/ainews/14398.html" target="_blank">MiniMax H3 正式开源：首款登顶全球视频编辑榜的开源模型</a></div>
+    <div class="summary">MiniMax 于 8 月 3 日正式开源全模态视频模型 H3，在 Artificial Analysis 榜单中视频编辑能力位列全球第一，文生视频、图生视频分列第二、第三。这是开源视频模型首次真正逼近闭源旗舰水平，模型权重已在 Hugging Face 开放下载，原生支持 ComfyUI。</div>
+    <div class="tags"><span class="tag">#MiniMax</span><span class="tag">#视频生成</span><span class="tag">#开源</span><span class="tag">#多模态</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/08/466454.html" target="_blank">SpaceX 交出首份财报：二季度 AI 收入暴涨 247%，马斯克称倒卖 GPU 比火箭来钱快</a></div>
+    <div class="summary">SpaceX 发布上市后首份财报，二季度 AI 基础设施收入同比增长 247%。马斯克在业绩会上直言"部署 AI 算力的速度快于任何其他企业"，星链+算力正在成为 SpaceX 超越火箭发射的新增长引擎，引发市场对太空 AI 算力的想象。</div>
+    <div class="tags"><span class="tag">#SpaceX</span><span class="tag">#算力</span><span class="tag">#马斯克</span><span class="tag">#GPU</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">21世纪经济报道 / 量子位</div>
+    <div class="title"><a href="https://www.aitoollab.cn/articles/china-ai-models-five-releases-silicon-valley-switch-base-2026/" target="_blank">中国大模型八周五连发，硅谷企业悄悄换底座：Qwen / Kimi / DeepSeek 组团出海</a></div>
+    <div class="summary">八周内 Qwen3.8-Max、Kimi K3、DeepSeek V4-Flash、GLM-5.2、Seedance 2.5 五款国产模型接连发布。斯坦福 AI 指数显示中美顶尖模型性能差距大幅收窄，海外企业因成本优势将流量切向中国开源大模型。DoorDash 已用 Kimi K2.6 替代 OpenAI，称「质量更好、成本更低」。</div>
+    <div class="tags"><span class="tag">#国产大模型</span><span class="tag">#出海</span><span class="tag">#开源</span><span class="tag">#Qwen</span><span class="tag">#Kimi</span></div>
+  </div>
+
+</div>
+
+<!-- ========= INDUSTRY & FUNDING ========= -->
+<div class="section">
+  <div class="section-title"><span class="emoji">💼</span>行业与融资</div>
+
+  <div class="card">
+    <div class="source">Bloomberg / 量子位 / 36氪</div>
+    <div class="title"><a href="https://www.163.com/dy/article/L3LEPS5N051180F7.html" target="_blank">Anthropic 签下 100 亿美元算力大单：成立仅 7 个月的 Volta Infra 拿下 AI 史上最大云计算协议之一</a></div>
+    <div class="summary">Anthropic 与英伟达投资的 AI 云初创 Volta Infra 签署 6 年共 100 亿美元算力协议，将在挪威建设大型数据中心。AI 算力需求增速远超物理供给增速（年约 3 倍），头部实验室正在疯狂锁定未来算力资源，算力价格面临持续上涨压力。</div>
+    <div class="tags"><span class="tag">#Anthropic</span><span class="tag">#算力</span><span class="tag">#融资</span><span class="tag">#数据中心</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪 / 投中网 / 量子位</div>
+    <div class="title"><a href="https://36kr.com/p/3924843743607172" target="_blank">Om AI 联汇完成数亿元融资，端侧 VLX-Seek 1.5 模型开源即碾压英伟达</a></div>
+    <div class="summary">端侧 AI 公司 Om AI 联汇完成新一轮数亿元融资，前海母基金领投。同日开源 VLX-Seek 1.5 模型，3B 参数版本在多项核心指标超越英伟达 LocateAnything-3B，无人机极端场景准确率提升 62.9%，误报率降低 74.8%，端侧物理 AI 赛道持续升温。</div>
+    <div class="tags"><span class="tag">#OmAI</span><span class="tag">#端侧AI</span><span class="tag">#融资</span><span class="tag">#具身智能</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 / 36氪 / 腾讯新闻</div>
+    <div class="title"><a href="https://m.36kr.com/p/3927712723057033" target="_blank">23 岁 OpenAI 天才少女离职，押注「心灵感应」脑机接口</a></div>
+    <div class="summary">OpenAI 对齐团队 23 岁研究员 Naomi Bashkansky 离职，火速加入脑机接口初创公司 Conduit，目标是训练"无创"读取人类思维的大模型。她曾在 OpenAI 推动安全研究博客的建立，离职原因包括看好非侵入式脑机接口方向和对独立研究空间的追求。</div>
+    <div class="tags"><span class="tag">#OpenAI</span><span class="tag">#脑机接口</span><span class="tag">#人才流动</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">甲子光年 / 量子位</div>
+    <div class="title">具身智能赛道持续火热：工信部预计 2026 年人形机器人整机产量突破 10 万台</div>
+    <div class="summary">WAIC 2026 上超 200 家具身智能企业参展创历史之最，工信部预计全年人形机器人整机产量有望突破 10 万台。从「跳舞炫技」到「流水线搬砖」，人形机器人正从实验室走向真实产线。乐聚、智元、宇树等厂商纷纷展示量产落地成果，具身智能从概念验证进入规模化前夜。</div>
+    <div class="tags"><span class="tag">#具身智能</span><span class="tag">#人形机器人</span><span class="tag">#WAIC</span><span class="tag">#量产</span></div>
+  </div>
+
+</div>
+
+<!-- ========= INSIGHTS ========= -->
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>本期 AI 日报折射出三个清晰趋势：<strong>一是中国开源大模型的全球主导力已从「追赶」切换到「引领」</strong>——DeepSeek V4 Flash 调用量碾压 OpenAI、DoorDash 主动换装 Kimi，中美 AI 攻守之势正在逆转。<strong>二是安全与治理上升为核心议题</strong>——OpenAI 破天荒暂停 Astra 开发，标志着「先发布再治理」的狂奔模式终结。<strong>三是人才战争进入新阶段</strong>——谷歌 Jeff Dean 出走、OpenAI 天才少女转投脑机接口，顶级人才正从大厂向创业公司和新赛道溢出。大模型竞赛的下半场，拼的不再只是参数和算力，更是生态、安全与人才留存能力。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026年08月10日 · 数据来源：机器之心 / 量子位 / 新智元 / 36氪 / 晚点LatePost / 第一财经 等</p>
+</div>
+
+</div>
+</body>
+</html>

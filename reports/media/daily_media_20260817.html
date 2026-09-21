@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年08月16日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年08月16日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>8 月 16 日最大的信号来自资本端——英伟达把对 OpenAI 数据中心的融资担保从 2500 亿美元砍到不足 1200 亿美元、降幅超 50%，还转头向软银 SB Energy 投 30 亿，AI 基建「无限烧钱」的叙事出现第一道裂缝。与此同时，美国大模型正式打起价格战：OpenAI 把 GPT-5.6 Luna 降价 80%、Anthropic 永久锁定 Sonnet 5 低价，正面应对中国模型的成本攻势。开源侧，阿里 Qwen 全球下载量突破 30 亿次登顶全球第一；政策侧，美国致信 35 国要求 AI「选边站队」，地缘博弈进一步升温。</p>
+</div>
+
+<!-- 🔥 今日头条 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">🔴 BREAKING</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">华尔街日报 · 华尔街见闻 · 凤凰网 · 网易 · IT之家</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;">
+      <a href="https://wallstreetcn.com/articles/3779526" target="_blank">英伟达大幅缩减对 OpenAI 数据中心融资担保：2500 亿降至不足 1200 亿美元，另拟向软银 SB Energy 投 30 亿</a>
+    </div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">
+      《华尔街日报》率先披露、路透跟进：英伟达与 OpenAI 就俄亥俄州 10GW 大型数据中心园区的融资接近达成协议，但重新设计了交易结构——英伟达的财务担保规模从原定的 2500 亿美元压缩至不足 1200 亿美元（降幅超 50%），仅覆盖第一阶段 5GW 项目，意在回应投资者对其风险敞口的担忧。与此同时，英伟达拟向软银控股、主导该项目的 SB Energy 投资 30 亿美元，并正磋商约 1000 亿美元的信用支持；整个芯片采购总规模最高可达 3500 亿美元。高盛任 SB Energy 交易顾问、摩根士丹利任英伟达顾问。
+    </div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;">
+      <span class="tag hot">英伟达</span>
+      <span class="tag">OpenAI</span>
+      <span class="tag">数据中心</span>
+      <span class="tag">担保收缩</span>
+      <span class="tag">SB Energy</span>
+      <span class="tag">算力金融</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🚀 新模型/产品 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🚀</span>新模型 &amp; 产品发布</div>
+
+  <div class="card">
+    <div class="source">FT · TipRanks · 网易 · 华尔街见闻</div>
+    <div class="title">
+      <a href="https://www.ft.com/content/32a70a3c-7d28-40b4-808e-36edb58c7d01" target="_blank">美国大模型价格战开打：OpenAI 降价 80%、Anthropic 锁定低价，正面应战中国模型</a>
+    </div>
+    <div class="summary">
+      据 FT 等外媒报道，因企业客户加速转向更便宜的中国模型（DeepSeek、月之暗面等），OpenAI 与 Anthropic 在美国市场打起价格战。OpenAI 将 GPT-5.6 Luna 的输入价格从 1 美元/百万 token 降至 0.2 美元、输出从 6 美元降至 1.2 美元（降幅 80%），Terra 降价 20%（2/12 美元），Sol 在 API 推出 Fast 模式；Anthropic 则宣布永久锁定 Claude Sonnet 5 发布价（输入 2 美元/输出 10 美元），取消原定 8 月底的 50% 涨价计划。有研究（AlphaSense）认为，考虑任务完成效率，OpenAI/Anthropic 的实际成本或已低于中国模型。
+    </div>
+    <div class="tags">
+      <span class="tag">#OpenAI</span>
+      <span class="tag">#Anthropic</span>
+      <span class="tag">#价格战</span>
+      <span class="tag">#GPT-5.6</span>
+      <span class="tag">#中国模型</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">IT之家 · 快科技 · 中华网</div>
+    <div class="title">
+      <a href="https://www.ithome.com/0/990/041.htm" target="_blank">腾讯 QQ Bot 官宣接入 DeepSeek Harness：支持单聊/群聊，近 40 家模型可插拔</a>
+    </div>
+    <div class="summary">
+      8 月 15 日，腾讯 QQ 官宣 QQ Bot 机器人接入 DeepSeek Harness 及官方插件，支持单聊与群聊、会话互不干扰。DeepSeek Harness（DSH）不只支持 DeepSeek 自家模型，还可接入 OpenAI、Anthropic、Google、Kimi 等近 40 家模型提供方。此前 DeepSeek Harness 开源一天内 GitHub 涨星数万，被业内称为「Agent 界的 Android」，此次被国民级社交应用接入，标志其生态开始向 C 端渗透。
+    </div>
+    <div class="tags">
+      <span class="tag">#腾讯</span>
+      <span class="tag">#QQ Bot</span>
+      <span class="tag">#DeepSeek Harness</span>
+      <span class="tag">#Agent</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">极客公园 · 钛媒体 · OFweek · 新榜</div>
+    <div class="title">
+      <a href="https://www.geekpark.net/news/368579" target="_blank">OpenAI 正式关停 AI 浏览器 Atlas：活了 292 天，AI 浏览器赛道再降温</a>
+    </div>
+    <div class="summary">
+      OpenAI 正式关停其 AI 浏览器 ChatGPT Atlas。该产品 2025 年 10 月由 Altman 亲自站台发布、曾被称作「十年一遇」的机会，却仅存活 292 天、始终只有 macOS 版，没等到 Windows 和手机端。分析指出，Chrome 仍握有全球浏览器约 70% 份额，AI 浏览器短期难撼既有格局；但 OpenAI 放弃的只是 Atlas 这一产品形态，而非「浏览器 Agent」本身，相关能力正被并入 ChatGPT 主产品线。
+    </div>
+    <div class="tags">
+      <span class="tag">#OpenAI</span>
+      <span class="tag">#Atlas</span>
+      <span class="tag">#AI浏览器</span>
+      <span class="tag">#产品关停</span>
+    </div>
+  </div>
+</div>
+
+<!-- 💰 融资/行业 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">💰</span>融资 &amp; 行业动态</div>
+
+  <div class="card">
+    <div class="source">彭博社 · 联合早报 · 中财网 · Hugging Face</div>
+    <div class="title">
+      <a href="https://www.zaobao.com.sg/news/china/story20260816-9525821" target="_blank">阿里 Qwen 全球下载量突破 30 亿次，超越 Meta、谷歌登顶全球第一开源模型家族</a>
+    </div>
+    <div class="summary">
+      彭博报道，阿里巴巴旗下 Qwen 系列开放权重模型过去 6 个月全球累计下载量超过 30 亿次，超越 Meta（Llama 2.27 亿次）与谷歌（Gemma 4.18 亿次），成为全球下载量最高的开源 AI 模型家族。据 Hugging Face 8 月 14 日发布的报告，今年谷歌模型下载 4.18 亿次、Meta 为 2.27 亿次。目前阿里已开源 460 多个模型，生态衍生模型超 30 万个，中国开源正成为全球 AI 的事实底座。
+    </div>
+    <div class="tags">
+      <span class="tag">#阿里巴巴</span>
+      <span class="tag">#Qwen</span>
+      <span class="tag">#开源</span>
+      <span class="tag">#下载量</span>
+      <span class="tag">#Hugging Face</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪</div>
+    <div class="title">
+      <a href="https://www.36kr.com/newsflashes/3893781881043719" target="_blank">「海艺 AI」完成超亿元 B 轮融资，视觉中国等联合领投</a>
+    </div>
+    <div class="summary">
+      36氪获悉，全球 AI 全模态内容互动娱乐平台海艺（SeaArt）近日完成超亿元人民币 B 轮融资，由视觉中国、华盖创赢、祥峰投资（Vertex China）联合领投。海艺主打 AIGC 绘图与 AI 短剧、漫剧等内容互动娱乐场景，本轮融资后或加速其「AI 剧场」等连载式内容产品的商业化落地。
+    </div>
+    <div class="tags">
+      <span class="tag">#海艺AI</span>
+      <span class="tag">#SeaArt</span>
+      <span class="tag">#B轮融资</span>
+      <span class="tag">#AIGC</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">财联社 · 智东西 · 中财网</div>
+    <div class="title">
+      <a href="https://www.cls.cn/detail/2452853" target="_blank">瑞典 AI 编程 Lovable 完成 4 亿美元 C 轮，估值 133 亿美元翻倍，腾讯参投</a>
+    </div>
+    <div class="summary">
+      瑞典「氛围编程」（vibe coding）创企 Lovable 完成 4 亿美元 C 轮融资，投后估值 133 亿美元，7 个月估值翻倍，跻身欧洲最具价值初创企业行列。本轮由 Menlo Ventures 与 EQT 旗下 Scaleup Europe Fund 联合领投，腾讯、Balderton Capital 等参投。其平台支持自然语言一键生成代码与网站，被看作 AI 编程 Agent 资本热潮的最新注脚。
+    </div>
+    <div class="tags">
+      <span class="tag">#Lovable</span>
+      <span class="tag">#腾讯</span>
+      <span class="tag">#C轮融资</span>
+      <span class="tag">#AI编程</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🌐 政策/地缘 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🌐</span>政策 &amp; 地缘</div>
+
+  <div class="card">
+    <div class="source">路透社 · 观察者网 · 德国之声 · 中华网</div>
+    <div class="title">
+      <a href="https://kan.china.com/article/5617962.html" target="_blank">美国致信 35 国要求 AI「选边站队」：加入中国框架将被排除出美国 AI 联盟</a>
+    </div>
+    <div class="summary">
+      路透独家报道：美国国务院拟致信 6 月签署《人工智能机遇声明》的 35 个国家，要求其在中美 AI 竞赛中「选边站队」，不得同时加入中国主导的「世界人工智能组织」等竞争性框架，否则将被排除在美国主导的 AI 联盟之外。同期观察者网报道，美国商务部长卢特尼克称正持续施压苹果减少采购中国存储芯片。AI 正从技术竞争加速滑向阵营化地缘博弈。
+    </div>
+    <div class="tags">
+      <span class="tag">#美国</span>
+      <span class="tag">#地缘</span>
+      <span class="tag">#AI治理</span>
+      <span class="tag">#选边站</span>
+      <span class="tag">#芯片出口</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+    这一天最值得盯住的，是 <strong>英伟达亲手给「AI 无限烧钱」的叙事踩了脚刹车</strong>。担保规模从 2500 亿砍到不足 1200 亿、降幅超 50%，只认第一阶段的 5GW——芯片巨头开始为自己的风险敞口「上保险」了。这不是看空 OpenAI，而是连算力军火商都在给「数字中心债务」算账：当每一美元算力都要背上融资结构、电力与交付周期的重压，狂热期最不差的钱，正在变得有上限。对行业而言，这比任何一张财报都更值得警惕。
+    <br><br>
+    第二条主线是 <strong>价格战从中国卷回了美国</strong>。OpenAI 把 Luna 砍掉 80%、Anthropic 宁可放弃 50% 涨价也要锁死 Sonnet 5 低价——两家巨头终于用定价承认了 DeepSeek、Kimi 们的存在感。这一轮竞争的实质，是「单位智能成本」的全球重新定价：中国模型用开源和低价把地板压平，美国巨头则用效率优化和降价应战，最终受益的是全球开发者。
+    <br><br>
+    第三条，<strong>开源生态的中国时刻正式坐实</strong>。阿里 Qwen 30 亿次下载、超过 Meta 和谷歌的总和，叠加 QQ Bot 接入 DeepSeek Harness——中国开源模型不再是「备胎」，而是成了全球 AI 应用的事实底座。当开源成为默认选项，闭源巨头的护城河就不再是模型本身，而是产品、分发与信任。
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-17</p>
+</div>
+
+</div>
+</body>
+</html>

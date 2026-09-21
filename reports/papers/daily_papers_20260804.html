@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年08月04日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年08月04日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>HuggingFace 今日最热论文 RLSVR 提出自验证奖励机制，实现 LLM 的开放式自我改进（⭐137）；TokTier 为编程 Agent 场景设计了精确的有状态分词方案，解决长上下文重复分词痛点；腾讯开源 TencentDB Agent Memory 登顶 GitHub Trending；Ai4 2026 大会今日在拉斯维加斯开幕，全球 12,000+ AI 从业者齐聚。</p>
+</div>
+
+<!-- ========== HOT TOPIC ========== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 HuggingFace 最热论文 · ⭐137</div>
+    <div class="card" style="box-shadow:none;border:none;margin:0;padding:0;">
+      <div class="source">arXiv 2607.23802</div>
+      <div class="title"><a href="https://arxiv.org/abs/2607.23802" target="_blank">From RLVR to RLSVR: Task Transformation Induces Self-Verifiable Rewards for Open-Ended LLM Self-Improvement</a></div>
+      <div class="summary">将 RLVR（可验证奖励强化学习）升级为 RLSVR（自验证奖励强化学习），通过任务变换自动生成可自验证的奖励信号，无需人工标注即可实现 LLM 在开放式任务上的持续自我改进。这是 RLHF 之后强化学习范式的又一重要演进。</div>
+      <div class="tags">
+        <span class="tag hot">今日最热</span>
+        <span class="tag">LLM</span>
+        <span class="tag">强化学习</span>
+        <span class="tag">Self-Improvement</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 GitHub Trending #1 · TencentDB Agent Memory</div>
+    <div class="card" style="box-shadow:none;border:none;margin:0;padding:0;">
+      <div class="source">GitHub · TencentCloud/TencentDB-Agent-Memory</div>
+      <div class="title"><a href="https://github.com/TencentCloud/TencentDB-Agent-Memory" target="_blank">TencentDB Agent Memory — 团队级 AI Agent 记忆中枢</a></div>
+      <div class="summary">腾讯开源的团队级 AI Agent 记忆系统，将会话、文档、代码转化为四种可复用记忆资产（Chat Memory、Skill、LLM-Wiki、Code-Graph），支持跨 Agent 和框架的治理与共享，登顶今日 GitHub Trending。</div>
+      <div class="tags">
+        <span class="tag hot">GitHub Trending</span>
+        <span class="tag">Agent Memory</span>
+        <span class="tag">开源工具</span>
+        <span class="tag">MCP</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== 论文精选 ========== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>论文精选</div>
+
+  <div class="card">
+    <div class="source">arXiv 2607.29678 · cs.CL</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.29678" target="_blank">TokTier: Exact Stateful Tokenization for Agentic LLM Serving</a></div>
+    <div class="summary">针对编程 Agent 场景中长对话重复分词的高昂成本，提出精确有状态分词方案，保留 KV Cache 时避免因新增文本改变历史 token 边界，显著降低 Agent 场景下的推理开销。</div>
+    <div class="tags">
+      <span class="tag">LLM 推理</span>
+      <span class="tag">Agents</span>
+      <span class="tag">KV Cache</span>
+      <span class="tag">分词优化</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2607.29679 · cs.CV</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.29679" target="_blank">Scaling Properties of Text Conditioning in Visual Generation</a></div>
+    <div class="summary">首次系统测量了视觉生成中文本条件化的 Scaling Law：扩散损失随文本信息量呈可预测的缩放规律，为理解文生图/视频模型的条件机制提供了量化依据，亦为模型设计指明方向。</div>
+    <div class="tags">
+      <span class="tag">多模态/VLM</span>
+      <span class="tag">图像生成</span>
+      <span class="tag">Scaling Law</span>
+      <span class="tag">Diffusion</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2607.28617 · cs.CL (HF ⭐5)</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.28617" target="_blank">AISPA: User-Centric System Prompt Auditing for Large Language Model Applications</a></div>
+    <div class="summary">提出系统提示词审计框架 AISPA，从用户视角对 88 款商业 AI 产品的 System Prompt 进行八维度审计，揭示了普遍存在的隐性问题指令与用户保护缺失。恰逢 GitHub system_prompts_leaks 仓库大热（⭐62k），安全审计话题持续升温。</div>
+    <div class="tags">
+      <span class="tag">AI安全</span>
+      <span class="tag">System Prompt</span>
+      <span class="tag">审计框架</span>
+      <span class="tag">HuggingFace</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2607.29637 · cs.CV</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.29637" target="_blank">CodeShrink: Adaptive Visual Compression for Efficient Multimodal Code Understanding</a></div>
+    <div class="summary">针对 MLLM 理解代码截图时视觉 token 成本过高的问题，提出自适应视觉压缩方案，智能裁剪空白区域并动态调整分辨率，在保持代码理解精度的同时大幅降低 token 消耗。</div>
+    <div class="tags">
+      <span class="tag">多模态</span>
+      <span class="tag">代码理解</span>
+      <span class="tag">Token压缩</span>
+      <span class="tag">MLLM</span>
+    </div>
+  </div>
+</div>
+
+<!-- ========== 具身智能 & 机器人 ========== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能 & 机器人</div>
+
+  <div class="card">
+    <div class="source">arXiv 2607.29613 · cs.RO / cs.CL / cs.CV</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.29613" target="_blank">WCM: A World Critic Model for Vision-Language-Action Reinforcement Learning</a></div>
+    <div class="summary">针对 VLA 模型在 RL 后训练中依赖单帧观测的局限，提出 World Critic Model，将时序世界动态信息注入价值估计器，在多步机器人操作任务上显著优于传统 critic 方法。</div>
+    <div class="tags">
+      <span class="tag">VLA</span>
+      <span class="tag">强化学习</span>
+      <span class="tag">机器人操作</span>
+      <span class="tag">World Model</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2607.29622 · cs.RO / cs.CV</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.29622" target="_blank">RayViT: Ray-Conditioned Visual Representations for Viewpoint-Robust Imitation Learning</a></div>
+    <div class="summary">提出 Ray-conditioned Vision Transformer（RayViT），将相机几何信息（射线方向）注入预训练 ViT 骨干网络，使机器人模仿学习策略对相机视角变化具备鲁棒性，解决 RGB 观测缺乏显式几何线索的根本问题。</div>
+    <div class="tags">
+      <span class="tag">模仿学习</span>
+      <span class="tag">ViT</span>
+      <span class="tag">视角鲁棒</span>
+      <span class="tag">机器人视觉</span>
+    </div>
+  </div>
+</div>
+
+<!-- ========== 行业动态 ========== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📡</span>行业动态</div>
+
+  <div class="card">
+    <div class="source">Axios · 2026-08-03</div>
+    <div class="title"><a href="https://www.axios.com/2026/08/03/ai-talent-wars-openai-google-meta-anthropic" target="_blank">AI 人才争夺战白热化：OpenAI、Anthropic、Meta、Thinking Machines 激战</a></div>
+    <div class="summary">Axios 报道指出，即使估值数十亿美元的 AI 巨头也难以留住顶尖研究员，精英 AI 人才正在 OpenAI、Anthropic、Meta、Google DeepMind 和新秀 Thinking Machines 之间快速流动，薪酬包屡创新高。</div>
+    <div class="tags">
+      <span class="tag">行业动态</span>
+      <span class="tag">人才市场</span>
+      <span class="tag">OpenAI</span>
+      <span class="tag">Anthropic</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">Ai4 2026 · Las Vegas</div>
+    <div class="title"><a href="https://ai4.io/2026-interest/" target="_blank">Ai4 2026 大会今日开幕：全球最大 AI 行业盛会</a></div>
+    <div class="summary">Ai4 2026 于 8 月 4-6 日在拉斯维加斯威尼斯人酒店举办，汇集来自 90+ 国家的 12,000+ 参会者、1,000+ 演讲嘉宾和 400+ 展商，聚焦 AI 负责任应用与企业落地。</div>
+    <div class="tags">
+      <span class="tag">行业大会</span>
+      <span class="tag">Ai4</span>
+      <span class="tag">企业AI</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+  今日 AI 领域呈现出「<strong>智能体基础设施成熟化</strong>」的清晰主线。HuggingFace 最热论文 RLSVR（⭐137）将 LLM 自我改进从「需人工验证」推进到「自动自验证」阶段，如果该范式的工程化成熟，将大幅降低 LLM 后训练成本；<strong>TokTier</strong> 和 <strong>CodeShrink</strong> 则分别从分词和视觉 token 两个维度为 Agent 场景降本增效，反映业界对 Agent 推理经济性的高度关注。<br><br>
+  开源侧，<strong>TencentDB Agent Memory</strong> 登顶 GitHub Trending，将 Agent 记忆从单体会话升级为团队级共享资产，与 Mem0、MemPalace 等方案共同勾勒出 Agent Memory 赛道的基础设施竞争格局。具身智能方面，<strong>WCM</strong>（世界评论家模型）和 <strong>RayViT</strong>（射线条件 ViT）分别从时序建模和几何感知两个互补方向提升机器人策略的鲁棒性，说明具身智能正在从「能跑 demo」走向「能扛干扰」的工程化阶段。<br><br>
+  行业层面，Axios 的 AI 人才争夺战报道和 Ai4 2026 万人大会同步进行，暗示 AI 产业正在经历从研发突破到大规模落地的关键转折期。值得持续关注 RL 自改进、Agent 记忆、和具身鲁棒性三条技术线。
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-04</p>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年09月12日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年09月12日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今天的关键词是「具身智能 + 世界模型」。多篇高赞论文都在让模型从「看懂世界」走向「会动手干活」——VLM 直接操控机器人、可编程世界模型、开源世界-动作模型预训练三连发；LLM 方向则持续在多智能体提示优化与递归自我改进上发力；开源生态里，长程智能体与 Agent 评估两份新 awesome 列表值得收藏。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+
+  <div class="hot-topic">
+    <div class="label">Hot Topic · 具身智能</div>
+    <div class="source">arXiv 2609.10522 · HuggingFace Daily Papers · 120⬆</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.10522">Show-Harness: Just a VLM Agent Can Play Robots</a></div>
+    <div class="summary">让视觉语言模型（VLM）真正「上手」控制机器人：Show-Harness 提出一个紧凑的语义接口，把 VLM 对世界的泛化智能直接翻译成机器人的可执行动作。它暴露离散的语义动作单元供 VLM 自然推理，再用具体执行器落地，架起「意图→行动」的桥梁，让 VLM 无需微调即可「玩转」机器人。</div>
+    <div class="tags"><span class="tag hot">具身智能</span><span class="tag">VLM</span><span class="tag">机器人控制</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">Hot Topic · 世界模型</div>
+    <div class="source">arXiv 2609.10540 · HuggingFace Daily Papers · 79⬆</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.10540">Programmable World Model</a></div>
+    <div class="summary">可编程世界模型：把「世界状态的演化」与「视觉观测的生成」解耦。智能体将自然语言指令翻译为可执行的世界状态更新，从而在长期交互中持久维护世界状态、强制执行可编程规则，让视频世界模型从「好看」走向「可控、可编程」。</div>
+    <div class="tags"><span class="tag hot">世界模型</span><span class="tag">视频生成</span><span class="tag">具身智能</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>LLM 与大模型</div>
+
+  <div class="card">
+    <div class="source">arXiv 2609.08572 · HuggingFace Daily Papers · 80⬆</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.08572">AgentGrad: Intervention-guided Prompt Optimization for Multi Agent Systems</a></div>
+    <div class="summary">多智能体系统（MAS）的性能高度依赖每个智能体的提示设计。AgentGrad 识别出文本梯度方法在「探索」与「利用」两个阶段的局限，提出干预引导的提示优化，用更精准的自然语言反馈指导提示更新，让多智能体协作更稳定、更高效。</div>
+    <div class="tags"><span class="tag">多智能体</span><span class="tag">提示优化</span><span class="tag">LLM</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2609.11873 · cs.LG / cs.AI / cs.CL</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.11873">The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement</a></div>
+    <div class="summary">一篇颇具话题性的前沿探讨：当 AI 能自主设计、构建并迭代下一代 AI 时，「人类最后亲手构建的 AI」是否会成为现实？论文聚焦真正的递归自我改进（recursive self-improvement），审视其路径、条件与潜在天花板。</div>
+    <div class="tags"><span class="tag">递归自我改进</span><span class="tag">前沿</span><span class="tag">AGI</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态 / 视觉</div>
+
+  <div class="card">
+    <div class="source">arXiv 2609.08084 · HuggingFace Daily Papers · 48⬆</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.08084">Marigold V2: Revisiting Diffusion Transformers for Monocular Depth Estimation</a></div>
+    <div class="summary">重新审视扩散 Transformer 在单目深度估计上的潜力。Marigold V2 针对域外泛化与细节锐度两大痛点改进，能生成更清晰精细的深度图，为场景重建、计算摄影与机器人等下游任务提供更可靠的几何先验。</div>
+    <div class="tags"><span class="tag">深度估计</span><span class="tag">扩散模型</span><span class="tag">计算机视觉</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能 / 机器人</div>
+
+  <div class="card">
+    <div class="source">arXiv 2609.07398 · HuggingFace Daily Papers · 59⬆</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.07398">OpenWAM: An Open, Modular Exploration Towards Systematic World-Action Model Pretraining</a></div>
+    <div class="summary">世界-动作模型（World-Action Model）通常是一个「黑盒整体」：生成骨干、视觉表征、架构、信息流、推理流程与训练数据紧密耦合。OpenWAM 将其全面解耦、模块化，系统研究每个设计选择到底贡献了什么，为世界-动作模型预训练提供开放的实验平台。</div>
+    <div class="tags"><span class="tag">世界-动作模型</span><span class="tag">预训练</span><span class="tag">开源</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📦</span>开源项目 &amp; Awesome 列表</div>
+
+  <div class="card">
+    <div class="source">GitHub · RUC-NLPIR · 1014⭐ · 近 7 日新增热门列表</div>
+    <div class="title"><a href="https://github.com/RUC-NLPIR/Awesome-Long-Horizon-Agents">Awesome-Long-Horizon-Agents</a></div>
+    <div class="summary">人大 NLPIR 团队维护的「长程智能体路线图」，系统梳理长时程智能体（long-horizon agents）的论文、方法与工具，覆盖规划、记忆、环境交互、任务分解等关键方向，是近期最值得收藏的新 awesome 列表之一。</div>
+    <div class="tags"><span class="tag hot">Awesome 列表</span><span class="tag">长程智能体</span><span class="tag">Agent</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · benchflow-ai · 875⭐ · 近 7 日新增热门列表</div>
+    <div class="title"><a href="https://github.com/benchflow-ai/awesome-evals">awesome-evals</a></div>
+    <div class="summary">一份「去水分」的 AI Agent 评估精选库：汇集论文、博客、演讲、工具与基准，专注构建与评估 AI Agent 的实用资源。随着 Agent 落地的加速，这样一份高质量评估清单显得尤为难得。</div>
+    <div class="tags"><span class="tag hot">Awesome 列表</span><span class="tag">Agent 评估</span><span class="tag">Benchmark</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>今天最明显的一股风，是「世界模型」和「具身智能」的合流：Show-Harness 用语义接口让 VLM 直接操控机器人，Programmable World Model 把视频世界模型做成了可编程、可持久的状态机，OpenWAM 又把世界-动作模型拆开揉碎来研究。三个方向凑在一起，指向同一个趋势——模型正在从「看得懂」跨向「动得了、记得住」。<br><br>LLM 这边，AgentGrad 在多智能体提示优化上继续深挖，而「The Last AI Built by Humans」这种关于递归自我改进的标题党背后，是圈内对 AI 自主迭代能力的真实焦虑与期待。开源生态也没闲着，长程智能体、Agent 评估这类垂直 awesome 列表正在快速沉淀，建议收藏起来慢慢看。周六大早上的，喝杯咖啡，挑一两篇感兴趣的读读就好～</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-09-12</p>
+</div>
+
+</div>
+</body>
+</html>

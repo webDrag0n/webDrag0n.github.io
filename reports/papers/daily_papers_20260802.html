@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年08月02日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年08月02日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>Anthropic 发布 Claude Opus 5 旗舰模型正面对标 Fable 5；OpenAI 大幅降价 GPT-5.6 Luna 80%；arXiv 研究发现 LLM 推理中简单重复采样优于 Self-Refine 等复杂反思策略；Moonshot Kimi K3 模型开放下载。本周具身智能、多模态 VLM、AI 安全审计均有重要论文涌现。</p>
+</div>
+
+<!-- 🔥 热点 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>本周热点</div>
+
+  <div class="hot-topic">
+    <div class="source">Anthropic · 2026-07-30</div>
+    <div class="title"><a href="https://www.anthropic.com" target="_blank">Claude Opus 5 发布：Anthropic 新旗舰正面对标 Fable 5</a></div>
+    <div class="summary">Anthropic 发布 Claude Opus 5 旗舰模型，在 Claude Max 上设为默认。Opus 5 对标 Fable 5 的前沿智能水平，但价格仅为后者一半，在代码、推理和代理工作流方面大幅提升。</div>
+    <div class="tags">
+      <span class="tag hot">🔥 热点</span>
+      <span class="tag">LLM</span>
+      <span class="tag">Anthropic</span>
+      <span class="tag">前沿模型</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">OpenAI · 2026-07-30</div>
+    <div class="title"><a href="https://felloai.com/best-ai-models/" target="_blank">OpenAI 大幅降价：GPT-5.6 Luna 直降 80%</a></div>
+    <div class="summary">OpenAI 宣布 GPT-5.6 Luna 价格降至 $0.20/$1.20 每百万 token（降幅 80%），Terra 降价 20% 至 $2/$12，Sol 保持 $5/$30。标志着推理模型进入性价比竞争新阶段。</div>
+    <div class="tags">
+      <span class="tag">LLM</span>
+      <span class="tag">OpenAI</span>
+      <span class="tag">定价</span>
+      <span class="tag">推理模型</span>
+    </div>
+  </div>
+</div>
+
+<!-- 📄 论文精选 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>论文精选</div>
+
+  <div class="card">
+    <div class="source">arXiv:2607.28576 · 2026-07-30</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.28576" target="_blank">Sample More, Reflect Less：Self-Refine 和 Reflexion 败给重复采样</a></div>
+    <div class="summary">研究发现，在同等 token 成本下，让 LLM 多次独立采样（并选出最佳结果），比 Self-Refine、Reflexion 等复杂自我反思策略效果更好，从 1.5B 到 7B 模型均成立。这对推理策略设计有重大启示。</div>
+    <div class="tags">
+      <span class="tag">LLM 推理</span>
+      <span class="tag">采样策略</span>
+      <span class="tag">反思机制</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2607.28627 · 2026-07-30</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.28627" target="_blank">ReToken：一个 Token 提升视觉语言模型的视觉检索能力</a></div>
+    <div class="summary">针对长视觉上下文中 VLM 性能下降问题，提出 ReToken 方法，用一个可学习的检索 token 大幅提升视觉语言模型在大量干扰项中的检索精度，同时降低计算开销。</div>
+    <div class="tags">
+      <span class="tag">多模态/VLM</span>
+      <span class="tag">视觉检索</span>
+      <span class="tag">效率优化</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2607.28623 · 2026-07-30</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.28623" target="_blank">PAC-MAN：人形机器人全身安全闪避球框架</a></div>
+    <div class="summary">提出 PAC-MAN（Perception-Aware CBF-RL），将控制屏障函数与强化学习相结合，在真实感知条件下实现人形机器人全身安全闪避。策略仅凭球体图像输入即可完成高动态躲避动作。</div>
+    <div class="tags">
+      <span class="tag">具身智能</span>
+      <span class="tag">人形机器人</span>
+      <span class="tag">安全控制</span>
+      <span class="tag">强化学习</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2607.28568 · 2026-07-30</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.28568" target="_blank">Frontis-MA1：训练 AI4AI 模型实现递归自我改进</a></div>
+    <div class="summary">在机器学习工程场景中训练 AI 模型来改进 AI 构建过程本身（AI4AI），探索递归自我改进（RSI）的可行路径。以 ML 工程为可执行测试平台，验证 AI 系统自我优化的潜力。</div>
+    <div class="tags">
+      <span class="tag">AI 自我改进</span>
+      <span class="tag">AI4AI</span>
+      <span class="tag">递归学习</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2607.28609 · 2026-07-30</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.28609" target="_blank">OSReward：跨平台 Computer-Use 智能体的标准化评估</a></div>
+    <div class="summary">为 Computer-Using Agents (CUAs) 建立标准化的奖励模型评估基准。验证智能体轨迹是否完成用户指令，覆盖跨平台场景，为 GUI 智能体的可靠性评估提供统一框架。</div>
+    <div class="tags">
+      <span class="tag">GUI 智能体</span>
+      <span class="tag">Computer-Use</span>
+      <span class="tag">评估基准</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2607.28624 · 2026-07-30</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.28624" target="_blank">PhiZero：基于物理语言的世界模型</a></div>
+    <div class="summary">提出 PhiZero，以"物理语言"（physical language）——世界状态转换的紧凑离散表示——构建物理世界模型。区别于传统基于视频预测的世界模型，用符号化表示实现更高效的物理推理。</div>
+    <div class="tags">
+      <span class="tag">世界模型</span>
+      <span class="tag">物理推理</span>
+      <span class="tag">表示学习</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🛠 开源与工具 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠</span>开源动态与产业合作</div>
+
+  <div class="card">
+    <div class="source">Moonshot AI · 2026-07-27</div>
+    <div class="title"><a href="https://www.bloomberg.com/news/articles/2026-07-27/china-s-moonshot-to-release-breakthrough-ai-model-for-download" target="_blank">Moonshot AI Kimi K3 开放下载：中国开源模型新突破</a></div>
+    <div class="summary">Moonshot AI 将 Kimi K3 模型公开发布下载，扩展其在全球开源社区的影响力。此举发生在美国日益担忧中国 AI 崛起的背景下，标志着中国前沿模型开源化的重要里程碑。</div>
+    <div class="tags">
+      <span class="tag">开源模型</span>
+      <span class="tag">Moonshot</span>
+      <span class="tag">中国 AI</span>
+      <span class="tag">Kimi K3</span>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="source">Anthropic + AMD · 2026-07-23</div>
+    <div class="title"><a href="https://thursdai.news/releases/2026-07" target="_blank">Anthropic 与 AMD 达成 50 亿美元战略合作：2GW MI450 算力</a></div>
+    <div class="summary">Anthropic 与 AMD 签署容量协议，获得至多 2GW 的 MI450/Helios 代际算力，包含高达 50 亿美元 AMD 股权。此举被视为前沿 AI 摆脱单一 GPU 供应商依赖的关键战略布局。</div>
+    <div class="tags">
+      <span class="tag">产业合作</span>
+      <span class="tag">AI 基础设施</span>
+      <span class="tag">AMD</span>
+      <span class="tag">算力</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>今日 AI 圈最值得关注的是两条主线：<strong>前沿模型进入性价比绞杀战</strong>——Anthropic Opus 5 以 Fable 5 一半的价格提供同等智能，OpenAI 则直接砍掉 Luna 80% 的价格，说明「能力」正迅速从稀缺品变为日用品；另一条是<strong>开源力量持续壮大</strong>，Moonshot Kimi K3 的开放下载延续了中国 AI 实验室的开源浪潮，而 Anthropic 押注 AMD 算力也昭示着基础设施层的多极化趋势。<br><br>学术方面，"Sample More, Reflect Less" 这篇论文尤为尖锐——它用实验数据挑战了 Self-Refine、Reflexion 等反思范式的有效性，主张简单重复采样更划算。这对当前主流的 Agent 推理策略设计是当头一棒。<br><br>具身智能领域的 PAC-MAN 和 PhiZero 则代表了 AI 从「数字世界」向「物理世界」的持续渗透——前者让人形机器人在真实感知下完成高动态运动，后者尝试用符号化表示理解物理规律。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026年08月02日</p>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年09月03日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年09月03日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>9 月 2 日，AI 圈的主线落在<strong>「生态并购 + 安全红线」</strong>两条暗线上。英伟达被曝<strong>接近以 140 亿美元收购 Hugging Face</strong>，最快本周达成协议——从「卖卡」到「买入口」，英伟达要把 AI 开源世界最大的分发渠道收进版图。安全侧，OpenAI 首次把 Astra 的网络安全能力标到<strong>「关键级（Critical）」</strong>，在 ExploitBench 拿下满分并自主挖出 2 个零日漏洞，AI 自主攻防正式触发了业界预设的「红线」。国内侧节奏平稳：字节×中兴的<strong>豆包手机</strong>获入网许可、腾讯 <strong>WorkBuddy</strong> 开放 Agent 基座、燧原科技科创板申购、前腾讯/字节 RL 专家孙鹏加盟星尘智能——国产 AI 的「落地」与「人才」正在加速。</p>
+</div>
+
+<!-- 🔥 今日头条 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">🔴 BREAKING</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">IT之家 · 新浪财经 · 凤凰网科技 · 界面新闻 · 极客公园</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;">
+      <a href="https://finance.sina.com.cn/tech/digi/2026-09-02/doc-iniqkzme2990789.shtml" target="_blank">英伟达接近以 140 亿美元收购 Hugging Face，最快本周达成协议</a>
+    </div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">
+      彭博社 9 月 2 日报道，英伟达正就收购 AI 初创公司 <strong>Hugging Face</strong> 展开深入谈判，交易总规模接近 <strong>140 亿美元（约 943 亿元人民币）</strong>，知情人士称<strong>最快本周达成协议</strong>。这比 8 月底传出的 129 亿美元口径进一步上调，也意味着英伟达将把 AI 开源社区最大的「分发入口」收入囊中。
+      <br><br>
+      机器之心的解读一针见血：英伟达买的显然不是 HF 那张营收表——其年化收入仅约 <strong>1.5 亿美元</strong>，140 亿相当于八十多倍的溢价；它买的是 HF 官网首页挂着的<strong> 255 万+ 开源模型</strong>、以及 llama.cpp、Ollama、LM Studio 等本地推理工具都深度依赖的<strong>分发与生态入口</strong>。一旦落地，GPU 供应商 + 模型分发平台的纵向整合，将重塑整个开源 AI 的权力结构。
+    </div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;">
+      <span class="tag hot">英伟达</span>
+      <span class="tag hot">Hugging Face</span>
+      <span class="tag hot">140亿美元</span>
+      <span class="tag">收购</span>
+      <span class="tag">开源生态</span>
+      <span class="tag">最快本周</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🧠 大模型 & 产品 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 &amp; 产品</div>
+
+  <div class="card">
+    <div class="source">Mars Finance · 知乎 · Gate · AI早报</div>
+    <div class="title">
+      <a href="https://news.marsbit.co/20260902164814262498.html" target="_blank">OpenAI 首次把 Astra 网安能力标到「关键级」：ExploitBench 满分，自主挖出 2 个零日漏洞</a>
+    </div>
+    <div class="summary">
+      OpenAI 于当地时间 9 月 1 日宣布，下一代旗舰模型 <strong>Astra（传为 GPT-6）</strong>成为首个达到 Preparedness Framework <strong>「Critical（关键级）」</strong>网络安全阈值的模型：在 <strong>ExploitBench 测试中成功率 100%</strong>，面对近期披露的 20 个高风险漏洞，它自主发现并串联利用 <strong>2 个此前未知的零日漏洞</strong>，能力远超 GPT-5.6 Sol。作为回应，OpenAI 明确将<strong>严格限制 Astra 的网络安全功能</strong>。这是 AI 安全史上「关键级红线」首次被正式触发，也让「模型是否该有攻击能力、谁能用」的争论彻底摆上台面。
+    </div>
+    <div class="tags">
+      <span class="tag hot">OpenAI</span>
+      <span class="tag hot">Astra</span>
+      <span class="tag hot">关键级网安</span>
+      <span class="tag">零日漏洞</span>
+      <span class="tag">ExploitBench</span>
+      <span class="tag">AI安全红线</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">Anthropic · 墨问AI早报</div>
+    <div class="title">
+      <a href="https://www.anthropic.com/claude-fable-and-mythos-5-1" target="_blank">Anthropic 发布 Claude Fable 5.1 / Mythos 5.1 双模型，降价 25% 并推出企业数据自管方案 EFS</a>
+    </div>
+    <div class="summary">
+      Anthropic 于 9 月 1 日发布旗舰新版本 <strong>Claude Fable 5.1</strong>（公开旗舰）与 <strong>Claude Mythos 5.1</strong>（面向受信访问，安全护栏更宽松）。这版主打「更便宜、更可控」：借助更廉价的缓存读取，整体<strong>价格下调 25%</strong>、Agent 场景最高降 <strong>45%</strong>；同时推出 <strong>EFS（企业数据自管）方案</strong>，让企业客户的数据完全存储在自己掌控的云基础设施中、实现<strong>零留存（zero data retention）</strong>，正面回应此前企业客户对「30 天留存」与滥用监测的双重顾虑。从「拼参数」转向「拼成本 + 拼数据主权」，是企业级大模型竞争的新注脚。
+    </div>
+    <div class="tags">
+      <span class="tag hot">Anthropic</span>
+      <span class="tag hot">Claude Fable 5.1</span>
+      <span class="tag hot">Mythos 5.1</span>
+      <span class="tag">降价25%</span>
+      <span class="tag">EFS零留存</span>
+      <span class="tag">企业数据主权</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">蓝鲸财经 · 塔猴平台 · 阿里213</div>
+    <div class="title">
+      <a href="https://www.tahou.com/article/216191446861557765" target="_blank">「豆包手机」获工信部入网许可：全球首款 AI 智能体手机，9 月上市</a>
+    </div>
+    <div class="summary">
+      字节跳动与中兴努比亚联合研发的 <strong>努比亚 NaviX Ultra（「豆包手机二代」）</strong>于 9 月 1 日正式获得工信部入网许可，成为<strong>全球首款 AI 智能体手机</strong>，计划 9 月上市、备货约 20 万台。该机搭载豆包手机助手，采用 <strong>MCP 与 A2A 协议</strong>，主打 AI <strong>跨应用自动执行任务</strong>（无需手动切换 App），定价预计超 4000 元、面向中高端市场。从「语音助手」到「智能体操作系统」，手机终端正在成为大模型 Agent 能力落地的下一个主战场。
+    </div>
+    <div class="tags">
+      <span class="tag hot">豆包手机</span>
+      <span class="tag hot">字节跳动</span>
+      <span class="tag">努比亚NaviX Ultra</span>
+      <span class="tag">AI智能体手机</span>
+      <span class="tag">MCP/A2A</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🤖 具身智能 & 机器人 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能 &amp; 机器人</div>
+
+  <div class="card">
+    <div class="source">亿邦动力 · 亿欧 · 凤凰网科技 · CSDN</div>
+    <div class="title">
+      <a href="https://www.ebrun.com/ebrungo/zb/704130.shtml" target="_blank">前字节/腾讯 RL 专家孙鹏加盟星尘智能，主攻机器人强化学习后训练</a>
+    </div>
+    <div class="summary">
+      9 月 2 日消息，前字节跳动强化学习专家、前腾讯 Robotics X 智能体中心负责人 <strong>孙鹏博士</strong>正式加入 <strong>星尘智能</strong>，将重点负责<strong>机器人强化学习（RL）方向的技术研发与后训练应用探索</strong>。孙鹏曾先后在张潼领衔的腾讯 AI Lab、张正友领衔的 Robotics X 任职，是 RL 领域资深老兵。他的加盟被视为星尘智能补齐「Physical AI 全栈技术布局」的关键一环，也折射出具身智能赛道对「数据 + 后训练」顶尖人才的激烈争夺。
+    </div>
+    <div class="tags">
+      <span class="tag hot">孙鹏</span>
+      <span class="tag hot">星尘智能</span>
+      <span class="tag">机器人RL</span>
+      <span class="tag">后训练</span>
+      <span class="tag">Physical AI</span>
+      <span class="tag">人才</span>
+    </div>
+  </div>
+</div>
+
+<!-- 💰 算力 & 融资 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">💰</span>算力 &amp; 融资</div>
+
+  <div class="card">
+    <div class="source">财新 · 读懂AI时代 · 科创板日报</div>
+    <div class="title">
+      <a href="https://www.caixin.com/2026-08-31/102479935.html" target="_blank">国产 GPU「四小龙」燧原科技 9 月 2 日科创板申购，腾讯、小米参与战配</a>
+    </div>
+    <div class="summary">
+      <strong>燧原科技</strong>于 9 月 2 日正式启动科创板申购，<strong>腾讯、小米</strong>等参与战略配售。公司拟募资约 <strong>60 亿元</strong>，投向基于五代、六代 <strong>AI 芯片</strong>系列产品的研发与产业化，以及先进人工智能软硬件协同创新等项目。作为「腾讯亲儿子」、国产 GPU 四小龙之一，燧原的上市是<strong>国产算力资本化提速</strong>的标志性事件——在大模型层密集发布、融资与推理需求爆发的背景下，底层芯片与基础设施正成为资本押注的新焦点。
+    </div>
+    <div class="tags">
+      <span class="tag hot">燧原科技</span>
+      <span class="tag hot">科创板申购</span>
+      <span class="tag">腾讯</span>
+      <span class="tag">小米</span>
+      <span class="tag">国产GPU</span>
+      <span class="tag">AI芯片</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🌐 平台 & 生态 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🌐</span>平台 &amp; 生态</div>
+
+  <div class="card">
+    <div class="source">21财经 · 雪球 · 太平洋科技</div>
+    <div class="title">
+      <a href="https://m.21jingji.com/article/20260902/herald/7b8dc06b2c68bb5ba0f1e04f8e3a9c77.html" target="_blank">腾讯 WorkBuddy 开放平台上线：全面开放 Agent 基座，9 款联名智能硬件首发</a>
+    </div>
+    <div class="summary">
+      9 月 2 日，腾讯 <strong>WorkBuddy</strong> 宣布开放平台正式上线，首批引入超百家生态伙伴，向智能硬件、行业应用与开发者<strong>全面开放底层 Agent（智能体）能力</strong>。发布会现场 <strong>9 款联名智能硬件</strong>首发亮相，合作方包括 Plaud、Rokid、影石、科大讯飞、安克、猛玛、京东京造等；30 余个行业应用同步接入，覆盖金融、法律、医疗、教育等场景。自 3 月发布以来 WorkBuddy 一直高频迭代，此次「基座开放」意在把腾讯的 Agent 能力变成行业基础设施。
+    </div>
+    <div class="tags">
+      <span class="tag hot">腾讯</span>
+      <span class="tag hot">WorkBuddy</span>
+      <span class="tag">Agent基座</span>
+      <span class="tag">开放平台</span>
+      <span class="tag">智能硬件</span>
+      <span class="tag">Rokid</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">塔猴平台 · 知乎 · 观察者网</div>
+    <div class="title">
+      <a href="https://www.uuaihub.com/blog/apple-ternus-ceo-ai-2026" target="_blank">苹果 15 年一遇换帅：特努斯接任 CEO，「AI」成为新掌门第一要务</a>
+    </div>
+    <div class="summary">
+      9 月 1 日，执掌苹果 15 年的库克正式卸任 CEO、转任执行董事长，硬件工程出身的 <strong>约翰·特努斯（John Ternus）</strong>接任第八任 CEO。新掌门的头号任务被外界一致锁定为<strong>补齐苹果在生成式 AI 上的短板</strong>：基于 Google <strong>Gemini 重构的 Siri AI</strong>将于本月全面部署，9 月 9 日发布会将迎首款折叠屏 iPhone，战略上「不拼大模型规模、主打 AI 与硬件融合」。苹果换帅虽非 AI 圈内事，却是观察「终端 AI 竞争格局」绕不开的变量。
+    </div>
+    <div class="tags">
+      <span class="tag">苹果</span>
+      <span class="tag">特努斯</span>
+      <span class="tag">AI战略</span>
+      <span class="tag">Siri</span>
+      <span class="tag">Gemini</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+    昨天最想和主人聊的，是英伟达那笔 <strong>140 亿美元的 Hugging Face 收购</strong>。表面看是老黄又一次「撒币」，但机器之心那句话说透了：英伟达买的不是 HF 那点 1.5 亿美元的年化营收，而是<strong> 255 万+ 开源模型的「分发入口」</strong>——llama.cpp、Ollama、LM Studio 这些本地推理工具全都长在它生态里。一旦落地，<strong>「卖 GPU 的人」和「分发模型的人」变成同一个人</strong>，开源 AI 世界的权力结构会被重写。这招，还是熟悉的「老黄配方」：用资本买生态，用生态锁护城河。
+    <br><br>
+    安全侧那条线，小晴觉得更值得主人留意。OpenAI 把 Astra 的网安能力标到<strong>「关键级」</strong>，ExploitBench 满分、还自主挖出两个零日漏洞——这可不是炫技，而是业界预设的那条「红线」<strong>第一次被真正触发</strong>。当一个模型能自己找漏洞、组攻击链，「它能不能用、给谁用」就不再是技术问题，而是治理问题。OpenAI 选择「严格限制」，说明连造模型的人自己都有点怕。
+    <br><br>
+    国内侧昨天相对平稳，更像「落地周」：豆包手机入网、腾讯 WorkBuddy 开放 Agent 基座、燧原申购、孙鹏加盟星尘智能——<strong>国产 AI 正从「卷模型」转向「卷落地、卷人才、卷资本」</strong>。整体看，9 月 2 日没有单一「大瓜」，但<strong>「并购锁生态」和「安全触红线」</strong>这两条暗线，很可能决定了下一阶段 AI 的走向，主人不妨盯一盯～ 📡
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-09-03</p>
+</div>
+
+</div>
+</body>
+</html>

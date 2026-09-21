@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年08月06日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年08月06日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>Test-Time Scaling 综述正式发表，多模态大模型并行缩放新范式 ParVL 提出；阿里开源 Qwen-UI-Agent 布局真实设备 GUI Agent；具身智能领域 ETA 框架探索机器人的 "ChatGPT 时刻"；Meta 发布 Muse Spark 1.2。AI 业界从模型能力延伸至真实世界交互与边缘部署，整体趋势向「实用化」迈进。</p>
+</div>
+
+<!-- 🔥 热点专题 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 焦点论文</div>
+    <div class="card" style="margin-top:8px; border:none; box-shadow:none;">
+      <div class="source">arXiv: 2608.04001 · cs.LG / cs.AI</div>
+      <div class="title"><a href="https://arxiv.org/abs/2608.04001" target="_blank">Test-Time Scaling in Reasoning LLMs: Inference Regimes, Evaluation, and Reproducibility</a></div>
+      <div class="summary">系统综述了 LLM 推理时缩放（Test-Time Scaling）的三大范式——单轨迹延伸、多候选采样投票、以及混合策略，建立了统一评估框架与可复现基准。这一领域正成为后训练时代提升推理能力的主战场。</div>
+      <div class="tags">
+        <span class="tag hot">🔥 热点</span>
+        <span class="tag">LLM</span>
+        <span class="tag">推理</span>
+        <span class="tag">Test-Time Scaling</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">🚀 开源发布</div>
+    <div class="card" style="margin-top:8px; border:none; box-shadow:none;">
+      <div class="source">arXiv: 2607.28227 · GitHub: Tongyi-MAI/MAI-UI</div>
+      <div class="title"><a href="https://arxiv.org/abs/2607.28227" target="_blank">Qwen-UI-Agent: Toward Next-Generation Real-World Centric Foundation GUI Agents</a></div>
+      <div class="summary">阿里通义团队发布 Qwen-UI-Agent，覆盖手机、电脑、浏览器和 DeepSearch 四大真实场景，基于大规模真机运行时构建。在 GUI 操作能力大幅提升的同时，保留了基座模型的通用推理能力。</div>
+      <div class="tags">
+        <span class="tag hot">🔥 热点</span>
+        <span class="tag">GUI Agent</span>
+        <span class="tag">开源</span>
+        <span class="tag">Qwen</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 🧠 大模型与推理 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型与推理</div>
+
+  <div class="card">
+    <div class="source">arXiv: 2608.04007 · cs.CL / cs.AI</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.04007" target="_blank">TurnSight: Turn-Level Hindsight Self-Distillation for Tool-Integrated Reasoning</a></div>
+    <div class="summary">提出轮次级事后自蒸馏方法，解决长链工具调用中细粒度奖励分配难题。通过 hindsight 重标注每轮工具调用的贡献，显著提升 LLM 工具使用推理能力。</div>
+    <div class="tags">
+      <span class="tag">LLM</span>
+      <span class="tag">Tool Use</span>
+      <span class="tag">Self-Distillation</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv: 2608.03972 · cs.AI</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.03972" target="_blank">ReflectRL: Learning from Golden Negative Trajectories via Reflective-to-Direct Reasoning</a></div>
+    <div class="summary">当专家模型也难以解决难题时，传统 RL 方法失效。ReflectRL 从"金牌负样本"中学习反思，先反思再直接推理，为困难问题的 post-training 开辟新路。</div>
+    <div class="tags">
+      <span class="tag">RL</span>
+      <span class="tag">Post-Training</span>
+      <span class="tag">推理</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🎨 多模态与视觉 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🎨</span>多模态与视觉</div>
+
+  <div class="card">
+    <div class="source">arXiv: 2608.04010 · cs.CV / cs.CL</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.04010" target="_blank">ParVL: Parallel Scaling and Expandable Compute Allocation for Multimodal LLMs</a></div>
+    <div class="summary">提出多模态大模型并行缩放策略，打破传统单一维度扩展的瓶颈，允许在不同模态间动态分配计算资源，实现更高效的多模态推理。</div>
+    <div class="tags">
+      <span class="tag">多模态</span>
+      <span class="tag">MLLM</span>
+      <span class="tag">Scaling</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv: 2608.03979 · cs.CV / cs.AI</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.03979" target="_blank">Video-DeepResearch: Towards the Next-Generation Multimodal Deep Research Agent</a></div>
+    <div class="summary">将 DeepResearch 范式从静态图像扩展到连续视频流，实现密集的时空定位与开放网络探索。揭示了当前模型在模态偏见和长期视频理解上的关键瓶颈。</div>
+    <div class="tags">
+      <span class="tag">多模态</span>
+      <span class="tag">Video Agent</span>
+      <span class="tag">DeepResearch</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🤖 具身智能与机器人 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能与机器人</div>
+
+  <div class="card">
+    <div class="source">arXiv: 2608.03924 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.03924" target="_blank">ETA: A New Agentic Paradigm for Embodied Tasks</a></div>
+    <div class="summary">探索机器人"ChatGPT 时刻"何时到来。提出 ETA Agentic 范式，让机器人处理陌生环境中的陌生任务，保持长时间可控交互，并从经验中持续学习——打破端到端 observation-to-action 的局限。</div>
+    <div class="tags">
+      <span class="tag">具身智能</span>
+      <span class="tag">Agent</span>
+      <span class="tag">机器人</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv: 2608.03938 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.03938" target="_blank">Bimanual Manipulation Within an 8 GB Budget: Zero-Copy Sensing and Quantized ACT on Jetson</a></div>
+    <div class="summary">在仅 8GB 显存的 Jetson Orin Nano 上实现双手操控策略部署，通过零拷贝感知与量化 ACT 突破边缘硬件限制，将模仿学习训练的操控策略从数据中心 GPU 带到嵌入式设备。</div>
+    <div class="tags">
+      <span class="tag">具身智能</span>
+      <span class="tag">边缘部署</span>
+      <span class="tag">Jetson</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🛠️ 开源生态与工具 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源生态与模型发布</div>
+
+  <div class="card">
+    <div class="source">Meta AI · 2026年08月05日</div>
+    <div class="title"><a href="https://aireleasetracker.com/latest" target="_blank">Meta 发布 Muse Spark 1.2</a></div>
+    <div class="summary">Meta 发布最新 Muse Spark 1.2 模型，继续推进开源 AI 生态。Muse 系列专注于创意生成与多模态理解，此次更新在多语言与长上下文方面有显著提升。</div>
+    <div class="tags">
+      <span class="tag">模型发布</span>
+      <span class="tag">Meta</span>
+      <span class="tag">开源</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv: 2608.03974 · cs.CV</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.03974" target="_blank">JoyAI-Video-Edit: Real-Time Open-Ended Video Editing with Autoregressive Diffusion</a></div>
+    <div class="summary">16B 参数的自回归扩散框架，实现无需加速器即可实时、开集视频编辑。保持原视频保真度与长期时序一致性的同时，支持低延迟因果生成。</div>
+    <div class="tags">
+      <span class="tag">视频编辑</span>
+      <span class="tag">Diffusion</span>
+      <span class="tag">实时</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+  今天的 AI 前沿呈现三条清晰主线：<br><br>
+  <strong>① 推理能力的纵深突破：</strong>Test-Time Scaling 综述的发表标志着推理时计算扩展已从经验技巧走向体系化研究。TurnSight、ReflectRL 等工作则从工具使用和负样本学习两个维度，为提升 LLM 实际推理能力提供了新的训练范式。<br><br>
+  <strong>② 多模态 Agent 的实用化落地：</strong>Qwen-UI-Agent 的开源和 Video-DeepResearch 的提出，标志着 AI Agent 正从"能做什么"走向"真实世界能干什么"。阿里直接在真机上跑 Agent 评测，这是一个重要信号——学术界与工业界对 Agent 实用性的要求正在快速对齐。<br><br>
+  <strong>③ 边缘部署驱动具身智能民主化：</strong>在 8GB Jetson 上跑双手操控、ETA 框架探索通用机器人，这些工作正在降低具身智能的硬件门槛。当机器人控制策略可以在几百美元的开发板上运行，具身智能的"ChatGPT 时刻"或许比预期更近。<br><br>
+  总体而言，2026年8月的 AI 研究已进入深水区：不再满足于刷榜，而是追求真实场景下的可靠性、可部署性和成本效率。
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-06 · Sources: arXiv, HuggingFace, GitHub Trending, AI Release Tracker</p>
+</div>
+
+</div>
+</body>
+</html>

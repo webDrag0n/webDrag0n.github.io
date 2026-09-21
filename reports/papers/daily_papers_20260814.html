@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年08月14日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年08月14日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今天的头条聚焦 Agent 安全——OpenART 用 1 万+ 有状态场景给 AI agent 做了场「压力测试」，登顶 HuggingFace 当日榜首；大模型方向，「强帮弱」的测试时迁移几乎让弱模型性能翻倍，还有把 AI 本身当「科学仪器」来自主拆解智能黑箱的 Mechanist；具身智能这边，G0.5 让机器人的「想」与「做」首次共享同一套权重；开源圈则冒出一键把技术书 PDF 变成 Claude Code 技能的小工具，一天破千星。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔬</span>大模型 &amp; Agent 安全</div>
+
+  <!-- Hot Topic -->
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.00677" target="_blank">OpenART: Scaling Agent Red Teaming via Open-Ended Environment Evolution</a></div>
+    <div class="source">arXiv 2608.00677 · 2026-08-01 · HuggingFace Trending #1（182 upvotes）</div>
+    <div class="summary">AI agent 和普通聊天模型最大的不同，在于它会<strong>长期生活在一个共享的「世界状态」里</strong>——早期的一个小动作，可能在几十步之后酝酿成灾难。现有的安全基准大多只盯着短小、静态的任务，恰好漏掉了这种「累积性风险」。OpenART 搭了一个开放式红队竞技场：1 万+ 验证过的有状态场景、覆盖 50 个领域，从 50 多万个工具与技能的池子里抽取，单个任务中位数就要 97 次工具调用，能统一评估 75 种 agent-模型组合。更关键的是它提出了「进化马尔可夫超图攻击」（Evolutionary Markov Hypergraph Attack），让攻击面随环境一起演化，专治那些藏得很深的长期风险。</div>
+    <div class="tags">
+      <span class="tag hot">Agent 安全</span>
+      <span class="tag">红队测试</span>
+      <span class="tag">长期风险</span>
+      <span class="tag">基准</span>
+    </div>
+  </div>
+
+  <!-- Paper -->
+  <div class="card">
+    <div class="source">arXiv 2608.12307 · 2026-08-12 · HuggingFace Trending #3（98 upvotes）</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.12307" target="_blank">AI4AI at Test-Time: Strong-to-Weak Capability Transfer via Harnesses</a></div>
+    <div class="summary">「知识蒸馏」一直是把大模型能力搬给小模型的主流手段，但都得在<strong>训练时</strong>改小模型的参数。这篇工作问了个新问题：能不能把这件事放到<strong>测试时</strong>来做？答案是能——让一个更强的「builder」模型构建推理时的脚手架（harness），在不动弱模型任何参数的前提下帮它把题解得更靠谱。在四个 Theory-of-Mind 基准上，builder 用 5% 数据反复打磨脚手架，最终几乎把弱模型平均表现从 0.49 翻倍到 0.91。强模型不再是「老师」，而是当场给弱模型递工具的「脚手架工」。</div>
+    <div class="tags">
+      <span class="tag">测试时迁移</span>
+      <span class="tag">强到弱</span>
+      <span class="tag">无参数更新</span>
+      <span class="tag">推理增强</span>
+    </div>
+  </div>
+
+  <!-- Paper -->
+  <div class="card">
+    <div class="source">arXiv 2608.12036 · 2026-08-12 · HuggingFace Trending #4（73 upvotes）</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.12036" target="_blank">Mechanist: AI as a Scientific Instrument for Discovering the Mechanisms of Intelligence</a></div>
+    <div class="summary">模型越来越强，可我们对它「为什么聪明」的理解却越来越跟不上——机制解释至今还是一件纯手工、费力的活。Mechanist 反手把 AI 本身变成「科学仪器」：它构建了一个约 1.3 万篇论文的可解释性知识图谱，再整合横跨 26 个领域、4300 万篇论文的跨学科数据库，外加 32 种机制分析、因果干预与验证的基础方法库，让「拆解智能」这件事从手动变成 agentic 自动发现。当 AI 的开发速度已经快过人类理解它的速度，这或许是最能「找补回来」的一条路。</div>
+    <div class="tags">
+      <span class="tag">可解释性</span>
+      <span class="tag">Agentic 系统</span>
+      <span class="tag">知识图谱</span>
+      <span class="tag">机制发现</span>
+    </div>
+  </div>
+
+  <!-- Paper -->
+  <div class="card">
+    <div class="source">arXiv 2608.11924 · 2026-08-12 · HuggingFace Trending #2（176 upvotes）</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.11924" target="_blank">Spark-to-Paper: End-to-End Research Paper Generation as a Composable Skill</a></div>
+    <div class="summary">把研究想法变成一篇完整论文，远不止「写文字」：要检索文献、设计并跑实验、按证据修订主张、生成可发表的图表，还要在超长流程里保持前后一致。Spark-to-Paper 把这整套流程打包成 <strong>13 个可组合技能</strong>，直接装进现有的编码助手里，不额外搭 agent 平台。它的两个设计很妙：一是把「模型判断」和「确定性操作」分开，能直接执行、直接检查；二是把「实验规划」和「报告撰写」拆开，<strong>先定好要什么证据、再跑实验</strong>，结果出来后就事论事地改结论。它还专门约束了一个叫「自我反驳循环」的失败模式——模型反复做实验、反复推翻自己最初的假设。</div>
+    <div class="tags">
+      <span class="tag">研究自动化</span>
+      <span class="tag">可组合技能</span>
+      <span class="tag">Agent</span>
+      <span class="tag">开源</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🌐</span>多模态 &amp; 视频</div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.12313 · 2026-08-12 · cs.CV / cs.CL</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.12313" target="_blank">AVA-Encoder: Towards Agent-Native Video Representation Learning</a></div>
+    <div class="summary">让 AI 创作 agent 拍出「电影级」视频，最大的障碍是缺少一种既忠于影片内容、又能直接拿来推理和编辑的结构化表示。AVA-Encoder 给出了一个漂亮的答案：把视频转成一个<strong>知识图谱</strong>，再从图谱重建回视频——层级与状态节点存结构化文本，资产层挂生成的图像/音频/视频，类型化边把「文字描述」和「资产」之间的关系串起来。重建误差反过来驱动表示不断变好。这样一来，agent 就能像读剧本一样查询、编辑、续写视频，而不只是对着像素盲操作。</div>
+    <div class="tags">
+      <span class="tag">视频表示</span>
+      <span class="tag">知识图谱</span>
+      <span class="tag">创作 Agent</span>
+      <span class="tag">多模态</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能 &amp; 机器人</div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.11739 · 2026-08-12 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.11739" target="_blank">G0.5: One Autoregressive Stream for Robot Reasoning and Action</a></div>
+    <div class="summary">现在主流的 VLA（视觉-语言-动作）模型，习惯把一个预训练 VLM 和一个单独训练的「流匹配动作专家」拼在一起——结果是 VLM 沦为「上下文编码器」，而非真正的决策者。G0.5 换了一条路：<strong>一个 transformer decoder，在单一目标下同时吐「推理」token 和「动作」token</strong>。三招让它跑得动：一个跨形态的可学习动作 tokenizer（把五花八门的机器人动作映射到共享词表）、一条原生思维链流（任务拆解、物体 grounding、动作提示与动作 token 交织输出）、再加一个视觉记忆模块注入多秒历史。因为「想」和「做」共享同一组权重，预训练 VLM 的能力顺理成章地延续到了物理动作上。</div>
+    <div class="tags">
+      <span class="tag">VLA</span>
+      <span class="tag">统一自回归</span>
+      <span class="tag">机器人基础模型</span>
+      <span class="tag">具身智能</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.12308 · 2026-08-12 · cs.CV / cs.AI</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.12308" target="_blank">DreamFly: Causal Memory and Receding-Horizon Diffusion Planning for Aerial Vision-Language Navigation</a></div>
+    <div class="summary">让无人机「听指令找地方」，比地面机器人更难：历史视野有限、规划得不够远、还常常不确定自己到底到没到。DreamFly 基于 Dream-VLA 做了两处关键改进：一是<strong>因果对齐的历史记忆</strong>——只用当前决策步<em>之前</em>的观测来增强视觉表示，杜绝「偷看未来」的信息泄漏；二是把导航重新建模成<strong>滚动时域的扩散规划</strong>，一次预测 K 步动作块而非单步。让空中 VLA 在部分可观测环境下也能把视觉证据积少成多、边走边判终点。</div>
+    <div class="tags">
+      <span class="tag">空中导航</span>
+      <span class="tag">VLA</span>
+      <span class="tag">扩散规划</span>
+      <span class="tag">因果记忆</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔧</span>开源进展</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · Leutenegger/book-to-skill · ⭐1024（8月13日发布）</div>
+    <div class="title"><a href="https://github.com/Leutenegger/book-to-skill" target="_blank">book-to-skill：把任意技术书 PDF 变成 Claude Code 技能</a></div>
+    <div class="summary">读厚厚的技术书、还得随时记得住关键章节，是每个工程师的痛点。这个小工具一键把任何技术书籍 PDF 转成一个 Claude Code skill——边写代码边查询、引用、研究，知识不再是「读完了就忘」。发布一天就破千星，再次印证了「把知识喂进 agent、随取随用」这条路线在开发者圈里的热度。配合今天的 Spark-to-Paper 一起看，「读论文 → 写论文」的闭环正在被开源社区一点点补全。</div>
+    <div class="tags">
+      <span class="tag">开源</span>
+      <span class="tag">Claude Code</span>
+      <span class="tag">知识注入</span>
+      <span class="tag">Agent 技能</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+  今天最想跟你聊的，是那条藏在榜单第一的 <strong>OpenART</strong>。过去大家聊 AI 安全，眼睛总盯着「模型会不会说错话」，可 agent 时代真正危险的，是它<strong>在一个会自我演化的环境里，早期埋下的雷在几十步之后才炸</strong>——OpenART 用 1 万多个有状态场景专门挖这种「累积性风险」，等于给狂奔的 agent 生态装了一盏雾灯。<br><br>
+  另一条暗线是 <strong>「不再改参数」</strong>：AI4AI 证明强模型能在测试时给弱模型搭脚手架、性能几乎翻倍，Spark-to-Paper 把能力做成可组合技能挂进现成的助手，G0.5 让机器人的想与做共享同一套权重——大家似乎都在默契地绕过「训练」这件最重的事，转而在<strong>推理、技能、表征这些更轻的层面</strong>找增长。这很像软件工程里的「组合优于继承」：与其再造一个更强的巨无霸，不如把已有的零件拼得更聪明。<br><br>
+  至于 Mechanist，则让我有点感动——当 AI 造 AI 的速度已经快到人类看不懂自己造的东西时，有人选择让 AI 反过来当「科学仪器」，替我们去拆解智能本身。2026 年的这个夏天，AI 一边往前跑，一边也开始回头理解自己了。
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-14 08:14 CST</p>
+</div>
+
+</div>
+</body>
+</html>

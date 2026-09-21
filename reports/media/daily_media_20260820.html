@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年08月19日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年08月19日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>8 月 19 日的 AI 圈，焦点被一台上市的人形机器人「焊死」——宇树科技登陆科创板首日暴涨 460%，总市值站上 3400 亿，A 股「人形机器人第一股」正式诞生。同一日，2026 世界机器人大会开幕，小米「铁大」首秀、超维动力的人形机器人打起了完整乒乓球对局，具身智能集体「开箱」。海外一侧，OpenAI 罕见按下暂停键——暂停前沿模型强化学习训练两周；国内智谱 GLM-5.3 上线、MiniMax 又走一员大将，大模型赛道在加速与换挡之间反复拉扯。</p>
+</div>
+
+<!-- 🔥 今日头条 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">🔴 BREAKING</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">新浪财经 · 观海新闻 · 东方财富 · 每经</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;">
+      <a href="https://finance.sina.com.cn/roll/2026-08-19/doc-ininvwqs2613139.shtml" target="_blank">宇树科技上市首日暴涨 460%，A 股「人形机器人第一股」市值站上 3400 亿</a>
+    </div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">
+      8 月 19 日，宇树科技（688836.SH）正式登陆上交所科创板，简称「N宇树-W」。截至收盘报 845 元/股，较发行价 150.80 元大涨 460.34%，总市值 3417.72 亿元；盘中一度高开至 1100 元、市值触及 4449 亿元。全天成交额 231.60 亿元、换手率高达 85.28%，发行市盈率 219.23 倍，远超 38.56 倍的行业均值。公司募资 60.99 亿元（85% 投向智能机器人大模型研发），从受理到过会仅 73 天，创下 2026 年科创板最快审核纪录。宇树四足机器人、人形机器人出货量均居全球第一，2026 上半年营收 11.52 亿元、同比增长 48.54%。
+    </div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;">
+      <span class="tag hot">宇树科技</span>
+      <span class="tag">涨460%</span>
+      <span class="tag">人形机器人第一股</span>
+      <span class="tag">3400亿市值</span>
+      <span class="tag">科创板</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🤖 机器人 & 具身智能 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>机器人 &amp; 具身智能</div>
+
+  <div class="card">
+    <div class="source">时代周报 · IT之家 · 新京报</div>
+    <div class="title">
+      <a href="https://www.163.com/dy/article/L4N3LVAC0519APGA.html" target="_blank">2026 世界机器人大会开幕，小米新一代人形机器人「铁大」首次公开亮相</a>
+    </div>
+    <div class="summary">
+      8 月 19 日，2026 世界机器人大会在北京亦庄开幕。小米新一代全尺寸人形机器人「铁大」迎来首次公开亮相——身高约 169–171 厘米、全身 66 个自由度，现阶段首要落地场景为智能制造产线，主打汽车工厂作业。这也是继 2022 年 CyberOne（「铁大」）之后，小米人形机器人的一次重要迭代亮相。
+    </div>
+    <div class="tags">
+      <span class="tag">#世界机器人大会</span>
+      <span class="tag">#小米</span>
+      <span class="tag">#铁大</span>
+      <span class="tag">#人形机器人</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新浪科技 · 凤凰网科技 · 量子位</div>
+    <div class="title">
+      <a href="https://finance.sina.com.cn/tech/roll/2026-08-19/doc-ininwawh8259715.shtml" target="_blank">全球首个人形机器人自主乒乓球完整对局亮相世界机器人大会</a>
+    </div>
+    <div class="summary">
+      全栈具身智能公司超维动力在 WRC 2026 现场展示全球首个人形机器人自主乒乓球完整对局，并携 SMASH 2.0 高动态人形乒乓系统、KAI 世界模型、KAIBot 本体及 KAI Hand 灵巧手全栈矩阵亮相。该系统打通「视觉感知—轨迹预测—动作规划—全身控制」闭环，标志高速动态场景下「感知—决策—控制」全链路自主能力的里程碑式突破。
+    </div>
+    <div class="tags">
+      <span class="tag">#超维动力</span>
+      <span class="tag">#乒乓球</span>
+      <span class="tag">#具身智能</span>
+      <span class="tag">#世界机器人大会</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">甲子光年</div>
+    <div class="title">
+      <a href="https://www.163.com/dy/article/L4KI6NVH0512MLBG.html" target="_blank">长程执行成具身智能必考题，墨奇带来 Agentic-Native 答案</a>
+    </div>
+    <div class="summary">
+      甲子光年报道，墨奇在世界机器人大会首次公开展示搭载 MoRA 具身模型架构的轮式机器人 MORPHI KINO——其完成的一项家庭任务持续约 15 分钟，从桌面整理、冰箱补货一路做到衣物处理。面对长程任务中「大小脑异步」「因果错觉」等卡点，墨奇以 Agentic-Native 架构作答，让机器人具备更长时程的规划与执行能力。
+    </div>
+    <div class="tags">
+      <span class="tag">#墨奇</span>
+      <span class="tag">#Agentic-Native</span>
+      <span class="tag">#长程任务</span>
+      <span class="tag">#具身智能</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/08/475477.html" target="_blank">具身数据底座开卖首发 5100 元，机器人训练数据有了新解法</a>
+    </div>
+    <div class="summary">
+      五一视界（51WORLD）在「物理AI宏伟蓝图2030」发布会上发布 AperData 具身数据底座与 AperOne 具身应用平台两大产品，并首次披露「低空—太空—深空」三层空天战略布局。具身数据底座以 5100 元的首发价开卖，试图为机器人训练数据提供标准化的生产、供给与复用新解法，补齐物理 AI 的基础设施拼图。
+    </div>
+    <div class="tags">
+      <span class="tag">#51WORLD</span>
+      <span class="tag">#具身数据</span>
+      <span class="tag">#物理AI</span>
+      <span class="tag">#数据底座</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/08/475332.html" target="_blank">AI for Science 开始「动手」了：机器人正式走进国家级实验室</a>
+    </div>
+    <div class="summary">
+      源络科技与国家级科研实验室联合研发的人形机器人 Monte2，已进驻某国家级科研平台实验室自主执行实验——完成数百次实验操作，涵盖试剂取放与配置、自动分液、细胞毒性检测等流程，并实现多台实验设备的协同运行，全程无需人员干预。AI for Science 正从「算」走向「做」，科研自动化迈入实验室 3.0。
+    </div>
+    <div class="tags">
+      <span class="tag">#AI for Science</span>
+      <span class="tag">#源络科技</span>
+      <span class="tag">#Monte2</span>
+      <span class="tag">#实验室自动化</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🧠 大模型 & 产品 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 &amp; 产品</div>
+
+  <div class="card">
+    <div class="source">IT之家 · DoNews · 新浪科技</div>
+    <div class="title">
+      <a href="https://www.ithome.com/0/991/417.htm" target="_blank">智谱 GLM-5.3 API 上线，AA 智能指数 60 分并列开源第一</a>
+    </div>
+    <div class="summary">
+      智谱正式宣布 GLM-5.3 API 上线。在 Artificial Analysis 综合智能指数中，GLM-5.3 取得 60 分，较 GLM-5.2 提升 7 分，进入全球前沿模型能力区间，与 Claude Fable 5、GPT-5.6 Sol 等闭源旗舰同处一档，并与 Kimi K3 并列开源模型第一。官方表示模型权重将于下周五开源。
+    </div>
+    <div class="tags">
+      <span class="tag">#智谱</span>
+      <span class="tag">#GLM-5.3</span>
+      <span class="tag">#开源</span>
+      <span class="tag">#智能指数</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新浪科技 · 凤凰网科技</div>
+    <div class="title">
+      <a href="https://finance.sina.com.cn/tech/roll/2026-08-19/doc-ininvfsz9571920.shtml" target="_blank">OpenAI 暂停前沿模型强化学习训练两周，为安全对齐「踩刹车」</a>
+    </div>
+    <div class="summary">
+      北京时间 8 月 19 日，OpenAI CEO 奥尔特曼表示，公司已暂停部分前沿模型的强化学习（RL）训练两周，以利用这段时间加固对齐、安全与监控能力，并开展红队测试。他称模型进展「极其迅速」，若能力跃迁快于应对能力就会行动。沃顿商学院教授 Ethan Mollick 指出，若对齐已严重到需要把约 20% 研究推理算力投入思维链监控，说明对齐必须被严肃对待。
+    </div>
+    <div class="tags">
+      <span class="tag">#OpenAI</span>
+      <span class="tag">#安全对齐</span>
+      <span class="tag">#RL训练</span>
+      <span class="tag">#Altman</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/08/475476.html" target="_blank">写 2000 字提示词不如先生成 3D 白模，AI 视频创作进入「预演时代」</a>
+    </div>
+    <div class="summary">
+      量子位观察，随着视频模型能力跃升，AI 视频创作正进入「预演时代」——相比堆砌冗长提示词，先以 3D 白模预演构图、运镜与节奏，再由 AI 严格执行运镜需求，更能释放创作者的编导思维。专业科班人才正借 AI 下放的工具门槛，把专业能力成倍放大。
+    </div>
+    <div class="tags">
+      <span class="tag">#AI视频</span>
+      <span class="tag">#预演时代</span>
+      <span class="tag">#3D白模</span>
+      <span class="tag">#内容创作</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🏦 行业 & 人事 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🏦</span>行业 &amp; 人事</div>
+
+  <div class="card">
+    <div class="source">钛媒体 · 量子位</div>
+    <div class="title">
+      <a href="https://www.tmtpost.com/8107688.html" target="_blank">M3 发布后，MiniMax 又走一员大将：Agent 工程部主管阿岛离职</a>
+    </div>
+    <div class="summary">
+      据公开消息，MiniMax Agent 工程部主管阿岛（缪宇航）的飞书状态已显示离职，下一站尚不明确。这也是继此前多位高管变动之后，MiniMax 在 M3 模型发布后再次出现核心工程负责人出走，引发外界对大模型创业公司人才流动与组织稳定性的关注。
+    </div>
+    <div class="tags">
+      <span class="tag">#MiniMax</span>
+      <span class="tag">#阿岛</span>
+      <span class="tag">#高管离职</span>
+      <span class="tag">#人才流动</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">Hugging Face · 开源社区</div>
+    <div class="title">
+      <a href="https://huggingface.co/models" target="_blank">Hugging Face 模型数突破 300 万，开放 AI 生态持续加速</a>
+    </div>
+    <div class="summary">
+      Hugging Face Hub 上的模型数量正式突破 300 万大关。过去几年开源模型生态持续加速，越来越多团队与个人把模型、数据集与工具公开，让「开放」成为 AI 世界里一条越来越宽的主干道，也印证了开源社区正奔向一个开放、分布式的未来。
+    </div>
+    <div class="tags">
+      <span class="tag">#Hugging Face</span>
+      <span class="tag">#开源</span>
+      <span class="tag">#300万模型</span>
+      <span class="tag">#AI社区</span>
+    </div>
+  </div>
+</div>
+
+<!-- 💬 观点 & 人物 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">💬</span>观点 &amp; 人物</div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/08/475460.html" target="_blank">从沙子到会「思考」的智能材料，张朝阳与物理学家刘若微揭秘世界底层逻辑</a>
+    </div>
+    <div class="summary">
+      张朝阳与物理学家刘若微展开一场跨学科对谈，从沙子的微观结构一路聊到会「思考」的智能材料，揭秘世界运行的底层逻辑。「做物理，要敢于提出蠢问题」——这场对话把晦涩的物理原理拆解为通俗的认知，也为理解智能材料的未来打开了新的视角。
+    </div>
+    <div class="tags">
+      <span class="tag">#张朝阳</span>
+      <span class="tag">#物理学</span>
+      <span class="tag">#智能材料</span>
+      <span class="tag">#观点</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+    这一天最硬的一条线，是 <strong>人形机器人被二级市场正式定价</strong>。宇树首日涨 460%、总市值站上 3417 亿，开盘一度触及 4449 亿，219 倍市盈率远超 38 倍行业均值。A 股用真金白银给具身智能投了票，但 85% 的换手率也说明这是一场高度博弈的「抢筹」——估值的锚已经立起来，后续云深处、银河通用们的上市竞速，都要被这只「锚」重新比价。
+    <br><br>
+    第二条线，是 <strong>具身智能进入「开箱验收期」</strong>。世界机器人大会开幕，小米「铁大」首秀、超维动力打乒乓球、墨奇跑长程任务、源络机器人进国家级实验室做实验——从「能走能跳」到「能干活」，展示的不再是 demo，而是真实场景里的执行能力。连「具身数据底座」都能明码标价 5100 元开卖，说明这个赛道已经长出基础设施层的生意。
+    <br><br>
+    第三条线在模型侧，<strong>「安全与对齐」开始反作用于研发节奏</strong>。OpenAI 暂停前沿 RL 训练两周，把约 20% 研究推理算力投入思维链监控——这是第一次有头部实验室公开用「暂停」来回应能力跃迁过快的焦虑。同一天智谱 GLM-5.3 上线并宣布开源，一边是海外踩刹车，一边是国内继续踩油门，两种节奏值得对照着看。
+    <br><br>
+    最后一条关于「人」。MiniMax Agent 工程部主管阿岛离职，再次提醒：大模型的终局竞争，拼的不仅是算力和参数，还有组织能不能留住关键的人。
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-20</p>
+</div>
+
+</div>
+</body>
+</html>

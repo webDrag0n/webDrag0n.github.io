@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年08月14日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年08月14日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>8 月 14 日的 AI 圈延续了前一天的「发布潮」，并叠加两条重磅主线：智谱 GLM-5.3 仅靠后训练 Scaling 登顶开源编程第一，谷歌、DeepSeek、MiniMax 同日密集上新；同时路透社曝出苹果联合阿里自研中国专属大模型，DeepSeek 涨价落地、谷歌半价抢市场，价格策略出现罕见分化——一边「涨」一边「降」，攻守之势正在互换。</p>
+</div>
+
+<!-- 🔥 今日头条 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">🔴 BREAKING</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">路透社 · 腾讯新闻 · 网易科技 · 凤凰网 · 观察者网 · 新浪科技</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;">
+      <a href="https://www.163.com/tech/article/L4A5CCFS00097U7T.html" target="_blank">苹果被曝联合阿里自研中国专属大模型，在华 AI 战略重大转向</a>
+    </div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">
+      8 月 14 日，路透社援引三名知情人士爆料：苹果已专门为中国市场训练了一款大语言模型，阿里巴巴在训练过程中提供支持。这是苹果首次在华自研 AI，彻底打破其此前「全盘依赖本土第三方模型」的既定路线，转向「自研模型 + 通义千问」双轨并行。苹果与阿里均未对此回应。媒体普遍认为，此举既是苹果在合规监管与本地化体验之间的一次平衡，也再次印证了中国 AI 生态的全球影响力。
+    </div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;">
+      <span class="tag hot">大模型</span>
+      <span class="tag">苹果</span>
+      <span class="tag">阿里巴巴</span>
+      <span class="tag">通义千问</span>
+      <span class="tag">中国AI战略</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🚀 新模型/产品 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🚀</span>新模型 &amp; 产品发布</div>
+
+  <div class="card">
+    <div class="source">智谱 · IT之家 · 澎湃新闻 · 科技日报</div>
+    <div class="title">
+      <a href="https://news.qq.com/rain/a/20260814A084MO00" target="_blank">智谱发布 GLM-5.3：基座不变只炼后训练，登顶「编程能力最强开源模型」</a>
+    </div>
+    <div class="summary">
+      8 月 14 日，智谱（2513.HK）正式发布新一代旗舰 GLM-5.3。与 GLM-5.2 相比基座模型完全未变（约 7430 亿参数 MoE），全部提升来自后训练 Scaling——数十倍的长程任务环境、更丰富的环境类型与超长后训练时间。官方称其编程体感较前代提升 50%，在 Terminal Bench 3.0、Agents' Last Exam（CLI）等公开基准中达开源 SOTA，编程与智能体能力接近 Claude Fable 5；并意外涌现网络安全能力，已在真实开源项目检出 2436 个历史漏洞。完整权重预计两周后开放。
+    </div>
+    <div class="tags">
+      <span class="tag">#大模型</span>
+      <span class="tag">#开源</span>
+      <span class="tag">#GLM-5.3</span>
+      <span class="tag">#智谱</span>
+      <span class="tag">#后训练Scaling</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">IT之家 · 凤凰网 · 新浪科技 · 中华网</div>
+    <div class="title">
+      <a href="https://www.ithome.com/0/989/497.htm" target="_blank">谷歌发布 Gemini 3.7 Flash，首发半价闪击编程与 Agent 场景</a>
+    </div>
+    <div class="summary">
+      当地时间 8 月 13 日，谷歌宣布推出 Gemini 3.7 Flash，专为编程与 Agents 场景打造，距离 Gemini 3.6 Flash 发布仅三周。为抢夺开发者，谷歌祭出限时半价：今年年底前每百万 token 输入 0.75 美元、输出 3.75 美元，仅为 3.6 Flash 标准价的一半。媒体形容这是一次「降价换市场」的闪击，直指 xAI 的 Grok 与 Anthropic 的 Claude 系列。
+    </div>
+    <div class="tags">
+      <span class="tag">#大模型</span>
+      <span class="tag">#Google</span>
+      <span class="tag">#Gemini 3.7 Flash</span>
+      <span class="tag">#Agent</span>
+      <span class="tag">#降价</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">机器之心Pro · 快科技 · InfoQ</div>
+    <div class="title">
+      <a href="https://news.mydrivers.com/1/1143/1143642.htm" target="_blank">DeepSeek 首款 Agent 产品 Harness 开源：「一切皆插件」</a>
+    </div>
+    <div class="summary">
+      8 月 13 日晚，DeepSeek 正式推出首款 Agent 产品——DeepSeek Harness v0.1 开发者预览版，以 MIT 协议在 GitHub 开源。其「一切皆插件」架构把插件边界下沉到整个运行时：模型、工具、技能、会话、沙箱、存储、Agent Loop、调度和 UI 全部由插件组成，可替换范围从某个搜索工具一直延伸到调度与界面，直接对标 OpenAI Codex 与 Anthropic Claude Code。
+    </div>
+    <div class="tags">
+      <span class="tag">#DeepSeek</span>
+      <span class="tag">#Agent</span>
+      <span class="tag">#开源</span>
+      <span class="tag">#AI编程</span>
+      <span class="tag">#Harness</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">IT之家 · MiniMax官方 · 知乎</div>
+    <div class="title">
+      <a href="https://www.ithome.com/0/989/722.htm" target="_blank">MiniMax 开源 Music3 音乐模型：一次生成最长 5 分钟完整歌曲</a>
+    </div>
+    <div class="summary">
+      AI 公司 MiniMax 于 8 月 14 日推出并开源音乐生成模型 MiniMax-Music3，可根据歌词与音乐描述一次生成最长 5 分钟的完整歌曲，输出 32kHz 立体声。模型采用 8B 全局语言模型 + 0.6B 局部语言模型分离语义与声学建模的分层架构，原生支持前奏、主歌、副歌、桥段等曲式结构，把 AI 音乐从「能出片段」推进到「能写完整歌」。
+    </div>
+    <div class="tags">
+      <span class="tag">#MiniMax</span>
+      <span class="tag">#音乐生成</span>
+      <span class="tag">#开源</span>
+      <span class="tag">#Music3</span>
+    </div>
+  </div>
+</div>
+
+<!-- 💰 融资/行业 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">💰</span>融资 &amp; 行业动态</div>
+
+  <div class="card">
+    <div class="source">21财经 · 第一财经 · 华尔街见闻</div>
+    <div class="title">
+      <a href="https://m.21jingji.com/article/20260813/herald/71e1fe8b3eed1de631b105ecdb77ed5b.html" target="_blank">DeepSeek 涨价落地：峰谷定价，V4 Pro 峰值最高涨 12 倍</a>
+    </div>
+    <div class="summary">
+      8 月 13 日晚，DeepSeek 发布 API 调价公告，宣布自 8 月 17 日 00:00 起实行「峰谷定价」：高峰时段（北京时间 9:00–12:00、14:00–18:00）价格翻倍，空闲时段为高峰价的一半。其中 V4 Flash 高峰百万词元输出涨至 9 元，V4 Pro 更涨至 27 元、较此前最高涨约 12 倍。媒体解读为：中国模型正「走出价格战、走向智能战」，低价是手段、不是目的。
+    </div>
+    <div class="tags">
+      <span class="tag">#DeepSeek</span>
+      <span class="tag">#涨价</span>
+      <span class="tag">#API定价</span>
+      <span class="tag">#峰谷定价</span>
+      <span class="tag">#行业</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">网易科技 · 证券时报 · 新京报 · 智东西</div>
+    <div class="title">
+      <a href="https://www.163.com/tech/article/L4A5OL7H00098IEO.html" target="_blank">百度文库网盘通用智能体 GenFlow 官宣中文名「库库AI」，上线独立办公端</a>
+    </div>
+    <div class="summary">
+      8 月 14 日百度 AI Day 上，百度文库网盘通用智能体 GenFlow 官宣中文名「库库AI」。其月活用户已于今年 4 月突破 1 亿，其中 AI 办公 MAU 超 2500 万、位居通用 AI 办公赛道第一。文库网盘同步上线「库库AI」独立端，覆盖 PC 客户端、网页端、小程序及企业版，进一步加码 AI 办公赛道。
+    </div>
+    <div class="tags">
+      <span class="tag">#百度</span>
+      <span class="tag">#库库AI</span>
+      <span class="tag">#AI办公</span>
+      <span class="tag">#智能体</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪智涌 · 新浪财经 · 投资界 · 网易科技</div>
+    <div class="title">
+      <a href="https://finance.sina.com.cn/roll/2026-08-14/doc-ininfvzw2690225.shtml" target="_blank">前 OpenAI 算法专家姜旭创办亮源新创，完成数亿元 Pre-A 轮融资</a>
+    </div>
+    <div class="summary">
+      8 月 14 日，具身智能公司亮源新创（Light Origins）宣布完成数亿元 Pre-A 轮融资，国科投资领投。创始人姜旭曾任 OpenAI 算法专家，2019 年起参与 OpenAI 全栈算法研发，完整经历 InstructGPT、ChatGPT 到 GPT-4 的关键演进，在 GPT-4 技术报告中被署名 8 次、与 Greg Brockman 并列第一。公司成立于 2024 年底，聚焦具身智能基础模型（物理 AGI），团队超百人、研发占比逾九成。
+    </div>
+    <div class="tags">
+      <span class="tag">#融资</span>
+      <span class="tag">#具身智能</span>
+      <span class="tag">#亮源新创</span>
+      <span class="tag">#OpenAI</span>
+      <span class="tag">#物理AGI</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">品玩/TechCrunch · CSDN · InfoQ</div>
+    <div class="title">
+      <a href="https://news.aibase.com/zh/news/30203" target="_blank">Claude Code 自 8 月 14 日起默认启用自动模式，危险命令拦截率达 89%</a>
+    </div>
+    <div class="summary">
+      自 8 月 14 日起，Anthropic 旗下编程工具 Claude Code 在 Pro、Max、Team 账户的新会话中默认启用 Auto Mode，以安全分类器替代逐条权限弹窗。官方对照实验显示，自动模式可拦截 89% 的危险命令，而人工审批仅能拦截约 13.6%；Teams 用户的 PR 产出提升约 25%。这一改动标志着 AI 编程代理正从「逐条审批」走向「自主执行 + 风险分类」的新范式。
+    </div>
+    <div class="tags">
+      <span class="tag">#Anthropic</span>
+      <span class="tag">#Claude Code</span>
+      <span class="tag">#AI编程</span>
+      <span class="tag">#Auto Mode</span>
+    </div>
+  </div>
+</div>
+
+<!-- 📊 技术解读/评测 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📊</span>技术解读 &amp; 评测</div>
+
+  <div class="card">
+    <div class="source">快科技 · DoNews · CLUE团队</div>
+    <div class="title">
+      <a href="https://news.mydrivers.com/1/1143/1143637.htm" target="_blank">SuperCLUE-Terminal 编程测评出炉：DeepSeek V4 Pro 第二，仅次于 Kimi K3</a>
+    </div>
+    <div class="summary">
+      8 月 14 日，CLUE 团队发布 SuperCLUE-Terminal 中文智能体终端编程测评榜单。新版本 DeepSeek-V4-Pro-0813 以 51.52 分位列第二，仅次于 Kimi K3；其在终端编程任务上的表现与顶尖闭源模型差距进一步收窄。这份榜单为前一天集中发布的各家新模型提供了一个「同台竞技」的量化注脚。
+    </div>
+    <div class="tags">
+      <span class="tag">#评测</span>
+      <span class="tag">#SuperCLUE</span>
+      <span class="tag">#DeepSeek V4 Pro</span>
+      <span class="tag">#Kimi K3</span>
+      <span class="tag">#编程</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+    这一天最值得记住的，是<strong>开源模型的竞争重心正在「向内转」</strong>。智谱 GLM-5.3 的 7430 亿基座参数一个都没动，仅靠后训练 Scaling 就把编程能力拉升 50%、登顶开源第一，还意外涌现出漏洞挖掘能力——模型智能的上限，正越来越多地由「怎么训」而非「有多大」决定。DeepSeek Harness 同日开源，则把战场从「模型」推向「Agent 框架」，插件化、可编排的智能体正在成为新的护城河。
+    <br><br>
+    第二，<strong>苹果联合阿里自研中国专属大模型</strong>，是这一天最具战略意味的一步。从「全盘依赖第三方」到「自研 + 通义千问双轨」，苹果的转向既是在合规与本地化之间求平衡，也把中国 AI 的「技术输出力」推到了新高度——连苹果都要借力阿里训练模型，中国开源与算力生态的全球分量可见一斑。
+    <br><br>
+    第三，<strong>价格策略出现罕见分化</strong>。一边是 DeepSeek 峰谷定价落地、V4 Pro 峰值涨 12 倍，一边是谷歌 Gemini 3.7 Flash 首发半价。中国模型忙着「走出价格战、走向智能战」，海外巨头反而开始用价格撬市场——一涨一降之间，攻守之势正在悄然互换，2026 下半场的大模型竞争，越来越像一场「智能 + 定价」的双线博弈。
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-15</p>
+</div>
+
+</div>
+</body>
+</html>

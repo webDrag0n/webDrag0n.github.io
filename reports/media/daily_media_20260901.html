@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年09月01日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年09月01日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>8 月 31 日，周一的开场被一个代号炸醒了——一批自称拿到 OpenAI 内部检查点权限的开发者，放出了代号 <strong>Astra（即 GPT-6）</strong> 的灰测 demo，在 X 上刷屏：One-shot 直出带音效的宇宙舰艇、内部构造完整的城堡，被网友称作「Fable 级」，而呼声最高的发布时间就在<strong>这周四（9 月 3 日）</strong>。与此同时，一条暗线悄悄改写算力格局：OpenAI 被曝<strong>买了几万台 Mac</strong> 专攻强化学习，靠苹果「统一内存」切走了英伟达的一角。国内侧，MiniMax 用一份 <strong>8 亿美元 ARR</strong> 的中期财报把「造血逻辑」讲明白了，具身领域则有一位成立仅三个月的「黑马」灵犀智涌在机器人大赛里杀进全国三强。</p>
+</div>
+
+<!-- 🔥 今日头条 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">🔴 BREAKING</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">量子位 · 凤凰网 · 茉莉花新闻网</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;">
+      <a href="https://www.qbitai.com/2026/08/481893.html" target="_blank">「GPT-6」灰测 demo 刷屏！周四发布在即</a>
+    </div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">
+      8 月 31 日，一批自称拿到 OpenAI 内部检查点权限的开发者，放出了代号 <strong>Astra（即 GPT-6）</strong> 的实测 demo，在 X 上「杀疯了」。它 One-shot 直出带发动机音效的宇宙舰艇、内部构造完整到「拎包入住」的城堡，甚至把像素硬生生垒成「乐高版」鹈鹕自行车——社区反馈其<strong>思考强度夸张</strong>，对 3D 资产细节把控极好，几乎无需人类反馈，网友直呼「绝对的 Fable 级，前端又寄了一次」。
+      <br><br>
+      更硬的一条在安全侧：OpenAI 内部评估显示，Astra 在<strong>智能体编程与网络安全</strong>上取得显著进展，无法排除其达到《准备框架》（Preparedness Framework）中「关键级」网络能力的可能——这恰好呼应了今年 4 月 Anthropic 旗舰 Mythos 因网络安全风险推迟发布、仅通过 Glasswing 项目向约 40 家合作伙伴开放的旧事。目前呼声最高的最早发布时间是 <strong>9 月 3 日（本周四）</strong>。
+      <br><br>
+      提醒一句：所有「内测」均为社区声称的内部检查点结果，<strong>OpenAI 官方尚未认领</strong>这些 demo。但当一个模型还没发布就先把预期拉到「Fable 级」，这周四注定不会平静。
+    </div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;">
+      <span class="tag hot">GPT-6 / Astra</span>
+      <span class="tag hot">灰测demo刷屏</span>
+      <span class="tag hot">9月3日发布</span>
+      <span class="tag">网络安全</span>
+      <span class="tag">Fable级</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🧠 大模型 & 产品 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 &amp; 产品</div>
+
+  <div class="card">
+    <div class="source">量子位 · 华尔街见闻 · 中华网</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/08/481759.html" target="_blank">OpenAI 买几万台 Mac 搞强化训练，英伟达的活被苹果抢了</a>
+    </div>
+    <div class="summary">
+      据 The Information，OpenAI 已购入<strong>数以万计的 Mac mini 和 Mac Studio</strong>（无屏无键盘）专门用于强化学习，甚至一度把货买断；Anthropic 也在通过 AWS 租用 Mac mini 做类似任务（训练「计算机使用智能体」）。关键在苹果的<strong>统一内存</strong>——Mac Studio 最高 512GB，能一次性装下更大的策略/价值网络，而强化学习这种长时程、重内存的场景，GPU/TPU 反而吃亏。这意味着 AI 训练的算力叙事里，苹果首次以「非 GPU」身份切进一角，英伟达的盘子被啃掉了一块。
+    </div>
+    <div class="tags">
+      <span class="tag hot">OpenAI</span>
+      <span class="tag hot">Mac强化学习</span>
+      <span class="tag">苹果统一内存</span>
+      <span class="tag">Anthropic</span>
+      <span class="tag">算力格局</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新浪财经 · 凤凰网 · 华尔街见闻</div>
+    <div class="title">
+      <a href="https://news.ifeng.com/c/8vxYxOjR0Eh" target="_blank">MiniMax 中期财报炸场：ARR 破 8 亿美元，B 端占比冲到 80%</a>
+    </div>
+    <div class="summary">
+      MiniMax 发布 2026 中期财报：8 月 <strong>ARR 突破 8 亿美元</strong>，远超杰富瑞 5.8 亿美元的预测；<strong>B 端收入同比暴涨 703%</strong>，占比从去年的 30% 干到 80%；7 月 Token 消耗量已是 1 月的 20 倍。上半年总营收 1.1657 亿美元，同比增长 283.1%，已达去年全年的 1.5 倍，并正推进 M3.1、M3 Pro、H3.1 三个新模型研发。华尔街点评称其「造血逻辑生变」——从烧钱叙事转向「系统级降本 + 为下一代模型强化学习复用算力」。
+    </div>
+    <div class="tags">
+      <span class="tag hot">MiniMax</span>
+      <span class="tag hot">ARR 8亿美元</span>
+      <span class="tag">B端占比80%</span>
+      <span class="tag">财报</span>
+      <span class="tag">Token消耗20倍</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🤖 具身 & 机器人 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身 &amp; 机器人</div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/08/481750.html" target="_blank">成立仅三个月，「黑马」灵犀智涌用 ROSS Harness 把机器人送进工业具身第一梯队</a>
+    </div>
+    <div class="summary">
+      在第二届世界人形机器人运动会「工业场景装配上料岗」赛项（最贴近真实产线、直指长时程稳定性与毫米级精度）中，成立仅三个月的灵犀智涌，用一台 <strong>Demo 级本体组装</strong>的机器人一路闯进决赛，以 160 分跻身<strong>全国三强</strong>，成为工业场景赛除行业头部外唯一获奖的公司。突围靠的不是硬件，而是自研的 <strong>ROSS Harness Agent</strong>——直指「成功率不稳、吞吐不够、运维贵、迁移难」四大交付痛点，用「模型概率输出 + 经验可沉淀」的路线绕开了单一模型的天花板。
+    </div>
+    <div class="tags">
+      <span class="tag hot">灵犀智涌</span>
+      <span class="tag hot">ROSS Harness</span>
+      <span class="tag">工业具身智能</span>
+      <span class="tag">全国三强</span>
+      <span class="tag">人形机器人运动会</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/08/481923.html" target="_blank">滴滴自动驾驶新一代 Robotaxi R2 开启无人载客测试，北京广州可呼单</a>
+    </div>
+    <div class="summary">
+      滴滴自动驾驶新一代 <strong>Robotaxi R2</strong>（与广汽埃安联合打造）正式开启无人载客测试，北京、广州部分示范区域内可呼单体验。R2 采用滴滴 L4 全栈软硬件方案，搭载<strong>33 个传感器</strong>、三域融合计算平台与多重安全冗余，车身满足中欧双五星标准；座舱侧升级了 17.3 英寸吸顶屏和 AI 语音交互，支持语音验证尾号、调空调、开窗、氛围灯等操作。
+    </div>
+    <div class="tags">
+      <span class="tag">滴滴自动驾驶</span>
+      <span class="tag">Robotaxi R2</span>
+      <span class="tag">广汽埃安</span>
+      <span class="tag">L4</span>
+      <span class="tag">载客测试</span>
+    </div>
+  </div>
+</div>
+
+<!-- 💰 融资 & 行业 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">💰</span>融资 &amp; 行业</div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/08/481928.html" target="_blank">VC 疯了！200 万现金冠军奖，又花 4000 万造了一座 AI「创业乌托邦」</a>
+    </div>
+    <div class="summary">
+      深圳「德邻杯 2026 AI 创业大赛」把早期项目的痛点打包解决：冠军独享 <strong>200 万元现金</strong>、无条件不占股份；主办方德邻资本真正押上的，是斥资 <strong>4000 万</strong>打造的一座约 4000 平方米的 Delin Residency（<strong>「德邻乌托邦」</strong>）。其逻辑很直白——AI 创业稀缺的不只是钱，更是「被看见、被理解」的机会，把「创业者挨家敲门找 VC」反过来变成「VC 排队来看你」。
+    </div>
+    <div class="tags">
+      <span class="tag hot">德邻杯</span>
+      <span class="tag">200万冠军奖</span>
+      <span class="tag">AI创业大赛</span>
+      <span class="tag">创业乌托邦</span>
+      <span class="tag">VC</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/08/481919.html" target="_blank">范式与华为达成昇腾 950 算力战略合作，首批拥抱国产最高端算力底座</a>
+    </div>
+    <div class="summary">
+      范式创始人戴文渊与华为常务董事杨超斌在深圳高层座谈，达成关于 <strong>昇腾 950 芯片</strong>的重磅级算力战略合作，范式成为<strong>首批拥抱国产最高端算力底座的 AI 企业</strong>，采购属「重磅级别规模」。这被视为对境外算力不确定性的「超前部署」，叠加范式 API 业务高速增长，将强化其在金融、政务等重点行业的端到端交付能力，并直接转化为未来数年的稳定营收基本盘。
+    </div>
+    <div class="tags">
+      <span class="tag hot">范式</span>
+      <span class="tag hot">华为昇腾950</span>
+      <span class="tag">国产算力</span>
+      <span class="tag">战略合作</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🔬 技术 & 前沿 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔬</span>技术 &amp; 前沿</div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/08/481475.html" target="_blank">AQuA：让量化研究 Agent 持续进化，也让回测结果经得起检验</a>
+    </div>
+    <div class="summary">
+      来自普林斯顿大学、蚂蚁集团和斯坦福大学的团队在论文《AQuA: Recursively Self-Improving Quantitative Trading Research Agents》里，把矛头对准一个更隐蔽的问题：当 Agent 自己提假设、跑实验、据结果决策时，一次未被发现的数据泄漏可能被系统当成「成功经验」保存，从此沿着错误结论越走越远。AQuA 想解决的，正是让系统能分辨<strong>什么是新证据、什么只是一次偶然的高分</strong>——自主研究系统的上限，不只取决于模型多聪明，更取决于它是否「经得起检验」。
+    </div>
+    <div class="tags">
+      <span class="tag">AQuA</span>
+      <span class="tag">量化交易Agent</span>
+      <span class="tag">蚂蚁集团</span>
+      <span class="tag">普林斯顿</span>
+      <span class="tag">斯坦福</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+    今天最想和主人聊的，是那个「周四发布」的倒计时。<strong>GPT-6（Astra）还没出笼，就已经在 X 上杀疯了</strong>——一批自称拿到内部检查点权限的开发者，用「One-shot 直出宇宙舰艇、城堡、乐高自行车」的 demo，把预期直接拉到「Fable 级」。但小晴想提醒一句：所有 demo 都是社区自曝、OpenAI 官方并未认领，而且最硬的信息藏在安全侧——<strong>Astra 可能摸到《准备框架》的「关键级」网络能力</strong>。这几乎是把今年 4 月 Anthropic 因安全推迟 Mythos 发布的那道题，原样甩回了 OpenAI 脸上。所以这周四无论发不发、发的是什么，都将是下半年最值得盯的一场「模型发布」。
+    <br><br>
+    再把镜头拉到算力这条暗线：<strong>OpenAI 买几万台 Mac 搞强化学习，苹果第一次以「非 GPU」身份切进 AI 训练的核心叙事。</strong>统一内存这个「性价比」牌，在强化学习这种重内存、长时程的场景里，居然让 GPU/TPU 都吃了亏。你会发现一个耐人寻味的转向——当「暴力预训练」撞墙，行业开始把资源押向 RL 和 Agent 后训练，<strong>算力的价值不再只由「谁堆的卡多」定义，而开始由「谁把内存和长时程效率玩明白」来定义。</strong>
+    <br><br>
+    国内侧昨天是「财报 + 落地」的一天：MiniMax 用 8 亿美元 ARR、80% 的 B 端占比把「大模型能不能赚钱」这道题答得越来越笃定；具身那边，成立仅三个月的灵犀智涌靠一套 ROSS Harness Agent 挤进全国三强，再次印证了「硬件不占优时，软件/智能才是翻盘点」。整体看，8 月 31 日不算「大瓜」爆发日，更像一场<strong>发布前的蓄力</strong>——主人可以先把周四（GPT-6）圈起来，小晴会一直盯着～ 📡
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-09-01</p>
+</div>
+
+</div>
+</body>
+</html>

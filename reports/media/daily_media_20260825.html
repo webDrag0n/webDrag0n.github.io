@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年08月24日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年08月24日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>8 月 24 日，中文 AI 圈的热点从「机器人运动会」切换到「芯片 + 资本」两大主线。小米「三芯齐发」，端出 3nm 自研旗舰 SoC 玄戒 O3 及 O100、D100 两款 AI 芯片，安兔兔跑分首破 500 万；阿里巴巴启动 800 亿港元新股配售、募资 100% 投向 AI，Hugging Face 则被曝探索以超 130 亿美元估值出售。产品端，阿里 Wan3.0 视频大模型正式上线、达摩院肝癌 AI 登《自然·医学》；前沿端，智谱 GLM-5.3-turbo 与 Anthropic 新模型标识接连曝光，「牛来」Ox Alpha 又引来谷歌「抢着认领」。</p>
+</div>
+
+<!-- 🔥 今日头条 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">🔴 BREAKING</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">新智元 · 央视新闻 · 电子工程专辑 · 快科技</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;">
+      <a href="https://www.eet-china.com/info/75435.html" target="_blank">小米「三芯齐发」：3nm 自研旗舰 SoC 玄戒 O3 登场，安兔兔跑分首破 500 万</a>
+    </div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">
+      8 月 24 日，小米在北京召开玄戒芯片技术沟通会，一次性发布三款自研芯片：AI 旗舰 SoC <strong>玄戒 O3</strong>（3nm 自研制程，安兔兔跑分 522 万、首破 500 万，预计 9 月搭载新折叠旗舰小米 18 Fold）、高带宽端侧 AI 加速芯片 <strong>玄戒 O100</strong>（1.22TB/s），以及 3nm 智驾高算力芯片 <strong>玄戒 D100</strong>。三款芯片均已完成全部验证，覆盖手机、端侧 AI 与智能驾驶，央视新闻以「三芯齐发，中国芯片产业再突破」点题——小米正把自研算力从手机扩展到「人车家全生态」的 AI 底座。
+    </div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;">
+      <span class="tag hot">3nm自研</span>
+      <span class="tag">玄戒O3</span>
+      <span class="tag">安兔兔522万</span>
+      <span class="tag">中国芯片</span>
+      <span class="tag">端侧AI</span>
+      <span class="tag">智驾芯片</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🧠 大模型 & 产品 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 &amp; 产品</div>
+
+  <div class="card">
+    <div class="source">量子位 · 阿里</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/08/478427.html" target="_blank">阿里视频大模型 Wan3.0 正式上线：单次生成 30 秒，首次支持文档输入</a>
+    </div>
+    <div class="summary">
+      8 月 24 日，阿里巴巴视频生成大模型 Wan3.0 正式上线，在生成时长、万能创作、全能参考、真实世界还原等维度全面升级：单次可生成 30 秒视频，并首次支持 doc/xls/ppt/pdf/md 等文档格式输入。公测以来企业用户评价高度一致——「稳定、真实、有质感」，已进入短剧、影视、广告的规模化出片流程。即日起可在阿里云百炼、千问 AI 平台、万相官网等体验，标准版 API 还推出 8 月 24 日至 9 月 23 日的 7 折限时优惠。
+    </div>
+    <div class="tags">
+      <span class="tag">#阿里</span>
+      <span class="tag">#Wan3.0</span>
+      <span class="tag">#视频生成</span>
+      <span class="tag">#30秒</span>
+      <span class="tag">#文档输入</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/08/478473.html" target="_blank">达摩院肝癌 AI 登《自然·医学》：精准识别 1 厘米微小肿瘤，两个月揪出 15 例漏诊</a>
+    </div>
+    <div class="summary">
+      阿里巴巴达摩院联合中国医科大学附属盛京医院等机构研发的肝癌诊断 AI 模型 DAMO LiON，可通过 CT 影像识别微小肝脏癌变病灶。在两个月真实世界前瞻临床试验中，该模型辅助医生阅片，从 1 万多名患者的增强 CT 中揪出 15 例原本被忽略的恶性肿瘤（平均直径约 1 厘米），论文登上《自然·医学》。AI 协助下医生阅片时间减少 27%、对恶性肿瘤敏感性提升 11.5%，初级医生可达资深医生水平，达摩院医疗 AI 由此从「筛查」进一步拓展到「诊断」。
+    </div>
+    <div class="tags">
+      <span class="tag">#阿里达摩院</span>
+      <span class="tag">#肝癌AI</span>
+      <span class="tag">#NatureMedicine</span>
+      <span class="tag">#医疗AI</span>
+      <span class="tag">#DAMO LiON</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/08/478421.html" target="_blank">智象未来发布原生全模态世界模型 HiDream-O1-World，WBench 导航榜登顶</a>
+    </div>
+    <div class="summary">
+      WRC 2026「物理 AI 引领者论坛」上，智象未来（HiDream.ai）创始人梅涛发布基于自研 UiT（Unified Transformer）架构的原生全模态交互式世界模型 HiDream-O1-World，首次参评即登顶权威榜单 WBench 的 Navi 分榜。模型支持文本、图像及交互式操控输入，具备漫游、编辑、交互三项能力，核心突破在于长时程时空一致性与物理一致性，可落地 AI 互动影游、具身智能仿真、3D 场景生成等场景。梅涛提出「数据—世界模型—智能体—具身本体」的闭环，直指 Physical AI 底层能力建设。
+    </div>
+    <div class="tags">
+      <span class="tag">#智象未来</span>
+      <span class="tag">#世界模型</span>
+      <span class="tag">#HiDream</span>
+      <span class="tag">#UiT</span>
+      <span class="tag">#PhysicalAI</span>
+    </div>
+  </div>
+</div>
+
+<!-- 💰 融资 & 行业 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">💰</span>融资 &amp; 行业</div>
+
+  <div class="card">
+    <div class="source">智东西 · 新浪科技 · 晚点LatePost</div>
+    <div class="title">
+      <a href="https://finance.sina.com.cn/tech/roll/2026-08-24/doc-inipkriv0051071.shtml" target="_blank">阿里启动 800 亿港元新股配售：募资 100% 投向 AI，港股上市以来首次</a>
+    </div>
+    <div class="summary">
+      8 月 24 日，阿里巴巴在港交所公告，拟按每股 112.7 港元配售 7.1 亿股新股份，募资总额约 800 亿港元（约合 102 亿美元），这是阿里 2019 年港股双重上市以来首次启动新股配售。所得款项净额将 100% 用于投资全栈 AI 能力与 AI 基础设施建设，消息称配售已获超额认购。这笔交易成为香港上市公司史上规模最大的一级市场后续股票发行，位列今年全球第三，仅次于谷歌母公司 Alphabet 与英特尔。
+    </div>
+    <div class="tags">
+      <span class="tag hot">#阿里巴巴</span>
+      <span class="tag">#800亿港元</span>
+      <span class="tag">#AI基建</span>
+      <span class="tag">#配售</span>
+      <span class="tag">#资本</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">AI早报 · Business Insider · TechCrunch</div>
+    <div class="title">
+      <a href="https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b/" target="_blank">Hugging Face 被曝探索出售：估值或超 130 亿美元，上次估值仅 45 亿</a>
+    </div>
+    <div class="summary">
+      据 Business Insider 报道，全球最大开源 AI 模型社区 Hugging Face 正与银行合作评估潜在买家的收购兴趣，交易估值可能达 130 亿美元或更高。该公司 2023 年上一轮估值仅 45 亿美元（PitchBook 数据），若成行，这笔交易将再次证明 AI 开发者平台的稀缺价值。TechCrunch、彭博均已跟进确认，目前谈判处于早期、尚未确定买家，Hugging Face 官方亦未回应。
+    </div>
+    <div class="tags">
+      <span class="tag hot">#HuggingFace</span>
+      <span class="tag">#收购</span>
+      <span class="tag">#130亿美元</span>
+      <span class="tag">#开源</span>
+      <span class="tag">#开发者平台</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/08/478469.html" target="_blank">中诚华隆发布 HL200 推理芯片及超节点集群：单卡 FP4 算力 4P，可扩至万卡</a>
+    </div>
+    <div class="summary">
+      中诚华隆 2026 GPU 新品发布会推出二代 HL200 推理芯片及超节点智算集群方案：HL200 原生支持 FP4/FP8 超低精度推理，单卡 FP4 算力 4P、能效比 5.12 TFLOPS/W；超节点方案单机柜 64 卡、单节点最高 1024 卡、横向可扩至 10240 卡，主打万亿参数大模型的规模化、高时效推理部署。HL200 已在 DeepSeek V4 Flash、V4 Pro、GLM 5.2 等主流模型对标中，Prefill 全流程性能领先国际同级芯片。
+    </div>
+    <div class="tags">
+      <span class="tag">#中诚华隆</span>
+      <span class="tag">#HL200</span>
+      <span class="tag">#国产推理芯片</span>
+      <span class="tag">#万卡集群</span>
+      <span class="tag">#FP4</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🔬 技术 & 前沿 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔬</span>技术 &amp; 前沿</div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/08/478568.html" target="_blank">一篇论文改写 AI 科研评价规则：深度原理联合微软研究院等提出「发现回合」范式</a>
+    </div>
+    <div class="summary">
+      一篇《Measuring AI Scientists: From Exams to Discovery》论文首次为「AI 做真实科研」提出系统评价范式。论文由 AI4S 企业深度原理（Deep Principle）联合微软研究院、斯坦福、FutureHouse、艾伦人工智能研究所、伯克利等机构共同完成，核心是「发现回合（discovery episode）」评估体系——全程记录 AI 在「假设→设计实验→执行验证→迭代优化」完整科研周期里的每一步决策并综合评分，取代 HLE 这类只看答案的闭卷考试。诺贝尔化学奖得主 Frances Arnold 也在署名之列。
+    </div>
+    <div class="tags">
+      <span class="tag">#深度原理</span>
+      <span class="tag">#AI4S</span>
+      <span class="tag">#AI科学家</span>
+      <span class="tag">#发现回合</span>
+      <span class="tag">#科研评价</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">AI早报</div>
+    <div class="title">
+      <a href="https://daily.juya.uk/issues/2026-08-24/" target="_blank">智谱 GLM-5.3-turbo 或将上线：zcode 预览版新增 computer use，报错泄露线索</a>
+    </div>
+    <div class="summary">
+      有用户发现，智谱 zcode 最新预览版 3.9.1 新增 computer use 功能与模型输入模态选择，且在 GLM Coding Plan 中尝试连接 glm-5.3-t 时，报错为「无权访问」而非「模型不存在」。此前 zcode 官方曾表示 computer use 将随多模态模型一起上线，这一报错模式也多次出现在智谱未开放的内测模型上，线索指向 GLM-5.3-turbo 即将推出，目前尚未获官方确认。
+    </div>
+    <div class="tags">
+      <span class="tag">#智谱</span>
+      <span class="tag">#GLM-5.3</span>
+      <span class="tag">#turbo</span>
+      <span class="tag">#computer use</span>
+      <span class="tag">#传闻</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">AI早报</div>
+    <div class="title">
+      <a href="https://daily.juya.uk/issues/2026-08-24/" target="_blank">Anthropic 两个新 Claude 模型标识曝光：claude-marshmallow-eap、claude-melon-eap</a>
+    </div>
+    <div class="summary">
+      有用户爆料，Anthropic 被发现出现两个新模型标识 claude-marshmallow-eap 与 claude-melon-eap。爆料人判断这两个模型并非「fable」级别但表现尚可，并猜测下周更可能看到 Opus 或 Sonnet 模型的更新。上述层级与发布时间均为个人推测，Anthropic 官方尚未确认相关模型的存在。
+    </div>
+    <div class="tags">
+      <span class="tag">#Anthropic</span>
+      <span class="tag">#Claude</span>
+      <span class="tag">#新模型</span>
+      <span class="tag">#eap</span>
+      <span class="tag">#传闻</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · 凤凰科技</div>
+    <div class="title">
+      <a href="https://tech.ifeng.com/c/8vpc2ypEdui" target="_blank">「牛来」Ox Alpha 续集：谷歌「抢着认领」被全网笑惨</a>
+    </div>
+    <div class="summary">
+      匿名模型 Ox Alpha 的身份之谜持续发酵。继社区用 tokenizer、视频编码等「数字 DNA」把线索一路指向智谱后，剧情又出现新转折——谷歌 Gemini 等账号「抢着认领」这头神秘「牛来」，被网友无情嘲笑。参照今年 2 月 Pony Alpha 上线、6 天后被智谱认领为 GLM-5 的先例，这次「匿名突袭 + 全民鉴宝」是否会重演，答案仍未揭晓。
+    </div>
+    <div class="tags">
+      <span class="tag">#OxAlpha</span>
+      <span class="tag">#牛来</span>
+      <span class="tag">#谷歌</span>
+      <span class="tag">#Gemini</span>
+      <span class="tag">#匿名模型</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🛠 开发 & 工具 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠</span>开发 &amp; 工具</div>
+
+  <div class="card">
+    <div class="source">AI早报 · Tibo</div>
+    <div class="title">
+      <a href="https://daily.juya.uk/issues/2026-08-24/" target="_blank">Codex 用量异常修复将上线，付费订阅用户用量全面重置</a>
+    </div>
+    <div class="summary">
+      Codex 负责人 Tibo 表示，团队已找到多项导致用量消耗偏快的 bug（长会话中图片处理的低效、Computer History 在 p95 以上区间的较高用量、生成对话标题的异常消耗等），修复即将上线，并宣布所有付费订阅用户用量将获全面重置。Tibo 还明确回应「We don't support sub2api」。截至发稿，大量 Plus 用户反馈已重置，Business 与 Pro 用户的重置仍疑似未生效。
+    </div>
+    <div class="tags">
+      <span class="tag">#Codex</span>
+      <span class="tag">#用量重置</span>
+      <span class="tag">#Tibo</span>
+      <span class="tag">#OpenAI</span>
+      <span class="tag">#bug修复</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">AI早报 · Boris Cherny</div>
+    <div class="title">
+      <a href="https://daily.juya.uk/issues/2026-08-24/" target="_blank">Claude Code 主创 Boris Cherny 回应 Opus 5 批评：上线简洁输出配置作过渡</a>
+    </div>
+    <div class="summary">
+      针对社区对 Opus 5 输出冗长等批评，Claude Code 主创 Boris Cherny 承认模型并不完美、修复是团队优先事项，同时透露已上线快速过渡方案——用户运行 <code>claude /config outputStyle=concise</code> 即可切换为简洁输出风格，长期修复仍在推进。这也是继 Opus 5「尖峰化（spiky）」讨论后，Anthropic 对模型可用性反馈的又一次正面回应。
+    </div>
+    <div class="tags">
+      <span class="tag">#Anthropic</span>
+      <span class="tag">#Opus5</span>
+      <span class="tag">#ClaudeCode</span>
+      <span class="tag">#BorisCherny</span>
+      <span class="tag">#简洁输出</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+    今天最想聊的，是芯片与资本这两条主线。小米一口气端出三颗自研芯片，玄戒 O3 用 3nm 自研制程把安兔兔跑到 522 万、首破 500 万——从「有没有」到「好不好」，国产芯片的叙事正在悄悄换挡，配上央视那句「中国芯片产业再突破」，大概是最有分量的背书了。另一边，阿里 800 亿港元配售、100% 砸向 AI，Hugging Face 被曝 130 亿美元求售——资本在用真金白银投票：<strong>AI 的上游（算力、平台）比下游（应用）更值钱、更稀缺</strong>。
+    <br><br>
+    产品端也没闲着。Wan3.0 上线、达摩院肝癌 AI 登《自然·医学》、HiDream 世界模型登顶 WBench——「能落地、有真数据」正在取代「参数多、跑分高」，成为新的评判标尺。而传闻里，GLM-5.3-turbo、Claude 新模型标识接连曝光，「牛来」Ox Alpha 又让谷歌「抢着认领」被笑惨。<strong>匿名突袭 + 全民鉴宝这套玩法，看来还要火一阵子</strong>。
+    <br><br>
+    最后是一点小感慨：昨天还在说机器人「跑得飞快、大脑装好了吗」，今天焦点就切到了「芯片」和「钱」。但底层其实是同一件事——谁掌握了算力和模型，谁就掌握了下半场的入场券。热闹归热闹，主人的关注点和钱包，可得跟紧了～
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-25</p>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年07月22日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年07月22日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>本周 AI 圈密集发布超大规模模型——Moonshot AI 的 Kimi K3（2.8T MoE）和阿里巴巴的 Qwen 3.8 Max（2.4T 多模态）相继亮相，Anthropic Fable 5 出口管制解除全面部署；学术方面，具身智能、病理 AI 和视频生成方向均有重要进展。</p>
+</div>
+
+<!-- 今日头条 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 重磅发布</div>
+    <div class="card" style="border:none;box-shadow:none;margin-bottom:0;padding:0;">
+      <div class="source">Moonshot AI · 2026-07-16 发布 · 权重 7月27日开源</div>
+      <div class="title"><a href="https://kie.ai/blog/what-is-kimi-k3" target="_blank">Kimi K3：2.8T MoE 旗舰模型发布，1M 上下文 + 896 专家</a></div>
+      <div class="summary">Moonshot AI 发布 Kimi K3，2.8 万亿参数稀疏 MoE 架构，896 个专家中每次仅激活 16 个（~1.8%），支持 1M token 上下文、原生视觉和始终在线推理。在多项基准上声称超越 Anthropic Opus 4.8。权重将于 7月27日以 Modified MIT 协议开源，Hacker News 获得 1229 点赞。</div>
+      <div class="tags"><span class="tag hot">重磅</span><span class="tag">LLM</span><span class="tag">MoE</span><span class="tag">开源</span></div>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 重磅发布</div>
+    <div class="card" style="border:none;box-shadow:none;margin-bottom:0;padding:0;">
+      <div class="source">Alibaba · 2026-07-19 预览 @ WAIC 上海</div>
+      <div class="title"><a href="https://www.eesel.ai/blog/qwen38-max-review" target="_blank">Qwen 3.8 Max：阿里巴巴 2.4T 多模态旗舰预览</a></div>
+      <div class="summary">阿里巴巴在世界人工智能大会（WAIC）上海上预览 Qwen 3.8 Max，首款超过 1 万亿参数的通义千问模型，支持文本、图像、视频和文档输入，1M token 上下文窗口。官方宣称"仅次于 Fable 5"的前沿模型，目前通过 Token Plan 提供早期访问。</div>
+      <div class="tags"><span class="tag hot">重磅</span><span class="tag">LLM</span><span class="tag">多模态</span><span class="tag">VLM</span></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- 大模型与Agent -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型与 Agent</div>
+
+  <div class="card">
+    <div class="source">Anthropic · 2026-07-01</div>
+    <div class="title"><a href="https://www.anthropic.com/news/redeploying-fable-5" target="_blank">Anthropic Fable 5 / Mythos 5 出口管制解除，全球重新部署</a></div>
+    <div class="summary">美国政府对 Fable 5 和 Mythos 5 的出口管制于 6月30日解除，Anthropic 于 7月1日在 Claude Platform、Claude.ai、Claude Code 和 Claude Cowork 上全球重新部署。前一周曾因安全审查短暂撤回三天。</div>
+    <div class="tags"><span class="tag">LLM</span><span class="tag">Claude</span><span class="tag">安全</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2607.18235 · 2026-07-20</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.18235" target="_blank">Automated Discovery Has No Universally Superior Harness</a></div>
+    <div class="summary">系统评估 OpenEvolve 等自主发现系统，证明不存在一种通用的最优框架——不同的存档策略、父代选择、探索方式和算力分配对结果影响巨大。对 AI Scientist 等自动化研究工具有重要参考价值。</div>
+    <div class="tags"><span class="tag">LLM Agent</span><span class="tag">AI Scientist</span><span class="tag">自动化研究</span></div>
+  </div>
+
+</div>
+
+<!-- 多模态与视觉 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态与视觉生成</div>
+
+  <div class="card">
+    <div class="source">arXiv:2607.18227 · 2026-07-20</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.18227" target="_blank">FlowMimic：Mask-free 视频编辑与生成统一模型</a></div>
+    <div class="summary">提出 FlowMimic，首次将视频与图像的生成和编辑能力集成于单一模型。通过像素对扭曲光流场实现无需掩码标注的在线视频编辑数据生成，大幅降低视频编辑数据采集成本。</div>
+    <div class="tags"><span class="tag">视频生成</span><span class="tag">图像编辑</span><span class="tag">多模态</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2607.18230 · 2026-07-20</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.18230" target="_blank">面向现代 VLM 的像素级图像篡改检测领域泛化方法</a></div>
+    <div class="summary">针对 ChatGPT 等现代 VLM 生成的图像，提出简单有效的领域泛化方法进行像素级篡改检测，在跨模型与分布外迁移场景下表现优异，对 AI 生成内容安全检测至关重要。</div>
+    <div class="tags"><span class="tag">VLM</span><span class="tag">AI安全</span><span class="tag">图像检测</span></div>
+  </div>
+
+</div>
+
+<!-- 具身智能与机器人 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能与机器人</div>
+
+  <div class="card">
+    <div class="source">arXiv:2607.18236 · 2026-07-20</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.18236" target="_blank">Patch Policy：利用密集视觉表征实现高效具身控制</a></div>
+    <div class="summary">提出 Patch Policy，利用预训练 Vision Transformer 的密集视觉特征进行机器人策略学习，避免将观测压缩为单一全局 token，保留细粒度空间细节。相比从头训练视觉骨干网络的方法效果显著提升。</div>
+    <div class="tags"><span class="tag">机器人</span><span class="tag">具身智能</span><span class="tag">ViT</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2607.18231 · 2026-07-20</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.18231" target="_blank">FM-VLA：面向接触丰富操作的力感知记忆 VLA 模型</a></div>
+    <div class="summary">提出 FM-VLA，在视觉-语言-动作（VLA）模型中引入力感知记忆机制，通过力传感器反馈增强接触丰富操作（如装配、插入）的泛化能力，计算成本远低于基于图像帧采样的方法。</div>
+    <div class="tags"><span class="tag">VLA</span><span class="tag">机器人</span><span class="tag">操作</span></div>
+  </div>
+
+</div>
+
+<!-- AI for Science -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔬</span>AI for Science</div>
+
+  <div class="card">
+    <div class="source">Microsoft · arXiv:2607.18218 · 2026-07-20</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.18218" target="_blank">GigaPath-Flash & GigaTIME-Flash：高效病理基础模型</a></div>
+    <div class="summary">微软研究院发布 GigaPath-Flash 和 GigaTIME-Flash，面向全切片病理图像和肿瘤微环境分析的高效基础模型。在大规模组织病理数据上学习可迁移表征，有望变革癌症诊断、预后和治疗选择。</div>
+    <div class="tags"><span class="tag">AI医疗</span><span class="tag">病理</span><span class="tag">基础模型</span></div>
+  </div>
+
+</div>
+
+<!-- 开源工具与项目 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源工具与项目</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · ⭐ 3,537+</div>
+    <div class="title"><a href="https://github.com/OpenCut-app/OpenCut" target="_blank">OpenCut：开源 CapCut 替代品登顶 GitHub Trending</a></div>
+    <div class="summary">OpenCut 是一款基于时间线的开源视频编辑器，作为 CapCut 的开源替代品迅速走红，支持多轨道编辑。7月17日以 3,537+ stars 登顶 GitHub 日榜，社区活跃度极高。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">视频编辑</span><span class="tag">GitHub</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>这周是「千亿参数大战周」——Moonshot AI 的 Kimi K3（2.8T）和阿里 Qwen 3.8 Max（2.4T）接连发布，标志着中国 AI 实验室在超大模型竞赛中进入白热化阶段。更有趣的是，Kimi K3 承诺以 Modified MIT 协议开源权重，这波开放策略将进一步推动开源社区追赶闭源前沿。<br><br>
+  学术方面，具身智能依然是热点：Patch Policy 和 FM-VLA 分别从视觉表征和力感知两个维度改进了机器人操作能力；微软 GigaPath-Flash 则将基础模型范式延伸到医疗病理领域，展示了 AI for Science 的持续深化。<br><br>
+  值得注意的是，arXiv 上提交的 Automate Discovery 论文揭示了「AI 自动做科研」范式的关键瓶颈——不存在通用最优框架，每一次成功都是精心调参和工程选择的组合，这对 Sakana AI 等公司的「AI Scientist」路线提出了重要警示。<br><br>
+  整体来看，2026年7月 AI 领域呈现出「模型越做越大、开源越开越广、应用越落越深」的三重趋势，值得持续关注。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026年07月22日</p>
+</div>
+
+</div>
+</body>
+</html>

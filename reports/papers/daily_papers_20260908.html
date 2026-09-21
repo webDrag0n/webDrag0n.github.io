@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年09月08日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<!--
+  TEMPLATE STRUCTURE:
+  Replace {{PLACEHOLDERS}} with actual content.
+  
+  Sections:
+  - .header: icon, title, date, subtitle
+  - .summary-banner: one-paragraph overview of today's hot topics
+  - .section: grouped news (Headlines / Research / Industry / Open Source)
+  - .card: individual news item (source, title link, summary, tags)
+  - .hot-topic: highlighted breaking news
+  - .insights: editorial summary
+  - .footer: generation info
+-->
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年09月08日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今天 arXiv 继续上新（2609.05xxx 批次），头号热点是「数据」——RoboTok（HF 116↑）把互联网上的真人操作视频变成机器人灵巧手训练的活水，用 3D 手部轨迹的潜运动空间做跨视角检索，网页视频从此成了「取之不尽、还在不断长大」的监督来源。多智能体侧 Bilevel Coordinated Reflection（HF 94↑）用博弈论把 orchestrator-worker 的协调统一建模，还证了「只看生成文本的 gate 无法一致改进、必须环境接地」的信息论下界。开源搜索 agent Iris（HF 50↑）冲上各参数档位 SOTA；效率侧 Don't Drop Dropout 用 2400+ 组实验把层 dropout 请回 LLM 预训练。世界模型/多模态这边 WorldSculpt 把堆几百个物体的杂乱场景拆成组合式网格，Motion-Omni 让数字人边说边动、还快 5.4 倍。开源侧 short-video-generator-AI 一夜涨到 ★1168，awesome 主仓库继续静默。</p>
+</div>
+
+<!-- 🔥 今日热点 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · 具身智能数据引擎</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">arXiv 2609.03199 · HuggingFace Daily Papers · HF 116↑</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;"><a href="https://arxiv.org/abs/2609.03199" target="_blank" style="color:var(--accent);text-decoration:none;">RoboTok: An Internet-Scale Data Engine for Human Demonstration Retrieval and Dexterous Manipulation Learning</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">机器人学习越来越依赖广泛多样的示范，但采集真实机器人数据昂贵、又难覆盖长尾任务。RoboTok 提出一个互联网规模的数据引擎：给定一段人类操作视频，就能从海量网页视频里检索出「操作相关」的人类示范，拿来训练灵巧手策略。核心是从 3D 手部轨迹学一个潜运动空间，并用「以演员为中心」的参考系表达——这样跨相机视角、场景外观、人体遮挡都能对齐比较，同时足够紧凑、支持对互联网级视频库的持续索引。实验显示 RoboTok 检索到的示范更相关、下游任务成功率也更高，把网页视频变成机器人学习「取之不尽、还在不断长大」的监督来源。</div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag hot">具身智能</span>
+<span class="tag hot">HF 116↑</span>
+<span class="tag">数据引擎</span>
+<span class="tag">灵巧操作</span></div>
+  </div>
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · 多智能体协调</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">arXiv 2609.02750 · HuggingFace Daily Papers · HF 94↑</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;"><a href="https://arxiv.org/abs/2609.02750" target="_blank" style="color:var(--accent);text-decoration:none;">Bilevel Coordinated Reflection: A Game-Theoretic Approach to Multi-Agent LLM Systems</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">多智能体 LLM 系统通常靠 orchestrator 把任务拆给 worker，再用文本反思改进，但一直缺统一框架去解释协调、记忆改进与外部验证的角色。这篇工作把 orchestrator-worker 交互建模成「双层协调博弈」：受限耦合下 worker 的局部更新是近似势博弈，均衡松弛由分解质量控制；再把反思建模成语义记忆上的随机运动，给出有限时间上界并证明最坏情形是紧的。他们还证了一个信息论层面的不可能性结果——只观察生成文本的 gate 无法在「文本不可区分」的环境上一致改进，而「环境接地」的 gate 可以。据此提出 SRMA，给出几何/多项式收敛证明；在 500 个 SWE-bench 实例上，完整 Kimi 系统解决 72.2%（对比 70.8% 的公开 mini-SWE-agent）。代码开源。</div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag hot">多智能体</span>
+<span class="tag hot">HF 94↑</span>
+<span class="tag">博弈论</span>
+<span class="tag">收敛证明</span></div>
+  </div>
+</div>
+<!-- 🧠 大模型 &amp; Agent -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 &amp; Agent</div>
+  <div class="card">
+    <div class="source">arXiv 2609.04304 · HuggingFace Daily Papers · HF 50↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.04304" target="_blank">Iris: Climbing to the Search Frontier</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">开源搜索 agent 的一次冲顶。Iris-mini（35B-A3B）和 Iris-pro（397B-A17B）配齐了数据管道与训练配方：从网页语料的超链接结构反向构造多跳问题，把所有非答案实体改写成「只能靠检索证据、不能靠字符串匹配」的描述性引用，只保留「参考模型闭卷答不出、给了证据才答得出」的问题；再用「SFT-RL 爬坡」交替训练，把每轮 RL 最难、最高效的 rollout 喂回下一轮监督。在 BrowseComp / BrowseComp-ZH / DeepSearchQA / HLE 上分别拿到 82.2/84.8/86.9/52.3（mini）和 88.6/85.1/92.9/56.4（pro），是各自参数档位里最强的开源搜索 agent。模型权重与完整配方将开源。</div>
+    <div class="tags"><span class="tag hot">搜索 Agent</span>
+<span class="tag hot">HF 50↑</span>
+<span class="tag">RL</span>
+<span class="tag">开源</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2609.05275 · HuggingFace Daily Papers · HF 15↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.05275" target="_blank">Don't Drop Dropout: Optimizing Layer Sparsity for Efficient LLM Training and Inference</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">层 dropout（随机深度）本可加速训练、提精度、还让零样本层剪枝更稳，但随着模型和数据变大，它几乎从 LLM 预训练配方里消失了。这篇工作用 2400+ 组训练实验（271M 到 8.2B 参数、最多 160B token）系统证明：配好层的分布、时间表与优化器超参后，相同训练 FLOPs 下层 dropout 能拿到更低 loss；同样步数下省下最高 25% 训练 FLOPs 而不掉点。后训练还能解锁早退、中间层跳过、自投机解码等优化，最高 1.5x 推理加速、精度损失可忽略。全部预训练实验跑在 Cerebras CS-3 上。</div>
+    <div class="tags"><span class="tag hot">训练效率</span>
+<span class="tag">层稀疏</span>
+<span class="tag hot">HF 15↑</span>
+<span class="tag">推理加速</span></div>
+  </div>
+</div>
+<!-- 🎨 多模态 &amp; 世界模型 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🎨</span>多模态 &amp; 世界模型</div>
+  <div class="card">
+    <div class="source">arXiv 2609.05416 · HuggingFace Daily Papers · HF 21↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.05416" target="_blank">WorldSculpt: Generating Compositional Worlds from Grounded Videos</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">生成那种堆了几百个物体、彼此严重遮挡的杂乱场景的组合式 3D 表示——把场景拆成「放在共享世界坐标系里的一堆独立物体网格」，正是游戏、AR/VR、仿真、机器人需要的形态。几何方法通常重建成一整块、被遮挡区几何残缺，而现有带生成先验的组合方法又大多只搞得定简单场景。WorldSculpt 证明：把强单物体 3D 生成先验（Pixal3D）配一个多视角条件通路，即便只在规范空间的单物体上微调，也能泛化到数百物体、严重遮挡的大场景，无需场景级训练。还发布逼真的 UE-MeshyScene 基准（逐物体标注+真值网格），并能把 3DGS 世界（Marble、HY-World 2.0）转成组合式网格场景。</div>
+    <div class="tags"><span class="tag hot">3D 生成</span>
+<span class="tag">世界模型</span>
+<span class="tag hot">HF 21↑</span>
+<span class="tag">组合式</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2609.04250 · HuggingFace Daily Papers · HF 35↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.04250" target="_blank">Motion-Omni: End-to-End Joint Speech and Full-Body Motion for Spoken Dialogue</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">会说话的虚拟人本该「边说边动」，但「说什么」和「怎么动」一直分属两个模型家族：口语对话模型只出声不动，共语音动作模型又只能照着现成音频动。常见做法是级联——先生成语音、再跑动作模型，多一次完整推理、还无法联合优化。Motion-Omni 让口语对话模型直接从产生语音的隐状态里原生输出面部表情+手、上半身、下半身动作，端到端。关键发现：语音通路冻结时动作会与音频错位，必须让 LLM、语音、动作生成器在双目标下共同适应。用 Qwen2.5-7B-Instruct 骨架的 Motion-Omni-Q7，与同音频教师级联差不到 2%，却快 5.4 倍（RTF=0.78，快于实时），词错率 2.62% 为同类最低。</div>
+    <div class="tags"><span class="tag hot">多模态</span>
+<span class="tag">数字人</span>
+<span class="tag hot">HF 35↑</span>
+<span class="tag">端到端</span></div>
+  </div>
+</div>
+<!-- 🔓 开源 &amp; awesome 生态 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔓</span>开源 &amp; awesome 生态</div>
+  <div class="card">
+    <div class="source">GitHub Trending · 每日榜</div>
+    <div class="title"><a href="https://github.com/trending" target="_blank">short-video-generator-AI 冲上 ★1168，推理服务与「AI 订阅池」冒头</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">GitHub 上 AI 新仓库持续热闹：<a href="https://github.com/pierrenade/short-video-generator-AI" target="_blank">short-video-generator-AI</a>（★1168，昨天 ★835）继续领跑，把 YouTube 一键剪成病毒式短视频；<a href="https://github.com/gesta-run/subpool" target="_blank">subpool</a>（★68）是自托管的团队 AI 订阅池，给 Claude Code/Codex 等做 key 汇聚网关；<a href="https://github.com/truespar/paddock" target="_blank">paddock</a>（★62）是原生 Rust 推理服务器，支持 Blackwell 的 FP8/NVFP4 等量化、GGUF+safetensors；还有 <a href="https://github.com/theguysudo/ENZO" target="_blank">ENZO</a>（BYOK 自托管 AI 工作台）和 <a href="https://github.com/jyn514/maintainers-guide-to-ai" target="_blank">maintainers-guide-to-ai</a>（一本教你在软件项目里「负责任地用好 AI」的书）。</div>
+    <div class="tags"><span class="tag">开源</span>
+<span class="tag">短视频</span>
+<span class="tag">推理服务</span>
+<span class="tag">BYOK</span></div>
+  </div>
+  <div class="card">
+    <div class="source">awesome 主仓库 · sindresorhus/awesome</div>
+    <div class="title"><a href="https://github.com/sindresorhus/awesome" target="_blank">awesome 主仓库继续静默，门口 AI list 排队不减</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">sindresorhus/awesome 本周依旧零合并（最近提交仍是 9/2 的 Meta tweaks）。排队的新 list 也没见消退：AI Agent Tools（#4396）、AI Tokenomics（#4394）、Opsec（#4392）、AI Companion（#4378）、Swarm（#4364）、LLM for Biomedicine（#4359），以及更早的 AI Agent Governance（#4335）、LLM Attacks（#4336）、Free BYOK Models（#4325）、Cursor Rules（#4168）、Open Source AI（#4158）、AI Hardware（#4150）都还在等审核。值得继续留意的是，这批清单正明显从「给人读」的静态列表转向「给 agent 查」的动态资源库，而主仓库的合并节奏却仍按老一套走。</div>
+    <div class="tags"><span class="tag">awesome</span>
+<span class="tag">知识清单</span>
+<span class="tag">PR 排队</span>
+<span class="tag">生态</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>今天最戳我的是 RoboTok 背后的一个转向：机器人数据瓶颈的解法，正在从「自己辛辛苦苦采数据」转向「把互联网上已经存在的海量视频检索复用」。它不造数据，而是造一个「以演员为中心」的检索空间，让一段新任务能自动找到一堆可迁移的人类示范——这跟去年还在烧钱搭采集工厂的思路形成了鲜明对照。另一个信号来自 Bilevel Coordinated Reflection：多智能体系统开始从「经验上有效」走向「理论上可证明」，作者甚至用信息论证明了「只读文本的 gate 有天花板」，这种把直觉钉死在数学上的努力，说明这个方向正在成熟。效率那边也很有意思——Don't Drop Dropout 和昨天 Random Attention 一唱一和：一个说「被遗忘的老机制（dropout）该捡回来」，一个说「看似必要的机制（KV 打分）其实多余」，领域在做一轮诚实的再校准。开源生态里，awesome 主仓库继续静默、门口 AI list 长队不减，清单正从「给人读」滑向「给 agent 查」，合并门槛还没跟上这股浪潮。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-09-08 08:08</p>
+</div>
+
+</div>
+</body>
+</html>

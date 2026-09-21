@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年08月01日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年08月01日</div>
+  <div class="subtitle">中文AI媒体精选 · 机器之心/量子位/新智元 等</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>过去48小时，AI圈迎来密集人事震荡与产品发布：翁荔因病离开Thinking Machines仅两天便重返OpenAI，同一天Thinking Machines反手开源Inkling-Small模型；MiniMax发布首个开源全模态视频模型H3，剑指Sora；月之暗面官宣35亿美元F轮融资，估值飙至350亿美元；OpenAI对GPT-5.6 Luna降价80%，Token价格战全面升级。</p>
+</div>
+
+<!-- 今日头条 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">🔴 BREAKING</div>
+    <div class="card" style="background:transparent;border:none;box-shadow:none;padding:0;">
+      <div class="source">量子位 / 新智元 / 36氪 / InfoQ</div>
+      <div class="title"><a href="https://www.qbitai.com/2026/07/462947.html" target="_blank">翁荔离职 Thinking Machines 仅48小时即重返 OpenAI，TML 同日开源 Inkling-Small</a></div>
+      <div class="summary">本周最戏剧性的人事变动：前OpenAI安全VP翁荔（Lilian Weng）7月27日因病宣布离开仅成立一年多的Thinking Machines Lab，仅隔两天便光速重返老东家OpenAI，将负责「用模型开发模型」的Harness工程。与此同时，Thinking Machines Lab于7月31日正式开源第二款模型Inkling-Small（276B总参/12B激活），在ARC-AGI-2上刷新开源SOTA，Mira Murati创始团队6人现已仅剩2人。</div>
+      <div class="tags">
+        <span class="tag hot">🔥 人事地震</span>
+        <span class="tag">#大模型</span>
+        <span class="tag">#OpenAI</span>
+        <span class="tag">#开源</span>
+        <span class="tag">#AI安全</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 新模型/产品 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🚀</span>新模型 &amp; 产品发布</div>
+
+  <div class="card">
+    <div class="source">量子位 / 上海证券报 / 华尔街见闻</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/07/464277.html" target="_blank">MiniMax 发布 H3 全模态视频生成模型并宣布开源，视频编辑能力全球第一</a></div>
+    <div class="summary">MiniMax于7月31日正式发布新一代全模态生成模型H3，支持文本/图片/音频/视频多种输入，原生2K分辨率、最长15秒音画同步生成。在Artificial Analysis视频模型榜单中，H3视频编辑能力排名全球第一，定价仅为同行的三分之一。这是MiniMax首款开源权重的视频模型，标志着国产视频生成进入"商业级生产"阶段。</div>
+    <div class="tags">
+      <span class="tag">#视频生成</span>
+      <span class="tag">#多模态</span>
+      <span class="tag">#开源</span>
+      <span class="tag">#MiniMax</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 / Google DeepMind 官方</div>
+    <div class="title"><a href="https://deepmind.google/models/gemini-robotics/" target="_blank">谷歌 DeepMind 发布 Gemini Robotics 2，首次实现人形机器人全身智能控制</a></div>
+    <div class="summary">7月30日，Google DeepMind正式推出Gemini Robotics 2系列模型，带来全新的全身控制、进阶灵巧操作与多机器人协作能力。这是业界首个将视觉-语言-动作（VLA）统一到完整人形机器人全身控制的模型，标志着具身智能从"单臂操作"迈向"全身协调"。</div>
+    <div class="tags">
+      <span class="tag">#具身智能</span>
+      <span class="tag">#机器人</span>
+      <span class="tag">#Google</span>
+      <span class="tag">#VLA</span>
+    </div>
+  </div>
+</div>
+
+<!-- 融资 & 行业动态 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">💰</span>融资 &amp; 行业动态</div>
+
+  <div class="card">
+    <div class="source">36氪 / 上海证券报 / IPO早知道 / 财新</div>
+    <div class="title"><a href="https://36kr.com/p/3916645536591494" target="_blank">月之暗面完成35亿美元F轮融资，估值飙至350亿美元，G轮已提前启动</a></div>
+    <div class="summary">月之暗面在最新一轮融资中超预期募集35亿美元，投后估值达350亿美元（约237亿人民币），较半年前涨超10倍。此轮融资得益于其旗舰模型Kimi K3（2.8万亿参数全球首个3万亿级开源模型）的爆火。原定8月开启的G轮融资已提前启动，投前估值进一步上升。</div>
+    <div class="tags">
+      <span class="tag hot">🔥 巨额融资</span>
+      <span class="tag">#融资</span>
+      <span class="tag">#Kimi</span>
+      <span class="tag">#大模型</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 / 36氪 / 新京报</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/07/464169.html" target="_blank">米哈游蔡浩宇 AI 创业生变：Anuttacon 多项目暂停，九成资源押向 Agent</a></div>
+    <div class="summary">蔡浩宇的AI公司Anuttacon近期经历重大调整：旗下AI陪伴产品AnuNeko于7月29日永久关闭，AI互动游戏《Whispers from the Star》表现平淡。蔡浩宇更新领英显示Anuttacon经历止于7月，公司调整战略将九成资源转向Agent方向，与米哈游内部多条AI战线形成对比。</div>
+    <div class="tags">
+      <span class="tag">#AI游戏</span>
+      <span class="tag">#Agent</span>
+      <span class="tag">#创业</span>
+      <span class="tag">#Anuttacon</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元</div>
+    <div class="title"><a href="https://aiera.com.cn/" target="_blank">昆腾动力完成超亿元种子轮融资，从物流出发定义部署驱动的 Physical AI 平台</a></div>
+    <div class="summary">具身智能初创公司昆腾动力宣布完成超亿元人民币种子轮融资。公司以物流场景为切入点，致力于构建「部署驱动」的Physical AI平台，为具身智能产业落地提供新的路径范式。</div>
+    <div class="tags">
+      <span class="tag">#融资</span>
+      <span class="tag">#具身智能</span>
+      <span class="tag">#物流</span>
+    </div>
+  </div>
+</div>
+
+<!-- 模型价格战 & 产品策略 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📉</span>模型价格战 &amp; 产品策略</div>
+
+  <div class="card">
+    <div class="source">量子位 / IT之家 / VentureBeat</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/07/463640.html" target="_blank">GPT-5.6 大降价：Luna 降 80%，Terra 降 20%，Token 价格战全面升级</a></div>
+    <div class="summary">OpenAI于7月30日宣布大幅下调GPT-5.6系列价格：入门款Luna每百万Token输入价从1美元降至0.2美元（降80%）、输出价从6美元降至1.2美元；Terra降价20%。降价的背后是GPT-5.6 Sol模型实现了"自己优化自己"的递归自我改进，推理效率大幅提升。此举将大模型价格战推向新高度。</div>
+    <div class="tags">
+      <span class="tag">#价格战</span>
+      <span class="tag">#OpenAI</span>
+      <span class="tag">#GPT-5.6</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 / 36氪</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/07/463297.html" target="_blank">GPT-5.6 自己优化自己实锤：Sol 自主改进生产系统，降本 20%</a></div>
+    <div class="summary">OpenAI披露，GPT-5.6旗舰模型Sol通过自主优化生产管线代码，帮助OpenAI降低了约20%的推理成本，这是促使Luna/Terra大幅降价的直接原因。此举被视为AI「左脚踩右脚」式自我迭代的里程碑，也引发了对AI自主改进生产系统的安全讨论。</div>
+    <div class="tags">
+      <span class="tag">#自我改进</span>
+      <span class="tag">#AI Agent</span>
+      <span class="tag">#推理优化</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新浪科技 / Axios</div>
+    <div class="title"><a href="https://finance.sina.com.cn/tech/roll/2026-07-30/doc-inikqqhm1950999.shtml" target="_blank">OpenAI 启动学术研究者免费计划：向 10 万科学家开放 GPT-5.6</a></div>
+    <div class="summary">OpenAI于7月29日宣布ChatGPT for Academic Researchers计划，向全球10万名科研人员免费开放GPT-5.6系列等前沿模型使用权（至2027年），首批1万人今年夏季启动。此举意在抢占学术科研工作流入口，与Anthropic、Google在学术界展开生态争夺。</div>
+    <div class="tags">
+      <span class="tag">#OpenAI</span>
+      <span class="tag">#学术</span>
+      <span class="tag">#生态</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">IT之家 / 第一财经</div>
+    <div class="title"><a href="https://www.ithome.com/0/983/934.htm" target="_blank">智谱 GLM Coding Plan 改版回归：透明积分制，每月 118 元起</a></div>
+    <div class="summary">智谱于7月31日官宣GLM Coding Plan订阅回归，新版改为透明积分制（Lite版118元/月），支持MCP能力单独计费。智谱同步披露已落地1GW级国产AI芯片算力数据中心，持续加码基础设施建设，为AI Coding赛道竞争备足弹药。</div>
+    <div class="tags">
+      <span class="tag">#智谱</span>
+      <span class="tag">#AI Coding</span>
+      <span class="tag">#算力</span>
+    </div>
+  </div>
+</div>
+
+<!-- 芯片 & 算力 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔌</span>芯片 &amp; 算力</div>
+
+  <div class="card">
+    <div class="source">36氪 / 财联社 / 新浪财经</div>
+    <div class="title"><a href="https://36kr.com/p/3918854696742280" target="_blank">高通宣布 9 月 1 日起芯片全线涨价，AI 存储涨价反噬手机链</a></div>
+    <div class="summary">高通公布Q3财报净利润同比大跌25%后，CEO安蒙宣布自9月1日起全系列芯片产品涨价两位数。受AI算力需求拉动，上游存储芯片价格持续攀升，成本压力已传导至下游手机芯片环节，安卓阵营将首当其冲。新旗舰骁龙8 Elite Gen 6 Pro预计涨价最为显著。</div>
+    <div class="tags">
+      <span class="tag">#芯片</span>
+      <span class="tag">#高通</span>
+      <span class="tag">#涨价</span>
+      <span class="tag">#供应链</span>
+    </div>
+  </div>
+</div>
+
+<!-- 其他重要动态 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📋</span>其他重要动态</div>
+
+  <div class="card">
+    <div class="source">IT之家 / 凤凰科技</div>
+    <div class="title"><a href="https://tech.ifeng.com/c/8v9wZcXmW5L" target="_blank">马斯克：Grok 4.6 将于 8 月 7 日发布，数周后推出 2.1 万亿参数 Grok 4.7</a></div>
+    <div class="summary">马斯克7月30日确认xAI下一代大模型发布时间表：1.5万亿参数Grok 4.6将于8月7日发布，在SFT和RL方面有重大提升；随后数周内将推出2.1万亿参数的Grok 4.7。xAI以惊人的迭代速度追赶OpenAI和Anthropic，大模型军备竞赛持续升温。</div>
+    <div class="tags">
+      <span class="tag">#Grok</span>
+      <span class="tag">#xAI</span>
+      <span class="tag">#马斯克</span>
+      <span class="tag">#大模型</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/07/464328.html" target="_blank">SIGGRAPH 时间检验奖揭晓：港大团队十年前研究提前押中物理 AI</a></div>
+    <div class="summary">SIGGRAPH 2026公布时间检验奖，香港大学Taku Komura教授团队2016年发表的深度学习角色运动合成论文获奖。该研究构建了人类交互先验模型，为当前物理AI和具身智能提供了从数据采集到世界模型构建的完整技术路径，被业界评价为"提前十年押中了风口"。</div>
+    <div class="tags">
+      <span class="tag">#SIGGRAPH</span>
+      <span class="tag">#物理AI</span>
+      <span class="tag">#具身智能</span>
+      <span class="tag">#学术</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 / Link BAAI</div>
+    <div class="title"><a href="https://link.baai.ac.cn/@AI_era/116464209891660870" target="_blank">谷歌 DeepMind 提出统一视觉架构，试图用一个模型替代所有 CV 专用工具</a></div>
+    <div class="summary">Google DeepMind提出颠覆性思路：摒弃计算机视觉领域二十年来为检测、分割、生成等不同任务设计专用模型的传统范式，试图用统一架构替代所有"专用工具"。这一方向一旦成功，将大幅简化视觉AI开发流程，降低部署成本。</div>
+    <div class="tags">
+      <span class="tag">#计算机视觉</span>
+      <span class="tag">#DeepMind</span>
+      <span class="tag">#统一架构</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>过去48小时，AI行业呈现出三个清晰的趋势信号：<strong>一是「人才回流」加速</strong>——翁荔闪电回归OpenAI并非孤例，大模型创业公司创始团队流失正在成为普遍现象，顶级人才向算力充沛的巨头集中；<strong>二是「视频生成进入开源+价格战时代」</strong>——MiniMax H3以开源策略和仅为同行三分之一的价格杀入视频生成赛道，叠加GPT-5.6 Luna降价80%，整个行业正从"参数竞赛"全面转向"成本效率竞赛"；<strong>三是「具身智能从Demo走向全身控制」</strong>——Google DeepMind Gemini Robotics 2实现人形机器人全身智能控制，SIGGRAPH奖项提前十年押中物理AI，具身智能正在跨越从"能动"到"能干活"的关键拐点。Kimi母公司估值半年涨十倍、高通因AI存储涨价反噬提价，则从资本和供应链侧面印证了这一轮AI浪潮的深度和烈度。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026年08月01日</p>
+</div>
+
+</div>
+</body>
+</html>

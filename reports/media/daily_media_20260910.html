@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年09月10日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年09月10日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>过去一天最重磅的，当属 <strong>DeepSeek 被曝聘请中信证券冲刺科创板 IPO</strong>，估值或达 5000 亿；同一天 DeepSeek V4.1 Flash 开启限时内测，输出速度飙到 500 tokens/s。9 日「共创 AI 新经济」<strong>外滩大会开幕</strong>，蚂蚁百灵发布金融增强模型、灵波把具身大脑送进真实药房。海外，Mistral 完成 30 亿欧元欧洲史上最大融资、亚马逊 600 亿美元绑死高通 AI 芯片；国内具身智能与 AI 眼镜融资持续升温。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>热点聚焦</div>
+
+  <div class="hot-topic">
+    <div class="label">今日最热</div>
+    <div class="card" style="margin-bottom:0;border:none;box-shadow:none;background:transparent;">
+      <div class="source">路透社 / 快科技 · 2026-09-09</div>
+      <div class="title"><a href="https://m.mydrivers.com/newsview/1149874.html" target="_blank" rel="noopener">DeepSeek 被曝冲刺科创板 IPO，已聘中信证券，估值或达 5000 亿</a></div>
+      <div class="summary">据路透社、鞭牛士、腾讯新闻等多家媒体 9 月 9 日报道，深度求索 DeepSeek 已聘请中信证券作为辅导机构，筹备在上交所科创板 IPO，计划年内正式启动上市流程，最新估值或达 5000 亿元。此前 6 月融资中，创始人梁文锋个人出资 200 亿元、腾讯 100 亿元、宁德时代 50 亿元。若成功登陆，这将是国产大模型「第一股」之争的关键一役。</div>
+      <div class="tags"><span class="tag hot">IPO</span><span class="tag">DeepSeek</span><span class="tag">大模型</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🚀</span>新模型 · 新产品</div>
+
+  <div class="card">
+    <div class="source">量子位 / 腾讯研究院 · 2026-09-09</div>
+    <div class="title"><a href="https://zhuanlan.zhihu.com/p/2080959870170296494" target="_blank" rel="noopener">DeepSeek V4.1 Flash 限时内测：输出速度飙到 500 tokens/s</a></div>
+    <div class="summary">DeepSeek 开启 V4.1 Flash 中间版本限时内测：全新模型结构、原生多模态，官方称「能力更强、速度更快、成本更低」。开发者实测最高输出 507 tokens/s、多人平均超 300 tokens/s，无需改 base_url 即可调用，9 月 10 日自动下线，被网友称为「教科书级的中间版本发布」。</div>
+    <div class="tags"><span class="tag">新模型</span><span class="tag">多模态</span><span class="tag">推理提速</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-09-09</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/486288.html" target="_blank" rel="noopener">蚂蚁百灵发布首个金融增强模型 Ling-3.0-flash-Fin，已开源</a></div>
+    <div class="summary">外滩大会前夕，蚂蚁集团百灵发布首个金融增强开放模型 Ling-3.0-flash-Fin，同步开放金融搜索 Agent 评测基准 FinFIRST。与传统金融大模型只做问答摘要不同，它瞄准真实投研工作流，覆盖信息检索、研究推理、估值建模、研报撰写等环节，让 AI 从「回答一个问题」走向「完成一项工作」。</div>
+    <div class="tags"><span class="tag">新模型</span><span class="tag">金融AI</span><span class="tag">开源</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-09-09</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/486374.html" target="_blank" rel="noopener">实测讯飞星火 X2.5：拆 61 页财报、手搓粒子月亮，还揪出了 Bug</a></div>
+    <div class="summary">讯飞星火 X2.5（293B-A30B MoE）上线，量子位一手实测：拆 61 页财报、手搓粒子月亮、揪出代码 Bug。此前开源的 4B/1.7B 端侧模型原生支持百万 Token 上下文，已冲上 Hugging Face 趋势榜第一，API 还限时五折。</div>
+    <div class="tags"><span class="tag">新模型</span><span class="tag">实测</span><span class="tag">端侧</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">腾讯研究院 AI 速递 · 2026-09-09</div>
+    <div class="title"><a href="https://www.sohu.com/a/1073532700_455313" target="_blank" rel="noopener">腾讯文档上线 AI 工作台，WorkBuddy 的 Agent 内核落地「人机双写」</a></div>
+    <div class="summary">腾讯文档新 AI 工作台基于 WorkBuddy 的 Agent 内核与自研编辑引擎，可直读本地文件与在线文档，支持「人机双写」——选段用大白话下指令、改动落回原文件并带修订记录，任务可后台跑、主动提醒。办公 AI 从「聊天给建议」进化到「直接动手改文件」。</div>
+    <div class="tags"><span class="tag">产品</span><span class="tag">办公Agent</span><span class="tag">腾讯</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">CNMO 科技 · 2026-09-09</div>
+    <div class="title"><a href="https://ai.cnmo.com/news/818072.html" target="_blank" rel="noopener">外滩大会：蚂蚁灵波「具身原生通用大脑 2.0」，机器人智慧药房真实落地</a></div>
+    <div class="summary">外滩大会上，蚂蚁灵波展示「具身原生通用大脑 2.0」：物流、工业场景分别使用乐聚、钛虎等不同机器人本体，背后是同一个灵波大脑。与上海国大药房打造的「机器人智慧药房」已在真实门店落地，机器人可自主接单、识别药品、抓取交付，门店无需改造。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">机器人</span><span class="tag">外滩大会</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">💰</span>融资与产业</div>
+
+  <div class="card">
+    <div class="source">36氪 / Reuters · 2026-09-08</div>
+    <div class="title"><a href="https://pitchhub.36kr.com/financing-flash" target="_blank" rel="noopener">法国 Mistral 完成 30 亿欧元 D 轮融资，估值超 210 亿欧元</a></div>
+    <div class="summary">法国 Mistral AI 完成 30 亿欧元 D 轮融资，投后估值超 210 亿欧元，创欧洲科技企业史上最大股权融资纪录。三星电子领投，EQT 旗下 Scaleup Europe Fund 与 PSG Equity 联合领投。新资金将用于扩大算力与基建、前沿模型研发及国际化扩张，欧洲 AI 主权的野心再进一步。</div>
+    <div class="tags"><span class="tag">融资</span><span class="tag">欧洲AI</span><span class="tag">Mistral</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪 / 投资界 · 2026-09-09</div>
+    <div class="title"><a href="https://news.pedaily.cn/202609/568724.shtml" target="_blank" rel="noopener">AI+AR 智能眼镜「影目科技」完成近 10 亿 C3 轮融资，启动上市筹备</a></div>
+    <div class="summary">影目科技（INMO）完成近 10 亿元 C3 轮融资，由四川振兴科创基金领投，上海静安资本、上海市北高新、四川眉山中试基金等八家机构跟投，并正式启动上市筹备。公司成立以来营收增速连续保持 200% 以上，是国内最早量产无线消费级 AR 眼镜的厂商。</div>
+    <div class="tags"><span class="tag">融资</span><span class="tag">AI眼镜</span><span class="tag">AR</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪 · 2026-09-09</div>
+    <div class="title"><a href="https://pitchhub.36kr.com/financing-flash" target="_blank" rel="noopener">微纳核芯完成 10 亿元 C1 轮融资，加速 AI 大模型推理「芯」突破</a></div>
+    <div class="summary">三维存算一体 AI 芯片企业微纳核芯完成 10 亿元 C1 轮融资，三维存算一体 AI 芯片将量产商业化。存算一体被视为破解「存储墙」「功耗墙」、降低大模型推理成本的关键路径之一。</div>
+    <div class="tags"><span class="tag">融资</span><span class="tag">AI芯片</span><span class="tag">存算一体</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪 · 2026-09-09</div>
+    <div class="title"><a href="https://pitchhub.36kr.com/financing-flash" target="_blank" rel="noopener">Physical AI 基础设施「无问智科」完成数亿元 A 轮融资</a></div>
+    <div class="summary">无问智科完成数亿元 A 轮融资，由洪泰基金领投，洪山资本、中电数融、狮城资本跟投，架桥资本、力合金融等老股东超额追投。资金将用于建设世界模型驱动的 Physical AI 数据与世界基础设施，公司具身智能业务订单已达数亿元。</div>
+    <div class="tags"><span class="tag">融资</span><span class="tag">物理AI</span><span class="tag">世界模型</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>产业与技术动态</div>
+
+  <div class="card">
+    <div class="source">每日经济新闻 · 2026-09-08</div>
+    <div class="title"><a href="https://www.toutiao.com/article/7683315035841577499" target="_blank" rel="noopener">亚马逊砸 600 亿美元绑死高通，共同打造 AI 数据中心推理芯片</a></div>
+    <div class="summary">亚马逊与高通宣布长期合作，共同打造面向 AI 数据中心的定制推理芯片，配套最高 1.6T 光互联。高通将获最多 2500 万股认股权证，采购上限达 600 亿美元。高通从手机芯片正式杀入 AI 数据中心，亚马逊则加固 AWS 自研 AI 基建，云大厂「去单一供应商依赖」再进一步。</div>
+    <div class="tags"><span class="tag">AI芯片</span><span class="tag">亚马逊</span><span class="tag">高通</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">每日经济新闻 · 2026-09-08</div>
+    <div class="title"><a href="https://www.toutiao.com/article/7683315035841577499" target="_blank" rel="noopener">Meta 推出个人 AI 智能体 Muse，扎克伯格称是「最大商业机遇」</a></div>
+    <div class="summary">Meta 向美国用户推出个人 AI 智能体 Muse，可代办网购、购票、预约、填表，接入 Gmail、Google 日历、OpenTable、Instagram、WhatsApp，分免费与 20/100 美元月费版，未来将接入 AI 眼镜。一旦接进 Meta 几十亿用户，「AI 替你办事」将从极客玩具变成主流消费级入口。</div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">Meta</span><span class="tag">个人助理</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-09-09</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/486280.html" target="_blank" rel="noopener">具身机器人能搞定超市盘点吗？全球七万门店正在给出答案</a></div>
+    <div class="summary">汉朔科技与 X-Era Lab（拓元智慧）联手把具身智能送进真实门店：轮式机器人沿货架核对价签、盘点库存，机械臂伸进三四十厘米高的货架层抓取膨化食品。汉朔服务全球超 550 家零售客户、近 7 万家门店，电子价签提前为机器人铺好「物理坐标系」，ROI 是具身智能落地绕不开的一步。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">零售</span><span class="tag">落地</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>今天的信号很清晰：国内在「资本 + 速度」双线并进。DeepSeek 一边把 V4.1 Flash 的推理速度拉到 500 tokens/s，一边被曝冲刺科创板、估值直奔 5000 亿——开源模型的「成本碾压」叙事，正在变成实打实的资本叙事。而外滩大会开幕，蚂蚁同时亮出金融大模型和具身大脑，把 AI 从「能聊」推向「能干活」；腾讯文档的 AI 工作台，也在把 Agent 真正塞进办公日常。海外的故事则是「芯片与个人 Agent」：亚马逊 600 亿美元绑死高通，Meta 的 Muse 要把 AI 装进几十亿人的口袋。一句话，卷跑分的阶段过去了，现在大家卷的是落地、是现金流、是谁先把 AI 真正装进物理世界和商业闭环里。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026年09月10日</p>
+</div>
+
+</div>
+</body>
+</html>

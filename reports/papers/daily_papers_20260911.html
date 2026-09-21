@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年09月11日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年09月11日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今天的主角是「用对的接口，把现有大模型接进物理世界」这条线：Show-Harness（HF 120↑）不硬改模型，而是给 VLM 一个紧凑的语义动作接口，闭源 frontier VLM 都能零样本玩机器人；Programmable World Model（HF 79↑）用「可执行程序 + 显式世界状态」补上世界模型的持久性和可控制性。Agent 侧 AgentGrad（HF 80↑）把多智能体 prompt 优化做得更工程化，省时 2.5 倍；评测侧 SWE-Bench Pro Verified 和 Φ-Bench 都在提醒「分数会骗人」。开源生态这边主仓库依旧静默，但衍生榜单悄悄长出了 awesome-efficient-videollm、awesome-ai-agent-platforms 等新货。</p>
+</div>
+
+<!-- 🔥 今日热点 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · VLM 零样本玩转机器人</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">arXiv 2609.10522 · HuggingFace Daily Papers · HF 120↑ · GitHub ★125</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;"><a href="https://arxiv.org/abs/2609.10522" target="_blank" style="color:var(--accent);text-decoration:none;">Show-Harness: Just a VLM Agent Can Play Robots</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">一个让「视觉-语言模型（VLM）直接玩转机器人」的具身框架，核心思想不是把 VLM 硬改成 VLA，而是设计一个「对的接口」：暴露一套离散的「语义动作单元」给 VLM 自然推理，再由「具身专用解释器」把语义动作确定性落地成本地机器人动作——让 VLM 始终对细粒度的物理决策负责。同一套接口解锁了两件事：一是直接把闭源 frontier VLM 拿来做零样本机器人控制，二是只用几 GPU 小时的微调就把小型开源 VLM 变成低成本部署方案。作者还开发了 GUMI（GUI 操作接口），把同一语义动作空间延伸到 GUI 演示采集，让人和 agent 无需专用遥操作硬件就能「玩」机器人。实验显示 Show-Harness 加持的 VLM agent 在任务、具身形态、环境上都能稳定泛化，超过代表性 agentic 与 VLA 范式。结论漂亮：对的接口本身，就能从基础 VLM 里榨出大量具身能力。代码已开源（showlab/Show-Harness）。</div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag hot">VLM Agent</span>
+<span class="tag hot">HF 120↑</span>
+<span class="tag">零样本机器人</span>
+<span class="tag">开源</span></div>
+  </div>
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · 可编程世界模型</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">arXiv 2609.10540 · HuggingFace Daily Papers · HF 79↑ · GitHub ★100</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;"><a href="https://arxiv.org/abs/2609.10540" target="_blank" style="color:var(--accent);text-decoration:none;">Programmable World Model</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">现有视频世界模型生成的画面越来越逼真、可交互，但普遍缺两样东西：持久的「世界状态」和「可编程规则」。这篇提出可编程世界模型，把「世界状态演化」和「视觉观测生成」彻底解耦：一个 agent 把自然语言指令翻译成可执行程序，显式定义实体状态与状态转移规则；一个轻量引擎执行这些程序，维护一份显式、持久的全局世界状态（包括屏幕外的实体和非视觉属性）。为把世界状态连到视觉生成，作者引入「状态增强的 3D 有向包围盒（OBB）」作为中间表示，再连同目标相机轨迹，确定性编译成像素对齐的时空条件信号，喂给预训练视频模型做生成渲染器。这样用户就能做出有预设机制、可单独控制实体、状态全程持久的可玩游戏。还配了 CombatStateBench 基准，方法拿到 94% 计数精度。代码开源（AlayaLab/pwm）。</div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag hot">世界模型</span>
+<span class="tag hot">HF 79↑</span>
+<span class="tag">可编程</span>
+<span class="tag">持久状态</span></div>
+  </div>
+</div>
+<!-- 🧠 大模型 &amp; Agent -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 &amp; Agent</div>
+  <div class="card">
+    <div class="source">arXiv 2609.08572 · HuggingFace Daily Papers · HF 80↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.08572" target="_blank">AgentGrad: Intervention-guided Prompt Optimization for Multi Agent Systems</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">多智能体系统（MAS）靠多个专职 agent 协作拿到强性能，但效果高度依赖每个 agent 的 prompt 设计。现有「文本梯度」方法在两个环节都有缺陷：梯度提取时不验证改哪个 agent 的 prompt 能真正解决失败、也缺少对 agent 中间输出的细粒度监督；梯度聚合时把无关失败模式混在一起拼接，导致 prompt 难以泛化。AgentGrad 给出两招：顺序干预——一次只改一个 agent 的行为，锁定「改了就能修复失败」的那个目标 agent，用其修正后输出做 agent 级监督；语义文本梯度抽象——把语义相近的梯度聚成簇、再抽象成捕捉共性纠错模式的泛化梯度。在五个 MAS 基准上拿到 SOTA，还比次快基线平均省 2.5 倍墙钟优化时间。</div>
+    <div class="tags"><span class="tag hot">多智能体</span>
+<span class="tag hot">HF 80↑</span>
+<span class="tag">文本梯度</span>
+<span class="tag">提示优化</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2609.10226 · HuggingFace Daily Papers · GitHub ★55</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.10226" target="_blank">Φ-Bench: Can Large Language Models Engineer the Infrastructure That Powers Them?</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">一个「让 LLM 来造支撑自己的基础设施」的评测：任务从内核级优化一路铺到端到端系统设计，覆盖 LLM 基础设施栈的开放工程。作者想回答的是，当前大模型能不能在长时程、开放式的系统优化任务里真正「自举」——不光是写写 kernel，而是把整个推理/训练栈优化到底。代码已开源（faibench_Frontier_InfraBench，★55）。</div>
+    <div class="tags"><span class="tag hot">LLM 基础设施</span>
+<span class="tag">内核优化</span>
+<span class="tag">长时程</span>
+<span class="tag">开源</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2609.08149 · HuggingFace Daily Papers · HF 19↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.08149" target="_blank">SWE-Bench Pro Verified: A Reliable Benchmark for Software Engineering Agents</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">SWE-Bench Pro 已是评估软件工程 agent 在仓库级任务上的标准基准，但这篇的分析指出它的评测被两类不可靠因素侵蚀：一是 reward hacking（金标准答案或隐藏评测信息泄漏），二是任务质量缺陷（误导性的问题描述、测试范围不当）。这些会虚高分数、掩盖 agent 真实编码能力。SWE-Bench Pro Verified 双管齐下：加反作弊护栏、堵住主要泄漏通道又不影响 agent 正常功能，同时对有缺陷实例做最小化修正。在 Verified 版上重评，一些模型的成绩大幅缩水——评测可信度这件事，又被往前推了一步。</div>
+    <div class="tags"><span class="tag hot">基准</span>
+<span class="tag">SWE</span>
+<span class="tag">反 reward hacking</span>
+<span class="tag">评测</span></div>
+  </div>
+</div>
+<!-- 🌍 具身智能 &amp; 世界模型 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🌍</span>具身智能 &amp; 世界模型</div>
+  <div class="card">
+    <div class="source">arXiv 2609.09155 · HuggingFace Daily Papers · GitHub ★15</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.09155" target="_blank">SyncWorld: Visual Calibration Enables World Models as Zero-Shot Simulators</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">动作条件世界模型想做「零样本模拟器」，难点在于每个环境的「动作→视觉」映射各不相同。SyncWorld 用「视觉校准片段」来学环境特有的动作到视觉映射，让世界模型能在没见过的机器人场景里直接当零样本模拟器用，还能在测试时反过来改善策略——把「世界模型当模拟器用」这条路线又往前推了一步。代码开源（UMass-Embodied-AGI/SyncWorld，★15）。</div>
+    <div class="tags"><span class="tag hot">世界模型</span>
+<span class="tag">零样本模拟</span>
+<span class="tag">视觉校准</span></div>
+  </div>
+</div>
+<!-- 👁️ 多模态 &amp; 健康 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态 &amp; 健康</div>
+  <div class="card">
+    <div class="source">arXiv 2609.05405 · Meta FAIR · HuggingFace Daily Papers · GitHub ★9</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.05405" target="_blank">WearableQA: A Benchmark for Health Reasoning over Real-World Wearable Data</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">Meta FAIR 出的基准，从真实纵向可穿戴数据（心率、睡眠、活动等多信号）里派生选择题，评估 LLM 在「数据维度」和「健康维度」上的跨信号推理能力。核心是「dual-grounding」双锚定框架——既要对原始信号数据准确推理，又要给出健康层面的合理解释。对「大模型能不能读懂你的手表数据、给出靠谱健康建议」这个越来越现实的问题，给了第一个系统性标尺。代码开源（facebookresearch/WearableQA）。</div>
+    <div class="tags"><span class="tag hot">健康推理</span>
+<span class="tag">多模态</span>
+<span class="tag">Meta FAIR</span>
+<span class="tag">基准</span></div>
+  </div>
+</div>
+<!-- 🔓 开源 &amp; awesome 生态 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔓</span>开源 &amp; awesome 生态</div>
+  <div class="card">
+    <div class="source">GitHub · awesome 主仓库 · 衍生榜单</div>
+    <div class="title"><a href="https://github.com/sindresorhus/awesome" target="_blank">awesome 主仓库继续静默，AI 新 list 在门外悄悄长</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">sindresorhus/awesome 主仓库最近提交仍是 9/2 的「Meta tweaks」，门口 AI list 长队纹丝不动：AI Agent Tools（#4396）、AI Tokenomics（#4394）、AI Companion（#4378）、Swarm（#4364）、LLM for Biomedicine（#4359）等依旧排队。不过「衍生 awesome」生态这边有新货：视频 LLM 效率综述《Why Is Video Still So Expensive?》顺手发布了 <a href="https://github.com/momentslab/awesome-efficient-videollm" target="_blank">awesome-efficient-videollm</a>；新起榜单里 <a href="https://github.com/Agenta-AI/awesome-ai-agent-platforms" target="_blank">Agenta-AI/awesome-ai-agent-platforms</a>（★223）整理开源 AI agent 平台，<a href="https://github.com/Yuxuan2003/Awesome-GUI-Agent-Security" target="_blank">Awesome-GUI-Agent-Security</a>（★67）按攻防轴梳理 GUI/Computer-Use agent 安全论文（每篇附中文简介）。「给人读的清单」和「给 agent 查的资源库」之间的分流，越来越明显。</div>
+    <div class="tags"><span class="tag">awesome</span>
+<span class="tag">开源生态</span>
+<span class="tag">agent 平台</span>
+<span class="tag">GUI 安全</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>今天的主线很清晰：具身智能在「怎么把现有大模型的能力接入物理世界」上找到了新姿势。Show-Harness 的洞见特别对我胃口——不硬改模型、不堆数据，而是设计一个「对的接口」：让 VLM 只负责语义决策、把底层动作交给确定性解释器，闭源 frontier VLM 都能直接零样本玩机器人，小型开源 VLM 几小时微调就能部署。这跟 Programmable World Model 异曲同工：后者也是用「可执行程序 + 显式世界状态」把世界模型的「可持久、可控制」补上，而不是一味加数据。Agent 侧 AgentGrad 把多智能体 prompt 优化这件「玄学」事变得更工程化——顺序干预定位真凶、语义聚类防混音，省时 2.5 倍。评测侧 SWE-Bench Pro Verified 和 Φ-Bench 在提醒同一件事：分数会骗人，得先把「泄漏」和「任务质量」堵干净，才能看清模型的真实水平。开源生态依旧是那副熟悉的模样——主仓库静默、门外 AI list 排队，但真正的活力在「衍生榜单」里：awesome-efficient-videollm、awesome-ai-agent-platforms、Awesome-GUI-Agent-Security 这些自带代码和论文清单的新 list，可能比主仓库更快长成 agent 时代的资源入口。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-09-11 08:05</p>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年07月29日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年07月29日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>Moonshot AI 正式开源 Kimi K3（2.8T 参数 MoE，104B 激活），成为今日最大热点。LLM Agent 多轮规划理论取得突破，MoE 架构开始向扩散模型迁移。具身智能数据难题受关注，Claude Fable 5 持续霸榜。开源工具侧，OmniRoute、Whetstone 等项目活跃。</p>
+</div>
+
+<!-- 🔥 今日热点 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+
+  <div class="hot-topic">
+    <div class="label">🚀 开源前沿模型</div>
+    <div class="card" style="border:none; box-shadow:none; margin:0; padding:0;">
+      <div class="source">arXiv 2607.24653 · Moonshot AI</div>
+      <div class="title"><a href="https://arxiv.org/abs/2607.24653" target="_blank">Kimi K3: Open Frontier Intelligence</a></div>
+      <div class="summary">Moonshot AI 发布 Kimi K3，2.8T 参数 MoE 模型，104B 激活参数，原生视觉能力，100 万 token 上下文窗口。基于 Kimi Delta Attention 和 Attention Residuals 创新架构，成为目前最强开源模型之一。</div>
+      <div class="tags">
+        <span class="tag hot">🔥 今日最热</span>
+        <span class="tag">大语言模型</span>
+        <span class="tag">MoE</span>
+        <span class="tag">开源</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 📄 论文精选 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>论文精选</div>
+
+  <div class="card">
+    <div class="source">arXiv 2607.24720 · 多机构联合</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.24720" target="_blank">The Physics of Multi-Turn Long-Horizon Planning</a></div>
+    <div class="summary">首次系统研究多轮长程规划能力的提升路径，通过预训练到后训练的完整管线，结合单/多教师 on-policy agentic distillation，揭示规划能力的物理规律。</div>
+    <div class="tags">
+      <span class="tag">LLM Agent</span>
+      <span class="tag">规划推理</span>
+      <span class="tag">蒸馏</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2607.24717</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.24717" target="_blank">DataOrchestra: Learning to Orchestrate Per-Example Curation</a></div>
+    <div class="summary">打破预训练数据"一刀切"处理范式，提出逐样本动态编排策略，让每个样本获得最优处理流水线，显著提升下游模型性能。</div>
+    <div class="tags">
+      <span class="tag">数据工程</span>
+      <span class="tag">预训练</span>
+      <span class="tag">LLM</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2607.24667</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.24667" target="_blank">Eviction as Estimation: A Fixed-Lag Smoothing View of Test-Time Memory</a></div>
+    <div class="summary">从固定滞后平滑的角度重新审视 LLM 测试时记忆管理，挑战 StreamingLLM 和 H2O 等主流方法，证明"测量优于积累"的新范式。</div>
+    <div class="tags">
+      <span class="tag">LLM 推理</span>
+      <span class="tag">内存优化</span>
+      <span class="tag">长上下文</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2607.24743</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.24743" target="_blank">ClinFusion: Vision-Centric Multimodal LLM for Holistic Medical Understanding</a></div>
+    <div class="summary">面向临床医疗的视觉中心多模态 LLM 系统，能够融合 2D/3D 异构医学影像数据，实现全面的医学理解，推动多模态在垂直医疗场景落地。</div>
+    <div class="tags">
+      <span class="tag">多模态</span>
+      <span class="tag">医疗 AI</span>
+      <span class="tag">VLM</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2607.24665</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.24665" target="_blank">MMOE: Modernizing Diffusion Transformers with Efficient Expert Design</a></div>
+    <div class="summary">将 MoE 架构引入扩散 Transformer，在保持生成质量的同时大幅降低计算开销，为 AIGC 基础模型的规模化部署开辟新路。</div>
+    <div class="tags">
+      <span class="tag">图像生成</span>
+      <span class="tag">MoE</span>
+      <span class="tag">扩散模型</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2607.24744</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.24744" target="_blank">Data Pyramid for Embodied Manipulation</a></div>
+    <div class="summary">针对具身智能"无互联网可爬取"的核心数据困境，提出数据金字塔框架，通过结构化数据层次体系为机器人操控学习提供可扩展方案。</div>
+    <div class="tags">
+      <span class="tag">具身智能</span>
+      <span class="tag">机器人</span>
+      <span class="tag">数据工程</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2607.24721</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.24721" target="_blank">DreamStyle3D: Efficient 3D Stylized Asset Generation</a></div>
+    <div class="summary">提出双注意力解耦机制，实现高效 3D 风格化资产生成，在保持风格保真度和几何一致性的同时大幅提升生成速度，面向游戏/VR 产业。</div>
+    <div class="tags">
+      <span class="tag">3D 生成</span>
+      <span class="tag">计算机视觉</span>
+      <span class="tag">AIGC</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🛠️ 开源项目 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源项目</div>
+
+  <div class="card">
+    <div class="source">GitHub · 231 providers, 50+ free tiers</div>
+    <div class="title"><a href="https://github.com/diegosouzapw/OmniRoute" target="_blank">OmniRoute — 本地 AI 网关</a></div>
+    <div class="summary">本地优先的 AI 网关，集成 231 家模型供应商、50+ 免费层、17 种路由策略，通过 RTK + Caveman 压缩节省 15-95% token 消耗，兼容 Claude Code、Cursor、Codex 等主流工具。</div>
+    <div class="tags">
+      <span class="tag">API 网关</span>
+      <span class="tag">LLM 工具</span>
+      <span class="tag">开源</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · Rust + CUDA</div>
+    <div class="title"><a href="https://github.com/Anonym0usWork1221/Whetstone" target="_blank">Whetstone — 4-bit LLM 推理引擎</a></div>
+    <div class="summary">纯 Rust + CUDA 实现低比特 LLM 推理引擎，将模型转换为 4-bit .wstone 格式（体积缩小 3.75 倍），面向消费级 GPU 优化，在 Turing 架构上实现内存带宽受限解码。</div>
+    <div class="tags">
+      <span class="tag">推理优化</span>
+      <span class="tag">量化</span>
+      <span class="tag">Rust</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · MIT License</div>
+    <div class="title"><a href="https://github.com/JustVugg/colibri" target="_blank">colibri — 在 25GB 内存上运行 GLM-5.2 (744B MoE)</a></div>
+    <div class="summary">突破性内存优化项目，实现在仅 25GB RAM 的消费级设备上运行 GLM-5.2 744B MoE 模型，大幅降低大模型使用门槛。</div>
+    <div class="tags">
+      <span class="tag">模型部署</span>
+      <span class="tag">内存优化</span>
+      <span class="tag">MoE</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>今天最大的新闻无疑是 Kimi K3 的正式开源。2.8T 参数、104B 激活的 MoE 架构，配合 1M token 上下文和原生视觉能力，标志着开源模型在"前沿智能"赛道上与闭源巨头的差距进一步缩小。K3 采用了 Kimi Delta Attention 和 Attention Residuals 两个关键创新，值得深入阅读论文原文。<br><br>
+  另一个值得关注的趋势是 <strong>MoE 架构正在向扩散模型领域延伸</strong>——MMOE 论文将 MoE 引入 Diffusion Transformer，这与 LLM 领域的发展路径高度一致，预示着 AIGC 基础模型也将走向"大而省"的方向。<br><br>
+  在 Agent 方向，多轮长程规划的理论研究（Physics of Multi-Turn Planning）为智能体能力提升提供了系统性框架，而具身智能的数据金字塔方案回应了机器人领域"数据饥渴"的核心挑战。<br><br>
+  开源生态方面，OmniRoute（231 家供应商的统一网关）和 Whetstone（Rust 4-bit 推理引擎）反映了社区对"更低成本、更易部署"的持续追求。整体来看，2026 年 7 月的 AI 领域正在经历从"模型军备竞赛"到"工程落地竞赛"的深刻转变。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026年07月29日</p>
+</div>
+
+</div>
+</body>
+</html>

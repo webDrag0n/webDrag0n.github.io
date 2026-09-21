@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年07月20日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年07月20日</div>
+  <div class="subtitle">中文AI媒体精选 · 机器之心/量子位/新智元 等</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>WAIC 2026 进入第三天，AI 产业正式从"炫技"迈入"落地"——人形机器人规模化部署、原生多模态大模型集中发布、AI 智能体手机开售，中国 AI 全产业链加速兑现。</p>
+</div>
+
+<div class="hot-topic">
+  <div class="label">🔥 今日头条</div>
+  <div class="card" style="margin:0;box-shadow:none;border:none;padding:0;">
+    <div class="source">量子位 / 机器之心 / 36氪 / 新智元 / 第一财经</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/07/436498.html" target="_blank">WAIC 2026 上海持续进行：300+ 产品首发，AI 产业全面进入"物理世界"落地阶段</a></div>
+    <div class="summary">2026 世界人工智能大会（7月17-20日）三地四馆联动，展览面积超10万平方米，1100余家企业参展。习近平主席出席开幕式并发表主旨演讲，呼吁构建公正合理的全球AI治理体系。大会期间，从人形机器人大规模"上岗"到AI智能体手机开售，从原生多模态大模型到太空算力星座，中国AI产业正在系统化兑现。</div>
+    <div class="tags">
+      <span class="tag hot">#WAIC2026</span>
+      <span class="tag">#AI落地</span>
+      <span class="tag">#产业大会</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能 & 机器人</div>
+
+  <div class="card">
+    <div class="source">新智元 / 量子位 / 机器之心 / 36氪</div>
+    <div class="title"><a href="https://www.163.com/dy/article/L27OJ2VK051100B9.html" target="_blank">智元远征 A3 Ultra 摘得 WAIC "镇馆之宝"，连发五款新品，60台机器人实现规模化部署</a></div>
+    <div class="summary">智元机器人在 WAIC 2026 上全面展示"部署态"实力：远征 A3 Ultra 成为十大"镇馆之宝"中唯一的人形机器人产品（身高1.74米、51组自由度、700TOPS算力）。现场连发五款新品，包括自研具身基座大模型 GO-2 和世界模型 GE-2，60台机器人首次实现规模化公共服务部署，标志着具身智能正式进入"部署态元年"。</div>
+    <div class="tags">
+      <span class="tag hot">#具身智能</span>
+      <span class="tag">#人形机器人</span>
+      <span class="tag">#智元</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 / 晚点LatePost</div>
+    <div class="title"><a href="https://www.qbitai.com/" target="_blank">小米机器人 CyberOne 已进汽车工厂"拧螺丝"，WAIC 发布机器人基座模型 Xiaomi-Robotics-1</a></div>
+    <div class="summary">小米在 WAIC 上正式发布机器人基座模型 Xiaomi-Robotics-1，切入具身智能赛道。CyberOne 人形机器人已在小米汽车工厂"实习"满4个月，承担质检、搬运等任务。雷军此前提出"7:2:1"生产模式目标——70%自动化设备、20%人形机器人、10%人工。</div>
+    <div class="tags">
+      <span class="tag">#具身智能</span>
+      <span class="tag">#小米</span>
+      <span class="tag">#机器人</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">机器之心 / 量子位</div>
+    <div class="title"><a href="https://www.chinastarmarket.cn/detail/2430245" target="_blank">擎天租携60余台"机器人打工人"亮相 WAIC，开启 RaaS 全场景落地</a></div>
+    <div class="summary">AI 驱动的机器人即服务平台（RaaS）擎天租首度亮相 WAIC，并作为大会官方机器人公共服务商，在世博、张江、西岸三大展区部署60余台各类型机器人，承担指引、物流等公共服务，标志着机器人服务从概念走向可运营的产业基础设施。</div>
+    <div class="tags">
+      <span class="tag">#RaaS</span>
+      <span class="tag">#机器人租赁</span>
+      <span class="tag">#产业落地</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 & 产品发布</div>
+
+  <div class="card">
+    <div class="source">机器之心 / 量子位 / IT之家</div>
+    <div class="title"><a href="https://www.aitntnews.com/newDetail.html?newId=27262" target="_blank">Google Gemini 3.5 Pro 7月17日发布：全新底座升级，硬刚 DeepSeek V4</a></div>
+    <div class="summary">谷歌于7月17日正式发布 Gemini 3.5 Pro，据称为"推倒重建"的全新底座架构，与 DeepSeek V4 正面对标。此前的 Google I/O 上仅发布了轻量版 Flash，Pro 版本姗姗来迟。这标志着全球大模型竞争进入新一轮白热化阶段，闭源巨头与开源力量的正面交锋。</div>
+    <div class="tags">
+      <span class="tag hot">#Gemini3.5</span>
+      <span class="tag">#Google</span>
+      <span class="tag">#DeepSeek</span>
+      <span class="tag">#大模型</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">机器之心 / 36氪 / 钛媒体</div>
+    <div class="title"><a href="https://www.tmtpost.com/8070465.html" target="_blank">商汤发布 SenseNova U1 Pro：原生多模态智能体基座，支持 8K 输出</a></div>
+    <div class="summary">商汤科技在 WAIC 上发布旗舰级大模型 SenseNova U1 Pro，定位为面向长程任务的交付级原生多模态智能体基座，实现理解、生成与行动的深度统一，最高支持原生8K分辨率输出。这代表了大模型从"能聊"向"能干"跨越的范式里程碑。</div>
+    <div class="tags">
+      <span class="tag">#多模态</span>
+      <span class="tag">#商汤</span>
+      <span class="tag">#大模型</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 / 机器之心 / 亿欧</div>
+    <div class="title"><a href="https://www.iyiou.com/news/202607181135624" target="_blank">京东 JoyAI 模型矩阵亮相 WAIC：7 个基础模型覆盖视觉/语音/交互，加速物理世界 AI</a></div>
+    <div class="summary">京东以"AI进入物理世界"为主题，首次系统展示 JoyAI 模型矩阵。现场发布 JoyAI-Talker 实时语音交互模型和 JoyAI-Video-Edit 实时视频编辑模型，并开源行业最大人类视角数据集 EgoLive。京东已发布7个基础模型，覆盖从3B到750B的全尺寸矩阵。</div>
+    <div class="tags">
+      <span class="tag">#京东</span>
+      <span class="tag">#物理世界AI</span>
+      <span class="tag">#开源</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📱</span>AI 终端 & 智能体</div>
+
+  <div class="card">
+    <div class="source">晚点LatePost / 量子位 / 36氪</div>
+    <div class="title"><a href="https://www.163.com/dy/article/L22ST2EA0531M1CO.html" target="_blank">豆包 AI 手机 NaviX Ultra 亮相 WAIC 开售：备货8-10万台，AI 不再硬操作头部应用</a></div>
+    <div class="summary">字节跳动联合中兴努比亚打造的第二代豆包 AI 智能体手机 NaviX Ultra 在 WAIC 正式亮相并开售，首批备货8-10万台。新机搭载专属豆包大模型，豆包手机助手团队正与各头部应用厂商谈判，争取开放可被AI调用的接口。此前豆包已获生成式AI服务备案。</div>
+    <div class="tags">
+      <span class="tag hot">#AI手机</span>
+      <span class="tag">#字节跳动</span>
+      <span class="tag">#智能体</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 / 新智元 / IT之家</div>
+    <div class="title"><a href="https://news.qq.com/rain/a/20260717A0C5WG00" target="_blank">支付宝×阶跃达成 AI Agent 系统级合作，推出跨端互联方案 AHA</a></div>
+    <div class="summary">支付宝与阶跃在 WAIC 现场宣布达成 AI Agent 系统级合作。AI 版支付宝"阿宝"通过自然语言即可调用服务，同时推出异构 Agent 跨端互联解决方案 AHA（Agent Hub-Access），通过协议级协作而非模拟点击实现跨应用任务协同。首期已接入外卖、出行、本地生活等场景。</div>
+    <div class="tags">
+      <span class="tag">#AI Agent</span>
+      <span class="tag">#支付宝</span>
+      <span class="tag">#阶跃</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 / IT之家 / 雪球</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/07/452956.html" target="_blank">百度 WAIC 发布 DAA 新指标：全球日活智能体将达 7940 万，智能体全家桶全面升级</a></div>
+    <div class="summary">IDC 在 WAIC 发布行业首份《DAA 研究报告》：全球日活智能体（DAA）2025年为2860万，2026年预计达7940万，2030年将增长至22.16亿。百度搭子作为唯一入选"镇馆之宝"的智能体产品，与文心5.1、萝卜快跑等共同展示智能体规模化落地进展。</div>
+    <div class="tags">
+      <span class="tag">#智能体</span>
+      <span class="tag">#百度</span>
+      <span class="tag">#DAA</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">机器之心 / IT之家 / 93913</div>
+    <div class="title"><a href="https://www.93913.com/123129.html" target="_blank">14.9 克 Moonix AI 眼镜全球发售，2299 元起，定义"无感佩戴"新标准</a></div>
+    <div class="summary">新锐 AI 穿戴品牌 Moonix（莫奈）首款 AI 眼镜标准版在 WAIC 亮相并全球同步发售，整机仅重14.9克、镜腿最薄处4毫米，在普通40克以上的智能眼镜市场中极具突破性。专注"记录"功能，Pro 版（含2K摄像头、重19.9克）预计8月底上市。</div>
+    <div class="tags">
+      <span class="tag">#AI眼镜</span>
+      <span class="tag">#可穿戴</span>
+      <span class="tag">#Moonix</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📋</span>行业政策 & 观点</div>
+
+  <div class="card">
+    <div class="source">量子位 / 机器之心 / 21财经 / IT之家</div>
+    <div class="title"><a href="https://m.21jingji.com/article/20260715/herald/9ba624525d7b955e710bfbc953419998.html" target="_blank">国行 Apple Intelligence 完成备案：阿里千问 + 百度双引擎，iPhone 用户两年等待终结</a></div>
+    <div class="summary">7月15日，网信办公布 Apple Intelligence 国行版完成备案（备案号 Shanghai-AppleZhiNeng-202506160057）。阿里千问负责文本与图像生成核心AI能力，百度负责AI搜索与中国版Siri升级。同期过审的还有华为、OPPO、vivo、小米、三星等6家端侧大模型，标志中国AI手机生态进入新阶段。</div>
+    <div class="tags">
+      <span class="tag hot">#Apple</span>
+      <span class="tag">#备案</span>
+      <span class="tag">#阿里</span>
+      <span class="tag">#百度</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">IT之家 / 量子位 / 36氪</div>
+    <div class="title"><a href="https://www.ithome.com/0/978/492.htm" target="_blank">凯文·凯利 WAIC 演讲：未来个人智能体将比你更了解自己</a></div>
+    <div class="summary">硅谷著名未来学家凯文·凯利现身 WAIC 2026，分享其对 AI 智能体未来的核心判断。他认为，未来每个人都将拥有专属 AI 智能体，这些智能体通过学习个人行为数据，最终将比用户本人更了解自己的需求、偏好和潜力。</div>
+    <div class="tags">
+      <span class="tag">#KevinKelly</span>
+      <span class="tag">#AI趋势</span>
+      <span class="tag">#智能体</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 / 第一财经 / 36氪</div>
+    <div class="title"><a href="https://www.chinastarmarket.cn/detail/2430245" target="_blank">太空算力星座工程 WAIC 发布，AI 基础设施迈向太空时代</a></div>
+    <div class="summary">WAIC 2026 第二天（7月18日），太空算力星座工程正式发布，为 AI 基础设施擘画新蓝图。同期多款国产超节点计算方案集中亮相，AI 算力正式迈入"系统时代"，标志着国产 AI 从芯片到系统的全栈交付能力初步形成。</div>
+    <div class="tags">
+      <span class="tag">#算力</span>
+      <span class="tag">#太空计算</span>
+      <span class="tag">#基础设施</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔬</span>前沿研究 & 补充动态</div>
+
+  <div class="card">
+    <div class="source">量子位 / 机器之心</div>
+    <div class="title">极简方案刷新扩散模型推理纪录：阿里清华合作论文入选 ICML 2026 杰出论文</div>
+    <div class="summary">ICML 2026 公布两篇杰出论文名单，阿里巴巴与清华大学合作的论文入选。该工作以极简方案刷新扩散模型（dLLM）推理纪录，为下一代语言模型架构提供了高效替代路径。</div>
+    <div class="tags">
+      <span class="tag">#ICML2026</span>
+      <span class="tag">#扩散模型</span>
+      <span class="tag">#阿里</span>
+      <span class="tag">#清华</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">机器之心</div>
+    <div class="title">MemOS 记忆操作系统 WAIC 首发：准确率较 OpenAI 全局记忆方案提升38.97%</div>
+    <div class="summary">WAIC 2026 上，记忆原生智能时代全新产业概念"记忆张量（MemTensor）"及开源记忆操作系统 MemOS 正式亮相。实测数据显示 MemOS 相较 OpenAI 全局记忆方案平均准确率提升38.97%，为智能体长程记忆能力提供了新的基础设施。</div>
+    <div class="tags">
+      <span class="tag">#记忆系统</span>
+      <span class="tag">#开源</span>
+      <span class="tag">#MemOS</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+    2026 年 WAIC 展现出 AI 产业正在完成一次深刻的范式转换：从"参数竞赛"进入"生产力兑现"时代。本届大会最显著的信号是<strong>AI彻底告别了PPT叙事</strong>——智元60台机器人不再"站桩"而是在会场自如服务，京东把AI直接送到物理世界的供应链中，豆包手机从工程机变成开售的量产机型。三大趋势尤为突出：一是<strong>具身智能的部署态元年</strong>正式开启，人形机器人从实验室走向工厂和公共服务场景；二是<strong>智能体经济（DAA）</strong>成为行业共识，百度和IDC联合定义的日活智能体指标预示着Agent将从概念走向基础设施级应用；三是<strong>中国AI全产业链正在系统化兑现</strong>——从芯片到操作系统、从大模型到终端、从太空算力到记忆系统，国产AI的完整拼图已初步显现。同时，Apple Intelligence国行备案通过这一标志性事件表明，跨国巨头也开始将中国AI能力纳入核心产品线。对于从业者而言，<strong>落地能力</strong>正在取代技术炫技成为真正的竞争壁垒。
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026年07月20日</p>
+</div>
+
+</div>
+</body>
+</html>

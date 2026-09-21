@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年07月21日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年07月21日</div>
+  <div class="subtitle">中文AI媒体精选 · 机器之心/量子位/新智元 等</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>WAIC 2026昨日闭幕，351款产品全球首发、意向成交超200亿，AI正式从"参数竞赛"转向"生产力落地"；DeepSeek V4满血版曝光引发行业震动，Kimi K3开源则激起OpenAI高管的公开批评——中国AI大模型正以前所未有的速度和姿态重塑全球竞争格局。</p>
+</div>
+
+<!-- 今日头条 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">🔴 头条关注</div>
+    <div class="source">综合：澎湃新闻 / IT之家 / 量子位 / AI日报</div>
+    <div class="title"><a href="https://www.ithome.com/0/979/174.htm" target="_blank">WAIC 2026 闭幕：351款产品全球首发，预计达成超200亿意向成交，AI从"参数竞赛"转向"生产力落地"</a></div>
+    <div class="summary">为期四天的2026世界人工智能大会于7月20日在上海落下帷幕。本届大会展览面积10万平方米，展品总数4486项，351款产品全球首发，接待全球采购团组177个，预计达成意向成交额超200亿元。大会期间，习近平主席出席开幕式并发表主旨演讲，强调开放包容的全球AI治理体系。本届WAIC最重要的信号：持续三年的大模型参数军备竞赛正式熄火，AI全面进入工业化部署阶段。</div>
+    <div class="tags">
+      <span class="tag hot">WAIC 2026</span>
+      <span class="tag">#行业风向</span>
+      <span class="tag">#闭幕总结</span>
+    </div>
+  </div>
+</div>
+
+<!-- 大模型与新发布 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型与新发布</div>
+
+  <div class="card">
+    <div class="source">来源：新智元</div>
+    <div class="title"><a href="https://aiera.com.cn/" target="_blank">DeepSeek V4「满血版」曝光，最快明天发布</a></div>
+    <div class="summary">新智元独家爆料称，DeepSeek V4完整版已准备就绪，最快将于7月21日（今日）正式发布。此前DeepSeek V4-Pro已展示出极强的编码与推理能力，满血版预计将在多模态和Agent能力上实现重大突破。结合DeepSeek估值已飙升至4800亿元、正筹备2027年IPO，此次发布或将进一步搅动全球AI格局。</div>
+    <div class="tags">
+      <span class="tag hot">DeepSeek</span>
+      <span class="tag">#大模型</span>
+      <span class="tag">#新发布</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">来源：量子位 / IT之家 / 凤凰科技 / 36氪</div>
+    <div class="title"><a href="https://m.ithome.com/html/978956.htm" target="_blank">Kimi K3 开源引发全球激辩：OpenAI 战略主管公开批其为「减速主义」</a></div>
+    <div class="summary">月之暗面7月16日发布Kimi K3——2.8万亿参数、全球最大开源模型，在Frontend Code Arena等榜单上超越GPT-5.6和Claude Fable 5。7月20日，OpenAI新上任的战略未来主管Dean W. Ball公开批评称"开放权重模型本质上是减速主义，会阻碍进一步的AI资本支出"，并承认Kimi K3的能力"不能简单归因于蒸馏"。此举被业内解读为OpenAI对中国开源AI崛起的焦虑反应。</div>
+    <div class="tags">
+      <span class="tag hot">Kimi K3</span>
+      <span class="tag">#开源模型</span>
+      <span class="tag">#争议</span>
+      <span class="tag">#OpenAI</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">来源：新智元 / 投资界 / 量子位</div>
+    <div class="title"><a href="https://news.pedaily.cn/202607/566534.shtml" target="_blank">昆仑万维宣布2026为「世界模型元年」，WAIC发布Matrix-Game 3.5全矩阵升级</a></div>
+    <div class="summary">7月19日WAIC期间，昆仑万维董事长方汉正式提出"2026是世界模型元年"的三大产业预判，并同步发布Matrix-Game 3.5世界模型、Mureka v9.5与O3音乐模型。方汉表示，世界模型是让AI从"理解语言"迈向"理解世界"的关键跃迁，昆仑万维已在天工AI上实现超8亿美元ARR的商业化验证。</div>
+    <div class="tags">
+      <span class="tag">#世界模型</span>
+      <span class="tag">#昆仑万维</span>
+      <span class="tag">#多模态</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">来源：量子位 / 晚点LatePost</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/07/450101.html" target="_blank">DeepSeek 估值4800亿火速开启新一轮融资，最快明年IPO</a></div>
+    <div class="summary">据量子位报道，DeepSeek正在以约4800亿元估值进行新一轮融资，距离上一轮500亿元融资仅过去六周。消息人士透露，DeepSeek已开始为2027年IPO做准备，最快今年底递交上市申请。此外，DeepSeek还秘密启动了自研推理芯片项目，并在内蒙古乌兰察布规划建设数据中心。</div>
+    <div class="tags">
+      <span class="tag">#融资</span>
+      <span class="tag">#IPO</span>
+      <span class="tag">#DeepSeek</span>
+    </div>
+  </div>
+</div>
+
+<!-- 具身智能与机器人 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能与机器人</div>
+
+  <div class="card">
+    <div class="source">来源：界面新闻 / 网易科技 / 机器之心</div>
+    <div class="title"><a href="https://www.163.com/tech/article/L24JPGSF00098IEO.html" target="_blank">智元远征A3 Ultra 摘得 WAIC 2026「镇馆之宝」，唯一获奖人形机器人</a></div>
+    <div class="summary">在WAIC 2026期间，智元机器人发布的全尺寸人形机器人远征A3 Ultra成功入选大会"镇馆之宝"，并成为10件获奖展品中唯一一款具身智能机器人。智元在WAIC现场展示了从技术研发到产线落地的完整路径，标志着中国具身智能从"秀Demo"正式迈向"部署态元年"。</div>
+    <div class="tags">
+      <span class="tag hot">智元</span>
+      <span class="tag">#人形机器人</span>
+      <span class="tag">#WAIC</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">来源：量子位 / 生腌小虾AI快讯</div>
+    <div class="title"><a href="https://vibex.iflow.cn/t/topic/6411" target="_blank">腾讯 WAIC 发布具身智能全栈方案，混元 Hy3 登顶 OpenRouter 全球调用量榜首</a></div>
+    <div class="summary">7月19日WAIC期间，腾讯一口气补齐机器人、办公、出海AI全能力。混元Hy3模型登顶OpenRouter全球调用量榜首，调用量暴涨68倍。腾讯发布了覆盖"大脑-小脑-本体"的具身智能全栈方案，并展示多个行业落地案例，标志着互联网巨头对具身智能赛道的全面加码。</div>
+    <div class="tags">
+      <span class="tag">#腾讯</span>
+      <span class="tag">#具身智能</span>
+      <span class="tag">#混元</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">来源：机器之心 / IT之家</div>
+    <div class="title"><a href="https://www.ithome.com/0/978/492.htm" target="_blank">硅谷预言家凯文·凯利 WAIC 演讲：未来个人智能体将比你更了解自己</a></div>
+    <div class="summary">《失控》作者凯文·凯利在WAIC 2026上发表演讲，描绘了AI Agent的未来图景。他预测，个人AI智能体将成为每个人的"数字孪生"，通过持续学习用户的行为模式与偏好，将在健康管理、职业决策等领域提供超越本人认知的建议。这与红杉xbench报告"Agent可处理60%以上日常任务"的结论高度吻合。</div>
+    <div class="tags">
+      <span class="tag">#AI Agent</span>
+      <span class="tag">#凯文·凯利</span>
+      <span class="tag">#观点</span>
+    </div>
+  </div>
+</div>
+
+<!-- 算力与基础设施 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">⚡</span>算力与基础设施</div>
+
+  <div class="card">
+    <div class="source">来源：量子位 / 界面新闻</div>
+    <div class="title"><a href="https://m.jiemian.com/article/13094612_sina.html" target="_blank">华为昇腾 950 超节点荣获 WAIC 2026 最高荣誉 SAIL 奖，国产算力里程碑</a></div>
+    <div class="summary">华为Atlas 950 SuperPoD超节点斩获WAIC 2026 SAIL大奖，这是国产AI芯片在WAIC最高奖项的历史性突破。本届WAIC上，国产算力厂商集体亮相，从"万卡集群"能力展示到超节点、光互连等新技术路线的探索，标志着国产算力正从"可用"走向"好用"，在高端AI训练芯片赛道加速追赶国际巨头。</div>
+    <div class="tags">
+      <span class="tag hot">华为</span>
+      <span class="tag">#国产算力</span>
+      <span class="tag">#昇腾950</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">来源：量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/07/453705.html" target="_blank">后摩智能 M50 Inside 终端亮相 WAIC，端侧大模型加速落地</a></div>
+    <div class="summary">后摩智能在WAIC 2026上集中展示了多款搭载M50芯片的AI终端产品，让大模型从云端真正走向本地运行。M50支持在端侧运行数十亿参数的大模型，覆盖数字人、智能座舱、工业检测等场景。端侧AI被视为2026年下半年最重要的产业趋势之一，也是国产AI芯片"换道超车"的关键赛道。</div>
+    <div class="tags">
+      <span class="tag">#端侧AI</span>
+      <span class="tag">#芯片</span>
+      <span class="tag">#后摩智能</span>
+    </div>
+  </div>
+</div>
+
+<!-- 行业动态 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📊</span>行业动态与产品</div>
+
+  <div class="card">
+    <div class="source">来源：晚点LatePost</div>
+    <div class="title"><a href="https://www.163.com/dy/article/L22ST2EA0531M1CO.html" target="_blank">晚点独家：新豆包手机备货数十万台，AI 不再硬操作头部应用</a></div>
+    <div class="summary">晚点LatePost独家报道，字节跳动旗下豆包团队已为新款豆包手机备货数十万台。这款AI手机不再依赖"硬操作"头部应用的方式实现智能，而是通过深度系统级整合实现更自然的AI交互体验。报道指出，AI手机的竞争逻辑正在从"能操控多少App"转向"能多自然地理解用户意图"。</div>
+    <div class="tags">
+      <span class="tag">#AI手机</span>
+      <span class="tag">#字节跳动</span>
+      <span class="tag">#豆包</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">来源：电商报 / 36氪</div>
+    <div class="title"><a href="https://www.yilantop.com/news/99270" target="_blank">京东 JoyAI 模型矩阵亮相 WAIC，首次系统展示面向物理世界的 AI 布局</a></div>
+    <div class="summary">京东在WAIC 2026上首次系统展示了面向物理世界的JoyAI模型矩阵，覆盖供应链、物流、零售等核心场景，并开源了行业最大人类视角数据集。京东还打造了首个JoyInside"AI Home"概念体验区，展示了AI如何重塑家庭消费与生活服务场景。</div>
+    <div class="tags">
+      <span class="tag">#京东</span>
+      <span class="tag">#物理AI</span>
+      <span class="tag">#开源</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">来源：Datawhale / 上海交大新闻网 / 赛博禅心</div>
+    <div class="title"><a href="https://news.sjtu.edu.cn/jdyw/20260720/224795.html" target="_blank">交大安泰、商汤科技与 Datawhale 共建 OPC 人才孵化中心，启动「百业千企共建计划」</a></div>
+    <div class="summary">WAIC 2026期间，上海交通大学安泰经管学院、商汤科技与Datawhale共同宣布成立OPC人才孵化中心，同步启动"百业千企共建计划"。这是国内首个由顶尖高校、AI企业和开源社区联合发起的AI人才培养平台，旨在弥合AI产业人才缺口。赛博禅心同期引用的红杉xbench报告也显示，Agent已能处理104项日常任务中60%以上的工作，人才需求结构正发生根本性转变。</div>
+    <div class="tags">
+      <span class="tag">#人才培养</span>
+      <span class="tag">#Datawhale</span>
+      <span class="tag">#商汤</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+    2026年WAIC的闭幕，宣告了AI行业一个时代的终结与新纪元的开启。本届大会最鲜明的信号是：持续三年的"大模型参数军备竞赛"已彻底熄火，AI全面进入工业化部署阶段——351款产品首发、超200亿意向成交额就是最好的注脚。与此同时，DeepSeek V4满血版即将发布和Kimi K3引发的OpenAI"减速主义"之辩，揭示了中国AI大模型正从追随者转变为全球开源生态的定义者。具身智能方面，智元远征A3 Ultra的"镇馆之宝"地位与腾讯、华为等巨头的集体入局，表明2026年下半年将是"部署态元年"——机器人不再是实验室里的Demo，而是真正走进了工厂、药房和街头。整体来看，"落地"与"开源"已成为中国AI的两大关键词，全球AI竞争正在从硅谷单极走向中美双极的新格局。
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026年07月21日</p>
+</div>
+
+</div>
+</body>
+</html>

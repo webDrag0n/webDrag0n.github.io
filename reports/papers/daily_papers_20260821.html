@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年08月21日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年08月21日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今天的头号主角是 <strong>「自我博弈（Self-Play）」</strong>——SPADE 让一个 LLM 自己写环境、自己在里面练，把「课程设计」也交给模型，天团阵容（Yejin Choi、Natasha Jaques、Luke Zettlemoyer 等）坐镇；具身智能这边 NVIDIA 的 <strong>ADEPT</strong> 用大规模 RL 让机械手从原始视觉-触觉直接学灵巧操作并 sim-to-real。蒸馏赛道也有新料：<strong>GC-OPD</strong> 揪出长上下文里「教师监督」和「验证器」打架的问题。开源侧 Cursor 正式开放<strong>插件规范</strong>，腾讯甩出 <strong>AI-Infra-Guard</strong> 红队平台，Agent 生态继续往「安全」「插件化」上卷。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 Self-Play 强化学习 · 让模型给自己出题</div>
+    <div class="card">
+      <div class="source">arXiv 2608.19197 · SPADE · Google DeepMind / UW / Allen AI 等</div>
+      <div class="title"><a href="https://arxiv.org/abs/2608.19197">SPADE: Self-Play in Adaptive Synthetic Executable Environments</a></div>
+      <div class="summary">持续自我提升需要「源源不断、多样化、可自适应」的目标。SPADE 用一个 LLM 分饰两角：一个是「环境设计师」，写出带 OpenAI Gym 风格 reset()/step() 接口的完整长程可执行环境（含状态转移、奖励函数、验证代码）；另一个是「推理智能体」，在这些环境里学习行动。设计师用「智能体拿不拿特权提示的奖励差」来估计 regret，并优化这个信号，持续生成卡在智能体能力边界、又保持可解的环境——一份代码接口同时覆盖推理题和多步智能体工具使用，真正做到「模型自己给自己出题、自己卷自己」。</div>
+      <div class="tags"><span class="tag hot">Self-Play</span><span class="tag">强化学习</span><span class="tag">LLM Agent</span></div>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 具身智能 · 灵巧操作 sim-to-real</div>
+    <div class="card">
+      <div class="source">arXiv 2608.19182 · ADEPT · NVIDIA / UMich</div>
+      <div class="title"><a href="https://arxiv.org/abs/2608.19182">ADEPT: Accelerating Dexterity via Pre-Training and Post-Training using RL</a></div>
+      <div class="summary">高自由度机械手的灵巧操作一向是具身智能的硬骨头。ADEPT 是一个大规模强化学习框架，直接从原始视觉-触觉感知学习可 sim-to-real 的灵巧操作，解决长程任务。先在通用「物体重摆放」任务上预训练，再用这套预训练行为做先验做下游后训练——既能让多指机器人发现「从头学根本学不出来」的新行为，又不必每个新任务都重学一遍技能。关键在稳定的后训练配方（行为克隆蒸馏 + critic 预热 + 保守 on-policy 更新）防止迁移时预训练能力退化，还引入关节空间 Geometric Fabric 安全释放完整运动学灵巧度。</div>
+      <div class="tags"><span class="tag hot">具身智能</span><span class="tag">灵巧操作</span><span class="tag">Sim-to-Real</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型与强化学习</div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.19181 · GC-OPD · 长上下文蒸馏</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.19181">Beyond Teacher Likelihood: Group-Calibrated On-Policy Distillation for Long-Context Reasoning</a></div>
+    <div class="summary">长上下文任务里，token 级的教师监督会偏爱「局部合理、却漏掉分散在输入里的证据」的回答，与验证器奖励渐行渐远——作者在两类证据聚合任务上确认：输入越长，轨迹级 OPD 分数和验证器奖励的错位越严重。GC-OPD 在每组 rollout 内分别归一化验证器奖励与轨迹级分数，把差值当作带符号的「师生分歧残差」，再用基于相对优势的信用分配（RACA）把残差分摊到每个 token，让蒸馏真正对齐「任务是否完成」而非「这句话看着顺不顺」。</div>
+    <div class="tags"><span class="tag">蒸馏</span><span class="tag">长上下文</span><span class="tag">推理</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.17253 · Co-RL · HuggingFace 精选</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.17253">Co-RL: Unsupervised Reasoning Emerges from Diverse Cohort in Multi-agent RL</a></div>
+    <div class="summary">RL 训练推理最成功的地方仍高度依赖「可验证奖励」这类 ground-truth 监督，而标注又贵又难（能力越强越难人工评估）。自奖励 RL 能摆脱标注，却容易强化自身偏见、导致响应同质化甚至训练崩溃。Co-RL 换个思路：让多个不共享参数、彼此解耦的模型同时用 RL 优化，奖励来自「同伴」，即从多样化的同伴群体中协作训练。结果显示，无需外部监督，推理能力就能在这样一个多样化 cohort 里涌现，同时规避了单模型自奖励的退化问题。</div>
+    <div class="tags"><span class="tag">多智能体 RL</span><span class="tag">无监督推理</span><span class="tag">涌现</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能与世界模型</div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.16590 · Zetta ζ · HuggingFace 精选</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.16590">Zetta ζ: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence</a></div>
+    <div class="summary">现有具身智能体 harness 大多是「开环」——rollout 时按固定技能执行，等一整局结束才反思。可物理交互要求决策跟上快速变化的机器人-环境状态，事后反思根本来不及。Zetta 用三条时间尺度分离的闭环，在基座策略冻结的前提下在线进化「代码化的运行时 critic 与恢复技能」：动作频率级治理、rollout 级 critic 恢复提议、验证门控的技能更新，配合把智能体逻辑与异构执行资源解耦的 Z-Infra 基础设施，在 LIBERO-Pro 等基准登顶 SOTA。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">闭环学习</span><span class="tag">Agent Harness</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.19085 · DA-WAM · 自动驾驶世界模型</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.19085">DA-WAM: Decision-Aligned Future Latents for Driving World Models</a></div>
+    <div class="summary">自动驾驶世界模型的未来预测，光「准」不够，还得「能指导决策」——预测出的未来要直接决定选哪条轨迹。现有方法要么把未来表征学习和规划优化拆开，要么让不同候选轨迹共享预测状态，稀释了「动作特定后果」本应提供的选择依据。DA-WAM 把预测表征学习、动作条件未来建模、轨迹打分统一到同一个决策目标下，为每条候选轨迹生成独立的未来隐状态再打分，让「预测的未来」真正和「要做的决策」对齐。</div>
+    <div class="tags"><span class="tag">世界模型</span><span class="tag">自动驾驶</span><span class="tag">MPC</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🎬</span>多模态与生成</div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.17426 · SemComp-Bench · USTC · HuggingFace 精选</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.17426">SemComp-Bench: Benchmarking Semantic Task Completion in Video Generation</a></div>
+    <div class="summary">提出「结果导向的视频生成」新任务设定：成功既要<strong>达成预期结果</strong>，又要满足<strong>语义 grounding</strong>（生成结果与参考图在高层语义上的对应）。与传统「画面一致性」评测不同，它只看「生成的结果」成没成事，不要求完整复现中间步骤、也不要求外观和参考图逐帧一致——为「让视频生成真正完成任务」立了把更务实的尺子。</div>
+    <div class="tags"><span class="tag">视频生成</span><span class="tag">Benchmark</span><span class="tag">多模态</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔓</span>开源与安全</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · Cursor / Tencent / Agent Substrate</div>
+    <div class="title"><a href="https://github.com/cursor/plugins">cursor/plugins: Cursor 官方插件规范与插件库</a></div>
+    <div class="summary">今日 GitHub 热榜新面孔不少：<strong>cursor/plugins</strong> 正式公开 Cursor 插件规范与官方插件，编辑器生态要「开插件市场」了；腾讯的 <strong>AI-Infra-Guard</strong> 是一套全栈 AI 红队平台（Agent 扫描 + Skill 扫描），把大模型安全评估做成工程化流水线；<strong>agent-substrate/substrate</strong> 用 Go 写了一套 Agent 底层「基板」系统；<strong>akitaonrails/ai-memory</strong> 则专攻编码 Agent 的长期记忆与交接。Agent 生态正往「插件化」「红队安全」「持久记忆」三个方向同时发力。</div>
+    <div class="tags"><span class="tag hot">GitHub 热门</span><span class="tag">Agent 插件</span><span class="tag">AI 安全</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>今天最让我眼前一亮的，是 SPADE 那份「让模型自己给自己出题」的巧思——以前做自我提升，环境的「课程」得靠人手工挑、或静态合成、或冻结在验证器里，能力一涨课程就跟不上了。SPADE 干脆让同一个模型既当出题人又当考生，用 regret 信号把题目精准卡在「刚会又不会」的边界上。这套「自适应课程」的思路，我觉得会是 agentic RL 下一波的关键词。另一头，NVIDIA 的 ADEPT 和 Zetta 让我看到具身智能在悄悄换打法：一个用大规模预训练 + 稳定后训练把灵巧操作 sim-to-real 落地，一个用「闭环 harness」让物理智能体边执行边进化——不再是「训一个策略跑到底」，而是「策略 + 会反思的框架」一起上。蒸馏那两篇也提醒我们，token 级教师信号在长上下文里其实会「骗」学生，得拿验证器来校准。倒是 GitHub 那边，Cursor 开插件规范、腾讯做 AI 红队，说明大家都在往「更安全、更可扩展的 Agent 基础设施」上补课。进步是真的快，但越往后，「自我博弈」和「闭环进化」会不会成为标配，咱们走着瞧~</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026年08月21日</p>
+</div>
+
+</div>
+</body>
+</html>

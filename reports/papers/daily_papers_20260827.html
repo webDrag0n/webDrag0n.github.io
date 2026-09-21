@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年08月27日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年08月27日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今天的焦点集中在<strong>扩散语言模型走向服务化</strong>与<strong>世界模型的表征本质</strong>：Serving Masked Diffusion LLMs 首次在真实硬件上刻画 dLLM 服务行为，Platonic 表征假说与 LAWA 则分别从"表征"与"机器人动作"两端深挖世界模型。此外，AI 智能体的"人在回路"困境、AQLoRA 零搜索量化微调、LAION 1000 万小时开源视频数据集也各有看点。共精选 8 条，覆盖大模型、多模态、开源与具身智能四大方向。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+
+  <div class="card hot-topic">
+    <div class="label">🔥 热点 · LLM / 推理服务</div>
+    <div class="source">arXiv · cs.AI · 2026-08-26</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.23807" target="_blank">Serving Masked Diffusion LLMs: Characterization and Design Principles from Real Hardware</a></div>
+    <div class="summary">掩码扩散语言模型（dLLM）理论上能一次性并行去噪多个 token、比自回归更快，但现有服务系统都没先测量过它们在真实并发负载下的行为，很可能照搬了并不成立的自回归假设。作者用 LLaDA-8B + D2F LoRA 在单张 H200 上实测，发现请求"难度"（所需去噪步数）是离散的 11 档、且生成开始前无法预测，并据此给出了 dLLM 服务系统的设计原则。</div>
+    <div class="tags"><span class="tag hot">热点</span><span class="tag">LLM 推理</span><span class="tag">扩散模型</span><span class="tag">服务系统</span></div>
+  </div>
+
+  <div class="card hot-topic">
+    <div class="label">🔥 热点 · AI 安全 / 智能体</div>
+    <div class="source">arXiv · cs.AI · 2026-08-26 · 立场论文</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.23642" target="_blank">AI Agents Push Humans Out of the Loop</a></div>
+    <div class="summary">随着智能体自主性提升，"人在回路"常被当成安全兜底，但这篇立场论文直指要害：当前的智能体设计不仅阻碍有效人工监督，长期使用 AI 本身也在削弱监督者所需的认知能力。作者主张把"监督者的人类需求"提到与"智能体能力"同等优先级，而非事后补一道人工审核。</div>
+    <div class="tags"><span class="tag hot">热点</span><span class="tag">AI 安全</span><span class="tag">智能体</span><span class="tag">人机协同</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 / LLM</div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.LG · 2026-08-26 · 开源配方</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.23816" target="_blank">AQLoRA: A Zero-Search Recipe for Fast Quantized LoRA Fine-Tuning</a></div>
+    <div class="summary">QLoRA 省显存但不省时间——每次都要把 4-bit 权重现场反量化，反而比 fp16 LoRA 更慢。AQLoRA 给出"零搜索"配方：一次 CPU 遍历按 NF4 重建误差给各层排序，把误差大的 top-K 层留在 fp16 以跳过反量化，无需搜索、也无需标定数据。速度模式下能精准复现 Unsloth 手工调优的 dynamic-4bit 选择，在 1.4B~14B 六个模型上平均提速约 11%。</div>
+    <div class="tags"><span class="tag">LLM 效率</span><span class="tag">量化</span><span class="tag">LoRA</span><span class="tag">微调</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CV · 2026-08-26</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.23720" target="_blank">Platonic Representation Hypothesis on World Models</a></div>
+    <div class="summary">世界模型学会了表征，但这些表征的本质一直是个黑盒。作者把"柏拉图表征假说"搬进世界模型，提出"预测一致性假设"：共享的状态转移目标会形成选择压力，让异构模型收敛到相似的隐结构。用 DINO-WM 换上不同视觉编码器做实验后，发现能力强的世界模型内部结构几何相似，甚至能跨模型拼接（stitching）而不损失太多性能。</div>
+    <div class="tags"><span class="tag">多模态</span><span class="tag">世界模型</span><span class="tag">表征学习</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态 / VLM</div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.LG / cs.AI · 2026-08-26</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.23646" target="_blank">MolEmb: Multimodal Large Language Models Can Be Strong Molecular Embedding Models</a></div>
+    <div class="summary">分子嵌入是计算化学与药物发现的基础设施，但现有编码器大多是围绕单一分子视角的专家模型，缺乏语言接口。MolEmb 直接让多模态大模型（MLLM）当"通用分子嵌入模型"：把分子谱图与文本描述在共享嵌入空间里用双向对比目标对齐，让嵌入能随自然语言语义上下文变化，用于性质预测、虚拟筛选与分子检索。</div>
+    <div class="tags"><span class="tag">多模态</span><span class="tag">AI4Science</span><span class="tag">分子表征</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily Papers · arXiv 2608.24845 · 2026-08-26</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.24845" target="_blank">LAION-BVD: A 10-Million-Hour Open Video Dataset for Multimodal Pre-training</a></div>
+    <div class="summary">LAION 放出 1000 万小时的开源视频数据集：从 CommonCrawl 收集 13 亿条视频 URL，下载 8 千万条视频，覆盖视频/音频/图像三模态预训练，并用内容感知的场景检测合成视频与音频字幕。用这些数据训练的模型在视频-文本、音频-文本基准上表现强劲，且随训练规模与模型规模提升稳定改善，开源规模史无前例。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">数据集</span><span class="tag">多模态预训练</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能 / 机器人</div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.RO · 2026-08-26</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.24882" target="_blank">Latent Action as Intention Enables Efficient Future Imagination for World Action Models</a></div>
+    <div class="summary">世界动作模型（WAM）靠"想象未来观测"来控制机器人，但测试时生成未来帧太慢；去掉这步的 Fast-WAM 又掉泛化。作者提出 LAWA：用紧凑的"隐动作"作为未来意图的操作化表示，测试时省略未来视频分支。在 RoboCasa 上 few-shot 65.6%、全量 80.8% 刷新 SOTA，且比 Joint-WAM 快 42.9% 的推理延迟，在 LIBERO-Plus 与真实任务上也有不错表现。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">世界模型</span><span class="tag">机器人</span><span class="tag">VLA</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📦</span>开源 / 社区</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · ⭐125 · 2026-08-23 新建</div>
+    <div class="title"><a href="https://github.com/itshen/source-reading-methodology" target="_blank">itshen/source-reading-methodology — 带 AI 精读大型开源仓库</a></div>
+    <div class="summary">一个中文方法论仓库：用 AI 精读大型开源仓库的四阶段流程、可复用模板与 28 条踩坑清单，核心是让每一个技术论断都能回溯到源码的具体行。上线 4 天拿下 125 星，是把 LLM 用于源码级代码审阅的实用手册，对追大型开源项目的人尤其友好。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">GitHub</span><span class="tag">代码审阅</span><span class="tag">方法论</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>今天有两条暗线挺有意思：一是<strong>扩散语言模型从"训练"走向"服务"</strong>——Serving Masked Diffusion LLMs 首次在真机上看清 dLLM 的负载行为，说明这个方向正在从学术走向工程落地；二是<strong>世界模型在两端同时被深挖</strong>——表征层面有人问"它到底学到了什么"（Platonic 假说），动作层面有人做"怎么让想象又快又准"（LAWA）。另外 <strong>LAION-BVD</strong> 一口气放出 1000 万小时开源视频，喂给多模态预训练的价值很大，值得关注。顺带一提，今天还有 MoTE（视频理解的任务专家路由）、MARS（竞赛编程多专家接力）以及面向 Hermes 的多 harness 编排项目 hermes-conductor 也都在冒头，感兴趣可以点开看看～</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-27</p>
+</div>
+
+</div>
+</body>
+</html>

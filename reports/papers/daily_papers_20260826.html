@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年08月26日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年08月26日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今天的焦点集中在<strong>智能体强化学习</strong>与<strong>机器人时序建模</strong>：Prime Agent 带来开源自改进 RL 框架，WorldToken 为机器人模仿学习提出"时间优先"的序列建模；连续流式语言模型、VLM 时序一致性、4-bit 量化修复等话题也各有新进展。共精选 8 条，覆盖大模型、多模态、开源与具身智能四大方向。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+
+  <div class="card hot-topic">
+    <div class="label">🔥 热点 · LLM / 智能体</div>
+    <div class="source">arXiv · cs.AI · 2026-08-24 · 开源</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.23552" target="_blank">Prime Agent: A Self-Improving RLM Harness</a></div>
+    <div class="summary">语言模型本质是顺序处理器，但长时程智能体任务需要超出模型权重与上下文的额外信息与计算。Prime Agent 是一个开源的自改进 RLM（强化学习机器）训练框架，通过整合外部信息与计算，让模型在长程任务中持续自我改进，为 agentic RL 提供了一个可复现的训练底座。</div>
+    <div class="tags"><span class="tag hot">热点</span><span class="tag">LLM</span><span class="tag">智能体</span><span class="tag">开源</span><span class="tag">强化学习</span></div>
+  </div>
+
+  <div class="card hot-topic">
+    <div class="label">🔥 热点 · 具身智能 / 机器人</div>
+    <div class="source">HuggingFace Daily Papers · arXiv 2608.22591 · 2026-08-25</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.22591" target="_blank">WorldToken: Time-First Sequence Modeling for Robotic Imitation Learning</a></div>
+    <div class="summary">把机器人异构观测（多视角、多模态、多来源）融合成"每时间步一个 world token"，再用因果 Transformer + diffusion 动作头统一处理。论文在 RoboCasa 与 RMBench 上做了 scaling 与时序上下文分析，为机器人模仿学习提供了一种"时间优先"的新序列建模范式。</div>
+    <div class="tags"><span class="tag hot">热点</span><span class="tag">具身智能</span><span class="tag">机器人</span><span class="tag">模仿学习</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 / LLM</div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.LG / cs.CL · 2026-08-24</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.23566" target="_blank">How to Train a Critic Stably and Efficiently</a></div>
+    <div class="summary">GRPO 等基于组的强化学习方法通过为每个 prompt 采样多个响应来避免训练 critic，但一个可靠的 critic 往往能带来更高的数据效率。作者提出一套稳定、高效训练 critic 的方法，有望显著提升 LLM 强化学习训练的效率与稳定性。</div>
+    <div class="tags"><span class="tag">LLM</span><span class="tag">强化学习</span><span class="tag">GRPO</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.LG · 2026-08-24</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.23551" target="_blank">ConvergeFlow: Language Flow with Provable Convergence to Token Embeddings</a></div>
+    <div class="summary">连续扩散/流式语言模型已能达到与离散 LM 相当的性能，但现有连续框架仍缺乏收敛性保证。ConvergeFlow 提出一种可证明收敛到 token embedding 的语言流，为连续语言模型的训练提供了理论根基。</div>
+    <div class="tags"><span class="tag">LLM 架构</span><span class="tag">扩散模型</span><span class="tag">流匹配</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily Papers · arXiv 2608.20953</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.20953" target="_blank">Quantization-Aware Healing: A Practical Recipe for Recovering Compressed, 4-Bit LLMs</a></div>
+    <div class="summary">针对 4-bit 量化后模型性能下降的问题，作者提出"量化感知修复"（Quantization-Aware Healing）：直接从原始未压缩模型蒸馏，比量化感知训练更快、更稳地恢复压缩模型的性能，为低比特 LLM 部署提供了一条实用路径。</div>
+    <div class="tags"><span class="tag">LLM 效率</span><span class="tag">量化</span><span class="tag">开源</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态 / VLM / 3D</div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CL / cs.CV · 2026-08-24</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.23474" target="_blank">What's the Catch? Evaluating Temporal Consistency in Vision-Language Models</a></div>
+    <div class="summary">VLM 在视频与图像序列基准上表现强劲，但它们是否真正理解了时序结构仍存疑。论文系统研究了 VLM 的时序一致性，揭示了现有模型在时间推理上的短板——很多"时间理解"其实只是表面捷径。</div>
+    <div class="tags"><span class="tag">多模态</span><span class="tag">VLM</span><span class="tag">视频理解</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CV · 2026-08-24</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.23549" target="_blank">FixAnything: 3D-Consistent Rendering Refinement via Video Generative Priors</a></div>
+    <div class="summary">用视频生成先验来修复 3D 场景表示（3DGS / NeRF / mesh / 点云）渲染中的伪影，实现 3D 一致的渲染细化。无论底层是哪种表示，都能用统一的生成先验把质量拉上去，对 3D 重建与渲染是个很实用的补充。</div>
+    <div class="tags"><span class="tag">多模态</span><span class="tag">3D 渲染</span><span class="tag">视频生成</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能 / 机器人</div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.RO / cs.CV · 2026-08-24</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.23478" target="_blank">Act with Intent: Distilling Behavior Intent for Vision-Language-Action Models</a></div>
+    <div class="summary">VLA 模型的动作用行为克隆训练，往往只监督"做什么动作"而不解释"为什么"。作者提出蒸馏行为意图，让机器人动作解码器学会更鲁棒、可泛化的策略，为 VLA 的训练信号补上了缺失的一环。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">VLA</span><span class="tag">机器人</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📦</span>开源 / 社区</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · ⭐333 · 2026-08</div>
+    <div class="title"><a href="https://github.com/rome-os/rome" target="_blank">rome-os/rome — the agentic OS</a></div>
+    <div class="summary">本周 GitHub AI 话题热度第一的仓库，自我定位为"智能体操作系统"（agentic OS）。以操作系统为隐喻来组织智能体能力，是开源社区对 agentic 基础设施的又一探索方向，值得持续关注。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">Agent</span><span class="tag">操作系统</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>今天最值得留意的一条主线是：<strong>智能体与机器人在"时间维度"上同时被重新审视</strong>——Prime Agent 想让模型在长时程任务里自我改进，WorldToken 则把机器人观测按"时间步"重新组织。另一个有意思的信号是<strong>连续流式语言模型</strong>开始补理论课了（ConvergeFlow 给出可证明收敛），说明这个方向正从"能用"走向"可解释"。如果你在跟进开源，Rome 的"agentic OS"定位和 4-bit 量化修复的实用配方都挺值得点开看看～</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-26</p>
+</div>
+
+</div>
+</body>
+</html>

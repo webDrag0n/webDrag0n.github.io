@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年08月29日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<!--
+  TEMPLATE STRUCTURE:
+  Replace {{PLACEHOLDERS}} with actual content.
+  
+  Sections:
+  - .header: icon, title, date, subtitle
+  - .summary-banner: one-paragraph overview of today's hot topics
+  - .section: grouped news (Headlines / Research / Industry / Open Source)
+  - .card: individual news item (source, title link, summary, tags)
+  - .hot-topic: highlighted breaking news
+  - .insights: editorial summary
+  - .footer: generation info
+-->
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年08月29日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>世界模型成为今日绝对主角——从“用游戏开发当可验证数据引擎”到“概率对齐基准 PAWBench”，从跨具身物理模拟器 CLAP 到 30Hz 实时 VLA 推理，世界模型正从“生成视频”走向“可验证、可部署”。大模型推理方向，TTPO 把测试时训练推向无标签场景，进化策略 ES 被发现推理覆盖度优于 GRPO。开源侧最亮眼的是清华 Puro-2B：不到 5000 美元在消费级显卡上训练出媲美 Qwen 的模型，让“穷实验室预训练”成为现实。</p>
+</div>
+
+<!-- 🔥 今日热点 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · 世界模型数据引擎</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">arXiv 2608.25518 · HuggingFace Daily Papers</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;"><a href="https://arxiv.org/abs/2608.25518" target="_blank" style="color:var(--accent);text-decoration:none;">Agentic Game Development as a Verifiable Trajectory Data Engine for Scaling World Models</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">作者提出，仅靠“更多爬取视频 + 更多算力”来扩展世界模型是低效的：真正需要的是一个能提供有据可查奖励信号的“递归数据引擎”。本文让 AI 智能体自动开发游戏，把可验证的游戏轨迹作为世界模型的训练数据——把“代码可执行 → 可验证奖励”的思路迁移到游戏/世界模型领域，为世界模型的大规模扩展提供了一条新路线。</div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag hot">HF 118↑</span>
+<span class="tag">World Models</span>
+<span class="tag">Agentic Data</span>
+<span class="tag">合成数据</span></div>
+  </div>
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · 开源预训练</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">arXiv 2608.27370 · 清华 PACMAN 实验室</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;"><a href="https://arxiv.org/abs/2608.27370" target="_blank" style="color:var(--accent);text-decoration:none;">Puro-2B: Poor Lab's Qwen2-1.5B Trained on RTX 5090 within $5090</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">清华 PACMAN 实验室开源了一套“穷实验室也能玩”的预训练配方：在消费级 RTX 5090 上用 FP8 精度从零训练 1.4 万亿 token，总成本不到 6900 美元，性能逼近 Qwen2.5-1.5B。更推出“Puro 成本缩放定律”，估算只需约 4400 美元即可追平 Qwen2-1.5B。数据、代码、权重全部 Apache 2.0 开源。</div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag hot">开源</span>
+<span class="tag">预训练</span>
+<span class="tag">RTX 5090</span>
+<span class="tag">成本缩放定律</span></div>
+  </div>
+</div>
+<!-- 🧠 大模型 &amp; 推理 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 &amp; 推理</div>
+  <div class="card">
+    <div class="source">arXiv 2608.27448 · HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.27448" target="_blank">TTPO: Test-Time Policy Optimization</a></div>
+    <div class="summary">现有 RL / 自蒸馏等后训练方法依赖真值标签，无法做测试时训练（TTT）。TTPO 提出用“多数投票伪标签”替代真值，并针对“伪标签错误会污染教师”的脆弱性设计非对称目标：对一致 rollout 做蒸馏、对不一致 rollout 做 Grouped RL 惩罚。在无标签条件下追平有监督 OPSD，把 Qwen3-1.7B 的 TTT 成绩从 38.0% 提到 45.2%。</div>
+    <div class="tags"><span class="tag">测试时训练</span>
+<span class="tag">RL</span>
+<span class="tag">推理</span>
+<span class="tag">HF 63↑</span></div>
+  </div>
+</div>
+<!-- 🌍 具身智能 &amp; 世界模型 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🌍</span>具身智能 &amp; 世界模型</div>
+  <div class="card">
+    <div class="source">arXiv 2608.27406 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.27406" target="_blank">CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators</a></div>
+    <div class="summary">现有动作条件视频模型通常局限于单一机器人形态，无法利用海量异构视频。CLAP 提出跨具身动作条件视频生成框架，用末端执行器位姿、语言指令和隐式动作统一不同平台的动作空间，并采用课程学习先学物理先验、再接地到具体动作，实现零样本部署。在 DROID 等基准上逼近甚至超越单具身 SOTA，代码与模型全面开源。</div>
+    <div class="tags"><span class="tag">世界模型</span>
+<span class="tag">跨具身</span>
+<span class="tag">零样本</span>
+<span class="tag">开源</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2608.27384 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.27384" target="_blank">FlashVLA: Streaming Action Decoding for Fast and Asynchronous VLA Inference</a></div>
+    <div class="summary">VLA 模型落地被“推理延迟高 + 异步执行不稳定”卡脖子，流匹配类 VLA 尤甚。FlashVLA 用“流式动作缓冲 + 分块因果注意力”统一解决两者：每步推理产出一个可执行动作块，单卡即可实现 ≥30Hz 控制频率，并保持动作时序连续性，在仿真和真机上都有显著提速。</div>
+    <div class="tags"><span class="tag">VLA</span>
+<span class="tag">机器人</span>
+<span class="tag">实时推理</span>
+<span class="tag">流式解码</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2608.27345 · HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.27345" target="_blank">PAWBench: How Far Are We from Probabilistically Aligned World Modeling?</a></div>
+    <div class="summary">世界模型不仅要生成“合理”的轨迹，还要还原同一初始条件下可能结果的“分布”。PAWBench 首次把“概率对齐”形式化为世界模型的分布判据，用 PAWEval 把重复视频 rollout 转成物理行为的经验分布，在 50 个场景、11 个系统上测评——发现没有一个模型能稳定匹配参考概率并覆盖有效行为范围。</div>
+    <div class="tags"><span class="tag">世界模型</span>
+<span class="tag">概率对齐</span>
+<span class="tag">基准</span>
+<span class="tag">HF 73↑</span></div>
+  </div>
+</div>
+<!-- 👁️ 多模态 &amp; 开源生态 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态 &amp; 开源生态</div>
+  <div class="card">
+    <div class="source">arXiv 2608.27456 · HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.27456" target="_blank">UrbanGround: From Local Perception to Spatial Agency in a Real-Scale City</a></div>
+    <div class="summary">用香港全域 3D 地理数据搭建了一个物理约束的沙盒城市，让 MLLM 智能体以第一人称视角进入真实比例的城市探索导航。研究发现当前 MLLM 在视觉识别和短程空间推理上表现尚可，但方向感、行人感知、长距离导航仍不可靠——局部能力难以组合成持续的、目标导向的探索行为。</div>
+    <div class="tags"><span class="tag">多模态</span>
+<span class="tag">空间智能</span>
+<span class="tag">具身导航</span>
+<span class="tag">HF 69↑</span></div>
+  </div>
+  <div class="card">
+    <div class="source">GitHub Trending · OpenAI</div>
+    <div class="title"><a href="https://github.com/openai/codex" target="_blank">openai/codex：终端里的轻量编码智能体，周增 9.1k stars</a></div>
+    <div class="summary">OpenAI 的轻量级终端编码智能体（Rust 编写）本周登上 GitHub Trending 榜首，周增 9.1k stars。同期 Anthropic 社区插件市场（claude-plugins-community，2.2k stars）与各类 agent skills 仓库（archify、VoltAgent 等）同步升温，编码智能体生态正快速走向插件化、开源化。</div>
+    <div class="tags"><span class="tag">开源</span>
+<span class="tag">编码智能体</span>
+<span class="tag">CLI</span>
+<span class="tag">GitHub Trending</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>今天的 AI 圈明显在朝“世界模型”这条主线聚拢。最打动我的是 Puro-2B——清华团队用一块 RTX 5090、不到 7000 美元就训练出逼近 Qwen2.5 的模型，还给出了“成本缩放定律”，说明小团队也有机会参与基座模型的竞争。世界模型这边，CLAP 跨具身、FlashVLA 30Hz 实时、PAWBench 概率对齐，都在回答同一个问题：怎么让“会看视频的模型”真正变成“能在真实世界行动的智能体”。而“用游戏开发当数据引擎”这篇拿下 118 个赞，则暗示了一个趋势——可验证、可执行的合成数据，正在取代“无脑爬视频”成为训练世界模型的新范式。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-29 08:10</p>
+</div>
+
+</div>
+</body>
+</html>

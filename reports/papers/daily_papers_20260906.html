@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年09月06日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<!--
+  TEMPLATE STRUCTURE:
+  Replace {{PLACEHOLDERS}} with actual content.
+  
+  Sections:
+  - .header: icon, title, date, subtitle
+  - .summary-banner: one-paragraph overview of today's hot topics
+  - .section: grouped news (Headlines / Research / Industry / Open Source)
+  - .card: individual news item (source, title link, summary, tags)
+  - .hot-topic: highlighted breaking news
+  - .insights: editorial summary
+  - .footer: generation info
+-->
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年09月06日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今天是周日，arXiv 进入周末静默期（新论文要等周一才恢复上新），所以今天的信号主要来自 HuggingFace Daily Papers 的滚动榜单和 GitHub Trending。机器人侧 RoboTok（HF 76↑）把「互联网视频」变成机械手灵巧操作的训练数据——通过 3D 手部轨迹的隐空间检索，让海量人类示范能被持续索引、持续喂养下游策略；LLM 侧 Rethinking On-Policy Distillation II（HF 74↑）抛出一个反直觉结论：蒸馏其实是「数据过剩、算法吃不饱」，单条样本就能恢复大部分收益。开源侧 reverify 继续攀升到 ★923，awesome 主仓库依旧静默。</p>
+</div>
+
+<!-- 🔥 今日热点 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · 具身智能</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">arXiv 2609.03199 · HuggingFace Daily Papers · HF 76↑</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;"><a href="https://arxiv.org/abs/2609.03199" target="_blank" style="color:var(--accent);text-decoration:none;">RoboTok: An Internet-Scale Data Engine for Human Demonstration Retrieval and Dexterous Manipulation Learning</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">机器人学习越来越依赖海量多样的示范数据，但采集成本高、又难以覆盖真实任务的长尾。RoboTok 提出一个「互联网级数据引擎」：给定一段人类操作视频，就能从海量网络视频里检索出可用的操作示范来训练灵巧操作策略。核心是一个隐式运动空间——从 3D 手部轨迹（以演员中心参考系估计）学出，让操作行为在相机视角、场景外观、演员遮挡等变化下仍可比较，同时足够紧凑，支持在互联网规模视频集合上持续索引与检索。实验表明 RoboTok 检索到的示范更相关、下游任务成功率也更高，把「手部姿态轨迹感知检索」做成了让网络视频持续喂养机器人学习的新范式。</div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag hot">具身智能</span>
+<span class="tag hot">HF 76↑</span>
+<span class="tag">数据引擎</span>
+<span class="tag">灵巧操作</span></div>
+  </div>
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · LLM 蒸馏</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">arXiv 2609.04172 · HuggingFace Daily Papers · HF 74↑</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;"><a href="https://arxiv.org/abs/2609.04172" target="_blank" style="color:var(--accent);text-decoration:none;">Rethinking On-Policy Distillation of Large Language Models II: One Training Example</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">在线策略蒸馏（OPD）用学生自己生成的 rollout 配教师密集的 token 级监督。这篇续作把数据压到极限：只用单条 query 训练。结果是单样本 OPD 能持续提升数百步，并恢复全数据 OPD 的大部分增益（跨领域、跨模型家族通用）。机理是「状态覆盖」：单条 query 的 rollout 就能到达全数据 OPD 访问状态的 71.5%，16 条语义不同的 query 达到 98.9%、与全数据训练持平。结论很反直觉——OPD 是「数据过剩、算法吃不饱」：rollout 很快暴露了广覆盖的监督信号，但学生吸收这些信号越来越慢，真正的瓶颈在算法本身而非数据。</div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag hot">蒸馏</span>
+<span class="tag hot">HF 74↑</span>
+<span class="tag">数据效率</span>
+<span class="tag">在线策略</span></div>
+  </div>
+</div>
+<!-- 🧠 大模型 &amp; Agent -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 &amp; Agent</div>
+  <div class="card">
+    <div class="source">arXiv 2608.27831 · HuggingFace Daily Papers · HF 24↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.27831" target="_blank">RealSWE: A Compositional Evaluation of Coding Agents under Realistic User Requests</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">编码 agent 现在都在 SWE-bench 系上评估，但那些任务来自精心整理的 GitHub issue——又长、又结构化、信息量大。真实用户请求却通常又短又随意。这篇工作用一个「6 类信息 × 4 维语言风格」的分类框架量化了这个差距：88% 的真实 prompt 只带一句问题描述，而基准问题里这个比例只有 7%；87% 的真实 prompt 是口语化写法，基准里 94% 是正式体。据此他们构建了 RealSWE——381 个多变体任务族（同一任务、同一 gold patch，只改信息构成与语言风格）。评估 7 个当代 LLM 发现：真实化输入平均让解决率掉 6.4 个百分点，还会改变模型排名；「期望行为+动机」显著影响成绩，而「环境信息+复现步骤」只是加 token 没实际收益。</div>
+    <div class="tags"><span class="tag">编码 Agent</span>
+<span class="tag">评测</span>
+<span class="tag">SWE-bench</span>
+<span class="tag">HF 24↑</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2609.03293 · HuggingFace Daily Papers · HF 22↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.03293" target="_blank">PACE: Towards Surfacing Hidden Conflicts in User Requests</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">个性化助手不能只会照做，还得判断用户的请求在当前情境下是否合适。以往工作要么只顾准确执行，要么依赖显式给出的冲突因素——而现实里约束往往是隐式的，需要从知识库（KB）里自己挖出来。PACE 是一个评测数据集：把基于明确人设的用户请求和「自我中心」知识事实配对，要求模型结合上下文证据判断请求是否冲突，这种隐式检索设定让现有模型很难找准相关事实。作者还提出 PaceMaker 多 agent 框架，由专门 agent 协作完成查询改写、多跳图遍历和冲突感知过滤。</div>
+    <div class="tags"><span class="tag">对齐</span>
+<span class="tag">冲突检测</span>
+<span class="tag">多 Agent</span>
+<span class="tag">个性化助手</span></div>
+  </div>
+</div>
+<!-- 🤖 具身智能 &amp; 世界模型 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能 &amp; 世界模型</div>
+  <div class="card">
+    <div class="source">arXiv 2609.03153 · HuggingFace Daily Papers · HF 12↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.03153" target="_blank">VeriPhy: Agentic Physical Reasoning for World Model Evaluation and Refinement</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">生成视频「看着流畅」不等于「物理上可靠」，而一个标量质量分也说不清它到底违反了哪条物理约束、在哪一刻崩了。VeriPhy 是一套可审计的物理验证系统：纯文本 planner 先把 prompt 编译成带类型的物理义务和静态验证过的执行计划，执行时由观测结果把关、只调用冻结的低层专家（分割/跟踪/计数、11 种带类型的物理测量、深度、OCR、音频事件检测），每个动作返回一条带溯源证据的记录；再由带类型解析器和固定组合把可用记录映射到三值状态（支持/矛盾/未知，对外呈现为 plausible / implausible / abstain），每一条判定都能追溯到产生它的证据。在 1500 条人工标注语料上，149 条核心片段里的 304 条缺陷记录，VeriPhy 找出了 228 条，远超已发表的问题分解式评测器的 164 条。</div>
+    <div class="tags"><span class="tag">世界模型</span>
+<span class="tag">物理推理</span>
+<span class="tag">可审计</span>
+<span class="tag">视频生成</span></div>
+  </div>
+</div>
+<!-- 👁️ 多模态 &amp; 3D -->
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态 &amp; 3D</div>
+  <div class="card">
+    <div class="source">arXiv 2609.04034 · HuggingFace Daily Papers · HF 40↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.04034" target="_blank">Editable Visual Design</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">GPT-Image-2、Nano-Banana 这类扩散基座视觉表现力惊人，但端到端生成产出的是扁平位图、文字易错、没法分层后编辑；而用 Coding Agent 走代码路线的视觉生成虽能精确控布局、解耦图层，却缺乏整体审美直觉、复杂视觉资产也难写。这篇工作提出「可编辑视觉设计」新范式：把 VLM 当「创意大脑」（需求理解、任务规划、审美判断），把图像生成模型当按需调用的「视觉世界模拟器」，走「先想象、再动手」的闭环——生成孤立素材、写原生 HTML/CSS、再对照视觉渲染反馈迭代打磨；并用 Agent Design Replay 忠实复现人类设计师的创作推理轨迹。最终产出带解耦图层和真实文字的可编辑资产，用户能在 GUI 上直接拖拽调整布局。</div>
+    <div class="tags"><span class="tag">可编辑设计</span>
+<span class="tag">Coding Agent</span>
+<span class="tag">VLM</span>
+<span class="tag">HF 40↑</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2609.04201 · HuggingFace Daily Papers · HF 45↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.04201" target="_blank">Scal3R: Learning Efficient Multi-Relative Pose Query for Scalable Online 3D Reconstruction</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">在线 3D 重建在长视频上表现很差，因为回归相对固定首帧锚点的位姿会逼模型做远超训练分布的推演，小漂移累积成大塌缩。但作者观察到每帧深度始终稳定——骨架的局部几何没坏，只有全局位姿头崩了。Scal3R 据此把在线重建重构为「多参考相对位姿查询」：用约占 1% 参数的轻量可学习 token，通过非对称注意力注入完全冻结的骨架，相对多个历史关键帧查询位姿，再用带回环检测的在线位姿图优化抑制长程漂移。单卡 8 小时收敛，KITTI 上平均 ATE 降超 60%，并在 Virtual KITTI、Sintel、TUM-Dynamic、ScanNet、7-Scenes 上取得 SOTA。</div>
+    <div class="tags"><span class="tag">3D 重建</span>
+<span class="tag">位姿查询</span>
+<span class="tag">SLAM</span>
+<span class="tag">HF 45↑</span></div>
+  </div>
+</div>
+<!-- 🔓 开源 &amp; awesome 生态 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔓</span>开源 &amp; awesome 生态</div>
+  <div class="card">
+    <div class="source">GitHub Trending · 每日榜</div>
+    <div class="title"><a href="https://github.com/trending" target="_blank">reverify（★923）继续领跑：防幻觉 agent 生态与「手机 agent」新秀</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">GitHub Trending 今日 AI 新面孔里，<a href="https://github.com/2akouwu/reverify" target="_blank">reverify</a>（★923，较昨日 +44）继续领跑——给读二进制的 AI agent 加「防幻觉」裁决层，模型提主张、确定性工具裁决，每条声明都被 VERIFY/REFUTE。<a href="https://github.com/AbuZar-Ansarii/Needle" target="_blank">Needle</a>（★84）主打「14MB 的 agentic LLM 完全接管你的手机」；<a href="https://github.com/pierrenade/short-video-generator-AI" target="_blank">short-video-generator-AI</a>（★180）把 YouTube 视频一键剪成病毒式短视频；<a href="https://github.com/useagenthq/useagent" target="_blank">useagent</a>（★283）给团队配「AI 同事」云电脑。</div>
+    <div class="tags"><span class="tag">开源</span>
+<span class="tag">防幻觉</span>
+<span class="tag">手机 Agent</span>
+<span class="tag">短视频</span></div>
+  </div>
+  <div class="card">
+    <div class="source">awesome 主仓库 · sindresorhus/awesome</div>
+    <div class="title"><a href="https://github.com/sindresorhus/awesome" target="_blank">awesome 主仓库持续静默，AI list 排队仍在拉长</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">sindresorhus/awesome 本周仍无新合并（最近一次提交仍是 9/2 的 Meta tweaks）。门口排队的 AI/机器人相关 list PR 没有明显变化，仍在等待审核的包括：AI Agent Tools（#4396）、AI Tokenomics（#4394）、AI Companion（#4378）、LLM for Biomedicine（#4359）、AgentOS（#4291）、SRE Agents（#4262）、Agentic Engineering（#4286）、Medical Imaging Agents（#4222）等——「给人读」的清单形态正在被「给 agent 查」的浪潮推着走，合并门槛还没跟上。</div>
+    <div class="tags"><span class="tag">awesome</span>
+<span class="tag">知识清单</span>
+<span class="tag">PR 排队</span>
+<span class="tag">生态</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>周末的 arXiv 安安静静，但榜单没有停。最让我心动的是 RoboTok——它回答了一个特别实际的问题：机器人数据又贵又难采，那能不能把 YouTube 上无穷无尽的人类操作视频「翻译」成训练信号？答案是把手部轨迹投到一个对视角、遮挡都不敏感的隐空间，再做大尺度检索，等于给机器人的「长尾任务」装了一口永不枯竭的数据井。另一边，Rethinking OPD II 那句 「data-overfed but algorithm-starved」也很戳人：大家拼命堆数据，结果算法自己消化不动了。这跟昨天 Random Attention 「打分信号几乎没用」其实是同一股风，都在提醒我们：瓶颈正在从「数据/算力」悄悄转向「算法本身」。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-09-06 08:06</p>
+</div>
+
+</div>
+</body>
+</html>

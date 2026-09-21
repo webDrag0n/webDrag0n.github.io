@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年08月20日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年08月20日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>8 月 20 日的 AI 圈，舞台中心仍在亦庄——世界机器人大会进入第二天，宇树科技上市次日的王兴兴登台，给具身智能的「ChatGPT 时刻」划出时间表；佛山顺德则传来全球首个 1 万台人形机器人订单。海外一侧，支付巨头 Stripe 豪掷 75 亿美元收购 AI 模型路由平台 OpenRouter，把「模型路由」直接抬成了 AI 基础设施的新金矿。同一日，百度放出免费办公 Agent「文心助手任务引擎 2.0」，影石祭出 4K 竖拍云台相机 Luna Pro，AI 继续向办公与影像场景一路渗透。</p>
+</div>
+
+<!-- 🔥 今日头条 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">🔴 BREAKING</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">中财网 · IT之家 · 新浪财经 · Solidot</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;">
+      <a href="https://industry.cfi.cn/p20260820000162.html" target="_blank">Stripe 以 75 亿美元收购 OpenRouter，模型路由成 AI 时代「新金矿」</a>
+    </div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">
+      支付巨头 Stripe 宣布完成对 AI 模型路由平台 OpenRouter 的收购，交易金额达 75 亿美元，其中约 15 亿美元落入 OpenRouter 创始人口袋。而今年 5 月 OpenRouter 完成 B 轮融资时，估值还只有 13 亿美元——三个月翻了近 6 倍。作为聚合数百个模型 API 的「模型网关」，OpenRouter 是智能体经济里 Token 计费与模型调度绕不开的中间层，Stripe 这一手等于为 AI 时代修起了一座「收费站」，也印证了模型路由正成为继算力之后又一条被资本明码标价的基础设施赛道。
+    </div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;">
+      <span class="tag hot">Stripe</span>
+      <span class="tag">OpenRouter</span>
+      <span class="tag">75亿美元收购</span>
+      <span class="tag">模型路由</span>
+      <span class="tag">智能体经济</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🤖 机器人 & 具身智能 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>机器人 &amp; 具身智能</div>
+
+  <div class="card">
+    <div class="source">观察者网 · 中新社 · 华尔街见闻</div>
+    <div class="title">
+      <a href="https://www.guancha.cn/industry-science/2026_08_20_827965.shtml" target="_blank">宇树上市次日王兴兴 WRC 演讲：具身智能的「ChatGPT 时刻」快则两三年</a>
+    </div>
+    <div class="summary">
+      8 月 20 日，「人形机器人第一股」宇树科技登陆科创板第二天，创始人王兴兴在 2026 世界机器人大会主论坛发表题为《从展品到产品：人形机器人产业的下一个十年》的主题演讲。他判断具身智能迎来类似 ChatGPT 的产业临界点「快则两至三年，慢则五年甚至十年」，并透露公司正在推动「物理 AI 机器人自进化」。同日，宇树股价低开 6.51%，二级市场对这支「A 股人形机器人第一股」进入冷静博弈期。
+    </div>
+    <div class="tags">
+      <span class="tag">#王兴兴</span>
+      <span class="tag">#宇树科技</span>
+      <span class="tag">#世界机器人大会</span>
+      <span class="tag">#具身智能</span>
+      <span class="tag">#物理AI自进化</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">界面新闻 · 新京报 · 快科技</div>
+    <div class="title">
+      <a href="https://m.jiemian.com/article/13212878_microcontent.html" target="_blank">全球首个 1 万台人形机器人订单落地：天太机器人联手港仔、山东未来「撞线规模商用」</a>
+    </div>
+    <div class="summary">
+      8 月 20 日，广东天太机器人与山东未来机器人、山东未来数据科技、港仔机器人集团（00370.HK）等战略伙伴，在佛山顺德签署全球首个具身智能人形机器人 10000 台订单——这也是人形机器人行业诞生以来数量最大的单笔订单，率先「撞线」规模商用。万台级订单的落地，意味着人形机器人正从展会 demo 走向真金白银的批量交付，产业链的交付能力成为下一阶段的核心比拼。
+    </div>
+    <div class="tags">
+      <span class="tag">#天太机器人</span>
+      <span class="tag">#10000台订单</span>
+      <span class="tag">#人形机器人</span>
+      <span class="tag">#规模商用</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">央视网</div>
+    <div class="title">
+      <a href="https://news.cctv.com/2026/08/20/ARTIMP3Ao7HSfKlmytBaEJ2L260820.shtml" target="_blank">《2026 年人形机器人产业发展报告》发布：我国已形成全产业链制造能力</a>
+    </div>
+    <div class="summary">
+      由中国人形机器人与具身智能百人会编纂的《2026 年人形机器人产业发展报告》在 2026 世界机器人大会上发布。报告指出，我国已形成从关键芯片、部组件到整机的人形机器人全产业链制造能力，2026 年被业界视为人形机器人「量产元年」。在宇树上市、万台订单接连落地的背景下，这份报告为行业的高速成长期提供了一份权威注脚。
+    </div>
+    <div class="tags">
+      <span class="tag">#人形机器人</span>
+      <span class="tag">#产业报告</span>
+      <span class="tag">#全产业链</span>
+      <span class="tag">#量产元年</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">IT之家 · 快科技 · 游侠网</div>
+    <div class="title">
+      <a href="https://www.ithome.com/0/992/126.htm" target="_blank">黄仁勋之女黄敏珊来华，现身 2026 世界机器人大会</a>
+    </div>
+    <div class="summary">
+      英伟达 CEO 黄仁勋之女、现任英伟达 Omniverse 与机器人产品营销高级董事的黄敏珊来到北京，现身 2026 世界机器人大会现场。此前她刚结束对韩国 LG 数据工厂的考察，此番来华被外界解读为英伟达加速布局全球机器人生态、深挖中国具身智能市场的最新动作。
+    </div>
+    <div class="tags">
+      <span class="tag">#英伟达</span>
+      <span class="tag">#黄敏珊</span>
+      <span class="tag">#世界机器人大会</span>
+      <span class="tag">#机器人生态</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🧠 大模型 & 产品 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 &amp; 产品</div>
+
+  <div class="card">
+    <div class="source">DoNews · 智东西</div>
+    <div class="title">
+      <a href="https://www.donews.com/news/detail/8/6678513.html" target="_blank">百度 AI Day：文心助手任务引擎 2.0 上线，办公 Agent 全程免费</a>
+    </div>
+    <div class="summary">
+      8 月 20 日百度 AI Day 开放日，百度 APP 发布多项产品升级：文心助手任务引擎 2.0 上线，覆盖专业级分析报告、办公全流程 PPT、量化交易终端、定时任务等高频场景，并全程免费；百度搜索也在 AI 教育方向做了功能上新。官方数据显示，文心助手日活用户同比增长 83%，「从理解到交付」的免费 Agent 正成为大厂争夺办公入口的新武器。
+    </div>
+    <div class="tags">
+      <span class="tag">#百度</span>
+      <span class="tag">#文心助手</span>
+      <span class="tag">#任务引擎2.0</span>
+      <span class="tag">#办公Agent</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">IT之家 · 品玩 · 快科技</div>
+    <div class="title">
+      <a href="https://www.ithome.com/0/992/330.htm" target="_blank">影石发布「行业首款 4K 竖拍云台相机」Luna Pro，3399 元起</a>
+    </div>
+    <div class="summary">
+      影石 Insta360 正式推出旗舰云台相机 Luna Pro，主打 4K 竖拍、4 倍超清变焦、徕卡联名 1 英寸大底与 8K 杜比视界。其配合 AI 追踪与三轴增稳可实现智能竖拍构图，将人物「稳锁 C 位」，并采用可拆卸图传遥控屏设计，支持 20 米远距图传与独立无线麦克风收音。AI 正在把专业影像能力进一步「平民化」，竖屏短视频创作有了新工具。
+    </div>
+    <div class="tags">
+      <span class="tag">#影石Insta360</span>
+      <span class="tag">#Luna Pro</span>
+      <span class="tag">#4K竖拍</span>
+      <span class="tag">#AI追踪</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🏦 行业 & 融资 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🏦</span>行业 &amp; 融资</div>
+
+  <div class="card">
+    <div class="source">IT之家 · 时代周报</div>
+    <div class="title">
+      <a href="https://www.ithome.com/0/991/903.htm" target="_blank">前理想总裁沈亚楠二次创业，AI 智能住宅「栖息地」再获 7 亿元 A 轮融资</a>
+    </div>
+    <div class="summary">
+      智能住宅企业「栖息地」宣布完成 A 轮融资，规模 7 亿元人民币，由常州新北区科创基金领投。其创始人沈亚楠为前理想汽车总裁，这是他的二次创业。近期，栖息地总投资 10 亿元的 AI 智能住宅全球总部项目签约落户常州高新区。从「造车」到「造 AI 智能住宅」，AI 正在把物理空间的智能化改造变成一条新的地产与科技交叉赛道。
+    </div>
+    <div class="tags">
+      <span class="tag">#栖息地</span>
+      <span class="tag">#沈亚楠</span>
+      <span class="tag">#AI智能住宅</span>
+      <span class="tag">#7亿融资</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+    这一天最值得记住的，是 <strong>具身智能从「资本定价」迈入「交付定价」</strong>。宇树上市次日的王兴兴不谈暴涨 460%，转而讲「从展品到产品」、讲物理 AI 自进化、给出「ChatGPT 时刻」的两三年时间表；同一天佛山顺德就签下全球首个 1 万台人形机器人订单，央视发布的产业报告也宣告全产业链成型。热闹褪去之后，能「批量交付」的才是真本事，具身智能的下一程拼的是量产、交付与数据闭环，而不再是 demo。
+    <br><br>
+    第二条线在海外，<strong>AI 基础设施的「收费站」被正式标价</strong>。Stripe 用 75 亿美元买下 OpenRouter，对比它三个月前 13 亿美元的估值，将近 6 倍的溢价说明资本已经看清：当智能体（Agent）批量上岗、按 Token 计费成为主流，谁掌握模型路由和计费入口，谁就握住了 AI 经济的水龙头。算力之后，「路由层」正在成为新的兵家必争之地。
+    <br><br>
+    第三条线藏在产品里，<strong>AI 正在离开「聊天框」</strong>。百度把文心助手任务引擎 2.0 做成免费的办公 Agent，从写报告到做 PPT、跑量化终端一路包圆；影石把 AI 追踪塞进 3399 元的 4K 竖拍相机，让「稳锁 C 位」成为普通人的日常。大厂拼 Agent、硬件拼 AI 能力下放，2026 年的 AI 竞赛，已经从「谁更会聊天」悄悄转向「谁更能干活」。
+    <br><br>
+    一个前瞻信号也值得留意：据多家中文媒体梳理，Grok 4.7 已进入发布倒计时（预计 2.1T 参数）、Anthropic 的 IPO 路演材料也临近公开（估值传闻冲上 2 万亿美元）。接下来的几天，海外大模型恐怕又要迎来一波密集的「开箱」时刻。
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-21</p>
+</div>
+
+</div>
+</body>
+</html>

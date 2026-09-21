@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Daily | Lin Zexin</title>
+    <meta name="description" content="Daily AI paper digests and Chinese AI media roundups.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/topBarIcon.png" />
+    <style>
+        body { background: var(--bg, #0a192f); color: var(--text, #ccd6f6); }
+        .reports-container { max-width: 800px; margin: 0 auto; padding: 120px 24px 60px; }
+        .reports-header { text-align: center; margin-bottom: 48px; }
+        .reports-header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
+        .reports-header p { color: var(--text-secondary, #8892b0); }
+        .section-title { font-size: 1.25rem; font-weight: 600; margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border, #233554); }
+        .report-grid { display: flex; flex-direction: column; gap: 8px; }
+        .report-card {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 14px 18px; border-radius: 8px;
+            background: var(--card-bg, #112240); border: 1px solid var(--border, #233554);
+            text-decoration: none; color: inherit; transition: transform .15s, box-shadow .15s;
+        }
+        .report-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,.3); }
+        .report-date { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.9rem; }
+        .report-arrow { color: var(--accent, #64ffda); }
+        .empty-msg { color: var(--text-secondary, #8892b0); padding: 16px 0; }
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="top-nav-inner">
+            <a href="../index.html" class="top-nav-brand">LZX</a>
+            <ul class="top-nav-links">
+                <li><a href="../index.html" data-nav="home">Home</a></li>
+                <li><a href="../about.html" data-nav="about">About</a></li>
+                <li><a href="../blogs/index.html" data-nav="blog">Blog</a></li>
+                <li><a href="../AI_ECA/ECA_main.html" data-nav="kb">Knowledge Base</a></li>
+                <li><a href="index.html" class="active" data-nav="reports">AI Daily</a></li>
+            </ul>
+            <button id="lang-toggle" class="btn top-nav-lang">EN | 中</button>
+        </div>
+    </nav>
+
+    <div class="reports-container">
+        <div class="reports-header">
+            <h1>&#128302; AI Daily</h1>
+            <p>Daily AI paper digests &amp; Chinese AI media roundups, auto-generated.</p>
+        </div>
+
+        <h2 class="section-title">&#129302; AI Paper Digest</h2>
+        <div class="report-grid" id="papers-grid">
+        <a class="report-card" href="papers/daily_papers_20260921.html">
+          <span class="report-date">2026-09-21</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260912.html">
+          <span class="report-date">2026-09-12</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260911.html">
+          <span class="report-date">2026-09-11</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260910.html">
+          <span class="report-date">2026-09-10</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260909.html">
+          <span class="report-date">2026-09-09</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260908.html">
+          <span class="report-date">2026-09-08</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260907.html">
+          <span class="report-date">2026-09-07</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260906.html">
+          <span class="report-date">2026-09-06</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260905.html">
+          <span class="report-date">2026-09-05</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260904.html">
+          <span class="report-date">2026-09-04</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260903.html">
+          <span class="report-date">2026-09-03</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260902.html">
+          <span class="report-date">2026-09-02</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260901.html">
+          <span class="report-date">2026-09-01</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260830.html">
+          <span class="report-date">2026-08-30</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260829.html">
+          <span class="report-date">2026-08-29</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260827.html">
+          <span class="report-date">2026-08-27</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260826.html">
+          <span class="report-date">2026-08-26</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260825.html">
+          <span class="report-date">2026-08-25</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260824.html">
+          <span class="report-date">2026-08-24</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260823.html">
+          <span class="report-date">2026-08-23</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260822.html">
+          <span class="report-date">2026-08-22</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260821.html">
+          <span class="report-date">2026-08-21</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260820.html">
+          <span class="report-date">2026-08-20</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260819.html">
+          <span class="report-date">2026-08-19</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260818.html">
+          <span class="report-date">2026-08-18</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260817.html">
+          <span class="report-date">2026-08-17</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260816.html">
+          <span class="report-date">2026-08-16</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260815.html">
+          <span class="report-date">2026-08-15</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260814.html">
+          <span class="report-date">2026-08-14</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260813.html">
+          <span class="report-date">2026-08-13</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260812.html">
+          <span class="report-date">2026-08-12</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260811.html">
+          <span class="report-date">2026-08-11</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260810.html">
+          <span class="report-date">2026-08-10</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260809.html">
+          <span class="report-date">2026-08-09</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260808.html">
+          <span class="report-date">2026-08-08</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260807.html">
+          <span class="report-date">2026-08-07</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260806.html">
+          <span class="report-date">2026-08-06</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260805.html">
+          <span class="report-date">2026-08-05</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260804.html">
+          <span class="report-date">2026-08-04</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260803.html">
+          <span class="report-date">2026-08-03</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260802.html">
+          <span class="report-date">2026-08-02</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260801.html">
+          <span class="report-date">2026-08-01</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260731.html">
+          <span class="report-date">2026-07-31</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260730.html">
+          <span class="report-date">2026-07-30</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260729.html">
+          <span class="report-date">2026-07-29</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260728.html">
+          <span class="report-date">2026-07-28</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260727.html">
+          <span class="report-date">2026-07-27</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260726.html">
+          <span class="report-date">2026-07-26</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260725.html">
+          <span class="report-date">2026-07-25</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260724.html">
+          <span class="report-date">2026-07-24</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260723.html">
+          <span class="report-date">2026-07-23</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260722.html">
+          <span class="report-date">2026-07-22</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260721.html">
+          <span class="report-date">2026-07-21</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="papers/daily_papers_20260720.html">
+          <span class="report-date">2026-07-20</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        </div>
+
+        <h2 class="section-title">&#128225; AI Media Daily</h2>
+        <div class="report-grid" id="media-grid">
+        <a class="report-card" href="media/daily_media_20260921.html">
+          <span class="report-date">2026-09-21</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260912.html">
+          <span class="report-date">2026-09-12</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260911.html">
+          <span class="report-date">2026-09-11</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260910.html">
+          <span class="report-date">2026-09-10</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260909.html">
+          <span class="report-date">2026-09-09</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260908.html">
+          <span class="report-date">2026-09-08</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260907.html">
+          <span class="report-date">2026-09-07</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260905.html">
+          <span class="report-date">2026-09-05</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260904.html">
+          <span class="report-date">2026-09-04</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260903.html">
+          <span class="report-date">2026-09-03</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260902.html">
+          <span class="report-date">2026-09-02</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260901.html">
+          <span class="report-date">2026-09-01</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260831.html">
+          <span class="report-date">2026-08-31</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260830.html">
+          <span class="report-date">2026-08-30</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260829.html">
+          <span class="report-date">2026-08-29</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260827.html">
+          <span class="report-date">2026-08-27</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260826.html">
+          <span class="report-date">2026-08-26</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260825.html">
+          <span class="report-date">2026-08-25</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260824.html">
+          <span class="report-date">2026-08-24</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260823.html">
+          <span class="report-date">2026-08-23</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260822.html">
+          <span class="report-date">2026-08-22</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260821.html">
+          <span class="report-date">2026-08-21</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260820.html">
+          <span class="report-date">2026-08-20</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260819.html">
+          <span class="report-date">2026-08-19</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260818.html">
+          <span class="report-date">2026-08-18</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260817.html">
+          <span class="report-date">2026-08-17</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260816.html">
+          <span class="report-date">2026-08-16</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260815.html">
+          <span class="report-date">2026-08-15</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260814.html">
+          <span class="report-date">2026-08-14</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260813.html">
+          <span class="report-date">2026-08-13</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260812.html">
+          <span class="report-date">2026-08-12</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260811.html">
+          <span class="report-date">2026-08-11</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260810.html">
+          <span class="report-date">2026-08-10</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260809.html">
+          <span class="report-date">2026-08-09</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260808.html">
+          <span class="report-date">2026-08-08</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260807.html">
+          <span class="report-date">2026-08-07</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260806.html">
+          <span class="report-date">2026-08-06</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260805.html">
+          <span class="report-date">2026-08-05</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260804.html">
+          <span class="report-date">2026-08-04</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260803.html">
+          <span class="report-date">2026-08-03</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260802.html">
+          <span class="report-date">2026-08-02</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260801.html">
+          <span class="report-date">2026-08-01</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260731.html">
+          <span class="report-date">2026-07-31</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260730.html">
+          <span class="report-date">2026-07-30</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260729.html">
+          <span class="report-date">2026-07-29</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260728.html">
+          <span class="report-date">2026-07-28</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260727.html">
+          <span class="report-date">2026-07-27</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260726.html">
+          <span class="report-date">2026-07-26</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260725.html">
+          <span class="report-date">2026-07-25</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260724.html">
+          <span class="report-date">2026-07-24</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260723.html">
+          <span class="report-date">2026-07-23</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260722.html">
+          <span class="report-date">2026-07-22</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260721.html">
+          <span class="report-date">2026-07-21</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        <a class="report-card" href="media/daily_media_20260720.html">
+          <span class="report-date">2026-07-20</span>
+          <span class="report-arrow">&rarr;</span>
+        </a>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

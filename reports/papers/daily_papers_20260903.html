@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年09月03日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<!--
+  TEMPLATE STRUCTURE:
+  Replace {{PLACEHOLDERS}} with actual content.
+  
+  Sections:
+  - .header: icon, title, date, subtitle
+  - .summary-banner: one-paragraph overview of today's hot topics
+  - .section: grouped news (Headlines / Research / Industry / Open Source)
+  - .card: individual news item (source, title link, summary, tags)
+  - .hot-topic: highlighted breaking news
+  - .insights: editorial summary
+  - .footer: generation info
+-->
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年09月03日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今天的主线是「语言正在成为通用的控制与反馈接口」——H3-World 发现 MiniMax-H3 这样的视频生成器已经能用自然语言直接控制角色和镜头，《The Rise of Verbal Reinforcement Learning》则系统论证「语言即强化学习反馈」这条新范式。重头戏来自 Qwen：Qwen-Drive-1.0 用一个视觉语言基础模型统一了自动驾驶的 3D 感知、视觉问答与运动规划。教育智能体今天格外亮眼，StudentSim 用 LLM 训练个性化学生模拟器，一举拿下 HuggingFace 单日最高热度。开源侧依旧热闹，agent 技能库继续霸榜，chrome-devtools-mcp、TimesFM、VoiceStudio 等新面孔也挤进了 Trending。</p>
+</div>
+
+<!-- 🔥 今日热点 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · 自动驾驶 VLM 基础模型</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">arXiv 2609.00111 · HuggingFace Daily Papers · HF 337↑</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;"><a href="https://arxiv.org/abs/2609.00111" target="_blank" style="color:var(--accent);text-decoration:none;">Qwen-Drive-1.0: An Initial Step towards a Vision-Language Foundation Model for Autonomous Driving</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">自动驾驶长期受困于「感知、推理、规划各自为政」的碎片化架构。Qwen-Drive-1.0 提出一个视觉语言基础模型，通过共享表征与分阶段训练，把 3D 感知、视觉问答（VQA）和运动规划三大任务统一到同一个底座里，让模型既能「看懂」道路场景，也能「回答」驾驶问题、直接输出规划轨迹。作为 Qwen 在自动驾驶领域的第一步，这条「一个模型打穿感知到规划」的路线，很可能成为后续端到端驾驶的基准底座。</div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag hot">自动驾驶</span>
+<span class="tag hot">HF 337↑</span>
+<span class="tag">多模态</span>
+<span class="tag">Qwen</span></div>
+  </div>
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · 教育智能体</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">arXiv 2609.01591 · HuggingFace Daily Papers · HF 458↑</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;"><a href="https://arxiv.org/abs/2609.01591" target="_blank" style="color:var(--accent);text-decoration:none;">StudentSim: Training LLM-based Student Simulators</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">评估教学智能体的好坏，最缺的是「真实学生」——真人又贵又难规模化。StudentSim 用 LLM 从稀疏数据里训练出个性化学生模拟器，既能复现真实学习者的答题反应，又能随着导师的引导动态调整表现，在棋类、写作、数学等任务上全面超越现有模拟器。拿下今日 HuggingFace 单日最高热度（458↑），意味着「用模型造学生、再训练老师」这条闭环，正在成为 AI 教育研究的标配基础设施。</div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag hot">教育智能体</span>
+<span class="tag hot">HF 458↑</span>
+<span class="tag">学生模拟器</span>
+<span class="tag">LLM</span></div>
+  </div>
+</div>
+<!-- 🧠 大模型 &amp; 推理 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 &amp; 推理</div>
+  <div class="card">
+    <div class="source">arXiv 2609.01343 · HuggingFace Daily Papers · HF 75↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.01343" target="_blank">SMELT: Scaling Laws for Compute-Matched MoE Looped Transformers</a></div>
+    <div class="summary">稀疏 MoE Transformer 已经够省，但还能更省。SMELT 发现：把中间层「循环复用」——让同一批层在 token 上多跑几遍——在保持每 token FLOPs、参数量、缓存预算都不变的前提下，能同时提升训练效率和下游性能。这项工作给「计算匹配」的循环 Transformer 补上了扩展法则，为在固定算力预算下榨出更强模型提供了可量化的依据。</div>
+    <div class="tags"><span class="tag">MoE</span>
+<span class="tag">循环 Transformer</span>
+<span class="tag">扩展法则</span>
+<span class="tag">HF 75↑</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2609.01597 · cs.AI / cs.CL</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.01597" target="_blank">The Rise of Verbal Reinforcement Learning</a></div>
+    <div class="summary">自然语言正在取代标量奖励，成为改进语言智能体的主要反馈通道。这篇论文首次把这一趋势统称为「语言强化学习」（VRL），并沿「语言何时生效、修改什么」这一条轴，整理出三大支柱：语言作为接地信号（定义任务与奖励结构）、语言作为推理性反馈（推理时引导、无需更新权重）、语言作为训练信号（用于参数更新）。给一片散落的实证研究梳理出了一套统一框架。</div>
+    <div class="tags"><span class="tag">语言强化学习</span>
+<span class="tag">反馈范式</span>
+<span class="tag">智能体</span>
+<span class="tag">综述框架</span></div>
+  </div>
+</div>
+<!-- 👁️ 多模态 &amp; 世界模型 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态 &amp; 世界模型</div>
+  <div class="card">
+    <div class="source">arXiv 2609.01560 · HuggingFace Daily Papers · HF 42↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.01560" target="_blank">H3-World: Turning Language Understanding into World Control</a></div>
+    <div class="summary">作者发现，随着视频生成器能力变强，「语言」正在成为它的天然控制接口——MiniMax-H3 已经能零样本地用自然语言指挥角色行为和镜头运动。H3-World 把这个粗粒度的语言接口改造成精确、时间对齐的世界控制：把每个动作表示成「角色指令 + 相机指令」的结构化组合，对齐到对应的时序视频隐变量，全程不引入任何专用动作模块，就把 33B 视频生成器变成了可交互的世界模型。</div>
+    <div class="tags"><span class="tag">世界模型</span>
+<span class="tag">视频生成</span>
+<span class="tag">语言控制</span>
+<span class="tag">HF 42↑</span></div>
+  </div>
+</div>
+<!-- 🌍 具身智能 &amp; 机器人 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🌍</span>具身智能 &amp; 机器人</div>
+  <div class="card">
+    <div class="source">arXiv 2609.01596 · cs.LG / cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.01596" target="_blank">Facet-0: A Robotic Foundation Model for Contact-Rich Precise Manipulation</a></div>
+    <div class="summary">亚毫米级精度的真实装配，考验的是「空间精度 + 顺应接触 + 对接触失败鲁棒」三件事。Facet-0 是一个面向接触式精细操作的机器人基础模型，核心是「动作-力矩联合提案」：把因果力矩历史与视觉-语言语义、运动学状态对齐，用流匹配同时生成动作块和它预期引发的腕部力矩剖面，再在部署 rollout 里训练分布式的「动作-力矩 Critic」，区分「进度相似但接触后果不同」的动作，让精细装配真正学会感知接触、预判后果。</div>
+    <div class="tags"><span class="tag">机器人基础模型</span>
+<span class="tag">精细装配</span>
+<span class="tag">接触操作</span>
+<span class="tag">力矩预测</span></div>
+  </div>
+</div>
+<!-- 🔓 开源 &amp; Agent 生态 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔓</span>开源 &amp; Agent 生态</div>
+  <div class="card">
+    <div class="source">GitHub Trending · 每日榜</div>
+    <div class="title"><a href="https://github.com/trending" target="_blank">Agent 技能库继续霸榜，新面孔：chrome-devtools-mcp、TimesFM、VoiceStudio、Atlas</a></div>
+    <div class="summary">「给编码智能体装技能」的热度没有停：DietrichGebert/ponytail（★121k，教你「像最懒的资深工程师一样思考」）、JuliusBrussee/caveman（★103k，token 直省 65%）、blader/humanizer（★40k，去 AI 味）持续领跑。新面孔也很有看头：ChromeDevTools/chrome-devtools-mcp（★51k）把浏览器 DevTools 做成 agent 的 MCP 接口，google-research/timesfm（★30k）是 Google 的时序基础模型，debpalash/VoiceStudio（★15k）做全本地语音克隆，pacifio/atlas（★2.9k）则给多 agent 协作提供「版本控制」。</div>
+    <div class="tags"><span class="tag">开源</span>
+<span class="tag">Agent Skills</span>
+<span class="tag">MCP</span>
+<span class="tag">GitHub Trending</span></div>
+  </div>
+  <div class="card">
+    <div class="source">GitHub · sindresorhus/awesome 动态</div>
+    <div class="title"><a href="https://github.com/sindresorhus/awesome" target="_blank">awesome 仓库进入「剪枝」模式：近期以清理归档列表为主，暂无新 AI list 合并</a></div>
+    <div class="summary">追踪 awesome 主仓库发现，近几日的合并几乎全是「减负」：8 月 18 日删除 8 个已归档列表、修复 Java 分区的空格格式，6 月更是删掉了 17 个归档列表。近期多笔「新增 AI 相关 list」（LLM Agents 资源、awesome-bio-agent-skills、Agent Swarm 等）均未被合并。一个信号是：高质量知识清单的生态位，正悄悄从「静态 awesome 列表」向「可执行的 agent skills 仓库」迁移。</div>
+    <div class="tags"><span class="tag">awesome</span>
+<span class="tag">开源清单</span>
+<span class="tag">知识整理</span>
+<span class="tag">生态迁移</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>今天最让我眼前一亮的是「语言成为控制接口」这条暗线——它同时出现在世界模型（H3-World 用自然语言操控视频生成器）和智能体训练（Verbal RL 把语言当反馈通道）两个方向，说明大家正在收敛到同一个答案：与其为每个任务造专用动作模块，不如让语言本身变成可解释、可干预的控制信号。Qwen-Drive-1.0 是今天的硬核担当，自动驾驶终于有了一个把感知、问答、规划统一起来的视觉语言底座。开源这边还有个有趣的现象：awesome 仓库最近几乎全是「剪枝」（删归档列表、修格式），没有新的 AI list 被合并，反而是一堆「给 agent 装技能」的仓库在 GitHub Trending 上野蛮生长——高质量知识清单的阵地，正在从 awesome 迁移到 agent skills 生态。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-09-03 08:05</p>
+</div>
+
+</div>
+</body>
+</html>

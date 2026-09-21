@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年09月09日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<!--
+  TEMPLATE STRUCTURE:
+  Replace {{PLACEHOLDERS}} with actual content.
+  
+  Sections:
+  - .header: icon, title, date, subtitle
+  - .summary-banner: one-paragraph overview of today's hot topics
+  - .section: grouped news (Headlines / Research / Industry / Open Source)
+  - .card: individual news item (source, title link, summary, tags)
+  - .hot-topic: highlighted breaking news
+  - .insights: editorial summary
+  - .footer: generation info
+-->
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年09月09日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今天 arXiv 上新继续（2609.05xxx 批次），头号热点是「AI 科学家」与「推理加速」两条线：Dr. Claw（HF 125↑）把命令行 coding agent 包进一个可审计、可回滚的「氛围感科研」工作台；Uno（HF 106↑）用离散扩散在自回归模型上并行抽多个 token，无损拿到最高 3 倍加速、还不牺牲质量。推理自改进侧 FlowBalance（HF 81↑）用 verifier 校准的轨迹平衡让 Qwen3 稳定涨点；多模态这边 ENEAS（HF 35↑）专治「长得像但不是同一个」的误分割，Attention Triangle（HF 29↑）拆解了音视频模型里跨模态注意力的语义泄漏。具身侧 EmbodiedSkills 把 VLA 的「执行提案」纳入统一 agent 循环；开源侧 remote-installer 冲上 ★99，awesome 主仓库依旧静默。</p>
+</div>
+
+<!-- 🔥 今日热点 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · AI 科学家工作台</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">arXiv 2609.00365 · HuggingFace Daily Papers · HF 125↑</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;"><a href="https://arxiv.org/abs/2609.00365" target="_blank" style="color:var(--accent);text-decoration:none;">Dr. Claw: An AI Scientist Workspace for Vibe Research</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">命令行 coding agent（Claude Code、Gemini CLI 之类）已经能读写文件、撑起长会话，但端到端的科研仍然碎在聊天工具、IDE、终端和写作环境之间，而且那些让研究「可审计」的决策几乎从不被保存。Dr. Claw 是一个开源工作台，它不再造另一个自主 agent，而是把现有的 coding-agent 执行器包进一个「可控、可审计、人在环」的工作流：持久化的状态对象、可复用的 skill 库、多执行器协调，把规划、执行、写作连成一条可追踪、可恢复的闭环。对比实验固定同一个后端执行器，Dr. Claw 在研究完整度上更高，同时留下一条可审计、可恢复的过程轨迹。AGPL-3.0 开源。</div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag hot">AI 科学家</span>
+<span class="tag hot">HF 125↑</span>
+<span class="tag">编排层</span>
+<span class="tag">开源</span></div>
+  </div>
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · LLM 无损加速</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">arXiv 2609.04010 · HuggingFace Daily Papers · HF 106↑</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;"><a href="https://arxiv.org/abs/2609.04010" target="_blank" style="color:var(--accent);text-decoration:none;">Unlocking Lossless Speedups in LLMs via Discrete Diffusion</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">LLM 的成功很大程度归功于 next-token 预测，但自回归结构注定了 token 要一个个串行生成。这篇提出「扩散增强的 LLM」：模型仍定义自回归分布，但用扩散并行地从该分布里一次抽多个 token。参数分成两套——自回归权重照常用 NTP 训练，轻量的扩散权重通过一个 Diffusion Distillation 阶段学到、对现有训练管线几乎零开销；再配合 Ψ-Spec 采样器族，在固定上下文长度内实现「无损加速 + 推理期扩展」。它不像投机解码那样需要单独的 draft 模型，也不像扩散 LLM（d-LLM）那样牺牲质量。8B 的 Uno 在 agentic 工具调用、代码、长上下文推理上全面超过 26B 的 DiffusionGemma 和闭源 Mercury 2，最高 3 倍加速。</div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag hot">离散扩散</span>
+<span class="tag hot">HF 106↑</span>
+<span class="tag">推理加速</span>
+<span class="tag">3x 无损</span></div>
+  </div>
+</div>
+<!-- 🧠 大模型 &amp; Agent -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 &amp; Agent</div>
+  <div class="card">
+    <div class="source">arXiv 2609.03241 · HuggingFace Daily Papers · HF 81↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.03241" target="_blank">FlowBalance: Verifier-Grounded Self-Improvement from On-Policy Reasoning Experience</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">推理模型能从自己的 on-policy 经验里自我改进，但这个内循环很脆：terminal verifier 给的监督可靠但稀疏，而密集的同模型自指导可能强化错误自信、或把学习过度集中到某一种解法模式上。FlowBalance 学一个「完整响应」上的归一化分布：每个 on-policy 轨迹由冻结的同一策略用特权上下文算出 token 级 log-prob 增益，聚合成轨迹级自指导分数；再用 verifier 得到的组优势去校准——正优势保留、负优势反转、无偏好时关掉。这套「轨迹平衡」方式避免了单独的 token 级模仿损失，在数学推理上对 Qwen3-4B/8B 都超过 FlowRL，训练更快更稳、也避免了 OPSD 的响应长度塌缩。</div>
+    <div class="tags"><span class="tag hot">自改进</span>
+<span class="tag hot">HF 81↑</span>
+<span class="tag">轨迹平衡</span>
+<span class="tag">推理 RL</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2609.00581 · HuggingFace Daily Papers · HF 23↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.00581" target="_blank">Enoki: Efficient Multi-Level Hallucination Detection</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">事实性仍是 LLM 落地高风险场景的关键瓶颈。现有幻觉检测器要么只在 claim 级（可解释但粗）、要么只在 span 级（可定位但不解释），打通两层要么靠多次 LLM 调用、要么靠额外对齐模块，都很贵。Enoki 用开放信息抽取（OpenIE）框架：抽取「锚定文本」的关系事实 → 拿证据验证 → 把不支持的事实投影回幻觉 span，一次表示同时支撑 claim 级验证和 span 级定位。支持 LLM 式、encoder 式、规则式三种抽取，用统一接口在精度和推理成本间权衡，还发布了双粒度数据集 EnokiQA。</div>
+    <div class="tags"><span class="tag hot">幻觉检测</span>
+<span class="tag">事实性</span>
+<span class="tag hot">HF 23↑</span>
+<span class="tag">OpenIE</span></div>
+  </div>
+</div>
+<!-- 🎨 多模态 &amp; 生成 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🎨</span>多模态 &amp; 生成</div>
+  <div class="card">
+    <div class="source">arXiv 2609.03756 · HuggingFace Daily Papers · HF 35↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.03756" target="_blank">ENEAS: Embedding-guided Neural Ensemble for Adaptive Segmentation</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">文本提示的分割模型（连 SAM 3 都不例外）还有三宗罪：目标消失时不说「没了」、特写时把局部纹理当整物体、还会把雕像/画/倒影这类「看着像」的东西当成目标实体。ENEAS 一套方法干两件事：精确跟踪唯一实例 + 用文本查询开放发现所有实例，再用一个语义验证层兜底——高速视觉嵌入匹配 + 条件 VLM 精修，只对模糊候选调用语义推理，既滤掉视觉模型分不出的本体错误、又保持低延迟。它为 3D 重建而设计（一个误分心物体就毁掉资产），能分辨「长得像但不是同一个」的替身。代码与模型开源。</div>
+    <div class="tags"><span class="tag hot">分割跟踪</span>
+<span class="tag hot">HF 35↑</span>
+<span class="tag">语义验证</span>
+<span class="tag">3D 重建</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2609.03586 · HuggingFace Daily Papers · HF 29↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.03586" target="_blank">The Attention Triangle in Audio-Video Models</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">音视频扩散模型靠跨模态注意力协调文本、声音和画面，但同一机制也会引入微妙而系统的「语义泄漏」。这篇盯着「注意力三角」——连接 text/audio/video 三条流的三个 cross-attention 边——看语义在生成时怎么在模态间路由。发现 audio-video 边是双向的（音频能影响视频、视频也能影响音频），且被模型参数里的偏差塑形，是泄漏的主要来源：当 prompt 与学到的先验冲突时，跨模态交互会覆盖原意、把语义路由到「视觉上规范但错误」的结果。作者把注意力信号抽出来当诊断工具，还据此引导推理期干预，在保持生成质量的同时改善语义对齐。</div>
+    <div class="tags"><span class="tag hot">跨模态</span>
+<span class="tag hot">HF 29↑</span>
+<span class="tag">注意力</span>
+<span class="tag">语义泄漏</span></div>
+  </div>
+</div>
+<!-- 🤖 具身智能 &amp; 机器人 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能 &amp; 机器人</div>
+  <div class="card">
+    <div class="source">arXiv 2609.01281 · HuggingFace Daily Papers · HF 10↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.01281" target="_blank">EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">VLA 模型把视觉+语言直接映射到动作，但长程任务远不止「预测动作」——agent 得在物理状态演化中协调感知、规划、执行、进度校验与恢复。EmbodiedSkills 把每个 skill 决策当成「执行提案」：运行时先查前置条件、执行后再校验结果，用共享的可执行 skill 接口把高层 skill 选择、有界低层 VLA 执行、事后校验串进同一个 agent 循环；接口固定，低层策略可随时替换而不动循环。在 RoboTwin 2.0 的 50 个任务平均成功率 86.2%、LIBERO 四套件 97.4%，给「把策略变成闭环具身系统」提供了一个可训练、可检查的 agent 层。</div>
+    <div class="tags"><span class="tag hot">VLA</span>
+<span class="tag">执行提案</span>
+<span class="tag">闭环</span>
+<span class="tag">RoboTwin</span></div>
+  </div>
+</div>
+<!-- 🔓 开源 &amp; awesome 生态 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔓</span>开源 &amp; awesome 生态</div>
+  <div class="card">
+    <div class="source">GitHub Trending · 每日榜</div>
+    <div class="title"><a href="https://github.com/trending" target="_blank">remote-installer 冲上 ★99，「AI 编程成本遥测」工具扎堆冒头</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">今日新仓库里，<a href="https://github.com/icodesign/remote-installer" target="_blank">remote-installer</a>（★99）靠 Tailscale/Cloudflare 把签名好的 iOS/Android 安装包直接推到真机上，绕开 TestFlight/Play Beta 的等待；<a href="https://github.com/truespar/paddock" target="_blank">paddock</a>（★72，昨天 ★62）继续爬升，原生 Rust 推理服务器、OpenAI/Anthropic 兼容、GGUF+safetensors、Blackwell FP8/NVFP4 量化；<a href="https://github.com/gesta-run/subpool" target="_blank">subpool</a>（★70）是自托管团队 AI 订阅池，给 Claude Code/Codex 做 key 汇聚网关；<a href="https://github.com/paveldevyatov/refund-anything-ai-prompt" target="_blank">refund-anything-ai-prompt</a>（★47）是一条「先礼貌、后法律」的退款 prompt。另一个值得留意的小趋势：tokentab、tokenchit、ai-level-check 等一批「AI 编程成本遥测」工具冒头，都在读本地 agent 日志算 token 花费、生成统计卡片。</div>
+    <div class="tags"><span class="tag">开源</span>
+<span class="tag">推理服务</span>
+<span class="tag">成本遥测</span>
+<span class="tag">订阅池</span></div>
+  </div>
+  <div class="card">
+    <div class="source">awesome 主仓库 · sindresorhus/awesome</div>
+    <div class="title"><a href="https://github.com/sindresorhus/awesome" target="_blank">awesome 主仓库继续静默，门口 AI list 长队不减</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">sindresorhus/awesome 依旧零合并，最近一次提交还是 9/2 的「Meta tweaks」（再往前 8/21 修空格、8/18 移除 8 个已归档列表）。门口排队的新 list 纹丝不动：AI Agent Tools（#4396）、AI Tokenomics（#4394）、Opsec（#4392）、AI Companion（#4378）、Swarm（#4364）、LLM for Biomedicine（#4359），加上更早的 LLM Attacks（#4336）、AI Agent Governance（#4335）、Free BYOK Models（#4325）、Cursor Rules（#4168）、Open Source AI（#4158）、AI Hardware（#4150）。这批清单已经明显从「给人读的静态列表」滑向「给 agent 查的动态资源库」，但主仓库的合并节奏仍旧是老节奏。</div>
+    <div class="tags"><span class="tag">awesome</span>
+<span class="tag">知识清单</span>
+<span class="tag">PR 排队</span>
+<span class="tag">生态</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>今天最值得说的两条线，一条是「AI 科学家」的工程化，一条是「自回归的松动」。Dr. Claw 的聪明之处在于它不卷「更强的自主 agent」，而是卷「更可信的编排层」——把 coding agent 包进可审计、可回滚的工作流，让「氛围感科研」也能留下能被复现的过程轨迹，这和昨天多智能体那篇「把直觉钉死在数学上」是同一个成熟信号：这个方向开始在乎「可验证、可追溯」，而不只是「能跑通」。Uno 的意义可能更大——它动摇了「自回归必须串行」这个默认假设：扩散增强 + Ψ-Spec 采样器在固定上下文长度内无损加速，既不需要 draft 模型、又不牺牲质量；如果这套「蒸馏出扩散权重」的配方能普适，LLM 推理的吞吐天花板会被重新画一遍。开源生态这边，awesome 主仓库又静默了一周，门口 AI list 的队伍还在变长——「给人读」的清单在滑向「给 agent 查」的资源库，但合并门槛还没跟上这股浪潮；GitHub 上「AI 编程成本遥测」的小工具扎堆出现，说明大家真的开始在乎每一毛 token 花在哪了。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-09-09 08:09</p>
+</div>
+
+</div>
+</body>
+</html>

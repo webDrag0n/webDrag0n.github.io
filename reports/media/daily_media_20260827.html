@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年08月26日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年08月26日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>8 月 26 日，中文 AI 圈的关键词是「算力大洗牌」。OpenAI 自研推理芯片「小辣椒」实测成绩出炉，第一代芯片就碾压英伟达最强 Blackwell，成为全网最热话题；英伟达也不甘示弱，同日放出 Vera Rubin NVL72 首次片上实测——DeepSeek 跑智能体编码任务，每兆瓦吞吐暴涨 30 倍。大模型侧，Ilya 的 SSI 首个模型被曝本周发布、英伟达押注 50 亿美元；具身智能端，Skild AI S1 让机器人「看一遍就会」，宇树与智元同用一个大脑的 10 分钟一镜到底 Demo 刷屏。</p>
+</div>
+
+<!-- 🔥 今日头条 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">🔴 BREAKING</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">机器之心 · 量子位 · 36氪 · SemiAnalysis</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;">
+      <a href="https://www.qbitai.com/2026/08/479320.html" target="_blank">OpenAI「小辣椒」实测碾压英伟达：第一代自研芯片，几乎全面击败 Blackwell</a>
+    </div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">
+      8 月 25 日，OpenAI 在 Hot Chips 2026 大会上正式公开了与博通合作、专为推理打造的自研芯片 <strong>Jalapeño（小辣椒/墨西哥辣椒）</strong>。半导体研究机构 SemiAnalysis 受邀到 OpenAI 实验室当场实测：这颗仅 700W TDP 的第一代芯片，每千瓦推理吞吐达到 GB200/GB300 NVL72 机架系统的 1.5~1.9 倍，端到端时延低 1.7~3.6 倍，在 GPT-OSS 120B、DeepSeek R1 670B、Kimi K2.5 等多个开源模型上击败了它能测到的所有英伟达、AMD、谷歌芯片。值得一提的是，部分 AI 写出的内核比人类工程师性能更好，Codex 在流片中扮演了关键角色。耐人寻味的是，老黄股价不跌反涨 2.19%——同日英伟达还发布了 Jetson Orin Nano 2，而 OpenAI 也明确表态不会弃用英伟达做训练。
+    </div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;">
+      <span class="tag hot">OpenAI芯片</span>
+      <span class="tag hot">小辣椒</span>
+      <span class="tag">英伟达</span>
+      <span class="tag">Blackwell</span>
+      <span class="tag">推理芯片</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🧠 大模型 & 产品 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 &amp; 产品</div>
+
+  <div class="card">
+    <div class="source">新智元</div>
+    <div class="title">
+      <a href="https://aiera.com.cn/2026/08/26/other/admin/110705/" target="_blank">英伟达震撼首测 Vera Rubin：DeepSeek 跑智能体任务，每兆瓦吞吐暴涨 30 倍</a>
+    </div>
+    <div class="summary">
+      英伟达史上首次公布下一代旗舰机柜 <strong>Vera Rubin NVL72</strong> 的片上实测数据，并直接拉来 DeepSeek-V4-Pro 跑最真实的「智能体编码」任务：对比现役机皇 GB300 NVL72，每兆瓦吞吐量最高飙升 30 倍、Token 成本最高暴降 35 倍。从 H200 到 Vera Rubin，价格翻了 4 倍、速度却飞跃近 900 倍。新智元解读称，这宣告了「LLM 跑分时代结束、Agent 时代降临」；专为智能体打造的 Vera CPU 已被马斯克的 SpaceXAI 连夜装机，Groq 3 LPX 也于同日全面量产（Gemma 4 31B 跑出每秒 3400 Token）。
+    </div>
+    <div class="tags">
+      <span class="tag hot">Vera Rubin</span>
+      <span class="tag">英伟达</span>
+      <span class="tag">DeepSeek</span>
+      <span class="tag">吞吐30倍</span>
+      <span class="tag">Agent</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · a16z</div>
+    <div class="title">
+      <a href="https://aiera.com.cn/2026/08/26/other/admin/110601/" target="_blank">Ilya 交卷在即？SSI 首个模型疑本周发布，黄仁勋砸 50 亿押注</a>
+    </div>
+    <div class="summary">
+      Ilya Sutskever 创立的「安全超级智能」实验室 <strong>SSI</strong> 被曝最快本周甩出首个重磅模型。a16z 合伙人 Martin Casado 暗示自己接触到了「今年最重磅的新模型」，AI 观察家 Dan McAteer 更直接放话「Ilya 真正创造了超级智能」。真金白银也在跟上：今年 7 月 27 日英伟达与这家零收入、零产品的公司达成长期战略合作，未来 12 个月将其算力规模提升 10 倍，投资额据报高达 50 亿美元。若本周真发布，这将是「非主流大厂」对 OpenAI/Google 的一次正面叫板。
+    </div>
+    <div class="tags">
+      <span class="tag hot">Ilya Sutskever</span>
+      <span class="tag">SSI</span>
+      <span class="tag">英伟达50亿</span>
+      <span class="tag">新模型</span>
+      <span class="tag">安全超级智能</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/08/479634.html" target="_blank">宇树、智元共用一个大脑！神秘模型 10 分钟一镜到底 Demo 炸场</a>
+    </div>
+    <div class="summary">
+      一条全程 10 分钟、一刀未剪、无遥操作、无人工指令的 Demo 视频在业内疯传：视频中同时出现了<strong>宇树</strong>与<strong>智元</strong>两款硬件架构完全迥异的机器人本体，却共用同一个「大脑」，在同一间 15㎡ 出租屋里并行干家务、实时感知边界、互不碰撞。机器人会伸手出窗擦玻璃、够不到高处会自己搬箱子踩上去、长程任务被打断还能精准恢复。量子位评价称，这是「全球罕见的跨本体通用大脑样本」，可能是一条足以改写具身智能行业认知、甚至改变 Scaling Law 判断的视频。
+    </div>
+    <div class="tags">
+      <span class="tag hot">宇树</span>
+      <span class="tag hot">智元</span>
+      <span class="tag">跨本体大脑</span>
+      <span class="tag">具身智能</span>
+      <span class="tag">一镜到底</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/08/479834.html" target="_blank">硅谷今日最热具身模型 Skild S1：不用后训练，看一遍就学会</a>
+    </div>
+    <div class="summary">
+      北美具身初创 <strong>Skild AI</strong> 发布全新机器人基础模型 <strong>S1</strong>，主打上下文学习（ICL）：无需后训练阶段学习新数据，只需看一段人类示范视频即可「照猫画虎」完成一整套陌生长程操作，任务长度直接拉到 10 分钟以上。官方演示中机器人完成煎饼、冲咖啡、给植物换盆、设备组装等任务，在未见过的任务上成功率干到 66%（语言提示型 VLA 仅 9%）。有网友感叹「通用机器人可能两年后就会出现」——机器人真正的「GPT 时刻」似乎正在到来。
+    </div>
+    <div class="tags">
+      <span class="tag">Skild AI</span>
+      <span class="tag">S1</span>
+      <span class="tag">上下文学习</span>
+      <span class="tag">机器人基础模型</span>
+      <span class="tag">具身GPT时刻</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元</div>
+    <div class="title">
+      <a href="https://aiera.com.cn/2026/08/26/other/admin/110634/" target="_blank">OpenAI 亲儿子「叛变」：法律 AI 公司 Harvey 首个自研模型，底座选了 Kimi K3</a>
+    </div>
+    <div class="summary">
+      估值 110 亿美元的明星法律 AI 公司 <strong>Harvey</strong> 官宣了首个自有模型 <strong>Harvey Tenet</strong>——而它的底座，用的是中国开源模型 <strong>Kimi K3</strong>（月之暗面）。Harvey 的种子轮正是由 OpenAI 创业基金领投、Altman 亲自回邮件结缘，服务超 10 万名律师、覆盖 60 个国家。一家 OpenAI 重仓投资的公司，第一次自研模型却没用 GPT、转而拥抱中国开源底座，被业内视为开源模型在海外高端垂直场景「反向输出」的标志性信号。
+    </div>
+    <div class="tags">
+      <span class="tag">Harvey</span>
+      <span class="tag">Kimi K3</span>
+      <span class="tag">OpenAI</span>
+      <span class="tag">法律AI</span>
+      <span class="tag">中国开源</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/08/479670.html" target="_blank">Top 级视频 AI 免费了：Agnes Video 2.5 上线，可生成 100 秒 2K 视频</a>
+    </div>
+    <div class="summary">
+      明星 AI 实验室 <strong>Agnes</strong> 发布 <strong>Agnes Video 2.5</strong> 系列并上线 Pavo 创作平台：Flash 版本免费、无需消耗积分，适合短剧创作者大量生成；正式版每天送 200 积分、每秒耗 2 积分，最高可生成 100 秒、支持 2K 视频与多图+音视频参考。在 Artificial Analysis 榜单上其成绩已跻身全球主流梯队，折合人民币每秒仅 0.15 元。量子位用它复刻了爆火的《云上天宫》与《牛来》，验证了「免费也能打」的视频生成新格局。
+    </div>
+    <div class="tags">
+      <span class="tag">Agnes</span>
+      <span class="tag">视频生成</span>
+      <span class="tag">免费</span>
+      <span class="tag">Video 2.5</span>
+      <span class="tag">AI短剧</span>
+    </div>
+  </div>
+</div>
+
+<!-- 💰 融资 & 行业 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">💰</span>融资 &amp; 行业</div>
+
+  <div class="card">
+    <div class="source">快科技 · 华尔街见闻</div>
+    <div class="title">
+      <a href="https://tech.ifeng.com/c/8vtq1NpWwlq" target="_blank">英伟达发布 Jetson Orin Nano 2 机器人计算机：78 TOPS 边缘 AI</a>
+    </div>
+    <div class="summary">
+      英伟达正式推出 <strong>Jetson Orin Nano 2</strong> 机器人计算机，专为机器人、无人机等对成本、功耗和实时性要求苛刻的边缘 AI 场景打造，提供每秒 78 万亿次（78 TOPS）的 AI 算力、8GB 内存与 8 核 Arm CPU。华尔街见闻指出，其推理性能较上代翻倍、功耗降低约四成，英伟达正将 Jetson 平台定位为机器人获取「物理智能」的入门级计算基座，进一步把 AI 推理下沉到成本和功耗更敏感的终端设备。
+    </div>
+    <div class="tags">
+      <span class="tag">英伟达</span>
+      <span class="tag">Jetson Orin Nano 2</span>
+      <span class="tag">边缘AI</span>
+      <span class="tag">机器人</span>
+      <span class="tag">78 TOPS</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元</div>
+    <div class="title">
+      <a href="https://aiera.com.cn/2026/08/26/other/admin/110583/" target="_blank">中国 AI「造芯方法论」：Agent 军团接管芯片设计，NovaSilicon 获商汤国香资本领投</a>
+    </div>
+    <div class="summary">
+      聚焦「递归自我改进（RSI）」的芯片设计创业团队 <strong>NovaSilicon（芯星元智能）</strong> 宣布完成新一轮融资，由商汤国香资本领投。这家 2026 年 5 月成立的公司，一个多月内已连获两轮近亿元融资（分别由五源资本、国香资本领投），目标是用具备完整芯片工程师能力的超级智能系统，覆盖从模拟电路、逻辑综合到版图优化、流片验证的芯片设计全流程。芯片设计因自带确定性验证体系（DRC/LVS/时序签核），被视为 RSI 率先落地工业价值的赛道。
+    </div>
+    <div class="tags">
+      <span class="tag">NovaSilicon</span>
+      <span class="tag">RSI</span>
+      <span class="tag">芯片设计</span>
+      <span class="tag">商汤国香</span>
+      <span class="tag">融资</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/08/478860.html" target="_blank">WRC 乒乓球局爆火：超维动力砸出一套「全栈」具身新解法</a>
+    </div>
+    <div class="summary">
+      在 2026 世界机器人大会（WRC）现场，成立约一年的中国公司 <strong>超维动力</strong> 让全尺寸人形机器人现场打乒乓球，展台被围得水泄不通。更值得关注的是其全栈打法：整机 KAI Bot、高自由度灵巧手 KAI Hand、数采头环 KAI Halo、世界模型 KAI World Model 以及数据/训练 Infra 一并摆上展台。量子位指出，这正是 Figure、特斯拉 Optimus、Physical Intelligence 等头部玩家殊途同归的方向——本体、模型、真实场景与数据回流全栈打通，正在成为具身领域的共识。
+    </div>
+    <div class="tags">
+      <span class="tag">超维动力</span>
+      <span class="tag">WRC</span>
+      <span class="tag">全栈具身</span>
+      <span class="tag">人形机器人</span>
+      <span class="tag">乒乓球</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🔬 技术 & 前沿 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔬</span>技术 &amp; 前沿</div>
+
+  <div class="card">
+    <div class="source">新智元 · Hugging Face</div>
+    <div class="title">
+      <a href="https://aiera.com.cn/2026/08/26/other/admin/110655/" target="_blank">物理 AI 的 Scaling Law 来了：光轮智能开源 10 万小时人类行为数据</a>
+    </div>
+    <div class="summary">
+      Dyna Robotics 用超 100 万小时人类第一视角视频（而非一条机器人动作数据）训练出 <strong>DYNA-2</strong> 模型，并跑出一条持续上升、无明显撞墙的幂律曲线——被解读为「物理 AI 终于有了自己的 Scaling Law」，也意味着训练机器人最稀缺的资源正从 GPU、算法转向高质量人类行为视频数据。响应这一趋势，<strong>光轮智能</strong> 在 WRC 2026 上宣布开源 <strong>EgoSuite-Open100K</strong>：10 万小时全模态人类行为数据，与 Hugging Face 联合发布，学术与商业训练均可使用。
+    </div>
+    <div class="tags">
+      <span class="tag hot">物理AI Scaling Law</span>
+      <span class="tag">光轮智能</span>
+      <span class="tag">EgoSuite-Open100K</span>
+      <span class="tag">数据开源</span>
+      <span class="tag">具身数据</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · OpenRouter</div>
+    <div class="title">
+      <a href="https://aiera.com.cn/2026/08/26/other/admin/110666/" target="_blank">AI 开始替人类调用 AI：Agent 的 Token 用量已是人类的 5.2 倍</a>
+    </div>
+    <div class="summary">
+      据全球最大模型网关之一 OpenRouter 统计：2026 年 2 月 6 日人类 Token 用量首次被智能体追平，仅仅半年后，Agent 类 Token 用量已从约 0.51 万亿暴涨到 7.3 万亿（14 倍），而人类仅涨到 1.4 万亿（2.8 倍），两者差距拉开到 <strong>5.2 倍</strong>。OpenRouter 通过 API Key 的行为信号（工具调用频率、响应间隔、对话轮数等 7 项）把流量分成 Agentic / Mixed / Human 三档。这组数据成为「AI 调用 AI」时代的又一注脚——一个人类目标，如今可能触发几十轮模型的自主协作。
+    </div>
+    <div class="tags">
+      <span class="tag">Agent</span>
+      <span class="tag">OpenRouter</span>
+      <span class="tag">Token用量</span>
+      <span class="tag">AI调用AI</span>
+      <span class="tag">数据观察</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🛠 观点 & 花边 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠</span>观点 &amp; 花边</div>
+
+  <div class="card">
+    <div class="source">IT之家 · 新智元</div>
+    <div class="title">
+      <a href="https://www.ithome.com/0/994/296.htm" target="_blank">曝 OpenAI 已完成预训练下一代模型「Bel」：参数超 10 万亿，Doug 继任者</a>
+    </div>
+    <div class="summary">
+      消息源 @synthwavedd 在 X 上爆料称，OpenAI 已完成下一代模型的预训练，内部代号 <strong>Bel</strong>，是 Doug 模型的直接继任者，总参数规模据称超过 10 万亿。在「小辣椒」芯片同日刷屏的背景下，这条传闻进一步推高了市场对 OpenAI 下一代基座模型（此前外界多猜测为 GPT-6 Astra 或下一代 Agent 模型）的期待，也让「预训练是否撞墙」的争论再起波澜。
+    </div>
+    <div class="tags">
+      <span class="tag">OpenAI</span>
+      <span class="tag">Bel</span>
+      <span class="tag">10万亿参数</span>
+      <span class="tag">预训练</span>
+      <span class="tag">传闻</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元</div>
+    <div class="title">
+      <a href="https://aiera.com.cn/2026/08/26/other/admin/110619/" target="_blank">Claude「棉花糖」「甜瓜」实测流出：空间推理封神，算力被直接榨干</a>
+    </div>
+    <div class="summary">
+      昨日曝出的 Claude 两款新模型——「棉花糖」（marshmallow）与「甜瓜」（melon）——今日已有实测：两者在 3D 强化学习与建筑空间布局上表现惊人，能 One-Shot 一步到位生成复杂 3D 坐标与空间关系、无需反复调整 Prompt；但代价是对算力的吞噬同样疯狂，回答前会消耗海量「思考 Token」进行深度逻辑推理，屡次逼近系统使用上限。业内评价称，Claude 正在进化为具备「慢思考」与深度空间物理推理能力的下一代 AI。
+    </div>
+    <div class="tags">
+      <span class="tag">Anthropic</span>
+      <span class="tag">Claude</span>
+      <span class="tag">marshmallow</span>
+      <span class="tag">空间推理</span>
+      <span class="tag">慢思考</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+    今天最想聊的一个词，是「颠覆感」。OpenAI 的第一代自研芯片「小辣椒」，居然一上来就把英伟达最强的 Blackwell 按在地上摩擦——700W 的功耗，能效、时延全面领先，还有 AI 自己写出来的内核比人类工程师更猛。<strong>当一家模型公司开始自己造芯片，算力的游戏规则就悄悄改写了</strong>；老黄股价不跌反涨，恰恰说明市场看懂了：英伟达真正的护城河早已不只是 GPU，而是 Vera Rubin 这样「为 Agent 而生」的下一代机柜——DeepSeek 一跑，吞吐暴涨 30 倍，这才是它在意的战场。
+    <br><br>
+    具身智能这一头，今天尤其热闹。Skild AI 的 S1 让机器人「看一遍人类演示就会做」，成功率 66% 对 9%，把上下文学习真正带进了物理世界；宇树和智元这对「竞品」居然共用一个大模型的视频更是刷屏级——跨本体通用大脑，可能是今年具身圈最值得反复看的素材。再加上 Dyna Robotics 用 100 万小时人类视频跑出的「物理 AI Scaling Law」、光轮智能顺势开源 10 万小时数据，<strong>「数据」正在取代「算法」成为具身智能的下一个王座</strong>。
+    <br><br>
+    最后补一个耐人寻味的信号：OpenAI 重仓的法律 AI 公司 Harvey，第一次自研模型，底座用的却是中国的开源模型 Kimi K3。<strong>开源权重正在反向输出到全球最赚钱的垂直场景</strong>——当「小辣椒」在芯片端掀桌、Kimi K3 在应用端破圈，中国 AI 的身影，今天出镜率有点高哦～主人慢慢看～
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-27</p>
+</div>
+
+</div>
+</body>
+</html>

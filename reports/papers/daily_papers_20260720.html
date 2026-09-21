@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年07月20日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年07月20日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>本周 AI 领域迎来密集发布期：OpenAI GPT-5.6 全面开放、Moonshot AI 发布 2.8T 开源模型 Kimi K3、Meta Muse Spark 1.1 正式上线付费 API。此外，Apple 起诉 OpenAI 窃取商业机密、Gemini 3.5 Pro 再次延期，行业竞争格局持续激化。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>本周热点</div>
+
+  <div class="hot-topic">
+    <div class="label">🔴 重磅发布</div>
+    <div class="card" style="box-shadow:none;border:0;padding:0;margin:0;">
+      <div class="source">OpenAI · 2026-07-09</div>
+      <div class="title"><a href="https://openai.com/news/research/" target="_blank">GPT-5.6 全面开放：Sol / Terra / Luna 三档分级发布</a></div>
+      <div class="summary">OpenAI 于 7 月 9 日正式开放 GPT-5.6 系列，提供 Sol（旗舰）、Terra（均衡）、Luna（轻量）三档。Sol Ultra 在不到一小时内运行 64 个子 Agent，证明了一个悬置 50 年的数学猜想（Cycle Double Cover Conjecture）。但也曝出罕见文件误删 Bug，引发社区讨论。</div>
+      <div class="tags"><span class="tag hot">重磅</span><span class="tag">LLM</span><span class="tag">Agent</span><span class="tag">OpenAI</span></div>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">🔴 开源旗舰</div>
+    <div class="card" style="box-shadow:none;border:0;padding:0;margin:0;">
+      <div class="source">Moonshot AI · 2026-07-16</div>
+      <div class="title"><a href="https://kie.ai/blog/what-is-kimi-k3" target="_blank">Kimi K3：全球首个 2.8 万亿参数开源模型发布</a></div>
+      <div class="summary">Moonshot AI 发布 Kimi K3，2.8T 参数开源权重模型，支持 1M Token 上下文窗口，在多项编程基准测试中媲美闭源旗舰。权重将于 7 月 27 日正式开放，API 定价 $3/$15 每百万 Token。</div>
+      <div class="tags"><span class="tag hot">重磅</span><span class="tag">开源</span><span class="tag">LLM</span><span class="tag">中国AI</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>前沿研究</div>
+
+  <div class="card">
+    <div class="source">arXiv · 2507.14417</div>
+    <div class="title"><a href="https://arxiv.org/abs/2507.14417" target="_blank">Inverse Scaling in Test-Time Compute：推理扩展的反向缩放现象</a></div>
+    <div class="summary">研究发现：在短推理任务上过度扩展 Test-Time Compute 反而导致性能下降，揭示了短推理与长推理对齐之间的关键差距，对推理模型部署策略有重要启示。</div>
+    <div class="tags"><span class="tag">推理</span><span class="tag">Test-Time Compute</span><span class="tag">LLM</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · 2607.13034</div>
+    <div class="title"><a href="https://papers.cool/arxiv/2607.13034" target="_blank">Do AI Agents Know When a Task Is Simple? —— AI Agent 的任务难度感知研究</a></div>
+    <div class="summary">探讨 LLM Agent 是否能评估任务所需努力。研究发现多数 Agent 缺乏任务难度自评估能力，对简单任务过度使用复杂流程，导致效率低下。</div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">LLM</span><span class="tag">评估</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · 2607.12217</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.12217" target="_blank">Good Benchmarks：定义高质量 AI 评估基准的准则</a></div>
+    <div class="summary">提出高质量 Benchmark 的五大准则：正确性、可解性、可验证性、明确定义、有趣且困难。为社区构建更有意义的 AI 评测体系提供了方法论指导。</div>
+    <div class="tags"><span class="tag">Benchmark</span><span class="tag">评估</span><span class="tag">方法论</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🏭</span>工业动态</div>
+
+  <div class="card">
+    <div class="source">Meta · 2026-07-09</div>
+    <div class="title"><a href="https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/" target="_blank">Meta Muse Spark 1.1：首个付费 API 多模态 Agent 推理模型</a></div>
+    <div class="summary">Meta Superintelligence Labs 推出 Muse Spark 1.1，支持 1M Token 上下文，具备原生多 Agent 编排能力，在工具使用、编程和视觉理解上大幅提升。API 定价 $1.25/$4.25 每百万 Token，标志着 Meta 从开源免费走向商业化 API。</div>
+    <div class="tags"><span class="tag">多模态</span><span class="tag">Agent</span><span class="tag">Meta</span><span class="tag">商业化</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Google DeepMind · 2026-07-17</div>
+    <div class="title"><a href="https://deepmind.google/models/gemini/" target="_blank">Gemini 3.5 Pro：三度延期，架构重建中</a></div>
+    <div class="summary">Google DeepMind 的 Gemini 3.5 Pro 原定 7 月 17 日上线，但已第三次推迟。据悉需重建架构以解决幻觉率和推理性能问题。其 2M Token 上下文窗口一旦落地将刷新业界纪录。Flash 版本已先行发布并展现出色 Agent 能力。</div>
+    <div class="tags"><span class="tag">LLM</span><span class="tag">Google</span><span class="tag">长上下文</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Claude (Anthropic) · 2026-07</div>
+    <div class="title"><a href="https://www.anthropic.com/news/claude-fable-5-mythos-5" target="_blank">Claude Fable 5：Mythos 级模型全面开放，免费试用再延期</a></div>
+    <div class="summary">Anthropic 的 Claude Fable 5 作为 Mythos 级安全化模型，持续面向用户免费试用。在用户强烈需求下，Anthropic 两度延长试用期，但尚未公布何时恢复为付费计划。</div>
+    <div class="tags"><span class="tag">LLM</span><span class="tag">Anthropic</span><span class="tag">安全</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能 &amp; 机器人</div>
+
+  <div class="card">
+    <div class="source">Mistral AI · 2026-07-08</div>
+    <div class="title"><a href="https://mistral.ai/news/robostral-navigate/" target="_blank">Mistral Robostral Navigate：仅用单 RGB 摄像头的 8B 机器人导航模型</a></div>
+    <div class="summary">Mistral AI 发布首个具身导航模型 Robostral Navigate，仅 8B 参数，使用单 RGB 摄像头即可实现复杂环境导航，在 R2R-CE unseen 验证集上达到 76.6% 成功率，超越多传感器方案。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">机器人</span><span class="tag">VLA</span><span class="tag">Mistral</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">⚖️</span>行业事件</div>
+
+  <div class="card">
+    <div class="source">科技法律 · 2026-07-10</div>
+    <div class="title"><a href="https://www.theguardian.com/technology/2026/jul/10/apple-sues-openai-trade-secrets" target="_blank">Apple 起诉 OpenAI：指控窃取商业机密开发 AI 硬件</a></div>
+    <div class="summary">Apple 于 7 月 10 日在加州北区联邦法院起诉 OpenAI，指控其通过挖角前员工窃取 Siri AI 相关商业机密。此案可能重塑 AI 人才流动与知识产权格局。值得注意的是，Apple 此前与 OpenAI 有 ChatGPT 集成合作，但新版 Siri 的 AI 能力已转向 Google Gemini。</div>
+    <div class="tags"><span class="tag">法律</span><span class="tag">Apple</span><span class="tag">OpenAI</span><span class="tag">知识产权</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+  2026 年 7 月中旬的 AI 圈堪称「神仙打架」。OpenAI GPT-5.6 以三档分级策略覆盖从旗舰到轻量的全场景，Sol Ultra 在数学证明上的表现令人震撼但文件误删 Bug 也敲响安全警钟。Moonshot AI 的 Kimi K3 以 2.8T 开源模型挑战闭源霸权，标志着中国 AI 在开源路线上的又一次重磅出击。<br><br>
+  Meta 从开源转向付费 API（Muse Spark 1.1）、Anthropic 以免费试用策略争夺用户、Google Gemini 3.5 Pro 反复延期——巨头间的竞争从模型能力延伸到了商业模式和发布策略。Mistral 以 8B 小模型杀入机器人赛道，证明「小模型+垂直场景」依然有巨大空间。<br><br>
+  值得关注的是「推理扩展的边界」——Inverse Scaling in Test-Time Compute 研究提醒我们：更多的算力不一定带来更好的结果，模型部署需要更精细的策略设计。Apple vs OpenAI 的诉讼则预示着 AI 时代的 IP 战争才刚刚开始。
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-07-20</p>
+</div>
+
+</div>
+</body>
+</html>

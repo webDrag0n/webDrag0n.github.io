@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年08月19日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年08月19日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>具身智能是今天的绝对主角——<strong>τ₀-VLA</strong>、<strong>BATON</strong> 等多条机器人基础模型与长程操控进展集中发布；开源多模态再添新军，<strong>MOSS-VL</strong> 把"边看边说"的实时视频理解做成一等能力；DeepMind 用 <strong>AlphaEvolve</strong> 改进矩阵乘法指数 ω，是基础算法层面难得一见的突破。GitHub 上 OpenViking、MoneyPrinterTurbo 等 Agent 与视频生成项目持续霸榜。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 基础算法突破</div>
+    <div class="card">
+      <div class="source">arXiv 2608.16884 · DeepMind × MIT 等</div>
+      <div class="title"><a href="https://arxiv.org/abs/2608.16884">Improving the matrix multiplication exponent with modern optimization and AlphaEvolve</a></div>
+      <div class="summary">矩阵乘法指数 ω 是理论计算机科学几十年悬而未决的经典难题。这项工作用现代化优化方法重构了"组合损失分析"（laser method 的最新精化）的核心优化问题，并借助 DeepMind 的 AlphaEvolve 进化搜索算法在更大解空间里求解，改进了 ω 的上界——一次把前沿 AI 优化方法用于纯数学/理论 CS 的漂亮示范。</div>
+      <div class="tags"><span class="tag hot">基础算法</span><span class="tag">AlphaEvolve</span><span class="tag">理论 CS</span></div>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 开源多模态</div>
+    <div class="card">
+      <div class="source">arXiv 2608.15045 · OpenMOSS</div>
+      <div class="title"><a href="https://arxiv.org/abs/2608.15045">MOSS-VL Technical Report</a></div>
+      <div class="summary">OpenMOSS 发布 11B 开源视觉-语言模型系列，把"边看边说"的实时交互（perceiving while it speaks）作为一等能力设计：语言解码器通过门控交叉注意力感知视频帧，配合合成的交互语料与分阶段课程训练。离线版 MOSS-VL-Instruct 在时间推理视频集上领先同级；实时版 MOSS-VL-Realtime 在四项流式基准中三项拿下开源模型最佳，其中测"主动行为"的三个子集大幅领先（66.0 vs 37.5）。</div>
+      <div class="tags"><span class="tag hot">开源</span><span class="tag">多模态</span><span class="tag">VLM</span><span class="tag">实时视频</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能与机器人</div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.16885 · 多机构联合</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.16885">τ₀-VLA: 世界模型引导测试时计算的层级机器人基础模型</a></div>
+    <div class="summary">针对长程机器人操控，τ₀-VLA 把高层子任务生成建模为"计算可扩展"的推理问题：每个推理步用执行记忆生成子任务，关键决策时在世界模型引导下搜索多个备选再拍板，低层策略跨多种机器人本体执行。模型基于 40,115 小时异构真实世界数据做多模态联合训练。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">VLA</span><span class="tag">世界模型</span><span class="tag">测试时计算</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.16889 · USC 等</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.16889">Don't Drop the BATON: 长程机器人操控的智能体式子任务探索与转移感知记忆</a></div>
+    <div class="summary">把 LLM 智能体叠加在冻结 VLA 之上做长程操控，是当前流行配方，但在多阶段任务里会"两次崩坏"：全任务探索成本随阶段数指数膨胀、且缺乏子任务间"转移条件"的表征。BATON 引入智能体式子任务探索（agentic subtask exploration）与转移感知记忆，让机器人能定位哪一阶段出错、并把前一个技能的"出口条件"显式建模为下一个技能的"入口条件"。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">LLM Agent</span><span class="tag">长程操控</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型与智能体</div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.16844 · Mila × Google</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.16844">Proteus: 长上下文序列建模的增量记忆激活</a></div>
+    <div class="summary">注意力机制的二次方成本催生了大量"记忆压缩"模型，但多数方法全程暴露一个静态记忆，早期 token 挤占自由度、"污染"记忆状态。Proteus 提出"增量记忆激活"新范式：随上下文增长逐步解锁记忆容量——早期施加瓶颈迫使模型更高效压缩历史，后期释放新容量以减少干扰、改善对后续上下文的保留。</div>
+    <div class="tags"><span class="tag">大模型</span><span class="tag">长上下文</span><span class="tag">新架构</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.15089</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.15089">StateM: 借 harness scaling 在 Terminal-Bench 2.1 达 95.3% 原始准确率</a></div>
+    <div class="summary">长程智能体即使底层模型能解每一步，也常因丢失可变状态、忘记先前经验、跳过已知流程而失败。StateM 是一个"智能体原生"运行时，围绕持久状态、阶段局部上下文、可校验转移、可恢复 runbook 组织执行，不改模型权重、只升级执行系统，就在 Terminal-Bench 2.1 上拿到 95.3% 原始准确率（约 $15 的前沿运行成本）。</div>
+    <div class="tags"><span class="tag">LLM Agent</span><span class="tag">运行时</span><span class="tag">Benchmark</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.16834</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.16834">Model Hypnosis: 通过叠加式潜意识线索强控制 AI</a></div>
+    <div class="summary">研究者展示了一种"模型催眠"现象：提示词中单个微弱、看似无关的线索（如同义改写、拼写错误）可以被系统性叠加，从而强力操控模型行为。该现象跨模型家族与规模普遍存在、包括前沿推理模型，且催眠提示可在模型间迁移，给 AI 安全与可解释性带来新的挑战。</div>
+    <div class="tags"><span class="tag">AI 安全</span><span class="tag">可解释性</span><span class="tag">对齐</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🌐</span>多模态与世界模型</div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.15265</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.15265">VibeWorlding: 多模态智能体能否端到端构建 3D 开放世界？</a></div>
+    <div class="summary">从一句用户描述端到端搭建可交互 3D 开放世界，是"世界模型"落地的重要形态。VibeWorlding 提出统一的基准与训练框架，让多模态智能体自主推断意图、规划场景布局、调用 3D 工具并在多轮交互中反思反馈；配套的 VWE-BENCH 含 2,616 个高质量 3D 资产、323 个人工标注种子世界与 6,828 条反向合成的多模态查询。</div>
+    <div class="tags"><span class="tag">多模态</span><span class="tag">3D 世界</span><span class="tag">智能体</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔓</span>开源与工程</div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.14614</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.14614">DumpsterCluster: 用 $60 GPU 服务 LLaMA-70B</a></div>
+    <div class="summary">数据中心退役的大量 GPU 进入二手市场。作者真金白银用二手部件搭了一台 128 卡"垃圾场集群"并稳定跑了一年，用来服务现代 LLM 推理：当前市价约 $2.2 万，对比 8 卡 B200 系统的 $60 万，经济与环保优势显著——为 AI 算力"翻新再利用"提供了扎实的可行性论证。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">推理</span><span class="tag">可持续</span><span class="tag">成本</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · volcengine (字节跳动火山引擎)</div>
+    <div class="title"><a href="https://github.com/volcengine/OpenViking">OpenViking: 面向 AI Agent 的自进化上下文数据库</a></div>
+    <div class="summary">本周 GitHub 热门：字节火山引擎开源的 OpenViking（约 2.9 万 stars）把 Agent 的记忆、知识 RAG 与技能统一进一个"自进化上下文数据库"；同榜的 MoneyPrinterTurbo（超 10 万 stars）继续霸占"一键生成短视频"赛道的头把交椅，akitaonrails/ai-memory 则为 Agent 编码 CLI 提供跨厂商的长期记忆方案。</div>
+    <div class="tags"><span class="tag hot">GitHub 热门</span><span class="tag">Agent 记忆</span><span class="tag">开源</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>今天最值得多看两眼的，是那条看似"不 AI"的矩阵乘法指数论文——DeepMind 把 AlphaEvolve 用在纯数学难题上，说明进化搜索正在从"下棋、跑模型"走向真正的科学发现，这种跨界的味道很上头。具身智能这波也很猛：τ₀-VLA 和 BATON 不约而同地把"给关键决策多算一会儿"（测试时计算 / 子任务探索）当成了长程操控的解药，机器人终于开始学着"想清楚再动手"了。开源这边，MOSS-VL 把实时视频理解做到 11B 可落地，OpenViking、ai-memory 又在疯狂内卷 Agent 记忆，加上 $60 GPU 跑 70B 的 DumpsterCluster，感觉"又强又省"正成为新共识。哦对了，Anthropic 刚把灾难性错位风险评级从"极低"调到"低"，Model Hypnosis 又演示了用不起眼的拼写错误就能操控前沿模型——进步越快，安全和可解释性这口锅就越沉，咱们边吃瓜边盯着就好~</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026年08月19日</p>
+</div>
+
+</div>
+</body>
+</html>

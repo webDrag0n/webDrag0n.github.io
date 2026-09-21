@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年08月18日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .hot-topic .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .hot-topic .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .hot-topic .title a:hover { text-decoration: underline; }
+  .hot-topic .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .hot-topic .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .hot-topic .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .hot-topic .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .hot-topic .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年08月18日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今天这批论文的主旋律是<strong>「怎么让模型更省、更稳、更可信」</strong>。人气最高的是<strong>AI 假视频检测</strong>（RA-Bench，258 upvote 登顶）——它给「AI 生成的危机视频」当头一棒：现有检测器几乎都扛不住真实场景。模型侧，上海 AI 实验室的 <strong>Intern-S2-Mobius</strong> 把「知识」和「推理」拆开存，<strong>SimpleOPD</strong>、<strong>S²VOPD</strong> 两条蒸馏线一起上，都在喊「小模型也能打」。世界模型有 Alaya Lab 的 <strong>Marionette</strong>（先建模 3D 世界状态、再画画面）；Agent 侧 <strong>cumora</strong> 把 AI 变成团队的「一等队友」、单日冲上 GitHub 榜首。配上 DeepSeek V4、GLM-5.3、Qwen3.8 这批开源大模型的持续刷屏——8 月的开源 AI，是真的热闹。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · 开源</div>
+    <div class="title"><a href="https://github.com/yetone/cumora" target="_blank">cumora：把 AI Agent 当成「一等队友」的团队聊天室</a></div>
+    <div class="source">GitHub Trending 今日榜首 · yetone/cumora · ⭐1131（单日）· TypeScript</div>
+    <div class="summary">开源圈今天最火的仓库：<strong>cumora</strong>，一个跨平台的团队聊天工具，把 AI Agent 当成团队里的<strong>「正式队友」</strong>来用。它既支持云端大脑，也支持自带大脑（Claude Code / Codex 等），人跟多个 Agent 可以在同一个聊天流里无缝协作——Agent 不再是藏在后台的脚本，而是「坐在工位上的同事」。单日冲上 GitHub Trending 榜首，背后是同一个信号：<strong>Agent 协作正在成为新的基础设施</strong>。</div>
+    <div class="tags">
+      <span class="tag hot">GitHub 榜首</span>
+      <span class="tag">Agent 协作</span>
+      <span class="tag">团队聊天</span>
+      <span class="tag">开源</span>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · AI 安全</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.14391" target="_blank">AI 生成的「危机假视频」能骗过检测器吗？RA-Bench 说：难防</a></div>
+    <div class="source">arXiv 2608.14391 · 2026-08-14 · HuggingFace Daily 258 upvotes（今日最高）</div>
+    <div class="summary">突发危机事件（灾难、冲突）发生时，AI 生成的假视频会以惊人速度刷屏。这篇工作建了个新基准 <strong>RA-Bench</strong>，把「检测器 → 生成器 → 社交传播」三个环节串起来系统评估。结论有点警醒：现有检测器一旦跨到<strong>真实的危机视频场景就普遍失灵</strong>，而内容经过社交媒体的压缩、转发、再剪辑之后，检测可靠性还会进一步下滑。开源了零样本多模态模型 + MLLM 检测器，是今天 HuggingFace 上关注度最高的论文。</div>
+    <div class="tags">
+      <span class="tag hot">今日最高人气</span>
+      <span class="tag">AI 安全</span>
+      <span class="tag">视频生成检测</span>
+      <span class="tag">多模态</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 &amp; 推理</div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.14290 · 2026-08-14 · 上海 AI 实验室（Intern 系列，含 Dahua Lin）· HuggingFace Daily 31 upvotes</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.14290" target="_blank">Intern-S2-Mobius：把「知识」和「推理」拆开存的基础模型</a></div>
+    <div class="summary">传统 Transformer 把「知识」和「推理」全压进同一套权重，又费数据又费算力。上海 AI 实验室的 <strong>Mobius-v0</strong> 换了个思路：把<strong>全局记忆存储（FFN）</strong>和<strong>迭代推理模块（自注意力）</strong>解耦——记忆负责装知识、推理器负责想。结果用更少的训练数据就达到可比性能，推理更快、知识压缩更好。这是 Intern-S2 系列继昨天的「科学 Agent 基座 Preview」之后，在「知识-推理解耦」方向上又落的一步。</div>
+    <div class="tags">
+      <span class="tag">基础模型</span>
+      <span class="tag">知识推理解耦</span>
+      <span class="tag">高效推理</span>
+      <span class="tag">上海 AI 实验室</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.14277 · 2026-08-14 · 含 Ning Ding、Yu Cheng（清华）· HuggingFace Daily 23 upvotes</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.14277" target="_blank">SimpleOPD：把「长上下文推理」蒸馏进短上下文小模型</a></div>
+    <div class="summary">长上下文推理模型很强，但慢、贵。能不能把它的「证明推理」能力蒸馏到短上下文的小模型里？<strong>SimpleOPD</strong> 给出一个 tokenizer 无关的在线策略蒸馏方案：对齐 token 跨度、约束长度增长、用「终止 token 掩码」稳定训练，把分布错配问题压下去。在数学证明推理上效果显著，还能泛化到科学类基准。名字叫 Simple，好用的关键恰恰就在「简单」。</div>
+    <div class="tags">
+      <span class="tag">知识蒸馏</span>
+      <span class="tag">长上下文推理</span>
+      <span class="tag">在线策略</span>
+      <span class="tag">小模型</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🎨</span>多模态 &amp; 世界模型</div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.14144 · 2026-08-14 · 含 Philip Torr（牛津）· HuggingFace Daily 147 upvotes</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.14144" target="_blank">视觉版「自蒸馏」：不给老师、不给标注，也能让 VLM 学得更细</a></div>
+    <div class="summary">小视觉语言模型想变强，通常得靠更大的老师或特权标注。这篇 <strong>S²VOPD</strong> 反其道：不用大老师、不用特权信息，只靠<strong>自监督的视觉在线策略蒸馏</strong>——把原图蒸馏到「强增强的学生视角」里，利用「老师-学生不对称」逼着模型学到更细粒度的感知。对细粒度视觉理解任务尤其有效，还开源了项目页。147 个 upvote，是今天论文区的人气第二。</div>
+    <div class="tags">
+      <span class="tag">VLM</span>
+      <span class="tag">自蒸馏</span>
+      <span class="tag">在线策略</span>
+      <span class="tag">细粒度感知</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.14530 · 2026-08-14 · Alaya Lab（含 Kaipeng Zhang）· HuggingFace Daily 22 upvotes</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.14530" target="_blank">Marionette：先预测 3D 世界状态，再「画」出画面</a></div>
+    <div class="summary">交互式游戏 / 世界生成有个根本难题：光生成「好看的视频」不够，还得能<strong>直接操控世界状态</strong>。阿里 Alaya Lab 的 <strong>Marionette</strong> 把生成拆成三步——先用自回归动力学模型预测<strong>显式 3D 关节世界状态</strong>（骨架），再用零参数渲染器出几何，最后用视频扩散「上色」出画面。好处是能在状态层面直接控制，还能做<strong>长程一致性修复</strong>。这是「世界模型」从「画视频」走向「建模世界」的又一步。</div>
+    <div class="tags">
+      <span class="tag">世界模型</span>
+      <span class="tag">3D 关节状态</span>
+      <span class="tag">视频生成</span>
+      <span class="tag">交互式</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>Agent &amp; 具身智能</div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.13417 · 2026-08-13 · 含 Fei Sun（美团）· HuggingFace Daily 41 upvotes</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.13417" target="_blank">别只看最后分数：长程 AI 研发 Agent 的系统评估</a></div>
+    <div class="summary">都说前沿 Agent 能做 AI 研发了，但「能做」和「做得好」之间隔着什么？这篇工作对长程 AI 研发 Agent 做了系统评估，把过程拆成<strong>方案构思、执行、反馈控制</strong>三个阶段，用规则化指标打分。结论挺冷静：前沿 Agent 在<strong>工程优化上很强</strong>，但在长程任务里表现不稳、<strong>方法创新有限</strong>、经验复用时好时坏。一句话：Agent 离「能独立搞科研」，还差着点东西。</div>
+    <div class="tags">
+      <span class="tag">AI Agent</span>
+      <span class="tag">长程任务</span>
+      <span class="tag">系统评估</span>
+      <span class="tag">自动科研</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.13606 · 2026-08-11 · ZJU NLP（zjunlp，含 Guilin Qi）· HuggingFace Daily 20 upvotes</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.13606" target="_blank">MobileMem：让手机「记住」你一整年的生活</a></div>
+    <div class="summary">端侧 AI 最难的不是「回答」，是「记住」。<strong>MobileMem</strong> 建了一个评估端侧长期记忆的基准：用<strong>一年尺度的多模态手机体验轨迹</strong>（照片、消息、位置、事件），考模型的时间推理、知识更新、偏好推断能力。目标是让手机上的模型真正形成「体验型智能」——不是背你的数据，而是懂你的生活轨迹。20 个 upvote，是「端侧记忆」这条线里今天最值得看的一个。</div>
+    <div class="tags">
+      <span class="tag">端侧智能</span>
+      <span class="tag">长期记忆</span>
+      <span class="tag">多模态</span>
+      <span class="tag">基准</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+  今天最亮眼的信号是<strong>「蒸馏」三连</strong>：SimpleOPD（长程推理）、S²VOPD（视觉）、Mobius（知识-推理解耦），加上昨天 Mimir 的「小模型 + 干净数据」，大家不约而同都在回答同一个问题——能不能用更小的模型、更少的数据、更少的算力，做出接近大模型的水准？这条路越走越实了。<br><br>
+  第二个是<strong>AI 安全开始「反攻」</strong>：RA-Bench 以 258 upvote 登顶，说明大家意识到「检测 AI 假视频」已经和「生成 AI 视频」一样重要，甚至更急迫——毕竟危机时刻，一条以假乱真的视频比谣言本身杀伤力更大。<br><br>
+  第三个是<strong>世界模型在往「真世界」走</strong>：Marionette 不再满足于「画好看的视频」，而是先建模 3D 关节状态、再渲染、再上色——这是从「拍电影」到「搭舞台」的转变。<br><br>
+  至于 cumora 冲上 GitHub 榜首，也印证了那句老话：<strong>Agent 正在从「后台脚本」变成「坐在你旁边的同事」</strong>。新的一天，慢慢看～
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-18 CST</p>
+</div>
+
+</div>
+</body>
+</html>

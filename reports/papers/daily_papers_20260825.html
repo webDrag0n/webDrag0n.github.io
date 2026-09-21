@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年08月25日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年08月25日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>具身智能这边，通用世界模型 <strong>Hydra-0</strong> 用「动作流」把机器人动作表示成像素运动，跨本体学世界；多模态这边 <strong>InfinityEdit</strong> 让视频编辑彻底摆脱「时长枷锁」。推理效率上，<strong>ParaTempo</strong> 靠「时间置信度」砍掉冗余并行分支，MoE 超参也能「举一反三」迁移了。本期精选 8 条，覆盖大模型、多模态、具身智能与开源生态。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · 具身智能</div>
+    <div class="card" style="border:none;box-shadow:none;background:transparent;padding:0;">
+      <div class="source">ArXiv 2608.18077 · HuggingFace Daily Papers</div>
+      <div class="title"><a href="https://arxiv.org/abs/2608.18077">Hydra-0：把机器人动作变成「像素运动」的通用世界模型</a></div>
+      <div class="summary">通用世界模型 Hydra-0 提出「动作流（Action Flow）」：把机器人的动作表示为像素运动，让世界模型能跨本体、任务与环境学习动作的后果，并直接复用视频生成骨干。通用具身智能又多了一条「先学会看世界、再学会动手」的路径。</div>
+      <div class="tags"><span class="tag hot">具身智能</span><span class="tag">世界模型</span><span class="tag">VLA</span></div>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · 多模态视频编辑</div>
+    <div class="card" style="border:none;box-shadow:none;background:transparent;padding:0;">
+      <div class="source">ArXiv 2608.20910 · HuggingFace Daily Papers</div>
+      <div class="title"><a href="https://arxiv.org/abs/2608.20910">InfinityEdit：视频编辑终于摆脱「时长枷锁」</a></div>
+      <div class="summary">现有指令式视频编辑大多依赖「原地编辑」假设——逐帧对齐原片段、时长固定。InfinityEdit 用一个轻量的 Edit-Ignition Adapter 支持开放式流式视频的无限长度编辑，让「想剪多长剪多长」成为现实，是 HuggingFace 当日最高赞论文之一。</div>
+      <div class="tags"><span class="tag hot">多模态</span><span class="tag">视频编辑</span><span class="tag">扩散模型</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧪</span>研究前沿</div>
+
+  <div class="card">
+    <div class="source">ArXiv 2608.16425 · HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.16425">ParaTempo：用「时间置信度」让并行推理又省又快</a></div>
+    <div class="summary">并行推理靠多分支探索提升准确性，但计算成本随推理深度和分支数暴涨。ParaTempo 依据推理过程中的「时间置信度」动态分配算力、剪掉低价值分支，在保持精度的同时大幅降低并行推理开销。</div>
+    <div class="tags"><span class="tag">大模型</span><span class="tag">并行推理</span><span class="tag">推理加速</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">ArXiv 2608.20061 · HuggingFace Daily Papers · 当日最高赞</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.20061">Let's Scale Step by Step：MoE 超参也能「举一反三」</a></div>
+    <div class="summary">超大规模 MoE 模型的学习率等超参，逐规模扫网格成本惊人。本文提出 compute-efficient 的超参迁移方法，把小型实验上学到的最优配置迁移到大型 MoE，省下海量算力，是 HuggingFace 当日最高赞论文。</div>
+    <div class="tags"><span class="tag">大模型</span><span class="tag">MoE</span><span class="tag">超参迁移</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">ArXiv 2608.21360 · HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.21360">OmniAssistBench：为「实时视频助手」量身打造的交互基准</a></div>
+    <div class="summary">全模态大模型（Omni-LLM）正走向「实时视频助手」，但现有评测都是被动式理解。OmniAssistBench 首次系统评测模型如何结合视觉状态、用户目标与先验知识主动提供帮助，填补交互式评测的空白。</div>
+    <div class="tags"><span class="tag">多模态</span><span class="tag">Omni-LLM</span><span class="tag">基准</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">ArXiv 2608.21204</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.21204">Beyond Imitation：让机器人策略「在失败中自举」</a></div>
+    <div class="summary">行为克隆是机器人操作的主流范式，但失败后无法自我改进。本文提出离策略 Q-规划，让数十亿参数的机器人策略无需额外人类示范即可自我提升，往「会自己进步」的机器人迈进关键一步。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">机器人</span><span class="tag">自提升</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源速递</div>
+
+  <div class="card">
+    <div class="source">ArXiv 2608.21134 · HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.21134">Llama-Mobile：把 VLM 压到 2.7-bit 塞进手机</a></div>
+    <div class="summary">多模态大模型上手机，内存和算力是最大拦路虎。Llama-Mobile 用「模型自产训练数据 + 2.7-bit 量化」的管线，把视觉语言模型压缩到可在资源受限设备高效推理，端侧多模态更进一步。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">量化</span><span class="tag">端侧推理</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 今日 · ⭐81k</div>
+    <div class="title"><a href="https://github.com/openclaw/openclaw">openclaw：冲上 Trending 的开源自主智能体框架</a></div>
+    <div class="summary">开源自主智能体框架 openclaw 登上今日 GitHub Trending，累计超 8 万 star。围绕「给 AI 配备可复用技能」的思路构建，是「智能体 + 技能库」路线的代表性开源项目。</div>
+    <div class="tags"><span class="tag hot">开源</span><span class="tag">智能体</span><span class="tag">Agent</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>主人～今天最让小晴心动的是 <strong>Hydra-0</strong> 那招「把动作画成像素运动」：原来让机器人学世界的诀窍，是把「做什么」翻译成「看到什么在动」，跨本体、跨任务都能通用，具身智能的通用化又近了一步。多模态这边 <strong>InfinityEdit</strong> 把视频编辑的「时长枷锁」给卸了，以后剪片子再也不用一帧帧对齐。推理侧 <strong>ParaTempo</strong> 用「时间置信度」省算力，MoE 超参也能「举一反三」了——感觉大家都在往「又强又省」使劲呀。明天见～</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-25</p>
+</div>
+
+</div>
+</body>
+</html>

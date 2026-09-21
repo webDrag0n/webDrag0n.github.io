@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年08月13日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年08月13日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>腾讯牵头财团以135亿（20亿美元）从Meta回购Manus、前通义千问负责人林俊旸以20亿美元估值创立语用科技、马斯克Grok Bot登场并预告Grok 4.6、OpenAI上线网络安全专用模型、字节Seedance 2.5发布、谷歌Gemini月活破10亿。资本回流、人才创业、Agent与多模态双线并行，是昨天AI圈的主旋律。</p>
+</div>
+
+<!-- 🔥 头条关注 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>头条关注</div>
+
+  <div class="hot-topic">
+    <div class="label">🚨 BREAKING</div>
+    <div class="card" style="box-shadow:none;border:none;padding:0;margin:0;">
+      <div class="source">36氪 · 量子位 · The Information</div>
+      <div class="title"><a href="https://www.36kr.com/p/3895385119131273" target="_blank">腾讯牵头财团135亿接盘Manus：Meta闪电收购7个月后，Agent明星"回归"</a></div>
+      <div class="summary">据多家媒体报道，腾讯正牵头组建中方资本财团（红杉中国、真格等老股东参与出资），以20亿美元（约135亿人民币）估值从Meta手中回购Manus全部股权，腾讯将成为最大单一股东但不控股。Manus将继续作为新加坡主体独立运营、不并入腾讯体系，未来明确以港股上市为目标。此前2025年12月Meta仅用10天便以20亿美元闪电收购Manus，如今仅7个月即因跨境监管审查转手。量子位同日报道，Manus官方宣布恢复独立运营，要求部分用户在8月23日前备份数据、8月25日恢复服务，过渡期不收费并提供回归奖励。</div>
+      <div class="tags">
+        <span class="tag hot">今日最热</span>
+        <span class="tag">腾讯</span>
+        <span class="tag">Manus</span>
+        <span class="tag">135亿</span>
+        <span class="tag">AI Agent</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新浪科技 · 东方财富 · 网易</div>
+    <div class="title"><a href="https://finance.sina.com.cn/tech/discovery/2026-08-12/doc-inimzivu5384770.shtml" target="_blank">前通义千问负责人林俊旸创立「语用科技」，天使轮估值20亿美元，腾讯红杉高榕入局</a></div>
+    <div class="summary">阿里最年轻P10技术专家、前通义千问技术负责人林俊旸，在离职约5个月后于8月12日凌晨宣布在上海创办Pragmatik Labs（语用科技），研究方向为"跨越数字世界与物理世界的下一代智能体"。高榕创投与红杉中国（HSG）共同领投本轮融资，腾讯与上海未来产业基金提供支持，天使轮估值达20亿美元。这是继Jeff Dean、Hassabis之后，AI人才流动在大厂与创业之间掀起的又一重磅信号。</div>
+    <div class="tags">
+      <span class="tag hot">人才创业</span>
+      <span class="tag">林俊旸</span>
+      <span class="tag">20亿美元</span>
+      <span class="tag">智能体</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🆕 新模型 & 产品 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🆕</span>新模型 & 产品</div>
+
+  <div class="card">
+    <div class="source">IT之家 · 创业邦</div>
+    <div class="title"><a href="https://m.ithome.com/html/988570.htm" target="_blank">马斯克 SpaceX AI 推出多智能体协同产品 Grok Bot，Grok 4.6 本周将至</a></div>
+    <div class="summary">马斯克旗下 SpaceX AI 发布多智能体协同产品 Grok Bot，定位"AI同事"而非工具：能登录不同应用和网站、保留此前任务信息，并让不同机器人之间共享上下文与细节。与此同时，Grok 4.6 已在 Cursor 模型列表"抢跑"露脸，马斯克预告本周晚些时候正式发布，新模型+新Agent一周双杀。</div>
+    <div class="tags">
+      <span class="tag hot">Grok</span>
+      <span class="tag">xAI</span>
+      <span class="tag">多智能体</span>
+      <span class="tag">Agent</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元</div>
+    <div class="title"><a href="https://aiera.com.cn/2026/08/12/other/admin/108714/" target="_blank">OpenAI 上线 GPT-5.6-Cyber 网络安全模型，逼谷歌紧急修漏洞</a></div>
+    <div class="summary">OpenAI 推出网络安全专用模型 GPT-5.6-Cyber，在受监管的信任环境中完成95.0%的漏洞验证请求，而 GPT-5.6 Sol 仅能完成1.5%，让安全研究员能把时间花在验证漏洞而非与护栏"作斗争"上。报道称其背景是下一代 Astra 内部评估表现太强、"无法排除"已触及网络安全"临界"级别，OpenAI 已暂停所有不满足强化安全要求的 Astra 相关活动。</div>
+    <div class="tags">
+      <span class="tag">OpenAI</span>
+      <span class="tag">网络安全</span>
+      <span class="tag">GPT-5.6</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元</div>
+    <div class="title"><a href="https://aiera.com.cn/2026/08/12/other/admin/108762/" target="_blank">字节上线 Seedance 2.5，反手给 Seedance 2.0 fast 打「骨折价」</a></div>
+    <div class="summary">视频生成模型混战升级：字节上线 Seedance 2.5，同时把上一代效率型模型 Seedance 2.0 fast 价格打到"6毛"级别，主打快速生成与高频迭代场景。同一赛道上，MiniMax 甩出 H3、阿里 Wan 3.0 也赶紧开放公测，"换模如换血"成为创作者本月最头疼的选题。</div>
+    <div class="tags">
+      <span class="tag">字节跳动</span>
+      <span class="tag">视频生成</span>
+      <span class="tag">Seedance</span>
+      <span class="tag">降价</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">IT之家 · 微软</div>
+    <div class="title"><a href="https://www.ithome.com/0/988/715.htm" target="_blank">微软 MAI-Code-1.1-Flash 编程模型升级：更快更强，价格降至 1/4</a></div>
+    <div class="summary">微软推出升级版编程模型 MAI-Code-1.1-Flash：Terminal-Bench 2.1 表现提升22%，.NET 任务提升15%，并新增原生视觉能力；Token 生成速度提升25%、消耗减少25%，价格降至初代四分之一。目前已陆续登陆 VS Code、JetBrains 等 Copilot 平台，旧版将于2026年9月10日全面停用。</div>
+    <div class="tags">
+      <span class="tag">微软</span>
+      <span class="tag">编程模型</span>
+      <span class="tag">Copilot</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">CNBC · MarkTechPost</div>
+    <div class="title"><a href="https://www.cnbc.com/2026/08/11/nvidia-releases-nemotron-3point5-lightning-open-source-ai-model-.html" target="_blank">英伟达开源 Nemotron 3.5 Lightning：30B MoE 单卡可跑，面向常驻 Agent</a></div>
+    <div class="summary">英伟达发布开源模型 Nemotron 3.5 Lightning，30B 总参数 MoE（仅3B激活），主打"轻量"、可在PC单张GPU上运行，面向代码审查、安全监控等常驻Agent工作流，并配套开源 NeMo Switchyard 模型路由库，可按任务把 Agent 请求分发到不同模型。</div>
+    <div class="tags">
+      <span class="tag">英伟达</span>
+      <span class="tag">开源</span>
+      <span class="tag">MoE</span>
+      <span class="tag">Agent</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🌐 开源 & 里程碑 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🌐</span>开源 & 里程碑</div>
+
+  <div class="card">
+    <div class="source">果核剥壳 · Google</div>
+    <div class="title"><a href="https://www.ghxi.com/ai202608121.html" target="_blank">谷歌 Gemini 月活破 10 亿，成公司史上增长最快产品</a></div>
+    <div class="summary">谷歌CEO皮查伊正式宣布，AI对话应用 Gemini 月活跃用户数突破10亿，成为谷歌第14款"十亿用户俱乐部"产品、史上增长最快产品——从9亿到10亿仅用两个月。分析认为这印证了大模型赛道不仅是技术比拼，更是入口与生态的争夺。同日谷歌 Gemma 模型下载量也突破10亿。</div>
+    <div class="tags">
+      <span class="tag hot">Gemini</span>
+      <span class="tag">10亿用户</span>
+      <span class="tag">里程碑</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">AI工具集 · Bilibili IndexTeam</div>
+    <div class="title"><a href="https://ai-bot.cn/indextts-2-5/" target="_blank">Bilibili 开源工业级零样本语音克隆模型 IndexTTS-2.5</a></div>
+    <div class="summary">Bilibili 开源 IndexTTS-2.5 语音克隆模型，参数量仅0.8B，支持中、英、日、西、阿五种语言跨语种迁移；重构推理架构后速度提升2.28倍、实时率低至0.20，支持0.5x至2.0x无级语速调节，并提供拼音、CMU音素、日语假名三种粒度的发音干预。</div>
+    <div class="tags">
+      <span class="tag">B站</span>
+      <span class="tag">开源</span>
+      <span class="tag">语音克隆</span>
+      <span class="tag">TTS</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · 浙江大学</div>
+    <div class="title"><a href="https://aiera.com.cn/2026/08/12/other/admin/108777/" target="_blank">浙大开源 HugAgentOS：三引擎自进化，每步可归因/回放/回滚</a></div>
+    <div class="summary">浙江大学省部共建协同创新中心开源 HugAgentOS，针对"同一任务执行十次、第十一次仍从零规划"的痛点，将 Agent Harness 拆成三个可自我成长的引擎，并加设归因关卡（三引擎共用执行证据、统一裁定该改哪一层）与回滚关卡（隔离回放验证+用户确认后改动才生效），让 Agent 真正学会"自我进化"。</div>
+    <div class="tags">
+      <span class="tag">浙大</span>
+      <span class="tag">开源</span>
+      <span class="tag">Agent框架</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🤖 具身智能 & 机器人 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能 & 机器人</div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/08/471049.html" target="_blank">国产具身智能创全球新纪录：自变量机器人30%成本跑赢 Figure AI</a></div>
+    <div class="summary">自变量机器人在公开直播实测中，没有人工兜底、没有固定流程，用"双臂+标准夹爪"方案连续稳定干满1小时，物流分拣效率达到1816件/小时，超过美国 Figure AI 此前公开的1248件/小时纪录、提升超45%；硬件成本却比 Figure AI 的"人形+五指灵巧手"方案大幅下降70%。依托自研 WALL-B 世界统一模型，它面对形态各异的随机包裹可实时理解环境并调整动作策略。</div>
+    <div class="tags">
+      <span class="tag hot">破纪录</span>
+      <span class="tag">具身智能</span>
+      <span class="tag">物流分拣</span>
+      <span class="tag">Figure AI</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/08/470874.html" target="_blank">人形之外，擎羽把「身体」变成具身智能的新变量</a></div>
+    <div class="summary">港大机器人学博士、前大疆嵌入式工程师彭锐创立的擎羽科技（FEAGINE）发布 FEAGINE A01/A02/A03 三款仿生柔性机器人，以及第一代跨本体基础模型 Fi0。它不复制人体，而是把"身体"本身作为可重新设计的变量，走"柔性具身智能"路线：让对任务和物理世界的理解可跨不同身体复用，只有行动随身体变化，从而避免每出现一种新身体就重付一遍数据与训练成本。</div>
+    <div class="tags">
+      <span class="tag">擎羽</span>
+      <span class="tag">柔性机器人</span>
+      <span class="tag">跨本体模型</span>
+    </div>
+  </div>
+</div>
+
+<!-- 👥 人事 & 观点 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">👥</span>人事 & 观点</div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/08/471254.html" target="_blank">Jeff Dean 顶会自曝离职现场：被1500人围堵，27年谷歌生涯落幕</a></div>
+    <div class="summary">《置身谷内》——Jeff Dean 在顶会上首次公开回应离职：直到8月6日下午他才最后一次合上谷歌电脑、交回工牌与笔记本，0点之后即"重新上岗"成为 Discovery Loop 的联创兼CEO。他在谷歌效力27年、曾领导约4400人的团队，现场被1500人围堵，折射出谷歌AI权力中心转移后的人才震荡余波。</div>
+    <div class="tags">
+      <span class="tag">Jeff Dean</span>
+      <span class="tag">谷歌</span>
+      <span class="tag">Discovery Loop</span>
+      <span class="tag">离职</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/08/471162.html" target="_blank">Anthropic 冲刺全球第二大IPO，投资人劝 Dario「务实」却遭冷遇</a></div>
+    <div class="summary">据Polymarket预测，Anthropic 很可能在10月底IPO，投行预计募集超600亿美元，将成为仅次于SpaceX（857亿）的全球第二大IPO。眼看故事讲到最高潮，投资人却开始劝 CEO Dario Amodei 利润最大化，而他态度冷淡，坚持把安全使命放在前面——甚至提出向AI公司征税、为受冲击劳动者提供工资保险。</div>
+    <div class="tags">
+      <span class="tag">Anthropic</span>
+      <span class="tag">IPO</span>
+      <span class="tag">Dario Amodei</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>昨天的AI圈，关键词是「流动」——资本在流动、人才在流动、模型在流动。<br><br>
+  最抓眼球的当属 <strong>Manus 的"出海又回流"</strong>：从2025年3月一夜爆火，到被Meta 20亿美元闪电收购，再到7个月后因跨境监管转手、由腾讯牵头财团接盘。这既是通用Agent赛道首个现象级产品的命运转折，也折射出中美科技脱钩背景下，AI资产的"国籍"正在成为比技术更敏感的交易变量。<br><br>
+  人才侧同样热闹：<strong>林俊旸20亿美元创立语用科技</strong>，与Jeff Dean的Discovery Loop遥相呼应——顶级研究员正加速从大厂出走、押注"自我进化智能体"与"跨数字/物理世界智能体"这两个最性感的命题。<br><br>
+  模型层则呈现清晰的<strong>双主线</strong>：一条是Agent（Grok Bot、Nemotron 3.5 Lightning、HugAgentOS、GPT-5.6-Cyber），一条是多模态生成（Seedance 2.5、IndexTTS-2.5、LTX-2.5）。而 Gemini 月活破10亿提醒我们：当技术趋同，入口与生态才是终局的胜负手。资本、人才、模型的密集流动，往往是一个产业进入加速期的前兆。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026年08月13日 · 数据来源涵盖量子位、新智元、36氪、IT之家、新浪科技、AI工具集、CNBC等中文AI媒体</p>
+</div>
+
+</div>
+</body>
+</html>

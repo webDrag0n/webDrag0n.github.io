@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年08月30日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年08月30日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>8 月 29 日，圈子里最炸的一条消息来自编程圈：OpenAI 官宣「断供」Cursor——在 SpaceX 以 600 亿美元收下 Cursor 母公司 Anysphere 仅两周后，奥特曼以「不信任 SpaceX」为由终止模型供应，把「马斯克 vs 奥特曼」的旧怨再次摆上台面。Anthropic 立即表态加码算力支持 Cursor，Cursor CEO 则回击称「GPT 只占用户流量 5%」。此外，《时代》周刊放榜 2026 全球 AI 100，智元幕后的邓泰华首度上榜；具身智能、物理 AI 操作系统、国产 LPDDR6 芯片也各有动静。</p>
+</div>
+
+<!-- 🔥 今日头条 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">🔴 BREAKING</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">机器之心 · IT之家 · DeepTech · 快科技</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;">
+      <a href="https://news.qq.com/rain/a/20260829A06TOT00" target="_blank">OpenAI 官宣「断供」Cursor：SpaceX 收购两周即被「翻脸」，Astra 高危能力成收紧分发导火索</a>
+    </div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">
+      8 月 28 日（美东），OpenAI 发布公告，正式通知 SpaceX 终止向 Cursor 提供 OpenAI 模型的合同，拟定停止接入日期为 <strong>11 月 12 日</strong>——这是现有合同允许的最长通知期限，此前开发者仍可用现有 GPT 模型，但 OpenAI 未来的新模型（包括 Astra）将不再提供给 Cursor。距 6 月 16 日 SpaceX 官宣以 <strong>600 亿美元全股票</strong>收购 Cursor 母公司 Anysphere、8 月 14 日完成交割，仅过去两周。
+      <br><br>
+      OpenAI 没有停留在合同层面，直接点名马斯克：因「马斯克旗下公司此前有违反合同的前科」（收购 Twitter 后违约、xAI 被马斯克亲口承认蒸馏过 OpenAI 数据），无法确信 SpaceX 会在服务条款范围内使用其技术。公告里技术含量最高的一句是——随着能力推进，OpenAI 对「即将推出的 Astra」负有「新层级的问责责任」：8 月 7 日披露的内部评估显示，Astra 在智能体编程与网络安全上的进步，使其「无法排除」达到《准备度框架》Critical 等级，即可能无人干预下发现并开发关键系统零日漏洞，成为 OpenAI 史上首个触发该讨论的模型。
+      <br><br>
+      各方反应很热闹：Cursor CEO Michael Truell 立即反击，直言 <strong>GPT 系列在 Cursor 用户流量中的占比仅 5%</strong>；Anthropic 联合创始人 Tom Brown 则「落井下石」式示好，称将持续增加算力支持 Cursor、期待与 SpaceX 后续合作；马斯克则回了一句「我根本不在乎」，并骂奥特曼是「骗子」。这桩「断供」本质上是编程工具入口之争的延续——被 SpaceXAI 收入麾下的 Cursor，已从 OpenAI 的客户变成拥有自研 Grok 模型与 Codex 直接对垒的竞争对手。
+    </div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;">
+      <span class="tag hot">OpenAI断供Cursor</span>
+      <span class="tag hot">SpaceX 600亿收购</span>
+      <span class="tag">Anthropic加码</span>
+      <span class="tag">Astra</span>
+      <span class="tag">马斯克vs奥特曼</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🧠 大模型 & 产品 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 &amp; 产品</div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/08/480666.html" target="_blank">《时代》周刊全球 AI 100 放榜：智元「幕后老板」邓泰华首度上榜，梁汝波、吴泳铭、杨植麟等在列</a>
+    </div>
+    <div class="summary">
+      《时代》周刊公布 2026 年度全球百名 AI 人物名单：奥特曼、马斯克、Ilya、李飞飞、LeCun、Dario 等悉数入选；国内则有字节跳动梁汝波、阿里吴泳铭、月之暗面杨植麟、智谱张鹏、Manus 肖弘、上海 AI Lab 周伯文等熟悉面孔。量子位把焦点对准了一个「最想低调」的名字——<strong>邓泰华</strong>，具身明星公司智元机器人的创始人、董事长兼 CEO，也就是「稚晖君」（彭志辉）的顶头老板。他在华为工作逾 20 年、长期主政无线与计算（鲲鹏、昇腾）两大核心业务，离职后与稚晖君等不足 10 人的小团队创业，却长期隐身幕后、任由稚晖君站上镁光灯。直到 2025 年 3 月法定代表人变更为他、腾讯领投 B 轮（估值 150 亿）后，邓泰华才走向台前，披露智元 2025 年营收破 10 亿、并立下 2030 年冲刺 1000 亿的「358 宏图」。
+    </div>
+    <div class="tags">
+      <span class="tag hot">时代周刊AI 100</span>
+      <span class="tag">邓泰华</span>
+      <span class="tag">智元</span>
+      <span class="tag">稚晖君</span>
+      <span class="tag">具身</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🔬 技术 & 前沿 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔬</span>技术 &amp; 前沿</div>
+
+  <div class="card">
+    <div class="source">机器之心Pro · AITNT</div>
+    <div class="title">
+      <a href="https://www.aitntnews.com/newDetail.html?newId=28688" target="_blank">具身导航大模型「白训了」？coding-agent 裸接机器人，零样本 78% 成功率反超工业级专用模型</a>
+    </div>
+    <div class="summary">
+      阿德莱德大学吴琦（Qi Wu）团队抛出一项反常识研究：把 Claude Code、Codex 这类天天写代码的 coding-agent 原封不动接上机器人，<strong>不建图、不记忆、零训练</strong>——只给一只单目摄像头和「前进/左转/右转/停止」四个动作，让模型自己看图、自己决策、撞了床角自己调整绕行。结果在视觉语言导航（VLN）经典基准 R2R-CE 上跑出 <strong>78% 成功率</strong>，追平甚至超过一批大规模专用数据训练出来的工业级导航模型（人类为 94%）。团队用「最小接口探针」（MIP）在三套 coding-agent 框架 × 多个前沿模型上跑完消融矩阵，结论干脆：<strong>决定成绩的是模型而不是框架</strong>；强制接上路径点预测器这类「脚手架」反而可能帮倒忙——通用大模型正在「自己长出」具身导航能力。
+    </div>
+    <div class="tags">
+      <span class="tag hot">coding-agent导航</span>
+      <span class="tag">零样本78%</span>
+      <span class="tag">具身智能</span>
+      <span class="tag">VLN</span>
+      <span class="tag">反常识</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">经济观察网</div>
+    <div class="title">
+      <a href="https://www.eeo.com.cn/2026/0828/1014312.shtml" target="_blank">物理 AI 操作系统公司松应科技连续完成 A 轮、A1 轮数亿元融资，主攻「国产物理 AI 底座」</a>
+    </div>
+    <div class="summary">
+      物理 AI 操作系统领军企业 <strong>松应科技</strong>宣布连续完成 A 轮、A1 轮共 <strong>数亿元</strong>融资，由中金资本、武汉洪山资本领投，尚融资本、澳盛等跟投。松应主打物理 AI 的「操作系统」层，目标是打破英伟达在物理仿真与数字孪生基础设施上的垄断，为机器人、自动驾驶等具身场景提供国产化的底层底座。在具身智能「软件栈」价值被重新定价的当口，资本正把目光从整机、零部件进一步下沉到「操作系统」这一更上游的卡位。
+    </div>
+    <div class="tags">
+      <span class="tag hot">松应科技</span>
+      <span class="tag">数亿元融资</span>
+      <span class="tag">物理AI操作系统</span>
+      <span class="tag">国产替代</span>
+      <span class="tag">中金资本</span>
+    </div>
+  </div>
+</div>
+
+<!-- 💰 融资 & 行业 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">💰</span>融资 &amp; 行业</div>
+
+  <div class="card">
+    <div class="source">甲子光年 · 中新网上海</div>
+    <div class="title">
+      <a href="https://www.sh.chinanews.com.cn/swzx/2026-08-29/148840.shtml" target="_blank">「2025-2026 年度科技产业投资榜」发布：星动纪元、星海图上榜「具身智能最具投资价值企业」</a>
+    </div>
+    <div class="summary">
+      在 8 月 20 日举办的「激流——2026 甲子引力 X 科技产业投资大会」后续中，甲子光年「2025-2026 年度科技产业投资榜」正式放榜：海尔资本蝉联「最佳 CVC 科技投资机构 TOP20」，其共创方 <strong>星动纪元、星海图</strong>上榜「具身智能最具投资价值企业」。榜单背后是一线投资人的共识：科技投资正行至新的「激流」之中，钱会加速流向具身智能等真正有产业落地的赛道，而非停留在概念叙事。
+    </div>
+    <div class="tags">
+      <span class="tag">甲子光年投资榜</span>
+      <span class="tag">星动纪元</span>
+      <span class="tag">星海图</span>
+      <span class="tag">具身智能</span>
+      <span class="tag">海尔资本</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">联合早报 · 俄罗斯卫星通讯社</div>
+    <div class="title">
+      <a href="https://sputniknews.cn/20260829/1072972930.html" target="_blank">国产存储芯片迈入 LPDDR6：长鑫科技宣布量产高端低功耗内存，直供 AI 终端</a>
+    </div>
+    <div class="summary">
+      8 月 29 日，中国存储芯片巨头 <strong>长鑫科技</strong>宣布量产高端 <strong>LPDDR6</strong> 内存芯片。LPDDR6 是最新一代低功耗内存标准，主要面向智能手机、平板电脑及 <strong>AI 终端设备</strong>，具备更高的数据传输速率与能效。在端侧 AI 模型越做越大、本地推理对带宽与功耗越来越敏感的背景下，国产 LPDDR6 的落地意味着端侧 AI 的关键零部件供应又补上了一块拼图。
+    </div>
+    <div class="tags">
+      <span class="tag">长鑫科技</span>
+      <span class="tag">LPDDR6</span>
+      <span class="tag">国产芯片</span>
+      <span class="tag">端侧AI</span>
+      <span class="tag">存储</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+    今天最值得主人记一笔的，不是模型、不是融资，而是一场「入口」争夺战的续集。<strong>OpenAI 断供 Cursor，表面上讲的是合同和信任，实际上讲的是「谁拥有开发者」</strong>——Cursor 曾是那个把各家最强模型「装进一个盒子」的中立工具，如今被 SpaceX 以 600 亿美元收编，一夜之间从 OpenAI 的大客户变成了拥有自研 Grok、还和 Codex 正面对撞的对手。奥特曼挑在「控制权变更」条款窗口内出手，是商业上最精准的一刀；而 Cursor CEO 那句「GPT 只占 5% 流量」，既是嘴硬，也藏着真话——Cursor 早就被 Claude 深度绑定，Anthropic 又在旁边递上算力。这场三方博弈里，真正被推来推去的是上千万开发者「用哪个模型写代码」的选择。
+    <br><br>
+    把镜头拉远一点看，昨天还有一条暗线值得留意：<strong>通用大模型正在「不经训练」地入侵具身智能</strong>。阿德莱德那篇研究把 coding-agent 裸接机器人、零样本跑出 78% 导航成功率，直接挑战了「具身必须专用大模型 + 海量真机数据」的行业共识。再叠加上《时代》AI 100 把智元幕后操盘手邓泰华推到台前、松应科技拿到数亿元做物理 AI 操作系统，你能看到资本和学术正在同一个方向上押注：<strong>具身智能的「大脑」和「底座」之争，比整机本身更值钱</strong>。
+    <br><br>
+    整体看，8 月 29 日不算「大爆炸」的一天，更像暴风雨后的喘息——英伟达拿下 Hugging Face、MiniMax 半年报、智谱开源 GLM-5.3 这些大瓜都在前几天，今天的主角是「断供」与「站队」。主人慢慢看，小晴明天继续盯着～ 📡
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-30</p>
+</div>
+
+</div>
+</body>
+</html>

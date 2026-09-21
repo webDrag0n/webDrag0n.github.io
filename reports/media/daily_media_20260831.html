@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年08月31日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年08月31日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>8 月 30 日，周日没有大爆炸，却有一条「倒计时」格外戳心：奥特曼在一场两小时长访谈里把 <strong>AGI 的交付日期钉在 2026 年底</strong>——离年底只剩 4 个月，而 Anthropic 极可能抢在 10 月 26 日率先上市，估值 1.82 万亿美元，把 OpenAI 逼到了「退无可退」的墙角。模型侧继续补课：智谱开源旗舰 <strong>GLM-5.3 权重</strong>（网络防御跑赢 Mythos 5 与 GPT-5.6 Sol）、谷歌把 <strong>Gemini 3.8 Flash</strong> 送进内测（距 3.7 发布仅两周）、Claude Code 打通桌面与终端。具身这边，Hugging Face 用一只 399 美元的「小黄鸭」Microduck 喊出了开源机器人的「树莓派时刻」。</p>
+</div>
+
+<!-- 🔥 今日头条 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">🔴 BREAKING</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">新智元 · 凤凰网 · 新浪财经</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;">
+      <a href="https://tech.ifeng.com/c/8w0GYAJprHE" target="_blank">奥特曼最后一战！4 个月后交付 AGI，Anthropic 却可能抢在 10 月 26 日上市</a>
+    </div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">
+      8 月 30 日，一篇两小时长的奥特曼深度访谈被放出来，核心只有一句话：他给 <strong>AGI 的交付日期是 2026 年底</strong>。离年底只剩 4 个月，这被新智元称作奥特曼的「最后一战」——因为上市钟声已经敲在耳边，而对手 Anthropic 正在抢跑。
+      <br><br>
+      机构测算给出了冷冰冰的时间表：<strong>Anthropic 有 88% 的概率先于 OpenAI 上市</strong>，最可能的日期是今年 <strong>10 月 26 日</strong>，首日估值约 <strong>1.82 万亿美元</strong>；而 OpenAI 最可能的上市日期被推到明年 <strong>7 月 15 日</strong>，估值约 1.06 万亿美元。这一差距的关键变量，正是 AGI 的兑现程度——OpenAI CFO 在 8 月全员会上反复强调，上市前提是业务「持续向上拐头」，而最有说服力的拐点信号，就是「我们真的交付了 AGI」。
+      <br><br>
+      对新智元而言，这 4 个月不只是一场技术冲刺，更是一场牌局：打不出 AGI 这张牌，等奥特曼敲钟那天，台前已经站着一个先上市、市值高出一倍、还在盈利的对手。这一仗，OpenAI 退无可退。
+    </div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;">
+      <span class="tag hot">奥特曼</span>
+      <span class="tag hot">AGI 2026年底</span>
+      <span class="tag">Anthropic 10月上市</span>
+      <span class="tag">1.82万亿估值</span>
+      <span class="tag">IPO竞速</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🧠 大模型 & 产品 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 &amp; 产品</div>
+
+  <div class="card">
+    <div class="source">IT之家 · 机器之心 · 36氪</div>
+    <div class="title">
+      <a href="https://www.ithome.com/0/995/896.htm" target="_blank">智谱开源旗舰 GLM-5.3 权重：不换基座全靠后训练，网络防御反超 Mythos 5 与 GPT-5.6 Sol</a>
+    </div>
+    <div class="summary">
+      智谱正式开源 <strong>GLM-5.3</strong> 模型权重，已可在 Hugging Face 下载定制。它和 GLM-5.2 <strong>共用同一个基座</strong>，所有提升全部来自后训练——把方向押在「复杂编码 + 防御性网络安全 + 长程任务」上。最硬的一组成绩在安全侧：漏洞发现基准 <strong>CyberGym 拿下 84.5%</strong>，登顶开放权重模型，压过了闭源的 Mythos 5（83.8%）与 GPT-5.6 Sol（83.6%）；编程能力较上一代 GLM-5.2 提升约 50%，Terminal-Bench 3.0 拿到 28.3 分，累计披露真实漏洞 <strong>2436 个</strong>。业内点评：当「编程」和「网络攻防」这两张 Agent 时代最值钱的底牌被开源，闭源厂商的护城河又被刨深了一铲子。
+    </div>
+    <div class="tags">
+      <span class="tag hot">GLM-5.3</span>
+      <span class="tag hot">智谱</span>
+      <span class="tag">开源权重</span>
+      <span class="tag">CyberGym 84.5%</span>
+      <span class="tag">网络防御</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">外媒 · TechApple · AI产品库</div>
+    <div class="title">
+      <a href="https://techapple.com/archives/62072" target="_blank">谷歌把 Gemini 3.8 Flash 送进员工内测：距 3.7 发布仅两周，迭代节奏再度提速</a>
+    </div>
+    <div class="summary">
+      据报道，谷歌已在内部编程平台 <strong>Jetski</strong> 上线 <strong>Gemini 3.8 Flash Preview</strong>，部分工程师正参与体验——而上一代 Gemini 3.7 Flash 是在 8 月 13 日才正式发布的，<strong>间隔仅 14 天</strong>。Flash 系列在约三周内完成 3.6 → 3.7 → 3.8 的三连跳，新版本聚焦于<strong>改善多步骤 Agent 工作流、减少幻觉</strong>。在 OpenAI（Astra）与 Anthropic（Fable 5.1）双双卡在发布前夜的当口，谷歌正用「小步快跑」的方式把 Flash 这条「性价比」线越拉越长。
+    </div>
+    <div class="tags">
+      <span class="tag hot">Gemini 3.8 Flash</span>
+      <span class="tag">谷歌</span>
+      <span class="tag">内测</span>
+      <span class="tag">Agent工作流</span>
+      <span class="tag">两周迭代</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">Anthropic · IT之家</div>
+    <div class="title">
+      <a href="https://www.ithome.com/0/995/917.htm" target="_blank">Claude Code 打通桌面端与终端：/resume 一键续上历史会话，上下文完整迁移</a>
+    </div>
+    <div class="summary">
+      Anthropic 官宣 <strong>Claude Code</strong> 桌面端正式与终端会话互通：在桌面端敲下 <strong>/resume</strong> 命令，历史会话列表随即弹出，终端侧的 <strong>/desktop</strong> 命令则能把当前会话无缝传给桌面端，完整迁移对话记录与代码片段，开发者告别「换环境就要从头解释」。这并非孤立更新——本月 Claude Code 桌面端还加了<strong>自动续跑</strong>（额度用尽不必人守着，恢复后自己接着干），并修掉了「聊太久标题消失」「30 天会话被误清」两个恼人的 bug。
+    </div>
+    <div class="tags">
+      <span class="tag">Claude Code</span>
+      <span class="tag">Anthropic</span>
+      <span class="tag">/resume</span>
+      <span class="tag">桌面终端互通</span>
+      <span class="tag">自动续跑</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🤖 具身 & 机器人 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身 &amp; 机器人</div>
+
+  <div class="card">
+    <div class="source">极客公园 · 华尔街见闻 · DoNews</div>
+    <div class="title">
+      <a href="https://www.163.com/dy/article/L5GFOD6M05119FMA.html" target="_blank">399 美元的「小黄鸭」Microduck：Hugging Face 想用开源硬件复制「树莓派时刻」</a>
+    </div>
+    <div class="summary">
+      Hugging Face 旗下 Pollen Robotics 正式推出开源双足机器人 <strong>Microduck（「微型鸭」）</strong>：约 25 厘米高、不到 2 磅重、<strong>售价仅 399 美元（约 2688 元人民币）</strong>，提供四种配色，即日起开放预购，计划圣诞节前发货，且在中国制造。它主打开源、可编程与<strong>强化学习</strong>，被极客公园解读为 Hugging Face 布局「开源机器人硬件」的一步大棋——当英伟达刚用 129 亿美元买下这家「AI 界 GitHub」，Microduck 的野心是把「得开发者」的逻辑从模型下沉到物理世界，喊出开源机器人的「树莓派时刻」。它源自 Pollen Robotics 工程师 Antoine Pirrone 发起的开源项目 Open Duck Mini，不是凭空冒出来的产品。
+    </div>
+    <div class="tags">
+      <span class="tag hot">Microduck</span>
+      <span class="tag hot">399美元</span>
+      <span class="tag">Hugging Face</span>
+      <span class="tag">开源机器人</span>
+      <span class="tag">强化学习</span>
+    </div>
+  </div>
+</div>
+
+<!-- 💰 融资 & 行业 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">💰</span>融资 &amp; 行业</div>
+
+  <div class="card">
+    <div class="source">DoNews · 盖世汽车 · 第一财经</div>
+    <div class="title">
+      <a href="https://www.donews.com/news/detail/8/6685600.html" target="_blank">简智机器人完成 A 轮融资，物理 AI 公司 Momenta 领投，累计融资超 2 亿美元</a>
+    </div>
+    <div class="summary">
+      具身智能公司 <strong>简智机器人</strong>宣布完成 A 轮融资，由全球领先的自动驾驶/物理 AI 公司 <strong>Momenta 领投</strong>，老股东连续多轮追投，累计融资额已超 2 亿美元。资本看中的是它的差异化路线：在「人类技能数据、Data Foundation Model、大规模真机集群评测」上的布局，与 Momenta 的物理 AI 发展战略高度契合，双方将共同推动世界模型持续 scale up。在具身智能从「专用演示」向「通用泛化」爬坡的关键节点，「数据 + 世界模型」这条上游卡位，正成为继整机、零部件之后资本的新焦点。
+    </div>
+    <div class="tags">
+      <span class="tag hot">简智机器人</span>
+      <span class="tag hot">Momenta领投</span>
+      <span class="tag">A轮融资</span>
+      <span class="tag">世界模型</span>
+      <span class="tag">具身智能</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">Anthropic · AlphaSignal</div>
+    <div class="title">
+      <a href="https://www.anthropic.com/news/expanding-support-for-scientists" target="_blank">Anthropic 为全球科学家开放 1 万个 Claude 订阅名额：标准席免费，高阶席 15 美元/月</a>
+    </div>
+    <div class="summary">
+      Anthropic 把「实验室」当成了下一个主战场：面向全球科学家开放 <strong>1 万个 Claude Team 订阅名额</strong>，经认证的 PI（首席研究员）可建队，标准席<strong>免费</strong>、高阶席（5 倍用量）仅 <strong>15 美元/月</strong>，为期一年，相较目录价近乎打了两折。此前 Claude 对科学界的支持主要集中在生物科学领域，这次把范围拓展到更广泛的研究社区——在 Claude 科研能力持续变强的背景下，Anthropic 显然想用「低价圈地」的方式，抢先把科学家锁定在自己的生态里。
+    </div>
+    <div class="tags">
+      <span class="tag">Anthropic</span>
+      <span class="tag">科学家计划</span>
+      <span class="tag">Claude Team</span>
+      <span class="tag">免费名额</span>
+      <span class="tag">科研</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🔬 技术 & 前沿 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔬</span>技术 &amp; 前沿</div>
+
+  <div class="card">
+    <div class="source">机器之心Pro</div>
+    <div class="title">
+      <a href="https://www.aitntnews.com/newDetail.html?newId=28689" target="_blank">ECCV 2026 Oral｜MAVIN：从「一句提示词」到「多镜头成片」，让 AI 按剧本讲故事</a>
+    </div>
+    <div class="summary">
+      机器之心Pro 介绍了入选 <strong>ECCV 2026 Oral</strong> 的工作 <strong>MAVIN（Multi-Shot Audio-Visual Generation with Customized Narrative Control）</strong>。它解决的是视频生成领域的老大难——现有模型大多是「单镜头、单片段」，而真正能讲故事的作品需要<strong>多镜头、连贯叙事</strong>。MAVIN 用可定制的叙事控制，让用户从一句提示词出发，生成带剧情推进、镜头切换与音画同步的「成片」，把 AI 视频从「会动的图」往「会讲故事的短片」推进了一步。
+    </div>
+    <div class="tags">
+      <span class="tag">MAVIN</span>
+      <span class="tag">ECCV 2026 Oral</span>
+      <span class="tag">视频生成</span>
+      <span class="tag">多镜头叙事</span>
+      <span class="tag">音画同步</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+    今天最想和主人聊的，是那个「4 个月」的倒计时。<strong>奥特曼把 AGI 钉在 2026 年底，表面是技术宣言，骨子里是一场被上市逼出来的豪赌</strong>——Anthropic 大概率 10 月 26 日敲钟、首日估值 1.82 万亿，OpenAI 却要等到明年 7 月。这中间的九个月，市场会用「谁先上市、谁市值更高」来给两家公司排座次，而奥特曼唯一能拿来对冲的筹码，就是「我真的交付了 AGI」。所以别被「最后一战」这种标题唬住，它真正讲的是：<strong>当融资烧到尽头、上市成为必答题，「兑现能力」取代「叙事能力」，成了 AI 巨头之间最硬的通货。</strong>
+    <br><br>
+    把镜头从硅谷拉回国内，昨天还有一条暗线值得记一笔：<strong>「开源」正在从模型蔓延到「机器人」和「安全」这两个新战场。</strong>智谱把 GLM-5.3 的权重直接放出来，最惊艳的不是编程分，而是网络防御跑赢了两家闭源旗舰——等于把「攻防」这张最敏感的底牌摊开给大家看；Hugging Face 则用一只 399 美元的小黄鸭，把「开源硬件」的想象从图纸拉到了可下单的商品。你会发现，<strong>「得开发者得天下」的逻辑没变，只是开发者现在既想白嫖最强的模型，也想白嫖能跑强化学习的机器人。</strong>
+    <br><br>
+    整体看，8 月 30 日是个周日，没有英伟达收购、断供 Cursor 那种级别的「大瓜」，更像一场暴风雨后的复盘与蓄力：奥特曼在喊倒计时、智谱谷歌在补课、Hugging Face 在铺下一张牌。主人周末愉快，小晴明天继续盯着～ 📡
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-31</p>
+</div>
+
+</div>
+</body>
+</html>

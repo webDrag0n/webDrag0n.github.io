@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年09月10日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<!--
+  TEMPLATE STRUCTURE:
+  Replace {{PLACEHOLDERS}} with actual content.
+  
+  Sections:
+  - .header: icon, title, date, subtitle
+  - .summary-banner: one-paragraph overview of today's hot topics
+  - .section: grouped news (Headlines / Research / Industry / Open Source)
+  - .card: individual news item (source, title link, summary, tags)
+  - .hot-topic: highlighted breaking news
+  - .insights: editorial summary
+  - .footer: generation info
+-->
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年09月10日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今天的头号主角是「语音/音频基础模型」与「全能实时交互」两条线：AuK（HF 178↑）开源了一个用统一指令接口同时搞定语音生成与编辑的基础模型，30 亿条指令-音频对、195 万小时监督，还蒸馏出 4.5 倍加速的 Flash 版；Gander（HF 116↑）用「小脑-大脑」架构把全感知、全双工对话和 agent 能力塞进一个端到端模型。具身侧世界模型进入「系统化预训练」阶段——AgiBot 的 GE-Act 2.0（HF 46↑）和 OpenWAM（HF 49↑）都在回答「WAM 到底该怎么预训练、怎么 scaling」；大模型侧 OPRD（HF 79↑）用反向蒸馏撬动「弱到强泛化」，RadixArk 的 Miles（HF 44↑）把生产级 RL 后训练整套开源。视觉侧 Marigold V2（HF 44↑）让 DiT 深度估计的细节锐度再上台阶。</p>
+</div>
+
+<!-- 🔥 今日热点 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · 开源语音基础模型</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">arXiv 2609.08936 · HuggingFace Daily Papers · HF 178↑</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;"><a href="https://arxiv.org/abs/2609.08936" target="_blank" style="color:var(--accent);text-decoration:none;">AuK Technical Report: An Open-Source Foundational Model for Speech Generation and Editing</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">一个把「语音生成」和「语音编辑」统一到同一接口的开源基础模型——只靠自然语言指令 + 音频上下文就能同时完成两大类任务。数据规模惊人：约 30.3 亿条指令-音频对、195 万小时有效监督，横跨语音生成、内容编辑、增强与分离、副语言编辑、声学编辑五大任务族。架构是三件套：多模态 LLM 做语义条件、联合训练语音/音频/音乐的 VAE 做声学条件、混合 rectified-flow Transformer（双流 MMDiT + 单流 DiT）做生成。后训练先用人类反馈偏好优化做开放编辑、再用奖励 RL 做语音生成，最后用一致性初始化 + 任务路由 Decoupled DMD 蒸馏出 AuK-Flash——4 步推理、无需分类器自由引导，比完整模型快 4.5 倍。源码与权重全部开源。</div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag hot">语音基础模型</span>
+<span class="tag hot">HF 178↑</span>
+<span class="tag">开源</span>
+<span class="tag">整流流</span></div>
+  </div>
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · 全能实时交互 Agent</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">arXiv 2609.08977 · HuggingFace Daily Papers · HF 116↑</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;"><a href="https://arxiv.org/abs/2609.08977" target="_blank" style="color:var(--accent);text-decoration:none;">Omni Interaction Agent Technical Report（Gander）</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">端到端模型 Gander，把「全感知、实时交互、智能体能力」统一进同一个框架，打破传统回合制范式：连续接收视频、语音、文本等多模态流式输入，支持自然全双工对话——用户随时打断，模型也能主动给中间反馈、主动追问。核心是「小脑-大脑」协同架构：小脑负责实时交互与全模态对话，大脑负责复杂推理和高层 agent 任务，两者通过工具调用与 agent 编排运行时持续互通；小脑基于流式 Thinker-Talker 架构，把输入输出展平成 chunk 级有序 token 流，统一表示、低延迟连续交互。在对话、全模态理解、交互、agent 智能四个维度测评，保持 SOTA 开源模型自然口语对话能力的同时，还能扛住背景噪声、多方对话、backchannel 等真实场景。模型、代码、数据全部开源。</div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag hot">全双工 Agent</span>
+<span class="tag hot">HF 116↑</span>
+<span class="tag">多模态</span>
+<span class="tag">开源</span></div>
+  </div>
+</div>
+<!-- 🧠 大模型 &amp; 推理 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 &amp; 推理</div>
+  <div class="card">
+    <div class="source">arXiv 2609.08798 · HuggingFace Daily Papers · HF 79↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.08798" target="_blank">Eliciting Weak-to-Strong Generalization with On-Policy Reverse Distillation</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">弱到强泛化问的是：更强的模型能否从较弱监督者身上学习并最终超越它？这对模型代际更迭、多域整合至关重要——从头做 frontier 级后训练太贵。传统蒸馏把弱教师当优化目标，容易把教师的能力上限强加给学生。OPRD（On-Policy Reverse Distillation）评估教师在学生 rollout 上相对其参考策略的策略偏移，并沿着这个方向放大由 verifier 驱动的学生策略梯度分量；只重缩放 verifier 支持的那些更新，既保住策略优化的不动点、又加速超越教师。在代际迁移和多教师蒸馏里，OPRD 用更少的学生更新拿到更高性能，且学生风格更贴近「纯 verifier RL」而非弱教师，说明教师是「加速」而非「重定向」学生的优化。</div>
+    <div class="tags"><span class="tag hot">弱到强泛化</span>
+<span class="tag hot">HF 79↑</span>
+<span class="tag">反向蒸馏</span>
+<span class="tag">RL</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2609.08368 · RadixArk · HuggingFace Daily Papers · HF 44↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.08368" target="_blank">Miles v0.1: Production-Level Post-Training</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">全栈、生产级的 frontier 后训练系统（RadixArk 团队，基于 slime 的简洁设计），一条原则贯穿 RL 每个环节：组件要「可验证、干净、可定制」。端到端拆解：SGLang rollout 引擎、双后端 trainer（NVIDIA Megatron-LM / PyTorch FSDP）、三种权重同步传输适配不同部署拓扑。除全参数 RL 外，还支持 LoRA RL、on-policy 蒸馏、SFT、真 on-policy 对齐，并把同一套架构扩展到扩散模型。案例：GLM-5.2 744B-A40B 在终端编码任务上做全异步 agentic RL，64 张 NVIDIA GB300 上中位步时 263 秒。已在 GitHub 开源。</div>
+    <div class="tags"><span class="tag hot">后训练</span>
+<span class="tag">开源 RL</span>
+<span class="tag">Megatron</span>
+<span class="tag">SGLang</span></div>
+  </div>
+</div>
+<!-- 🌍 具身智能 &amp; 世界模型 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🌍</span>具身智能 &amp; 世界模型</div>
+  <div class="card">
+    <div class="source">arXiv 2609.05588 · AgiBot · HuggingFace Daily Papers · HF 46↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.05588" target="_blank">GE-Act 2.0: Pretraining and Scaling a World-Action Model for Robotic Manipulation</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">世界-动作模型（WAM）靠预测未来状态引导动作，能同时从无动作视频和带动作交互中学习；但多数只是继承预训练视频生成器，WAM 自身的预训练与 scaling 一直没人系统做。GE-Act 2.0 把可训练的生成组件与动作组件全部在操作数据上从零初始化：控制导向自编码器（CoAE）+ 单步视觉规划器（SVP）+ 逆动力学模型（IDM），再用 KASO 选择性优化筛掉与记录动作不兼容的预测未来，减少错配监督。不微调、直接评测 20 组技能 100 个任务；协同数据从 300 小时扩到 3 万小时，G1-OP 成功率 17.1%→44.1%、G2-90D 13.4%→31.1%，且跨具身迁移明显（G2-90D 仅占 2% 数据却涨 17.7 分）。</div>
+    <div class="tags"><span class="tag hot">世界-动作模型</span>
+<span class="tag hot">HF 46↑</span>
+<span class="tag">从零预训练</span>
+<span class="tag">跨具身</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2609.07398 · HuggingFace Daily Papers · HF 49↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.07398" target="_blank">OpenWAM: An Open, Modular Exploration Towards Systematic World-Action Model Pretraining</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">世界-动作模型继承视频生成先验、再借具身经验转成可执行控制信号，但现有系统是「单体」的：生成骨干、视觉表征、架构、信息流、推理流程、训练数据全耦合。OpenWAM 把 WAM 预训练变成可控实验平台：OpenWAM-Infra 把设计空间拆成可组合模块，OpenWAM-Study 用控制实验提炼三条原则——上游知识经「足够强的生成骨干 + 紧凑且信息丰富的隐空间」迁移；世界-动作协同需要专门的动作容量、显式的世界到动作信息流、同步联合去噪；具身预训练主要提升域外泛化。据此构建 OpenWAM-α（约 6400 小时自我中心人+机器人数据），跨 8 个仿真基准与真机（单臂/双臂/灵巧手）稳定领先，全栈开源。</div>
+    <div class="tags"><span class="tag hot">世界-动作模型</span>
+<span class="tag hot">HF 49↑</span>
+<span class="tag">模块化</span>
+<span class="tag">开源</span></div>
+  </div>
+</div>
+<!-- 👁️ 多模态 &amp; 视觉 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态 &amp; 视觉</div>
+  <div class="card">
+    <div class="source">arXiv 2609.08084 · HuggingFace Daily Papers · HF 44↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.08084" target="_blank">Marigold V2: Revisiting Diffusion Transformers for Monocular Depth Estimation</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">单目深度估计是个高度病态的老问题，现有模型仍难在分布外输入上泛化、也难产出锐利细节。Marigold V2 重新审视如何把 DiT 图像生成/编辑模型改造成 SOTA 深度估计器：从预训练的多步 flow-matching 模型出发做单步推理、按需量化，既保容量又便宜。针对朴素训练的伪影，作者给出两个补救：用真值提取的语义特征对齐内部表征，再配两阶段微调（含新提出的 Sinkhorn 损失）。结果是更锐利、更干净、更泛化的深度图——KITTI/ETH3D 上 AbsRel 比此前最佳好 16-26%，毛发、树叶、发丝级细边缘都能解析；还能迁移到表面法线估计、本征图分解等稠密回归任务。</div>
+    <div class="tags"><span class="tag hot">深度估计</span>
+<span class="tag">DiT</span>
+<span class="tag hot">HF 44↑</span>
+<span class="tag">Sinkhorn</span></div>
+  </div>
+</div>
+<!-- 🔓 开源 &amp; awesome 生态 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔓</span>开源 &amp; awesome 生态</div>
+  <div class="card">
+    <div class="source">GitHub Trending · awesome 主仓库</div>
+    <div class="title"><a href="https://github.com/trending" target="_blank">AI「成本遥测」小工具扎堆，awesome 主仓库依旧静默</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">今日新仓库里，<a href="https://github.com/crwdla/tokentab" target="_blank">tokentab</a>（★64）读 Claude Code/Codex/Gemini CLI 的会话日志，按模型/项目/天统计 token 花费；<a href="https://github.com/Raymondhou0917/ai-level-check" target="_blank">ai-level-check</a>（★26）读本地 agent 日志、给 AI 使用水平打 LV0–LV5 报告——延续上周「AI 编程成本遥测」的小趋势；<a href="https://github.com/Colafornia/short-video-generator-AI" target="_blank">short-video-generator-AI</a>（★91）把 YouTube 视频一键转爆款短视频。awesome 主仓库继续静默（最近提交仍是 9/2 的 Meta tweaks），门口 AI list 长队不动：AI Agent Tools（#4396）、AI Tokenomics（#4394）、AI Companion（#4378）、Swarm（#4364）、LLM for Biomedicine（#4359）等。</div>
+    <div class="tags"><span class="tag">成本遥测</span>
+<span class="tag">开源</span>
+<span class="tag">awesome</span>
+<span class="tag">PR 排队</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>今天最值得记一笔的，是「语音」重新站到了台前。AuK 和 Gander 几乎同一天出现，一个把语音生成+编辑统一成一个开源基础模型，一个把全双工实时对话做进端到端 agent——这不是巧合：当文本大模型卷不动了，语音这个「最自然的人机接口」成了下一块必争之地，而且这次的开源浓度很高，模型、代码、数据都给全了。具身这边我更喜欢 OpenWAM 和 GE-Act 2.0 传递的信号：世界-动作模型终于不再「借」视频生成器的骨架，而是开始认真回答「从零预训练该怎么配、数据怎么 scaling、世界与动作怎么协同」——GE-Act 2.0 用 3 万小时数据把成功率从 17% 拉到 44%，OpenWAM 还顺手把「跨具身迁移」写进了结论。大模型侧 OPRD 的思路也漂亮：让弱教师「加速」而不是「重定向」强学生的优化，这对未来「用上一代模型训下一代模型」的代际流水线是个实打实的省钱方向。开源生态这边，awesome 主仓库又静默一周，门口 AI list 的队伍还在变长，合并节奏却纹丝不动，「给人读的清单」和「给 agent 查的资源库」之间的落差，越来越明显了。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-09-10 08:05</p>
+</div>
+
+</div>
+</body>
+</html>

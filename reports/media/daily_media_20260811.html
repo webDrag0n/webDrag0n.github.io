@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年08月11日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年08月11日</div>
+  <div class="subtitle">中文AI媒体精选 · 机器之心/量子位/新智元 等</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>OpenAI放大招取消ChatGPT免费限制、Codex与Claude Code负责人公开互撕、宇树科技科创板IPO申购，AI圈火药味与资本热度齐飞。</p>
+</div>
+
+<!-- 🔥 今日头条 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">⚡ Breaking</div>
+    <div class="source">量子位 / 36氪 / 果核剥壳 / 凤凰网科技</div>
+    <div class="title"><a href="https://www.ghxi.com/ai202608101.html" target="_blank">OpenAI宣布取消ChatGPT免费用户限制，默认模型升级至GPT-5.6 Luna</a></div>
+    <div class="summary">8月10日，OpenAI宣布即日起取消免费版和Go版用户的纯文本对话次数限制，默认模型升级为GPT-5.6 Luna，全球约十亿用户直接受益。此举背后是DeepSeek调用量已达OpenAI三倍的竞争压力——据OpenRouter数据，本周DeepSeek V4 Flash调用量达11.31T tokens，远超GPT-5.6 Luna的3.54T tokens。</div>
+    <div class="tags">
+      <span class="tag hot">重磅</span>
+      <span class="tag">#大模型</span>
+      <span class="tag">#OpenAI</span>
+      <span class="tag">#ChatGPT</span>
+      <span class="tag">#DeepSeek</span>
+    </div>
+  </div>
+</div>
+
+<!-- 📰 头条要闻 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📰</span>头条要闻</div>
+
+  <div class="card">
+    <div class="source">36氪 · 2026年8月10日</div>
+    <div class="title"><a href="https://www.36kr.com/p/3933059944775041" target="_blank">Codex与Claude Code负责人公开互撕：一场开发者封号风波引爆AI编程工具大战</a></div>
+    <div class="summary">一场开发者封号风波，最终演变成OpenAI Codex和Anthropic Claude Code两位Coding Agent负责人之间的大型公开"互怼"。朴实无华的商战背后，是AI编程工具赛道白热化竞争的缩影。</div>
+    <div class="tags">
+      <span class="tag">#AI编程</span>
+      <span class="tag">#Codex</span>
+      <span class="tag">#ClaudeCode</span>
+      <span class="tag">#商战</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪 / 晚点LatePost · 2026年8月10日</div>
+    <div class="title"><a href="https://www.36kr.com/p/3918776472022402" target="_blank">宇树科技科创板IPO申购开启：A股「人形机器人第一股」正式登场</a></div>
+    <div class="summary">8月10日，宇树科技在科创板开启申购，成为A股"人形机器人第一股"。此前梁文锋（DeepSeek创始人）亦投资了宇树。中一签或赚20万元，市场对人形机器人赛道热情高涨。</div>
+    <div class="tags">
+      <span class="tag">#人形机器人</span>
+      <span class="tag">#IPO</span>
+      <span class="tag">#宇树科技</span>
+      <span class="tag">#科创板</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪 · 2026年8月10日</div>
+    <div class="title"><a href="https://eu.36kr.com/zh/p/3932942117682567" target="_blank">OpenAI GPT-6被曝8月正式发布：搭载10万亿参数，刷新行业天花板</a></div>
+    <div class="summary">重磅消息称OpenAI的GPT-6将于本月正式发布，搭载10万亿超大规模参数。这或将为自然语言处理、多场景智能落地等领域带来颠覆性变革，成为本月AI赛道最受瞩目的核心事件。</div>
+    <div class="tags">
+      <span class="tag hot">重磅</span>
+      <span class="tag">#GPT-6</span>
+      <span class="tag">#OpenAI</span>
+      <span class="tag">#大模型</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🏭 大模型与产业动态 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🏭</span>大模型与产业动态</div>
+
+  <div class="card">
+    <div class="source">晚点LatePost / 金融时报 / 智东西 · 2026年8月6-7日</div>
+    <div class="title"><a href="https://www.ithome.com/0/986/739.htm" target="_blank">字节跳动讨论训练超5万亿参数大模型，张一鸣：不蒸馏、别被Coding短期热点影响</a></div>
+    <div class="summary">据晚点LatePost独家报道，字节跳动正在讨论训练参数规模超5万亿的模型（FT后续报道称高达10万亿），超过阿里Qwen 3.8-Max的2.4万亿和月之暗面K3的2.8万亿。张一鸣、梁汝波先后发声，强调"要做硬核的事情，而非摘低垂的果实"。</div>
+    <div class="tags">
+      <span class="tag">#字节跳动</span>
+      <span class="tag">#大模型</span>
+      <span class="tag">#AGI</span>
+      <span class="tag">#张一鸣</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">联合早报 / 量子位 · 2026年8月6日</div>
+    <div class="title"><a href="https://www.zaobao.com.sg/news/china/story20260806-9479593" target="_blank">DeepSeek宣布API大幅涨价：单日8万亿Token压垮「价格屠夫」</a></div>
+    <div class="summary">DeepSeek公告计划整体上调API定价且"涨幅较大"。从2024年的地板价到主动涨价，背后是单日8万亿Token调用量、两万张卡训推共用的算力硬约束。与此形成对比的是OpenAI降价80%的反向操作。</div>
+    <div class="tags">
+      <span class="tag">#DeepSeek</span>
+      <span class="tag">#API</span>
+      <span class="tag">#定价</span>
+      <span class="tag">#算力</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">雪球 / 网易科技 · 2026年8月9日</div>
+    <div class="title"><a href="https://xueqiu.com/9425112137/404321329" target="_blank">Apple紧急下架阿里千问使用手册：苹果智能中国版再添变数</a></div>
+    <div class="summary">8月9日，苹果官网紧急下架此前上线的"配合Apple智能使用千问"文档，页面恢复为海外版ChatGPT说明。苹果客服回应称：目前中国大陆暂无该可用功能，相关服务仍在监管审批中。阿里千问在中国版Apple智能中的角色出现不确定性。</div>
+    <div class="tags">
+      <span class="tag">#Apple</span>
+      <span class="tag">#阿里千问</span>
+      <span class="tag">#AI监管</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🤖 具身智能与机器人 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能与机器人</div>
+
+  <div class="card">
+    <div class="source">量子位 / 光年Tech / 观察者网 · 2026年8月3-8日</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/08/467730.html" target="_blank">智元机器人IPO前夕人事地震：首席科学家罗剑岚从官网「消失」</a></div>
+    <div class="summary">智元机器人官网核心合伙人名单更新后，首席科学家罗剑岚被移除。公司回应称"暂未离职，系内部岗位调整"。7月24日智元刚官宣启动赴港上市，2025年以5168台出货量居全球人形机器人第一。IPO前的人事变动引发市场关注。</div>
+    <div class="tags">
+      <span class="tag">#智元机器人</span>
+      <span class="tag">#人事变动</span>
+      <span class="tag">#IPO</span>
+      <span class="tag">#人形机器人</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">21财经 / 投资界 · 2026年8月4日</div>
+    <div class="title"><a href="https://m.21jingji.com/article/20260804/herald/67f1d0da5fda0760d0f2bdf7024b059d.html" target="_blank">帕西尼完成10亿元战略融资，刷新全球触觉感知领域纪录</a></div>
+    <div class="summary">具身智能触觉传感公司帕西尼完成10亿元战略融资，累计融资达35亿元。公司将高精度触觉传感器从10万元级降至百元级，构建了"传感器-灵巧手-人形机器人"多维产品矩阵。国家队和产业巨头均参与本轮投资。</div>
+    <div class="tags">
+      <span class="tag">#融资</span>
+      <span class="tag">#具身智能</span>
+      <span class="tag">#触觉传感</span>
+      <span class="tag">#帕西尼</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🌍 国际视野 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🌍</span>国际视野与深度观察</div>
+
+  <div class="card">
+    <div class="source">观察者网 · 2026年8月10日</div>
+    <div class="title"><a href="https://www.guancha.cn/internation/2026_08_10_826795.shtml" target="_blank">《财富》：别只盯DeepSeek了，中国AI整体正快速缩小与美国的差距</a></div>
+    <div class="summary">《财富》杂志指出，随着DeepSeek、月之暗面、智谱AI等中国企业逐渐追赶美国顶尖实验室，并在成本方面展现优势，美国过去依赖的技术领先优势正在缩小。中国AI大模型已进入全球竞争核心圈。</div>
+    <div class="tags">
+      <span class="tag">#国际竞争</span>
+      <span class="tag">#中国AI</span>
+      <span class="tag">#DeepSeek</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪 / 新浪财经 · 2026年8月10日</div>
+    <div class="title"><a href="https://www.36kr.com/p/3918776472022402" target="_blank">字节跳动成立新豆包产品团队：AI应用层加速组织变革</a></div>
+    <div class="summary">字节跳动近期成立新的豆包产品团队，进一步加码AI应用层布局。与此同时，字节Seed架构也在调整中——周畅管理范围扩大，具身业务纳入核心。大模型军备竞赛正从技术层延伸到组织架构层面。</div>
+    <div class="tags">
+      <span class="tag">#字节跳动</span>
+      <span class="tag">#豆包</span>
+      <span class="tag">#AI应用</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>过去48小时，AI圈最戏剧性的变化莫过于OpenAI被迫"掀桌子"——面对DeepSeek调用量三倍碾压，直接取消免费用户限制，以GPT-5.6 Luna全面开放应对。这标志着AI大模型的竞争已从"技术叙事"彻底进入"用户争夺"阶段。与此同时，字节跳动5万亿参数大模型计划曝光、GPT-6传闻8月发布，中美大模型军备竞赛进一步升级至10万亿参数级别。具身智能赛道也不平静：宇树科技IPO开启人形机器人资本化新篇章，智元却在上市前夕出现核心科学家变动。整体来看，2026年8月的AI行业正经历"技术突破-商业变现-资本退出"三重压力的叠加，谁能在这场多维竞赛中跑通闭环，谁才能真正笑到最后。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026年08月11日</p>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年07月25日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年07月25日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>Black Forest Labs 发布多模态统一大模型 FLUX 3，联合训练图像/视频/音频/动作预测；OpenAI 将 GPT-5.6 Sol 部署至 Cerebras 实现 750 tokens/s 极速推理；Google Gemini 3.5 Pro 因编码能力不达标再度延期，市值蒸发超 2000 亿美元；Anthropic Claude Opus 4.7 在机器人编程任务中超越人类团队 20 倍；arXiv 上 3D VLM、4D 世界生成、Agent 训练框架等方向涌现重要工作。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+
+  <div class="hot-topic">
+    <div class="label">🔴 BREAKING</div>
+    <div class="card" style="margin:0;border:none;box-shadow:none;background:transparent;">
+      <div class="source">Black Forest Labs · 2026-07-23</div>
+      <div class="title"><a href="https://blackforestlabs.ai/" target="_blank">FLUX 3: 统一多模态前沿大模型发布</a></div>
+      <div class="summary">Black Forest Labs 发布 FLUX 3，在统一架构下联合训练图像、视频、音频和动作预测四种模态。通过创新的 Self-Flow 对齐方法，FLUX 3 实现了从生成媒体到机器人控制的跨模态理解。开源权重 Dev 版本计划于 2026 年底发布，支持本地部署和定制。</div>
+      <div class="tags">
+        <span class="tag hot">🔥 热点</span>
+        <span class="tag">多模态</span>
+        <span class="tag">视觉智能</span>
+        <span class="tag">开源</span>
+        <span class="tag">机器人</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">OpenAI · 2026-07-24</div>
+    <div class="title"><a href="https://openai.com/index/previewing-gpt-5-6-sol/" target="_blank">GPT-5.6 Sol 登陆 Cerebras：750 tokens/s 极速推理</a></div>
+    <div class="summary">OpenAI 宣布 GPT-5.6 Sol 将部署在 Cerebras 硬件上，推理速度高达每秒 750 tokens，将前沿模型能力以空前速度交付用户。GPT-5.6 家族（Luna/Terra/Sol）自 7 月 9 日发布以来持续扩展生态。</div>
+    <div class="tags">
+      <span class="tag">LLM</span>
+      <span class="tag">推理加速</span>
+      <span class="tag">GPT-5.6</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🏭</span>产业动态</div>
+
+  <div class="card">
+    <div class="source">Bloomberg · 2026-07-16</div>
+    <div class="title"><a href="https://www.bloomberg.com/news/articles/2026-07-16/google-gemini-launch-delayed-as-tech-falls-short-of-internal-goals" target="_blank">Google Gemini 3.5 Pro 延期：编码性能未达内部目标</a></div>
+    <div class="summary">Google 旗舰模型 Gemini 3.5 Pro 因编码能力未达内部基准而推迟数月，继 6 月跳票后再次错过 7 月中旬窗口。同期四位 DeepMind 核心研究员（含 Transformer 联合作者 Noam Shazeer）离职加盟 OpenAI 和 Anthropic，Alphabet 单日市值蒸发超 2000 亿美元。</div>
+    <div class="tags">
+      <span class="tag">大模型竞赛</span>
+      <span class="tag">Gemini</span>
+      <span class="tag">Google</span>
+      <span class="tag">人才流动</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">Anthropic · Project Fetch</div>
+    <div class="title"><a href="https://www.anthropic.com/news/claude-opus-4-7" target="_blank">Claude Opus 4.7 机器人编程：超越人类团队 20 倍</a></div>
+    <div class="summary">Anthropic 披露 Project Fetch：Claude Opus 4.7 在机器狗传感器编程任务中以 9 分 35 秒完成，比最快的人类-AI 协作团队快约 20 倍。速度提升来自通用模型缩放而非机器人专项训练，展现了通用 AI 编码智能的巨大潜力。</div>
+    <div class="tags">
+      <span class="tag">具身智能</span>
+      <span class="tag">Agent 编程</span>
+      <span class="tag">Claude</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>arXiv 精选论文</div>
+
+  <div class="card">
+    <div class="source">arXiv:2607.21595 · cs.CV / cs.AI / cs.LG</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.21595" target="_blank">VLM-IE3D: 3D 空间感知视觉语言模型</a></div>
+    <div class="summary">提出统一框架 VLM-IE3D，结合隐式与显式几何信息，显著提升 VLM 在 3D 空间理解与推理任务上的表现。解决了 2D VLM 在处理空间推理时的核心瓶颈，为具身智能与 3D 场景理解提供新范式。</div>
+    <div class="tags">
+      <span class="tag">VLM</span>
+      <span class="tag">3D 视觉</span>
+      <span class="tag">多模态</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2607.21522 · cs.RO / cs.AI / cs.CV</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.21522" target="_blank">GS-Agent: 从文本生成动态 4D 物理世界</a></div>
+    <div class="summary">利用生成式模拟从自然语言描述创建动态、物理真实的 4D 世界。GS-Agent 将语言指令转化为可交互的时空场景，打通了从自然语言到物理仿真的端到端流程，在具身 AI 和游戏生成领域应用前景广阔。</div>
+    <div class="tags">
+      <span class="tag">生成模型</span>
+      <span class="tag">具身智能</span>
+      <span class="tag">4D 仿真</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2607.21557 · cs.AI / cs.CL · Microsoft Research</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.21557" target="_blank">OpenForgeRL: 训练 Harness-Native AI Agent</a></div>
+    <div class="summary">微软研究院提出 OpenForgeRL，解决现代 AI Agent 依赖 Claude Code、Codex 等复杂推理框架而难以端到端训练的痛点。该框架使 Agent 可以在任意环境中进行 SFT/RL 训练，打通了 Agent 从推理到训练的闭环。</div>
+    <div class="tags">
+      <span class="tag">AI Agent</span>
+      <span class="tag">强化学习</span>
+      <span class="tag">开源</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源项目风向</div>
+
+  <div class="card">
+    <div class="source">GitHub · 45K+ Stars</div>
+    <div class="title"><a href="https://github.com/aaif-goose/goose" target="_blank">Goose: 开源通用 AI Agent 框架</a></div>
+    <div class="summary">Goose 已成为最热门的开源 AI Agent 项目之一，45K+ GitHub Stars、500+ 贡献者、70+ MCP 扩展。支持桌面应用、CLI 和 API 三种形态，可接入任意 LLM，代表了 AI Agent 从专用工具走向通用操作系统的趋势。</div>
+    <div class="tags">
+      <span class="tag">AI Agent</span>
+      <span class="tag">MCP</span>
+      <span class="tag">开源</span>
+      <span class="tag">GitHub Trending</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">Anthropic · 开源标准</div>
+    <div class="title"><a href="https://modelcontextprotocol.io/" target="_blank">MCP 生态持续爆发：AI 工具互联事实标准</a></div>
+    <div class="summary">Model Context Protocol (MCP) 已成为 AI 应用与外部系统连接的事实标准，覆盖搜索引擎、数据库、文件系统等数千种工具。2026 年 7 月，MCP 生态在 Agent 框架、编程助手、本地推理等方向全面开花，成为开源 AI 基础设施的核心组件。</div>
+    <div class="tags">
+      <span class="tag">MCP</span>
+      <span class="tag">Agent 基础设施</span>
+      <span class="tag">开源标准</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>今天的 AI 世界呈现出三条清晰主线：<strong>多模态大一统</strong>、<strong>Agent 自主化</strong>、<strong>算力军备竞赛的裂痕</strong>。<br><br>
+  FLUX 3 的发布标志着多模态模型进入「全模态」时代——图像、视频、音频、动作预测在统一架构下训练，这不仅是技术路线的胜利，更模糊了生成 AI 与具身智能的边界。OpenAI 将 GPT-5.6 Sol 推到 750 t/s 则说明推理效率正成为新的竞争高地，速度本身就是一种智能形态。<br><br>
+  而 Google Gemini 3.5 Pro 的再次延期暴露了一个深层问题：<strong>编码能力已成为衡量大模型核心竞争力的第一指标</strong>。Anthropic 用 Opus 4.7 在机器人编程上 20 倍碾压人类团队，正是这一趋势的极致注脚。当年「大语言模型」的 L 是 Language，今天它正在变成 Labor——从理解语言到替代劳动，AI 的进化比任何人预想的都快。<br><br>
+  arXiv 上的 OpenForgeRL 和 GS-Agent 则指向了 Agent 的下一个阶段：从手工编排的推理管线走向可训练的自主智能体，从理解世界的 VLM 走向可以生成世界的 4D 引擎。Goose 和 MCP 生态的爆发则是基础设施层的集体觉醒——AI Agent 正在长出操作系统级的骨骼。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026年07月25日 · 数据来源：arXiv · HuggingFace · GitHub · Bloomberg · OpenAI · Anthropic</p>
+</div>
+
+</div>
+</body>
+</html>

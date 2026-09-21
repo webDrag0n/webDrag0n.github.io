@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年07月27日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年07月27日</div>
+  <div class="subtitle">中文AI媒体精选 · 机器之心/量子位/新智元 等</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>Kimi K3 开源倒计时引爆全球AI圈，黄仁勋破天荒发推力挺；腾讯135亿接盘Manus，AI Agent赛道最大资本博弈落定；DeepSeek V4跳票引发国产芯片路线之争。本周中美AI竞争叙事正从"模型追赶"升级为"生态博弈"。</p>
+</div>
+
+<!-- 今日头条 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+<div class="hot-topic">
+  <div class="label">🔥 头条 · BREAKING</div>
+  <div class="source">来源：机器之心 / 36氪 / 凤凰科技</div>
+  <div class="title"><a href="https://36kr.com/p/3909804755342726" target="_blank">黄仁勋人生首条推特力挺Kimi K3开源，半个硅谷站队，中美AI叙事巨变</a></div>
+  <div class="summary">7月25日，英伟达创始人黄仁勋发出人生第一条推特，力挺Kimi K3开源模型，称"开源推动进步"。此举被视为对美国政府可能限制开源AI模型的有力回应。Kimi K3定于7月27日全面开源，拥有2.8万亿参数、100万token上下文窗口，刷新全球开源模型规模纪录。硅谷多位大佬转发支持，引发中美AI产业链叙事级别的震荡。</div>
+  <div class="tags">
+    <span class="tag hot">头条</span>
+    <span class="tag">#大模型</span>
+    <span class="tag">#开源</span>
+    <span class="tag">#Kimi K3</span>
+    <span class="tag">#中美博弈</span>
+  </div>
+</div>
+
+</div>
+
+<!-- 模型与产品 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>模型与产品</div>
+
+<div class="card">
+  <div class="source">来源：量子位 / 新智元 / 人人都是产品经理</div>
+  <div class="title"><a href="https://www.woshipm.com/ai/6430363.html" target="_blank">腾讯牵手中资财团135亿接盘Manus：AI Agent赛道最大并购案</a></div>
+  <div class="summary">腾讯牵头组建中国资本财团，以约20亿美元估值从Meta手中回购Manus全部股权。Manus作为2026年最火AI Agent产品，ARR已增长至4-5亿美元。腾讯此举将补齐其AI执行层短板，阿里、字节、百度也在All in Agent赛道，2026年智能体成为大厂最拥挤的战场。</div>
+  <div class="tags">
+    <span class="tag">#AI Agent</span>
+    <span class="tag">#腾讯</span>
+    <span class="tag">#并购</span>
+    <span class="tag">#Manus</span>
+  </div>
+</div>
+
+<div class="card">
+  <div class="source">来源：36氪 / 新智元</div>
+  <div class="title"><a href="https://36kr.com/p/3907556927362441" target="_blank">Kimi K3登顶，月之暗面的星辰大海：从摇滚乐队到AI顶流</a></div>
+  <div class="summary">月之暗面Kimi K3发布后在多项国际评测中表现惊人，其创始人杨植麟用一张50年前的前卫摇滚专辑命名公司，试图建造"机器之心"。在Taelin实测中，K3在部分题目上超越Claude Fable 5，但推理耗时是后者的10倍——性价比仍是K3的现实硬伤。</div>
+  <div class="tags">
+    <span class="tag">#大模型</span>
+    <span class="tag">#月之暗面</span>
+    <span class="tag">#Kimi</span>
+    <span class="tag">#评测</span>
+  </div>
+</div>
+
+<div class="card">
+  <div class="source">来源：量子位</div>
+  <div class="title"><a href="https://www.qbitai.com/2026/07/457117.html" target="_blank">百度文心助手任务Agent登顶国际权威榜单，超越Claude与GPT拿下全球冠军</a></div>
+  <div class="summary">7月22日，百度文心助手任务Agent以最高分94.6%、平均分94.4%的成绩登顶全球工程向AI智能体评测榜单GAIA，超越Claude和GPT系列，标志着中国AI在工程化Agent领域取得领先。</div>
+  <div class="tags">
+    <span class="tag">#百度</span>
+    <span class="tag">#AI Agent</span>
+    <span class="tag">#文心</span>
+    <span class="tag">#榜单</span>
+  </div>
+</div>
+
+</div>
+
+<!-- 行业与融资 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">💰</span>行业与融资</div>
+
+<div class="card">
+  <div class="source">来源：甲子光年 / 亿邦动力 / 投资界</div>
+  <div class="title"><a href="https://www.aitntnews.com/newDetail.html?newId=27489" target="_blank">Fireworks AI完成100亿D轮融资：复旦女学霸的"AI台积电"</a></div>
+  <div class="summary">由复旦校友Lin Qiao创立的Fireworks AI完成100亿人民币D轮融资，英伟达、Atreides Management、Index Ventures等参投。黄仁勋曾评价其为"AI工厂的台积电"。Fireworks构建了高效的Token生成基础设施，为Cursor等AI应用提供推理服务，估值已达千亿级别。</div>
+  <div class="tags">
+    <span class="tag">#融资</span>
+    <span class="tag">#基础设施</span>
+    <span class="tag">#Fireworks</span>
+    <span class="tag">#英伟达</span>
+  </div>
+</div>
+
+<div class="card">
+  <div class="source">来源：新浪财经 / 中财网</div>
+  <div class="title"><a href="https://k.sina.com.cn/article_7879848923_1d5acf3db01901ftfe.html" target="_blank">DeepSeek首轮融资74亿美元，低成本AI冲击硅谷巨头</a></div>
+  <div class="summary">DeepSeek完成首轮外部融资74亿美元，这家仅成立三年的杭州AI实验室用远少于OpenAI和Anthropic的算力资源训练出性能强大的模型。与此同时，DeepSeek V4正式版持续跳票，市场传言其正为国产芯片适配探路。</div>
+  <div class="tags">
+    <span class="tag">#DeepSeek</span>
+    <span class="tag">#融资</span>
+    <span class="tag">#国产替代</span>
+    <span class="tag">#V4</span>
+  </div>
+</div>
+
+<div class="card">
+  <div class="source">来源：OFweek机器人网 / i黑马</div>
+  <div class="title"><a href="https://robot.ofweek.com/2026-07/ART-8321203-12005-30695552.html" target="_blank">具身智能赛道持续火热：未来不远半年三轮融资近10亿，智元被曝200亿美元冲刺IPO</a></div>
+  <div class="summary">具身智能公司"未来不远"完成近10亿Pre-A轮融资，半年内实现三轮融资。行业龙头智元机器人被曝以200亿美元估值冲刺IPO，优必选CEO"人类牛马"言论引发行业热议。WAIC 2026后人形机器人赛道持续升温。</div>
+  <div class="tags">
+    <span class="tag">#具身智能</span>
+    <span class="tag">#机器人</span>
+    <span class="tag">#融资</span>
+    <span class="tag">#IPO</span>
+  </div>
+</div>
+
+</div>
+
+<!-- 国际前沿 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🌍</span>国际前沿</div>
+
+<div class="card">
+  <div class="source">来源：IT之家</div>
+  <div class="title"><a href="https://m.ithome.com/html/980360.htm" target="_blank">Google Gemini前沿模型迟迟未发布，遭竞争对手"群嘲"</a></div>
+  <div class="summary">Google承诺已久的下一代Gemini前沿模型多次延迟，引发OpenAI、Anthropic等竞争对手公开嘲讽。Google押注速度更快、成本更低的模型路线，但在与Claude Fable 5和Kimi K3的竞争中逐渐失去话题主导权。</div>
+  <div class="tags">
+    <span class="tag">#Google</span>
+    <span class="tag">#Gemini</span>
+    <span class="tag">#竞争</span>
+  </div>
+</div>
+
+<div class="card">
+  <div class="source">来源：36氪 / 新智元 / 投资界</div>
+  <div class="title"><a href="https://36kr.com/p/3907377789719938" target="_blank">全球三大AI包揽IMO满分，击败99%人类选手</a></div>
+  <div class="summary">Claude Fable 5、GPT-5.6 Sol和Kimi K3在IMO 2026全部6道题中取得满分，首次实现多个通用大模型同时征服国际数学奥林匹克竞赛。AI在数学推理领域的代际突破引发教育界和学术界广泛讨论。</div>
+  <div class="tags">
+    <span class="tag">#基准测试</span>
+    <span class="tag">#数学推理</span>
+    <span class="tag">#IMO</span>
+    <span class="tag">#AGI</span>
+  </div>
+</div>
+
+<div class="card">
+  <div class="source">来源：机器之心 / OpenMagic</div>
+  <div class="title"><a href="https://openmagic.ai/183780.html" target="_blank">Kimi开源引发美国产业震动，Nvidia与Mistral呼吁勿全面限制开放权重模型</a></div>
+  <div class="summary">美国正在评估应对中国AI的战略，Kimi K3开源成为导火索。Nvidia和Mistral联合发声，呼吁不要全面限制开放权重模型，认为这将扼杀创新并使美国自身失去竞争力。Anthropic则宣布将Fable 5永久纳入订阅体系以应对竞争。</div>
+  <div class="tags">
+    <span class="tag">#开源</span>
+    <span class="tag">#政策</span>
+    <span class="tag">#中美科技</span>
+    <span class="tag">#Nvidia</span>
+  </div>
+</div>
+
+</div>
+
+<!-- 编辑点评 -->
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>过去48小时，AI圈的最大叙事毫无疑问是Kimi K3的开源风暴。黄仁勋破天荒下场发推，半个硅谷站队力挺，折射出一个不容忽视的趋势：中美AI竞争已从"谁的模型更强"升级为"谁定义开源生态规则"。K3 2.8万亿参数的开源不仅是技术突破，更是一次精准的地缘科技博弈——在美国试图限制中国获取先进AI的背景下，开源成为破局利器。与此同时，腾讯接盘Manus、Fireworks百亿融资、DeepSeek首轮74亿美元募资，都在指向同一个方向：AI产业正从"炼大模型"走向"建基础设施和生态"的阶段。具身智能赛道的持续高温则预示着，2026下半年的主战场将从数字世界延伸到物理世界。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026年07月27日</p>
+</div>
+
+</div>
+</body>
+</html>

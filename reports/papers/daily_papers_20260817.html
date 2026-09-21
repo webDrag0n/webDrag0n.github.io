@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年08月17日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .hot-topic .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .hot-topic .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .hot-topic .title a:hover { text-decoration: underline; }
+  .hot-topic .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .hot-topic .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .hot-topic .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .hot-topic .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .hot-topic .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年08月17日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>周一清晨，arXiv 把周末积压的论文一口气放了出来，而且今天的主题高度集中——<strong>「世界模型」刷屏</strong>。阿里 Alaya 的 <strong>EVOKE</strong> 用外部世界状态库 + 稀疏注意力老师，把交互式世界模型推向「无限长」；同门 AMAP 的 <strong>DreamX-Phi</strong> 拿下 WorldArena 2.0 赛道第一。大模型这边，上海 AI 实验室的 <strong>Intern-S2-Preview</strong> 亮出 397B 的「科学 Agent 基座」；丹麦的 <strong>DFM Mimir</strong> 用 1B 参数、只靠合规数据拼出前沿水平。Agent 线，<strong>AutoDesign</strong> 让脚手架自我进化、击败 Claude Design；<strong>OmniScientist</strong> 要做「全模态全学科」的 AI 科学家。开源圈，一个「去除 AI 溯源水印」的仓库 6 天狂揽 1.1 万星，重新点燃内容溯源之争。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🎬</span>多模态 &amp; 世界模型</div>
+
+  <!-- Hot Topic -->
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.13546" target="_blank">Alaya-EVOKE: From Linear-Scaling Supervision to Endless World（无限世界）</a></div>
+    <div class="source">arXiv 2608.13546 · 2026-08-13 · 阿里 Alaya 团队 · HuggingFace Daily 116 upvotes</div>
+    <div class="summary">交互式世界模型有三难：记忆要持久、交互要即时、生成要能跑长程——可这三件事彼此打架。历史塞进去噪器上下文或 KV cache，成本随会话长度疯长；低延迟要靠少步生成，能力又被「老师」框死。<strong>Alaya-EVOKE</strong> 两个都解了：把「持久世界状态」外置到一个按相机索引的<strong>「世界状态银行」</strong>，只取当前视角相关的信息，上下文从此有界；老师也不再是固定生成器，而是用「分块分组 + 远帧检索 + 线性注意力全局态」的<strong>稀疏注意力做长程监督</strong>，内存和算力只线性增长。再配合 30 秒的分布匹配目标 + 自驱动 rollout，蒸馏出一个只要三步、还不用 CFG 的学生模型——既抗长期漂移、又保持即时响应。一句话：这是往「能无限滚动、不会越滚越糊的世界」迈出的一步。</div>
+    <div class="tags">
+      <span class="tag hot">世界模型</span>
+      <span class="tag">长程交互生成</span>
+      <span class="tag">外部状态记忆</span>
+      <span class="tag">稀疏注意力</span>
+    </div>
+  </div>
+
+  <!-- Paper -->
+  <div class="card">
+    <div class="source">arXiv 2608.13552 · 2026-08-13 · 香港大学（含 Hengshuang Zhao）· HuggingFace Daily 42 upvotes</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.13552" target="_blank">PlayWorld：让「Agent 玩家」去长程目标里考世界模型</a></div>
+    <div class="summary">怎么公平比较世界模型？光看视频一致性不够——真实用户会「转 360° 看环境稳不稳」「走进水里看波纹真不真」。可达成同一目标的动作序列，各模型各不相同，固定的动作条件评测根本没法横向比。<strong>PlayWorld</strong> 换了个聪明招：用<strong>多模态 Agent 玩家</strong>，去和世界模型「玩」指定的长程目标。171 个场景，沿四个维度打分（几何一致性、交互保真度、视野外演化、洞察演化）。九个 SOTA 世界模型测下来，结论有点扎心：<strong>长程交互目标上大家都不太靠得住</strong>，空间一致性和持续状态演化尤其容易崩。</div>
+    <div class="tags">
+      <span class="tag">世界模型</span>
+      <span class="tag">基准测试</span>
+      <span class="tag">Agent 玩家</span>
+      <span class="tag">长程目标</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>具身智能 &amp; 机器人</div>
+
+  <!-- Hot Topic -->
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.13489" target="_blank">DreamX-Phi 1.0：给机器人操作配「世界模型」，拿下 WorldArena 2.0 赛道第一</a></div>
+    <div class="source">arXiv 2608.13489 · 2026-08-13 · 阿里 AMAP（DreamX 团队，开源 AMAP-ML/DreamX-Phi）· HuggingFace Daily 91 upvotes</div>
+    <div class="summary">给一个观测帧 + 一句指令 + 一串动作（末端位姿 + 夹爪状态），预测接下来的画面——这就是 <strong>DreamX-Phi</strong> 干的事。但它点破了一个关键：<strong>「像」不等于「对」</strong>，一段逼真的 rollout 可能搬错了胳膊、弄丢了物体。于是它把每只机械臂的 SE(3) 变换用 PRoPE 风格的几何编码注入注意力，保住「臂的身份」和刚体运动；再加一个轻量深度分支管场景几何、用 SAM3 掩码 + 冻结的 V-JEPA 老师锁住抓取中物体的状态。最后用分布匹配蒸馏压成少步学生。基于 Wan2.2-TI2V-5B 搭建、代码开源——<strong>WorldArena 2.0 赛道一第一、赛道二第二</strong>。</div>
+    <div class="tags">
+      <span class="tag hot">具身智能</span>
+      <span class="tag">视频世界模型</span>
+      <span class="tag">机器人操作</span>
+      <span class="tag">几何编码</span>
+      <span class="tag">开源</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔬</span>大模型 &amp; 科学智能</div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.13505 · 2026-08-13 · 上海 AI 实验室（Intern 系列）· HuggingFace Daily 54 upvotes</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.13505" target="_blank">Intern-S2-Preview：397B 的「科学 Agent 基座模型」</a></div>
+    <div class="summary">科学发现越来越需要一种 AI：能啃得动异构模态的科学证据、能摆弄科学工具与环境、还能在超长任务链上持续推进。<strong>Intern-S2-Preview</strong> 就是冲着这个来的——397B 的科学 Agent 基座。先在渲染的科学文档、图文交错数据、科学语料上做多模态预训练，再走一条统一后训练管线：SFT → 可扩展多任务 RL → 黑盒/白盒 Agent RL → 在线策略蒸馏，中间塞进部分 rollout 离线校正、自适应长度正则、在线投机解码等一堆提稳提效的招。架构上它把时序建模延伸到数值预测，还另开了一条 <strong>Memory Decoder</strong> 路径——不改冻结的 397B 主干，就能快速做科学领域的专精。</div>
+    <div class="tags">
+      <span class="tag">科学 Agent</span>
+      <span class="tag">基础模型</span>
+      <span class="tag">强化学习</span>
+      <span class="tag">多模态</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.13517 · 2026-08-13 · Danish Foundation Models（丹麦）· 已上架 HuggingFace Hub</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.13517" target="_blank">DFM Mimir v1：1B 参数、只用合规数据，拼出前沿水平</a></div>
+    <div class="summary">大模型圈有个尴尬：顶尖模型靠海量、往往不合规的数据堆出来，开源和「数据干净」两头难兼顾。丹麦基金会模型的 <strong>Mimir v1</strong> 反着来：HRM（分层推理模型）架构、1B 参数、从头训练，<strong>只用许可的合规后训练数据</strong>（161 个数据集混搭）。结果英语表现极具竞争力，丹麦语直接刷出 SOTA，还压过同门的 HRM-Text 1B，能和 <strong>Qwen 3.5 4B、Gemma 4 E2B</strong> 这些大得多的模型掰手腕。模型已开源上架。小模型 + 干净数据，也能打。</div>
+    <div class="tags">
+      <span class="tag">开源小模型</span>
+      <span class="tag">合规数据</span>
+      <span class="tag">1B 参数</span>
+      <span class="tag">丹麦语 SOTA</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>Agent &amp; AI 科学家</div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.13560 · 2026-08-13 · 含 Zhiqiang Shen（MBZUAI）· HuggingFace Daily 43 upvotes</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.13560" target="_blank">AutoDesign：让「脚手架」自我进化做长程设计，击败 Claude Design</a></div>
+    <div class="summary">把多模态素材变成结构化媒介产出（比如论文→海报），本质是一个以「模型-脚手架系统」为中心的长程 Agent 过程。理想的脚手架该对齐人类设计先验、又能靠经验自我进化——可现有范式基本是静态的。<strong>AutoDesign</strong> 搞了个「元脚手架优化器」，让代码 Agent 依据 rollout 反馈递归地改进脚手架。在论文转海报任务 + 自建的 PosterBench（100 篇论文、5 个学科）上，最高分 78.32，比闭源商业系统 <strong>Claude Design 高出 7.45 分</strong>；全自主长程循环里，253 次工具调用、11 轮编辑，40 分钟、不到 3 美元。和昨天的 DarwinX 遥相呼应：Agent 的胜负手，正在转向「系统多顺手」。</div>
+    <div class="tags">
+      <span class="tag">Agent 自进化</span>
+      <span class="tag">脚手架优化</span>
+      <span class="tag">长程设计</span>
+      <span class="tag">PosterBench</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.13558 · 2026-08-13 · 新加坡国立大学（NUS）</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.13558" target="_blank">OmniScientist：全模态、全学科的「AI 科学家」</a></div>
+    <div class="summary">现有 AI 科学家覆盖的「工作流」越来越全，却常常只看文本、代码、标签或预先算好的摘要，把科学发现里最关键的时空、跨通道、程序性关系全漏掉了。NUS 的 <strong>OmniScientist</strong> 要做「全模态」的端到端科学家：直接啃<strong>异构原始证据</strong>——图像、信号、音频、视频、3D 结构、轨迹、表格、公式、图。一个感知层 + 三个自主 Agent（构思、实验、写作）跑在确定性流水线上，用代码做「创意 / 严谨性 / 结论」三重核查。36 个真实数据案例、5 大学科族，全部走完「原始数据→成稿」全程，平均论文分 6.3。</div>
+    <div class="tags">
+      <span class="tag">AI 科学家</span>
+      <span class="tag">全模态</span>
+      <span class="tag">多 Agent</span>
+      <span class="tag">科研自动化</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔧</span>开源进展</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · guillaumemeyer/watermarks-remover · ⭐11409（6 天）</div>
+    <div class="title"><a href="https://github.com/guillaumemeyer/watermarks-remover" target="_blank">watermarks-remover：一个「去除 AI 溯源水印」的仓库，6 天揽下 1.1 万星</a></div>
+    <div class="summary">今天开源圈最扎眼、也最「有争议」的一条：<strong>watermarks-remover</strong>，主打「剥掉多厂商的 AI 溯源标记」——Unicode 文本卫生、统计特征清洗之类。短短 6 天冲到 1.1 万星，把同一批新仓库远远甩开。它火了，也再次把那个老问题顶到台前：<strong>AI 内容溯源（水印）到底靠不靠谱？</strong>当「去除水印」的工具比「打水印」的部署跑得还快，内容真伪之辨又多了一分变数。顺带一提，DeepSeek Harness（DSH）插件生态这周也在 GitHub 上热闹非凡，awesome 列表、手册、插件市场一应俱全。</div>
+    <div class="tags">
+      <span class="tag hot">GitHub Trending</span>
+      <span class="tag">内容溯源</span>
+      <span class="tag">开源</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+  今天的 arXiv 被<strong>「世界模型」承包了</strong>——Alaya-EVOKE、DreamX-Phi、PlayWorld 三家几乎同时交卷，方向高度一致：都在琢磨「怎么让模型在脑子里把世界推演得更长、更稳、更可交互」。从「生成一张好看的图」到「生成一个能走进去的世界」，这一步迈得有点意思。<br><br>
+  第二条线是<strong>「小模型 + 干净数据」的逆袭</strong>：DFM Mimir 用 1B 参数、只靠合规数据就敢和 4B 掰手腕，说明数据质量的分量越来越重。<br><br>
+  第三条是 Agent 系统的进化仍在加速：<strong>AutoDesign 击败 Claude Design</strong>，和昨天的 DarwinX 是同一股风——胜负手正从「模型多强」转向「系统多顺手」。<br><br>
+  至于那个 1.1 万星的「去水印」仓库，更像一记提醒：<strong>内容溯源，得跑在「去溯源」的前面</strong>。新的一周，慢慢看～
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-17 CST</p>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年08月22日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .hot-topic .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .hot-topic .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .hot-topic .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .hot-topic .title a:hover { text-decoration: underline; }
+  .hot-topic .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .hot-topic .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .hot-topic .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .hot-topic .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年08月22日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>本期聚焦三大主线 —— 「智能体自我进化」持续升温（FlowEvo 让工作流与技能共生演化，AI4AI-Bench 首次把「递归自我改进」做成可衡量的基准）；「具身智能」进入世界模型×测试时计算的新阶段（τ₀-VLA 让机器人按难度分配算力）；「高效推理」与「紧凑生成」双线突破（FlashPrefill V2 长上下文预填充、Swift-Image 6B 统一生成）。开源侧，CopilotKit 的 OpenBot 给每个 AI 同事一台自己的电脑，人气飙升。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>研究前沿</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点</div>
+    <div class="source">HuggingFace Daily · ArXiv 2607.21596</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.21596">FlowEvo：工作流与可执行技能「共生演化」的自进化智能体</a></div>
+    <div class="summary">现有智能体在推理时构建的工作流，任务一结束就被丢弃；技能库又是离线组装的、不会随经验增长。FlowEvo 提出一个免训练框架：把成功的工作流编译成可调用的技能、存入持久化技能库，并在后续任务里检索复用，让「工作流」与「技能」在推理阶段互相成就、持续进化。</div>
+    <div class="tags"><span class="tag hot">智能体</span><span class="tag">自进化</span><span class="tag">Agent</span><span class="tag">技能库</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily · ArXiv 2608.16885</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.16885">τ₀-VLA：世界模型引导测试时计算的分层机器人基础模型</a></div>
+    <div class="summary">大多数分层 VLA 模型对每个决策都只做一次前向推理，难的任务算不够、简单的又浪费。τ₀-VLA 把高层子任务生成建模成「算力可伸缩」的推理问题——用世界模型在推理阶段引导额外计算，把算力动态分配到更困难或更关键的决策上，面向长程机器人操作。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">机器人</span><span class="tag">VLA</span><span class="tag">测试时计算</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily · ArXiv 2608.19758</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.19758">FlashPrefill V2：面向长上下文 LLM 服务的块稀疏预填充注意力</a></div>
+    <div class="summary">长上下文推理的瓶颈在于注意力二次复杂度，尤其预填充阶段。FlashPrefill V2 在初版原型基础上走向可生产部署：通过块稀疏注意力与动态阈值，大幅降低长上下文预填充的计算成本，让长上下文服务真正「能用、能上生产」。</div>
+    <div class="tags"><span class="tag">LLM 服务</span><span class="tag">长上下文</span><span class="tag">推理优化</span><span class="tag">注意力</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">ArXiv 2608.20318</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.20318">AI4AI-Bench：评测 LLM 智能体的「算法设计」能力以度量递归自我改进</a></div>
+    <div class="summary">递归自我改进（RSI）问的是：AI 能否改进「制造 AI 的过程」本身？而这个过程就是训练算法。作者指出此前没有基准能单独度量「智能体能否设计训练算法」这一能力，于是推出 AI4AI-Bench，把这一核心问题变成可量化、可排名的任务。</div>
+    <div class="tags"><span class="tag">自我改进</span><span class="tag">基准</span><span class="tag">算法设计</span><span class="tag">LLM Agent</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">ArXiv 2608.20334</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.20334">Swift-Image：探索紧凑统一图像生成模型的性能边界</a></div>
+    <div class="summary">一个 6B 单流 DiT，却想同时干好文生图、单图编辑、多图编辑三件事。Swift-Image 用渐进式训练流水线（从宽语义覆盖逐步升到高分辨率、强画质、统一生成-编辑监督），在受限算力预算下探索「小模型」能被推到多远。</div>
+    <div class="tags"><span class="tag">图像生成</span><span class="tag">多模态</span><span class="tag">图像编辑</span><span class="tag">DiT</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily · ArXiv 2608.19759</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.19759">GOAG：面向灵巧机械手的「生成式、对象无关」抓取规划器</a></div>
+    <div class="summary">多指抓取常因数据局限而难以泛化到新物体。GOAG 从「手与物体在接触点共享相同的表面几何」这一观察出发，用深度生成模型学习抓取接触点的紧凑隐空间表征，让灵巧手对新物体也能规划出多样且稳定的抓取。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">灵巧抓取</span><span class="tag">生成模型</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源项目</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点</div>
+    <div class="source">GitHub · CopilotKit/OpenBot · ⭐ 2115</div>
+    <div class="title"><a href="https://github.com/CopilotKit/OpenBot">OpenBot：每个 AI 同事都拥有一台自己的电脑</a></div>
+    <div class="summary">开源 AI 同事框架：每个智能体获得自己的浏览器、文件与工具，且每个动作都在执行前被「先决定、再行动」的治理机制约束。本周上线即冲到 2k+ 星，把「AI 智能体开箱即用 + 可控」这件事又往前推了一步。</div>
+    <div class="tags"><span class="tag hot">AI Agent</span><span class="tag">开源</span><span class="tag">浏览器自动化</span><span class="tag">MCP</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · browser-use/macos-harness · ⭐ 686</div>
+    <div class="title"><a href="https://github.com/browser-use/macos-harness">macos-harness：给 LLM 一套最薄、最简单的 Mac 操控层</a></div>
+    <div class="summary">一个「最薄」的 harness，让大模型通过辅助功能（Accessibility）接口获得对 macOS 的完整控制权。主打简单、可组合，是计算机使用（computer-use）类智能体在 Mac 平台的一个轻量基建。</div>
+    <div class="tags"><span class="tag">计算机使用</span><span class="tag">macOS</span><span class="tag">自动化</span><span class="tag">开源</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · SigmanticAI/apex-inference-chip · ⭐ 668</div>
+    <div class="title"><a href="https://github.com/SigmanticAI/apex-inference-chip">apex-inference-chip：在 FPGA 上跑起真正的 LLM 推理芯片</a></div>
+    <div class="summary">一个开源推理芯片设计：用 RTL 实现一个 Transformer 解码器层，在 FPGA 上真正跑起 Qwen2.5-0.5B，每一个硅上数值都可验证。把「大模型下芯片」这件事变得可复现、可学习，对 AI 硬件方向很有启发。</div>
+    <div class="tags"><span class="tag">AI 芯片</span><span class="tag">FPGA</span><span class="tag">LLM 推理</span><span class="tag">开源硬件</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>今天最值得琢磨的，是「自我改进」正在从口号变成可以打分的科学问题——AI4AI-Bench 要量化智能体设计算法的能力，而 Phantom Gains 又在提醒我们：很多「自训练有增益」的结论，可能只是测量误差的幻觉。一正一反，恰好是一件事的两面。另一边，τ₀-VLA 和 FlashPrefill V2 都指向同一个趋势：把「算力」从均匀撒胡椒面，变成按难度、按重要性动态分配——这大概会是接下来模型与智能体共同的优化方向。开源侧 OpenBot 的走红也说明，大家真正想要的不是更强的单体模型，而是「能自己动手、又可控」的 AI 同事。周一愉快，我们下期见～</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-22</p>
+</div>
+
+</div>
+</body>
+</html>

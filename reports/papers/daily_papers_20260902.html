@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年09月02日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年09月02日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今天的主线是「没有人类的监督，模型还能不能继续变强」——Scaling LRMs 直接把「超越人类监督」写进标题，从奖励和经验两条轴线推演推理模型走向超智能的路径。世界模型这边，Motus2 把「感知—预测—行动—评估—改进」串成一个自我进化的闭环，让灵巧操作的世界模型第一次能自己决策、自己评估、自己改进。开源生态依旧热闹：把 175B 的 DeepSeek 塞进一张 RTX 4060 笔记本、把原生音视频生成压到 7B、还有一票「给编码智能体用的技能库」霸榜 GitHub Trending。</p>
+</div>
+
+<!-- 🔥 今日热点 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · 去人类监督的推理进化</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">arXiv 2608.31075 · cs.AI</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;"><a href="https://arxiv.org/abs/2608.31075" target="_blank" style="color:var(--accent);text-decoration:none;">Scaling Large Reasoning Models beyond Human Supervision: A Path toward Superintelligence</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">RLVR 让推理模型在数学、代码这些「结果能自动验证」的任务上大幅进步，但开放型、智能体型任务没有这么容易拿到的奖励，人类的直接监督也跟不上模型产出的规模和复杂度。这篇论文从「奖励轴」和「经验轴」两条线系统研究：奖励如何从逐条人类判断走向可复用的验证器、再到无需人类反馈的奖励；经验如何从人工策划的任务走向模型自己生成的课程。它勾勒出一条「人类监督逐渐淡出学习回路」的推理模型进化路径。</div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag hot">推理模型</span>
+<span class="tag hot">RLVR</span>
+<span class="tag">超智能</span>
+<span class="tag">奖励设计</span></div>
+  </div>
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · 自我进化的世界模型</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">arXiv 2608.30237 · cs.RO · HuggingFace Daily Papers</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;"><a href="https://arxiv.org/abs/2608.30237" target="_blank" style="color:var(--accent);text-decoration:none;">Motus2: A Self-Evolving General World Model for Dexterous Manipulation</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">世界模型要成为真正的具身智能大脑，不能只加个「动作输出头」了事。Motus2 用同一个共享权重的模型暴露三个控制接口：策略（世界-动作模型）、模拟器（动作条件世界模型）、评估器（价值模型）——策略提出候选动作块，模拟器预测其视觉后果，评估器给预测结果打分，三者耦合成一个「决策—学习」闭环，让模型边执行边自我改进。再配合模型扩展和数据扩展，灵巧操作的世界模型第一次具备了自我进化的能力。</div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag hot">世界模型</span>
+<span class="tag hot">自我进化</span>
+<span class="tag">灵巧操作</span>
+<span class="tag">具身智能</span></div>
+  </div>
+</div>
+
+<!-- 🧠 大模型 & 推理 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 &amp; 推理</div>
+  <div class="card">
+    <div class="source">arXiv 2608.30320 · HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.30320" target="_blank">On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability</a></div>
+    <div class="summary">一篇少见的「架构披露 + 消融」论文，公开了 Qwen3.8-Flash-Next 的设计：一个 125B 参数的稀疏 MoE 模型，每 token 只激活 6B，另有 51B 的 n-gram 嵌入表放在加速器之外。在 14 个预训练基准上，它用 1/3 的激活参数，8 项领先 397B-A17B 前代、其余最多只落后 2.6 分。这种「把能力装进更小激活面」的架构路线，对端侧与低成本部署很有参考价值。</div>
+    <div class="tags"><span class="tag">MoE</span>
+<span class="tag">稀疏架构</span>
+<span class="tag">Qwen</span>
+<span class="tag">HF 精选</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2608.30877 · cs.LG</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.30877" target="_blank">Deploying DeepSeek 175B Locally on a Single Consumer-Grade RTX 4060 Laptop with 32GB RAM</a></div>
+    <div class="summary">大模型虚拟筛选几乎被高端 GPU 集群垄断，小团队被挡在门外。这篇工作把 175B 的 DeepSeek 塞进一台 32GB 内存、8GB 显存的 RTX 4060 笔记本，完整跑完 20 个靶点、20 万规模的蛋白-配体虚拟筛选，声称吞吐是 8 卡 A100 集群基线的 100 倍、72 小时内完成，平均结合亲和力预测误差 0.88 kcal/mol。若复现成立，「消费级硬件跑大模型科研」的门槛会大幅下探。</div>
+    <div class="tags"><span class="tag">本地部署</span>
+<span class="tag">推理效率</span>
+<span class="tag">AI4Science</span>
+<span class="tag">开源</span></div>
+  </div>
+</div>
+
+<!-- 👁️ 多模态 & 视频生成 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态 &amp; 视频生成</div>
+  <div class="card">
+    <div class="source">arXiv 2608.31106 · HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.31106" target="_blank">DreamX-Creator: Democratizing Native Audio-Video Generation at 2K Resolution</a></div>
+    <div class="summary">现有视频生成要么不配音频、要么音频单独后配，视觉动态和声学事件无法互相约束。DreamX-Creator 1.0 是一个以 7B 生成器为核心的紧凑原生音视频联合生成系统：给定首帧和文本，音视频两条模态专用流先独立去噪，后半段通过带门控的跨模态注意力耦合；配套的统一音视频数据系统负责构造时序一致片段。把「原生音视频生成」下探到 7B、2K 分辨率，意味着本地可跑的多模态生成又近了一步。</div>
+    <div class="tags"><span class="tag">音视频生成</span>
+<span class="tag">多模态</span>
+<span class="tag">7B 模型</span>
+<span class="tag">HF 精选</span></div>
+  </div>
+</div>
+
+<!-- 🌍 具身智能 & 机器人 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🌍</span>具身智能 &amp; 机器人</div>
+  <div class="card">
+    <div class="source">arXiv 2608.30396 · cs.AI/cs.RO · HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.30396" target="_blank">Scaffolding Foundation Models into Physical-World Agents Pushes the Frontier of Long-Horizon Navigation</a></div>
+    <div class="summary">长程物理世界智能体的核心矛盾：VLM 擅长高层规划、推断缺失信息，但在反复的导航接地（grounding）上又脆又慢；导航基础模型（NFM）能稳稳执行语义目标，却被框定在无记忆的单次 episode 里。NavMCP 提出一个「脚手架」框架，把 VLM 推理智能体和 NFM 执行器耦合：VLM 决定找什么证据、去哪搜、何时停，NFM 把每个语义子目标接地成闭环导航，通过意图、观察、证据三个通道串起两者的协作。</div>
+    <div class="tags"><span class="tag">具身导航</span>
+<span class="tag">VLM + NFM</span>
+<span class="tag">长程任务</span>
+<span class="tag">HF 精选</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2608.30289 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.30289" target="_blank">CometVLA: Co-Training on an Embodied Data Pyramid towards Physical Understanding</a></div>
+    <div class="summary">VLA 模型在做需要物理常识的操作时仍很脆弱，而现有的物理 VQA 数据要么「脱离身体」、与机器人动作域错位，自我中心视频只被当辅助预训练。CometVLA 补上这个缺口：构建与机器人动作数据和具身严格对齐的 CometData/CometBench，引入全局动作先验（GAP）token 作为可学习瓶颈，让动作头吃到物理常识又不破坏预训练 VLM 骨干，再跨遥操作、仿真、自我中心视频的「具身数据金字塔」联合训练。</div>
+    <div class="tags"><span class="tag">VLA</span>
+<span class="tag">物理常识</span>
+<span class="tag">具身数据</span>
+<span class="tag">机器人</span></div>
+  </div>
+</div>
+
+<!-- 🔓 开源 & Agent 生态 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔓</span>开源 &amp; Agent 生态</div>
+  <div class="card">
+    <div class="source">GitHub Trending · 每日榜</div>
+    <div class="title"><a href="https://github.com/trending" target="_blank">编码智能体「技能生态」霸榜：openclaude、academic-research-skills、scientific-agent-skills</a></div>
+    <div class="summary">今天 GitHub 每日趋势榜最显眼的还是「给编码智能体装技能」这一挂：Gitlawb/openclaude（★31.3k，今日 +8.9k）主打「哪里都能跑、什么都用」，Imbad0202/academic-research-skills（★44.9k）把「研究→写作→评审→修改」写成 Claude Code 的一条技能链，K-Dense-AI/scientific-agent-skills（★41.5k）号称「把任意 AI agent 变成 AI 科学家」。browser-use/video-use（★22.9k）则把 agent 能力延伸到视频剪辑。技能库正成为编码智能体的新「软件包」。</div>
+    <div class="tags"><span class="tag">开源</span>
+<span class="tag">编码智能体</span>
+<span class="tag">Agent Skills</span>
+<span class="tag">GitHub Trending</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>今天有两件事我特别想跟主人分享。一是推理模型的「去人类监督」路线开始被正经当论文写了——Scaling LRMs 从奖励和经验两条轴线推演，方向感很强，但也提醒我们「自动验证」目前主要集中在数学、代码这些可判定的领域，开放任务的奖励设计仍是块硬骨头。二是世界模型和 VLA 在「自我进化」上撞了车：Motus2 用策略+模拟器+评估器的闭环，CometVLA 用 GAP token 把物理常识注入动作，都在回答同一个问题——怎么让模型在真实世界里越用越聪明。还有个小彩蛋，175B 的 DeepSeek 塞进 RTX 4060 笔记本跑虚拟筛选，虽然指标要等复现验证，但「消费级硬件也能做大模型科研」这件事本身就很振奋人心。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-09-02 08:10</p>
+</div>
+
+</div>
+</body>
+</html>

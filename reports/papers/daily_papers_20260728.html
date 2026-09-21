@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年07月28日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年07月28日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>Anthropic 发布 Claude Opus 5，定价减半对标前沿；Google DeepMind 启动 Gemini 4 "最雄心勃勃"预训练；Qwen 团队提出 Skill Self-Play 技能自进化框架登顶 HF Trending；NVIDIA 开源 Molt Agentic RL 训练框架；DeepMind × 波士顿动力机器人进工厂。本周是模型发布与 Agent 方法论双爆发的一周。</p>
+</div>
+
+<!-- HOT TOPIC -->
+<div class="hot-topic">
+  <div class="label">🔥 重磅发布</div>
+  <div class="card" style="box-shadow:none;border:none;padding:0;margin:0;background:transparent;">
+    <div class="source">Anthropic · July 24, 2026</div>
+    <div class="title">
+      <a href="https://www.anthropic.com" target="_blank">Anthropic 发布 Claude Opus 5：近前沿性能，价格减半</a>
+    </div>
+    <div class="summary">Anthropic 于 7 月 24 日发布 Claude Opus 5（代号 Honeycomb），1M token 上下文窗口，支持可配置 effort 设置。关键突破：以 Claude Fable 5 一半的价格（$5/$25 per M tokens）实现接近前沿的性能，被定位为"日常旗舰"。同日 Google 也发布了 Gemini 3.6 Flash（$1.50/$7.50），成本再降 17%。</div>
+    <div class="tags">
+      <span class="tag hot">重磅</span>
+      <span class="tag">LLM</span>
+      <span class="tag">Anthropic</span>
+      <span class="tag">Model Release</span>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION: LLM / 大模型 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>LLM / 大模型前沿</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 Trending #1 on HuggingFace</div>
+    <div class="card" style="box-shadow:none;border:none;padding:0;margin:0;background:transparent;">
+      <div class="source">arXiv 2607.22529 · Qwen Team · Submitted 2026-07-24</div>
+      <div class="title">
+        <a href="https://arxiv.org/abs/2607.22529" target="_blank">Skill Self-Play: Pushing the Frontier of LLM Capability with Co-Evolving Skills</a>
+      </div>
+      <div class="summary">Qwen 团队提出 Skill Self-Play (Skill-SP)，通过"提议者-求解器-技能控制器"三方协同进化框架，在强化学习自对弈循环中持续扩展 LLM 能力边界。该框架桥接了结构化验证与开放式探索之间的鸿沟——技能保证可验证执行，动态路由维持任务多样性。实验在工具使用和推理基准上显著提升模型性能上限。代码已开源。</div>
+      <div class="tags">
+        <span class="tag hot">Hot</span>
+        <span class="tag">LLM</span>
+        <span class="tag">Self-Play</span>
+        <span class="tag">Reinforcement Learning</span>
+        <span class="tag">Qwen</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">Google DeepMind · July 21, 2026</div>
+    <div class="title">
+      <a href="https://andrew.ooo/answers/gemini-4-pretraining-tease-what-we-know-july-2026/" target="_blank">Gemini 4 预训练启动：Google 史上"最雄心勃勃"的训练 run</a>
+    </div>
+    <div class="summary">Google DeepMind 在发布 Gemini 3.6 Flash 的同时意外透露 Gemini 4 预训练已启动，称其为"最雄心勃勃的预训练 run"。这一宣布正值 Gemini 3.5 Pro 三次错过截止日期仍未发布之际，显示 Google 选择跳过 3.5 Pro 直扑下一代。Gemini 4 预计将使用下一代 Frozen v2 芯片。</div>
+    <div class="tags">
+      <span class="tag">LLM</span>
+      <span class="tag">Google DeepMind</span>
+      <span class="tag">Gemini 4</span>
+      <span class="tag">Pretraining</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2607.22520 · Submitted 2026-07-24</div>
+    <div class="title">
+      <a href="https://arxiv.org/abs/2607.22520" target="_blank">The Regression Tax: Decomposing Why Skills Help and Hurt LLM Agents</a>
+    </div>
+    <div class="summary">在近 6000 次实验中发现：给 LLM Agent 添加技能可能导致性能倒退（Regression），甚至比不加技能更差。论文识别出三种倒退模式——技能描述渗透、接地位移、验证位移——指出当前技能过度强调过程指导，却忽视了更关键的接地与验证环节。这对 Agent 设计方法论有重要启示。</div>
+    <div class="tags">
+      <span class="tag">LLM Agents</span>
+      <span class="tag">AI Safety</span>
+      <span class="tag">Empirical Study</span>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION: 开源模型与工具 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源模型与工具</div>
+
+  <div class="card">
+    <div class="source">arXiv 2607.21653 · NVIDIA NeMo · ⭐605 on HuggingFace</div>
+    <div class="title">
+      <a href="https://arxiv.org/abs/2607.21653" target="_blank">Molt: A Scalable PyTorch-Native Training Framework for Agentic Reinforcement Learning</a>
+    </div>
+    <div class="summary">NVIDIA 开源 Molt——PyTorch 原生的 Agentic RL 训练框架。三组件架构：Ray 负责分布式调度、vLLM 负责 rollout 推理、NVIDIA AutoModel + FSDP2 纯 PyTorch 训练。仅 ~9.2K 行代码，支持 ChatAgent、多轮工具、VLM 环境、LLM-as-Judge。目标：让 RL 研究者以最小成本修改算法、estimator、rollout 方案。</div>
+    <div class="tags">
+      <span class="tag hot">Hot</span>
+      <span class="tag">Open Source</span>
+      <span class="tag">Reinforcement Learning</span>
+      <span class="tag">NVIDIA</span>
+      <span class="tag">PyTorch</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · ⭐420 · TypeScript</div>
+    <div class="title">
+      <a href="https://github.com/0xwilliamortiz/openclaude-improved" target="_blank">OpenClaude Improved: "runs anywhere, uses anything"</a>
+    </div>
+    <div class="summary">开源 AI 助手框架的改进版，口号 "runs anywhere, uses anything"，7 月 26 日创建后迅速蹿升至 GitHub Trending。专注于跨平台、多模型适配的本地 AI Agent 基础设施。</div>
+    <div class="tags">
+      <span class="tag">Open Source</span>
+      <span class="tag">AI Agent</span>
+      <span class="tag">GitHub Trending</span>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION: 多模态 / 视觉 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态 / 计算机视觉</div>
+
+  <div class="card">
+    <div class="source">arXiv 2607.22534 · Tsinghua University · Submitted 2026-07-24</div>
+    <div class="title">
+      <a href="https://arxiv.org/abs/2607.22534" target="_blank">SM4RT: Learning Structured Motion Geometry for 4D Reconstruction</a>
+    </div>
+    <div class="summary">清华大学团队提出 SM4RT，从单目 RGB 视频中端到端联合推理 3D 几何、世界坐标运动与场景运动学结构。核心创新：将场景运动分解为一组 SE(3) 刚体变换基底 + 稀疏逐像素分配权重，确保同一物体上的点共享刚体运动轨迹。大幅超越现有稀疏跟踪和稠密光流方法。</div>
+    <div class="tags">
+      <span class="tag">Computer Vision</span>
+      <span class="tag">4D Reconstruction</span>
+      <span class="tag">Geometry</span>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION: 具身智能 / 机器人 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能 / 机器人</div>
+
+  <div class="card">
+    <div class="source">Google DeepMind × Boston Dynamics · 2026</div>
+    <div class="title">
+      <a href="https://spectrum.ieee.org/gemini-robotics" target="_blank">DeepMind × 波士顿动力：Gemini Robotics 人形机器人走进现代汽车工厂</a>
+    </div>
+    <div class="summary">Google DeepMind 与波士顿动力合作，将 Gemini Robotics 视觉-语言-动作模型部署到现代汽车工厂的实际产线。Gemini Robotics-ER 1.6 专注具身推理，结合 Atlas 人形机器人平台，标志着 AI 驱动机器人从实验室走向工业部署的关键一步。</div>
+    <div class="tags">
+      <span class="tag">Robotics</span>
+      <span class="tag">Embodied AI</span>
+      <span class="tag">Boston Dynamics</span>
+      <span class="tag">Google DeepMind</span>
+    </div>
+  </div>
+</div>
+
+<!-- INSIGHTS -->
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+  本周是 2026 年 7 月最密集的一周：Anthropic Opus 5、Google Gemini 3.6 Flash + Gemini 4 预热、Qwen Skill-SP 登顶 HF Trending。几个值得深思的趋势：
+  <br><br>
+  <strong>1. 模型价格战白热化。</strong>Opus 5 定价减半、Gemini 3.6 Flash 再降 17%，前沿模型正从"军备竞赛"转向"成本竞赛"，这对开发者和用户是巨大的利好。
+  <br><br>
+  <strong>2. LLM 自进化范式兴起。</strong>Skill Self-Play 代表的新方向——让模型通过自我博弈持续进化而非依赖人工标注——正在成为继 RLHF 之后的下一波训练范式。Qwen 团队把这条路跑通了。
+  <br><br>
+  <strong>3. Agent 方法论需要反思。</strong>"The Regression Tax" 的研究结果令人警醒：盲目给 Agent 加技能可能适得其反。接地（grounding）和验证（verification）比过程指导更重要。
+  <br><br>
+  <strong>4. 具身智能加速落地。</strong>DeepMind × 波士顿动力的工厂部署显示，视觉-语言-动作模型正从学术概念变成工业现实。机器人的 ChatGPT 时刻或许比预想的更近。
+  <br><br>
+  建议重点关注：Skill-SP 的代码开源（github.com/Qwen-Applications/skill-self-play）、Molt 框架的生态发展、以及 Gemini 4 的后续进展。七月将尽，AI 的夏天才刚刚开始。
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026年07月28日</p>
+</div>
+
+</div>
+</body>
+</html>

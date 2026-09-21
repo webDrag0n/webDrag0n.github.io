@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年09月11日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年09月11日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>昨天圈子里最重磅的是 <strong>DeepSeek V4.1 Flash 正式发布</strong>——552B MoE、最高降价 60%，缓存硬盘占用暴降 88%。此外「<strong>世界模型</strong>」迎来集中爆发：高德 ABot-Earth 0.7、京东 JoyAI（10 万卡国产算力）、蚂蚁灵波 LingBot-World 2.0 轻量版接连亮相；OpenAI 上线 ChatGPT Images 2.5，生图再提速；外滩大会上蚂蚁百灵继续开源多模态模型 Ling-3.0-flash-VL，苹果也发布了首款 AI 参与设计的折叠屏 iPhone Duo。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>热点聚焦</div>
+
+  <div class="hot-topic">
+    <div class="label">今日最热</div>
+    <div class="card" style="margin-bottom:0;border:none;box-shadow:none;background:transparent;">
+      <div class="source">智东西 / IT之家 / 量子位 · 2026-09-10</div>
+      <div class="title"><a href="https://www.ithome.com/1/000/719.htm" target="_blank" rel="noopener">DeepSeek V4.1 Flash 正式发布：552B MoE，最高降价 60%，缓存占用暴降 88%</a></div>
+      <div class="summary">9 月 10 日，DeepSeek 将此前限时内测的 V4.1 Flash 正式发布并同步上线 API。它是一款 552B 参数 MoE 模型，采用全新的 Causal-Encoder-Decoder 架构，输入激活仅 8B、输出 16B，KV Cache 缩小到上一代的 1/4，长文本缓存硬盘占用暴降 88%，对 HBM 的需求降至 1/4；原生支持多模态视觉理解，Agentic 基准上全面超越 V4 Pro，API 最高降价 60%，新价格已于 9 月 10 日 12 点正式生效。</div>
+      <div class="tags"><span class="tag hot">新模型</span><span class="tag">DeepSeek</span><span class="tag">多模态</span><span class="tag">降价</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🚀</span>新模型 · 新产品</div>
+
+  <div class="card">
+    <div class="source">量子位 / OpenAI · 2026-09-10</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/486684.html" target="_blank" rel="noopener">AGI 时代的第一个生图模型，ChatGPT Images 2.5 上线</a></div>
+    <div class="summary">OpenAI 上线 ChatGPT Images 2.5，官方称生成速度翻倍、延迟降低约 50%，细节与文字渲染更好，图像编辑越来越像「真·修图」，并沿用 C2PA 元数据与隐形水印机制。量子位实测改图更自然，被评价为「把生图模型卷进了推理时代」。</div>
+    <div class="tags"><span class="tag">新模型</span><span class="tag">OpenAI</span><span class="tag">生图</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-09-10</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/486900.html" target="_blank" rel="noopener">高德发布全球首个 3D 原生城市世界模型 ABot-Earth 0.7</a></div>
+    <div class="summary">阿里巴巴旗下高德发布全球首个 3D 原生城市世界模型 ABot-Earth 0.7，旨在构建 AI 理解真实世界的入口。模型以 3D 原生方式对城市空间进行建模，可服务地图、导航、具身智能等多场景的空间理解，是继李飞飞 World Labs Atlas 之后，国内在「城市级世界模型」上的一次重要卡位。</div>
+    <div class="tags"><span class="tag">世界模型</span><span class="tag">高德</span><span class="tag">3D</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-09-10</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/486436.html" target="_blank" rel="noopener">京东打造 10 万卡国产算力集群，发布 JoyAI 世界模型</a></div>
+    <div class="summary">在 JDDiscovery-2026 京东全球科技探索者大会上，京东发布物理 AI 建设最新成果：打造 10 万卡国产算力集群，并推出 JoyAI 世界模型，主题为「JoyAI · 跃迁物理世界」。京东把物流、零售的真实场景作为物理 AI 的练兵场，算力、世界模型与场景三线并进。</div>
+    <div class="tags"><span class="tag">世界模型</span><span class="tag">算力</span><span class="tag">京东</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">智东西 · 2026-09-10</div>
+    <div class="title"><a href="https://xueqiu.com/9919963656/408771405" target="_blank" rel="noopener">蚂蚁百灵开源首个原生多模态大模型 Ling-3.0-flash-VL</a></div>
+    <div class="summary">外滩大会期间，蚂蚁百灵开源其首个原生多模态大模型 Ling-3.0-flash-VL，引发开发者社区关注。继此前的金融增强模型 Ling-3.0-flash-Fin 之后，蚂蚁在视觉语言方向补齐版图，向「原生多模态」开源生态持续加码。</div>
+    <div class="tags"><span class="tag">多模态</span><span class="tag">开源</span><span class="tag">蚂蚁</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-09-10</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/486716.html" target="_blank" rel="noopener">蚂蚁灵波开源 1.3B 轻量世界模型 LingBot-World 2.0，单卡实时跑</a></div>
+    <div class="summary">蚂蚁灵波开源轻量版世界模型 LingBot-World 2.0，仅 1.3B 参数，单卡即可实时运行，大幅降低具身智能「世界模型」的部署门槛。此前大参数版已展示更强的物理一致性，轻量版则把世界模型带入可本地实时推理的区间。</div>
+    <div class="tags"><span class="tag">世界模型</span><span class="tag">开源</span><span class="tag">具身智能</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 / 机器之心 · 2026-09-10</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/486747.html" target="_blank" rel="noopener">大晓机器人联合南洋理工发布 HSImul3R：让人类视频成为机器人技能来源</a></div>
+    <div class="summary">大晓机器人联合南洋理工大学 S-Lab、上海人工智能实验室发布 HSImul3R，号称「全球首个可仿真的人-场景交互重建框架」。框架从真实人类交互视频中重建可仿真的 3D 人-场景交互，为机器人学习操作技能提供了高质量数据来源，直击具身智能「数据荒」痛点。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">研究</span><span class="tag">数据</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>产业与技术动态</div>
+
+  <div class="card">
+    <div class="source">量子位 / 纽约时报中文网 · 2026-09-10</div>
+    <div class="title"><a href="https://cn.nytimes.com/technology/20260910/apple-iphone-duo-foldable-phone/" target="_blank" rel="noopener">苹果发布首款折叠屏 iPhone Duo，15999 元起，AI 深度参与设计</a></div>
+    <div class="summary">北京时间 9 月 10 日凌晨，苹果发布首款折叠屏手机 iPhone Duo，配备可弯曲显示屏、可像书本一样开合，15999 元起。新机在结构设计与影像调校上大量引入 AI 辅助，也是苹果新 CEO 特努斯时代的首场发布会。这既是最热的消费电子话题，也被看作苹果把 AI 更深度融入硬件设计的一次表态。</div>
+    <div class="tags"><span class="tag">消费电子</span><span class="tag">苹果</span><span class="tag">AI设计</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">晚点LatePost / 甲子光年 · 2026-09-10</div>
+    <div class="title"><a href="https://xueqiu.com/1349630097/408828280" target="_blank" rel="noopener">外滩大会「物理智能」圆桌：具身智能该押真实数据还是仿真数据？</a></div>
+    <div class="summary">外滩大会《物理智能——分歧与抉择》圆桌上，苏度科技、蚂蚁灵波、自变量机器人等代表围绕「具身智能该用真实数据还是仿真数据」展开激辩。晚点指出，具身智能虽融资火热，但真实世界数据与仿真数据的取舍、泛化与商业价值之间的平衡，仍是行业悬而未决的核心难题。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">观点</span><span class="tag">数据</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>今天的信号很集中——「世界模型」成了中文 AI 圈的关键词。高德的 ABot-Earth、京东的 JoyAI、蚂蚁灵波的 LingBot-World，三家大厂不约而同把落点放在了「让 AI 理解物理世界」，背后其实是同一个判断：大模型的下一站不在聊天框里，而在真实世界的空间、场景和物理规律里。DeepSeek 则用 V4.1 Flash 的正式发布继续夯实「极致性价比」的人设，缓存降 88%、价格降 60%，把 Agent 的门槛又往下压了一截。海外的 OpenAI 靠 ChatGPT Images 2.5 抢占了「生图模型推理化」的话头。整体看，从语言到图像再到 3D 世界，AI 正在把「理解真实世界」这件事从口号变成产品，而落地场景、真实数据，正取代跑分成为新的竞争焦点。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026年09月11日</p>
+</div>
+
+</div>
+</body>
+</html>

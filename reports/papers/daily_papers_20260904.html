@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年09月04日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年09月04日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今天的主线是「AI4AI」——让智能体把散落在 GitHub 仓库和论文里的「落地 know-how」蒸馏成可复用、可验证的 skill。Repo-To-Skill（HF 494↑）是这条线最热的一篇，它直接把「知识清单 → 可执行 skill」这件事做成了产品。开源侧同样热闹：NVIDIA 的 Nemotron 在 IOI 2025 逼近夺金、SolarWM 开源了视频世界模型的完整训练配方、PRAXIST 以 ★6850 领跑 GitHub Trending；而 awesome 主仓库继续「剪枝」，一批 AI list PR 卡在门外未被合并。</p>
+</div>
+
+<!-- 🔥 今日热点 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · AI4AI 技能蒸馏</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">arXiv 2609.02749 · HuggingFace Daily Papers · HF 494↑ · GitHub ★109</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;"><a href="https://arxiv.org/abs/2609.02749" target="_blank" style="color:var(--accent);text-decoration:none;">Repo-To-Skill: Distilling GitHub Repositories Into AI4AI Skills</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">自主智能体做 ML 研究，缺的往往不是方法，而是「操作知识」（operational knowledge）——把方法真正跑通的那种 know-how。这些知识就藏在 GitHub 仓库和论文里，但形式是给人看的、体量太大没法在任务里加载。这项工作提出 DisCo，把仓库和论文蒸馏成紧凑、可复用的 skill，让智能体跨任务复用而非每次重新踩坑，并在 MLE-bench、PaperBench 上显著提升了自主研究表现，配套开源了 AREX-Skill 库。它和昨天的「awesome 清单 → agent skills 迁移」遥相呼应——知识正在从「给人看」变成「给 agent 直接执行」。</div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag hot">AI4AI</span>
+<span class="tag hot">HF 494↑</span>
+<span class="tag">Agent Skills</span>
+<span class="tag">知识蒸馏</span></div>
+  </div>
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · 开源视频世界模型</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">arXiv 2609.02886 · HuggingFace Daily Papers · HF 133↑ · GitHub ★273</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;"><a href="https://arxiv.org/abs/2609.02886" target="_blank" style="color:var(--accent);text-decoration:none;">SolarWM: Open Data and Scalable Training for Long-Horizon Video World Models</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">视频世界模型的「配方」一直各搞各的：数据时间尺度、相机几何、画质、运动、标注风格千差万别，generator 又各自为政，结果难复现、难对比。SolarWM 给出一个全开源的统一底座——用 143 万段视频的可重构多源数据引擎 + backbone-native 适配框架，把数据准备到长时程推理整条链路标准化，支持相机条件生成与实时 rollout。把「训练世界模型」这件玄学，变成了可复现、可扩展的工程。</div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag hot">世界模型</span>
+<span class="tag hot">★273</span>
+<span class="tag">视频生成</span>
+<span class="tag">开源</span></div>
+  </div>
+</div>
+<!-- 🧠 大模型 & 推理 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 &amp; 推理</div>
+  <div class="card">
+    <div class="source">arXiv 2609.02849 · cs.LG / cs.AI / cs.SE</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.02849" target="_blank">Post-Training Language Models for Gold-Medal Performance in Coding Competitions</a></div>
+    <div class="summary">NVIDIA 把「竞技编程夺金」做成了一条流水线：22,000 道精选题 + 合成推理轨迹 + SFT + RL，训出 Nemotron-3-Nano-CC（30B-A3B）和 Ultra-CC（550B-A55B），再配上 GenCorrect 这个反馈驱动的 test-time compute 策略（迭代生成、评估、精修多样化解法）。在 IOI 2025 上，Nano-CC 从 130 分一路刷到 291 分。规模 + 数据 + 测试时计算三管齐下，是「代码大模型冲金」路线的新标杆。</div>
+    <div class="tags"><span class="tag">代码大模型</span>
+<span class="tag">强化学习</span>
+<span class="tag">IOI 2025</span>
+<span class="tag">NVIDIA</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2609.02737 · cs.CL / cs.AI / cs.LG · HF 51↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.02737" target="_blank">Language Models Can Control Their Own Attention</a></div>
+    <div class="summary">长上下文检索一直有个痛点：模型只关注一小部分 token，却要扫完整条 KV cache。现有做法靠轻量代理分数预选相关 token，但每步仍是 O(N)。这篇工作换了个思路——与其外部打分，不如直接问模型「你知道哪里相关吗」，提出 Declarative Attention（DA）：让模型自己「声明」上下文哪些部分重要，把注意力控制内化成模型自身的能力，省掉外挂评分器，对 1M token 级长对话有实际加速意义。</div>
+    <div class="tags"><span class="tag">注意力机制</span>
+<span class="tag">长上下文</span>
+<span class="tag">推理效率</span>
+<span class="tag">HF 51↑</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2609.02817 · cs.LG</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.02817" target="_blank">Cliff: Learning Process Rewards from the First Mistake</a></div>
+    <div class="summary">过程奖励建模有个被忽略的细节：一旦推理过程「第一次出错」，后续推理已经建立在无效前缀之上，再评估它信息量就很少了。Cliff 抓住这个观察，把过程奖励的学习锚定在「第一次犯错」的时刻，绕开了对无效后缀的冗余建模，也不需要专门奖励模型或假设师生推理模式一致。这是对 RLVR 过程监督的一次干净简化。</div>
+    <div class="tags"><span class="tag">过程奖励</span>
+<span class="tag">RLVR</span>
+<span class="tag">推理</span></div>
+  </div>
+</div>
+<!-- 👁️ 多模态 & 世界模型 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态 &amp; 世界模型</div>
+  <div class="card">
+    <div class="source">arXiv 2609.02885 · cs.AI / cs.LG</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.02885" target="_blank">Discriminative World Models for Web Agents</a></div>
+    <div class="summary">Web agent 用世界模型做测试时动作选择，靠「预测下一步网页状态再排序」来挑动作。但传统训练目标是监督式预测固定表征（HTML/AXTree），和下游 ranker 想要的「候选动作间有区分度」是错位的。这篇提出 predicted-state matching：让预测出的状态必须能区分真实结果与其它候选动作的结果，把世界模型的目标直接对齐到「判别力」上，动作选择自然更准。</div>
+    <div class="tags"><span class="tag">世界模型</span>
+<span class="tag">Web Agent</span>
+<span class="tag">判别式</span></div>
+  </div>
+</div>
+<!-- 🌍 具身智能 & 机器人 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🌍</span>具身智能 &amp; 机器人</div>
+  <div class="card">
+    <div class="source">arXiv 2609.02653 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.02653" target="_blank">HINT: Human-Intent Inception for Long-Horizon Robot Manipulation</a></div>
+    <div class="summary">VLA 模型在密集、不断变化的视觉输入下，很容易被「视觉捷径」带偏——语义意图被视觉相关性淹没。HINT 借鉴人类操作的原则：语义意图只在操作模式切换时才稀疏变化，连续控制主要靠视觉跟踪。通过把「意图」显式注入并稀疏化，HINT 让长时程机器人操作始终锚定在人的目标上，而不是被画面里最显眼的物体牵着走。</div>
+    <div class="tags"><span class="tag">具身智能</span>
+<span class="tag">VLA</span>
+<span class="tag">机器人操作</span>
+<span class="tag">意图注入</span></div>
+  </div>
+</div>
+<!-- 🔓 开源 & Agent 生态 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔓</span>开源 &amp; Agent 生态</div>
+  <div class="card">
+    <div class="source">GitHub Trending · 每日榜</div>
+    <div class="title"><a href="https://github.com/trending" target="_blank">PRAXIST（★6850）领跑，Anthropic 发布 commerce-agents，agent skills 生态持续井喷</a></div>
+    <div class="summary">新一波开源热点的关键词仍是「给 agent 装能力」。sapientinc/PRAXIST（★6850）是一个自主研究系统，目标是把研究做成「可度量、可计算机执行」的产物；Anthropic 官方下场发布 <a href="https://github.com/anthropics/commerce-agents" target="_blank">commerce-agents</a>（★1537），给出购物/商家智能体的参考蓝图。围绕 Claude Code 的 skill 生态也越发繁荣：Nanako0129/sepia（★1868，去 AI 味写作 skill）、cbrock84/headcount（★1182，把 agent 组织成一家公司）、damejan80/tokentab（★1155，读 Claude/Codex 会话日志）。「skill」正在取代「静态文档」，成为 agent 能力分发的事实标准。</div>
+    <div class="tags"><span class="tag">开源</span>
+<span class="tag">Agent Skills</span>
+<span class="tag">PRAXIST</span>
+<span class="tag">GitHub Trending</span></div>
+  </div>
+  <div class="card">
+    <div class="source">GitHub · sindresorhus/awesome 动态</div>
+    <div class="title"><a href="https://github.com/sindresorhus/awesome" target="_blank">awesome 仓库继续「剪枝」，一批 AI list PR 排队等待合并</a></div>
+    <div class="summary">追踪 awesome 主仓库，最新提交仍是轻量的「Meta tweaks」，合并动作几乎没有。但门口积压了一批未合并的 AI 相关 list PR，最抢眼的是 <a href="https://github.com/michielhdoteth/awesome-ai-agent-tools" target="_blank">awesome-ai-agent-tools</a>（633 条目、8 大类：skills / MCP servers / agent workflows / subagents / hooks / plugins / prompts / CLI 工具，还带机器可读的 catalog.json 供 agent 直接查询），此外还有 awesome-agentos、awesome-ai-tokenomics、awesome-ai-agent-governance、awesome-sre-agents、awesome-cursorrules（30k+ stars）等。信号很明确：知识清单的形态正在从「给人看」转向「给 agent 查」，awesome 的合并门槛还没跟上这股浪潮。</div>
+    <div class="tags"><span class="tag">awesome</span>
+<span class="tag">开源清单</span>
+<span class="tag">Agent 生态</span>
+<span class="tag">知识迁移</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>今天最戳我的一条暗线，是「AI 学会操作 AI」（AI4AI）：Repo-To-Skill 把仓库蒸馏成 skill、HarnessDev 和 Aspire 让模型自己搭 harness、Cliff 从第一次犯错里学过程奖励，全都指向同一个方向——把散落在仓库和论文里的「落地 know-how」，变成可复用、可验证的资产。这恰好解释了 awesome 仓库现在的尴尬：一堆高质量的 AI list PR 卡在门外没人合并，因为知识清单的形态正在从「给人读」迁移到「给 agent 直接执行」——633 条目的 catalog.json 能被 agent 查询，谁还需要一份静态的 markdown 目录呢？硬核担当还是 NVIDIA 的 Nemotron（IOI 2025 冲金）和全开源的 SolarWM 视频世界模型。另外 PRAXIST 用 ★6850 的号召力把「研究自动化」又往前推了一步，值得持续盯。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-09-04 08:08</p>
+</div>
+
+</div>
+</body>
+</html>

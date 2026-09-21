@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年07月25日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年07月25日</div>
+  <div class="subtitle">中文AI媒体精选 · 机器之心/量子位/新智元 等</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>Kimi K3 发布引爆国产大模型新高度，月之暗面估值飙至500亿美元冲刺港股IPO；DeepSeek V4加速商业落地与IPO筹备双线并行；Claude Agent狂塞500技能开启Agent新范式。WAIC 2026余温未散，大模型竞争进入"无限战争"。</p>
+</div>
+
+<!-- 今日头条 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">🔴 头条事件</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">量子位 / 36氪 / 新智元 / 甲子光年 / 新华网</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;">
+      <a href="https://openclaw.club/archives/kimik3" target="_blank">Kimi K3重磅发布：2.8万亿参数登顶全球最大开源模型，月之暗面冲刺500亿美元港股IPO</a>
+    </div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">
+      7月16日，月之暗面发布Kimi K3，以2.8万亿MoE参数、100万Token上下文窗口、原生多模态融合刷新国产大模型天花板，前端编程能力登顶全球Arena榜单。随后，公司估值飙至315亿美元，并于7月22日宣布以投前500亿美元估值启动上市前最后一轮融资，最快6个月内登陆港股。华尔街称K3反将强化算力需求。
+    </div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;">
+      <span class="tag hot">#头条</span>
+      <span class="tag">#大模型</span>
+      <span class="tag">#融资</span>
+      <span class="tag">#IPO</span>
+      <span class="tag">#开源</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- 模型与产品 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>模型与产品</div>
+
+  <div class="card">
+    <div class="source">新智元 · 36氪</div>
+    <div class="title">
+      <a href="https://aiera.com.cn/2026/07/24/other/admin/105647/%E6%BB%A1%E8%A1%80deepseek-v4%E5%A1%9E%E8%BF%9B%E5%8A%9E%E5%85%AC%E5%AE%A4%EF%BC%81%E4%B8%93%E5%B1%9E%E3%80%8Ctoken%E5%B7%A5%E5%8E%82%E3%80%8D%E6%88%90%E6%A0%87%E9%85%8D/" target="_blank">满血DeepSeek V4塞进办公室！专属「Token工厂」成标配</a>
+    </div>
+    <div class="summary">DeepSeek V4正式版加速商业落地，企业用户可将满血版部署到办公环境，专属Token工厂成为企业AI基础设施新标配。此前DeepSeek V4 Pro和Flash双版本已全面开放API，支持1M上下文和384K最大输出。旧版API接口已于7月24日正式停用，标志着V4全量替代。</div>
+    <div class="tags">
+      <span class="tag">#DeepSeek</span>
+      <span class="tag">#大模型</span>
+      <span class="tag">#企业AI</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元</div>
+    <div class="title">
+      <a href="https://aiera.com.cn/2026/07/24/" target="_blank">Claude Agent突然大更新！狂塞500个技能，网友直呼疯狂</a>
+    </div>
+    <div class="summary">Anthropic为Claude Agent大幅扩展技能库，一次性内置500+专业技能，覆盖编程、数据分析、办公自动化等场景。同时Claude Code新增手机远程控制功能，用户可在外出时通过手机监控和管理代码任务。此次更新让Agent从"工具"进化为"多面手"。</div>
+    <div class="tags">
+      <span class="tag">#Claude</span>
+      <span class="tag">#Agent</span>
+      <span class="tag">#Anthropic</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪 · 量子位</div>
+    <div class="title">
+      <a href="https://36kr.com/p/3906135954675077" target="_blank">七月起，大模型进入「无限战争」：Qwen 3.8 发布，K3、DeepSeek V4 三强争霸</a>
+    </div>
+    <div class="summary">阿里千问发布Qwen 3.8 Max预览版，参数达2.4万亿，多模态能力对标Fable 5。7月19日同步官宣即将开源。加上Kimi K3和DeepSeek V4，国产大模型三强格局成型，模型迭代速度以"天"计算，行业进入"无限战争"。</div>
+    <div class="tags">
+      <span class="tag">#千问</span>
+      <span class="tag">#大模型</span>
+      <span class="tag">#开源</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- 具身智能与机器人 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能与机器人</div>
+
+  <div class="card">
+    <div class="source">机器之心</div>
+    <div class="title">
+      <a href="https://finance.sina.com.cn/roll/2026-07-23/doc-iniitzph8354247.shtml" target="_blank">机器人双手迎来全栈训练系统：灵初智能EgoSteer让灵巧手无所不能</a>
+    </div>
+    <div class="summary">灵初智能开源EgoSteer全栈灵巧手大模型，基于9600小时人手视频数据训练，在18步折纸盒任务中仅需120条示范即达75%成功率。系统打通了"人类视频→遥操作→模型训练→人在回路纠偏"全链路，支持40多种精细操作任务，为具身智能灵巧操作树立新标杆。</div>
+    <div class="tags">
+      <span class="tag">#具身智能</span>
+      <span class="tag">#灵巧手</span>
+      <span class="tag">#开源</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 投资界</div>
+    <div class="title">
+      <a href="https://news.pedaily.cn/202607/566652.shtml" target="_blank">从翻跟头到24小时连轴转：WAIC 2026 具身智能全面爆发</a>
+    </div>
+    <div class="summary">WAIC 2026展会上，近百家具身智能企业亮相，从人形机器人到灵巧手、从世界模型到具身VLA，行业共识从"身体"转向"大脑"。展会期间，具身智能赛道半年融资突破438亿元，10亿已成入场券，资本密集押注"大脑派"企业。</div>
+    <div class="tags">
+      <span class="tag">#具身智能</span>
+      <span class="tag">#WAIC</span>
+      <span class="tag">#融资</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- 技术与学术 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔬</span>技术与学术</div>
+
+  <div class="card">
+    <div class="source">新智元 · 36氪</div>
+    <div class="title">
+      <a href="https://aiera.com.cn/2026/07/24/other/admin/105620/ai-ppt%E4%B8%80%E6%94%B9%E5%B0%B1%E5%B4%A9%EF%BC%9Fmemslides%E7%99%BB%E9%A1%B6%E6%8A%B1%E6%8A%B1%E8%84%B8%EF%BC%8C%E8%AE%A9agent%E8%AE%B0%E4%BD%8F%E4%BD%A0%E7%9A%84%E6%94%B9%E7%A8%BF%E4%B9%A0%E6%83%AF/" target="_blank">AI PPT一改就崩？MemSlides登顶Hugging Face，让Agent记住你的改稿习惯</a>
+    </div>
+    <div class="summary">清华、上交、北邮联合提出MemSlides框架，引入分层记忆机制，让AI PPT Agent记住用户的排版风格、配色偏好和修改历史。局部修改不再导致整体崩盘，自动匹配历史偏好。该工作在Hugging Face热榜登顶，标志着AI PPT从"一键出稿"迈向"持续协作"。</div>
+    <div class="tags">
+      <span class="tag">#AI应用</span>
+      <span class="tag">#Agent</span>
+      <span class="tag">#HuggingFace</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元</div>
+    <div class="title">
+      <a href="https://aiera.com.cn/2026/07/24/" target="_blank">业界首个！5万张国产AI芯片跑出万亿参数模型，这家大厂抢人决心藏不住了</a>
+    </div>
+    <div class="summary">国内某头部科技企业成功使用5万张国产AI芯片集群完成万亿参数大模型训练，成为业界首个全自主算力跑通万亿模型的案例。这一突破标志着国产AI芯片在超大规模训练场景中已具备实用能力，将加速国产替代进程。</div>
+    <div class="tags">
+      <span class="tag">#国产芯片</span>
+      <span class="tag">#算力</span>
+      <span class="tag">#大模型训练</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">机器之心</div>
+    <div class="title">
+      <a href="https://www.jiqizhixin.com/" target="_blank">Google让量子计算机学会「边计算边校准」：强化学习首次实现实时容错优化</a>
+    </div>
+    <div class="summary">Google DeepMind团队在Nature发表成果，首次用强化学习实现量子计算机的实时容错校准，逻辑稳定性提升3.5倍。该方法让量子芯片在运行过程中自行诊断和修正错误，为实用化量子计算扫清关键障碍。</div>
+    <div class="tags">
+      <span class="tag">#量子计算</span>
+      <span class="tag">#Google</span>
+      <span class="tag">#强化学习</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- 行业动态与融资 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">💰</span>行业动态与融资</div>
+
+  <div class="card">
+    <div class="source">36氪 · 新浪科技</div>
+    <div class="title">
+      <a href="https://finance.sina.com.cn/jjxw/2026-07-23/doc-iniiusme4656276.shtml" target="_blank">水滴公司创始人谈DeepSeek和Kimi K3：最兴奋的不只是进步速度，还有开放和自信</a>
+    </div>
+    <div class="summary">水滴公司创始人沈鹏在接受采访时表示，DeepSeek V4和Kimi K3的密集发布展示了中国AI的"开放和自信"。他认为，中国企业不再仅跟随OpenAI步伐，开始以开源和生态战略定义竞争范式。水滴也在积极探索AI与保险科技的深度融合。</div>
+    <div class="tags">
+      <span class="tag">#观点</span>
+      <span class="tag">#AI生态</span>
+      <span class="tag">#开源</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">SegmentFault · TechCrunch</div>
+    <div class="title">
+      <a href="https://segmentfault.com/a/1190000048021022" target="_blank">Ollama完成6500万美元B轮融资，14人团队撬动900万用户</a>
+    </div>
+    <div class="summary">开源大模型本地运行工具Ollama获Theory Ventures领投的6500万美元B轮融资。该工具仅14人团队，用户已突破900万，支持一键下载运行开源模型。融资将用于扩展企业级能力和多模态支持，验证了开源AI工具的商业潜力。</div>
+    <div class="tags">
+      <span class="tag">#融资</span>
+      <span class="tag">#开源工具</span>
+      <span class="tag">#Ollama</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/07/455993.html" target="_blank">国内首个！阿里健康AI达成NEJM、JAMA、BMJ三大医学顶刊内容合作</a>
+    </div>
+    <div class="summary">阿里健康旗下AI"氢离子"成为国内首个同时与《新英格兰医学杂志》(NEJM)、《美国医学会杂志》(JAMA)、《英国医学杂志》(BMJ)三大顶级医学期刊达成内容合作的AI产品，将实时接入最新医学文献，面向医生提供循证决策支持。</div>
+    <div class="tags">
+      <span class="tag">#AI医疗</span>
+      <span class="tag">#阿里健康</span>
+      <span class="tag">#大模型应用</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+  近两日中文AI媒体的焦点集中在国产大模型"三国杀"与资本狂潮的双重叙事上。Kimi K3以2.8万亿参数登顶全球开源之巅，月之暗面随即抛出500亿美元估值IPO计划，与DeepSeek的4800亿元A股上市形成"资本双雄"格局；与此同时，Qwen 3.8的入局让竞争从双极走向三强。
+  <br><br>
+  值得关注的两条暗线：一是Agent范式正经历质变——Claude 500技能、MemSlides分层记忆、灵巧手全栈系统，都在推动AI从"单次问答"走向"持续协作"；二是基础设施的自主可控迈出关键一步——5万张国产芯片跑通万亿参数模型，意味着算力"卡脖子"问题开始松动。
+  <br><br>
+  总体判断：2026年下半场的AI竞争将从模型参数转向"模型+Agent+基础设施"的系统性较量，中国AI企业的生态化作战能力将接受真正考验。
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026年07月25日 · 基于机器之心/量子位/新智元/36氪/甲子光年等来源</p>
+</div>
+
+</div>
+</body>
+</html>

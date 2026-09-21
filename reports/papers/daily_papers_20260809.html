@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年08月09日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年08月09日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>本周 AI 圈经历了一场前所未有的"地震"——Google DeepMind 最高领导层更替，Demis Hassabis 转任主席，Jeff Dean 携三位元老出走创立 Discovery Loop。同期阿里巴巴发布 2.4T MoE 旗舰模型 Qwen3.8-Max 正面挑战 OpenAI/Anthropic。研究前沿则从"模型回答问题"全面转向"智能体执行长程任务"，Agentic RL 与 3D World Generation 成为 HuggingFace 最热关键词。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>本周重磅 · 行业地震</div>
+
+  <div class="hot-topic">
+    <div class="label">⚡ BREAKING</div>
+    <div class="title">
+      <a href="https://fortune.com/2026/08/05/demis-hassabis-steps-down-google-deepmind-ai-shakeup/" target="_blank">Google DeepMind 最高层地震：Hassabis 卸任 CEO，Jeff Dean 出走创立 Discovery Loop</a>
+    </div>
+    <div class="summary">8月5-6日，Alphabet 宣布 DeepMind 领导层重大重组：Demis Hassabis 卸任 CEO 转任主席，专注 AGI 战略与 Isomorphic Labs；Jeff Dean 结束 27 年 Google 生涯，联合 Sanjay Ghemawat、Oriol Vinyals、Quoc Le 共同创立新公司 Discovery Loop。Koray Kavukcuoglu 接任 DeepMind SVP。同期，Alphabet 四位顶级科学家集体离职震动业界。</div>
+    <div class="tags">
+      <span class="tag hot">行业地震</span>
+      <span class="tag">Google DeepMind</span>
+      <span class="tag">人才流动</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型与智能体</div>
+
+  <div class="card">
+    <div class="source">ArXiv 2608.05013 · HuggingFace 日榜 Top 1</div>
+    <div class="title">
+      <a href="https://arxiv.org/abs/2608.05013" target="_blank">OneDayAgent: Towards a Long-Horizon Harness for Autonomous Agents</a>
+    </div>
+    <div class="summary">提出面向全天候自主智能体的长程任务执行框架，支持跨环境、多模态的开放式任务。智能体需在数十至数百步内保持目标一致性，协调异构工具与附件，最终合成完整交付物。HuggingFace 日榜最高票。</div>
+    <div class="tags">
+      <span class="tag">AI Agent</span>
+      <span class="tag">长程任务</span>
+      <span class="tag">多模态</span>
+      <span class="tag hot">HF #1</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">ArXiv 2608.05987 · HuggingFace 日榜</div>
+    <div class="title">
+      <a href="https://arxiv.org/abs/2608.05987" target="_blank">AgentOPSD: Recursive Self-Distillation for Agentic Reinforcement Learning</a>
+    </div>
+    <div class="summary">提出无 Critic 的递归轮次级信用分配方法，将 token 级 log-probability gap 聚合为轮级证据，贝叶斯递归更新策略。标志着 Agentic RL 从理论走向可规模化训练的实践路径。</div>
+    <div class="tags">
+      <span class="tag">Agentic RL</span>
+      <span class="tag">强化学习</span>
+      <span class="tag">自蒸馏</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">ArXiv 2608.05466 · HuggingFace</div>
+    <div class="title">
+      <a href="https://huggingface.co/papers/2608.05466" target="_blank">Recursive Synthesis for Long-Horizon Terminal Tasks</a>
+    </div>
+    <div class="summary">针对 Terminal Agent 长程训练数据生成成本高（单任务可达数百至数千美元）的问题，提出递归合成方法，自动保持指令、环境、参考解和验证器之间的一致性，实现可扩展的 Agent 训练数据生成。</div>
+    <div class="tags">
+      <span class="tag">Terminal Agent</span>
+      <span class="tag">合成数据</span>
+      <span class="tag">可扩展训练</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🎨</span>多模态与视觉</div>
+
+  <div class="card">
+    <div class="source">ArXiv 2608.05248 · HuggingFace 日榜</div>
+    <div class="title">
+      <a href="https://arxiv.org/abs/2608.05248" target="_blank">WorldClaw: Agentic 3D Open-World Generation at Scale</a>
+    </div>
+    <div class="summary">提出完全由 Agent 驱动的 coarse-to-fine 开放世界 3D 场景生成框架，从宏观布局到微观细节均由智能体自主规划与执行。这是将 Agent 范式引入 3D 内容生成的重要一步。</div>
+    <div class="tags">
+      <span class="tag">3D 生成</span>
+      <span class="tag">World Model</span>
+      <span class="tag">Agentic</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">ArXiv 2608.01827 · Papers with Code</div>
+    <div class="title">
+      <a href="https://paperswithcode.co/paper/2608.01827" target="_blank">DeepVoyager-VL: Incentivizing Vision-in-the-Loop for Long-Horizon Multimodal Search</a>
+    </div>
+    <div class="summary">让视觉成为长程多模态搜索中的持续参与者而非被动输入，MLLM 在检索和推理的每一步都主动调用视觉信息，突破静态参数知识的局限，应对知识密集型和动态演化的开放世界问题。</div>
+    <div class="tags">
+      <span class="tag">VLM</span>
+      <span class="tag">多模态搜索</span>
+      <span class="tag">深度搜索</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📦</span>开源模型与工具</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending #1 · 2026-08-08</div>
+    <div class="title">
+      <a href="https://github.com/PrimeIntellect-ai/prime-agent" target="_blank">Prime Agent: A Self-Improving RLM Agent</a>
+    </div>
+    <div class="summary">PrimeIntellect 推出的开源通用编码与研究 Agent，日增 2,271+ stars 登顶 GitHub Trending。基于 PRIME-RL 强化学习，支持通用编码工作流和长时间自主任务，采用双核心抽象设计。</div>
+    <div class="tags">
+      <span class="tag hot">GitHub #1</span>
+      <span class="tag">RLM Agent</span>
+      <span class="tag">开源</span>
+      <span class="tag">编码</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">Alibaba · 2026-08-03 发布</div>
+    <div class="title">
+      <a href="https://www.indiatoday.in/technology/news/story/alibaba-launches-its-most-powerful-model-qwen-38-max-claims-it-can-match-performance-of-chatgpt-and-claude-2962176-2026-08-03" target="_blank">Qwen3.8-Max：2.4 万亿参数 MoE 旗舰，开源阵营正面挑战闭源巨头</a>
+    </div>
+    <div class="summary">阿里发布史上最大开源多模态模型，2.4T 总参数（95B 每 Token 激活），1M 上下文窗口。中文文本模型登顶 Arena.AI，多模态性能全球第二（仅次于 Claude Fable 5），采用开放权重策略。</div>
+    <div class="tags">
+      <span class="tag">LLM</span>
+      <span class="tag">MoE</span>
+      <span class="tag">开源</span>
+      <span class="tag">多模态</span>
+      <span class="tag hot">重磅发布</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>本周的 AI 世界可以用一个字概括——"变"。<br><br>
+  <strong>人事之变：</strong>Google DeepMind 的领导层地震远超一次普通的高管更替。Demis Hassabis 在内部信中直言 AGI 已近，此刻"走对下一步对人类至关重要"——这番话既解释了为何他要将精力集中在战略层面，也暗示了前沿 AI 实验室内部的紧迫感。而 Jeff Dean 等四位元老的集体出走创立 Discovery Loop，更是标志着 AI 顶级人才从大厂向初创公司的新一轮迁徙潮已至。2026 年已有 22 位顶尖教授从斯坦福、伯克利、哈佛流向 OpenAI、Anthropic、Meta 和 Google——学术界的"人才空心化"同样值得警惕。<br><br>
+  <strong>格局之变：</strong>阿里 Qwen3.8-Max 以 2.4T MoE 架构正面叫板 GPT 和 Claude，开源阵营与闭源巨头的性能差距正在以肉眼可见的速度缩小。当中国开源模型在多模态榜单上位列全球第二，全球 AI 竞争格局已不再是硅谷独大的叙事。<br><br>
+  <strong>范式之变：</strong>从 HuggingFace 日榜可以清晰看到，AI 研究的重心正在从"模型能回答什么"转向"智能体能做什么"。OneDayAgent、AgentOPSD、Recursive Synthesis、WorldClaw——这些论文的共同关键词是：长程任务、自主执行、强化学习自改进、3D 世界生成。Agent 不再是 prompt 工程的附庸，而正在成为独立的科研范式。2026 下半年的 AI，是属于智能体的时代。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026年08月09日</p>
+</div>
+
+</div>
+</body>
+</html>

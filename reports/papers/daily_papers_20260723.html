@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年07月23日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年07月23日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今日 AI 前沿集中在两大方向：<strong>世界模型（World Model）</strong>迎来爆发——单 GPU 即可运行无限交互世界的 ABot-World-0、实时渲染加速 56 倍的 Generative World Renderer、以及 AlayaWorld 同步亮相；<strong>LLM Agent 工具链</strong>持续进化——DataFlow-Harness 打通自然语言到数据流水线的最后一公里。此外，扩散模型可解释性、异构 LLM 合并、以及 MLLM 在科学可视化中的评估基准也值得关注。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🌍</span>今日热点 — 世界模型三连发</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 热点</div>
+    <div class="card" style="border:none; box-shadow:none; margin-bottom:8px;">
+      <div class="source">arXiv 2607.19191 · HuggingFace 热门</div>
+      <div class="title"><a href="https://arxiv.org/abs/2607.19191" target="_blank">ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU</a></div>
+      <div class="summary">首个可在单张桌面级 GPU 上实现无限交互式世界展开的模型，将大规模世界模拟的门槛从数据中心降至个人电脑，开创了世界模型民主化的新纪元。</div>
+      <div class="tags">
+        <span class="tag hot">World Model</span>
+        <span class="tag">交互式AI</span>
+        <span class="tag">单GPU推理</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2607.18703 · HuggingFace 热门</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.18703" target="_blank">Generative World Renderer at the Speed of Play</a></div>
+    <div class="summary">将生成式世界渲染速度提升 56 倍，实现实时可玩的生成世界。从"慢速渲染"到"即时游戏"，为 AI 驱动的开放世界游戏和仿真训练铺平道路。</div>
+    <div class="tags">
+      <span class="tag">World Model</span>
+      <span class="tag">实时渲染</span>
+      <span class="tag">生成式AI</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2607.18367 · HuggingFace 热门</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.18367" target="_blank">AlayaWorld: Interactive Long-Horizon World Modeling — Full Technical Report</a></div>
+    <div class="summary">交互式长程世界建模的完整技术方案，支持长时间线的一致性交互模拟，为虚拟世界构建提供新一代基础架构。</div>
+    <div class="tags">
+      <span class="tag">World Model</span>
+      <span class="tag">长程建模</span>
+      <span class="tag">交互模拟</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>LLM / 大模型前沿</div>
+
+  <div class="card">
+    <div class="source">arXiv 2607.18026</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.18026" target="_blank">Rethinking Heterogeneous LLM Merging: A Weighted Model Averaging Perspective</a></div>
+    <div class="summary">重新审视异构 LLM 合并问题：无需训练、无需语义对齐，通过加权模型平均直接合并参数空间差异巨大的语言模型。为模型复用和低成本集成打开了新思路。</div>
+    <div class="tags">
+      <span class="tag">LLM</span>
+      <span class="tag">模型合并</span>
+      <span class="tag">无需训练</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2607.16617 · HuggingFace 热门</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.16617" target="_blank">DataFlow-Harness: A Grounded Code-Agent Platform for Constructing Editable LLM Data Pipelines</a></div>
+    <div class="summary">将自然语言转化为可编辑的 DAG 数据流水线：通过 LLM Agent 驱动的代码生成平台，弥合"自然语言到数据流水线"的鸿沟，使数据处理任务的构建和迭代更加高效。</div>
+    <div class="tags">
+      <span class="tag">LLM Agent</span>
+      <span class="tag">数据工程</span>
+      <span class="tag">代码生成</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态 / 视觉语言模型</div>
+
+  <div class="card">
+    <div class="source">arXiv 2607.15176</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.15176" target="_blank">Benchmarking Multimodal Large Language Models for Scientific Visualization</a></div>
+    <div class="summary">首个系统性评估 MLLM 在科学可视化（SciVis）领域理解能力的基准，揭示当前多模态模型在解读复杂科学图表时的不足，为科学 AI 应用建立评测标准。</div>
+    <div class="tags">
+      <span class="tag">多模态</span>
+      <span class="tag">科学可视化</span>
+      <span class="tag">基准测试</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔬</span>扩散模型 / 图像生成</div>
+
+  <div class="card">
+    <div class="source">arXiv 2607.19139 · HuggingFace 热门</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.19139" target="_blank">Text Template Tokens Are Implicit Semantic Registers in Diffusion Transformers</a></div>
+    <div class="summary">揭示扩散 Transformer 中文本模板 token 的隐式语义寄存器机制，为理解文生图模型内部表征和可控生成提供了重要的理论洞见。</div>
+    <div class="tags">
+      <span class="tag">扩散模型</span>
+      <span class="tag">可解释性</span>
+      <span class="tag">文生图</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2607.19064 · HuggingFace 热门</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.19064" target="_blank">Mage-Flow: An Efficient Native-Resolution Foundation Model for Image Generation and Editing</a></div>
+    <div class="summary">高效原生分辨率图像生成与编辑的基础模型，通过组件联合设计实现紧凑架构下的高质量图像合成，兼顾效率与效果。</div>
+    <div class="tags">
+      <span class="tag">图像生成</span>
+      <span class="tag">基础模型</span>
+      <span class="tag">高效推理</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源项目 / 工具</div>
+
+  <div class="card">
+    <div class="source">GitHub · langchain-ai/open_deep_research</div>
+    <div class="title"><a href="https://github.com/langchain-ai/open_deep_research" target="_blank">Open Deep Research — LangChain AI 开源深度研究框架</a></div>
+    <div class="summary">LangChain AI 推出的开源深度研究框架，支持多步推理、网页搜索和信息综合，为构建 AI 研究 Agent 提供完整的开源工具链。</div>
+    <div class="tags">
+      <span class="tag">开源</span>
+      <span class="tag">AI Agent</span>
+      <span class="tag">深度研究</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · dottxt-ai/outlines</div>
+    <div class="title"><a href="https://github.com/dottxt-ai/outlines" target="_blank">Outlines — 结构化生成框架持续更新</a></div>
+    <div class="summary">Outlines 持续引领 LLM 结构化生成领域，确保模型输出符合 JSON Schema、正则表达式等约束，是 Agent 工具调用和 API 集成的重要基础设施。</div>
+    <div class="tags">
+      <span class="tag">开源</span>
+      <span class="tag">结构化生成</span>
+      <span class="tag">LLM工具</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>今日最显著的趋势是<strong>世界模型（World Model）的集中爆发</strong>。ABot-World-0、Generative World Renderer、AlayaWorld 三篇工作从不同角度推进了生成式交互世界的技术边界——从单 GPU 可运行到实时游戏帧率渲染，世界模型正在从实验室概念走向实际可用。这预示着 AI 驱动的虚拟世界、游戏引擎和仿真训练即将迎来范式转变。<br><br>
+  在 LLM 领域，<strong>异构模型合并</strong>（2607.18026）提出了一种无需训练的模型集成新范式，如果技术成熟，将极大降低多模型协同的门槛。而 <strong>DataFlow-Harness</strong> 则展示了 LLM Agent 在数据工程等实际生产场景中的落地潜力。<br><br>
+  开源生态方面，LangChain 的 Open Deep Research 和 Outlines 的持续进化表明，AI Agent 基础设施正在加速成熟。加上对扩散模型内部机制的深入理解（Text Template Tokens 论文），我们同时看到了 AI 能力与应用、理论与工程的全面进步。<br><br>
+  <em>今日金句：世界模型正在从"跑得动"走向"玩得起"，这是通向 AGI 的重要一块拼图。</em></p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026年07月23日</p>
+</div>
+
+</div>
+</body>
+</html>

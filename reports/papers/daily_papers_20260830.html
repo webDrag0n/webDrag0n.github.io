@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年08月30日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<!--
+  TEMPLATE STRUCTURE:
+  Replace {{PLACEHOLDERS}} with actual content.
+  
+  Sections:
+  - .header: icon, title, date, subtitle
+  - .summary-banner: one-paragraph overview of today's hot topics
+  - .section: grouped news (Headlines / Research / Industry / Open Source)
+  - .card: individual news item (source, title link, summary, tags)
+  - .hot-topic: highlighted breaking news
+  - .insights: editorial summary
+  - .footer: generation info
+-->
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年08月30日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>周末 arXiv 无新刊，但开源侧异常热闹：sapientinc 的 PRAXIST 自主科研系统上线 3 天狂揽近 3k stars，腾讯微信视觉团队也开源了 WeMM-Embedding 多模态 Embedding 模型。论文侧聚焦「世界模型 × 智能体」主线——首个游戏世界-动作模型 GameWAM、从人类示范视频做上下文学习的 Zero-WAM、执行时实时注入触觉反馈的 TacForcing；推理侧进化策略 ES 首次被证明比 GRPO 覆盖更广，流匹配蒸馏也迎来「无教师」的 Self-OPD。</p>
+</div>
+
+<!-- 🔥 今日热点 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · 开源科研自动化</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">GitHub Trending · sapientinc</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;"><a href="https://github.com/sapientinc/PRAXIST" target="_blank" style="color:var(--accent);text-decoration:none;">sapientinc/PRAXIST：可度量的自主科研系统，3 天狂揽 2.9k stars</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">PRAXIST 是一套「自主科研系统」，目标是让研究任务变成可度量、可计算机执行的流程——智能体不仅能读论文、跑实验，还能把每一步推理与结果落成可复现、可验证的产物。上线仅 3 天就拿下近 3000 stars、250+ forks，是本周开源 AI 圈最猛的「科研自动化」黑马。</div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag hot">开源</span>
+<span class="tag">自主科研</span>
+<span class="tag">Agent</span>
+<span class="tag">2.9k★</span></div>
+  </div>
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · 游戏世界模型</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">arXiv 2608.26200 · HuggingFace Daily Papers</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;"><a href="https://arxiv.org/abs/2608.26200" target="_blank" style="color:var(--accent);text-decoration:none;">GameWAM: A World Action Model for Video Games</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">首个面向视频游戏的世界-动作模型（WAM）。现有游戏智能体要么直接把「视觉+任务」映射到动作但缺世界动力学建模，要么能预测视觉未来却当不了策略。GameWAM 把两者统一，在原生闭环玩法和 GUI 控制下同时预测世界状态并输出动作，为「会玩游戏的世界模型」立下第一块里程碑。</div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag hot">World Action Model</span>
+<span class="tag">游戏智能体</span>
+<span class="tag">世界模型</span></div>
+  </div>
+</div>
+<!-- 🧠 大模型 &amp; 推理 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 &amp; 推理</div>
+  <div class="card">
+    <div class="source">arXiv 2608.27351 · HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.27351" target="_blank">Understanding Evolution Strategies for LLM Reasoning: Broader Reasoning Coverage than GRPO</a></div>
+    <div class="summary">进化策略（ES）作为省内存的后训练范式最近很火，但其优化行为一直没被搞清楚。这篇系统拆解了 ES 的动力学，首次从理论与实验上证明 ES 相比 GRPO 能带来更广的推理覆盖，从而更好地榨取预训练模型的推理能力——为「为什么 ES 有时更好」补上了关键的一块拼图。</div>
+    <div class="tags"><span class="tag">进化策略</span>
+<span class="tag">推理</span>
+<span class="tag">GRPO</span>
+<span class="tag">RL</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2608.26872 · HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.26872" target="_blank">Self-OPD: On-Policy Distillation for Flow Matching Models without Teacher</a></div>
+    <div class="summary">在策略蒸馏（OPD）依赖专用教师模型，每个新目标都要单独训一个老师，成本高还容易累积教师-学生分布偏差。Self-OPD 提出「无教师」的在策略蒸馏框架，摆脱对专门教师模型的依赖，在流匹配（flow matching）模型上更稳定、更省钱地完成蒸馏。</div>
+    <div class="tags"><span class="tag">流匹配</span>
+<span class="tag">蒸馏</span>
+<span class="tag">无教师</span>
+<span class="tag">生成模型</span></div>
+  </div>
+</div>
+<!-- 🌍 世界模型 &amp; 智能体 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🌍</span>世界模型 &amp; 智能体</div>
+  <div class="card">
+    <div class="source">arXiv 2608.26103 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.26103" target="_blank">Zero-WAM: In-Context World-Action Modeling from Human Videos for Open-Ended Task Generalization</a></div>
+    <div class="summary">把 LLM 的「上下文学习（ICL）」搬到机器人操作：给定一段人类示范视频，无需任何参数更新就能执行没见过的操作任务。Zero-WAM 用世界-动作模型把人类视频当作任务规格，从视频里提取丰富的视觉线索，实现零样本跨任务泛化——「看一段人怎么干，机器人就会干」。</div>
+    <div class="tags"><span class="tag">具身智能</span>
+<span class="tag">上下文学习</span>
+<span class="tag">世界模型</span>
+<span class="tag">零样本</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2608.26530 · HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.26530" target="_blank">PILOT in the Loop: Live Self-Improvement for Long-Horizon Agents</a></div>
+    <div class="summary">长程智能体运行中产生的经验，不该等到跑完才拿来改进。PILOT 提出「活体自我改进」：一边执行一边用新经验纠正当前运行、并实时更新持久化 harness，让智能体在同一个任务里越跑越聪明，而不是只能「事后复盘」。</div>
+    <div class="tags"><span class="tag">智能体</span>
+<span class="tag">自我改进</span>
+<span class="tag">长程任务</span>
+<span class="tag">harness</span></div>
+  </div>
+</div>
+<!-- 🤖 具身智能 &amp; 多模态 &amp; 开源 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能 &amp; 多模态 &amp; 开源</div>
+  <div class="card">
+    <div class="source">arXiv 2608.25798 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.25798" target="_blank">TacForcing: Streaming Action Generation with Execution-Time Tactile Feedback</a></div>
+    <div class="summary">接触密集的机器人操作中，触觉状态在执行过程中会剧烈变化，而传统 chunk 式 VLA 在执行前就预测好整段动作，导致触觉反馈「过期」。TacForcing 用流式动作生成框架，在执行时实时注入触觉反馈，无需额外高频控制器即可让动作适应接触变化。</div>
+    <div class="tags"><span class="tag">机器人</span>
+<span class="tag">触觉反馈</span>
+<span class="tag">VLA</span>
+<span class="tag">流式生成</span></div>
+  </div>
+  <div class="card">
+    <div class="source">GitHub Trending · Tencent 微信视觉团队</div>
+    <div class="title"><a href="https://github.com/Tencent/WeMM-Embedding" target="_blank">Tencent/WeMM-Embedding：微信视觉团队开源通用多模态 Embedding 模型</a></div>
+    <div class="summary">腾讯微信视觉团队开源 WeMM-Embedding 系列——一套通用多模态 embedding 模型，支持多模态理解与检索，上线几天即破 900 stars。作为多模态 RAG/检索的底层基建，这类模型正成为各家开源竞争的新焦点。</div>
+    <div class="tags"><span class="tag hot">开源</span>
+<span class="tag">多模态</span>
+<span class="tag">Embedding</span>
+<span class="tag">Tencent</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>周末 arXiv 安静，但开源圈一点没闲着。PRAXIST 三天近 3k stars 挺说明问题——「可度量、可执行的科研自动化」正是大家眼下最想要的形态。论文这边我最有感觉的是 Zero-WAM：把「看一段人类示范视频就会干」带进机器人操作，相当于把 LLM 的上下文学习从文本搬进了物理世界。再加上 GameWAM 和 TacForcing，世界模型与具身智能正从「会看」真正走向「会做」。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-30 08:10</p>
+</div>
+
+</div>
+</body>
+</html>

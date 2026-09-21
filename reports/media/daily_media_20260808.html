@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年08月08日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年08月08日</div>
+  <div class="subtitle">中文AI媒体精选 · 机器之心/量子位/新智元 等</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>谷歌AI王朝地震——传奇人物Jeff Dean离职创业，联手三位谷歌元老创办Discovery Loop；Meta杀入AI编程赛道推出Muse Code；DeepSeek V4 Flash调用量碾压OpenAI三倍；千问App发布五大新功能正式进军办公Agent市场。</p>
+</div>
+
+<!-- 🔥 头条 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">BREAKING · 人事巨震</div>
+    <div class="source">量子位 / 新浪财经 / 投资界 / 网易 / 搜狐 / 知乎 · 8月6日</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/08/467196.html" target="_blank">突发，Jeff Dean离职创业！谷歌股价应声蒸发1.34万亿</a></div>
+    <div class="summary">谷歌首席科学家、任职27年的传奇人物Jeff Dean于8月5日宣布离职，与Sanjay Ghemawat、Oriol Vinyals、Quoc Le三位谷歌AI核心元老共同创办Discovery Loop，定位「用AI自动化整个科学发现流程」的公益性公司。同日，诺奖得主Demis Hassabis卸任Google DeepMind CEO转任主席。消息导致Alphabet股价盘中暴跌5.4%，市值蒸发约1.34万亿人民币。据《连线》报道，谷歌CEO劈柴哥曾多方挽留未果，Alphabet作为创始投资方为Discovery Loop提供TPU算力支持。</div>
+    <div class="tags">
+      <span class="tag hot">重磅</span>
+      <span class="tag">#谷歌</span>
+      <span class="tag">#人事变动</span>
+      <span class="tag">#AI4S</span>
+      <span class="tag">#创业</span>
+    </div>
+  </div>
+</div>
+
+<!-- 📰 大模型与新发布 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🚀</span>大模型 &amp; 新发布</div>
+
+  <div class="card">
+    <div class="source">CNBC / IT之家 / 量子位 / 知乎 · 8月5日-6日</div>
+    <div class="title"><a href="https://www.ithome.com/0/986/268.htm" target="_blank">Meta 发布首款 AI 编程智能体 Muse Code，定价仅竞品 1/4</a></div>
+    <div class="summary">Meta于8月5日推出旗下首款终端AI编程Agent Muse Code，搭配自研Muse Spark 1.2模型，支持macOS和Linux。该Agent可自主规划代码修改、编写并验证结果，大任务自动拆分为多个子Agent并行执行，并引入worktree隔离与崩溃恢复机制。定价仅为Claude Code的四分之一，直接挑战Anthropic和OpenAI在AI编程赛道的主导地位。</div>
+    <div class="tags">
+      <span class="tag">#Meta</span>
+      <span class="tag">#AI编程</span>
+      <span class="tag">#Agent</span>
+      <span class="tag">#新品发布</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">雪球 / SegmentFault / CSDN · 8月4日-7日</div>
+    <div class="title"><a href="https://xueqiu.com/1353808704/403836745" target="_blank">马斯克宣布 Grok 4.6 今日正式发布，2万亿参数挑战 Kimi K3</a></div>
+    <div class="summary">马斯克在SpaceX Q2财报电话会宣布，xAI旗下大模型Grok 4.6于8月7日正式发布，参数规模达1.5-2万亿，重点优化监督微调与强化学习能力。更重磅的是Grok 4.7（2.1万亿参数）已箭在弦上，xAI计划2026下半年每月发布一款新基础模型，直面Kimi K3（2.8万亿参数）等国产模型的竞争。</div>
+    <div class="tags">
+      <span class="tag">#xAI</span>
+      <span class="tag">#Grok</span>
+      <span class="tag">#大模型</span>
+      <span class="tag">#马斯克</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新浪科技 / 网易 / 澎湃新闻 · 8月7日</div>
+    <div class="title"><a href="https://finance.sina.com.cn/tech/discovery/2026-08-07/doc-inimnenr0084325.shtml" target="_blank">千问App重磅更新：上线办公助理、思考研究等五大功能，千问办公正式公测</a></div>
+    <div class="summary">阿里千问App于8月7日推出思考研究、定时任务、办公助理、智能体广场、语音通话五大新功能，全部免费使用并接入旗舰模型Qwen3.8-MAX。其中「办公助理」可打通邮件、日历等应用，自主完成多步骤复杂任务并交付完整Office成品。此前8月3日，整合QoderWork、MuleRun、悟空三大产品的「千问办公」（QwenWork）已开启公测，阿里正式加入AI办公Agent赛道争夺战。</div>
+    <div class="tags">
+      <span class="tag">#阿里</span>
+      <span class="tag">#千问</span>
+      <span class="tag">#AI办公</span>
+      <span class="tag">#Agent</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">财联社 · 8月7日</div>
+    <div class="title"><a href="https://k.sina.com.cn/article_7857201856_1d45362c001908ih18.html" target="_blank">OpenAI 宣布 ChatGPT 免费用户文字互动无限制，默认模型升至 GPT-5.6 Luna</a></div>
+    <div class="summary">面对DeepSeek V4 Flash调用量激增至自身三倍的压力，OpenAI于8月7日宣布取消ChatGPT免费用户的文字互动限制，同时将默认模型升级为GPT-5.6 Luna。此前OpenAI的降价策略效果有限，此次「免费开放」被视为应对DeepSeek价格优势的关键反制措施。</div>
+    <div class="tags">
+      <span class="tag">#OpenAI</span>
+      <span class="tag">#ChatGPT</span>
+      <span class="tag">#免费</span>
+      <span class="tag">#价格战</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🏭 行业动态 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🏭</span>行业动态 &amp; 竞争格局</div>
+
+  <div class="card">
+    <div class="source">联合早报 / 新浪科技 / 网易 / CNMO · 8月6日-7日</div>
+    <div class="title"><a href="https://www.zaobao.com.sg/news/china/story20260806-9479593" target="_blank">DeepSeek V4 Flash 调用量达 OpenAI 三倍，宣布大幅上调 API 价格</a></div>
+    <div class="summary">第三方平台OpenRouter数据显示，本周DeepSeek V4 Flash周调用量达11.31万亿Token，是GPT-5.6 Luna（3.54万亿）的近三倍。此前V4 Flash单日处理8万亿Token已引发行业震动。DeepSeek顺势宣布计划大幅上调API服务价格，标志着其从"极致低价"策略向"量价齐升"的商业化转型。与此同时，中国AI大模型周调用量已占全球2/3市场份额。</div>
+    <div class="tags">
+      <span class="tag">#DeepSeek</span>
+      <span class="tag">#API</span>
+      <span class="tag">#价格战</span>
+      <span class="tag">#市场格局</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">CSDN / 新浪科技 · 8月7日</div>
+    <div class="title">字节跳动计划训练超5万亿参数大模型，张一鸣明确反对技术蒸馏</div>
+    <div class="summary">据多方消息，字节跳动正筹备训练参数规模超5万亿的下一代大模型，将成为国内参数规模最大的模型之一。值得关注的是，创始人张一鸣在内部明确反对通过蒸馏竞品模型来提升性能的「捷径」做法，强调自主技术创新路线。此前字节旗下豆包大模型已在多个榜单崭露头角，此举显示其正面挑战DeepSeek、智谱等对手的野心。</div>
+    <div class="tags">
+      <span class="tag">#字节跳动</span>
+      <span class="tag">#大模型</span>
+      <span class="tag">#超大规模</span>
+      <span class="tag">#技术路线</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">观察者网 · 8月5日</div>
+    <div class="title"><a href="https://www.guancha.cn/internation/2026_08_05_826193.shtml" target="_blank">彭博社：中国AI 8周推出5个模型，「不止一家在突破，中国开始拥有可复制的生产系统」</a></div>
+    <div class="summary">彭博社8月4日发表分析文章指出，中国AI产业在短短8周内密集推出5个重要模型，形成了从训练到部署的「可复制生产系统」，正在迅速缩小与硅谷的差距。分析人士认为这标志着中国AI已从单点突破进入系统性创新阶段，DeepSeek、智谱、月之暗面、MiniMax等公司形成了多极竞争格局，整体迭代速度令硅谷侧目。</div>
+    <div class="tags">
+      <span class="tag">#中国AI</span>
+      <span class="tag">#产业分析</span>
+      <span class="tag">#竞争格局</span>
+      <span class="tag">#彭博社</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🤖 具身智能 & 机器人 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能 &amp; 机器人</div>
+
+  <div class="card">
+    <div class="source">量子位 / IT之家 / 凤凰网 / 钛媒体 · 8月3日-7日</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/08/467730.html" target="_blank">智元机器人官网下架首席科学家罗剑岚，官方回应称「内部岗位调整」</a></div>
+    <div class="summary">8月以来，智元机器人官网更新合伙人名单，首席科学家罗剑岚的信息被移除，引发行业广泛关注。罗剑岚为全球具身智能与机器人强化学习领域顶尖青年科学家，2025年4月加入智元。智元官方回应称其「暂未离职，属于内部岗位调整」，但官网变动让外界对这位科学家的去留存疑。值得注意的是，智元合伙人已从最初的7人扩展至9人，公司正加速商业化落地。</div>
+    <div class="tags">
+      <span class="tag">#智元机器人</span>
+      <span class="tag">#具身智能</span>
+      <span class="tag">#人事变动</span>
+      <span class="tag">#人形机器人</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">无矩AI / 多方报道 · 8月7日</div>
+    <div class="title">AMD 宣布收购 AI 推理芯片初创公司 Taalas，强化推理能力布局</div>
+    <div class="summary">AMD于8月7日宣布收购AI推理芯片初创公司Taalas，以强化其在AI推理芯片市场的竞争力。Taalas专注于高效能AI推理加速芯片的研发，此次收购将补强AMD在数据中心推理市场的产品线，直接挑战英伟达在AI芯片领域的统治地位。这也是AMD继多次投资AI芯片生态后的又一重要布局。</div>
+    <div class="tags">
+      <span class="tag">#AMD</span>
+      <span class="tag">#芯片</span>
+      <span class="tag">#收购</span>
+      <span class="tag">#AI推理</span>
+    </div>
+  </div>
+</div>
+
+<!-- 📱 应用 & 产品 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📱</span>应用落地 &amp; 产品动态</div>
+
+  <div class="card">
+    <div class="source">新浪科技 · 8月6日</div>
+    <div class="title">影石Insta360产品上线AI语音助手，分区域接入阿里千问和Google Gemini</div>
+    <div class="summary">影石Insta360宣布旗下相机产品将上线AI语音助手功能，根据不同区域市场分别接入阿里千问大模型和Google Gemini模型。这一产品策略既体现了AI能力向消费硬件的渗透加速，也显示出国产大模型在出海硬件中的落地能力正在扩大。拇指相机变身个人AI入口，AI+硬件的融合进入新阶段。</div>
+    <div class="tags">
+      <span class="tag">#AI硬件</span>
+      <span class="tag">#影石</span>
+      <span class="tag">#千问</span>
+      <span class="tag">#Gemini</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 8月</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/08/465767.html" target="_blank">甲子光年将举办「激流——2026甲子引力X科技产业投资大会」</a></div>
+    <div class="summary">中国科技产业智库甲子光年宣布将于8月在北京举办「激流——2026甲子引力X科技产业投资大会」，汇聚一线投资机构、产业核心企业与科技创业者，共同探讨中国科技投资新趋势。据IT桔子数据，2026年Q1中国创投市场融资事件同比增长52%，披露融资总额增长48%，市场正在释放积极修复信号。</div>
+    <div class="tags">
+      <span class="tag">#创投</span>
+      <span class="tag">#产业大会</span>
+      <span class="tag">#甲子光年</span>
+      <span class="tag">#科技投资</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>本期AI日报最核心的信号是：<strong>全球AI正在经历权力结构的深层重组</strong>。Jeff Dean等四位谷歌元老集体出走创办Discovery Loop，叠加Hassabis卸任DeepMind CEO，意味着谷歌AI组织架构正从「集中式」向「生态式」转型——巨头主动为顶尖人才创业开路，同时以投资和算力保持绑定。这一模式值得国内大厂借鉴。<br><br>在应用层面，<strong>AI编程和AI办公两个Agent赛道同时升温</strong>：Meta以1/4价格杀入编程Agent，阿里整合三款产品推出千问办公，说明「从聊天到办事」的Agent化落地正在加速。DeepSeek以三倍于OpenAI的调用量宣布涨价，则标志着<strong>中国大模型从「价格屠夫」转向「价值定价」</strong>，产业正走出烧钱换市场的初级阶段。简言之：格局在变，但方向愈发明朗——AI正在从「能力展示」全面进入「场景交付」时代。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026年08月08日</p>
+</div>
+
+</div>
+</body>
+</html>

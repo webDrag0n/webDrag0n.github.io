@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年08月15日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年08月15日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>8 月 15 日 AI 圈最重磅的，当属 Anthropic 二季度业绩「炸裂」：营收超 115 亿美元、同比暴涨 14 倍并首次季度盈利，筹备中的超级 IPO 估值或达 2 万亿美元。开源侧，阿里正式开源 Qwen3.8 系列，27B 版本家用显卡即可跑；OpenAI 则连发 GPT-5.6 构建者指南与 Linux 版 ChatGPT 客户端。资本层面，英伟达祭出「收益共享」新玩法，摩根士丹利测算潜在年收入池达 5000 亿美元。一条暗线同样吸睛：协和医生借 GPT-5.6 攻克 22 年数学猜想，与 OpenAI Astra 数学成果被指抄袭几乎同框——AI 的科研能力，正被推到聚光灯下检验。</p>
+</div>
+
+<!-- 🔥 今日头条 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">🔴 BREAKING</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">彭博社 · 新浪财经 · 华尔街见闻 · 凤凰网 · 每日经济新闻</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;">
+      <a href="https://finance.sina.com.cn/jjxw/2026-08-15/doc-ininkfhv8802303.shtml" target="_blank">Anthropic 二季度营收超 115 亿美元、同比暴涨 14 倍，首次季度盈利，筹备超级 IPO</a>
+    </div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">
+      8 月 15 日，彭博社看到的内部文件显示，Claude 开发商 Anthropic 二季度初步营收超 115 亿美元，较去年同期 7.87 亿美元增长逾 14 倍，并首次实现调整后营业利润为正。公司已秘密提交 IPO 申请，与摩根士丹利、高盛、摩根大通合作推进；华尔街罕见地依据其 2028 年约 1900–2000 亿美元的营收预测来定价，部分投资者预计最快 10 月上市、估值或达 2 万亿美元，有望超越 SpaceX 成为史上最大 IPO。
+    </div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;">
+      <span class="tag hot">大模型</span>
+      <span class="tag">Anthropic</span>
+      <span class="tag">Claude</span>
+      <span class="tag">超级IPO</span>
+      <span class="tag">首次盈利</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🚀 新模型/产品 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🚀</span>新模型 &amp; 产品发布</div>
+
+  <div class="card">
+    <div class="source">量子位 · 同花顺 · Hugging Face</div>
+    <div class="title">
+      <a href="https://m.10jqka.com.cn/20260814/c678978271.shtml" target="_blank">阿里千问正式开源 Qwen3.8 系列：27B 家用显卡可跑，多项 Agent 榜单反超 Claude</a>
+    </div>
+    <div class="summary">
+      阿里通义千问正式开源 Qwen3.8 系列模型。其中 Qwen3.8-27B 为原生多模态稠密模型，支持 262K 原生上下文、经 YaRN 技术可外推至 1M，家用显卡即可本地运行，多项 Agent 任务榜单反超 Claude；旗舰 Qwen3.8-Max 总参数达 2.4 万亿 MoE。有消息称，后续 Qwen3.8-Max 可能对大型商用客户引入分成机制。
+    </div>
+    <div class="tags">
+      <span class="tag">#Qwen3.8</span>
+      <span class="tag">#开源</span>
+      <span class="tag">#阿里巴巴</span>
+      <span class="tag">#多模态</span>
+      <span class="tag">#本地部署</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · 网易科技</div>
+    <div class="title">
+      <a href="https://www.163.com/dy/article/L49EKMK40511ABV6.html" target="_blank">OpenAI 发布《GPT-5.6 构建者指南》：最小模型 Luna 成本暴降 25 倍</a>
+    </div>
+    <div class="summary">
+      8 月 15 日，OpenAI 发布 GPT-5.6 构建者指南，交出一份「智能平民化」成绩单：家族最小最便宜的 Luna 在 Extra High 模式下拿下 84.04% 的成绩，与旗舰差距仅 0.32%，但成本相较约 33 美元级水平砍了约 25 倍（约 1.33 美元）。OpenAI 借此强调前沿智能正以更低成本下沉到更多开发者。
+    </div>
+    <div class="tags">
+      <span class="tag">#OpenAI</span>
+      <span class="tag">#GPT-5.6</span>
+      <span class="tag">#Luna</span>
+      <span class="tag">#降本</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · TechCrunch</div>
+    <div class="title">
+      <a href="https://techcrunch.com/2026/08/11/openai-launches-chatgpt-desktop-app-for-linux/" target="_blank">OpenAI ChatGPT 桌面客户端上线 Linux，Codex 集成可改代码</a>
+    </div>
+    <div class="summary">
+      OpenAI 官宣 ChatGPT 桌面应用 Linux 版以预览形式上线，将 ChatGPT、Work 与 Codex 整合进同一原生桌面体验，覆盖 Ubuntu、Debian、Fedora 等发行版（x64/ARM64，.deb/.rpm）。这是继 Claude 推出 Linux 客户端后，OpenAI 补齐的最后一块桌面系统版图，Linux 用户苦等两年的客户端终于落地。
+    </div>
+    <div class="tags">
+      <span class="tag">#OpenAI</span>
+      <span class="tag">#ChatGPT</span>
+      <span class="tag">#Codex</span>
+      <span class="tag">#Linux</span>
+    </div>
+  </div>
+</div>
+
+<!-- 💰 融资/行业 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">💰</span>融资 &amp; 行业动态</div>
+
+  <div class="card">
+    <div class="source">华尔街见闻 · 钛媒体 · Yahoo Finance</div>
+    <div class="title">
+      <a href="https://finance.sina.com.cn/stock/usstock/c/2026-08-11/doc-inimxvui7429949.shtml" target="_blank">英伟达推「收益共享」新模式，摩根士丹利测算潜在年收入池达 5000 亿美元</a>
+    </div>
+    <div class="summary">
+      英伟达正从芯片商向 AI 基础设施「金融合伙人」转型：联合高盛、Apollo、贝莱德等设立独立融资平台，动员超 5000 亿美元第三方资本；同时为新兴 AI 云厂商（neocloud）提供信用背书、换取云收入分成。摩根士丹利测算，若 neocloud 生态达 25 吉瓦规模，每年可产生 5000 亿美元收入池，为英伟达 FY28 EBIT 带来约 60% 上行空间。
+    </div>
+    <div class="tags">
+      <span class="tag">#英伟达</span>
+      <span class="tag">#算力金融</span>
+      <span class="tag">#收益共享</span>
+      <span class="tag">#neocloud</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">财联社 · 彭博社 · 路透社 · IT之家</div>
+    <div class="title">
+      <a href="https://www.cls.cn/detail/2453401" target="_blank">Anthropic 拟 60 亿美元收购以色列 AI 效率公司 Decart，IPO 前最大并购</a>
+    </div>
+    <div class="summary">
+      据彭博社报道，Anthropic 正洽谈以约 60 亿美元收购以色列 AI 初创公司 Decart AI，若成交将是其史上最大一笔收购。Decart 仅约 106 名员工，专注提升 AI 芯片运行效率，估值 18 个月内从 1 亿美元涨至约 40 亿美元。在秘密提交 IPO 之际，这笔交易意在上市前强化推理效率、补齐效率优化能力。
+    </div>
+    <div class="tags">
+      <span class="tag">#Anthropic</span>
+      <span class="tag">#Decart</span>
+      <span class="tag">#并购</span>
+      <span class="tag">#推理效率</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">虎嗅 · 钛媒体 · 艾瑞网</div>
+    <div class="title">
+      <a href="https://www.huxiu.com/article/4883007.html" target="_blank">腾讯 Q2 资本开支 528 亿元同比增 176%，算力转售毛利率超 30%</a>
+    </div>
+    <div class="summary">
+      腾讯二季度资本开支达 527.8 亿元，同比增 176%、环比增 65%，单季自由现金流首次转负至 -138 亿元。管理层在电话会中回应：部分预付锁定的算力订单转售可获超 30% 利润、出租亦能盈利，剔除预付后自由现金流为正 376 亿元。分析认为高端算力因 HBM 与先进封装供给受限，正成为可溢价流转的稀缺资产。
+    </div>
+    <div class="tags">
+      <span class="tag">#腾讯</span>
+      <span class="tag">#资本开支</span>
+      <span class="tag">#算力</span>
+      <span class="tag">#财报</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新浪科技 · 中华网 · 华尔街见闻</div>
+    <div class="title">
+      <a href="https://finance.sina.com.cn/tech/roll/2026-08-14/doc-ininfvzx9459209.shtml" target="_blank">联想 Q1 营收同比增 43% 创新高，AI PC 全球销量增 86%、国内占比过半</a>
+    </div>
+    <div class="summary">
+      联想集团 2026/27 财年 Q1 业绩：营收 269.4 亿美元、同比增 43% 创近五年最高季度增速，调整后净利润 10.75 亿美元、增 176%，AI 相关收入 93 亿美元、增 60%。执行副总裁刘军透露，AI PC 全球销量同比增 86%、国内占笔记本销量比例已破 50%，联想正升级端侧算力、把 Token 生产更多保留在本地。
+    </div>
+    <div class="tags">
+      <span class="tag">#联想</span>
+      <span class="tag">#AI PC</span>
+      <span class="tag">#财报</span>
+      <span class="tag">#端侧算力</span>
+    </div>
+  </div>
+</div>
+
+<!-- 📊 技术解读/评测 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📊</span>技术解读 &amp; 评测</div>
+
+  <div class="card">
+    <div class="source">IT之家 · 新智元 · 中华网</div>
+    <div class="title">
+      <a href="https://www.163.com/dy/article/L4B26L660511B8LM.html" target="_blank">协和医生金山木借 GPT-5.6-Sol 16 小时攻克悬置 22 年的 Crouzeix 猜想</a>
+    </div>
+    <div class="summary">
+      北京协和医院神经外科博士后、住院医师金山木（本科地质、后转医学）自学数学，借助 GPT-5.6-Sol 约 16 小时自主运行、全程无人干预，证明了自 2004 年以来悬置 22 年的 Crouzeix 猜想，猜想提出者 Crouzeix 本人确认证明正确。这一跨界成果既轰动数学圈，也再次引爆对「AI 能否独立做研究」的讨论。
+    </div>
+    <div class="tags">
+      <span class="tag">#数学</span>
+      <span class="tag">#GPT-5.6</span>
+      <span class="tag">#Crouzeix猜想</span>
+      <span class="tag">#AI研究</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · 网易科技</div>
+    <div class="title">
+      <a href="https://www.163.com/dy/article/L49VVU9K0511ABV6.html" target="_blank">OpenAI 曝「抄袭门」：下一代模型 Astra 攻破 10 大菲奖级难题被打假</a>
+    </div>
+    <div class="summary">
+      OpenAI 下一代模型 Astra 在 10 项长期悬而未决问题上取得进展、部分成果或可入选菲尔兹奖的消息，被多位数学家指控「抄袭」、遭打假。事件与协和医生用 GPT-5.6 攻克猜想几乎同框发生，一正一反，凸显 AI 数学能力宣称与真实可信之间的裂缝正在被学界严格审视。
+    </div>
+    <div class="tags">
+      <span class="tag">#OpenAI</span>
+      <span class="tag">#Astra</span>
+      <span class="tag">#数学</span>
+      <span class="tag">#争议</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">The Decoder · arXiv · 月之暗面</div>
+    <div class="title">
+      <a href="https://arxiv.org/html/2607.24957v1" target="_blank">月之暗面发布 PerceptionBench：16 个前沿多模态模型视觉感知准确率均未达 60%</a>
+    </div>
+    <div class="summary">
+      月之暗面发布基准 PerceptionBench，将视觉感知与逻辑推理分离，用 3000 道验证题评估 10 项原子视觉技能。结果显示，含 GPT-5.6 Sol、Kimi K3、Claude Fable 5 在内的 16 个前沿模型中，最高准确率仅 59.7%（GPT-5.6 Sol），无一突破 60%。研究指出，许多被归为「推理错误」的失败，根源在图像读取阶段的感知缺陷。
+    </div>
+    <div class="tags">
+      <span class="tag">#月之暗面</span>
+      <span class="tag">#PerceptionBench</span>
+      <span class="tag">#多模态</span>
+      <span class="tag">#评测</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+    这一天最大的信号，是 <strong>Anthropic 用一份财报把 AI 商业化推向了新高度</strong>。单季 115 亿美元、同比 14 倍、首次盈利——Claude 的变现进入爆发期，而它筹备的超级 IPO（估值或达 2 万亿美元）更让华尔街开始「按 2028 年预期」给 AI 定价。这既是市场对 AI 的极端信心，也是一枚需要警惕的风险标签：当估值锚从「今天赚多少」滑向「四年后赚多少」，容错空间其实变薄了。
+    <br><br>
+    第二，<strong>开源与降本在同步「下沉」</strong>。阿里 Qwen3.8-27B 让家用显卡就能跑出 Opus 级 Agent，OpenAI 的 GPT-5.6 最小模型 Luna 成本暴降 25 倍——一大一小两个信号说的是同一件事：前沿智能的算力门槛正被一层层拆掉，「智能平民化」从口号变成了价格表。
+    <br><br>
+    第三，<strong>AI 的科研能力被放到聚光灯下检验</strong>。协和医生用 GPT-5.6 16 小时攻克 22 年 Crouzeix 猜想、Crouzeix 本人确认正确，是惊喜；OpenAI Astra 的数学成果被多位数学家指控抄袭打假，是警醒。一正一反同框出现，说明接下来「怎么给 AI 的科研贡献验真」会越来越重要——能力可以跑分，但贡献必须经得起同行审阅。
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-16</p>
+</div>
+
+</div>
+</body>
+</html>

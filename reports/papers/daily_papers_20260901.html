@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年09月01日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<!--
+  TEMPLATE STRUCTURE:
+  Replace {{PLACEHOLDERS}} with actual content.
+  
+  Sections:
+  - .header: icon, title, date, subtitle
+  - .summary-banner: one-paragraph overview of today's hot topics
+  - .section: grouped news (Headlines / Research / Industry / Open Source)
+  - .card: individual news item (source, title link, summary, tags)
+  - .hot-topic: highlighted breaking news
+  - .insights: editorial summary
+  - .footer: generation info
+-->
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年09月01日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>世界模型今天走得更深了一步——Code as Worlds 把物理世界的构成、演化与外观全部写成可执行代码，让模型真正拿到一套可验证、可干预的世界表征。编码智能体也在从“会写代码”进化到“会编排循环”：LoopArena 首次系统性评测“模型当运行时控制器”的能力。开源侧一片热闹，FrontierAgent、sepia、tokentab 等 agent 工具一周内狂揽上千 stars，编码智能体的技能生态正快速成型。架构层面还有个小争鸣：一篇论文直言“滑动窗口注意力比线性注意力更靠谱”。</p>
+</div>
+
+<!-- 🔥 今日热点 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · 可执行世界表征</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">arXiv 2608.27549 · HuggingFace Daily Papers · GitHub Code-as-World</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;"><a href="https://arxiv.org/abs/2608.27549" target="_blank" style="color:var(--accent);text-decoration:none;">Code as Worlds: Agentic Discovery of Executable World Representations for Physical Reasoning</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">现有 VLM 能“看懂”并描述物理事件，却缺少对物体状态、物理参数、动力学机制这些底层表示的显式建模，因而难以可靠推理世界如何演化、如何响应干预。Code as Worlds 提出把物理世界的构成、动态演化、视觉外观统统写成“可执行代码”，得到一个紧凑、可量化、可验证的世界表征，并配套开源仓库，把“世界模型 = 代码”这条路线做实了。</div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag hot">世界模型</span>
+<span class="tag hot">HF 40↑</span>
+<span class="tag">具身智能</span>
+<span class="tag">可执行表示</span></div>
+  </div>
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · 编码智能体基准</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">arXiv 2608.28281 · HuggingFace Daily Papers</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;"><a href="https://arxiv.org/abs/2608.28281" target="_blank" style="color:var(--accent);text-decoration:none;">LoopArena: Benchmarking Models as Runtime Controllers for Loop Engineering</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">Loop Engineering（把开发工作组织成“监控—分派—检查—决策”的循环）正成为编码智能体的新范式，但单次端到端结果无法区分“是循环引导得好，还是编码模型本身强”。LoopArena 首次把“模型作为运行时控制器”独立评测，回答一个更尖锐的问题：当模型负责编排另一个编码智能体时，它能不能盯住进度、该验证就验证、该收手就收手。</div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag hot">编码智能体</span>
+<span class="tag hot">HF 82↑</span>
+<span class="tag">基准</span>
+<span class="tag">Agent 编排</span></div>
+  </div>
+</div>
+<!-- 🧠 大模型 &amp; 推理 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 &amp; 推理</div>
+  <div class="card">
+    <div class="source">arXiv 2608.28444 · HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.28444" target="_blank">Sliding-window beats linear attention</a></div>
+    <div class="summary">为了解决二次注意力带来的显存与能耗爆炸，把 LLM 改造成线性注意力一度非常热门。这篇论文泼了盆冷水：系统对比后发现，配合合适的重缩放与训练方案，滑动窗口注意力在长上下文上反而能稳压线性注意力，质疑了“线性注意力才是出路”的主流叙事，主张长上下文架构改造要更审慎。</div>
+    <div class="tags"><span class="tag">注意力机制</span>
+<span class="tag">长上下文</span>
+<span class="tag">HF 10↑</span>
+<span class="tag">架构</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2608.28447 · cs.AI</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.28447" target="_blank">Learning to Use Tools: Reinforcement Learning for Tool-Integrated Mathematical Reasoning</a></div>
+    <div class="summary">在 Countdown 数学推理任务上系统研究“计算器工具调用”：先分析出“算错”是错误的主要来源，再用 SFT 教模型何时调用工具、如何解读返回结果，最后叠加多种 on-policy RL 目标做强化。结果显示 RL 能显著提升模型“该用工具时就用、用错时能自我纠正”的能力。</div>
+    <div class="tags"><span class="tag">工具调用</span>
+<span class="tag">RL</span>
+<span class="tag">数学推理</span>
+<span class="tag">智能体</span></div>
+  </div>
+</div>
+<!-- 🌍 具身智能 &amp; 机器人 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🌍</span>具身智能 &amp; 机器人</div>
+  <div class="card">
+    <div class="source">arXiv 2608.27550 · HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.27550" target="_blank">Beyond Data Scaling: Representation-Centric Continued Pre-training for Vision-Language-Action Models</a></div>
+    <div class="summary">机器人轨迹数据比互联网图文难扩展得多，VLA 模型的瓶颈不在“数据量”而在“表征质量”。作者提出 VLAct——一个面向 VLA 的 VLM 骨干，先在异构、多具身的机器人数据上做继续预训练，把有限的轨迹转化为可迁移的视觉-动作知识，再接入下游任务微调，用“表征优先”的思路绕开数据规模的墙。</div>
+    <div class="tags"><span class="tag">VLA</span>
+<span class="tag">机器人</span>
+<span class="tag">表征学习</span>
+<span class="tag">HF 55↑</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2608.28578 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.28578" target="_blank">Aero Hand Open: A Simulation-Ready Tendon-Driven Hand for Dexterous Manipulation Learning</a></div>
+    <div class="summary">肌腱驱动的手因为把电机移出关节而更便宜、更拟人，但也更难在仿真里精确建模、更难用强化学习训练。Aero Hand Open 开源了一款“仿真就绪”的肌腱驱动灵巧手，专门解决欠驱动传动的仿真表示难题，让灵巧操作的学习研究有了一个能真正对齐仿真实体的低成本硬件平台。</div>
+    <div class="tags"><span class="tag">灵巧手</span>
+<span class="tag">具身智能</span>
+<span class="tag">仿真</span>
+<span class="tag">开源硬件</span></div>
+  </div>
+</div>
+<!-- 👁️ 多模态 &amp; 视频生成 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态 &amp; 视频生成</div>
+  <div class="card">
+    <div class="source">arXiv 2608.28460 · HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.28460" target="_blank">LayerRecall: A State-Conditioned Memory Router for Long-Horizon Consistency in Video Generation</a></div>
+    <div class="summary">自回归视频扩散靠“最近上下文”生成块，但主体、物体、场景在长视频里会反复重现，只靠近程缓存会丢掉历史线索。作者发现视频 DiT 的不同层对“当前/近期/远期”上下文的偏好各不相同，于是提出 LayerRecall——一个状态条件化的记忆路由器，同时决定“该检索什么、该用到哪一层”，让长视频的一致性显著提升。</div>
+    <div class="tags"><span class="tag">视频生成</span>
+<span class="tag">长视频</span>
+<span class="tag">记忆路由</span>
+<span class="tag">HF 24↑</span></div>
+  </div>
+</div>
+<!-- 🔓 开源 &amp; Agent 生态 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔓</span>开源 &amp; Agent 生态</div>
+  <div class="card">
+    <div class="source">GitHub Trending · Agent 工具</div>
+    <div class="title"><a href="https://github.com/trending" target="_blank">编码智能体技能生态爆发：FrontierAgent、sepia、tokentab 领跑</a></div>
+    <div class="summary">本周 GitHub 上最热闹的是“编码智能体的技能与基础设施”：ApodexAI/FrontierAgent（★1332）开源了带原生 TUI 的 agent 框架，Nanako0129/sepia（★1226）把“去 AI 味”写成一款跨 agent 通用技能，damejan80/tokentab（★659）一键统计 Claude Code/Codex/Gemini 会话的成本。编码智能体正从“单点工具”走向可插拔、可复用的技能生态。</div>
+    <div class="tags"><span class="tag">开源</span>
+<span class="tag">编码智能体</span>
+<span class="tag">Agent Skills</span>
+<span class="tag">GitHub Trending</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>今天最让我眼前一亮的是 Code as Worlds——它把世界模型从“生成好看的视频”往前推了一步，改成“把世界写成一堆能跑的代码”，这样一来物理推理终于有了可量化、可验证的抓手，配套的开源仓库也顺势上榜 GitHub Trending。另一个有意思的现象是编码智能体的重心在转移：大家不再只卷“谁写代码快”，而是开始卷“谁能把一整条开发循环编排好”，LoopArena 就是给这场比拼立规矩的裁判。至于“滑动窗口打败线性注意力”，算是一盆冷水，提醒我们长上下文这条路没有捷径，踏踏实实做架构还是比炫技靠谱。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-09-01 08:09</p>
+</div>
+
+</div>
+</body>
+</html>

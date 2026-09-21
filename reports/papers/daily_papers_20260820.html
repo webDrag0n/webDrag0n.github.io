@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年08月20日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年08月20日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今天最响的一个词是 <strong>"Harnessed Agentic RL"</strong>——把「智能体运行框架（harness）」直接接进强化学习训练，成了大模型后训练的新范式，<strong>LEGO-RL</strong>、<strong>Agent Lightning v1.0</strong>、<strong>HarnessRisk</strong> 三篇同天集中发布，从训练、框架到安全评估一整套齐了。具身智能这边，NVIDIA 的 <strong>Hydra-0</strong> 提出用「动作流」（把机器人动作画成像素运动）做通用世界模型，机器人也能「看视频学操作」。推理侧 <strong>Recirculation</strong> 用一个训练零成本的「回流」技巧，让 Gemma3 困惑度直降 23%。开源与基准也在闷头迭代：<strong>ASI-Bench</strong> 第一次给「AGI 前夜的自主科研」立了把尺子，GitHub 上字节火山引擎的 <strong>OpenViking</strong> 继续霸榜。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 Harnessed Agentic RL · 三连发</div>
+    <div class="card">
+      <div class="source">arXiv 2608.17393 · LEGO-RL</div>
+      <div class="title"><a href="https://arxiv.org/abs/2608.17393">LEGO-RL: Harness-Native Reinforcement Learning for Coding Agents</a></div>
+      <div class="summary">针对「把编码智能体原生的 harness 环境直接拿来跑强化学习」时遇到的训练-推理不一致、奖励作弊、环境崩溃等问题，LEGO-RL 提出三大支柱：进程内 LLM 代理（capture 原始生成流做 token 级对齐、训练器侧重算 log-prob）、可扩展沙箱编排（镜像缓存 + 分阶段防作弊）、可观测训练（Live UI 轨迹诊断）。在 SWE-bench Verified 上，把稀疏 MoE 模型 Qwen3.5-35B-A3B 在 OpenHands / Claude Code / OpenCode 三个原生 harness 上分别从 64.0%/62.4%/57.2% 提到 70.4%/68.2%/66.6%，且 rollout-训练概率相关性保持在 0.99 以上。</div>
+      <div class="tags"><span class="tag hot">Agentic RL</span><span class="tag">编码智能体</span><span class="tag">MoE</span></div>
+    </div>
+    <div class="card">
+      <div class="source">arXiv 2608.17528 · Agent Lightning v1.0</div>
+      <div class="title"><a href="https://arxiv.org/abs/2608.17528">Agent Lightning v1.0: Towards Harnessed Agentic RL</a></div>
+      <div class="summary">作者系统梳理了「harnessed agentic RL」这一范式——部署时的 agent harness 直接参与模型后训练，harness（而非训练引擎）拥有环境交互循环，训练器只观察 LLM 请求-响应对序列。这一架构被 verl Uni-Agent、AReaL 2.0、slime、Polar 等框架相继采用。Agent Lightning v1.0 用约 3500 行代码实现轻量框架，只用了 6K 训练样本、中等算力，就把 Qwen3.5-9B 在 SWE-bench Verified 上从 41.8% 提到 56.4%（+14.6 分），并公开了完整可复现流程。</div>
+      <div class="tags"><span class="tag hot">开源</span><span class="tag">RL 后训练</span><span class="tag">框架</span></div>
+    </div>
+    <div class="card">
+      <div class="source">arXiv 2608.17597 · HarnessRisk</div>
+      <div class="title"><a href="https://arxiv.org/abs/2608.17597">HarnessRisk: A Lifecycle-Oriented Benchmark for Agent Harness Safety</a></div>
+      <div class="summary">harness 越重要，安全风险越值得警惕。HarnessRisk 把 agent harness 的安全拆成配置、能力扩展、运行时、状态持久化、动作控制、事件恢复六个生命周期阶段，128 个沙箱案例。跨 3 个 harness、6 个模型、14 种配置，攻击成功率从 12.6% 到 80.9% 不等，其中「Harness Configuration」是全线最脆弱环节——攻击者只需篡改安全敏感参数就能得手；而且「识别出风险」并不等于「会采取安全动作」。</div>
+      <div class="tags"><span class="tag hot">AI 安全</span><span class="tag">Benchmark</span><span class="tag">Agent</span></div>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 具身智能 · 通用世界模型</div>
+    <div class="card">
+      <div class="source">arXiv 2608.18077 · NVIDIA Isaac 等</div>
+      <div class="title"><a href="https://arxiv.org/abs/2608.18077">Hydra-0: Action Flow for Generalist World Modeling and Control</a></div>
+      <div class="summary">NVIDIA 提出 Hydra-0，用「action flow（动作流）」统一接口做通用世界模型——把机器人动作表示为像素运动，从而在跨本体、任务、环境和视频生成骨干之间学习动作后果。最佳配置相较动作条件基线，机器人运动误差降低 90.4%、物体运动误差降低 60.2%；在 RoboLab 基准上，回放与参考成功率的相关性达 r=0.96。更有意思的是它「涌现」出反向模式：从人类演示的目标物体流直接预测可执行的机器人动作，无需任务专用的专家演示。</div>
+      <div class="tags"><span class="tag hot">具身智能</span><span class="tag">世界模型</span><span class="tag">视频生成</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型与智能体</div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.17981 · 训练零成本推理增强</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.17981">Recirculation: 让前馈 Transformer 在推理时"回流"追踪状态</a></div>
+    <div class="summary">受「前馈 Transformer 的状态更新受模型深度限制」这一本质约束启发，Recirculation 引入一种特定的循环（recurrence）形式，让模型在推理时像动力系统一样追踪信念状态，且生成阶段几乎不增加延迟。它区别于链式思考（CoT）和流行的深度循环（looping）技巧，无需训练。自适应变体在 Gemma3 家族上拿下亮眼成绩：困惑度下降 23%、GSM8k 准确率提升 21%，其他下游任务也稳定提升——用模型自身「告诉」你怎么改架构，是一条很妙的思路。</div>
+    <div class="tags"><span class="tag">大模型</span><span class="tag">推理优化</span><span class="tag">免训练</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.18027 · Chain-of-Experience</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.18027">Chain-of-Experience: 让 LLM 在测试时从经验中持续变强</a></div>
+    <div class="summary">人类靠经验越做越好，LLM 呢？这篇提出 CoE（Chain-of-Experience），让模型通过自我反馈或环境信号（正确性、公开测试通过率等）在推理时累积「经验轨迹」，形成零样本之外的持续改进闭环。在数学、代码、知识三类任务、8 个模型（含 GPT-5、Gemini-2.5 Pro、Claude-4.5 Sonnet）上，仅靠自我反馈就稳定超过无反馈基线，总体提升 5.6%、API 成本降低 19%；叠加互补反馈通道还能再涨，且对弱/虚假反馈保持鲁棒。</div>
+    <div class="tags"><span class="tag">LLM</span><span class="tag">测试时学习</span><span class="tag">智能体</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.18066 · Salesforce AI Research</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.18066">On the Fragility of Self-Improving Agents: 自改进智能体的脆弱性</a></div>
+    <div class="summary">基于记忆的自改进智能体近来被吹得火热，但可靠性鲜有人深究。Salesforce 对两类记忆方法做了多轮重评估，发现两大脆弱点：其一，复杂环境与多步任务下评估本身就很吵，叠上自改进循环后噪声进一步放大；其二，改进效果高度依赖任务顺序——此前的默认排序其实偷偷塞进了一个隐式课程（curriculum），是成功的前提而非可复制的方法。他们呼吁用多轮、随机排序的压力测试协议，并强调需要让人类能有效介入监督。</div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">评估协议</span><span class="tag">可靠性</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🌐</span>多模态与生成</div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.18063 · EDITBRIDGE</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.18063">EDITBRIDGE: 忠实高效的超高清图像编辑（4K）</a></div>
+    <div class="summary">专业工作流越来越需要高清图编辑，但现有扩散模型受二次方注意力与显存所限，卡在 1K 以下。EDITBRIDGE 用 diffusion bridge 把编辑重新定义为「从低清编辑结果到高清代际的结构化数据到数据翻译」，显式以原高清图为条件保留真实细节，并引入先验引导的分块稀疏注意力，把跨图交互约束到空间对齐区域。结果是 4K 分辨率下高质量编辑，2K 提速 3.6–8.4 倍，61 秒即可完成实用级 4K 编辑。</div>
+    <div class="tags"><span class="tag">多模态</span><span class="tag">图像编辑</span><span class="tag">diffusion</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.17988 · GS-Voxel</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.17988">GS-Voxel: 免拟合的结构化隐空间，做大规模 3DGS 场景生成</a></div>
+    <div class="summary">已有可扩展的 3D 生成器大多跑在结构化张量上，而预优化的 3D 高斯泼溅（3DGS）重建却是无序、空间不规则、图元数量差异巨大的。GS-Voxel 把兼容的 3DGS 重建确定性转换成稀疏活跃体素，无需逐场景额外优化，再用 GS 专用分解 VAE 分别编码体素几何与局部高斯属性，隐空间容量随占用体素数增长。它跑通了航拍 3DGS 场景生成，并支持重叠感知的分块推理，从卫星图合成超出单块训练裁剪的大面积场景。</div>
+    <div class="tags"><span class="tag">3D 生成</span><span class="tag">3DGS</span><span class="tag">世界模型</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔓</span>开源、基准与工程</div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.17271 · ASI-Bench</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.17271">ASI-Bench: 站在超级智能黎明前的第一把尺子</a></div>
+    <div class="summary">现有基准只能测「模型能不能基于已学知识答对题」。ASI-Bench 是第一个同时测「创新探索 + 自主科研执行」的基准：40+ 专家、31000+ 人时打造，11 个科学领域 60 个项目级任务，并在同一项目内逐步撤掉人类方法论指导，看 AI 能独立走多远。18 个前沿智能体-模型组合的平均分，从「完整方法论指导」的 50.91 一路掉到「仅指定方法」的 29.10，再到「方法都要自己定」的 26.62——当前系统离端到端自主科研还差得远。</div>
+    <div class="tags"><span class="tag hot">基准</span><span class="tag">AGI/ASI</span><span class="tag">科学发现</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · volcengine (字节火山引擎)</div>
+    <div class="title"><a href="https://github.com/volcengine/OpenViking">OpenViking: 面向 AI Agent 的自进化上下文数据库</a></div>
+    <div class="summary">GitHub 日榜上，字节火山引擎的 OpenViking（约 2.9 万 stars）把 Agent 的记忆、知识 RAG 与技能统一进一个「自进化上下文数据库」，延续了近期 Agent 记忆赛道的热度；老牌顶流 MoneyPrinterTurbo（超 10 万 stars）继续霸占「一键生成短视频」头把交椅。同榜还冒出「AI 桌面宠物」「网站转 CLI 给 Agent 浏览」等有趣项目，Agent 生态正往「记忆」「技能」「降本」三个方向同时内卷。</div>
+    <div class="tags"><span class="tag hot">GitHub 热门</span><span class="tag">Agent 记忆</span><span class="tag">开源</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>今天最值得记住的，是「harnessed agentic RL」这个词正式成为一股潮——LEGO-RL、Agent Lightning、HarnessRisk 三篇同台，训练、框架、安全三件套一次配齐。它背后的逻辑很朴素：智能体不是在真空里推理，而是在一个会管工具、管上下文、管控制流的「框架」里干活，那干脆别绕开它，直接把它焊进训练循环。从结果看也确实香：6K 样本、3500 行代码就能让 9B 模型涨 14 分，这性价比让「只有大厂才玩得起 RL」的老观念有点站不住了。另一个让我眼前一亮的，是 NVIDIA 的 Hydra-0 那句「把动作画成像素」——机器人操作和视频生成共用一套视觉语言，还反过来涌现出「看着人演示就学会动作」的能力，这种「接口一统一、能力自然长出来」的设计太有美感了。推理侧的 Recirculation 也很有意思：不训模型、不改权重，光靠推理时「回流」一下就让困惑度掉 23%，说明模型结构里还藏着不少没被榨干的潜力。倒是 ASI-Bench 那组数字挺冷静——方法一撤、分数从 50 跌到 26，离「AI 自己搞科研」还有不短的路。进步是真的快，但真正的自主，可能还得多等一会儿~</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026年08月20日</p>
+</div>
+
+</div>
+</body>
+</html>

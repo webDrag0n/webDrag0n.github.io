@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年08月16日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .hot-topic .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .hot-topic .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .hot-topic .title a:hover { text-decoration: underline; }
+  .hot-topic .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .hot-topic .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .hot-topic .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .hot-topic .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .hot-topic .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年08月16日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>周末的 arXiv 静悄悄，HuggingFace Daily 和 GitHub 却热得发烫。头条是 Together AI 与普林斯顿联手祭出的推理新算法 <strong>Gambit</strong>——把「束搜索」用到「思考」层面，同等算力下数学分数再涨一截、token 却省下近七成；同一家的 <strong>Maglev</strong> 则用「滑动循环记忆」把注意力成本压到固定。Agent 这条线，Salesforce 的 <strong>DarwinX</strong> 让脚手架自己「自然选择」，冻结的模型也能越用越强；UIUC 的 <strong>LLMRouter</strong> 把「请求该交给哪个模型」做成了开源全家桶。多模态与机器人也没闲着：阿里的 <strong>LiveAnimate</strong> 让虚拟人实时活过来，上交的 <strong>H2R-Bench</strong> 给「人类视频转机器人操作」立了块基准牌。开源圈里，港大的 <strong>CLI-Anything</strong> 一天狂揽 4400+ 星，喊出「让所有软件都变成 Agent 的原生工具」。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔬</span>大模型 &amp; 推理</div>
+
+  <!-- Hot Topic -->
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.08020" target="_blank">Thought-Level Beam Search for Reasoning（Gambit）</a></div>
+    <div class="source">arXiv 2608.08020 · 2026-08-11 · Princeton + Together AI（作者含 Tri Dao）</div>
+    <div class="summary">大推理模型（LRM）越强，越暴露一个尴尬：大家拼的是「烧多少算力」，却很少想「算力该往哪儿花」。并行采样把每条轨迹当独立个体、内存压力山大；减法剪枝又让硬件空转、还不敢大胆改输出分布。<strong>Gambit</strong> 的思路很清爽——把测试时推理当成一个「带预算的算力分配问题」，在<strong>「思考」的层面做束搜索</strong>：定期剪掉没前途的轨迹、立刻从高质量前缀上分叉，用一个轻量的、只看隐状态的打分器判断哪条路值得加码。结果很漂亮：同等硬件下，HMMT-24 绝对准确率 <strong>+6.7%</strong>、AIME-25 <strong>+3.3%</strong>，吞吐翻倍多，token 消耗比并行采样<strong>最多省下 68.5%</strong>。作者里有 FlashAttention 的作者 Tri Dao——懂算力的人，果然最会省算力。</div>
+    <div class="tags">
+      <span class="tag hot">测试时计算</span>
+      <span class="tag">推理加速</span>
+      <span class="tag">束搜索</span>
+      <span class="tag">算力分配</span>
+    </div>
+  </div>
+
+  <!-- Paper -->
+  <div class="card">
+    <div class="source">arXiv 2608.02870 · 2026-08-05 · UT Austin（Bo Liu &amp; Qiang Liu，Together AI 创始人）</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.02870" target="_blank">Maglev: Sliding Recurrent Memory</a></div>
+    <div class="summary">滑动窗口注意力便宜，却只能看到一小段历史；全注意力记性好，却贵得随长度疯长。<strong>Maglev</strong> 想两头都要：一个「固定大小记忆」的循环 Transformer，既能并行训练，又能像滑动窗口一样省。它把模型拆成一对——prefiller Q 用全注意力（更强、更贵）产出「记忆目标」，decoder P 只靠滑动窗口 + 循环 K/V 注入来预测下一个 token；再用一条<strong>「记忆一致性损失」</strong>把 P 往 Q 上对齐，训练完推理时只留 P 一个人干活。更妙的是 P 和 Q 还能共享参数，进一步省显存。在验证损失和下游预训练基准上，全面压过滑动窗口和潜在循环 Transformer 基线。</div>
+    <div class="tags">
+      <span class="tag">Transformer 架构</span>
+      <span class="tag">循环记忆</span>
+      <span class="tag">长序列</span>
+      <span class="tag">训练效率</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>Agent &amp; 基础设施</div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.07545 · 2026-07-31 · Salesforce AI Research · HuggingFace Daily 66 upvotes</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.07545" target="_blank">DarwinX: Evolving Agent Harnesses Through Natural Selection</a></div>
+    <div class="summary">Agent 的能力不止藏在权重里，更藏在<strong>「脚手架」（harness）</strong>里——提示词、工具、技能、控制流。已有的自改进都是单线搜索，容易钻进局部最优、赢了这题输了那题。Salesforce 的 <strong>DarwinX</strong> 换个思路：把模型冻住，让一堆脚手架<strong>「自然选择」</strong>。一条「保留即扩展」的契约只允许不倒退的变体活下来，一个存档库保留不同血统以便重组，失败、老师、自我三种来源的证据共享同一个编辑接口。四份基准下来平均涨约 <strong>17 分</strong>：Terminal-Bench 2.1 涨到 83.2%（更强基座上到 84.7%），WebArena-Infinity 真实任务 pass@1 从 43.5% 飙到 <strong>93.0%</strong>，而且进化出的能力还能原封不动迁移到 SWE-bench Verified。冻结的模型，也能越用越聪明。</div>
+    <div class="tags">
+      <span class="tag">Agent 自进化</span>
+      <span class="tag">自然选择</span>
+      <span class="tag">脚手架</span>
+      <span class="tag">无需训练</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.06867 · 2026-08-07 · UIUC · HuggingFace Daily 94 upvotes</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.06867" target="_blank">LLMRouter: Unified Infrastructure for Developing, Evaluating, and Deploying LLM Routers</a></div>
+    <div class="summary">没有一个模型能在所有 query 和预算下都最优，所以<strong>「路由」</strong>成了降本增效的必修课。可各家路由器的定义和实现五花八门，想公平对比、想扩展都难。UIUC 的 <strong>LLMRouter</strong> 先把「LLM 路由」统一成一个五元组的序贯决策过程（上下文编码器、模型编码器、打分函数、决策规则、学习信号），覆盖单轮、多轮、个性化路由；再配套 <strong>xRouteBench</strong> 基准（通用、记忆增强、视觉、时序、个性化五类任务）和 <strong>16+ 个代表性路由器</strong>的开源模块化框架。结论很实在：学习型路由比最强固定模型<strong>强 14.6%</strong>，预算越紧，轻量路由越香，个性化路由也稳得住。</div>
+    <div class="tags">
+      <span class="tag">模型路由</span>
+      <span class="tag">成本优化</span>
+      <span class="tag">开源基础设施</span>
+      <span class="tag">xRouteBench</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🎬</span>多模态 &amp; 视频生成</div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.11745 · 2026-08-13 · 阿里 Qwen 业务单元</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.11745" target="_blank">LiveAnimate: Stable Long-Form Streaming Human Animation in Real-Time</a></div>
+    <div class="summary">姿态驱动的「数字人」动画，一直是「能看但慢」——扩散模型一张图要好几分钟，根本没法实时。阿里的 <strong>LiveAnimate</strong> 号称第一个把<strong>「实时流式」和「稳定的长程生成」做到十亿参数级别</strong>的系统：一个 14B 的视频 Diffusion Transformer，两阶段训练先对齐再精修。给一张参考图 + 一路姿态流，目标人物的视频就流式地长出来，面向直播、远程临场、虚拟主播这些真·实时场景。</div>
+    <div class="tags">
+      <span class="tag">视频生成</span>
+      <span class="tag">数字人动画</span>
+      <span class="tag">实时流式</span>
+      <span class="tag">DiT</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>具身智能 &amp; 机器人</div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.13049 · 2026-08-13 · 上海交通大学</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.13049" target="_blank">H2R-Bench: Benchmarking Human-to-Robot Manipulation Video Generation in World Models</a></div>
+    <div class="summary">机器人数据难采，人类操作视频却一抓一大把——问题是怎么把<strong>「人手」的经验搬到「机械臂」</strong>上。视频世界模型给出了一条诱人的路：从人类观察合成机器人视角的操作视频。上交的 <strong>H2R-Bench</strong> 是第一份专测这种<strong>「跨形态迁移」</strong>的基准，系统评估各大世界模型在人类→机器人操作视频生成上的表现，把这个此前基本没人探过的能力摆到了台面上，给「用人类视频喂机器人」这条路立了个可量化的标尺。</div>
+    <div class="tags">
+      <span class="tag">具身智能</span>
+      <span class="tag">世界模型</span>
+      <span class="tag">跨形态迁移</span>
+      <span class="tag">机器人操作</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.12743 · 2026-08-13 · 浙江大学 · HuggingFace Daily 30 upvotes</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.12743" target="_blank">Spatial Memory Agent: Experience-Grounded Procedure Memory for Spatial Intelligence</a></div>
+    <div class="summary">空间智能是具身 Agent、机器人规划的地基。已有路线要么微调/RL 后训练，要么让模型调外部空间工具。浙大的 <strong>Spatial Memory Agent</strong> 问了个被忽略的问题：一个<strong>「冻结的」VLM Agent</strong>，光靠经验沉淀的「过程记忆」，能不能变强？它从历史交互里提取、组织、复用空间经验，形成可调用的程序化记忆，<strong>不动权重就提升空间推理</strong>——对「模型冻结、只改系统」这一派是个漂亮的注脚，和 DarwinX 的思路遥相呼应。</div>
+    <div class="tags">
+      <span class="tag">空间智能</span>
+      <span class="tag">具身 Agent</span>
+      <span class="tag">记忆系统</span>
+      <span class="tag">VLM</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔧</span>开源进展</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · HKUDS/CLI-Anything · ⭐47344（今日 +4393）</div>
+    <div class="title"><a href="https://github.com/HKUDS/CLI-Anything" target="_blank">CLI-Anything：让所有软件都变成 Agent 的原生工具</a></div>
+    <div class="summary">今天开源圈最热闹的一条：港大 DS 实验室（LightRAG 那帮人）推出的 <strong>CLI-Anything</strong>，口号直接得很——<strong>「让所有软件都变成 Agent 的原生工具」</strong>。它把海量命令行软件包装成统一的 agent-native 接口（CLI-Hub），Agent 想用什么工具，一句话就能挂上。一天狂揽 4400+ 星、总星数冲到 4.7 万，坐稳当日 Trending。它和 DarwinX、LLMRouter 一起，串起同一条暗线：<strong>Agent 的胜负手，正在从「模型多强」转向「系统多顺手」</strong>。</div>
+    <div class="tags">
+      <span class="tag hot">GitHub Trending</span>
+      <span class="tag">开源</span>
+      <span class="tag">Agent 工具</span>
+      <span class="tag">CLI</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+  今天最戳我的，是 Together AI 一天两份作品里的同一个信号：<strong>Gambit</strong> 和 <strong>Maglev</strong> 都在回答「怎么把算力花在刀刃上」——一个在推理时挑最有前途的「思考」路径，一个用固定记忆把注意力成本摁住。Tri Dao 这帮人，总能把「省」这件事做成艺术。<br><br>
+  第二条暗线是<strong>「Agent 的系统工程时代」</strong>：DarwinX 让脚手架自然选择、LLMRouter 把路由做成全家桶、CLI-Anything 让所有软件变工具。大家不再只盯着模型权重，而是认真琢磨 prompts、工具、控制流这些「软装」——<strong>冻结的模型，也能靠系统进化越用越强</strong>。这大概就是 Agent 从「玩具」走向「基础设施」的样子。<br><br>
+  至于 <strong>LiveAnimate</strong> 和 <strong>H2R-Bench</strong>，一个让数字人实时活过来，一个给「人手经验搬给机械臂」立规矩，正好一头连着「好看」，一头连着「有用」。周末愉快，慢慢看～
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-16 CST</p>
+</div>
+
+</div>
+</body>
+</html>

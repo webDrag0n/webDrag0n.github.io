@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年08月22日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年08月22日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>8 月 22 日的中文 AI 圈，最燃的一幕发生在赛道上——第二届世界人形机器人运动会上，北京人形机器人创新中心「天卓队」百米跑出 9 秒 39，把博尔特 9 秒 58 的人类纪录甩在身后，荣耀「闪电」更在测试中飙出 9 秒 32。大模型一侧，DeepSeek 首个多模态模型「开眼」，神秘「牛来大模型」Ox Alpha 匿名刷屏 OpenRouter；开源生态里，OpenAI 全面开源 Codex Harness、Mojo 语言彻底开源。行业账本上，Anthropic 被曝拟募资超 1000 亿美元冲刺史上最大 IPO，大模型越卖越便宜背后的 8000 亿美元融资缺口，也让「泡沫论」再次抬头。</p>
+</div>
+
+<!-- 🔥 今日头条 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">🔴 BREAKING</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">观察者网 · 界面新闻 · 央视新闻 · 凤凰网</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;">
+      <a href="https://www.guancha.cn/GongSi/2026_08_22_828260.shtml" target="_blank">9秒39！人形机器人百米跑进人类纪录禁区：天卓队刷新赛会纪录，荣耀「闪电」9秒32</a>
+    </div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">
+      8 月 22 日晚，第二届世界人形机器人运动会在北京国家速滑馆「冰丝带」开幕。100 米预赛中，北京人形机器人创新中心的「天卓队」机器人跑出 9 秒 39，力压宇树等对手位列小组第一，刷新上届赛会纪录，同时把牙买加传奇博尔特保持的 9 秒 58 男子百米世界纪录甩在身后——而上一届该项目最好成绩还停在 21 秒 50，短短一年人形机器人百米成绩实现跨越式跃升。赛前测试环节，荣耀自研人形机器人「闪电」更跑出 9 秒 32、峰值速度 14.5 米/秒，成为全球首个「跑赢」博尔特的人形机器人之一。
+    </div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;">
+      <span class="tag hot">9秒39</span>
+      <span class="tag">人形机器人运动会</span>
+      <span class="tag">天卓队</span>
+      <span class="tag">荣耀闪电</span>
+      <span class="tag">破博尔特纪录</span>
+      <span class="tag">具身智能</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🧠 大模型 & 产品 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 &amp; 产品</div>
+
+  <div class="card">
+    <div class="source">新智元 · 智东西 · 量子位</div>
+    <div class="title">
+      <a href="https://zhidx.com/p/587260.html" target="_blank">DeepSeek 多模态模型「长眼」了：V4-Flash-Vision-Exp 上线，Agent 能力逼近 Opus 4.8</a>
+    </div>
+    <div class="summary">
+      8 月 21 日，DeepSeek 上线首款视觉理解模型 DeepSeek-V4-Flash-Vision-Exp，作为 V4-Flash 的实验性多模态版本：支持图文混合输入、首次开放视觉 API，多模态 Agent 评测表现接近 Opus 4.8。配套免费 Files API 存储图片，图片按 token 计费、一张图最多 384 token，单价与 V4-Flash 完全一致，被网友算成「1000 张图只要 1 块钱」——开源阵营对闭源旗舰的冲击又多了一发。
+    </div>
+    <div class="tags">
+      <span class="tag">#DeepSeek</span>
+      <span class="tag">#多模态</span>
+      <span class="tag">#视觉API</span>
+      <span class="tag">#V4-Flash</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">InfoQ · 快科技 · 新浪科技</div>
+    <div class="title">
+      <a href="https://www.infoq.cn/article/3MNJh5F34GSsRQJJWJzY" target="_blank">神秘「牛来大模型」Ox Alpha 突袭 OpenRouter：百万上下文 + 原生多模态，免费内测一周</a>
+    </div>
+    <div class="summary">
+      一款代号 Ox Alpha（stealth/ox-alpha）的匿名模型悄然出现在 OpenRouter 与 OpenCode 上：支持 100 万 token 超长上下文、原生多模态（图片+视频）、零数据保留，免费开放至 8 月 27 日。因「Ox」谐音「牛」，被网友戏称「牛来大模型」，更抢了 DeepSeek 多模态模型的头条。全行业开始「猜身份」——有人通过 tokenizer 指纹等线索，猜测其真身是智谱 GLM-5.3 或小米 MiMo。
+    </div>
+    <div class="tags">
+      <span class="tag">#OxAlpha</span>
+      <span class="tag">#牛来大模型</span>
+      <span class="tag">#OpenRouter</span>
+      <span class="tag">#匿名内测</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">IT之家 · 36氪 · SegmentFault</div>
+    <div class="title">
+      <a href="https://m.ithome.com/html/992656.htm" target="_blank">OpenAI 全面开源 Codex Harness：把驱动 Codex 的 Agent 执行框架「发动机」送你了</a>
+    </div>
+    <div class="summary">
+      OpenAI 在官方博客宣布，驱动 Codex App、CLI 与 IDE 扩展运行的底层执行框架 Codex agent harness 正式全面开源（Apache-2.0），代码放上 GitHub openai/codex，含自动化命令行工具、开发者工具包与应用服务端三模块。开发者从此可以把 Codex 的 AI 循环整合进自己的业务面板，界面、数据、权限自己说了算。总裁 Greg Brockman 转发称「Codex 能驱动的远不止编程工具」。
+    </div>
+    <div class="tags">
+      <span class="tag">#OpenAI</span>
+      <span class="tag">#Codex</span>
+      <span class="tag">#Harness</span>
+      <span class="tag">#开源</span>
+      <span class="tag">#Agent运行时</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🔓 开源 & 开发工具 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔓</span>开源 &amp; 开发工具</div>
+
+  <div class="card">
+    <div class="source">站长之家 · CSDN · IT之家</div>
+    <div class="title">
+      <a href="https://www.chinaz.com/ainews/30463.shtml" target="_blank">曾号称比 Python 快 9 万倍，Mojo 编程语言全面开源了</a>
+    </div>
+    <div class="summary">
+      Modular 正式宣布，AI 时代系统编程语言 Mojo 及其编译器、工具链等核心组件全面开源，采用带 LLVM 例外的 Apache-2.0 协议，开发者现已可查看、构建和研究 Mojo 编译器源码。这是继 8 月 11 日 Mojo 1.0 发布后，这门由 Swift 语言之父主导、曾号称「比 Python 快 9 万倍」的语言向社区交出完整答卷，社区贡献机制预计 2026 年底前开放。
+    </div>
+    <div class="tags">
+      <span class="tag">#Mojo</span>
+      <span class="tag">#Modular</span>
+      <span class="tag">#编程语言</span>
+      <span class="tag">#开源</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🤖 机器人 & 具身智能 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>机器人 &amp; 具身智能</div>
+
+  <div class="card">
+    <div class="source">央视新闻 · 新智元 · 中国证券报</div>
+    <div class="title">
+      <a href="https://news.cctv.cn/2026/08/21/ARTIvNwtdbSVIsN7Tl41JgDO260821.shtml" target="_blank">2026 世界机器人大会进入公众开放日：373 家企业、311 款新品集中亮相</a>
+    </div>
+    <div class="summary">
+      以「人机共生，产需共融」为主题的 2026 世界机器人大会于 8 月 19 日在北京亦庄开幕，8 月 22 日起进入公众开放日。本届大会吸引 373 家国内外企业、超 3000 件产品参展，311 款新品集中亮相。优必选携工业、商业、家庭消费三大场景新品登场，Walker 系列进厂「打工」——搬运零部件、上下料、拆码垛，其 VLA 模型可在端侧运行，推理效率提升 176%，人形机器人正从「走秀」转向「上班」。
+    </div>
+    <div class="tags">
+      <span class="tag">#世界机器人大会</span>
+      <span class="tag">#优必选</span>
+      <span class="tag">#人形机器人</span>
+      <span class="tag">#新品首发</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🏦 行业 & 融资 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🏦</span>行业 &amp; 融资</div>
+
+  <div class="card">
+    <div class="source">网易科技 · IT之家 · 纽约时报</div>
+    <div class="title">
+      <a href="https://www.163.com/tech/article/L4UG2N8400097U7T.html" target="_blank">Anthropic 被曝拟募资超 1000 亿美元冲刺最大 IPO，估值或达 2 万亿美元，还挖来谷歌 TPU 元老自研芯片</a>
+    </div>
+    <div class="summary">
+      8 月 22 日消息，据《纽约时报》援引知情人士，Anthropic 的 IPO 可能刷新纪录：参与上市筹备的银行家向潜在投资者表示，公司可能募资超 1000 亿美元、估值达 2 万亿美元。同时 Anthropic 被曝挖来谷歌 TPU 元老筹备自研芯片，正从「模型公司」向「模型 + 芯片 + 基础设施」的全栈方向延展，与 OpenAI 的上市竞速进入白热化。
+    </div>
+    <div class="tags">
+      <span class="tag">#Anthropic</span>
+      <span class="tag">#IPO</span>
+      <span class="tag">#募资</span>
+      <span class="tag">#自研芯片</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">每日经济新闻 · 新浪财经</div>
+    <div class="title">
+      <a href="https://finance.sina.com.cn/roll/2026-08-22/doc-inipeccu0836820.shtml" target="_blank">OpenAI 与 Anthropic 冲刺 IPO，大模型却越卖越便宜：行业融资缺口恐达 8000 亿美元</a>
+    </div>
+    <div class="summary">
+      每日经济新闻 8 月 22 日分析指出，在 OpenAI 与 Anthropic 双双冲刺 IPO 的同时，大模型定价却一路走低，行业融资缺口恐达 8000 亿美元，AI 公司开始靠债市「输血」，分析师直言「泡沫已破」。一边是估值与募资规模的狂欢，一边是商业化收入与资本开支的巨大鸿沟，AI 的「账本」正进入最关键的检验期。
+    </div>
+    <div class="tags">
+      <span class="tag">#OpenAI</span>
+      <span class="tag">#Anthropic</span>
+      <span class="tag">#IPO</span>
+      <span class="tag">#融资缺口</span>
+      <span class="tag">#泡沫</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🔐 AI安全 & 治理 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔐</span>AI安全 &amp; 治理</div>
+
+  <div class="card">
+    <div class="source">机器之心Pro · 第一财经 · 华尔街见闻</div>
+    <div class="title">
+      <a href="https://wallstreetcn.com/articles/3779744" target="_blank">OpenAI 主动「踩刹车」：因 Astra 模型逼近关键网络能力，暂停前沿 RL 训练两周、20% 算力转向安全</a>
+    </div>
+    <div class="summary">
+      OpenAI 发布官方博文《Pacing model development in an era of cyber-critical capabilities》，披露未发布模型 Astra 已触及此前设定的「关键网络安全能力」门槛，遂暂停前沿强化学习训练约两周，并把 20% 算力投入监控、对齐与隔离环境等安全体系。这是 OpenAI 首次以「安全」为前沿训练「定速」，AI 进入「越聪明越危险」阶段的讨论持续发酵。
+    </div>
+    <div class="tags">
+      <span class="tag">#OpenAI</span>
+      <span class="tag">#Astra</span>
+      <span class="tag">#AI安全</span>
+      <span class="tag">#RL训练</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+    今天最想聊的，还是那条 9 秒 39 的赛道。上一届人形机器人百米最好成绩还停在 21 秒 50，一年后直接跑进人类禁区——从「能走」到「跑赢博尔特」，具身智能的运动控制正在经历一轮肉眼可见的 Scaling。当机器人的腿追上甚至超越人类，大家关心的就不再是「能不能跑」，而是<strong>「跑这么快，然后呢」</strong>——运动智能已经通用化，下一程的胜负手，依然是那颗还没装好的「大脑」。
+    <br><br>
+    大模型这边，「牛来大模型」Ox Alpha 的匿名内测刷屏很有意思：没有发布会、没有技术报告，就一个忍者表情加一个代号，却让全行业开始「猜身份」。这种<strong>「匿名突袭」正在成为国产大模型争夺开发者心智的新打法</strong>——先把能力摆出来，再让社区自己发现你。配合 DeepSeek 补齐多模态、OpenAI 把 Harness 开源，开源生态的军备竞赛，已经从模型参数卷到了 Agent 运行时和工具链。
+    <br><br>
+    最后是行业账本。Anthropic 募资千亿美元冲刺 IPO 的传闻，和大模型「越卖越便宜」、8000 亿美元融资缺口的警告几乎同时出现——<strong>一边是估值狂欢，一边是商业化鸿沟</strong>。泡沫与否先不急着下结论，但「谁能在下一份财报里把收入和资本开支的账做平」，才是接下来所有人真正要交的答卷。
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-23</p>
+</div>
+
+</div>
+</body>
+</html>

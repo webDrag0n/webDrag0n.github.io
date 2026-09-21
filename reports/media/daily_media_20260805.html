@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年08月05日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年08月05日</div>
+  <div class="subtitle">中文AI媒体精选 · 机器之心/量子位/新智元 等</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>OpenAI 官宣下一代模型 Astra，多智能体协同攻克10道数学难题，成为本周最大焦点；DeepSeek V4-Flash 正式版 Agent 能力暴涨，国产模型持续突破；宇树科技 IPO 日程落定、字节 AI 组织大调整、月之暗面完成 35 亿美元融资——AI 产业从技术突破到资本布局全面加速。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>头条关注</div>
+
+  <div class="hot-topic">
+    <div class="label">BREAKING</div>
+    <div class="source">来源：机器之心 · 量子位 · 智东西 · 36氪 · 极客公园 · 凤凰科技 · The Information</div>
+    <div class="title"><a href="https://www.jiqizhixin.com/articles/2026-08-03" target="_blank">OpenAI 官宣下一代模型 Astra：多智能体协同，攻克10项未解数学难题</a></div>
+    <div class="summary">OpenAI 于8月2日正式披露下一代模型 Astra，该模型通过多智能体长时间协同工作解决高难度问题。其内部版本一次性攻克10项数学与理论计算机科学未解难题，覆盖高维几何、编码理论、群论、量子复杂度等8个方向，生成249页论文。CEO Sam Altman 已在华盛顿向政策制定者演示该模型，Sam Altman 称其为"丰裕经济学"战略的关键一步。外界推测 Astra 可能即为 GPT-6 或 GPT-5.7，目前尚未确定最终命名和发布时间。</div>
+    <div class="tags">
+      <span class="tag hot">重磅</span>
+      <span class="tag">#大模型</span>
+      <span class="tag">#OpenAI</span>
+      <span class="tag">#多智能体</span>
+      <span class="tag">#数学推理</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">来源：量子位 · 36氪 · 智东西 · IT之家</div>
+    <div class="title"><a href="https://www.36kr.com/p/3919224296451461" target="_blank">DeepSeek V4-Flash 正式版上线公测：Agent 能力暴涨，价格仅为 Claude 的 1/90</a></div>
+    <div class="summary">7月31日，DeepSeek-V4-Flash 正式版 API 开启公测。在模型结构不变的情况下，仅通过后训练即实现 Agent 能力大幅跃升，多项基准测试超越 V4-Pro 预览版。国家超算互联网同步接入该模型。Flash 正式版价格仅约 Claude 的 1/90，百万 Token 成本极低，被视为中小企业 AI 应用的"性价比之王"。V4-Pro 正式版预计8月初上线。</div>
+    <div class="tags">
+      <span class="tag">#大模型</span>
+      <span class="tag">#DeepSeek</span>
+      <span class="tag">#Agent</span>
+      <span class="tag">#开源</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">💰</span>资本与产业</div>
+
+  <div class="card">
+    <div class="source">来源：IT之家 · 环球网 · 金融时报 · 新浪科技</div>
+    <div class="title"><a href="https://www.ithome.com/0/984/449.htm" target="_blank">亚马逊提前完成 500 亿美元 OpenAI 投资，持股约 5%</a></div>
+    <div class="summary">亚马逊于8月1日前完成对 OpenAI 的 500 亿美元全额投资（约3382亿元人民币），持股约5%。OpenAI 当前估值达 8520 亿美元，预计 2027 年启动 IPO。AWS 成为 OpenAI Frontier 计划独家第三方云服务商。此前亚马逊已于2月投入首期150亿美元。</div>
+    <div class="tags">
+      <span class="tag">#融资</span>
+      <span class="tag">#OpenAI</span>
+      <span class="tag">#亚马逊</span>
+      <span class="tag">#云计算</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">来源：界面新闻 · 36氪 · 新浪科技 · 钛媒体</div>
+    <div class="title"><a href="https://www.jiemian.com/article/14845885.html" target="_blank">月之暗面 Kimi 完成超 35 亿美元 F 轮融资，估值升至 500 亿美元</a></div>
+    <div class="summary">月之暗面宣布完成超35亿美元F轮融资，本轮因Kimi K3（2.8万亿参数开源模型）全球爆火而超募三倍多。公司计划8月启动Pre-IPO轮融资，目标投前估值500亿美元，最快6个月内登陆港股。ARR已突破3亿美元，API收入占比超七成。半年内估值从100亿美元飙升至500亿美元。</div>
+    <div class="tags">
+      <span class="tag">#融资</span>
+      <span class="tag">#Kimi</span>
+      <span class="tag">#IPO</span>
+      <span class="tag">#开源</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">来源：量子位 · 36氪 · 证券时报 · 新华网</div>
+    <div class="title"><a href="https://www.stcn.com/article/detail/4050929.html" target="_blank">宇树科技 IPO 日程落定：8月5日询价，8月10日科创板申购</a></div>
+    <div class="summary">7月30日晚，宇树科技公告科创板上市发行安排：拟公开发行4044.64万股（占总股本10%），8月5日初步询价，8月10日网上网下申购，8月12日缴款。实控人王兴兴通过特别表决权机制控制68.78%表决权。这将是国内人形机器人领域的标志性IPO事件。</div>
+    <div class="tags">
+      <span class="tag">#IPO</span>
+      <span class="tag">#机器人</span>
+      <span class="tag">#宇树科技</span>
+      <span class="tag">#科创板</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">来源：36氪 · 虎嗅 · 观察者网 · 凤凰科技</div>
+    <div class="title"><a href="https://www.huxiu.com/article/4879517.html" target="_blank">字节跳动 AI 组织大调整：飞书豆包合并，成立新豆包产品团队</a></div>
+    <div class="summary">字节跳动7月30日启动AI业务组织调整：飞书产品团队与豆包产品团队合并为新的豆包产品团队，由赵祺统筹；飞书GTM与火山引擎合并组建ToB"创造力服务平台"。豆包月活达3.45亿居国内AI原生App榜首。此次调整旨在构建以豆包为智能核心、飞书为工作入口、火山引擎为云底座的企业AI体系。</div>
+    <div class="tags">
+      <span class="tag">#大厂动态</span>
+      <span class="tag">#字节跳动</span>
+      <span class="tag">#豆包</span>
+      <span class="tag">#组织架构</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">来源：36氪</div>
+    <div class="title"><a href="https://36kr.com/newsflashes" target="_blank">信通院：2025年中国 AI 产业规模超 1.2 万亿元，同比增长 40%</a></div>
+    <div class="summary">中国信息通信研究院最新测算显示，2025年我国人工智能产业规模超1.2万亿元，同比增长40%。截至2026年6月，AI企业数量超6600家，全球占比15%，已形成覆盖基础底座、模型框架、行业应用的完整产业体系。</div>
+    <div class="tags">
+      <span class="tag">#产业数据</span>
+      <span class="tag">#AI产业</span>
+      <span class="tag">#信通院</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">⚖️</span>政策与法律</div>
+
+  <div class="card">
+    <div class="source">来源：Reuters · Variety · IT之家 · AI科技评论</div>
+    <div class="title"><a href="https://variety.com/2026/digital/news/suno-loses-ai-lawsuit-gema-1236825010/" target="_blank">里程碑裁决：德国法院判定 Suno AI 侵犯版权，驳回合使用抗辩</a></div>
+    <div class="summary">慕尼黑地区法院7月31日裁定，AI音乐生成平台 Suno 使用德国音乐版权组织 GEMA 管理的音乐作品训练模型构成版权侵权，驳回其合理使用抗辩。法院要求 Suno 披露非法收入并赔偿损失。这是欧洲首例确认生成式AI平台训练需取得版权许可的判决，对AI音乐和法律行业具有深远影响。</div>
+    <div class="tags">
+      <span class="tag">#AI版权</span>
+      <span class="tag">#法律</span>
+      <span class="tag">#Suno</span>
+      <span class="tag">#生成式AI</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">来源：36氪 · 第一财经</div>
+    <div class="title"><a href="https://36kr.com/p/3918776472022402" target="_blank">英伟达拟提供 2500 亿美元融资担保，助力 OpenAI 10GW 数据中心建设</a></div>
+    <div class="summary">据8月1日消息，英伟达拟为 OpenAI 在俄亥俄州建设10GW超大规模数据中心提供约2500亿美元融资担保，项目总投资约5000亿美元。2026年五大科技巨头AI资本开支合计预计达7500亿美元。全球AI算力预计2028年底将达2亿枚等效H100，其中中国模型在OpenRouter全球调用份额已达63.5%。</div>
+    <div class="tags">
+      <span class="tag">#算力</span>
+      <span class="tag">#数据中心</span>
+      <span class="tag">#英伟达</span>
+      <span class="tag">#基础设施</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🚀</span>产品与应用</div>
+
+  <div class="card">
+    <div class="source">来源：极客公园 · AGI Playground 2026</div>
+    <div class="title"><a href="https://www.geekpark.net/" target="_blank">Genspark 发布 GenOffice：开源免费的本地 AI Office 客户端</a></div>
+    <div class="summary">在8月3日AGI Playground 2026大会上，Genspark创始人兼CEO景鲲发布 GenOffice——面向Windows和Mac的开源免费本地Office客户端，对标微软Office。产品定位为AI时代的全新生产力工具，体现了AI Native应用对传统办公软件的颠覆趋势。</div>
+    <div class="tags">
+      <span class="tag">#AI应用</span>
+      <span class="tag">#办公</span>
+      <span class="tag">#开源</span>
+      <span class="tag">#产品发布</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">来源：36氪 · Gartner</div>
+    <div class="title"><a href="https://36kr.com/p/3866759935572612" target="_blank">2026 年 AI 走出对话框：40% 企业应用将集成 AI Agent</a></div>
+    <div class="summary">据Gartner预测，到2026年底约40%的企业应用将集成任务专属AI Agent，而2025年这一比例尚不足5%。C端用户正将Agent嵌入日常工作流，B端渗透更为迅猛。OpenAI GPT-5.6 Luna降价80%、Terra降价20%，大模型使用成本持续下探，推动Agent应用进入规模化落地阶段。</div>
+    <div class="tags">
+      <span class="tag">#AI Agent</span>
+      <span class="tag">#企业应用</span>
+      <span class="tag">#趋势</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">来源：量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/07/460892.html" target="_blank">吴恩达发布 100% 开源个人桌面 Agent，接入 DeepSeek/Kimi 等国产模型</a></div>
+    <div class="summary">吴恩达团队近日发布个人桌面Agent，100%开源（GitHub 8000+ Star），可通过自带API Key接入OpenAI、DeepSeek、Kimi等主流模型，也支持Ollama运行本地模型。该工具可自动执行桌面操作，是AI Agent从云端走向个人计算设备的重要尝试。</div>
+    <div class="tags">
+      <span class="tag">#AI Agent</span>
+      <span class="tag">#开源</span>
+      <span class="tag">#桌面自动化</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>本周AI领域的关键信号可以用三个关键词概括：<strong>多智能体、降价普惠、资本加速</strong>。OpenAI Astra 标志着AI从"单模型聪明"进入"多模型协作"的新范式——让多个Agent在数小时甚至数天内协同攻坚复杂问题，这与年初以来行业一直讨论的Agent工程化趋势完美呼应。与此同时，GPT-5.6 和 DeepSeek V4-Flash 的大幅降价表明，大模型正从"奢侈品"变成"水电煤"，企业级AI应用的边际成本正在崩塌。国内方面，月之暗面500亿美元估值、宇树科技IPO、字节组织大调整，反映了中国AI产业从技术突破到资本变现的提速——这不再是讲故事，而是拼交付和商业化的硬实力。AI正在走出对话框，2026年下半年将是大规模落地的关键窗口期。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026年08月05日</p>
+</div>
+
+</div>
+</body>
+</html>

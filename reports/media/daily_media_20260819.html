@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年08月18日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年08月18日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>8 月 18 日的 AI 圈，主角是「钱」和「机器人」。资本侧，Anthropic 年化营收突破 650 亿美元，为 2 万亿美元史上最大 IPO 再添一把火；国内则迎来 A 股「人形机器人第一股」——宇树科技定档 8 月 19 日登陆科创板，发行市盈率高达 219 倍。但同一时刻，港股「大模型双雄」智谱、MiniMax 双双重挫逾 10%，估值分歧骤然放大。产业侧，2026 世界机器人大会 8 月 19 日开幕、150 多件新品首发，具身智能正从「秀肌肉」转向「接订单」；DeepSeek 则开始自建 GW 级数据中心、公开招聘土木老哥，AI 进化迈入「重工业时代」。</p>
+</div>
+
+<!-- 🔥 今日头条 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">🔴 BREAKING</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">智东西 · 新浪科技 · 凤凰网 · 每经 · 网易 · 搜狐</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;">
+      <a href="https://finance.sina.com.cn/tech/roll/2026-08-18/doc-inintaty3430823.shtml" target="_blank">Anthropic 年化营收突破 650 亿美元，较去年底暴增逾 6 倍，冲刺史上最大 IPO</a>
+    </div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">
+      据彭博社援引知情人士，截至 7 月底，Anthropic 的年化营收（ARR）已突破 650 亿美元（约合人民币 4381 亿元），较今年 5 月的 470 亿美元增长约 38%，更较 2025 年底的约 90 亿美元暴增逾 6 倍。所谓年化营收是按当前销售水平外推的全年规模，并非已实现收入，但即便以这一口径衡量，Anthropic 在达到数百亿美元收入后增速仍未明显放缓。这一强劲增长，为其 2 万亿美元估值、史上最大 IPO 提供了坚实支撑——Anthropic 与 OpenAI 均已提交保密上市文件，前者预计最早今年秋季登陆华尔街，先于 OpenAI。
+    </div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;">
+      <span class="tag hot">Anthropic</span>
+      <span class="tag">650亿美元</span>
+      <span class="tag">年化营收</span>
+      <span class="tag">史上最大IPO</span>
+      <span class="tag">Claude</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">每经 · 中财网 · 界面新闻 · 南都</div>
+    <div class="title">
+      <a href="https://industry.cfi.cn/p20260818000056.html" target="_blank">宇树科技定档 8 月 19 日登陆科创板，A 股迎来「人形机器人第一股」</a>
+    </div>
+    <div class="summary">
+      8 月 17 日晚，宇树科技发布 IPO 上市公告书，将于 8 月 19 日在上海证券交易所科创板挂牌。发行价 150.80 元/股，对应发行市盈率高达 219 倍，发行市值约 610 亿元；DeepSeek、腾讯等机构获得战略配售。宇树是具身智能赛道少有的已盈利企业，也是纯正的「人形机器人第一股」，其上市将为智元、银河通用、云深处等后续排队者的融资故事，打出一个二级市场的「估值锚」。
+    </div>
+    <div class="tags">
+      <span class="tag">#宇树科技</span>
+      <span class="tag">#科创板</span>
+      <span class="tag">#人形机器人第一股</span>
+      <span class="tag">#219倍市盈率</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🏦 资本 & 行业 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🏦</span>资本 &amp; 行业</div>
+
+  <div class="card">
+    <div class="source">每经AI快讯 · 同花顺 · 网易</div>
+    <div class="title">
+      <a href="https://m.10jqka.com.cn/20260818/c679035842.shtml" target="_blank">港股「大模型双雄」重挫：智谱跌超 13%，MiniMax 跌逾 10%</a>
+    </div>
+    <div class="summary">
+      8 月 18 日港股 AI 板块剧烈波动，被称为「大模型双雄」的智谱、MiniMax 双双重挫：智谱收盘跌超 13%，盘中一度跌近 17%、最低触及 1000 港元关口，MiniMax 跌幅逾 10%。从 8 月 14 日 1435 港元的阶段高点算起，智谱三个交易日最大回撤已超 30%，8 月上旬的反弹涨幅几乎全部吐回。多空消息密集碰撞之下，市场对 AI 概念股估值的分歧被骤然放大。
+    </div>
+    <div class="tags">
+      <span class="tag">#智谱</span>
+      <span class="tag">#MiniMax</span>
+      <span class="tag">#港股</span>
+      <span class="tag">#估值回调</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">网易 · 36氪</div>
+    <div class="title">
+      <a href="https://www.163.com/dy/article/L4IF31F905198AO7.html" target="_blank">银河通用 IPO 前夜突发高层「十出九进」大换血</a>
+    </div>
+    <div class="summary">
+      据报道，2026 年 7 月，估值超 200 亿的具身智能独角兽银河通用在 IPO 前夜上演「十出九进」的管理层大换血——十位高管/负责人离开、九位新面孔补位。银河通用早在 2025 年底就已完成股份制改造，市场曾传闻其筹备赴港上市，官方回应称股改仅为满足融资需求、暂无明确上市时间表。随着宇树 8 月 19 日登陆科创板，银河通用、智元、云深处等头部玩家的上市竞速，将面临更严苛的二级市场比价。
+    </div>
+    <div class="tags">
+      <span class="tag">#银河通用</span>
+      <span class="tag">#具身智能</span>
+      <span class="tag">#高管变动</span>
+      <span class="tag">#IPO</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">中新网 · 中华网 · 36氪</div>
+    <div class="title">
+      <a href="https://www.chinanews.com.cn/cj/2026/08-18/10679941.shtml" target="_blank">DeepSeek 公开招聘土木老哥：自建 GW 级数据中心，算力从租赁转向自建</a>
+    </div>
+    <div class="summary">
+      DeepSeek 官网近期上线 IDC 数据中心团队招聘，岗位涵盖电气、暖通、自动化、能源、土木等专业，工作地点包括北京、杭州和内蒙古乌兰察布。官方在招聘信息中写道「每一代人都会遇到属于自己的基础设施革命，过去是铁路、电网和互联网，今天则是支撑 AI 发展的超大规模算力集群」，并明确提及从 MW（兆瓦）到 GW（吉瓦）级基础设施的规划建设。这标志着 DeepSeek 的算力战略正从云租赁转向自建，也印证了业界「AI 进化正在迈入重工业时代」的判断。
+    </div>
+    <div class="tags">
+      <span class="tag">#DeepSeek</span>
+      <span class="tag">#数据中心</span>
+      <span class="tag">#算力基建</span>
+      <span class="tag">#GW级集群</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🤖 机器人 & 具身智能 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>机器人 &amp; 具身智能</div>
+
+  <div class="card">
+    <div class="source">新浪科技 · IT之家 · 中华网 · 光明网</div>
+    <div class="title">
+      <a href="https://finance.sina.com.cn/tech/roll/2026-08-18/doc-ininttrp7351455.shtml" target="_blank">2026 世界机器人大会 8 月 19 日开幕：150 多件新品首发，人形机器人军团来袭</a>
+    </div>
+    <div class="summary">
+      2026 世界机器人大会将于 8 月 19 日至 23 日在北京亦庄北人亦创国际会展中心举行，主题「人机共生、产需共融」，这是经国务院批准的中国机器人领域唯一国家级展会、今年已是第 11 届。本届预计展品超 2000 件、首发新品 150 多件，较去年增加约两成，还首次设置四大主题日、首次打造机器人消费街。宇树科技、优必选、银河通用、星海图、明略科技、云深处、傅利叶等代表性企业，都将带来机器人整机、具身智能与人形机器人的最新成果。
+    </div>
+    <div class="tags">
+      <span class="tag">#世界机器人大会</span>
+      <span class="tag">#人形机器人</span>
+      <span class="tag">#150+新品</span>
+      <span class="tag">#具身智能</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">中华网</div>
+    <div class="title">
+      <a href="https://news.china.com/socialgd/10000169/20260818/49683344.html" target="_blank">世界机器人大会透视产业「换挡」：从秀肌肉到接订单</a>
+    </div>
+    <div class="summary">
+      对比今年与去年的世界机器人大会资料可以发现，展会本身的结构调整，比任何单一产品发布更能说明产业走到了哪一步。报道指出，行业正在从「秀肌肉」（炫技 demo）转向「接订单」——企业开始强调可落地的场景、真实订单与量产交付能力。以「天工」为代表的人形机器人，也从单纯的行走展示走向实际作业场景。具身智能的叙事，正在从技术演示阶段，进入商业化的验证期。
+    </div>
+    <div class="tags">
+      <span class="tag">#世界机器人大会</span>
+      <span class="tag">#商业化</span>
+      <span class="tag">#天工</span>
+      <span class="tag">#产业观察</span>
+    </div>
+  </div>
+</div>
+
+<!-- 💬 观点 & 人物 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">💬</span>观点 &amp; 人物</div>
+
+  <div class="card">
+    <div class="source">果核剥壳</div>
+    <div class="title">
+      <a href="https://www.ghxi.com/ai202608181.html" target="_blank">前 OpenAI 高管 Fidji Simo：AI 终能治愈所有疾病，但光提升「智力」远远不够</a>
+    </div>
+    <div class="summary">
+      OpenAI 前高管、生物医药初创公司 Chronicle Bio 联合创始人 Fidji Simo 近日在 X 平台表示，她坚信 AI 最终有能力治愈所有疾病，但单纯提升模型「智力」并不足以达成这一目标——真正缺失的，是现实世界的数据、湿实验与临床试验所构成的验证闭环。这一观点延续了「AI for Science」从算力崇拜转向「AI × 实验」协同的讨论，也提醒业界：模型能力的跃升，必须与真实世界的反馈系统相结合才能兑现价值。
+    </div>
+    <div class="tags">
+      <span class="tag">#OpenAI</span>
+      <span class="tag">#AI4Science</span>
+      <span class="tag">#生物医药</span>
+      <span class="tag">#观点</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+    这一天最值得盯住的，是 <strong>AI 正在被「定价」</strong>。Anthropic 一份 650 亿美元的年化营收数据，把 2 万亿美元估值的 IPO 从「故事」推到了「账本」面前；国内这边，宇树以 219 倍市盈率、610 亿元市值登陆科创板，成为 A 股「人形机器人第一股」。一头是五岁独角兽的现金流狂奔，一头是硬件公司的稀缺溢价——资本对 AI 的定价，终于开始从「想象力」切换到「可量化」。
+    <br><br>
+    第二条线，是 <strong>估值分歧在骤然放大</strong>。同一个交易日，宇树高溢价上市倒计时，港股「大模型双雄」智谱、MiniMax 却双双重挫逾 10%，智谱三日回撤超 30%。二级市场正在给「模型公司」和「硬件公司」打出不同的估值逻辑：模型的内卷与商业化压力，与人形机器人的量产预期，开始分道扬镳。
+    <br><br>
+    第三条线，是 <strong>具身智能从 demo 走向订单</strong>。世界机器人大会「换挡」的观察很犀利——展会的结构调整，比任何单品发布更能说明产业阶段。当企业开始谈场景、谈订单、谈量产交付，具身智能才算真正进入商业化的起跑线。
+    <br><br>
+    最后一条轻松些：DeepSeek 招聘土木老哥、自建 GW 级数据中心，被网友调侃「土木的黄金时代回来了」。玩笑背后是个严肃信号——AI 正在从「软件工程」迈入「重工业时代」，买芯片、拿地、盖机房，每一步都是真金白银的重资产投入。这或许才是下一个阶段最硬的竞争壁垒。
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-19</p>
+</div>
+
+</div>
+</body>
+</html>

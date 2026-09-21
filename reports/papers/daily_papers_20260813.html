@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年08月13日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年08月13日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今天的头条来自一个「会思考但不出声」的小模型——BDH-CQ 用 1.5 亿参数在 ARC-AGI 上刷新了性价比纪录，把推理藏进潜空间、不再吐露思维链；大模型方面，U-OPSD 证明模型不用任何外部监督就能「自我蒸馏」，Steerling-8B 则把可解释性直接设计进训练里；多模态与具身方向，视频先验直通 4D 世界、手术机器人用无标注视频学操作、还有面向「人」的 Combodied Agent 新范式；开源圈也热闹，shadcn 官方放出了 AI 聊天模板，自改进编码 agent 迎来「孟德尔进化」。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔬</span>大模型 &amp; 推理</div>
+
+  <!-- Hot Topic -->
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.09888" target="_blank">BDH-CQ: In-Context Learning with Recurrent Latent Reasoning</a></div>
+    <div class="source">arXiv 2608.09888 · 2026-08-10 · HuggingFace Trending #1（552 upvotes）</div>
+    <div class="summary">一个只有 1.5 亿参数的小模型，却在 ARC-AGI-1 上打破了成本-精度的帕累托前沿：29.5% 的 pass@2，单任务推理成本仅 0.0007 美元。它的妙处在于「<strong>只做不说</strong>」——输入不断更新模型的循环记忆，然后在高维潜空间里迭代计算求解，全程不吐露任何中间推理步骤（CoT）。相比那些靠堆算力、吐长链的推理模型，BDH-CQ 展示了一条「藏起思维、只给答案」的性价比新路线，也为思考过程的隐私保护提供了新思路。</div>
+    <div class="tags">
+      <span class="tag hot">推理模型</span>
+      <span class="tag">潜空间推理</span>
+      <span class="tag">ARC-AGI</span>
+      <span class="tag">性价比 SOTA</span>
+    </div>
+  </div>
+
+  <!-- Paper -->
+  <div class="card">
+    <div class="source">arXiv 2608.06296 · 2026-08-09 · HuggingFace Trending #2（185 upvotes）</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.06296" target="_blank">On-Policy Self-Distillation without Any Supervision（U-OPSD）</a></div>
+    <div class="summary">「自我蒸馏」听起来很美，但现有方法总得偷偷借外力——要么靠真值标签，要么靠更强的教师模型。U-OPSD 把这个最后的依赖也砍掉了：让模型自己采样多条 rollout，用多数投票构造「伪解」，再专门在那些「自信却错了」的补全上自我蒸馏、精准纠错。在 AIME24/25、MATH500 等五个数学基准上，4B/8B 的 Qwen3 分别提升 8.5% 和 10.7%，平均超越监督式 OPSD 达 3.2%，与 GRPO 打成平手甚至略胜。代码已开源。</div>
+    <div class="tags">
+      <span class="tag">LLM 后训练</span>
+      <span class="tag">自我蒸馏</span>
+      <span class="tag">无监督</span>
+      <span class="tag">数学推理</span>
+    </div>
+  </div>
+
+  <!-- Paper -->
+  <div class="card">
+    <div class="source">arXiv 2608.07594 · 2026-08-06</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.07594" target="_blank">Scaling Inherently Interpretable Language Models（Steerling-8B）</a></div>
+    <div class="summary">可解释性长期被当成「能力的税」：先训一个黑箱，再事后费劲地逆向解释。这篇工作反其道而行——把可解释性直接作为训练约束，和语言建模目标一起优化。横跨三个数量级的算力、自回归和扩散两类模型，结论一致：<strong>可解释性随规模一起变强，而不是此消彼长</strong>。作者据此训出 Steerling-8B，一个扩散语言模型，能把任意生成 token 归因到相关输入、人类可理解的概念和训练数据上，还能「诊断→检索→概念引导纠偏」闭环修正，无需重新训练，性能却不输用 2-16 倍算力训出的同行。</div>
+    <div class="tags">
+      <span class="tag">可解释性</span>
+      <span class="tag">扩散语言模型</span>
+      <span class="tag">概念引导</span>
+      <span class="tag">Scaling Law</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🌐</span>多模态 &amp; 4D 生成</div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.10744 · 2026-08-11 · HuggingFace Trending（103 upvotes）</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.10744" target="_blank">Beyond Pixels: From Video Priors to 4D Worlds（Latent-to-4D）</a></div>
+    <div class="summary">从文字/图片直接生成「动态 3D 世界」是当下最难的生成任务之一。现有路线要么「先出视频、再重建 4D」（误差层层累积），要么把 4D 预测死死绑定在某个特定视频生成器上（换模型就得重训）。这篇工作提出直接「<strong>从潜空间到 4D</strong>」：跳过 RGB，把视频模型的去噪潜变量对齐到预训练 4D 解码器的 token 网格上。一个 checkpoint 就能在同一个 VAE 家族里的多个视频扩散模型之间无缝迁移，在 Text4D-200 / I4D-200 上全面超越 Wan+4RC 级联方案，几何和时序稳定性也更受人类评审青睐。</div>
+    <div class="tags">
+      <span class="tag">4D 生成</span>
+      <span class="tag">视频世界模型</span>
+      <span class="tag">潜空间</span>
+      <span class="tag">多模态</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.10915 · 2026-08-11 · HuggingFace Trending（167 upvotes）</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.10915" target="_blank">ComBodied Agents: a New Paradigm of Human-Centric Agentic AI</a></div>
+    <div class="summary">老人漏吃药了，软件 agent 会再发条提醒，具身机器人能把药送过去——但谁都没搞懂：老人到底是忘了、糊涂了、有副作用，还是故意不吃？这篇工作点破了当下 Agentic AI 的结构性盲区：数字 agent 只改软件状态、具身 agent 只改物理状态，<strong>「人」的演化状态与自主权，从未成为建模与干预的核心对象</strong>。ComBodied Agents 提出以人为中心的新范式，用软件、传感器、可穿戴设备和机器人作为「行动通道」，建立个人世界模型（Personal World Model），在知情同意与安全约束下预判并支撑个体状态轨迹，把个人助理、健康 agent、AI 陪伴等碎片能力统一成一个闭环。</div>
+    <div class="tags">
+      <span class="tag">具身智能</span>
+      <span class="tag">人本 AI</span>
+      <span class="tag">世界模型</span>
+      <span class="tag">新范式</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能 &amp; Agent</div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.11204 · 2026-08-11 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.11204" target="_blank">Surgical WAM: A World-Action Model for Data-Efficient Surgical Robot Learning</a></div>
+    <div class="summary">手术机器人的命门在于数据：带动作标注的遥操作轨迹又贵又难采，而内窥镜视频却便宜又海量——可惜现有方法只拿视频做仿真或评估，很少真把学到的动力学变成闭环控制。Surgical WAM（世界-动作模型）基于 Cosmos Policy 构建，一个统一生成模型同时预测未来内窥镜画面<strong>和</strong>可执行的手术动作块，先在大规模无动作视频上预训练世界模型，再用极少的标注轨迹精调。它回答了一个关键问题：在固定动作标注预算下，无动作视频预训练到底能不能提升闭环手术操作？对数据敏感的医疗机器人落地意义重大。</div>
+    <div class="tags">
+      <span class="tag">手术机器人</span>
+      <span class="tag">世界模型</span>
+      <span class="tag">数据高效</span>
+      <span class="tag">具身智能</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2608.07645 · 2026-08-07 · HuggingFace Trending</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.07645" target="_blank">Mendel Gödel Machine: Recursive Self-Improving Coding Agents via Comparative Evolution</a></div>
+    <div class="summary">会自我改写源码的编码 agent 已经不稀奇，但现有方案每次只从「一条失败轨迹」里学教训，白白浪费了 agent 存档里积攒的丰富对比信号。这篇工作把孟德尔的遗传学引入自我改进：除了常规的「单轨迹克隆变异」，新增了<strong>反应规范变异</strong>（同时综合多个任务上的轨迹来编辑自己）和<strong>跨谱系杂交</strong>（借另一谱系参考 agent 在同任务上的轨迹来改良自己）。在可加性适应度模型下有理论收敛保证，实验在 SWE-bench 和 Polyglot 上稳定提升性能、效率与泛化能力——「用别人的经验，进化自己的代码」。</div>
+    <div class="tags">
+      <span class="tag">自改进 Agent</span>
+      <span class="tag">编码 Agent</span>
+      <span class="tag">进化算法</span>
+      <span class="tag">开源</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔧</span>开源进展</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · shadcn-ui/chatbot-template · ⭐580（8月11日发布）</div>
+    <div class="title"><a href="https://github.com/shadcn-ui/chatbot-template" target="_blank">shadcn 官方 AI 聊天机器人模板</a></div>
+    <div class="summary">UI 顶流 shadcn 团队亲自下场，放出了一个极简的 AI 聊天机器人模板：基于 Next.js + AI SDK + shadcn/ui + shadcn/react 全家桶，开箱即用、结构清爽。对想快速搭一个「能聊的 AI 应用」的开发者来说，这几乎成了当下最省心的起点——把流式输出、消息历史、Markdown 渲染这些脏活累活全打包好，你只管专注自己的业务逻辑。上线三天即破 500 star，再次印证了「官方模板」在开源圈的号召力。</div>
+    <div class="tags">
+      <span class="tag">开源</span>
+      <span class="tag">AI 应用开发</span>
+      <span class="tag">shadcn</span>
+      <span class="tag">模板</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+  今天最让我眼睛一亮的，是 <strong>BDH-CQ 那条「藏着思考、只给答案」的路线</strong>。过去一年大家都在比谁推理链更长、更「透明」，它却反手把推理塞进潜空间循环里，用 1.5 亿参数打出了比肩大模型的高性价比。这背后其实藏着一个更大的问题——思维链到底是模型的「能力」，还是模型的「软肋」？昨天的研究刚证明闭源 CoT 能被窃取，今天就有工作告诉你「不出声也能想得清楚」，两相呼应，挺耐人寻味。<br><br>
+  另一条暗线是 <strong>「自我」的回归</strong>：U-OPSD 无监督自我蒸馏、Mendel Gödel Machine 的跨谱系自改进、还有满屏的自进化 agent 综述，都在说同一件事——模型正在学会<strong>只靠自己的经验、甚至别人的经验，来让自己变得更好</strong>。当「进化」不再需要人类标注和教师模型兜底，这个飞轮一旦转起来，AI 的能力增长可能就不再是我们熟悉的线性节奏了。<br><br>
+  而从 <strong>ComBodied Agents</strong> 到 <strong>Surgical WAM</strong>，AI 的视线正从「屏幕里的对话」转向「真实世界里的人与物」。以人为中心的 agent、用便宜视频学手术的机器人——2026 年的这个夏天，AI 正在悄悄把「智能」的边界，从 token 延伸到生活与身体的每一个角落。
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-13 08:15 CST</p>
+</div>
+
+</div>
+</body>
+</html>

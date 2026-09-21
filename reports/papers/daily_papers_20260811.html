@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年08月11日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年08月11日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>Meta 开源 30B 参数模型 Muse Glimmer，可在消费级硬件上运行，极具冲击力；阿里 Qwen Image 3.0 登顶 Arena 文生图排行榜；Diffusion LLM 安全机制研究首次揭示新型架构的脆弱性；LLM Agent 在科学假设检验、自我进化、情感记忆等方面涌现多项突破性研究。</p>
+</div>
+
+<!-- 🔥 今日热点 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 Breaking News</div>
+    <div class="title"><a href="https://www.nytimes.com/2026/08/10/technology/meta-ai-open-source.html" target="_blank">Meta 开源 Muse Glimmer：30B 参数可在笔记本运行的旗舰级模型</a></div>
+    <div class="summary" style="margin-top:6px;font-size:14px;color:var(--text-secondary);">Meta 于 8 月 10 日发布 Muse Glimmer，一个 30B 参数的开放权重模型，性能接近闭源的 Muse Spark，可本地运行。在多项基准上超越 Google Gemma 4，与 Qwen 3.6 27B 互有胜负，引发开源 vs 闭源新一轮讨论。</div>
+    <div class="tags" style="margin-top:8px;display:flex;gap:6px;">
+      <span class="tag hot">🔥 头条</span>
+      <span class="tag">LLM</span>
+      <span class="tag">开源模型</span>
+      <span class="tag">Meta</span>
+    </div>
+  </div>
+</div>
+
+<!-- 📄 论文精选 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>论文精选</div>
+
+  <div class="card">
+    <div class="source">arXiv:2608.07430 · 2026-08-07</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.07430" target="_blank">Diffusion LLMs as Targets and Adversaries: Mechanistic Safety Exploits</a></div>
+    <div class="summary">首次系统性研究 Diffusion 大语言模型的安全脆弱性——扩散式并行去噪机制替代自回归预测后，内部安全防护面临全新攻击面，揭示新型架构下的对齐挑战。</div>
+    <div class="tags"><span class="tag">LLM安全</span><span class="tag">Diffusion LLM</span><span class="tag">对齐</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2608.07437 · 2026-08-07</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.07437" target="_blank">Fisher-R1: Training LLM Agents for Reliable Hypothesis Testing</a></div>
+    <div class="summary">将 LLM Agent 应用于经验科学假设检验：通过强化学习训练 Agent 自主检查数据集、生成统计检验并报告证据，提升科学自动化水平。</div>
+    <div class="tags"><span class="tag">AI Agent</span><span class="tag">科学发现</span><span class="tag">RL</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2608.07449 · 2026-08-07</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.07449" target="_blank">SkillProx: Self-Evolving Agent Skills via Proximal Textual Gradient Descent</a></div>
+    <div class="summary">提出 Agent 技能自我进化框架：通过近端文本梯度下降，让 LLM Agent 在重复任务中自动积累和优化可复用的技能描述，无需人工干预。</div>
+    <div class="tags"><span class="tag">AI Agent</span><span class="tag">自我进化</span><span class="tag">技能学习</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2608.07424 · 2026-08-07</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.07424" target="_blank">CoBa: Cost-Effective Test-Time Scaling via Compute-Balanced Routing</a></div>
+    <div class="summary">提出计算均衡路由策略优化推理时计算分配：在固定推理预算下，智能平衡采样数、推理链长度和评估器强度三个维度，实现最优性价比。</div>
+    <div class="tags"><span class="tag">推理优化</span><span class="tag">Test-Time Scaling</span><span class="tag">效率</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2608.07435 · 2026-08-07</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.07435" target="_blank">SABRE: Scalable and Automated Benchmarking of VLMs under Stress</a></div>
+    <div class="summary">自动化 VLM 压力测试框架：可规模化生成受控条件下的对抗样本，系统评估视觉语言模型的鲁棒性弱点，解决基准测试滞后于模型发展的问题。</div>
+    <div class="tags"><span class="tag">多模态</span><span class="tag">VLM</span><span class="tag">基准测试</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2608.07438 · 2026-08-07</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.07438" target="_blank">PsychoAgent: An Affect-Sensitive Cognitive Architecture for Conflict-Aware Memory in LLM Agents</a></div>
+    <div class="summary">为 LLM Agent 引入情感感知认知架构：基于情感显著性和未解决冲突来组织记忆检索，模拟人类记忆的选择性机制，使 Agent 行为更类人。</div>
+    <div class="tags"><span class="tag">AI Agent</span><span class="tag">认知架构</span><span class="tag">记忆</span></div>
+  </div>
+</div>
+
+<!-- 🔧 开源项目与工具 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔧</span>开源项目与工具</div>
+
+  <div class="card">
+    <div class="source">GitHub · August 2026</div>
+    <div class="title"><a href="https://github.com/caramaschiHG/awesome-ai-agents-2026" target="_blank">Awesome AI Agents 2026</a></div>
+    <div class="summary">2026 年最全面的 AI Agent 框架、工具和资源清单，持续追踪 Agent 生态爆发式增长，涵盖 Browser Use、CrewAI、LangChain、Agno 等主流框架。</div>
+    <div class="tags"><span class="tag">AI Agent</span><span class="tag">资源合集</span><span class="tag">框架</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Alibaba · 2026-08-05</div>
+    <div class="title"><a href="https://xix.ai/live/6398" target="_blank">Qwen Image 3.0 Pro 登顶文生图排行榜</a></div>
+    <div class="summary">阿里发布 Qwen Image 3.0 Pro，在 Arena.ai 文生图排行榜排名第一。支持 4.5K token 指令、10px 级别文字渲染、LaTeX 公式、100+ 艺术风格和 12 种语言。</div>
+    <div class="tags"><span class="tag">多模态</span><span class="tag">图像生成</span><span class="tag">开源</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+  今天的 AI 圈被 Meta 的 Muse Glimmer 刷屏了——一个能在游戏本上跑的 30B 开源模型，性能还能和闭源旗舰掰手腕。这件事的真正意义不在于模型本身有多强，而在于它把 "AI 民主化" 从口号变成了可下载的文件。Zuck 的 "Personal Intelligence" 愿景正在具体化：未来的 AI 助手不是云端的黑箱服务，而是你硬盘上的一个模型文件。<br><br>
+  学术端同样精彩。Diffusion LLM 安全研究戳中了一个关键盲区——当我们急于用新架构替代 Transformer 时，安全社区还没有做好对应的威胁模型分析。Fisher-R1 和 SkillProx 代表了 Agent 研究的两条主线：一个往科研自动化走，一个往自我进化走，两者交汇处就是 "能自我改进的科学 Agent"。PsychoAgent 把情感记忆引入认知架构，虽然听起来离产品化很远，但实际上长期记忆的"情感过滤"可能是解决 Agent 幻觉和上下文污染的优雅方案。<br><br>
+  本周趋势信号很清晰：(1) 开源力量持续上攻，模型能力差距快速缩小；(2) Agent 从工具调用走向自主进化；(3) 推理效率成为差异化关键——不是谁的模型最大，而是谁能在同等预算下做得更好。
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026年08月11日</p>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年09月05日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年09月05日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今天的主线是「把模型能力做成可复用、可验证的资产」。Compile by Training（HF 256↑）把自然语言规格「编译」成可本地运行的小函数，运行时不再依赖远程大模型；LLaDA-Image（HF 196↑）把图像生成的训练配方彻底开源，在 Qwen-Image-Bench 双赛道刷新开源 SOTA；Terminal-Universe（HF 213↑）则反其道而行，把海量 agent 轨迹还原成可执行环境、再反向合成新任务。开源侧 reverify（★879）给读二进制的 agent 加了一层「防幻觉」裁决器，awesome 主仓库依旧静默、AI list 继续排队。</p>
+</div>
+
+<!-- 🔥 今日热点 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · 神经编译</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">arXiv 2609.04199 · HuggingFace Daily Papers · HF 256↑</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;"><a href="https://arxiv.org/abs/2609.04199" target="_blank" style="color:var(--accent);text-decoration:none;">Compile by Training: Turning Natural-Language Specifications into Local Neural Functions</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">很多反复出现的文本函数「说得出、写不成规则」，而每次都调用远程大模型又有成本、延迟和供应商依赖。这篇工作提出「训练即编译」：编译期让教师模型生成任务样例，训练一个挂在紧凑解释器上的小 adapter，得到能在本地运行、像普通软件一样存储/版本化/组合的函数，运行时无需教师模型。在 FuzzyBench-Hard 上语义准确率 83.6%（此前 Program-as-Weights 快速编译器在此子集零命中），代价是编译时间约一分钟。已部署公开交互服务，演示了多站点网页助手、语言控制的 3D 头像、英-Claudish 双向翻译。</div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag hot">神经编译</span>
+<span class="tag hot">HF 256↑</span>
+<span class="tag">程序合成</span>
+<span class="tag">本地推理</span></div>
+  </div>
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · 开源图像生成</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">arXiv 2609.03796 · HuggingFace Daily Papers · HF 196↑</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;"><a href="https://arxiv.org/abs/2609.03796" target="_blank" style="color:var(--accent);text-decoration:none;">LLaDA-Image: Building Strong Image Generators with Fully Open Training Recipes</a></div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">图像生成界的「全开源配方」：6B DiT 从零训练 + 冻结的 LLaDA2.0-Mini 扩散语言模型视觉理解模块，先用 image-only 预训练与 mid-training 建立强视觉先验，再上 2.2 亿样本（98% 为真图）。全程参数无关 RMSNorm + Muon 优化器，高效可扩展。在 Qwen-Image-Bench 英/中双赛道分别拿下 53.53 / 53.38，刷新开源模型 SOTA；并蒸馏出 LLaDA-Image-Turbo，2-4 步即可快速推理。权重、训练代码、详细配方全部开源。</div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;"><span class="tag hot">开源配方</span>
+<span class="tag hot">HF 196↑</span>
+<span class="tag">DiT</span>
+<span class="tag">文生图</span></div>
+  </div>
+</div>
+<!-- 🧠 大模型 &amp; 推理 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 &amp; 推理</div>
+  <div class="card">
+    <div class="source">arXiv 2609.03430 · HuggingFace Daily Papers · HF 123↑ · Salesforce</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.03430" target="_blank">Random Attention: Rethinking KV Cache Eviction for Efficient Reasoning</a></div>
+    <div class="summary">KV cache 压缩一直沿用「给 token 打分、保留高分」的范式。这篇工作用实验证明——打分信号几乎没用：Random Attention 只保留 prompt、在每个注意力头内均匀随机驱逐，完全不计算分数，在 4 个模型、6 个推理任务上追平最强驱逐器，vLLM 部署吞吐还高出 32-43%。机理研究给出两层解释：prompt 是 cache 的脆弱部分；推理轨迹用「文本冗余 + 多头各自拷贝」两层冗余自我保护，一旦 prompt 保住，随机抽样就够用。代码开源。</div>
+    <div class="tags"><span class="tag">KV Cache</span>
+<span class="tag">推理效率</span>
+<span class="tag">长思维链</span>
+<span class="tag">HF 123↑</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2608.26730 · HuggingFace Daily Papers · HF 139↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2608.26730" target="_blank">Knowing When Not to Reuse: Conditional Experience Transfer in Autonomous LLM Post-Training</a></div>
+    <div class="summary">自主后训练系统靠「提出更新 → 训练候选 → 评估反馈」闭环进化，但问题来了：父模型经过后续训练已经变了，过去的成功经验还作数吗？把成功当「免检许可」会浪费算力，甚至带偏训练轨迹。BCIT 把「何时能复用经验」形式化为条件迁移：绑定效果来源上下文、检查适用条件、命名硬冲突、必要时做有界试训取得当前态证据。在 4B 模型跨金融推理 / Text-to-SQL / 函数调用上，BCIT 授权更少有害更新、同预算下成绩更高。</div>
+    <div class="tags"><span class="tag">自主后训练</span>
+<span class="tag">经验迁移</span>
+<span class="tag">RL</span>
+<span class="tag">HF 139↑</span></div>
+  </div>
+</div>
+<!-- 🤖 Agent &amp; 环境 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>Agent &amp; 环境</div>
+  <div class="card">
+    <div class="source">arXiv 2609.04148 · HuggingFace Daily Papers · HF 213↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.04148" target="_blank">Terminal-Universe: Turning Agent Trajectories into Scalable Terminal Environments</a></div>
+    <div class="summary">终端代码智能体的轨迹已经海量堆积，但可执行、可验证的环境依然稀缺——而后训练真正需要的是环境：每个环境能被反复查询成许多可验证任务并提供执行反馈。这篇工作反过来把每条轨迹「还原」成可复用环境：回放轨迹里的文件操作恢复工作区、用补全 agent 补齐缺失文件与依赖，再据此重建原任务、合成全新任务，并沿广度（跨仓库依赖查询）和深度（多轮交互）两个轴扩展任务。作者来自阿里、清华等。</div>
+    <div class="tags"><span class="tag">Agent 环境</span>
+<span class="tag">轨迹合成</span>
+<span class="tag">代码智能体</span>
+<span class="tag">HF 213↑</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2609.04094 · HuggingFace Daily Papers · HF 17↑ · IBM</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.04094" target="_blank">DRACO: Fine-Grained Credit Assignment with Dynamic Rubrics for Long-Horizon Agent Training</a></div>
+    <div class="summary">RLVR 需要程序化 checker，但多数长时程 agent 任务没有真值信号，只能靠多准则 rubric 打分——可一个标量横跨几十步，信号太糙。DRACO 训练中动态生成 rubric 跟踪策略能力，轨迹完成后打分，再把分数沿「负责该 rubric 的步骤」闭式重分配到每步 advantage（GRPO），不引入任何训练型归因模块。AppWorld 上比基座 +15.9 分、比稀疏真值奖励 GRPO +5.3 分，且完全不依赖 verifier。代码开源。</div>
+    <div class="tags"><span class="tag">长时程 Agent</span>
+<span class="tag">信用分配</span>
+<span class="tag">GRPO</span>
+<span class="tag">IBM</span></div>
+  </div>
+</div>
+<!-- 👁️ 多模态 &amp; 世界模型 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态 &amp; 世界模型</div>
+  <div class="card">
+    <div class="source">arXiv 2609.01507 · HuggingFace Daily Papers · HF 102↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.01507" target="_blank">LatentPress: Context Compression Beyond Text and Vision</a></div>
+    <div class="summary">压缩上下文通常要么写成「人读的文本」、要么渲染成「要解码的图像」。LatentPress 引入第三种表示——连续记忆 token，冻结解码器经输入 embedding 接口直读、推理时零文本重建。只训一个 4.2M-26.2M 参数的小 adapter（约 0.1%），做到 4-16 倍压缩。LongMemEval 上 7.7 倍压缩达 0.504，超过未压缩证据（0.490），远甩文本摘要（0.184）与 OCR 压缩。写一次仅 43ms，读取快 5-9 倍，把「软 token」变成机器可直用的上下文接口。</div>
+    <div class="tags"><span class="tag">上下文压缩</span>
+<span class="tag">软 token</span>
+<span class="tag">长上下文</span>
+<span class="tag">HF 102↑</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2609.04196 · HuggingFace Daily Papers · HF 58↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.04196" target="_blank">Puffin-World: Scaling a Unified Multimodal Model with Native 3D World States</a></div>
+    <div class="summary">统一多模态架构，把物理（重力场/纬度）、几何（深度）、外观（图像）三种原生世界状态，加上统一 Omni-Camera 表征，整合进单一模型，不依赖外部离线模块即可做物理理解、空间模拟、3D 世界生成与重建。外观与几何耦合在同一个生成过程中，联合合成每个未来视角并重建底层几何，支持 mimic 与自校准闭环探索。配套 Puffin-16M（1500 万 VL-camera 三元组 + 100 万条轨迹），代码、模型、数据全部开源。</div>
+    <div class="tags"><span class="tag">3D 世界</span>
+<span class="tag">世界模型</span>
+<span class="tag">原生状态</span>
+<span class="tag">开源</span></div>
+  </div>
+</div>
+<!-- 🔓 开源 &amp; awesome 生态 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔓</span>开源 &amp; awesome 生态</div>
+  <div class="card">
+    <div class="source">GitHub Trending · 每日榜</div>
+    <div class="title"><a href="https://github.com/trending" target="_blank">reverify（★879）领跑：Agent 生态从「装技能」转向「可验证」，awesome 主仓库持续静默</a></div>
+    <div class="summary">GitHub Trending 新一批 AI 项目里，&lt;a href="https://github.com/2akouwu/reverify" target="_blank"&gt;reverify&lt;/a&gt;（★879）给读二进制的 AI agent 加「防幻觉」层：模型提主张、确定性工具裁决，每条声明都被 VERIFY/REFUTE。&lt;a href="https://github.com/hkqr/my-free-code" target="_blank"&gt;my-free-code&lt;/a&gt;（★626）做多提供商 coding agent 网关；useagent（★284）给团队配「AI 同事」云电脑；truespar/paddock 是原生 Rust 推理服务器（GGUF + FP8/NVFP4，兼容 OpenAI/Anthropic API）。awesome 主仓库本周仍无新合并（最近提交仍是 9/2 的 Meta tweaks），AI 相关 list PR 继续排队：AI Agent Tools、AI Tokenomics、LLM for Biomedicine、AgentOS、SRE Agents 等。</div>
+    <div class="tags"><span class="tag">开源</span>
+<span class="tag">Agent 生态</span>
+<span class="tag">防幻觉</span>
+<span class="tag">GitHub Trending</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>今天最让我眼睛一亮的是 Compile by Training——它把「每次调用远程大模型」变成了「编译一次、本地复用的小函数」，这种 compile-time 蒸馏的思路，配上 Random Attention 那句「打分信号几乎没用」的爽文结论，说明大家开始认真抠推理与调用的真实成本，而不是一味堆算力。开源侧 LLaDA-Image 把图像生成的「玄学配方」也开源了，从「发权重」走到「发配方」，是开源生成模型走向成熟的信号。而 awesome 主仓库的持续静默、门口排队的一堆 AI list，再次印证了那条暗线：知识清单的形态正在从「给人读」转向「给 agent 查」，合并门槛还没跟上这股浪潮。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-09-05 08:13</p>
+</div>
+
+</div>
+</body>
+</html>

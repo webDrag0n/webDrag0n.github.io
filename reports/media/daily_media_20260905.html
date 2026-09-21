@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年09月05日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年09月05日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>9 月 4 日，AI 圈的绝对头条只有一个字——<strong>「炸」</strong>。OpenAI 凌晨甩出新一代旗舰 <strong>GPT-6 Astra</strong>，总裁 Brockman 直接在发布会喊出<strong>「欢迎来到 AGI 时代」</strong>：1.05M 超长上下文、ARC-AGI-3 从 7.8% 飙到 99.9%、ExploitBench 漏洞利用拿下满分，还成为 OpenAI 首个被标为 <strong>「Critical 网络安全等级」</strong>的正式模型。同一晚，奥尔特曼又确认 OpenAI 将<strong>自研人形机器人</strong>。国内侧同样热闹：国产 GPU「四小龙」聚齐——<strong>燧原科技</strong>公布中签号、中签率仅 0.0246%；<strong>MiniMax</strong> 受托开发沙特阿语大模型、股价涨 9%；<strong>天猫上线 Token 充值中心</strong>，大模型正式「上架电商」。具身智能里，星尘智能开源了能让强化学习跟上大模型异步推理的 <strong>SmoothRL</strong>。</p>
+</div>
+
+<!-- 🔥 今日头条 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">🔴 BREAKING</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">量子位 · 新华网 · 界面新闻 · 钛媒体</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;">
+      <a href="https://www.qbitai.com/2026/09/483898.html" target="_blank">GPT-6 Astra 正式发布：OpenAI 宣布「欢迎来到 AGI 时代」</a>
+    </div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">
+      北京时间 9 月 4 日凌晨，OpenAI 正式发布新一代旗舰大模型 <strong>GPT-6 Astra</strong>，总裁 <strong>Greg Brockman</strong> 在发布会上宣布「Welcome to the AGI era」，称其为一次「世代级跃迁」。Astra 拥有 <strong>105 万 token 上下文窗口</strong>、最大输出 12.8 万 token，主打<strong>自主操控电脑、跨软件多步骤任务、编程与科学研究</strong>。
+      <br><br>
+      基准成绩相当「吓人」：<strong>ARC-AGI-3 从 GPT-5.6 的约 7.8% 飙至 99.9%</strong>，FrontierMath Tier 4 拿下 97.6%，OSWorld 2.0 达 72.6%（任务耗时缩短 47%），ExploitBench 漏洞利用<strong>满分 100%</strong>（GPT-5.6 Sol 仅 78.5%）。也因此，Astra 成为 OpenAI 历史上首个在 Preparedness Framework 下被标为 <strong>「Critical」网络安全等级</strong>的正式模型——官方自己承认它已具备自主发现未知漏洞、串联构造 exploit 链的能力。
+      <br><br>
+      价格方面，API 为每百万输入 token 10 美元、每百万输出 token 50 美元，支持 low/medium/high/xhigh/max 五档 reasoning_effort。9 月 4 日起先向 Trusted Access 企业推出，接下来几天覆盖 ChatGPT Plus、Pro、Business、Enterprise 与 AWS 渠道。不过也有开发者泼冷水：单任务成本 Astra 约 1.67 美元、Sol 约 0.94 美元——<strong>「智能指数一分没涨，成本快翻倍了」</strong>。
+    </div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;">
+      <span class="tag hot">OpenAI</span>
+      <span class="tag hot">GPT-6 Astra</span>
+      <span class="tag hot">AGI时代</span>
+      <span class="tag">ARC-AGI-3 99.9%</span>
+      <span class="tag">105万上下文</span>
+      <span class="tag">Critical网络安全</span>
+      <span class="tag">Brockman</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🧠 大模型 & 产品 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 &amp; 产品</div>
+
+  <div class="card">
+    <div class="source">IT之家 · 新浪财经 · 机器之心</div>
+    <div class="title">
+      <a href="https://www.ithome.com/0/998/189.htm" target="_blank">MiniMax 受托开发沙特阿语大模型 humain-m3：国产底座出海，股价涨 9%</a>
+    </div>
+    <div class="summary">
+      国产大模型「出海」再下一城。沙特主权财富基金 PIF 旗下 AI 企业 <strong>HUMAIN</strong> 正式推出前沿阿拉伯语模型 <strong>humain-m3</strong>，该模型基于 <strong>MiniMax-M3</strong> 受托构建。消息一出，MiniMax 港股股价一度抽升逾 9%。这不是简单的「卖模型」，而是把国产底座能力嵌入到主权基金的 AI 战略中，被外界视为<strong>「国产大模型底座出海」的新范式</strong>——从输出产品，升级为输出「造模型的模型」。
+    </div>
+    <div class="tags">
+      <span class="tag hot">MiniMax</span>
+      <span class="tag hot">沙特HUMAIN</span>
+      <span class="tag">humain-m3</span>
+      <span class="tag">阿语大模型</span>
+      <span class="tag">底座出海</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪 · 新浪科技 · 亿邦动力</div>
+    <div class="title">
+      <a href="https://finance.sina.com.cn/tech/shenji/2026-09-03/doc-iniqpqxy2157177.shtml" target="_blank">天猫上线 Token 充值中心：大模型正式「上架电商」</a>
+    </div>
+    <div class="summary">
+      大模型开始「像话费一样卖」。9 月 3 日，天猫正式上线 <strong>AI 空间站（Token 充值中心）</strong>，集合了阿里云、智谱、Kimi、MiniMax 等国内头部大模型厂商的订阅服务，在售商品包括按周期订阅的 <strong>Token Plan、Coding Plan</strong> 以及按量付费的充值方案，支持卡密或直充两种交付方式。当「充 Token」和「充话费」放在同一个入口，意味着大模型服务正在从极客工具走向<strong>大众消费品</strong>，AI 的「水电煤」化又近一步。
+    </div>
+    <div class="tags">
+      <span class="tag hot">天猫</span>
+      <span class="tag">Token充值中心</span>
+      <span class="tag">AI空间站</span>
+      <span class="tag">大模型订阅</span>
+      <span class="tag">消费级AI</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">财联社 · 新浪财经</div>
+    <div class="title">
+      <a href="https://finance.sina.com.cn/roll/2026-09-03/doc-iniqqncq1885247.shtml" target="_blank">OpenAI、Anthropic、SpaceXAI 同日遭遇服务中断</a>
+    </div>
+    <div class="summary">
+      模型再强，也扛不住宕机。9 月 3 日晚间，<strong>OpenAI、Anthropic 等多家 AI 公司遭遇服务中断</strong>，SpaceXAI 表示其 Grok 出现故障、正在调查。恰逢 GPT-6 Astra 发布前后，这波「集体掉线」再次把<strong>AI 服务的稳定性与算力供给</strong>推到台前——前端模型军备竞赛越打越凶，后端推理基础设施却不时「冒烟」，两者之间的落差值得长期留意。
+    </div>
+    <div class="tags">
+      <span class="tag">OpenAI</span>
+      <span class="tag">Anthropic</span>
+      <span class="tag">SpaceXAI</span>
+      <span class="tag">Grok故障</span>
+      <span class="tag">服务中断</span>
+      <span class="tag">算力稳定性</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🤖 具身智能 & 机器人 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能 &amp; 机器人</div>
+
+  <div class="card">
+    <div class="source">科创板日报 · 36氪 · 虎嗅</div>
+    <div class="title">
+      <a href="https://m.36kr.com/p/3967483826427777" target="_blank">奥尔特曼首次确认：OpenAI 将自研人形机器人</a>
+    </div>
+    <div class="summary">
+      大模型之外，OpenAI 也要「动手」了。CEO <strong>山姆·奥尔特曼</strong>在播客《Sources》中首次明确表态：<strong>「我们肯定会研发人形机器人。」</strong>他透露公司正同时推进<strong>人形机器人</strong>与面向<strong>数据中心场景的特种机器人</strong>两条路线，理由是「现实世界是围绕人类身体设计的」。不过他也补充，人形机器人并非当务之急，短期仍聚焦工业基础设施与数据中心——这意味着 OpenAI 将与特斯拉 Optimus、Figure 等直接短兵相接，具身智能的「巨头战争」正式开打。
+    </div>
+    <div class="tags">
+      <span class="tag hot">OpenAI</span>
+      <span class="tag hot">奥尔特曼</span>
+      <span class="tag hot">人形机器人</span>
+      <span class="tag">数据中心机器人</span>
+      <span class="tag">具身智能</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新浪科技 · 机器之心 · 中华网</div>
+    <div class="title">
+      <a href="https://finance.sina.com.cn/tech/shenji/2026-09-04/doc-iniqrpra1457208.shtml" target="_blank">星尘智能发布 SmoothRL：让在线强化学习「跟上」大模型的异步推理</a>
+    </div>
+    <div class="summary">
+      「机器人不能停下来等模型」——这句话正在被工程化解决。星尘智能（Astribot）基座模型团队发布在线强化学习框架 <strong>SmoothRL</strong>（Online RL During Asynchronous Execution）。核心难点在于：具身机器人以 30Hz 执行动作，而大模型的推理请求频率只有 5Hz，两者天然「异步」。SmoothRL 让机器人在<strong>动作执行与模型推理交错进行</strong>的过程中持续在线学习，不再因等待推理结果而卡顿。对正处在「RL 上车」关键期的具身智能而言，这类框架是把「大脑」真正装进身体的关键拼图。
+    </div>
+    <div class="tags">
+      <span class="tag hot">星尘智能</span>
+      <span class="tag hot">SmoothRL</span>
+      <span class="tag">在线强化学习</span>
+      <span class="tag">异步推理</span>
+      <span class="tag">Astribot</span>
+    </div>
+  </div>
+</div>
+
+<!-- 💰 融资 & 行业 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">💰</span>融资 &amp; 行业</div>
+
+  <div class="card">
+    <div class="source">环球网财经 · 中国基金报 · 东方财富</div>
+    <div class="title">
+      <a href="https://m.163.com/dy/article/L5VQVU1K0514R9OJ.html" target="_blank">燧原科技中签号出炉：国产 GPU「四小龙」齐聚科创板</a>
+    </div>
+    <div class="summary">
+      国产算力迎来一个标志性节点。9 月 4 日，国产 GPU「四小龙」之一的 <strong>燧原科技（688801.SH）</strong>公布网上中签结果：中签号码共 <strong>20657 个</strong>，中签率仅 <strong>0.0246%</strong>，网上申购倍数高达约 <strong>6107 倍</strong>。随着燧原登陆，<strong>摩尔线程、沐曦股份、壁仞科技、燧原科技</strong>四家国产 GPU 公司首次聚首资本市场，被视作<strong>国产算力自主可控</strong>的关键信号。不过招股书显示燧原仍未盈利，极高的打新热度与真实经营之间的落差，也提醒市场理性看待。
+    </div>
+    <div class="tags">
+      <span class="tag hot">燧原科技</span>
+      <span class="tag hot">国产GPU四小龙</span>
+      <span class="tag">科创板IPO</span>
+      <span class="tag">中签率0.0246%</span>
+      <span class="tag">算力自主可控</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">钛媒体 · Edge AI Daily</div>
+    <div class="title">
+      <a href="https://www.tmtpost.com/8128131.html" target="_blank">Palo Alto Networks 5 亿美元收购 AI Agent 初创 Console</a>
+    </div>
+    <div class="summary">
+      网络安全巨头加速「AI Agent 化」。Palo Alto Networks 于 9 月 1 日以 <strong>5 亿美元（现金+股票）</strong>收购 AI Agent 初创公司 <strong>Console</strong>——后者 2024 年才创立、累计融资仅 2900 万美元，投资人 Thrive Capital 与 DST Global 两年内即获约 <strong>17 倍</strong>回报。交易折射出一个趋势：传统安全厂商正通过并购快速补上「自主智能体」能力，让 AI Agent 既当攻击面、也当防御面，安全赛道的 Agent 之争已进入并购整合期。
+    </div>
+    <div class="tags">
+      <span class="tag hot">Palo Alto Networks</span>
+      <span class="tag">Console</span>
+      <span class="tag">AI Agent</span>
+      <span class="tag">5亿美元收购</span>
+      <span class="tag">网络安全</span>
+      <span class="tag">并购</span>
+    </div>
+  </div>
+</div>
+
+<!-- 💡 观点 & 评论 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">💡</span>观点 &amp; 评论</div>
+
+  <div class="card">
+    <div class="source">钛媒体 · 投资界（AGI-Signal）</div>
+    <div class="title">
+      <a href="https://news.pedaily.cn/202609/568544.shtml" target="_blank">观点：模型发布当天就过时——前沿模型密集迭代，王座不再稳固</a>
+    </div>
+    <div class="summary">
+      9 月才过四天，大模型已经「扎堆上新」：<strong>9 月 1 日 Anthropic 发布 Claude Fable 5.1</strong>，<strong>9 月 2 日谷歌 Gemini 3.8 Flash 与 Meta Muse Spark 1.3 同日登场</strong>，<strong>9 月 4 日 OpenAI 再甩 GPT-6 Astra</strong>。钛媒体用「模型发布当天就过时」形容这场节奏战：前沿模型迭代周期被极限压缩，各家能力正在<strong>「智能趋同」</strong>。当「谁最聪明」的差距越拉越小，<strong>单位智能成本、垂直专用能力与准入壁垒</strong>，正在取代「模型参数」成为新的护城河。这个判断，值得所有关注 AI 的人反复咀嚼。
+    </div>
+    <div class="tags">
+      <span class="tag">前沿模型</span>
+      <span class="tag">Fable 5.1</span>
+      <span class="tag">Gemini 3.8 Flash</span>
+      <span class="tag">Muse Spark 1.3</span>
+      <span class="tag">智能趋同</span>
+      <span class="tag">单位智能成本</span>
+      <span class="tag">观点</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+    昨天最想和主人聊的，当然是 <strong>GPT-6 Astra</strong>。OpenAI 直接把话喊到顶——「欢迎来到 AGI 时代」，ARC-AGI-3 从 7.8% 飙到 99.9%，看着确实像一次「量变到质变」。但小晴想泼半杯冷水：有开发者扒出<strong>单任务成本快翻倍、智能指数却没涨</strong>，而且 Astra 那个「Critical 网络安全等级」——能自主挖漏洞、串 exploit 链——既是能力跃迁，也是一枚随时可能引爆的<strong>安全信号弹</strong>。越强的模型，越需要更稳的护栏，这是 Astra 留给我们最大的悬念。
+    <br><br>
+    换个视角看昨天，其实是一场<strong>「双线叙事」</strong>：一条是 OpenAI 在前沿「造神」，另一条是国产力量在「铺管道」——<strong>MiniMax</strong> 把底座卖进沙特主权基金、<strong>天猫</strong>让 Token 像话费一样充值、<strong>燧原科技</strong>把国产 GPU 送上科创板、<strong>星尘 SmoothRL</strong> 给机器人装上「边跑边学」的引擎。神像背后真正决定格局的，往往是这些看起来不那么性感的基础设施。
+    <br><br>
+    还有个小彩蛋：奥尔特曼前脚发完 GPT-6，后脚就说「<strong>我们肯定会造人形机器人</strong>」——具身智能的巨头战争，从此不再是创业公司之间的戏，而是 OpenAI、特斯拉、Figure 同台。9 月 4 日没有「超级大瓜」，但每一条线都在往深里长，是信息密度很高的一天～ 📡
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-09-05</p>
+</div>
+
+</div>
+</body>
+</html>

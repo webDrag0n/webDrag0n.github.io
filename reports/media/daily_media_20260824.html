@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年08月23日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年08月23日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>8 月 23 日，中文 AI 圈的主场依旧在「冰丝带」——世界人形机器人运动会进入第二个比赛日，人形机器人中短跑成绩在一年内全面超越人类，1500 米、400 米、跳高接连刷新纪录，配套发布的产业报告更显示中国出货量占全球 97%。赛场之外，英伟达被曝 AI 服务器明年涨价超 15%，1GW 数据中心成本要多掏 50 亿美元；匿名「牛来大模型」Ox Alpha 的身份被网友用 tokenizer、视频编码一路「扒」向智谱与谷歌；银河通用人形机器人首次全球直播全自主网球对打，打出「AstraTennis 时刻」；DeepSeek 则把 API 周末计费统一按低谷价算，给开发者送上一份周末福利。</p>
+</div>
+
+<!-- 🔥 今日头条 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">🔴 BREAKING</div>
+    <div class="source" style="font-size:12px;color:var(--text-secondary);margin-bottom:4px;">新华网 · 央视网 · 新京报 · 新华报业网</div>
+    <div class="title" style="font-size:16px;font-weight:600;margin-bottom:6px;">
+      <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE5YRFY0VVgzU2h5b3VfbWZYRUUwWmU0RjhkMzRuS1gwWnJJWTR0bDFBSmVERF9wLWZFWmRTbFZMcENEeEJpaTFGdU9YN2lHUXBVZ3Q3V3VzTnFKck0wQWdGSDNzMy1LYTd3SnlGX1gwODhSVlpWamhULQ?oc=5" target="_blank">人形机器人中短跑一年内全面超越人类：1500米2分21秒63、跳高腾空2.88米，多项纪录接连刷新</a>
+    </div>
+    <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-bottom:8px;">
+      第二届世界人形机器人运动会进入第二个比赛日，来自 16 个国家的 666 支赛队、2056 台机器人在北京国家速滑馆「冰丝带」继续竞逐。继百米跑进「9 秒时代」后，中长跑再传捷报：北京人形机器人创新中心「天卓队」以 2 分 21 秒 63 夺得 1500 米冠军，成绩「远超首届、超越人类」；400 米项目「天工」夺冠、荣耀「闪电」摘银；跳高腾空高度达 2.8843 米。新京报据此点题——<strong>机器人中短跑成绩一年内全面超越人类</strong>，同时发布的《2026 年人形机器人产业发展报告》显示，中国人形机器人出货量已超 4 万台、全球占比达 97%，2027 年北京亦庄人形机器人半马全球招募同步启动。
+    </div>
+    <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;">
+      <span class="tag hot">1500米2分21秒63</span>
+      <span class="tag">人形机器人运动会</span>
+      <span class="tag">天卓队</span>
+      <span class="tag">超人类纪录</span>
+      <span class="tag">全球占比97%</span>
+      <span class="tag">具身智能</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🧠 大模型 & 产品 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 &amp; 产品</div>
+
+  <div class="card">
+    <div class="source">量子位 · 观察者网 · 华尔街见闻 · 电子工程专辑</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/08/478164.html" target="_blank">英伟达被曝 AI 服务器明年涨价超 15%：1GW 数据中心成本激增 50 亿美元</a>
+    </div>
+    <div class="summary">
+      据彭博社与 The Information 消息，英伟达已通知部分大客户，明年初交付的 AI 服务器价格将上调 15% 以上，涉及 Grace Blackwell 300 与下一代 Vera Rubin 200，部分系统涨幅约 17%。按现价模型估算，一座 1GW 级数据中心光是这轮加价就要多掏至少 50 亿美元。起因是内存芯片成本飙升——TrendForce 预计 2026 年 Q2 传统 DRAM 合约价环比涨 58%~63%，HBM 扩产又持续挤压普通服务器内存产能。从消费级 RTX 50 到专业卡 RTX PRO 6000，再到整柜 AI 服务器，英伟达产品线 2026 年已出现三轮全线涨价。
+    </div>
+    <div class="tags">
+      <span class="tag">#英伟达</span>
+      <span class="tag">#AI服务器涨价</span>
+      <span class="tag">#VeraRubin</span>
+      <span class="tag">#内存成本</span>
+      <span class="tag">#算力成本</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/08/478191.html" target="_blank">匿名「牛来大模型」Ox Alpha 被扒出「智谱血缘」：tokenizer、视频编码、API 报错全对上</a>
+    </div>
+    <div class="summary">
+      刷屏全球的匿名模型 Ox Alpha（网友昵称「牛来大模型」）身份之谜又有新进展。社区开发者祭出「数字 DNA 鉴定」：Ox Alpha 与 GLM-5.3 的 tokenizer 计数呈固定偏移关系、与 GLM-5V-Turbo 在 4 段受控视频上的 token 预算逐项吻合，连错误码「[1210] The temperature parameter is illegal」都与智谱服务相似，甚至有人声称在输出中捕捉到「trained by Z.ai」残留。不过剧情随后又拐向谷歌——Gemini 3.5 Pro 迟迟未发布，DeepMind 员工近两日社交动态给网友留足了想象空间。今年 2 月 OpenRouter 上的匿名模型 Pony Alpha 最终被证实就是 GLM-5 早期版，这次会是「智谱，你又来了」吗？
+    </div>
+    <div class="tags">
+      <span class="tag">#OxAlpha</span>
+      <span class="tag">#牛来大模型</span>
+      <span class="tag">#智谱</span>
+      <span class="tag">#匿名内测</span>
+      <span class="tag">#tokenizer指纹</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">AI早报 · DeepSeek官方</div>
+    <div class="title">
+      <a href="https://daily.juya.uk/issues/2026-08-23/" target="_blank">DeepSeek 调整 API 计费：周末全天统一按低谷价，开发者喜提「周末福利」</a>
+    </div>
+    <div class="summary">
+      DeepSeek 宣布自 8 月 23 日零时起，API 计费规则调整：周末（周六、周日）全天不再区分峰谷时段，统一按低谷时段价格收取调用费用；工作日继续执行原有峰谷分段计费。官方称此举旨在让用户在周末更灵活安排业务、无需担心高峰成本，同时平衡全网算力负载。此前 DeepSeek-V4 系列 8 月 17 日已启用峰谷定价（最高涨幅曾达 1100%），此番周末统一按低谷价，被开发者视作一次务实的价格让利。
+    </div>
+    <div class="tags">
+      <span class="tag">#DeepSeek</span>
+      <span class="tag">#API定价</span>
+      <span class="tag">#峰谷计费</span>
+      <span class="tag">#价格调整</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🤖 机器人 & 具身智能 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>机器人 &amp; 具身智能</div>
+
+  <div class="card">
+    <div class="source">量子位 · 央视新闻</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/08/478093.html" target="_blank">全球首次！人形机器人迎战网球运动员：极限救球、摔倒光速弹起，银河通用打出「AstraTennis 时刻」</a>
+    </div>
+    <div class="summary">
+      世界人形机器人运动会开幕现场，银河通用机器人受邀参加机器人网球比赛，与网坛顶尖运动员同台竞技并由央视面向全球直播——这是全球首次通过大型赛事直播，完整呈现人形机器人全自主网球对打。场上机器人自主跑动、判断、击球，正手、反手、发球、接发、底线调动、网前截击悉数展现，与人类队友实时协作，在高速攻防中完成极限救球，摔倒后还能自主站起继续比赛。量子位将其比作「十年后的 AstraTennis 时刻」：十年前 AlphaGo 走赢棋盘，十年后 AI 开始挑战真实物理世界的高速实时博弈。
+    </div>
+    <div class="tags">
+      <span class="tag">#银河通用</span>
+      <span class="tag">#AstraTennis</span>
+      <span class="tag">#人形机器人</span>
+      <span class="tag">#物理AI</span>
+      <span class="tag">#全球首秀</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/08/478319.html" target="_blank">WRC 唯一真「人机共生」展台是家机器人咖啡店：无界动力把店直接开进展馆</a>
+    </div>
+    <div class="summary">
+      世界机器人大会现场，无界动力联合韩国咖啡连锁 HOLLYS 在展馆开出一家「真」咖啡店：吧台机械臂手冲、真人咖啡师拉花、轮式半人形机器人服务员端杯穿行、绕开观众与私人物品、收杯清桌后还给自己做手部消毒——全程无预设轨迹、无表演剧本。公司已在一家高端咖啡店完成试运营才搬来 WRC。这家由前地平线副总裁张玉峰创办的公司，全栈自研「大脑+本体+核心部件」，K15 机器人 7 月拿下全球首个工业级 CE 认证，上半年累计融资数亿美元、对外公布订单 7 亿元。
+    </div>
+    <div class="tags">
+      <span class="tag">#无界动力</span>
+      <span class="tag">#WRC2026</span>
+      <span class="tag">#具身智能</span>
+      <span class="tag">#机器人咖啡店</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 东吴证券</div>
+    <div class="title">
+      <a href="https://www.qbitai.com/2026/08/478017.html" target="_blank">上纬新材「启元 Q1/T1」个人机器人开启预订：消费级人形机器人加速走出「样品时代」</a>
+    </div>
+    <div class="summary">
+      8 月 23 日，上纬新材旗下启元机器人正式开启启元 Q1、T1 双产品预订，预计 9 月首发发货：Q1 为全球首个小尺寸全身力控人形机器人（88cm/15kg），T1 为全球首个可变形个人机器人（可轮足、四足形态切换）。公司半年报显示，消费级具身机器人预收货款已达 2.1 亿元、研发投入 1.6 亿元，并与蓝思科技落地万台级产线合作。在商务部「人工智能+消费」政策与 WRC 多家 C 端新品集中亮相的背景下，行业正从「被体验」走向「被购买」的关键窗口期。
+    </div>
+    <div class="tags">
+      <span class="tag">#上纬新材</span>
+      <span class="tag">#消费级机器人</span>
+      <span class="tag">#启元Q1</span>
+      <span class="tag">#C端落地</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🔓 开源 & 开发工具 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔓</span>开源 &amp; 开发工具</div>
+
+  <div class="card">
+    <div class="source">AI早报 · Firecrawl官方</div>
+    <div class="title">
+      <a href="https://firecrawl.dev/developer-index" target="_blank">Firecrawl 上线「Developer Index」：编程 Agent 专用检索索引，覆盖 7000 万+一手来源</a>
+    </div>
+    <div class="summary">
+      Firecrawl 推出面向编程 Agent 的专用检索索引 Firecrawl Developer Index，覆盖超 7000 万个一手来源（仓库、文档、issue、已合并 PR、README），让 Agent 能自行回答代码行为、API 契约、报错信息和已知 bug。官方称其在 1179 条真实开发者查询上达到 63% 的 recall@10，比次优外部服务商高出约 10%，并已开源 benchmark（github.com/firecrawl/benchmark-devdex）。
+    </div>
+    <div class="tags">
+      <span class="tag">#Firecrawl</span>
+      <span class="tag">#DeveloperIndex</span>
+      <span class="tag">#编程Agent</span>
+      <span class="tag">#RAG</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">AI早报 · Charlie Marsh</div>
+    <div class="title">
+      <a href="https://x.com/charliermarsh/status/2090924566923067490" target="_blank">uv 作者 Charlie Marsh 重做 Codex CLI 启动流程，速度提升约 25 倍</a>
+    </div>
+    <div class="summary">
+      已加入 OpenAI 的 Python 工具 uv 作者 Charlie Marsh 表示，他在最新版 Codex CLI 中重做了启动生命周期，使 codex 启动「即时完成」、速度约为原来的 25 倍，并可立即响应，该优化已随新版发布。此外 Codex 负责人 Tibo 也回应了部分用户缓存命中率下滑、额度消耗加快的问题，称团队正排查日志与监控面板，后续将发布说明。
+    </div>
+    <div class="tags">
+      <span class="tag">#CodexCLI</span>
+      <span class="tag">#CharlieMarsh</span>
+      <span class="tag">#OpenAI</span>
+      <span class="tag">#启动提速</span>
+    </div>
+  </div>
+</div>
+
+<!-- 💬 行业 & 观点 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">💬</span>行业 &amp; 观点</div>
+
+  <div class="card">
+    <div class="source">AI早报 · Anthropic · Cursor</div>
+    <div class="title">
+      <a href="https://daily.juya.uk/issues/2026-08-23/" target="_blank">Anthropic 回应 Claude Code「降智」质疑，Cursor 调整 SuperGrok Heavy 权益</a>
+    </div>
+    <div class="summary">
+      针对 Claude Code 在「high」推理强度档显示「10」的降智质疑，Anthropic 成员 Thariq 澄清这是 API 服务配置测试造成的数值映射差异，用户所选努力等级不变、内部评估未见性能回退，并承认 Opus 5 表现「尖峰化（spiky）」，让模型更一致是团队高优先级目标。同日，Cursor 官方文档调整：关联 SuperGrok Heavy 仅获 Grok Bot 用量，不再附赠 Cursor Ultra，已激活的老账号不受影响。大模型「用量与权益」的账，正被开发者越算越细。
+    </div>
+    <div class="tags">
+      <span class="tag">#Anthropic</span>
+      <span class="tag">#ClaudeCode</span>
+      <span class="tag">#降智质疑</span>
+      <span class="tag">#Cursor</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>
+    今天最想聊的，还是那条不断被刷新的赛道。昨天百米刚跑进 9 秒 39，今天 1500 米、400 米、跳高又接连超人类纪录——<strong>一年时间，人形机器人从「中短跑全面落后」到「全面超越」</strong>，配合「出货量 4 万台、全球占比 97%」那份报告，具身智能的「运动智能」确实已经通用化、商品化了。但越是这样，越该回头想想昨天提的那个问题：跑得飞快之后，那颗「大脑」装好了吗？
+    <br><br>
+    赛场外，英伟达 15% 的涨价像一记闷棍敲在算力成本上。<strong>内存供需失衡正在把成本压力从芯片一路传导到每一座数据中心</strong>——1GW 多掏 50 亿美元，最终都要摊进每个 token 的价格里。一边是 DeepSeek 周末统一低谷价「让利」，一边是上游硬件「涨价」，AI 的成本叙事正在变得越来越割裂，也越发考验每家公司的算力账本。
+    <br><br>
+    最后是那个还没揭晓的悬念：「牛来大模型」Ox Alpha 到底是谁家的牛？tokenizer、视频编码、API 报错一路指向智谱，剧情又拐向迟迟不露面的 Gemini 3.5 Pro。<strong>「匿名突袭 + 全民鉴宝」正在成为大模型发布的新常态</strong>——先不说是谁，让社区自己把你认出来，这可能是比发布会更聪明的营销。答案揭晓前，就让子弹再飞一会儿吧。
+  </p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-08-24</p>
+</div>
+
+</div>
+</body>
+</html>

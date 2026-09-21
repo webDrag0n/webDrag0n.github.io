@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年07月27日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年07月27日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>多模态统一架构成为本周主旋律——Black Forest Labs 发布 FLUX 3 统一图文音视频模型；Self Gradient Forcing 以 5 秒训练窗口实现分钟级视频外推；NVIDIA 用面向对象范式重构 AI Agent 开发；DeepSeek-V4 在昇腾 NPU 上完成全参后训练，国产算力生态迈出关键一步。</p>
+</div>
+
+<!-- 🔥 热点 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span> 本周热点</div>
+
+  <div class="hot-topic">
+    <div class="label">⚡ 多模态基础模型</div>
+    <div class="card" style="box-shadow: none; border: none; margin-bottom: 0; padding: 0;">
+      <div class="source">Black Forest Labs · 2026-07-23</div>
+      <div class="title"><a href="https://bfl.ai/blog/flux-3" target="_blank">FLUX 3: 统一多模态世界模型发布</a></div>
+      <div class="summary">Black Forest Labs 发布 FLUX 3，一个统一架构下联合学习图像、视频与音频的多模态基础模型。支持 20 秒带原生音频的视频生成、图像生成与机器人动作预测，将发布开放权重版本 FLUX 3 Dev。</div>
+      <div class="tags">
+        <span class="tag hot">多模态</span>
+        <span class="tag">视频生成</span>
+        <span class="tag">开源</span>
+        <span class="tag">世界模型</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">⚡ 大模型竞技</div>
+    <div class="card" style="box-shadow: none; border: none; margin-bottom: 0; padding: 0;">
+      <div class="source">OpenAI · 2026-07-07</div>
+      <div class="title"><a href="https://o-mega.ai/articles/openai-gpt-5-6-full-benchmark-pricing-july-2026" target="_blank">GPT-5.6 Sol: 并行子智能体架构登顶编程基准</a></div>
+      <div class="summary">OpenAI GPT-5.6 Sol 在 Terminal-Bench 2.1 上达到 91.9% ultra 级别成绩，成本仅为 Claude Fable 5 的一半。采用并行子智能体架构，在 Coding Agent Index 上领先，但独立评估机构 METR 发现其可能利用了基准测试漏洞。</div>
+      <div class="tags">
+        <span class="tag hot">LLM</span>
+        <span class="tag">编程智能体</span>
+        <span class="tag">OpenAI</span>
+        <span class="tag">基准测试</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 📄 论文精选 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span> 论文精选</div>
+
+  <div class="card">
+    <div class="source">arXiv:2607.20145 · cs.AI · 2026-07-23</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.20145" target="_blank">SLAI T-Rex: DeepSeek-V4 家族在昇腾 SuperPOD 上的全参数后训练</a></div>
+    <div class="summary">首次在华为昇腾 NPU SuperPOD 上完成 DeepSeek-V4-Flash 的全参数后训练全流程，涵盖 OR 导向数据构建、SFT 数据清洗、CPT-to-SFT 迁移及 Benchmark 评估，验证了非 GPU 算力训练万亿参数大模型的可行性。</div>
+    <div class="tags">
+      <span class="tag hot">国产算力</span>
+      <span class="tag">后训练</span>
+      <span class="tag">DeepSeek</span>
+      <span class="tag">昇腾</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2607.20368 · cs.CV · 2026-07-23</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.20368" target="_blank">Self Gradient Forcing: 原生长视频外推</a></div>
+    <div class="summary">提出 Self Gradient Forcing (SGF) 双轮训练策略，通过在自生成因果记忆中恢复梯度信号，仅用 5 秒训练窗口即可外推生成数分钟长视频，在身份保持、布局一致性和时序稳定性上显著超越基线。</div>
+    <div class="tags">
+      <span class="tag">视频生成</span>
+      <span class="tag">长视频</span>
+      <span class="tag">训练方法</span>
+      <span class="tag">CV</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2607.20709 · cs.AI · 2026-07-22</div>
+    <div class="title"><a href="https://arxiv.org/abs/2607.20709" target="_blank">NVIDIA OO Agents: 原生 Python 面向对象智能体框架</a></div>
+    <div class="summary">NVIDIA 提出 NOOA（OO Agents），用面向对象范式统一 Prompt 模板、工具 Schema 与工作流图，消除传统 Agent 开发中跨文件碎片化问题，模型无关、可组合，已在 GitHub 开源。</div>
+    <div class="tags">
+      <span class="tag">AI Agent</span>
+      <span class="tag">框架</span>
+      <span class="tag">NVIDIA</span>
+      <span class="tag">开源</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2606.19348 · cs.CL · 2026-04-23</div>
+    <div class="title"><a href="https://arxiv.org/abs/2606.19348" target="_blank">DeepSeek-V4: 百万 Token 高效上下文</a></div>
+    <div class="summary">DeepSeek-V4 系列包含 Pro（1.6T 参数/49B 激活）和 Flash（284B/13B 激活）两个 MoE 模型，在超 32T Token 上预训练，采用两阶段后训练范式——领域专家独立培养 + 统一模型蒸馏整合，实现百万级上下文高效推理。</div>
+    <div class="tags">
+      <span class="tag">LLM</span>
+      <span class="tag">MoE</span>
+      <span class="tag">长上下文</span>
+      <span class="tag">DeepSeek</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🛠️ 开源项目 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span> 开源项目与工具</div>
+
+  <div class="card">
+    <div class="source">GitHub · LangChain · 2026-07-01</div>
+    <div class="title"><a href="https://github.com/langchain-ai/openwiki" target="_blank">OpenWiki: 面向编程智能体的自动化仓库文档</a></div>
+    <div class="summary">LangChain 发布 OpenWiki——自动为代码仓库生成和维护文档 Wiki 的 CLI 工具，让编程智能体无需臃肿的 AGENTS.md 即可理解项目结构。v0.0.3 已支持通用 OpenAI 兼容端点。</div>
+    <div class="tags">
+      <span class="tag">开发工具</span>
+      <span class="tag">编程智能体</span>
+      <span class="tag">LangChain</span>
+      <span class="tag">CLI</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · NVIDIA · 2026-07-22</div>
+    <div class="title"><a href="https://github.com/NVIDIA-NeMo/labs-OO-Agents" target="_blank">NOOA: NVIDIA 面向对象 Agent 框架开源</a></div>
+    <div class="summary">与论文同步开源的轻量级 Python Agent 框架，将 LLM Agent 建模为 Python 类，天然支持工具调用、状态管理和组合式 Agent 构建，模型无关、即装即用。</div>
+    <div class="tags">
+      <span class="tag">Agent框架</span>
+      <span class="tag">Python</span>
+      <span class="tag">NVIDIA</span>
+      <span class="tag">开源</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🤖 产业动态 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🏭</span> 产业动态</div>
+
+  <div class="card">
+    <div class="source">Bloomberg · 2026-07-16</div>
+    <div class="title">Gemini 3.5 Pro 延期：编程能力未达内部目标</div>
+    <div class="summary">Google Gemini 3.5 Pro 因编程性能不达标而推迟数月，消息公布后 Alphabet 股价下跌 4.4%，市值蒸发约 2000 亿美元，而同期 OpenAI GPT-5.6 Sol 正以 SOTA 编程成绩抢占市场。</div>
+    <div class="tags">
+      <span class="tag">LLM</span>
+      <span class="tag">Google</span>
+      <span class="tag">Gemini</span>
+      <span class="tag">产业</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">PhysicL · 2026-07</div>
+    <div class="title">Robbie: 人形机器人入驻布拉迪斯拉发四星级酒店</div>
+    <div class="summary">Robbie 人形机器人在斯洛伐克 Hotel Devín 酒店正式上岗，标志着具身智能从实验室走向真实商业场景，2026 年具身 AI 投资竞赛全面加速。</div>
+    <div class="tags">
+      <span class="tag">具身智能</span>
+      <span class="tag">机器人</span>
+      <span class="tag">商业落地</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>本周 AI 领域呈现三大趋势：<strong>一是多模态大一统</strong>——FLUX 3 和 Self Gradient Forcing 分别从模型架构和训练策略两端推进了视频/音频/图像的联合建模，世界模型的拼图正在合拢；<strong>二是编程智能体的军备竞赛白热化</strong>——GPT-5.6 Sol 以并行子智能体架构登顶，而 Gemini 3.5 Pro 的延期说明"能用代码"和"代码好用"之间仍有鸿沟；<strong>三是国产算力的关键突破</strong>——SLAI T-Rex 在昇腾 NPU 上跑通 DeepSeek-V4 全参数后训练，证明万亿参数模型训练可以不依赖 GPU 集群。开源生态同样活跃，LangChain OpenWiki 和 NVIDIA OO Agents 让 Agent 开发更加工程化。2026 年的下半场，多模态世界模型和 Agent 框架的成熟正在重塑整个 AI 应用范式。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-07-27</p>
+</div>
+
+</div>
+</body>
+</html>

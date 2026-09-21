@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年08月04日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年08月04日</div>
+  <div class="subtitle">中文AI媒体精选 · 机器之心/量子位/新智元 等</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>阿里Qwen3.8以2.4万亿参数强势发布、OpenAI下一代模型Astra攻克10大数学难题，中美大模型竞赛进入白热化；DeepSeek与月之暗面同日曝出超级融资，中国AI"融资决战周"开启。</p>
+</div>
+
+<!-- ====== 今日头条 ====== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 头条</div>
+    <div class="source">来源：量子位 / 机器之心 / 新浪科技 / 网易科技 / 联合早报</div>
+    <div class="title"><a href="https://www.qbitai.com/" target="_blank">阿里Qwen3.8正式发布：2.4万亿参数，Arena排名全球第二仅次于Claude</a></div>
+    <div class="summary">8月3日，阿里巴巴正式发布新一代基座大模型Qwen3.8，总参数量达2.4万亿，在编程（Coding）和专业办公（Cowork）方面能力大幅提升。Arena权威榜单显示Qwen仅次于Anthropic Claude系列，整体性能处于全球大模型第一梯队。Qwen3.8-Max预计下周开源，同时还将开源27B版本。此外，Qwen3.8在自主编程方面表现惊人，据称可以16天独立开发出完整Agent应用。</div>
+    <div class="tags">
+      <span class="tag hot">#重磅发布</span>
+      <span class="tag">#大模型</span>
+      <span class="tag">#阿里</span>
+      <span class="tag">#开源</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">来源：36氪 / 智东西 / 新智元 / 量子位 / 机器之心</div>
+    <div class="title"><a href="https://www.36kr.com/p/3921831591341702" target="_blank">OpenAI官宣下一代模型Astra：仅$2000成本攻克10大数学未解难题</a></div>
+    <div class="summary">8月1-2日，OpenAI正式披露下一代主力模型Astra，公布其内部版本取得10项数学与理论计算机科学领域的重大突破，包括高维球体堆积、拉姆齐数等核心难题——这些问题均已困扰学界至少10年以上。研究团队同步发布249页论文及Lean形式化证明，总计算成本仅约2000美元。奥特曼正在向美国国会演示该模型。</div>
+    <div class="tags">
+      <span class="tag hot">#重磅发布</span>
+      <span class="tag">#OpenAI</span>
+      <span class="tag">#数学推理</span>
+      <span class="tag">#前沿研究</span>
+    </div>
+  </div>
+</div>
+
+<!-- ====== 融资与行业动态 ====== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">💰</span>融资与行业动态</div>
+
+  <div class="card">
+    <div class="source">来源：36氪 / 晚点LatePost</div>
+    <div class="title"><a href="https://36kr.com/p/3801518218845961" target="_blank">三天三家公司超百亿美元：中国AI大模型"融资决战周"</a></div>
+    <div class="summary">8月3日，36氪报道DeepSeek与国家集成电路产业投资基金洽谈首轮融资，估值直奔450亿美元；同日，晚点LatePost独家报道月之暗面即将完成20亿美元融资，投后估值突破200亿美元。阶跃星辰也在近期完成近25亿美元单轮融资，中国大模型头部公司密集融资，为上市做最后冲刺。</div>
+    <div class="tags">
+      <span class="tag hot">#融资</span>
+      <span class="tag">#DeepSeek</span>
+      <span class="tag">#月之暗面</span>
+      <span class="tag">#阶跃星辰</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">来源：36氪 / 新智元 / 机器之心</div>
+    <div class="title"><a href="https://www.36kr.com/p/3916465177718409" target="_blank">谷歌AlphaFold诺奖团队解散：近四分之一成员离职，核心人才投奔Anthropic</a></div>
+    <div class="summary">谷歌DeepMind已正式拆散2024年诺贝尔化学奖获奖团队AlphaFold的核心研究组，团队近四分之一成员离职。灵魂人物John Jumper等核心功臣集体转投Anthropic，其余成员被分流至Gemini和Isomorphic Labs。此举标志着谷歌AI战略从基础科学突破转向商业应用竞争。</div>
+    <div class="tags">
+      <span class="tag">#谷歌</span>
+      <span class="tag">#DeepMind</span>
+      <span class="tag">#人才流动</span>
+      <span class="tag">#科学研究</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">来源：靠谱新闻 / IT之家</div>
+    <div class="title"><a href="https://kaopu.news/story/2026-08-02/doordash-tested-chinese-ai-model-probed-48fe58" target="_blank">DoorDash测试中国AI模型Kimi遭美国众院调查，AI地缘博弈升级</a></div>
+    <div class="summary">美国最大外卖平台DoorDash因在内部系统测试月之暗面Kimi K2.6模型，于8月2日被美国众议院两大委员会要求配合安全调查。DoorDash创始人曾公开表示Kimi+Claude组合可超越Sonnet+Opus且成本更低，此事被视为中美AI技术竞争向应用层蔓延的标志性事件。</div>
+    <div class="tags">
+      <span class="tag">#地缘政治</span>
+      <span class="tag">#Kimi</span>
+      <span class="tag">#出海</span>
+      <span class="tag">#政策监管</span>
+    </div>
+  </div>
+</div>
+
+<!-- ====== 产品与应用 ====== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🚀</span>产品与应用</div>
+
+  <div class="card">
+    <div class="source">来源：量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/07/463727.html" target="_blank">学习强国做了个AI社区，两周铺进68座城市</a></div>
+    <div class="summary">学习强国推出AI社区项目，在短短两周内覆盖全国68座城市。在大量普通人仍站在AI门外的背景下，此举通过官方渠道推动AI技术的全民普及，成为AI下沉市场的一个独特样本。</div>
+    <div class="tags">
+      <span class="tag">#AI应用</span>
+      <span class="tag">#全民普及</span>
+      <span class="tag">#下沉市场</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">来源：新浪科技 / 千里科技 / 阶跃星辰</div>
+    <div class="title"><a href="https://www.sina.com.cn/" target="_blank">千里科技携手阶跃星辰：Step Edge模型与Amoo智能体上车</a></div>
+    <div class="summary">吉利旗下千里科技与阶跃星辰达成战略合作，将阶跃Step Edge端云模型、Step AOS操作系统及Amoo个人智能体引入车载场景，大模型原生AI终端从手机向智能汽车延伸，物理AI上车进入实质阶段。</div>
+    <div class="tags">
+      <span class="tag">#智能汽车</span>
+      <span class="tag">#阶跃星辰</span>
+      <span class="tag">#AI终端</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">来源：赛博禅心</div>
+    <div class="title"><a href="https://c.m.163.com/news/sub/T1741919209188.html" target="_blank">GPT-5.6全面解禁全量发布，Fable使用期延长，微信小程序"成长计划"送token</a></div>
+    <div class="summary">GPT-5.6本周全面上线，面向所有用户开放；Anthropic将Claude Fable 5使用期限延长至12日作为应对；微信小程序推出"成长计划"，价值2万多的token一分钟到账。AI大厂间的竞争从模型能力延伸到生态运营与用户获取。</div>
+    <div class="tags">
+      <span class="tag">#OpenAI</span>
+      <span class="tag">#Anthropic</span>
+      <span class="tag">#微信</span>
+      <span class="tag">#产品动态</span>
+    </div>
+  </div>
+</div>
+
+<!-- ====== 技术与研究 ====== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔬</span>技术与研究</div>
+
+  <div class="card">
+    <div class="source">来源：BBC News 中文</div>
+    <div class="title"><a href="https://www.bbc.com/zhongwen/articles/cp8xzegl95jo/simp" target="_blank">AI冲击就业：中国毕业生的阵痛与机遇</a></div>
+    <div class="summary">BBC发布深度报道分析AI对中国毕业生就业市场的影响。Anthropic报告提出的"实际暴露度"指标显示中高收入知识工作者受影响最大，编程、写作、分析类岗位面临重构。中国2026届毕业生正经历前所未有的AI就业冲击。</div>
+    <div class="tags">
+      <span class="tag">#AI就业</span>
+      <span class="tag">#社会影响</span>
+      <span class="tag">#深度报道</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">来源：36氪 / 腾讯</div>
+    <div class="title"><a href="https://36kr.com/p/3917969453395334" target="_blank">腾讯WorkBuddy论文登上arXiv，重新定义AI办公助手天花板</a></div>
+    <div class="summary">腾讯将WorkBuddy技术论文挂上arXiv，展示了其在企业级AI助手领域的最新研究成果。此前在WAIC 2026上，腾讯已发布具身智能全栈方案和ADP 4.0海外版，WorkBuddy作为面向企业效率的AI Agent正在成为腾讯AI战略的新支点。</div>
+    <div class="tags">
+      <span class="tag">#腾讯</span>
+      <span class="tag">#AI办公</span>
+      <span class="tag">#Agent</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">来源：Datawhale</div>
+    <div class="title"><a href="https://www.datawhale.cn/" target="_blank">Datawhale AI夏令营持续推进，覆盖2000+高校的AI开源学习生态加速</a></div>
+    <div class="summary">Datawhale作为国内最大AI开源学习社区，暑期持续推进AI夏令营项目，覆盖海内外2000多所院校。社区在DeepSeek通识课、大模型原理与实践、AI+编程等方向持续产出优质学习内容，加速AI人才培养与产学连接。</div>
+    <div class="tags">
+      <span class="tag">#AI教育</span>
+      <span class="tag">#开源</span>
+      <span class="tag">#人才培养</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>8月的第一个工作日，中国AI战场就迎来了密集「炸弹」——阿里Qwen3.8以2.4万亿参数正面挑战Claude的地位，OpenAI则用Astra模型证明推理能力远未触顶。但更值得关注的是资本层面的信号：DeepSeek、月之暗面、阶跃星辰三家头部公司几乎同时推进超级融资，合计金额超百亿美元，标志着中国AI大模型正式进入「融资决战」阶段。与此同时，AlphaFold团队解散、DoorDash遭遇调查等事件提醒我们，AI竞争早已超越技术本身，演变为地缘、资本、人才的全维度博弈。这一轮竞赛的终局，将决定未来五年全球AI的产业格局。</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026年08月04日</p>
+</div>
+
+</div>
+</body>
+</html>
