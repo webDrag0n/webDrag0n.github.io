@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年09月22日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年09月22日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>本批 arXiv 新论文明显被「Agent 化」刷屏——编码智能体 RL 环境（CodeMidas）、图形界面统一视觉智能体（MintAct）、计算机使用混合智能体评测（RecreationWorld）同时登上 HuggingFace Daily Papers；机器人方向则有长时序通用价值函数 SeeQ、跨本体骨架引导世界模型 SkelWAM 等。GitHub 趋势榜上浏览器自动化 Agent browser-use 与 Claude Code 工具链持续升温，awesome 主列表近期以清理归档仓库为主，暂无新的 AI 类列表并入。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日焦点</div>
+
+  <div class="hot-topic">
+    <div class="label">HOT · HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.22068">CodeMidas: Scaling Agentic Coding RL Environments from Code Itself</a></div>
+    <div class="summary">训练编码智能体需要海量带可验证器的 RL 任务。CodeMidas 提出一条 agentic pipeline，直接从开源代码库中已实现的功能反向构造 RL 环境与验证器，摆脱了对 issue/commit 等开发痕迹的依赖，大幅扩展了可训练任务的范围。同日登榜 HF Daily Papers，是 agentic coding RL 规模化方向的代表作。</div>
+    <div class="tags">
+      <span class="tag hot">🔥 HOT</span>
+      <span class="tag">LLM</span>
+      <span class="tag">Agentic Coding</span>
+      <span class="tag">RL 环境</span>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">HOT · 开源 / GitHub Trending</div>
+    <div class="title"><a href="https://github.com/browser-use/browser-use">browser-use / browser-use</a></div>
+    <div class="summary">「Agents that use the browser」——浏览器自动化 Agent 框架 browser-use 今日再涨 248 星，持续霸榜 GitHub Trending。配合今日 arXiv 上 MintAct、RecreationWorld 等计算机使用智能体论文，GUI/Web 智能体生态正在从研究热点走向工程基础设施。</div>
+    <div class="tags">
+      <span class="tag hot">🔥 HOT</span>
+      <span class="tag">开源</span>
+      <span class="tag">Web Agent</span>
+      <span class="tag">GitHub Trending</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>LLM 与智能体</div>
+
+  <div class="card">
+    <div class="source">arXiv 2609.22083 · cs.CV · HF Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.22083">MintAct: A Unified Visual Agent for Digital Environments</a></div>
+    <div class="summary">统一数字环境视觉智能体：2B/4B/8B 三个规模的 VLM，在单一模型内同时完成 UI grounding、移动端/桌面/Web 多步导航与视觉工具调用，性能可匹敌各领域专用模型。配套可扩展的环境与强化训练配方是亮点。</div>
+    <div class="tags">
+      <span class="tag">多模态/VLM</span>
+      <span class="tag">GUI Agent</span>
+      <span class="tag">统一模型</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2609.22000 · cs.CL · HF Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.22000">RecreationWorld: Scalable and Verifiable Environments for Hybrid Computer-Use Agents</a></div>
+    <div class="summary">真实数字工作需要「图形交互 + 写代码」交替进行。RecreationWorld 提供五平台框架评测混合型计算机使用智能体（Hybrid CUA），考察智能体自主决定何时操作界面、何时实现软件并视觉验证成果的能力，填补了 GUI-only 与 CLI-only 评测之间的空白。</div>
+    <div class="tags">
+      <span class="tag">Benchmark</span>
+      <span class="tag">Computer Use</span>
+      <span class="tag">Agent</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2609.22086 · cs.AI · HF Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.22086">Designer-RSI: Evolving Procedural Memory from User Traffic for Agentic Graphic Design</a></div>
+    <div class="summary">面向长时序平面设计任务的持续适应框架：冻结的前沿模型通过 230+ 工具操作专业设计软件，外部自然语言「程序性记忆」随真实用户流量不断积累与自我演化，为无程序化 oracle 的创造性任务提供了自我改进的新范式。</div>
+    <div class="tags">
+      <span class="tag">LLM Agent</span>
+      <span class="tag">记忆系统</span>
+      <span class="tag">自我演化</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>具身智能与机器人</div>
+
+  <div class="card">
+    <div class="source">arXiv 2609.22085 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.22085">SeeQ: Training Generalist Value Functions for Long-Horizon Robotic Manipulation</a></div>
+    <div class="summary">针对多阶段、需反复尝试的长时序操作任务，训练通用 Q 值函数为候选动作排序、引导策略改进，缓解稀疏任务级奖励下的长信用分配难题，让通用机器人策略在复杂任务上不再「脆」。</div>
+    <div class="tags">
+      <span class="tag">具身智能</span>
+      <span class="tag">价值函数</span>
+      <span class="tag">长时序操作</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2609.21983 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.21983">SkelWAM: A Skeleton-Guided World-Action Model for Zero-Shot Cross-Embodiment Manipulation</a></div>
+    <div class="summary">通过统一的骨架表征耦合感知与控制，让世界-动作模型在不同机器人本体之间零样本迁移操作经验，为解决跨本体动作空间异构、减少逐任务数据采集提供了新思路。同批还有 GALA（几何感知潜动作建模）探索跨本体 VLA 预训练。</div>
+    <div class="tags">
+      <span class="tag">世界模型</span>
+      <span class="tag">跨本体迁移</span>
+      <span class="tag">VLA</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🎬</span>多模态与生成</div>
+
+  <div class="card">
+    <div class="source">arXiv 2609.22069 · cs.CV · HF Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.22069">OmniVBench: A Benchmark and Large-Scale Dataset for Omni Reference-to-Video Generation</a></div>
+    <div class="summary">参考图像生成视频（R2V）正走向「万物皆可参考」的全能范式。OmniVBench 指出旧基准参考类型与组合覆盖不足、评测只看整体一致性，并给出大规模数据集与细粒度协议，评估参考要素是否被正确分解与重组。</div>
+    <div class="tags">
+      <span class="tag">视频生成</span>
+      <span class="tag">Benchmark</span>
+      <span class="tag">R2V</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🌟</span>开源与 Awesome 动态</div>
+
+  <div class="card">
+    <div class="source">GitHub · sindresorhus/awesome</div>
+    <div class="title"><a href="https://github.com/sindresorhus/awesome">Awesome 主列表：近期进入「修剪期」，AI 新列表暂缺</a></div>
+    <div class="summary">近三个月主列表以移除归档列表（两批共 25 个）与元信息维护为主；最近一批新增（2025-10 前后）中与 AI 相关的有 awesome Copilot Agents 与 Gemini CLI。值得一提的是 AI 课程/论文列表 owainlewis/awesome-artificial-intelligence 今日现身 GitHub Trending（+16 星），AI 学习资源类 awesome list 热度不减。</div>
+    <div class="tags">
+      <span class="tag">Awesome List</span>
+      <span class="tag">开源生态</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending</div>
+    <div class="title"><a href="https://github.com/davila7/claude-code-templates">davila7/claude-code-templates · virgiliojr94/book-to-skill</a></div>
+    <div class="summary">Agent 工具链持续升温：claude-code-templates（Claude Code 配置与监控 CLI）与 book-to-skill（把技术书 PDF 一键转成 Claude Code skill，+210 星）双双上榜，反映「为编码 Agent 沉淀可复用技能」正成为社区新共识。Anthropic 官方金融场景示例 anthropics/financial-services 今日 +424 星领跑。</div>
+    <div class="tags">
+      <span class="tag">Claude Code</span>
+      <span class="tag">Agent 工具链</span>
+      <span class="tag">GitHub Trending</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>💡 小晴点评</h3>
+  <p>今天的主旋律非常清晰：<strong>Agent 正在从「单一能力」走向「环境规模化」</strong>。CodeMidas 从代码本身批量制造 RL 环境、RecreationWorld 把 GUI 与编程揉进同一评测、MintAct 用一个模型统一所有数字界面——三条线共同回答同一个问题：如何让智能体在真实、可验证、可扩展的环境里变强。机器人方向则聚焦长时序价值函数与跨本体迁移，和世界模型合流的趋势越来越明显。awesome 主列表最近在做「断舍离」，反而衬得 AI 类老牌列表（如 awesome-artificial-intelligence）的持久生命力。建议主人重点关注 CodeMidas 的环境构造思路，这套「从产物反推任务」的范式很容易迁移到其他领域哦～</p>
+</div>
+
+<div class="footer">
+  <p>Generated by 小晴 AI Assistant · 2026-09-22</p>
+</div>
+
+</div>
+</body>
+</html>
