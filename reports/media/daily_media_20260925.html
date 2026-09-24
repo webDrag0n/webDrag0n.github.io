@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年09月25日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年09月25日</div>
+  <div class="subtitle">中文AI媒体精选 · 覆盖2026年09月24日报道</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>OpenAI 与 Anthropic 掌门人在联合国安理会罕见同台，呼吁放缓前沿 AI 开发并建立国际协调机制，与特朗普政府"不设限"立场公开分化；DeepSeek 公开梁文锋署名的 Agent 训练基础设施论文 DSec，披露百万级智能体沙盒的弹性调度细节；阿里正式任命刘大一恒全面接棒 Qwen；清华联合无问芯穹开源具身智能云原生平台 RLark；诺因发布通用具身智能架构 GLOW 技术报告。9 月 24 日的行业叙事集中于两条主线：前沿 AI 的治理博弈，与 Agent / 具身智能基础设施的工程化落地。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">⚡ Breaking · 全球AI治理</div>
+    <div class="card" style="box-shadow:none;border:none;background:transparent;padding:8px 0 0;">
+      <div class="source">综合报道（机器之心Pro / 新浪科技 / 凤凰科技 / CNBC）</div>
+      <div class="title"><a href="https://tech.ifeng.com/c/8wfd1Z4TXGL">OpenAI 与 Anthropic CEO 联合国安理会同台：呼吁放缓 AI 开发节奏、建立跨国协调机制，特朗普政府公开反对</a></div>
+      <div class="summary">当地时间 9 月 23 日，OpenAI 首席执行官 Sam Altman 与 Anthropic 首席执行官 Dario Amodei 先后在联合国安理会发表讲话，主张在发现新的安全风险时可主动放慢先进 AI 系统的开发步伐，并寻求跨国协调机制应对潜在灾难性风险。美国总统特朗普则明确反对将其定性为"全球主义方案"，拒绝国际协调框架。前沿实验室与政府监管机构之间的立场分化首次在国际最高层级公开化。</div>
+      <div class="tags"><span class="tag hot">重磅</span><span class="tag">AI治理</span><span class="tag">OpenAI</span><span class="tag">Anthropic</span></div>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">⚡ Breaking · Agent基础设施</div>
+    <div class="card" style="box-shadow:none;border:none;background:transparent;padding:8px 0 0;">
+      <div class="source">综合报道（量子位 / 智东西 / 智源社区 / 机器之心Pro）</div>
+      <div class="title"><a href="https://www.qbitai.com/2026/09/496393.html">DeepSeek 公开梁文锋署名论文 DSec：百万级 Agent 训练沙盒的弹性计算架构</a></div>
+      <div class="summary">DeepSeek 发布由创始人梁文锋署名的技术论文，首次系统披露其 Agent 训练沙盒平台 DSec（DeepSeek Elastic Compute）。论文揭示了镜像分层复用机制——Python 容器镜像 6.0GB 中 Agent 实际仅读取 6.0%，Java 镜像 12.1GB 仅 9.2% 被访问——据此实现的按需加载使平台可支撑峰值 38 万并发沙盒实例，直指大规模智能体强化学习的资源调度瓶颈。相关话题当日登上微博热搜与知乎热榜。</div>
+      <div class="tags"><span class="tag hot">重磅</span><span class="tag">DeepSeek</span><span class="tag">Agent训练</span><span class="tag">论文</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🚀</span>模型与产品</div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-09-24</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/496647.html">Meta 智能体应用 Muse 登顶美区 App Store：增速反超 ChatGPT，股价单日大涨逾 11%</a></div>
+    <div class="summary">Meta 旗下个人 AI 智能体 Muse 上线约两周即登顶美国 App Store 免费榜，美国移动端日活达 64.2 万，超越同期 ChatGPT 的 23.1 万，并领先 Claude 与 Grok。该应用覆盖保险协商、退货管理、航班改签等任务型场景，市场热度推动 Meta 股价创近一年最大单日涨幅。量子位将其解读为 Meta 借"自研 Manus 路线"在消费级 Agent 市场的翻身仗。</div>
+    <div class="tags"><span class="tag hot">热门</span><span class="tag">Meta</span><span class="tag">AI智能体</span><span class="tag">应用生态</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-09-24</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/496471.html">斑马智能发布端侧模型 AutoOmni 2.0</a></div>
+    <div class="summary">斑马智能发布新一代端侧多模态模型 AutoOmni 2.0，面向车载与智能硬件场景，强化本地化多模态理解与交互能力，标志着端侧大模型在垂直硬件生态中的持续渗透。</div>
+    <div class="tags"><span class="tag">端侧模型</span><span class="tag">多模态</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-09-24</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/496961.html">出海 Agent"小元AI"入驻腾讯 WorkBuddy：面向跨境贸易的智能体协作</a></div>
+    <div class="summary">出海 Agent 产品"小元AI"正式接入腾讯 WorkBuddy 生态，提供找买家、撰写开发信、商务谈判等跨境贸易全流程智能体服务，反映通用协作平台与垂直 Agent 生态的融合趋势。</div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">企业应用</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔬</span>技术与研究</div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-09-24</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/496767.html">清华大学联合无问芯穹开源具身智能云原生平台 RLark</a></div>
+    <div class="summary">清华大学与无问芯穹联合开源面向具身智能的云原生平台 RLark，宣称可实现 5 分钟完成机器人纳管、10 秒启动跨集群任务，旨在解决具身智能训练中异构算力与多机器人集群的统一调度问题，为大规模机器人学习提供基础设施支撑。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">具身智能</span><span class="tag">基础设施</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-09-24</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/496816.html">诺因发布 GLOW 技术报告：面向通用具身智能的生成式学习架构</a></div>
+    <div class="summary">诺因（Knowin）发布 GLOW 技术报告，提出面向通用具身智能的生成式学习架构，试图给出机器人"一教就会"的技术路径。报告系统阐述了该架构的整体设计，定位为 GPT-6 时代之后具身智能方向的候选技术范式之一。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">技术报告</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-09-24</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/496925.html">PCIe 显卡推理潜力重估：内核补齐与通信重构使 DeepSeek 推理吞吐提升近 7 倍</a></div>
+    <div class="summary">一项工程研究表明，通过内核层面的算子补齐与通信架构重构，基于 PCIe 互联的消费级显卡在 DeepSeek 模型推理任务中吞吐可提升近 7 倍，对以降低推理成本为目标的部署方具有参考价值，亦挑战了"大模型推理必须依赖 NVLink 高端集群"的固有认知。</div>
+    <div class="tags"><span class="tag">推理优化</span><span class="tag">系统工程</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-09-24</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/489724.html">把记忆交给 CPU：大模型推理的存算分离新思路</a></div>
+    <div class="summary">技术解读：将 KV Cache 等记忆负载从 GPU 卸载至 CPU 内存的存算分离方案，可在特定场景下提升大模型推理效率。该思路与 DSec 的镜像分层加载、PCIe 显卡优化共同构成本周推理系统工程领域的讨论热点。</div>
+    <div class="tags"><span class="tag">推理优化</span><span class="tag">系统架构</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🏢</span>行业与人事</div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-09-24（多源交叉验证）</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/496384.html">Qwen 一号位落定：刘大一恒正式全面接棒通义千问</a></div>
+    <div class="summary">阿里巴巴正式任命 AI 研究员刘大一恒出任 Qwen 大语言模型项目负责人。刘为前华为"天才少年计划"第一档入选者、达摩院研究员，今年 3 月林俊旸离职后已逐步代管预训练、后训练与 Coding 团队，此次为全面接管。其治下的 Qwen3.8 Max 在 Artificial Analysis 智能指数中位列第七，居于 Anthropic、OpenAI 旗舰与 Meta Muse Spark 1.3 之后，新负责人的首要任务是交出下一代模型成果以应对国产开源模型下半场竞争。</div>
+    <div class="tags"><span class="tag hot">人事</span><span class="tag">阿里</span><span class="tag">Qwen</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-09-24</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/496494.html">达卯科技完成新一轮融资：算电协同软件层的稀缺标的</a></div>
+    <div class="summary">算电协同核心软件层企业达卯科技宣布完成新一轮融资。在智算中心能耗约束日益突出的背景下，算力与电力协同调度软件正成为资本市场关注的基础设施细分赛道。</div>
+    <div class="tags"><span class="tag">融资</span><span class="tag">算力基建</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-09-24</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/496481.html">它石智航：中国具身智能迈向规模化落地阶段</a></div>
+    <div class="summary">它石智航披露其具身智能解决方案的规模化部署进展，称已率先进入规模化落地阶段。与同日发布的 RLark 平台、GLOW 架构相呼应，具身智能产业链正从单点技术验证转向工程化与规模化竞争。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">产业落地</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-09-24</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/496609.html">联想天禧 AI 亮相云栖大会：多端产品矩阵落地"超级组织"端侧叙事</a></div>
+    <div class="summary">联想携天禧 AI 全场景多端产品矩阵亮相 2026 云栖大会，展示个人智能体在端侧的组织化协同能力。本届云栖大会（9 月 22–24 日）同期发布平头哥真武 V900 国产 AI 芯片、倚天 720/730 服务器 CPU 规划、企业级 Agent 平台 AgentCore 及 AI 手机方案 Qwen Intelligence，呈现阿里系从芯片到 Agent 应用的全栈布局。</div>
+    <div class="tags"><span class="tag">云栖大会</span><span class="tag">端侧AI</span><span class="tag">全栈</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-09-24</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/496615.html">中科类脑九年积累装入"Token 工厂"</a></div>
+    <div class="summary">成立九年的中科类脑宣布将其类脑智能技术积累整合为"Token 工厂"产品线，转向以 Token 生产效率为核心的模型服务化交付模式，反映老牌 AI 企业在 Agent 时代的商业化路径调整。</div>
+    <div class="tags"><span class="tag">商业化</span><span class="tag">模型服务</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>9 月 24 日的行业图景呈现出显著的"双层叙事"特征。治理层面，OpenAI 与 Anthropic 掌门人在联合国安理会罕见同台，主动倡议放缓开发节奏并接受跨国协调，与白宫"不设限"立场公开分化——前沿实验室正将"自我约束"转化为制度性话语权，AI 治理从议程设置进入大国博弈的正式场域。技术层面，DeepSeek 的 DSec 论文与清华 RLark、诺因 GLOW 同日亮相，共同指向 Agent 与具身智能竞争的重心已从模型能力转向训练基础设施：沙盒弹性调度、异构算力纳管、数据生成效率成为新的工程壁垒。组织层面，刘大一恒正式接棒 Qwen，标志头部大模型团队完成从"明星科学家"向"内部培养工程型负责人"的代际切换。基础设施化与治理制度化，正在同时定义 AI 竞争的下半场。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · Generated 2026-09-25 · 来源：量子位、机器之心Pro、智东西、凤凰科技、新浪科技等</p>
+</div>
+
+</div>
+</body>
+</html>
