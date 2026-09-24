@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年09月24日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年09月24日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>扩散式大语言模型（dLLM）推理优化成为今日焦点，Flash-dLLM 针对 KV 缓存与并行解码提出 IO 感知方案；多智能体系统扩展性研究突破千级规模（Agensh, 1024 Agents）；快手发布 KwaiMind 图像编辑技术报告，展示电商场景下的智能体数据引擎；机器人领域多视角一致性世界模型（TriWorldBench）与人形机器人协作数据采集平台（MATE）同步亮相。开源方面，AI 编码智能体生态持续升温，addyosmani/agent-skills 与 Fission-AI/OpenSpec 领衔 GitHub Trending。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日焦点</div>
+
+  <div class="hot-topic">
+    <div class="label">Hot Topic</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.26796">Flash-dLLM: IO-Aware KV Caching and Parallel Decoding for Fast, Memory-Efficient Diffusion LLMs</a></div>
+    <div class="summary">扩散式大语言模型（dLLM）作为自回归 LLM 的非自回归替代方案正受到广泛关注，但其推理效率受制于缺乏有效的 KV 缓存机制与可扩展的并行解码策略。该研究提出 IO 感知的 KV 缓存与并行解码框架，显著提升 dLLM 的推理速度与内存效率，为扩散式文本生成的实际部署扫清关键障碍。</div>
+    <div class="tags">
+      <span class="tag hot">扩散 LLM</span>
+      <span class="tag">推理优化</span>
+      <span class="tag">cs.CL</span>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">Hot Topic</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.26375">KwaiMind Technical Report（快手图像编辑系统）</a></div>
+    <div class="summary">快手发布 KwaiMind 技术报告：面向商业图像编辑的系统，需同时满足商品身份保持、精确文本渲染与用户审美偏好。其核心为基于智能体的数据引擎，维护约 180 万条高质量编辑数据，将通用编辑能力与电商垂直场景深度结合，代表工业界多模态生成落地的最新进展。</div>
+    <div class="tags">
+      <span class="tag hot">工业界</span>
+      <span class="tag">图像编辑</span>
+      <span class="tag">多模态</span>
+      <span class="tag">cs.CV</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型与智能体</div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CL, cs.MA · 2026-09-22</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.26781">Agensh: Scaling Organizational Intelligence to 1,024 Agents</a></div>
+    <div class="summary">现有多智能体编排框架受制于中心化调度器的任务分配与协调能力，难以扩展。Agensh 借鉴分布式 shell 的设计思想，将组织智能扩展至 1024 个智能体规模，通过去中心化协调显著降低复杂任务的执行延迟，为多智能体系统的规模化提供了新的架构范式。</div>
+    <div class="tags">
+      <span class="tag">多智能体</span>
+      <span class="tag">系统架构</span>
+      <span class="tag">扩展性</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CL, cs.AI · 2026-09-22</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.26704">Beyond Repeated Sampling: Learning Search Policies for LLM Reasoning</a></div>
+    <div class="summary">当前 LLM 测试时计算的主流策略仍为朴素的重复采样——独立生成多个解答并期望其中之一正确，但此类采样仅通过局部解码噪声进行探索，易产生大量近似重复的候选。该工作提出学习化的搜索策略，以结构化方式引导推理路径的探索，为难推理问题的测试时计算分配提供更高效的方法论。</div>
+    <div class="tags">
+      <span class="tag">推理</span>
+      <span class="tag">测试时计算</span>
+      <span class="tag">搜索策略</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CL, cs.AI, cs.CR · 2026-09-22</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.26637">Capable yet Parsimonious: Extracting and Characterizing Hidden Chain-of-Thought in Frontier Models</a></div>
+    <div class="summary">前沿语言模型能力的快速提升普遍归因于推理能力的增强，但闭源系统的原始思维链轨迹不可见，难以验证。研究者通过标准 API 注册自定义工具，诱导前沿模型外化中间推理过程，进而对隐式思维链进行提取与特征刻画，为理解黑盒模型的推理机制提供了可操作的审计路径。</div>
+    <div class="tags">
+      <span class="tag">思维链</span>
+      <span class="tag">可解释性</span>
+      <span class="tag">模型审计</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态与视觉语言模型</div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CL, cs.CV · 2026-09-22</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.26638">Diffusion Drafts, AR Verifies: Accelerating Document OCR with Self-Speculative Decoding</a></div>
+    <div class="summary">自回归 OCR 视觉语言模型虽能精确将文档图像转换为文本与结构化标记，但逐 token 的顺序解码限制了推理速度。该工作利用 OCR 输出与输入图像的强对齐特性，以扩散模型并行生成草稿、自回归模型验证的自投机解码方案，在不损失精度的前提下显著加速文档 OCR 推理。</div>
+    <div class="tags">
+      <span class="tag">OCR</span>
+      <span class="tag">投机解码</span>
+      <span class="tag">VLM</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CV, cs.MM · 2026-09-22</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.25841">Metric-Bench: Exploring In-context Spatial Metric Reasoning in VLMs for Indoor Scenes</a></div>
+    <div class="summary">空间度量推理是 VLM 支撑机器人操作与自主导航等具身任务的关键能力。Metric-Bench 系统评估 VLM 在室内场景中的上下文空间度量推理，指出现有像素级刚性监督限制了局部优化向全局空间理解的泛化，为具身智能中的空间推理研究提供了新的基准与诊断视角。</div>
+    <div class="tags">
+      <span class="tag">空间推理</span>
+      <span class="tag">评测基准</span>
+      <span class="tag">具身智能</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>具身智能与机器人</div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.RO · 2026-09-22</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.26520">MATE: Multi-Agent Virtual Teleoperation Platform for Humanoid Collaboration Data Collection</a></div>
+    <div class="summary">人形机器人需要多样化具身经验以习得复杂的移动操作与协作技能，而现有数据管线多聚焦单智能体，物理多机协作采集成本高昂。MATE 提出多智能体虚拟遥操作平台，以虚拟环境支持人形机器人协作数据的规模化采集，为多机器人协作策略学习提供低成本数据基础设施。</div>
+    <div class="tags">
+      <span class="tag">人形机器人</span>
+      <span class="tag">数据采集</span>
+      <span class="tag">多机协作</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.RO, cs.AI · 2026-09-22</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.26314">TriWorldBench: A Tri-View Consistency Perspective on Embodied World Models</a></div>
+    <div class="summary">具身世界模型预测机器人动作的后果以支撑学习与规划。对于配备头部与腕部相机的机器人，头部视角把握任务全局而腕部视角呈现局部夹爪-物体交互，但独立评估各视角会遗漏关键一致性。TriWorldBench 从三视角一致性角度评测具身世界模型，为该方向的评估方法论提供新视角。</div>
+    <div class="tags">
+      <span class="tag">世界模型</span>
+      <span class="tag">评测基准</span>
+      <span class="tag">VLA</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.RO · 2026-09-22</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.26672">Imperfection for Precision: Upcycling Imperfect Data for High-Precision Robotic Manipulation</a></div>
+    <div class="summary">训练高精度视觉-语言-动作（VLA）操作模型通常依赖任务特定的高质量遥操作数据，采集缓慢且昂贵。ε4P 提出一种数据升级利用方案，将不完美数据转化为高精度操作训练的有效资源，在不牺牲操作精度的前提下显著降低数据成本，对 VLA 模型的数据效率研究具有实践价值。</div>
+    <div class="tags">
+      <span class="tag">VLA</span>
+      <span class="tag">数据效率</span>
+      <span class="tag">机器人操作</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源项目动态</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 本周</div>
+    <div class="title"><a href="https://github.com/addyosmani/agent-skills">addyosmani/agent-skills（★98.7k）</a> · 生产级 AI 编码智能体技能库</div>
+    <div class="summary">Google Chrome 团队 Addy Osmani 维护的生产级工程技能集合，为 AI 编码智能体提供经过实战检验的技能模块，持续位居 GitHub Trending 前列。同期热门还包括 <a href="https://github.com/Fission-AI/OpenSpec">Fission-AI/OpenSpec</a>（★70.0k，面向 AI 编码助手的规约驱动开发 SDD 框架）与 <a href="https://github.com/stablyai/orca">stablyai/orca</a>（★76.6k，并行智能体集群开发环境）。</div>
+    <div class="tags">
+      <span class="tag hot">Trending</span>
+      <span class="tag">编码智能体</span>
+      <span class="tag">Agent Skills</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 本周</div>
+    <div class="title"><a href="https://github.com/alibaba/open-code-review">alibaba/open-code-review（★40.2k）</a> 与 <a href="https://github.com/Tencent/WeKnora">Tencent/WeKnora（★29.3k）</a></div>
+    <div class="summary">国内大厂开源动作频繁：阿里巴巴开源混合架构代码评审工具 open-code-review，结合确定性流水线与 AI 评审，经阿里规模实战验证；腾讯 WeKnora 为开源 LLM 知识平台，可将原始文档转化为可查询 RAG、自主推理智能体与自进化知识库。此外 <a href="https://github.com/JustVugg/colibri">colibri</a>（★37.4k）以纯 C 零依赖实现前沿 MoE 模型本地推理，专家权重从磁盘流式加载，引发广泛关注。</div>
+    <div class="tags">
+      <span class="tag">大厂开源</span>
+      <span class="tag">代码评审</span>
+      <span class="tag">RAG</span>
+      <span class="tag">本地推理</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📚</span>Awesome 列表动态</div>
+
+  <div class="card">
+    <div class="source">github.com/sindresorhus/awesome · 近期合并</div>
+    <div class="title">主仓库近况：以治理与清理为主</div>
+    <div class="summary">近一月 sindresorhus/awesome 主仓库的合并以维护性工作为主：8 月 18 日合并 <a href="https://github.com/sindresorhus/awesome/pull/4390">PR #4390</a> 移除 8 个已归档的 awesome 列表（此前 6 月亦清理 17 个），8 月 21 日修复排版问题，9 月 2 日进行元数据调整。主仓库近期未合并新的 AI 类列表，AI 相关列表的活跃增长主要分布在社区独立仓库。</div>
+    <div class="tags">
+      <span class="tag">Awesome</span>
+      <span class="tag">仓库治理</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 新兴 AI 主题列表</div>
+    <div class="title"><a href="https://github.com/linny006/awesome-agent-skills">awesome-agent-skills</a>：智能体技能策展列表兴起</div>
+    <div class="summary">随着 AI 编码智能体生态爆发，围绕"智能体技能（Agent Skills）"的策展型列表成为新的增长方向。linny006/awesome-agent-skills 提供经质量评级的自动更新技能清单，配套的 trending-claude-skills 则追踪 Claude Skills 与智能体仓库的热度榜单。该类列表反映了 2026 年智能体工程化（Agent Harness Engineering）的社区关注度，值得持续跟踪。</div>
+    <div class="tags">
+      <span class="tag">Awesome List</span>
+      <span class="tag">Agent Skills</span>
+      <span class="tag">新兴趋势</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今日研究动态呈现三条清晰脉络：其一，推理效率持续成为 LLM 系统工程的核心议题——Flash-dLLM 与 OCR 自投机解码分别从扩散模型缓存与草稿-验证范式切入，反映出生成架构多元化背景下降本增效的共性诉求；其二，智能体规模化研究取得进展，Agensh 将多智能体编排推进至千级规模，与开源社区 Agent Skills 策展列表的兴起形成学术与工程的呼应，标志智能体工程化正走向体系化；其三，具身智能领域聚焦数据基础设施与评估方法论，MATE 与 TriWorldBench 分别回应了多机协作数据采集与世界模型多视角一致性评估的难题。整体而言，当日进展以系统优化与基础设施建设为主导，工业界（快手 KwaiMind、阿里、腾讯开源）与学术界产出节奏同步，值得持续关注扩散式 LLM 的后续工程化落地。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-09-24 · Generated by Hermes Agent</p>
+</div>
+
+</div>
+</body>
+</html>
