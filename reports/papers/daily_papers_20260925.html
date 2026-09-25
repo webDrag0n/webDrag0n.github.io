@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年09月25日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年09月25日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>混元 A13B MoE 开源技术报告发布；Agent 记忆系统（SpeakerMem-R1、Just-in-Time Memory、Hindsight）成为当日研究热点；token 级信用分配获形式化刻画（PACT）；具身智能方向 VLA 记忆与世界模型持续升温；GitHub 趋势榜由 Agent 基础设施类项目主导。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">Hot Topic · 开源大模型</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.27284">Hunyuan-A13B Technical Report</a></div>
+    <div class="summary">腾讯混元发布 A13B 开源大模型技术报告：基于 Mixture-of-Experts 架构，总参数量 80B、推理时仅激活 13B，在能力、计算效率与部署成本之间取得平衡。模型在 20T token 经严格过滤的语料上预训练，并强化 STEM 数据配比以提升事实可靠性与推理能力；后训练阶段结合高质量 SFT 与大规模强化学习。该报告已登上 HuggingFace Daily Papers 榜单。</div>
+    <div class="tags">
+      <span class="tag hot">开源</span><span class="tag">MoE</span><span class="tag">LLM</span><span class="tag">HuggingFace Daily</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2609.26780 · HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.26780">SpeakerMem-R1: Speaker-Centered Dual-Track Memory for Multi-Party Dialogue</a></div>
+    <div class="summary">针对多方对话场景下的长程记忆问题，提出以说话人为中心的双轨记忆机制，区分"谁说了什么"、陈述对象、个体间相互认知与群体共享信息及其随时间的演化。实验表明现有通用 LLM 记忆系统在多方设定下易丢失人物与群体关系，该方法显著改善了跨线索整合能力。</div>
+    <div class="tags"><span class="tag">Agent 记忆</span><span class="tag">多方对话</span><span class="tag">LLM</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2609.27334 · HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.27334">Just-in-Time Memory: Learning to Curate Task-Adaptive Memory for LLM Agents</a></div>
+    <div class="summary">指出现有 Agent 记忆系统在写入时即固化记忆内容（反思、工作流、技能等），导致在未来查询未知的情况下不可逆地丢弃信息。该工作提出"即时记忆"范式：延迟记忆策展至查询时刻，根据具体任务从原始轨迹中自适应地组织记忆，避免查询无关的摘要瓶颈。</div>
+    <div class="tags"><span class="tag">Agent 记忆</span><span class="tag">LLM Agent</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📐</span>理论与训练方法</div>
+
+  <div class="card">
+    <div class="source">arXiv 2609.26355 · HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.26355">PACT: From Credit Assignment to Critic Alignment</a></div>
+    <div class="summary">针对 RL 后训练中 token 级信用分配缺乏公认数学定义的问题，提出完备性、前缀一致性与中立性三条正则条件，并证明其唯一确定 token 级信用。该刻画为解释现有算法的现象提供了统一理论基础，并可将信用分配与 critic 对齐纳入同一框架。</div>
+    <div class="tags"><span class="tag">RLHF/RLVR</span><span class="tag">信用分配</span><span class="tag">理论</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2609.28385 · cs.AI</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.28385">When and Where to Trust the Teacher: Unifying On-Policy Distillation and GRPO through Entropy-Calibrated Credit Assignment</a></div>
+    <div class="summary">RLVR 仅通过最终答案正确性监督数学推理，缺乏 token 级指导；在线蒸馏（OPD）虽提供稠密反馈，但教师偏好未必对应正确性。该工作通过熵校准的信用分配统一 OPD 与 GRPO，在"何时、何处信任教师"这一问题上给出了系统性的解决方案。</div>
+    <div class="tags"><span class="tag">GRPO</span><span class="tag">蒸馏</span><span class="tag">推理</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2609.27891 · HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.27891">Schrödinger's Code Repository: Have LLMs Learned SWE-bench or Memorized It?</a></div>
+    <div class="summary">系统考察 LLM 在 SWE-bench 上的高表现究竟源于真实的软件工程能力还是对基准数据的记忆。该研究对当前代码智能评测的有效性提出方法论层面的质疑，对基准设计与污染检测具有参考价值。</div>
+    <div class="tags"><span class="tag">评测</span><span class="tag">SWE-bench</span><span class="tag">数据污染</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>具身智能与机器人</div>
+
+  <div class="card">
+    <div class="source">arXiv 2609.28256 · HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.28256">MemBodied: Recurrent Associative Memory for Vision-Language-Action Models</a></div>
+    <div class="summary">现有 VLA 策略大多不保留当前观测之外的情节级信息，在历史依赖型操作任务上表现受限。MemBodied 为 VLA 引入循环联想记忆，在不无限膨胀上下文的前提下保留并利用过去观测，改善需要跨时间信息整合的操作任务。</div>
+    <div class="tags"><span class="tag">VLA</span><span class="tag">具身智能</span><span class="tag">记忆机制</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2609.28393 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.28393">PointCast: One World Model for Rigid, Articulated, and Deformable Object Manipulation</a></div>
+    <div class="summary">提出点集世界模型 PointCast，以物体与末端执行器上的 3D 点集为状态表示，免网格、拓扑无关，统一覆盖刚体、铰接体与可变形体的操作预测。每个点保持身份一致性并受监督，为通用机器人操作的世界模型提供了简洁而通用的建模范式。</div>
+    <div class="tags"><span class="tag">世界模型</span><span class="tag">机器人操作</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2609.28429 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.28429">Watch, Recall, Act: Always-On Robots in Concurrent Embodied Streams</a></div>
+    <div class="summary">面向"常驻在线"机器人：指令随时到达与失效、场景持续变化、自身历史行动改变后续推理基础。该工作指出现有动作模型面向固定指令与单步推理的假设与现实脱节，提出在持续并发具身流中进行观察—回忆—行动的任务设定与基准。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">长程推理</span><span class="tag">基准</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🖥️</span>多模态与视觉</div>
+
+  <div class="card">
+    <div class="source">arXiv 2609.28466 · HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.28466">The Past Frames the Future: Memory for Autoregressive Video Generation</a></div>
+    <div class="summary">自回归视频生成随序列增长面临上下文窗口、存储与计算的硬性约束。该工作系统研究 AR 视频生成中的记忆机制，探讨如何在有限预算内保留关键历史帧信息，以支撑长时程生成、交互式世界建模与持续演化的视觉环境。</div>
+    <div class="tags"><span class="tag">视频生成</span><span class="tag">自回归</span><span class="tag">世界模型</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2609.28344 · cs.CL</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.28344">Mizar: A 159M-Parameter Audio-Language Model for Audio Understanding</a></div>
+    <div class="summary">面向端侧部署的小型音频-语言模型：以不足 200M 参数实现声学感知与语言模型知识的结合。该工作给出架构、数据与三阶段训练相配合的完整方案，为资源受限设备上的音频理解提供了可复现的技术路径。</div>
+    <div class="tags"><span class="tag">音频语言模型</span><span class="tag">端侧</span><span class="tag">多模态</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🌟</span>开源社区动态</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending (Python, Daily)</div>
+    <div class="title"><a href="https://github.com/vectorize-io/hindsight">vectorize-io/hindsight — Agent Memory That Learns</a></div>
+    <div class="summary">今日 GitHub Python 趋势榜首（约 +1,668 stars/日）：面向 AI Agent 的可学习记忆系统，与学术界对 Agent 记忆的研究热潮（SpeakerMem-R1、Just-in-Time Memory、MemBodied）形成呼应，显示"记忆"已成为 Agent 系统工程与研究的共同焦点。</div>
+    <div class="tags"><span class="tag hot">趋势榜首</span><span class="tag">Agent 记忆</span><span class="tag">开源</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending (Python, Daily)</div>
+    <div class="title"><a href="https://github.com/strands-agents/harness-sdk">strands-agents/harness-sdk</a> 与 <a href="https://github.com/superdesigndev/treg">superdesigndev/treg</a></div>
+    <div class="summary">Agent 基础设施类项目集中上榜：harness-sdk（+455 stars/日）提供跨模型、跨云的生产级 Agent 编排 SDK；treg（+468 stars/日）定位为"Agent 工具的 OpenRouter"，统一工具接入。反映 Agent 工程栈正从框架竞争转向标准化与互操作层。</div>
+    <div class="tags"><span class="tag">Agent 基础设施</span><span class="tag">SDK</span><span class="tag">开源</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · Awesome 生态</div>
+    <div class="title"><a href="https://github.com/zjwzcx/Awesome-Astra-Embodied-AI">Awesome-Astra-Embodied-AI</a>（新上榜，约 1,017 stars）</div>
+    <div class="summary">本月新兴的具身智能 awesome 列表，聚焦通用智能体（Astra 类）在具身 AI 与机器人方向的论文、模型与工具聚合，上线两周即获逾千星，是近期 awesome 生态中增长最快的 AI 主题列表。同期还有 Awesome-Robot-Use-Agent（机器人操作 Agent 论文与基准合集）等小型垂直列表出现。主仓库 sindresorhus/awesome 近期以清理归档列表为主，无新增 AI 列表合并。</div>
+    <div class="tags"><span class="tag">Awesome List</span><span class="tag">具身智能</span><span class="tag">资源聚合</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今日最清晰的主线是"记忆"：学术侧 SpeakerMem-R1、Just-in-Time Memory、MemBodied 分别从多方对话、任务自适应策展与 VLA 策略三个方向切入，工程侧 Hindsight 登顶 GitHub 趋势榜，研究界与开源社区罕见地在同一议题上形成共振，预示 Agent 记忆正从附属模块演变为独立的研究与工程对象。与此同时，PACT 对 token 级信用分配给出唯一性刻画，GRPO 与在线蒸馏的统一工作延续 RLVR 理论化趋势，后训练方法论日趋严谨。开源方面，混元 A13B 以 80B/13B 的 MoE 配置延续"稀疏激活换部署成本"的务实路线。具身智能热度不减，PointCast 统一三类物体操作的世界模型、Watch-Recall-Act 提出常驻在线机器人新范式。建议关注 Agent 记忆基准的后续演化及混元 A13B 的社区实测反馈。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-09-25</p>
+</div>
+
+</div>
+</body>
+</html>
