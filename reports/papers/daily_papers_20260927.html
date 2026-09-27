@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年09月27日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年09月27日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>本日学术前沿呈现明显的「世界模型 × 智能体」交汇趋势：MIT 团队提出 RAPID，将代码智能体的成功范式迁移至机器人演示编程；滚动式 World Action Model 显著降低操作延迟；PoEM 证明基础模型的 RL 后训练结果可被预测，为大模型训练成本控制提供新思路。开源侧，NVIDIA Model-Optimizer 与 Hindsight 智能体记忆项目双双登上 GitHub Trending，Anthropic 官方推出 Claude Code 插件目录，智能体工具链生态加速成型。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日焦点</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 Hot · 具身智能 / 代码智能体</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.30249">RAPID: Robot Agentic Programming from Demonstrations</a></div>
+    <div class="summary">MIT（Jiayuan Mao、Leslie Kaelbling、Tomás Lozano-Pérez 等）提出 RAPID 框架，将代码智能体在复杂编程任务上的成功范式迁移至机器人系统：从人类演示中自动生成可执行的机器人程序。该方法打通了「代码智能体 → 机器人策略合成」的链路，为通用机器人编程提供了无需大量人工标注的新路径，是 LLM Agent 与具身智能融合的标志性工作之一。</div>
+    <div class="tags">
+      <span class="tag hot">热门</span><span class="tag">cs.RO</span><span class="tag">具身智能</span><span class="tag">代码智能体</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CL / cs.LG · HuggingFace Daily Papers 收录</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.30226">PoEM: Predicting RL Outcomes from Existing Policies</a></div>
+    <div class="summary">MIT CSAIL 与 NVIDIA 联合提出 PoEM：在基础模型进行计算密集且往往不稳定的 RL 后训练（人类对齐、正确性、指令遵循）之前，直接从现有策略预测 RL 训练的最终结果。该工作有望将昂贵的 RL 后训练从「试错流程」转变为「可预测流程」，对大模型训练成本控制具有直接的工程价值。</div>
+    <div class="tags"><span class="tag">大模型</span><span class="tag">RLHF</span><span class="tag">后训练</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>世界模型与具身智能</div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CV / cs.RO · 2026-09-24</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.30247">Rolling-WAM: World Action Models with Rolling Imagination</a></div>
+    <div class="summary">World Action Models（WAM）将动作生成与未来视觉预测耦合用于机器人操作，但每次重规划周期都需完成联合视频-动作去噪过程，延迟显著。Rolling-WAM 提出滚动式想象机制，在不牺牲预测质量的前提下大幅压缩决策延迟，使 WAM 类方法更接近实时操作场景的可部署形态。</div>
+    <div class="tags"><span class="tag">世界模型</span><span class="tag">机器人操作</span><span class="tag">实时性</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.RO · 2026-09-24 · HuggingFace Daily Papers 收录</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.30233">Coding Agents for Generalized Task and Motion Planning Problems</a></div>
+    <div class="summary">面向广义任务与运动规划（Generalized TAMP）：即使在完全可观测与对象中心状态下，离散决策与几何、运动学、动力学约束的紧耦合仍使 TAMP 极具挑战。该工作将编码智能体引入广义 TAMP 求解，由智能体自动生成并验证规划程序，是「LLM-as-planner」路线在机器人长程规划上的又一进展。</div>
+    <div class="tags"><span class="tag">TAMP</span><span class="tag">LLM 规划</span><span class="tag">机器人</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.RO · 2026-09-24</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.30264">AD-WM: Action-Discriminative World Models for Counterfactual Model Predictive Control</a></div>
+    <div class="summary">指出潜在世界模型的一个结构性缺陷：模型通常在事实转移预测上训练，而模型预测控制（MPC）需要从同一状态比较多个候选动作——事实误差低的模型未必能区分动作后果。AD-WM 提出动作判别性世界模型，面向反事实 MPC 优化动作间区分度，为世界模型在控制闭环中的可靠性提供了新的评估与训练视角。</div>
+    <div class="tags"><span class="tag">世界模型</span><span class="tag">MPC</span><span class="tag">控制</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态与视觉理解</div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CV / cs.LG · 2026-09-24</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.30210">The Alignment Illusion in Multimodal Large Language Models</a></div>
+    <div class="summary">对多模态大语言模型中一个被广泛接受的解释提出质疑：逐层视觉-文本相似度的提升常被解读为语言模型逐步将视觉内容整合进共享表征空间的证据。作者指出该解读建立在未经检验的假设之上，并通过系统性分析揭示「对齐提升」可能是一种度量假象。该工作对 MLLM 可解释性研究方法论具有警示意义。</div>
+    <div class="tags"><span class="tag">MLLM</span><span class="tag">可解释性</span><span class="tag">表征分析</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CV · 2026-09-24 · HuggingFace Daily Papers 收录</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.30221">WanPE: Towards Cinematic Prompt Enhancement for Modern Text-to-Video Generation</a></div>
+    <div class="summary">随着视频生成模型扩展至 30 秒级并忠实遵循复杂条件，文本提示词在很大程度上决定了生成质量上限。WanPE 提出面向电影级表达的提示增强框架，将原始用户意图系统性地扩充为包含镜头语言、光影与叙事节奏的结构化剧本式提示，显著提升现代文生视频系统的视觉叙事能力。</div>
+    <div class="tags"><span class="tag">文生视频</span><span class="tag">提示工程</span><span class="tag">生成模型</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源动态与 Awesome 生态</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · +357⭐/日</div>
+    <div class="title"><a href="https://github.com/NVIDIA/Model-Optimizer">NVIDIA/Model-Optimizer — 统一的模型优化库</a></div>
+    <div class="summary">NVIDIA 开源的统一模型优化工具链，集成量化、蒸馏、剪枝、神经架构搜索、投机解码等 SOTA 技术，支持将优化后的模型直接编译部署至 TensorRT-LLM 等推理后端。在推理成本持续成为大模型落地瓶颈的背景下，该类一站式优化库正在成为生产级部署的标准组件。</div>
+    <div class="tags"><span class="tag hot">热门</span><span class="tag">开源</span><span class="tag">模型压缩</span><span class="tag">推理优化</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · +2,147⭐/日 · 智能体基础设施</div>
+    <div class="title"><a href="https://github.com/vectorize-io/hindsight">Hindsight — 会学习的智能体记忆系统</a></div>
+    <div class="summary">定位「Agent Memory That Learns」的开源智能体记忆系统，单日获星超过 2,100，为今日 GitHub Trending 全站榜首。项目针对 LLM 智能体长期记忆的写入、检索与自我改进问题提供工程化方案，反映出社区对智能体持久化记忆基础设施的强烈需求。</div>
+    <div class="tags"><span class="tag hot">榜首</span><span class="tag">智能体</span><span class="tag">记忆系统</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · Anthropic 官方 · +253⭐/日</div>
+    <div class="title"><a href="https://github.com/anthropics/claude-plugins-official">claude-plugins-official — Anthropic 官方 Claude Code 插件目录</a></div>
+    <div class="summary">Anthropic 官方维护的高质量 Claude Code 插件目录，配合 strands-agents/harness-sdk（任意模型、任意云的生产级智能体 SDK）与 wshobson/agents（多平台智能体插件市场）同日上榜，标志着编码智能体正从单一工具走向「插件化生态」阶段。</div>
+    <div class="tags"><span class="tag">编码智能体</span><span class="tag">生态</span><span class="tag">工具链</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Awesome 生态追踪 · sindresorhus/awesome</div>
+    <div class="title"><a href="https://github.com/sindresorhus/awesome">Awesome 主列表动态：本周期无新增 AI/ML 列表，维护以清理归档项目为主</a></div>
+    <div class="summary">本期对 sindresorhus/awesome 主列表的追踪显示，近期合并集中于元维护层面（移除 8 个已归档列表、修复 lint 工具、修正字符问题），未新增 AI/机器学习/机器人方向的 awesome list。上一批值得关注的 AI 相关合并仍为 Gemini CLI、Claude Code 与 Copilot Agents 三个列表，反映官方主列表对 AI 编码工具类资源的持续收录。建议读者直接关注 awesome-llm、awesome-machine-learning 等专题列表获取增量更新。</div>
+    <div class="tags"><span class="tag">Awesome</span><span class="tag">开源生态</span><span class="tag">资源索引</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今日学术产出呈现清晰的「世界模型 × 智能体」双主线：PoEM 将 RL 后训练结果变为可预测量，RAPID 与 Coding Agents for TAMP 则把代码智能体范式系统性引入机器人编程与长程任务规划，具身智能正加速吸收 LLM 领域的方法论红利。Rolling-WAM 与 AD-WM 分别从延迟与动作判别性两个维度修补世界模型的部署短板，方向务实。值得警惕的是《The Alignment Illusion》对 MLLM 逐层相似度解释范式的证伪式检验——度量驱动的可解释性结论需更审慎。开源侧，NVIDIA Model-Optimizer 与 Anthropic 官方插件目录同日走热，推理优化与智能体插件生态的产业成熟度持续提升；Awesome 主列表本周期以清理归档为主，AI 专题列表未见重要新增。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-09-27</p>
+</div>
+
+</div>
+</body>
+</html>
