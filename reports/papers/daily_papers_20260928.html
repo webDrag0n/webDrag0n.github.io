@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年09月28日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年09月28日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>397B 参数提示增强模型 WanPE 将电影级导演规划引入文生视频；线性叠加假说揭示 Transformer 可同时承载两条思维流；Agent-Editing World Model 重新界定 LLM 智能体的世界建模方式；机器人领域 RAPID 与 Rolling-WAM 分别推进了演示驱动的智能体编程与低延迟世界动作模型；开源侧 GitHub 趋势榜被 AI Agent 工具链占据。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>焦点研究</div>
+
+  <div class="hot-topic">
+    <div class="label">HOT · 多模态生成</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.30221">WanPE: Towards Cinematic Prompt Enhancement for Modern Text-to-Video Generation</a></div>
+    <div class="summary">提出 397B 参数的提示增强模型，基于 105 万条真实视频训练，将文本到视频的生成前置为"电影剧本式"的镜头级导演规划。通过视频反向构建（video-grounded reverse construction）生成镜头计划，并以语义一致性 GRPO（SC-GRPO）保证跨镜头对用户意图的忠实保持，显著改善 30 秒级长视频的多镜头叙事连贯性。</div>
+    <div class="tags"><span class="tag hot">HuggingFace 热门</span><span class="tag">Text-to-Video</span><span class="tag">GRPO</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">HOT · 可解释性</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.29845">Your Transformer Can Hold Two Thoughts at Once: Evidence of Linear Superposition in LLMs</a></div>
+    <div class="summary">提出"叠加线性假说"（Superposition Linearity Hypothesis）：当两条独立文本流的输入被线性组合时，模型输出呈现各自下一 token 分布的叠加。研究表明叠加是 Transformer 架构的内在属性而非训练涌现，且会随预训练推进而减弱；轻量微调即可显著恢复线性，为模型内部表征与思维叠加机制提供了新的可解释性视角。</div>
+    <div class="tags"><span class="tag hot">HuggingFace 热门</span><span class="tag">可解释性</span><span class="tag">表征工程</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型与智能体</div>
+
+  <div class="card">
+    <div class="source">ArXiv · cs.AI / cs.CL · 2026-09-24</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.28416">Agent-Editing World Model: Rethinking World Modeling for LLM Agents</a></div>
+    <div class="summary">指出现有语言世界模型对高熵、依赖执行的工具响应进行重建的价值有限，且智能体存在"任务状态污染"问题——无依据假设与过时计划在历史中累积并扭曲后续决策。AEWM 转而建模推理与动作如何塑造任务进展，而非模拟工具响应，为长程智能体的世界建模提供了新范式。</div>
+    <div class="tags"><span class="tag">LLM Agent</span><span class="tag">World Model</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">ArXiv · cs.LG / cs.AI · 2026-09-24</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.30226">PoEM: Predicting RL Outcomes from Existing Policies</a></div>
+    <div class="summary">针对基础模型 RL 后训练计算密集、过程不稳定且结果难预估的痛点，提出从既有策略出发预测 RL 训练收益的方法，旨在降低对齐、正确性与指令遵循等后训练目标的试错成本。</div>
+    <div class="tags"><span class="tag">RL 后训练</span><span class="tag">对齐</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">ArXiv · cs.AI / cs.CL · 2026-09-24</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.29892">Qwen-Planner-Agent: A Closed-Loop AI-for-AI Framework for Real-World Mobile Planner Agents</a></div>
+    <div class="summary">构建闭环 AI-for-AI 框架，将数据生产、模型训练与真实设备评测打通，探索"AI 既是开发对象、也是下一代 AI 系统的开发参与者"的可行性；以长程、复杂的移动端规划任务为验证场景，缓解真实设备交互成本高、开发难以扩展的问题。</div>
+    <div class="tags"><span class="tag">AI-for-AI</span><span class="tag">移动端 Agent</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>具身智能与机器人</div>
+
+  <div class="card">
+    <div class="source">ArXiv · cs.RO · 2026-09-24</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.30249">RAPID: Robot Agentic Programming from Demonstrations</a></div>
+    <div class="summary">将编码智能体的成功范式迁移到机器人系统：RAPID 从演示中自动生成机器人程序，借助编程智能体解决复杂操作问题，为机器人策略获取提供了"演示即代码"的新路径。</div>
+    <div class="tags"><span class="tag">机器人编程</span><span class="tag">Coding Agent</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">ArXiv · cs.RO · 2026-09-24</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.30247">Rolling-WAM: World Action Models with Rolling Imagination</a></div>
+    <div class="summary">针对世界动作模型（WAM）在每个重规划周期执行联合视频-动作去噪带来的高延迟问题，提出滚动想象机制，将动作生成与未来视觉预测解耦推进，显著降低操作任务的决策时延。</div>
+    <div class="tags"><span class="tag">World Action Model</span><span class="tag">机器人操作</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🌐</span>开源与 Awesome 动态</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 2026-09-28</div>
+    <div class="title"><a href="https://github.com/trending">GitHub 今日趋势榜：AI Agent 工具链霸榜</a></div>
+    <div class="summary">今日上榜项目高度集中于智能体基础设施：<a href="https://github.com/paperclipai/paperclip">paperclipai/paperclip</a>（多智能体工作管理应用）、<a href="https://github.com/vectorize-io/hindsight">vectorize-io/hindsight</a>（可学习的 Agent 记忆系统）、<a href="https://github.com/mvschwarz/openrig">mvschwarz/openrig</a>（将 Claude Code 与 Codex 整合为统一多智能体系统）、<a href="https://github.com/rohitg00/ai-engineering-from-scratch">rohitg00/ai-engineering-from-scratch</a>（AI 工程从零实践教程）。智能体记忆与多智能体编排已成为开源生态的核心竞争点。</div>
+    <div class="tags"><span class="tag hot">趋势</span><span class="tag">Agent 基础设施</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · sindresorhus/awesome</div>
+    <div class="title"><a href="https://github.com/sindresorhus/awesome">Awesome 主仓库动态：AI 子列表持续活跃，主仓库暂缓接收新 PR</a></div>
+    <div class="summary">本周主仓库无新合并的 AI 类 awesome list（官方已注明 PR 暂缓接收，近期提交以清理归档列表与元信息维护为主）。作为其下游的高活跃 AI 列表仍值得跟踪：<a href="https://github.com/Shubhamsaboo/awesome-llm-apps">awesome-llm-apps</a>（140K★，AI Agent 与 RAG 应用集）、<a href="https://github.com/punkpeye/awesome-mcp-servers">awesome-mcp-servers</a>（95K★，MCP 服务器目录）、<a href="https://github.com/ComposioHQ/awesome-claude-skills">awesome-claude-skills</a>（76K★，Claude Skills 精选）均在过去一周内保持高频更新。</div>
+    <div class="tags"><span class="tag">Awesome List</span><span class="tag">MCP</span><span class="tag">LLM Apps</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今日研究版图呈现三条清晰主线：其一，视频生成竞争焦点正从扩散架构本身上移至"提示—规划"层，WanPE 以 397B 参数将导演级镜头规划形式化，标志着文生视频进入剧本化时代。其二，可解释性研究取得概念性突破，叠加线性假说为理解 Transformer 内部并行表征提供了可检验的理论框架。其三，世界模型的定义在智能体与机器人两条战线同时被重写——前者放弃对工具响应的模拟、转向任务进展建模，后者则通过滚动想象压缩决策时延。开源侧，Agent 记忆与多智能体编排工具持续霸榜 GitHub，而 awesome 生态的活跃度集中于 LLM 应用与 MCP 基础设施列表，反映出社区资源正加速向智能体工程化聚集。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-09-28</p>
+</div>
+
+</div>
+</body>
+</html>
