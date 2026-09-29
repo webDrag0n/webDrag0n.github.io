@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年09月29日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年09月29日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>开源模型侧，Qwen3.8-27B 以约 670 万次下载、1.6 万收藏领跑 HuggingFace 趋势榜，MiniMax-H3、LTX-2.5 视频模型同步升温；研究侧，推理效率与 Agent 规模化方法成为 arXiv 焦点，具身智能方向出现人形机器人感知运动生成与长航程无人机视觉语言导航新基准；Awesome 生态新增多个面向具身 AI 与 Sim2Real 的高质量列表，社区知识组织持续细化。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+
+  <div class="hot-topic">
+    <div class="label">Hot Topic · 开源模型</div>
+    <div class="title"><a href="https://hf.co/Qwen/Qwen3.8-27B">Qwen/Qwen3.8-27B 登顶 HuggingFace 趋势榜</a></div>
+    <div class="summary">通义千问新一代开源模型 Qwen3.8-27B 发布后迅速占据 HuggingFace Trending 首位，单日下载量约 670 万、收藏逾 1.6 万。Unsloth GGUF 量化版本及多个社区微调衍生版本（量化、去审查、多 token 预测等）同步进入榜单前列，MiniMaxAI/MiniMax-H3 与 Qwen3.8-Flash-Next 紧随其后，开源大模型生态围绕该系列形成明显的聚合效应。</div>
+    <div class="tags"><span class="tag hot">热榜第一</span><span class="tag">开源模型</span><span class="tag">LLM</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">Hot Topic · 具身智能</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.31577">Generate, Track, Improve: 基于 RL 微调运动生成器的感知多技能人形机器人运动控制</a></div>
+    <div class="summary">面向通用人形机器人，该工作提出两层运动架构：底层为感知型 flow matching 运动生成器，覆盖多种运动技能；上层通过强化学习对生成器进行微调，实现对复杂地形的动态、鲁棒运动。研究表明生成式运动先验与 RL 微调的耦合可显著提升人形机器人在非结构化环境中的多技能运动能力。</div>
+    <div class="tags"><span class="tag hot">人形机器人</span><span class="tag">强化学习</span><span class="tag">Flow Matching</span><span class="tag">具身智能</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>ArXiv 前沿论文</div>
+
+  <div class="card">
+    <div class="source">arXiv:2609.31619 · cs.CL · 2026-09-25</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.31619">Learning to Stop without Learning to Stop: 自监督置信度训练提升推理效率</a></div>
+    <div class="summary">针对推理模型生成冗长思维链导致的推理开销问题，该研究提出自监督置信度训练方法，在不依赖推理时早停机制、亦不显式压缩推理长度的前提下，使模型自发学会在答案置信度充足时终止推理，在保持准确率的同时显著降低推理计算成本。</div>
+    <div class="tags"><span class="tag">推理效率</span><span class="tag">思维链</span><span class="tag">LLM</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2609.31603 · cs.CL · 2026-09-25</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.31603">User Model Extraction via Belief Self-Distillation</a></div>
+    <div class="summary">LLM 会隐式推断用户属性并据此调整行为，但这些内部信念难以检视与操控。作者提出 Belief Self-Distillation（BSD）统一读写框架，将模型对用户的隐含推断蒸馏为显式、可编辑的用户模型表示，为个性化对齐、隐私审计与用户可控性研究提供了新的可解释工具。</div>
+    <div class="tags"><span class="tag">可解释性</span><span class="tag">用户建模</span><span class="tag">对齐</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2609.31563 · cs.AI · 2026-09-25</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.31563">Multi-agent Scaling Across Disjunctive and Compensatory Tasks</a></div>
+    <div class="summary">多智能体 LLM 系统的性能是否随团队规模单调提升尚无定论。该研究引入 Steiner 群体任务分类学作为分析框架，系统考察析取型与补偿型任务下多 Agent 系统的缩放行为，指出任务结构是决定多 Agent 收益的关键变量，为 Agent 系统设计提供了理论依据。</div>
+    <div class="tags"><span class="tag">多智能体</span><span class="tag">Agent 规模化</span><span class="tag">LLM</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2609.31587 · cs.AI · 2026-09-25</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.31587">Compact Documentation for Coding Agents: A Benchmark, an Optimizer, and Why It Does Not Transfer</a></div>
+    <div class="summary">针对编码 Agent 的上下文工程问题，作者构建 roundtrip 基准以评估自然语言文档对软件问题修复的助益，并给出文档压缩优化器。实验揭示一个关键负结果：文档压缩的收益无法跨模型迁移，提示 Agent 上下文优化需按目标模型定制，对工业界 Agent 部署具有直接参考意义。</div>
+    <div class="tags"><span class="tag">编码 Agent</span><span class="tag">上下文工程</span><span class="tag">基准</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2609.31507 · cs.RO · 2026-09-25</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.31507">SatNav: 基于卫星影像的长航程无人机视觉语言导航可扩展基准</a></div>
+    <div class="summary">城市无人机视觉语言导航要求智能体跨大范围城市空间遵循指令，对长时记忆与地理空间定位能力提出高要求。SatNav 利用卫星影像构建可扩展的长航程 VLN 基准，弥补现有基准在规模与地理多样性上的不足，为无人机级具身导航研究提供标准化评测平台。</div>
+    <div class="tags"><span class="tag">VLN</span><span class="tag">无人机</span><span class="tag">基准</span><span class="tag">多模态</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2609.31606 · cs.RO · 2026-09-25</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.31606">STL-Guided Stein Variational Policy Gradient: 稀疏成功信号下的机器人策略学习</a></div>
+    <div class="summary">针对成功信号稀疏且依赖多条件协同满足的机器人任务，该工作将信号时序逻辑（STL）规范与 Stein 变分策略梯度相结合，以形式化任务规范引导多样化策略探索，在精密接触与复合条件任务上提升策略学习的样本效率与成功率。</div>
+    <div class="tags"><span class="tag">机器人学习</span><span class="tag">STL</span><span class="tag">策略梯度</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源与 Awesome 生态</div>
+
+  <div class="card">
+    <div class="source">HuggingFace Trending · 2026-09-28</div>
+    <div class="title"><a href="https://hf.co/Lightricks/LTX-2.5">Lightricks/LTX-2.5 与 Comfy-Org/Qwen-Image-2.1 进入趋势榜</a></div>
+    <div class="summary">视频与图像生成侧热度不减：Lightricks 视频生成模型 LTX-2.5 获逾 5,300 收藏，Qwen-Image-2.1 在 ComfyUI 生态内单日下载约 400 万；Meta facebook/sam3 分割模型亦保持高热度。多模态生成与感知模型的开源节奏持续加快。</div>
+    <div class="tags"><span class="tag">视频生成</span><span class="tag">图像生成</span><span class="tag">开源</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 2026-09</div>
+    <div class="title"><a href="https://github.com/zjwzcx/Awesome-Astra-Embodied-AI">Awesome-Astra-Embodied-AI 等具身智能列表集中涌现</a></div>
+    <div class="summary">本月 GitHub 新增多个面向具身 AI 的高质量 awesome 列表：Awesome-Astra-Embodied-AI（约 1,000 stars，聚焦具身 AI 与机器人基础模型）、Awesome-Real2Sim2Real（Sim-to-Real / Real2Sim2Real 迁移论文合集）、awesome-ai-3d-modeling-robotics（AI 3D 建模与机器人控制）、awesome-agentic-robotics（机器人规划与编排的 Agent 文献图谱）。Awesome 主仓库近期则以清理归档失效列表为主，知识组织重心正向具身智能与 Agent 细分赛道迁移。</div>
+    <div class="tags"><span class="tag hot">新趋势</span><span class="tag">Awesome 列表</span><span class="tag">具身智能</span><span class="tag">Sim2Real</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 2026-09</div>
+    <div class="title"><a href="https://github.com/yetone/magpie">yetone/magpie: 多模型 Agent 调度入口</a></div>
+    <div class="summary">新晋开源项目 magpie（约 1,600 stars）提供统一的模型路由层，支持 Codex 接入 DeepSeek、Claude Code 接入 Kimi 等跨模型组合，从菜单栏即可完成切换。同期 unreallabsai/unreal-agent（异步优先的 Agent 执行框架，约 2,000 stars）亦获得关注，反映 Agent 基础设施层工具的多样化竞争格局。</div>
+    <div class="tags"><span class="tag">Agent 工具</span><span class="tag">开源</span><span class="tag">模型路由</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今日 AI 动态呈现三条清晰脉络。其一，开源大模型竞争进入生态聚合阶段：Qwen3.8-27B 登顶 HuggingFace 趋势榜并带动量化、微调衍生版本批量上榜，头部开源模型的"引力场"效应愈发显著。其二，推理效率与 Agent 方法论成为研究主线，自监督置信度训练为推理降本提供新范式，多智能体缩放研究则首次以任务结构分类学给出系统性的规模收益边界，提示业界 Agent 系统的收益并非线性。其三，具身智能持续升温：人形机器人运动生成与 RL 微调耦合、卫星影像无人机导航基准同日出现，配合 GitHub 上新涌现的 Awesome-Embodied-AI、Real2Sim2Real 等知识列表，具身赛道正从单点突破走向体系化积累。开源模型看 Qwen，研究方法看 Agent 规模化，落地前沿看具身智能，值得持续跟踪。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-09-29 · 数据来源：arXiv / HuggingFace / GitHub</p>
+</div>
+
+</div>
+</body>
+</html>
