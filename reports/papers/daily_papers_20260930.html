@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年09月30日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年09月30日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>本日 arXiv（9月28日截稿批次）研究热点高度聚焦于 <strong>Looped/递归 Transformer</strong> 这一架构方向——从 Looped MoE 到自适应循环推理，多篇论文围绕"以参数复用换取推理深度"展开；HuggingFace Daily Papers 热度榜由统一多模态模型的<strong>原生自反思 RL</strong> 与<strong>免视觉编码器（encoder-free）多模态预训练的 Scaling Law</strong> 领衔；机器人领域，离散 VLA 人形机器人和自我进化编码智能体标志着具身智能向全身控制与自主改进演进；开源侧，awesome-claude-code 生态持续活跃，值得从业者关注。</p>
+</div>
+
+<!-- ===== LLM / 大模型 ===== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>LLM 与高效架构</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 架构热点 · Looped Transformer</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.35748">Improving Test-Time Scaling with Adaptive Looped Transformers</a></div>
+    <div class="summary">Yichen You 等（arXiv:2609.35748）。Looped Transformer 通过复用层实现潜在计算，以往研究仅在等参数或等 FLOPs 条件下与常规模型对比。本文首次系统回答：循环机制能否随输出长度增长改善测试时扩展性（test-time scaling）。研究提出自适应循环策略，使模型按问题难度动态分配循环次数，为"以参数复用换取推理深度"的架构路线提供了关键的实证依据。</div>
+    <div class="tags"><span class="tag hot">Test-Time Scaling</span><span class="tag">Looped Transformer</span><span class="tag">cs.CL</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.LG · 2026-09-28</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.35751">How to Loop MoE: Flatten the Experts, Untie the Attention</a></div>
+    <div class="summary">Shouren Wang 等。Looped Transformer 与稀疏 MoE 分别代表"深度复用"与"宽度稀疏"两条参数效率路线。本文提出 Looped MoE，通过展平专家（flatten experts）与解耦注意力（untie attention）两项设计将二者统一，在固定参数规模下同时利用循环计算与专家稀疏激活，为下一代高效大模型架构提供了新的设计空间。</div>
+    <div class="tags"><span class="tag">MoE</span><span class="tag">高效架构</span><span class="tag">cs.LG</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.AI · 2026-09-28</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.35741">Shockingly Simple Self-retrospection Improves Agentic Models Without RL</a></div>
+    <div class="summary">Jonathan Light 等。智能体能否仅通过对自身经验进行"复盘式解释"而改进未来行为？研究表明，仅在自我经验解释文本上训练（无需强化学习），即可显著提升智能体模型的后续决策质量——模拟了人类通过叙述与反思修正认知的学习机制，为低成本智能体自我改进提供了极简范式。</div>
+    <div class="tags"><span class="tag hot">Agentic AI</span><span class="tag">自我改进</span><span class="tag">cs.AI</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.LG · 2026-09-28</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.35750">KV-streams for Efficient Compaction in Agentic Reinforcement Learning</a></div>
+    <div class="summary">Emiliano Penaloza 等。扩展智能体 LLM 的任务时程受制于 GPU 显存中超长上下文轨迹的存放。现有上下文压缩策略多依赖重新预填充（prefill），代价高昂。KV-streams 提出面向智能体 RL 的高效压缩机制，在不突破显存预算的前提下维持长轨迹训练，直接回应了智能体强化学习规模化落地的核心工程瓶颈。</div>
+    <div class="tags"><span class="tag">Agentic RL</span><span class="tag">显存优化</span><span class="tag">cs.LG</span></div>
+  </div>
+</div>
+
+<!-- ===== 多模态 / VLM ===== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态与视觉语言模型</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 HuggingFace 热榜</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.35767">Learning Native Reflection in Unified Models with Interleaved Reinforcement Learning</a></div>
+    <div class="summary">Yijia Fan 等（arXiv:2609.35767，HuggingFace Daily Papers 上榜）。统一多模态模型兼具"看图"与"绘图"能力，理论上可以修复自己的生成结果：诊断错误→修正→观察→再诊断。由于修正是否有效只能在渲染后验证，作者提出交错式强化学习（interleaved RL），将反思文本与图像渲染交替纳入奖励回路，使模型习得原生的视觉自反思能力——这是统一多模态模型自我纠错方向的代表性进展。</div>
+    <div class="tags"><span class="tag hot">统一多模态</span><span class="tag">RL</span><span class="tag">自反思</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · HuggingFace Daily Papers · 2026-09-29</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.35457">How Far Are We from Removing the Visual Encoder? Scaling Laws for Encoder-Free Multimodal Pretraining</a></div>
+    <div class="summary">Lin Chen 等。现代 MLLM 普遍依赖预训练视觉编码器提供强视觉先验；免编码器（encoder-free）路线直接从原始像素学习视觉表征，架构更简洁统一，但其扩展行为此前缺乏系统刻画。本文首次对比两类架构的 Scaling Law，量化了 encoder-free 路线与主流方案在不同规模下的差距与收敛条件，为多模态架构选型提供了基础性参考。</div>
+    <div class="tags"><span class="tag hot">Scaling Law</span><span class="tag">Encoder-Free</span><span class="tag">MLLM</span></div>
+  </div>
+</div>
+
+<!-- ===== 具身智能 / 机器人 ===== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>具身智能与机器人</div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.RO · 2026-09-28</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.35709">Humanoid Loco-Manipulation With Discrete VLA Model</a></div>
+    <div class="summary">Wenxin Shao 等。基于离散动作 token 的 VLA 模型已在机械臂操作上验证有效，但人形机器人的全身动作空间（腿、躯干、手臂、手指）维度更高且高度异质，给 token 化与训练带来挑战。本文将离散 VLA 范式扩展至人形全身移动操作（loco-manipulation），统一处理高维异质动作空间，是 VLA 向通用人形控制迈进的重要一步。</div>
+    <div class="tags"><span class="tag hot">VLA</span><span class="tag">人形机器人</span><span class="tag">cs.RO</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · HuggingFace Daily Papers · 2026-09-29</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.35432">Self-Evolving Coding Agents: From Digital Programs to Physical-World Intelligence</a></div>
+    <div class="summary">Hongcheng Gao 等。VLA 与世界-动作模型将观测直接映射为机器人动作，但这种直接性使策略与训练条件强耦合——布局或视角的微小变化即导致失效。作者指出根源在于表征层面，提出以自我进化编码智能体（self-evolving coding agents）将数字程序的迭代改进能力迁移至物理世界智能，代表了"以代码为中介的具身智能"这一新兴研究路线。</div>
+    <div class="tags"><span class="tag">自我进化</span><span class="tag">Coding Agent</span><span class="tag">具身智能</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.RO · 2026-09-28</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.35761">DexRoam: Learning Mobile Bimanual Dexterous Manipulation from Egocentric Whole-Body Human Demonstrations</a></div>
+    <div class="summary">Rui Zhou 等。移动双臂灵巧操作要求在单一轨迹内持续协调移动、全身运动与手指级灵巧性，造成严重的机器人示范数据瓶颈。DexRoam 利用第一视角全身人类示范作为可扩展的替代数据源，直接学习移动双臂灵巧操作策略，为缓解具身数据采集成本提供了实用路径。</div>
+    <div class="tags"><span class="tag">灵巧操作</span><span class="tag">人类示范</span><span class="tag">cs.RO</span></div>
+  </div>
+</div>
+
+<!-- ===== 开源 / Awesome ===== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📦</span>开源与 Awesome 生态</div>
+
+  <div class="card">
+    <div class="source">GitHub · awesome list · 更新于 2026-09-29</div>
+    <div class="title"><a href="https://github.com/hesreallyhim/awesome-claude-code">awesome-claude-code（★54.8k）持续高频更新</a></div>
+    <div class="summary">面向 Claude Code 智能体的精选资源列表，昨日（9月29日）仍有更新提交，星标已逾 5.4 万，涵盖工作流、钩子（hooks）、MCP 集成与社区最佳实践。在编码智能体工具链快速演进的背景下，该列表已成为跟踪 agentic coding 工程实践的核心索引，值得 LLM 应用开发者定期关注。</div>
+    <div class="tags"><span class="tag hot">Awesome</span><span class="tag">Coding Agent</span><span class="tag">GitHub</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · sindresorhus/awesome 主仓库动态</div>
+    <div class="title"><a href="https://github.com/sindresorhus/awesome">主 awesome 索引近期进入维护性整理周期</a></div>
+    <div class="summary">近三月主仓库合并的 PR 以"移除已归档列表"为主（6月移除 17 个、8月再移除 8 个归档列表），未见新增 AI/ML 类列表被合并收录，反映主索引趋于收紧收录标准、清理失效条目。同期社区 AI 类 awesome 列表的活跃重心已转移至专项索引（如 awesome-claude-code、awesome-ai-agents-2026 等），从业者宜以专项列表为主要跟踪对象。</div>
+    <div class="tags"><span class="tag">Awesome 索引</span><span class="tag">生态观察</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>本日研究图景呈现两条清晰主线。其一，Looped/递归 Transformer 成为架构研究焦点：Adaptive Looped Transformers 系统论证了循环计算对测试时扩展性的增益，Looped MoE 则将深度复用与专家稀疏统一于单一设计——"以参数复用换推理深度"正从概念走向可扩展的工程范式。其二，多模态与具身智能加速融合：统一多模态模型通过交错式 RL 习得原生自反思能力，encoder-free 路线的 Scaling Law 首次获得系统刻画；离散 VLA 扩展至人形全身控制，自我进化编码智能体则尝试以代码为中介弥合数字程序与物理智能的鸿沟。开源侧，主 awesome 索引进入清理周期，而 awesome-claude-code 等专项列表持续活跃，反映 agentic coding 工具链已进入生态成熟期。整体而言，推理时计算与智能体自主改进仍是当前最具确定性的两条技术演进轴线。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · Generated 2026-09-30 by Hermes Agent · Sources: arXiv API, HuggingFace Daily Papers, GitHub API</p>
+</div>
+
+</div>
+</body>
+</html>
