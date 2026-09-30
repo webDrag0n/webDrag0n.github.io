@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年10月01日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年10月01日</div>
+  <div class="subtitle">中文AI媒体精选 · 覆盖2026年9月30日报道</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>OpenAI DevDay 成为昨日绝对焦点——常驻代理 Dots 正式上岗、GPT-6.1 Sol 以五分之一价格逼近旗舰 Astra、Codex 安全云升级等 20 余项发布集中落地；Anthropic 以 845 亿美元包下 SpaceX 算力并发布 Claude Sonnet 5.5 限时测试；国内方面，DeepSeek 开源昇腾基础组件并首次公开 V4.1 Agent 训练体系 DSec，320B 开源模型 IQuest-Q1 与 Manus 2.0 亦引发关注。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>头条聚焦</div>
+
+  <div class="hot-topic">
+    <div class="label">BREAKING · 多源报道</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/499246.html">OpenAI DevDay 2026：常驻代理 Dots 上岗，GPT-6.1 Sol 以 1/5 价格逼近 Astra，一晚 25 项更新</a></div>
+    <div class="summary">OpenAI 于旧金山开发者大会集中发布约 20–25 项更新：由 GPT-6 Astra 驱动的常驻代理 Dots 自带云电脑、连通 4000 余应用、可全天后台运行，首批面向 Pro 等付费用户；GPT-6.1 Sol 在编程与电脑操作评测上逼近旗舰 Astra，API 单价仅为其五分之一，已登陆 Codex、ChatGPT Work 及 API；同时推出 500 美元/月最贵套餐、ChatGPT Space 协作功能与 Codex Security Cloud 升级。奥特曼在问答环节表示，模型安全承诺未完善前 OpenAI 不会上市。</div>
+    <div class="tags"><span class="tag hot">OpenAI</span><span class="tag">GPT-6.1 Sol</span><span class="tag">Agent</span><span class="tag">新智元 / 量子位</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-09-30</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/499493.html">GPT-6 Astra 接入宇树 G1，现场完成厨房整理任务</a></div>
+    <div class="summary">DevDay 演示环节中，GPT-6 Astra 与宇树科技人形机器人 G1 完成对接，在真实厨房场景中执行收纳整理任务，展示了大模型向物理世界执行层的延伸能力，被视为语言模型与具身智能融合的标志性演示。</div>
+    <div class="tags"><span class="tag hot">具身智能</span><span class="tag">宇树 G1</span><span class="tag">GPT-6 Astra</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 / 量子位 · 2026-09-30</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/499597.html">Anthropic 发布长文警示 GLM-5.3 安全风险，实测数据引发争议</a></div>
+    <div class="summary">Anthropic 发布长文指称智谱 GLM-5.3 存在安全隐患，但其自家测试数据显示 GLM-5.3 端到端漏洞利用成功 50 次，与 Mythos Preview 的 56 次几乎持平，被舆论质疑为竞争性叙事。同期 Claude Sonnet 5.5 在 Arena 开启 48 小时限时测试。</div>
+    <div class="tags"><span class="tag">Anthropic</span><span class="tag">智谱 GLM-5.3</span><span class="tag">模型安全</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>模型与技术</div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-09-30</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/499308.html">DeepSeek 知乎独家发文，首次公开 V4.1 Agent 训练体系 DSec</a></div>
+    <div class="summary">DeepSeek 官方在知乎独家披露 V4.1 Agent 的训练基础设施与方法框架 DSec，系该公司首次系统性公开其智能体训练技术路线，为业界理解国产 Agent 模型的工程化实践提供了重要参考。</div>
+    <div class="tags"><span class="tag hot">DeepSeek</span><span class="tag">Agent 训练</span><span class="tag">技术解读</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 / 新智元 · 2026-09-30</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/499263.html">DeepSeek 开源昇腾基础组件，共建国产 AI 芯片软件生态</a></div>
+    <div class="summary">DeepSeek 官方开源面向昇腾平台的算子库与 DeepEP 通信库，与 GPU 版本一一对应；在昇腾 950 超节点上，DeepSeek-V4.1-Flash 推理 TPOT=10ms 时单卡吞吐达 5102 tokens/s，标志着国产算力软件栈适配进入实质阶段。</div>
+    <div class="tags"><span class="tag hot">开源</span><span class="tag">昇腾</span><span class="tag">国产算力</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · 2026-09-30</div>
+    <div class="title"><a href="https://aiera.com.cn/">320B 开源模型 IQuest-Q1 发布：可自主定位 RL 训练数据缺陷</a></div>
+    <div class="summary">参数量 320B 的开源大模型 IQuest-Q1 凌晨发布，权重与技术博客同步开放。官方展示其自主排查强化学习训练数据缺陷的能力（最终定位至一个空格错误），并可通过 Prompt 直接生成可运行的小游戏，工程实用性与自我调试能力引发社区关注。</div>
+    <div class="tags"><span class="tag hot">开源模型</span><span class="tag">320B</span><span class="tag">RL 训练</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-09-30</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/499592.html">Manus 2.0 回归：为 Agent 配置手机号与钱包，支持群组协作</a></div>
+    <div class="summary">Manus 发布 2.0 版本，为 AI 智能体引入独立的手机号与支付钱包能力，并支持多 Agent 拉群协同工作，标志着通用 Agent 产品向"数字员工"身份化、组织化方向演进。</div>
+    <div class="tags"><span class="tag hot">Agent 产品</span><span class="tag">Manus</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · 2026-09-30</div>
+    <div class="title"><a href="https://aiera.com.cn/">Inferact 开源 TPU Megakernels：Kimi K3 自写"超级算子"，推理提速 3 倍</a></div>
+    <div class="summary">由 vLLM 原班人马创办的 Inferact 开源 TPU Megakernels（巨型算子）方案，利用 Kimi K3 模型自动生成融合算子，实现推理性能约 3 倍提升，展示了"AI 优化 AI"的算力自举路径。</div>
+    <div class="tags"><span class="tag">推理优化</span><span class="tag">TPU</span><span class="tag">Kimi K3</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · 2026-09-30</div>
+    <div class="title"><a href="https://aiera.com.cn/">十个 Claude Sonnet 5.5 协作 15 小时，形式化攻克百年物理猜想</a></div>
+    <div class="summary">10 个 Claude Sonnet 5.5 实例组成多智能体系统，通宵协作 15 小时、互发 1270 条消息，生成 17895 行 Lean 形式化证明代码，攻克球面七电子分布这一困扰学界数百年的物理猜想，成为多智能体科学发现的里程碑案例。</div>
+    <div class="tags"><span class="tag hot">AI4Science</span><span class="tag">多智能体</span><span class="tag">形式化证明</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🏭</span>行业与资本</div>
+
+  <div class="card">
+    <div class="source">新智元 / 量子位 · 2026-09-30</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/499098.html">AMD 以 82 亿美元收购李飞飞 World Labs，世界模型最大交易落地</a></div>
+    <div class="summary">AMD 官宣以 82 亿美元全股票收购李飞飞创立的世界模型公司 World Labs，为 AMD 历史上第二大收购案。交易完成后 AMD 将在空间智能与世界模型赛道获得关键布局，被视为芯片巨头向上游模型层延伸的标志性事件。</div>
+    <div class="tags"><span class="tag hot">收购</span><span class="tag">AMD</span><span class="tag">World Labs</span><span class="tag">世界模型</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · 2026-09-30</div>
+    <div class="title"><a href="https://aiera.com.cn/">Anthropic 以最高 845 亿美元包下 SpaceX 算力，协议保留 90 天退出条款</a></div>
+    <div class="summary">据路透社查阅的 IPO 申报文件，Anthropic 签署最高 845 亿美元的算力租赁协议，覆盖 SpaceX 两座数据中心内的 NVIDIA GPU，但保留了 90 天退出条款。该协议规模刷新 AI 算力采购纪录，亦反映头部实验室在算力锁定与风险对冲间的精细平衡。</div>
+    <div class="tags"><span class="tag hot">算力</span><span class="tag">Anthropic</span><span class="tag">SpaceX</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-09-30</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/499280.html">36 家已上市机器人公司财报透视：盈利能力分化显著，商业化回归务实</a></div>
+    <div class="summary">量子位对 36 家已敲钟机器人企业的财务数据进行系统梳理，显示行业盈利能力差距悬殊，概念驱动型叙事退潮，商业化能力成为估值分化的核心变量，具身智能赛道进入"去泡沫、看营收"阶段。</div>
+    <div class="tags"><span class="tag">机器人</span><span class="tag">行业分析</span><span class="tag">商业化</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-09-30</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/499135.html">诺因智能再获数亿元融资：成立一年完成 5 轮，累计超 10 亿元</a></div>
+    <div class="summary">消费级具身智能公司诺因智能宣布完成新一轮数亿元融资，成立一年内累计完成 5 轮、总额超 10 亿元融资，反映资本市场对家庭场景人形机器人赛道的持续加码。</div>
+    <div class="tags"><span class="tag">融资</span><span class="tag">具身智能</span><span class="tag">诺因智能</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · 2026-09-30</div>
+    <div class="title"><a href="https://aiera.com.cn/">LinkedIn 报告：AI 安全岗位需求一年增长 91%，OpenAI 开出 32 万美元年薪</a></div>
+    <div class="summary">LinkedIn 报告显示，在科技行业整体招聘收缩背景下，AI 安全相关岗位需求一年内逆势增长 91%，OpenAI 为相关职位开出 32 万美元年薪，凸显模型能力跃迁与安全治理投入之间的结构性张力。</div>
+    <div class="tags"><span class="tag">AI 安全</span><span class="tag">人才市场</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">💬</span>观点与评论</div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-09-30</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/499654.html">OpenAI 推理负责人访谈：数学只是多智能体时代的开端</a></div>
+    <div class="summary">OpenAI 推理研究负责人接受专访，系统阐述推理模型从数学竞赛向多智能体协作演进的技术逻辑，认为数学能力的突破仅为多智能体时代的"开胃菜"，真正的能力跃迁将来自智能体间的协同与分工。</div>
+    <div class="tags"><span class="tag">观点</span><span class="tag">推理模型</span><span class="tag">多智能体</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · 2026-09-30</div>
+    <div class="title"><a href="https://aiera.com.cn/">多位菲尔兹奖得主联名发布《AI 生成数学的负责任发布》倡议</a></div>
+    <div class="summary">由多位菲尔兹奖得主领衔的"数学与人工智能咨询组（AGMAI）"发布倡议文件，要求前沿实验室公开推理过程、开放模型访问、披露算力成本，并资助人类数学家对 AI 生成证明进行独立核验，反映数学共同体对 AI 证明可信度的制度性回应。</div>
+    <div class="tags"><span class="tag">AI4Math</span><span class="tag">学术治理</span><span class="tag">观点</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>9 月 30 日的报道密度呈现显著的"DevDay 效应"：OpenAI 单日释放 20 余项更新，其产品策略清晰可循——以 GPT-6.1 Sol 完成旗舰能力的成本下沉，以常驻代理 Dots 卡位全天候 Agent 入口，以 500 美元套餐试探定价上限。三条线索共同指向同一判断：模型竞争的主战场正从基准分数转向任务闭环与单位经济性。值得关注的是，Anthropic 845 亿美元算力协议与 AMD 收购 World Labs 同日落地，算力与世界模型已成为资本配置的两个确定性方向。国内侧，DeepSeek 开源昇腾组件并公开 Agent 训练体系，显示出国产模型在算力自主与方法论透明度上的双重推进。多智能体形式化证明攻克百年猜想、菲尔兹奖得主联名倡议，则提示 AI4Science 正从演示阶段进入学术共同体的制度性审视阶段。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026年10月01日生成 · 数据来源：量子位 / 新智元 / 机器之心 / 36氪 / 极客公园等公开报道</p>
+</div>
+
+</div>
+</body>
+</html>
