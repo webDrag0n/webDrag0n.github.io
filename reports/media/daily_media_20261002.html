@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年10月02日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年10月02日</div>
+  <div class="subtitle">中文AI媒体精选 · 覆盖2026年10月1日报道</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>谷歌新一代旗舰 Gemini 4 Argon 成为昨日绝对焦点——单次输出上限提升至 100 万 Token、定价仅为同级竞品一半，但首发仅面向网络安全防御方开放；何恺明团队新作 VARC 以纯视觉路径攻克 ARC 抽象推理基准，挑战"推理必须借助语言"的主流范式；资本与算力侧，腾讯被曝以 70 亿美元向 Oracle 租赁 10 万枚先进 AI 芯片，刷新中国科技企业海外算力采购纪录；晚点发布三季度 AI 季报，系统梳理个人助理与机器人模型的竞争格局。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>头条聚焦</div>
+
+  <div class="hot-topic">
+    <div class="label">BREAKING · 多源报道</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/499663.html">谷歌发布 Gemini 4 Argon：100 万 Token 单次输出，定价仅为旗舰竞品一半</a></div>
+    <div class="summary">Google DeepMind 于 9 月 30 日深夜发布 Gemini 4 世代首款旗舰模型 Argon，距上一代旗舰已近 10 个月。该模型面向软件工程、法律金融等企业知识工作与网络安全防御等长周期复杂任务，单次输出上限由 6.4 万 Token 提升至 100 万；DeepSWE 编程基准达 77.9%，CWE-bench v1 漏洞修复以 68.0% 与 GPT-6 Astra 并列，多项知识工作基准位列第一。API 定价 2/10 美元（百万输入/输出 Token），约为 GPT-6 Astra 与 Claude Fable 5.1 的五分之一。值得注意的是，首发阶段仅向网络安全防御方开放，普通开发者暂不可用，谷歌称将在安全评估完成后逐步扩大访问范围。</div>
+    <div class="tags"><span class="tag hot">谷歌</span><span class="tag hot">Gemini 4 Argon</span><span class="tag">大模型</span><span class="tag">量子位 / 36氪 / 智东西</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-01</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/499812.html">何恺明团队新作 VARC：纯视觉路径攻克 ARC 抽象推理挑战</a></div>
+    <div class="summary">MIT 何恺明团队发布新作 VARC，将 ARC 抽象推理基准重新定义为视觉问题：模型不依赖语言描述，通过在海量视觉数据上预训练（被形象地称为"看猫片"），以 Vision Transformer 为推理引擎直接学习抽象变换规律。该工作挑战了"推理必须经由语言中介"的主流假设，为理解机器抽象智能提供了新的方法论视角。</div>
+    <div class="tags"><span class="tag hot">何恺明</span><span class="tag">ARC</span><span class="tag">视觉推理</span><span class="tag">MIT</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">晚点LatePost · 2026-10-01</div>
+    <div class="title"><a href="https://www.163.com/dy/article/L856JLS20531M1CO.html">晚点 AI 季报：个人助理产品集中爆发，Astra 走进机器人</a></div>
+    <div class="summary">晚点LatePost 发布三季度 AI 季报，系统梳理前沿实验室竞争格局：OpenAI 三季度更新 GPT-6 Astra、Sol 与 Luna，Anthropic 推出 Fable 5.1、Opus 5.5 与 Sonnet 5.5；个人 AI 助理赛道出现 Instinct、Muse、GrokBot、Dots 等多款产品，形态与切入点分化明显；机器人侧，GPT-6 Astra 等旗舰模型开始进入具身执行层，模型竞赛与终端形态创新呈现耦合趋势。</div>
+    <div class="tags"><span class="tag hot">行业季报</span><span class="tag">OpenAI</span><span class="tag">个人助理</span><span class="tag">晚点LatePost</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🏭</span>行业与资本</div>
+
+  <div class="card">
+    <div class="source">多源（路透社/FT 报道，中文媒体跟进） · 2026-10-01</div>
+    <div class="title"><a href="https://www.reuters.com/world/china/chinas-tencent-leases-100000-chips-oracle-accelerate-ai-push-ft-reports-2026-10-01/">腾讯被曝 70 亿美元向 Oracle 租赁 10 万枚先进 AI 芯片</a></div>
+    <div class="summary">据英国《金融时报》披露并经路透社证实，腾讯与 Oracle 签署为期五年的租赁协议，通过 Oracle 位于东南亚的多个数据中心获得约 10 万枚在中国大陆无法直接采购的先进 AI 芯片使用权，交易规模约 70 亿美元，系腾讯迄今最大规模的海外算力租赁安排。该交易折射出中国科技巨头在出口管制背景下以"算力租赁"方式维持模型竞争力的路径选择。</div>
+    <div class="tags"><span class="tag hot">算力</span><span class="tag hot">腾讯</span><span class="tag">Oracle</span><span class="tag">出口管制</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">晚点LatePost 独家 · 2026-10-01</div>
+    <div class="title"><a href="https://k.sina.com.cn/article_7294209083_1b2c4cc3b00101q19k.html">晚点独家：火山引擎云端大模型日均调用量突破百万亿 Tokens</a></div>
+    <div class="summary">晚点LatePost 独家获悉，字节跳动旗下火山引擎云端大模型日均调用量已突破百万亿 Tokens 量级。随着 Seed 2.0、Seedance 2.0 等模型发布及 OpenClaw 生态持续扩张，团队已上调原定 2026 年 MaaS 业务收入超百亿元的目标；同期阿里云目标锁定中国 AI 云市场增量的 80%，头部云厂商的大模型服务竞争进入白热化阶段。</div>
+    <div class="tags"><span class="tag hot">独家</span><span class="tag">火山引擎</span><span class="tag">字节跳动</span><span class="tag">MaaS</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">极客公园 / Founder Park · 2026-10-01</div>
+    <div class="title"><a href="http://www.geekpark.net/news/371259">李飞飞 World Labs 推出首款可商用世界模型 Marble</a></div>
+    <div class="summary">在 AMD 收购官宣前后，李飞飞创立的 World Labs 推出首款可商用生成式多模态世界模型 Marble。相较两个月前的早期预览版，Marble 支持更多模态输入，生成的 3D 世界更丰富细致，被视为世界模型从研究演示走向商业交付的关键一步，在 X 平台获得 a16z、YC 多位投资人的转发关注。</div>
+    <div class="tags"><span class="tag">世界模型</span><span class="tag">李飞飞</span><span class="tag">World Labs</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪 / 新浪科技 · 2026-10-01</div>
+    <div class="title"><a href="https://tech.ifeng.com/c/8wocUIQg8IT">AMD 82 亿美元收购 World Labs 背后：AI 芯片巨头的"定义权"之争</a></div>
+    <div class="summary">行业分析指出，AMD 以 82 亿美元收购李飞飞 World Labs 并非孤立事件：今年以来 AMD 连续出手投资 AI 推理优化公司 Wafer（4000 万美元 A 轮）等多家上游企业，反映芯片厂商在算力同质化竞争中向上游模型与算法层延伸、争夺 AI 系统定义权的战略意图。</div>
+    <div class="tags"><span class="tag">AMD</span><span class="tag">并购分析</span><span class="tag">AI 芯片</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>技术与研究</div>
+
+  <div class="card">
+    <div class="source">机器之心 · 2026-10-01</div>
+    <div class="title"><a href="https://www.jiqizhixin.com/">Gas Town：面向 AI 编程助手的多智能体编排系统</a></div>
+    <div class="summary">机器之心关注开源多智能体编排系统 Gas Town，该项目专为 Claude Code、GitHub Copilot 等 AI 编程助手设计，通过"市长、钻井平台、船员"等角色化概念构建可扩展协作框架，利用 Git 工作树与 Beads 账本实现持久化工作状态追踪，支持同时管理 20–30 个 AI 代理并在崩溃后恢复状态，代表了 Agent 工程化基础设施的新探索。</div>
+    <div class="tags"><span class="tag">多智能体</span><span class="tag">AI 编程</span><span class="tag">开源</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">机器之心 · 2026-10-01</div>
+    <div class="title"><a href="https://www.jiqizhixin.com/">ACL 2026 | XG-Guard：首个无监督、可解释的多智能体安全防线</a></div>
+    <div class="summary">ACL 2026 接收工作 XG-Guard 提出以图异常检测识别多智能体网络中的"内鬼"行为，系首个面向 MAS（多智能体系统）的无监督、可解释、细粒度安全防御框架。随着多智能体协作架构在编程与科研场景普及，针对 Agent 间通信的攻防范式正成为新兴研究方向。</div>
+    <div class="tags"><span class="tag">ACL 2026</span><span class="tag">Agent 安全</span><span class="tag">图异常检测</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · 2026-10-01</div>
+    <div class="title"><a href="https://aiera.com.cn/">北大团队官宣：庞加莱猜想被完整形式化，首个双检验版本问世</a></div>
+    <div class="summary">北京大学 AI for Math 团队宣布完成庞加莱猜想证明的完整形式化工作，给出首个经过双重检验的版本。此前丘成桐弟子团队曾以 AI 辅助生成 470 万行内容完成机器验证，此次北大工作进一步将这一世纪难题的形式化验证推向完备，标志 AI4Math 从辅助证明向独立形式化验证的能力跃迁。</div>
+    <div class="tags"><span class="tag hot">AI4Math</span><span class="tag">形式化证明</span><span class="tag">北大</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 / BAAI · 2026-10-01</div>
+    <div class="title"><a href="https://hub.baai.ac.cn/view/56540">IROS 2026 Physical World Models Workshop 今日在匹兹堡举行</a></div>
+    <div class="summary">IROS 2026 Workshop"Physical World Models for Scaling Embodied AI"于 10 月 1 日在美国匹兹堡召开，六位顶尖学者出席，下设三大挑战赛道；同期 WorldArena 2.0 Challenge 已开赛，总奖金 7500 美元。物理世界模型作为具身智能规模化的核心瓶颈，正从学术议题演变为产业竞赛焦点。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">世界模型</span><span class="tag">IROS 2026</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>昨日 AI 领域呈现三条清晰主线。其一，前沿模型竞争进入"能力分层"阶段：Gemini 4 Argon 以百万 Token 输出与半价策略切入企业级长周期任务，但首发仅限网络安全防御方，显示头部实验室在能力释放与安全治理间的审慎平衡。其二，推理范式出现方法论分歧：何恺明团队 VARC 以纯视觉路径攻克 ARC 基准，实质性地质疑了"推理必须经由语言中介"的隐含假设，这一方向若获验证，将重塑对多模态模型推理机制的理解。其三，算力地缘格局持续演化：腾讯 70 亿美元海外芯片租赁创中国科技企业纪录，出口管制下的"算力租赁化"正成为产业新常态。整体而言，模型能力、推理范式与算力供给三条曲线的相对斜率，将决定下一季度产业格局的走向。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 生成于 2026-10-02</p>
+</div>
+
+</div>
+</body>
+</html>
