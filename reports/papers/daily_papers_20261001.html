@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年10月01日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年10月01日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今日 arXiv 新提交逾 1600 篇，研究重心明显向「世界模型 × 具身智能」收敛：消费级实时视频世界模型 Waypoint-1.5 发布；VLA 方向三篇工作（Rho、LexiconVLA、层级信息论分析）从模型基础、动作词表与潜层接口三个维度推进；Real2Gym 打通视频→仿真→真机的技能迁移链路。智能体方向 HybridCUA 提出 GUI/CLI 协同编排范式。开源侧，围绕新一代生成模型的 awesome 列表生态持续活跃，Robot-Use Agent、GUI Agent 安全等垂直精选列表值得关注。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日焦点</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 世界模型 / World Model</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.37107">Waypoint-1.5: A Real-Time Video World Model for Consumer Hardware</a></div>
+    <div class="summary">面向消费级硬件的实时扩散式交互世界模型。与一般视频扩散模型不同，交互式世界模型须在严格延迟与吞吐约束下响应密集用户控制。该模型在 10 万小时、覆盖数百款游戏的控制对齐视频数据上预训练，可根据完整键鼠输入生成可交互画面，标志着世界模型向端侧实时部署迈出关键一步。</div>
+    <div class="tags"><span class="tag hot">热门</span><span class="tag">cs.CV</span><span class="tag">世界模型</span><span class="tag">视频生成</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2609.36071 · cs.AI</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.36071">LongCat-DeepResearch Technical Report</a></div>
+    <div class="summary">深度研究系统技术报告：将增强版 LongCat 模型与多智能体工作流结合，产出证据扎实的综合研究报告。工作流将全局规划与细粒度调查分离，多个规划智能体先行探索外部信息源并迭代出可执行的研究规范（ResearchSpec），随后由研究智能体分节撰写并在章节层面协调修订，为长文本深度研究智能体提供了系统化工程范式。</div>
+    <div class="tags"><span class="tag">LLM</span><span class="tag">多智能体</span><span class="tag">Deep Research</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>具身智能与机器人</div>
+
+  <div class="card">
+    <div class="source">arXiv:2609.38164 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.38164">Rho: A Foundation for Efficiently Adaptable VLA Models</a></div>
+    <div class="summary">面向双臂操作的开放权重 VLA 模型家族，定位于「数据轻量化的下游任务适配」。在 YAM Box、UR AI Trainer、FR3 Duo 三类代表性双臂平台上进行系统性消融，兼顾通用视觉语言能力与跨本体精确控制，为实验室与产业界的 VLA 适配提供了开放基础。</div>
+    <div class="tags"><span class="tag hot">开放权重</span><span class="tag">VLA</span><span class="tag">双臂操作</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2609.36774 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.36774">LexiconVLA: Learning Reusable Atomic Action Codebooks for Unseen Tasks</a></div>
+    <div class="summary">诊断发现：任务完成率高并不意味着原子动作在不同任务上下文间被一致执行。LexiconVLA 提出可检索的原子动作词表——全局码本捕获共享交互结构，细节码本刻画细粒度执行差异，从而实现跨任务的动作复用，提升 VLA 在未见任务上的泛化能力。</div>
+    <div class="tags"><span class="tag">VLA</span><span class="tag">动作码本</span><span class="tag">泛化</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2609.36118 · cs.AI</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.36118">The Layer Mystery of VLA: An Information-Theoretical Analysis of VLA Latent Interface</a></div>
+    <div class="summary">VLA 策略通过潜层接口连接预训练视觉语言骨干与动作头，但接口应暴露哪些骨干层长期缺乏定论。该工作在 LIBERO 与 CALVIN 两个基准、三种预训练模型上，对冻结骨干的单层选择与多层融合进行信息论层面的系统分析，为 VLA 架构设计提供可复现的实证依据。</div>
+    <div class="tags"><span class="tag">VLA</span><span class="tag">信息论</span><span class="tag">架构分析</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2609.37089 · cs.CV</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.37089">Real2Gym: Building Gyms from Videos, Bringing Skills to Robots</a></div>
+    <div class="summary">智能体化的 Real2Sim2Real 框架：将人类与机器人示范视频重建为视觉对齐、物理可交互的仿真环境（Gym），在仿真中习得技能后迁移回物理机器人，打通了「真实视频→可复用机器人技能」的完整链路，缓解遥操作数据采集昂贵、难以扩展的瓶颈。</div>
+    <div class="tags"><span class="tag">Sim2Real</span><span class="tag">机器人学习</span><span class="tag">视频重建</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🖥️</span>智能体与多模态</div>
+
+  <div class="card">
+    <div class="source">arXiv:2609.38008 · cs.CV</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.38008">HybridCUA: Learning to Orchestrate GUI and CLI for Computer-Use Agents</a></div>
+    <div class="summary">指出现有计算机使用智能体（CUA）的两条路线均有局限：纯 GUI 交互低效易错，接入应用专属 API 则工程成本高且难以跨应用扩展。HybridCUA 主张下一代 CUA 应学习 GUI 与命令行（CLI）的协同编排，为通用计算机使用智能体提供了可扩展的新范式。</div>
+    <div class="tags"><span class="tag">CUA</span><span class="tag">GUI Agent</span><span class="tag">多模态</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🌟</span>开源动态与 Awesome 列表</div>
+
+  <div class="card">
+    <div class="source">GitHub · sindresorhus/awesome 生态观察</div>
+    <div class="title"><a href="https://github.com/sindresorhus/awesome">Awesome 主列表近期动态与新兴垂直列表</a></div>
+    <div class="summary">awesome 主列表近期以维护性更新为主（移除失效/归档列表、修复 lint 工具）。同期社区新增约 2200 个 awesome 类仓库，AI 相关的高增长垂直列表包括：awesome-ai-agent-platforms（开源 AI 智能体平台精选，342★）、Awesome-Robot-Use-Agent（机器人使用智能体的论文、工具与基准，138★）、showlab/Awesome-Multimodal-Embodied-Agent（从计算机使用到机器人使用的多模态具身智能体综述，72★）、Awesome-GUI-Agent-Security（GUI/浏览器智能体攻防安全论文清单，73★）。垂直化、主题化的 awesome 列表正成为追踪细分领域的有效入口。</div>
+    <div class="tags"><span class="tag hot">Awesome</span><span class="tag">开源</span><span class="tag">智能体生态</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 新兴机器人开源项目</div>
+    <div class="title"><a href="https://github.com/cair-vinuni/vla.simd">vla.simd：纯 C++ 的 VLA 策略 CPU 推理引擎</a></div>
+    <div class="summary">无 GPU、CUDA 或 ggml 依赖的纯 C++ VLA 策略推理引擎，面向资源受限平台的端侧部署，与今日 Waypoint-1.5 所代表的「模型端侧化」趋势相呼应。同期值得关注的还有 lerobot_android（以 Android 手机替代树莓派作为 LeRobot 移动机器人控制器）与 RL-Token-Pi05-open（SO-101 机械臂的 π0.5 微调与 RL Token 训练流水线）。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">VLA</span><span class="tag">端侧推理</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今日研究图景呈现清晰的双主线：其一，世界模型与视频生成加速走向「可交互、可实时、可端侧」——Waypoint-1.5 在消费级硬件上实现控制对齐的实时生成，预示世界模型从演示走向可用基础设施；其二，具身智能研究从「堆数据」转向「结构化复用」——LexiconVLA 的原子动作码本、VLA 潜层接口的信息论分析、Real2Gym 的 Real2Sim2Real 闭环，均在回答「如何以更少的真实数据获得更强的泛化」这一核心命题。开放权重的 Rho 与纯 C++ 推理引擎 vla.simd 进一步降低了 VLA 的研究与部署门槛。智能体侧，HybridCUA 的 GUI/CLI 协同编排与 LongCat-DeepResearch 的多智能体研究流水线，显示智能体工程正从单点能力走向系统级编排。开源生态方面，Robot-Use Agent、GUI Agent 安全等垂直 awesome 列表的涌现，反映出社区知识组织正随细分领域的成熟而精细化。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-10-01 · 数据来源：arXiv RSS / GitHub API / HuggingFace Daily Papers</p>
+</div>
+
+</div>
+</body>
+</html>
