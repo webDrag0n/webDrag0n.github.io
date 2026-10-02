@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年10月03日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年10月03日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>国庆长假期间媒体产出有所减少，但学界与产业界动态依旧密集：arXiv 史上最严限流新规正式生效，引发科研社区广泛讨论；何恺明团队提出纯视觉 ARC 解题方案 NAT-ARC，不依赖大模型即可习得抽象推理；丘成桐参与的新论文致谢 GPT 与 Claude，标志顶级数学家与 AI 协作范式成形；昇腾系开源 Agent 平台 openJiuwen 发布自演进模型路由 X-Router；量子位 2026 人工智能年度榜单进入评选推进阶段。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">学术生态 · 规则重塑</div>
+    <div class="source">量子位 / 凤凰网科技 等 · 2026-10-02</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/499958.html">arXiv 最严新规：每人每月最多提交 2 篇，拒稿不退额度</a></div>
+    <div class="summary">单月投稿量突破 4 万篇创历史新高后，arXiv 启动史上最严格限流：每人每月最多提交 2 篇论文，任意时点最多 3 篇处于 active 状态，且被拒稿件不退还额度。新规已于 2026 年 10 月 1 日正式执行。此举被普遍解读为针对 AI 辅助写作时代论文数量通胀的制度性回应，将直接影响 ML/AI 社区的投稿策略与研究节奏。</div>
+    <div class="tags">
+      <span class="tag hot">学术新规</span>
+      <span class="tag">arXiv</span>
+      <span class="tag">科研生态</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-01</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/499812.html">何恺明团队新作 NAT-ARC：看"猫片"就能学会 ARC 抽象推理</a></div>
+    <div class="summary">MIT 何恺明团队提出纯视觉 ARC 解题方案 NAT-ARC：不依赖大语言模型，而是先在 ImageNet（含大量猫狗图像）上进行 MAE 自监督预训练让模型学会"看"，再将其接入 VARC 视觉推理流程，即可在公认最难的抽象推理基准 ARC 上取得显著增益。该工作为"视觉先验可迁移至符号抽象推理"提供了新证据，延续了团队以小模型路线挑战 ARC 的研究脉络。</div>
+    <div class="tags">
+      <span class="tag hot">前沿研究</span>
+      <span class="tag">何恺明</span>
+      <span class="tag">ARC</span>
+      <span class="tag">自监督学习</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-01</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/499991.html">丘成桐新论文致谢 GPT 与 Claude</a></div>
+    <div class="summary">菲尔兹奖得主丘成桐参与的最新论文在致谢部分明确感谢 GPT-6 Astra 与 Claude Pro 对部分证明思路探索与计算的辅助，所解决的问题出自其 44 年前亲自拟定的问题清单。结合其弟子团队此前用 Lean 将庞加莱猜想证明形式化为约 470 万行可验证代码（主力工具为 ChatGPT Astra 与 Claude Fable），顶尖数学家与前沿模型协同攻关正成为可复制的研究范式。</div>
+    <div class="tags">
+      <span class="tag hot">AI4Math</span>
+      <span class="tag">丘成桐</span>
+      <span class="tag">科研范式</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>模型与技术</div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-02</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/500098.html">openJiuwen 首发自演进模型路由 X-Router：昇腾亲和，Agent Token 消耗实测下降超 50%</a></div>
+    <div class="summary">开源 Agent 平台 openJiuwen 发布自演进模型路由技术 X-Router，针对 Agent 部署中"所有任务一律调用最强模型"的成本顽疾：基于 Rust 与 PyO3 构建可插拔路由内核，按请求与状态快照动态选择模型，实测可减少 50% 以上的 Token 消耗，并对昇腾算力做了原生亲和优化，为国产算力上的规模化 Agent 落地提供了关键基础设施组件。</div>
+    <div class="tags">
+      <span class="tag">Agent 基础设施</span>
+      <span class="tag">昇腾</span>
+      <span class="tag">模型路由</span>
+      <span class="tag">开源</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">机器之心（公众号）· 2026-10-02</div>
+    <div class="title"><a href="https://www.jiqizhixin.com/">SparkDiffusion：北大清华阿里联合提出，视频生成提速 265 倍、18 秒出片</a></div>
+    <div class="summary">北大、清华与阿里联合提出 SparkDiffusion，通过分阶段稀疏预热（Staged Sparse Warm-up）、轨迹混合蒸馏（Trajectory-Mixed Distillation）与 FP8 量化的统一框架，配合终端对齐监督从根源上抑制高稀疏度下的误差累积，实现单卡约 200 倍以上的视觉生成加速，将视频生成推进至"18 秒出片"量级，为低成本、端侧化的视频生成部署打开空间。</div>
+    <div class="tags">
+      <span class="tag">视频生成</span>
+      <span class="tag">扩散加速</span>
+      <span class="tag">稀疏注意力</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">机器之心（公众号）· 2026-10-02</div>
+    <div class="title"><a href="https://www.jiqizhixin.com/">IDC×浪潮信息最新报告：22 亿 Agent 背后，AI 算力迎来结构性重构</a></div>
+    <div class="summary">IDC 与浪潮信息联合发布最新算力评估报告，指出随着 Agent 数量迈向 22 亿量级，Token 消耗呈指数级增长，AI 算力供需持续偏紧，算力基础设施正从"训练中心"向"推理优先、训推一体"的架构重构。报告延续此前"2026 年中国智能算力规模达 1460.3 EFLOPS"的判断，确认智能算力基础设施仍处扩张周期。</div>
+    <div class="tags">
+      <span class="tag">算力</span>
+      <span class="tag">行业报告</span>
+      <span class="tag">Agent 经济</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🏭</span>产业与行业</div>
+
+  <div class="card">
+    <div class="source">新智元 · 2026-09-30（本周持续发酵）</div>
+    <div class="title"><a href="https://aiera.com.cn/">OpenAI 24 小时在线助手 dots 正式上岗，同步推出 500 美元最贵套餐</a></div>
+    <div class="summary">OpenAI 正式推出 24 小时常驻在线的智能体产品 dots，并同步上线定价 500 美元/月的顶级订阅套餐，将 ChatGPT 从"按需调用的工具"推向"全天候数字员工"形态。该事件在假期期间持续占据中文 AI 媒体头条，被视为 Agent 产品化与订阅分层定价的标志性案例。</div>
+    <div class="tags">
+      <span class="tag hot">OpenAI</span>
+      <span class="tag">Agent 产品</span>
+      <span class="tag">商业模式</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">IT之家 / 驱动中国 · 2026-10-02</div>
+    <div class="title"><a href="https://www.ithome.com/1/009/365.htm">Meta 预热雷朋 Display 眼镜 2026 下半年大更新：导航增强、通知控制与 Hologram 虚拟化身</a></div>
+    <div class="summary">Meta 公布雷朋 Display 智能眼镜 2026 年下半年大型更新计划：改进导航功能、支持控制通知推送，并引入 Hologram 虚拟化身能力，更新将于今年晚些时候向美国 Early Access 用户推送。智能眼镜作为 AI 终端入口的竞争正加速向操作系统级功能演进。</div>
+    <div class="tags">
+      <span class="tag">AI 终端</span>
+      <span class="tag">智能眼镜</span>
+      <span class="tag">Meta</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 本周专题</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/09/490329.html">量子位 2026 人工智能年度榜单评选推进：从技术验证到规模化落地</a></div>
+    <div class="summary">连续第九年举办的量子位人工智能年度榜单进入评选推进阶段，本年度评选以"从能想到能干"为主线，强调技术在真实场景中的交付能力，从企业、产品、人物等维度遴选规模化落地与价值创造的标杆，折射出行业评价标准从参数竞赛向结果导向的整体迁移。</div>
+    <div class="tags">
+      <span class="tag">行业评选</span>
+      <span class="tag">落地元年</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">凤凰网科技 / 36氪 · 近日发布（假期热读）</div>
+    <div class="title"><a href="https://i.ifeng.com/c/8wRZ4SJVPAS">尚品宅配联合汤元科技发布 WorldSimReady-Home 开源数据集，为家庭机器人打造"仿真训练场"</a></div>
+    <div class="summary">尚品宅配与汤元科技联合发布 WorldSimReady-Home 开源数据集，首期数据已在官方平台、Hugging Face 与魔搭 ModelScope 同步上线，面向机器人本体团队、具身大脑与算法公司及科研院所免费开放，为家庭服务机器人提供高保真仿真训练环境，是家居产业数据资产切入具身智能赛道的代表性动作。</div>
+    <div class="tags">
+      <span class="tag">具身智能</span>
+      <span class="tag">开源数据集</span>
+      <span class="tag">家庭机器人</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">💬</span>观点与评论</div>
+
+  <div class="card">
+    <div class="source">钛媒体 · 假期热读</div>
+    <div class="title"><a href="https://www.tmtpost.com/8153646.html">对谈伯克利 Allen Yang：赌具身智能没有未来的人，是没有未来的</a></div>
+    <div class="summary">2026 年上半年国内具身智能赛道融资达 935 亿元，为去年同期五倍且已超 2025 全年总和；估值过百亿元的具身智能公司一年内从 3 家增至 20 余家。对话指出，具身智能的估值泡沫与真实进展并存，核心分水岭在于能否穿越"小松鼠智能"这道常识与物理交互的门槛。</div>
+    <div class="tags">
+      <span class="tag">具身智能</span>
+      <span class="tag">投资观察</span>
+      <span class="tag">观点</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">文汇报 / 网易科技 · 假期热读</div>
+    <div class="title"><a href="https://www.163.com/dy/article/L7VJDGK605506BEH.html">丘成桐：AI 不能替代人类——兴趣与文化情怀为人类独有</a></div>
+    <div class="summary">在《我的几何人生》分享会上，丘成桐回应"AI 是否会替代数学家"：电脑出现时亦曾引发替代论，但 AI 集纳的是人类已有智慧，人类独有的兴趣驱动与文化情怀无法被取代。该论述与其在论文致谢中承认 AI 辅助价值的实践形成互文，呈现了顶级学者对"人机协同而非替代"的成熟立场。</div>
+    <div class="tags">
+      <span class="tag">AI 与人文</span>
+      <span class="tag">观点</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>国庆假期并未降低 AI 领域的演进密度。今日最值得关注的是三组结构性信号：其一，arXiv 限流新规生效，标志 AI 辅助写作时代的论文数量通胀已迫使学术基础设施作出制度性回应，"质重于量"的评价转向将从投稿端开始重塑科研激励；其二，何恺明团队 NAT-ARC 以纯视觉自监督预训练攻克抽象推理基准，为大模型主导的技术叙事提供了重要的替代路径证据；其三，丘成桐论文致谢 GPT 与 Claude，与其弟子完成庞加莱猜想形式化验证相互印证，人机协同已深度嵌入顶级数学实践。产业侧，X-Router 等模型路由技术与 IDC 算力报告共同指向同一趋势——Agent 规模化落地的核心约束正从模型能力转向推理成本与算力结构。技术民主化与成本优化的竞赛，将是第四季度最值得持续追踪的主线。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026年10月03日 生成</p>
+</div>
+
+</div>
+</body>
+</html>
