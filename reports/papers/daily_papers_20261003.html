@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年10月03日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年10月03日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今日研究焦点集中于三个方向：一是 LLM 训练方法学的系统性辨析——HuggingFace 热门论文《On-Policy or Off-Policy Learning?》以 114 赞领跑，对蒸馏中的 SFT 与 RL 动态进行了受控比较；二是具身智能从"单机体技能"走向"自我改进与多机协同"，RPG、InterEvolve、DuoMind 分别覆盖自主技能习得、人形机测试时进化与语义通信多机协调；三是高效化方向持续产出，TACO 优化器显著降低全参数微调的显存开销。开源社区方面，AI Agent 技能类 awesome 列表呈快速增长态势。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+
+  <div class="hot-topic">
+    <div class="label">HuggingFace Daily Papers · 114 Upvotes</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.35259">On-Policy or Off-Policy Learning? A Systematic Study of Distillation Dynamics</a></div>
+    <div class="summary">蒸馏中 On-policy 学习被认为可减轻灾难性遗忘、产生更稀疏的参数更新并改善泛化，但既有 SFT 与 RL 的比较往往同时变动多个变量，结论难以归因。该研究通过受控实验系统辨析蒸馏动态，为后训练（post-training）方法选择提供了更严谨的经验依据。</div>
+    <div class="tags">
+      <span class="tag hot">HOT</span>
+      <span class="tag">LLM</span>
+      <span class="tag">蒸馏</span>
+      <span class="tag">post-training</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.AI / cs.CV · 2026-10-01</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.02200">VISTA: A Visual Harness for Reasoning in an Interactive World</a></div>
+    <div class="summary">MIT 团队提出 VISTA 视觉工具框架，论证通用多模态模型本身具备较强推理能力，关键在于配以合适的外部"挽具"（harness）。VISTA 赋予多模态模型长时程视觉交互能力，可在多样化交互环境中完成任务，为"以 VLM 作为通用智能体骨干"的路线提供了新的实证支持。</div>
+    <div class="tags">
+      <span class="tag">多模态 / VLM</span>
+      <span class="tag">智能体</span>
+      <span class="tag">推理</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>具身智能与机器人</div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.RO / cs.AI · 2026-10-01</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.02204">Reconstruct, Practice, Go Real: Guided Self-Improvement for Embodied Agents</a></div>
+    <div class="summary">RPG 框架面向机器人执行能力的自主改进：通过重构任务、在仿真中练习、再迁移至真实世界，减少人类在技能开发、奖励设计与感知-控制集成上的持续投入，是"机器人自我提升"范式的一次系统化尝试。</div>
+    <div class="tags">
+      <span class="tag">具身智能</span>
+      <span class="tag">自我改进</span>
+      <span class="tag">Sim2Real</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.RO · 2026-10-01</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.02196">InterEvolve: Test-Time Evolution of Reward Programs for Humanoid Loco-Manipulation</a></div>
+    <div class="summary">提出人形机器人移动操作的"测试时进化"方法：无需重训练，通过对奖励程序（reward programs）的进化式搜索，复用控制器已有技能求解训练分布之外的任务，并从自身尝试中持续改进与保留所学，为人形机的开放环境适应能力提供了新路径。</div>
+    <div class="tags">
+      <span class="tag">人形机器人</span>
+      <span class="tag">测试时进化</span>
+      <span class="tag">奖励设计</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.RO · 2026-10-01</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.02161">DuoMind: Enabling Distributed Multi-Robot Coordination with Semantic Communication</a></div>
+    <div class="summary">针对 VLM/VLA 能力目前集中于单体机器人的局限，DuoMind 将视觉-语言-动作能力扩展至多机器人系统，通过语义通信实现分布式多机协调，是多机协作方向与大模型能力结合的代表性进展。</div>
+    <div class="tags">
+      <span class="tag">多机器人</span>
+      <span class="tag">VLA</span>
+      <span class="tag">语义通信</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">⚙️</span>LLM 训练与高效化</div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.LG / math.OC · 2026-10-01</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.02199">TACO: Ternary Absolute-max Column-wise One-sparse Optimizer for LLM Fine-Tuning</a></div>
+    <div class="summary">全参数微调的优化器状态显存开销是制约可微调模型规模的关键因素。TACO 以三值、列向一稀疏的结构压缩优化器状态，在保留一阶梯度信息与更新几何的同时显著降低显存占用，面向资源受限条件下的大模型微调场景。</div>
+    <div class="tags">
+      <span class="tag">优化器</span>
+      <span class="tag">显存高效</span>
+      <span class="tag">LLM 微调</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CL / cs.AI · 2026-10-01</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.02193">Hierarchical Continuous Diffusion Language Models</a></div>
+    <div class="summary">针对离散扩散语言模型并行解码时各 token 独立采样、缺乏全局协调的结构性瓶颈，该工作提出层级化连续扩散语言模型，在连续潜空间中引入层级结构，改善需要双向推理与全局约束满足任务的生成一致性。</div>
+    <div class="tags">
+      <span class="tag">扩散语言模型</span>
+      <span class="tag">生成建模</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🌐</span>开源与 Awesome 列表动态</div>
+
+  <div class="card">
+    <div class="source">GitHub · awesome 生态 · 2026-10 上旬</div>
+    <div class="title"><a href="https://github.com/sindresorhus/awesome">sindresorhus/awesome 主仓动态与 AI Agent 技能类列表兴起</a></div>
+    <div class="summary">主仓近月以维护性更新为主（清理归档列表、修订贡献指南），暂无 AI 方向新列表合并。但 awesome 生态中 AI Agent 技能类列表快速增长，值得关注：<a href="https://github.com/linny006/awesome-agent-skills">awesome-agent-skills</a>（自动更新的 Agent 技能质量评级索引）、<a href="https://github.com/QAInsights/awesome-ai-tools">awesome-ai-tools</a>（AI 编程工具分类参考，覆盖 IDE、终端 Agent 等）、<a href="https://github.com/sutaoyu/awesome-ai-security-agents">awesome-ai-security-agents</a>（AI 安全智能体论文/仓库/博客合集）。此类列表的涌现反映出 Agent 能力生态正走向标准化与目录化。</div>
+    <div class="tags">
+      <span class="tag">开源</span>
+      <span class="tag">awesome list</span>
+      <span class="tag">Agent 生态</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>10 月 3 日的研究图景呈现清晰的三条主线。其一，训练方法学进入"归因时代"：On-Policy vs Off-Policy 蒸馏的系统性研究之所以获得社区高度关注，在于它纠正了以往多变量混杂比较的方法论缺陷，后训练领域正从经验试错转向受控实验科学。其二，具身智能的能力边界在三个维度同步拓展——RPG 解决"技能从哪来"（自主习得）、InterEvolve 解决"新任务怎么办"（测试时进化奖励程序）、DuoMind 解决"单体到群体"（语义通信多机协调），合起来勾勒出通用机器人的能力栈雏形。其三，效率研究持续下沉到优化器层级，TACO 类工作使大模型全参数微调的硬件门槛进一步降低。开源侧值得注意的信号是 Agent 技能类 awesome 列表的批量出现，预示 Agent 能力正在形成可检索、可复用、可评级的生态基础设施。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-10-03</p>
+</div>
+
+</div>
+</body>
+</html>
