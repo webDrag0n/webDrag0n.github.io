@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年10月05日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年10月05日</div>
+  <div class="subtitle">中文AI媒体精选 · 覆盖 2026年10月4日（昨日）要闻</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>AMD 成为昨日算力叙事核心——Helios 机架级系统投产并获 OpenAI 与 Anthropic 双买单，同步宣布 20 亿英镑英国投资与全球首个纯光子网络 AI 系统；模型侧，OpenAI 确认下周发布 GPT-6.1 Sol Ultrafast（750 tps），谷歌 Gemini 4 Argon 进入灰度测试，Anthropic Fable 5.5 被曝为 IPO 护航；研究侧，Hinton、Bengio 等 22 位学者联名警示递归自我改进风险，谷歌开源自动微调框架，DeepMind 将蛋白质水印研究发表于《Nature》。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">焦点 · 算力格局</div>
+    <div class="card" style="box-shadow:none;border:none;padding:8px 0 0;background:transparent;">
+      <div class="source">新智元 等 · 2026-10-04</div>
+      <div class="title"><a href="https://aiera.com.cn/" target="_blank">AMD Helios 机架级系统正式投产：OpenAI、Anthropic 双买单，Cerebras 外援加持每瓦性能提升 5 倍</a></div>
+      <div class="summary">AMD 首套机架级 AI 系统 Helios 正式投产，GPU 与 CPU 按整机柜交付，OpenAI 与 Anthropic 均已采购；同时 AMD 与 Cerebras 合作将推理侧每瓦每秒 Token 生成量最高提升 5 倍，并宣布五年内向英国投入最高 20 亿英镑，建设全球首个纯光子网络 AI 系统。芯片第二极对英伟达的系统性挑战正式成型。</div>
+      <div class="tags"><span class="tag hot">算力</span><span class="tag">AMD</span><span class="tag">Helios</span><span class="tag">Cerebras</span></div>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">焦点 · AI 安全</div>
+    <div class="card" style="box-shadow:none;border:none;padding:8px 0 0;background:transparent;">
+      <div class="source">新智元 / 剑桥大学 CASP · 2026-10-04</div>
+      <div class="title"><a href="https://hub.baai.ac.cn/view/58453" target="_blank">Hinton、Bengio 等 22 位学者联名论文：递归自我改进（RSI）或使"智能爆炸"窗口仅剩数月</a></div>
+      <div class="summary">一篇 15 页论文在剑桥大学 CASP 平台发布，署名者包括诺奖得主 Geoffrey Hinton、图灵奖得主 Yoshua Bengio 与 Alan Barto，以及 OpenAI 首席科学家 Jakub Pachocki、Anthropic 联创 Jack Clark 等共 22 位研究者。论文正面讨论 AI 自主开展 AI 研发所引发的失控风险，被视为学界与工业界对 RSI 问题最重量级的联合表态。</div>
+      <div class="tags"><span class="tag hot">AI安全</span><span class="tag">RSI</span><span class="tag">Hinton</span><span class="tag">Bengio</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>模型与产品</div>
+
+  <div class="card">
+    <div class="source">新智元 / OpenAI Codex 负责人确认 · 2026-10-04</div>
+    <div class="title"><a href="https://aiera.com.cn/" target="_blank">OpenAI 下周发布 GPT-6.1 Sol Ultrafast：速度达 750 tps，旗舰 Astra 版本确认取消</a></div>
+    <div class="summary">Codex 负责人 Tibo Sottiaux 在 X 上确认，下周新模型为 GPT-6.1 Sol 极速版而非传闻中的 Astra 6.1；爆料显示原版 Astra 已取消，将以"Astra minor lite"替代。社区担忧极速版初期或锁定 500 美元高端订阅档。同时 OpenAI 研究员承认产品线过度复杂，未来 ChatGPT 或将统一 Chat、Work、Codex 与 Dots 四大模块。</div>
+    <div class="tags"><span class="tag hot">OpenAI</span><span class="tag">GPT-6.1</span><span class="tag">产品战略</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · 2026-10-04</div>
+    <div class="title"><a href="https://aiera.com.cn/" target="_blank">谷歌 Gemini 4 Argon 灰度测试：100 万 Token 输出，代码基准 DeepSWE v1.1 达 77.9% 刷新 SOTA</a></div>
+    <div class="summary">谷歌未官宣新模型 Gemini 4 Argon 已在 Antigravity 平台开启灰度测试，最快下周向 Ultra 用户推送；开发者另在竞技场发现匿名图像模型变体"resplendent flash"。谷歌同时宣布 Gemini 自定义 Gems 功能将于 11 月 17 日强制迁移为 Skills。</div>
+    <div class="tags"><span class="tag hot">Google</span><span class="tag">Gemini 4</span><span class="tag">长输出</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · 2026-10-04</div>
+    <div class="title"><a href="https://aiera.com.cn/" target="_blank">Anthropic 被曝 11 月中旬 IPO：旗舰模型 Fable 5.5 留至上市窗口发布</a></div>
+    <div class="summary">爆料人称 Anthropic 瞄准 11 月中旬上市，新一代旗舰 Fable 5.5 将留至 IPO 窗口期发布以护航估值；多方实测显示灰度推送中的 Fable 5.5 在代码控制与多模态渲染上显著超越现役版本。另据披露，截至 2026 年 5 月 Anthropic 内部 80% 以上合入代码由 Claude 编写。</div>
+    <div class="tags"><span class="tag">Anthropic</span><span class="tag">IPO</span><span class="tag">Fable 5.5</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 / SentinelOne · 2026-10-04</div>
+    <div class="title"><a href="https://aiera.com.cn/" target="_blank">GPT-6 Astra 六小时破译拿破仑 217 年未解加密军信</a></div>
+    <div class="summary">拿破仑 1809 年所写一封加密军信，因密码本遗失而尘封 217 年。SentinelOne 的 AI 安全团队使用 GPT-6 Astra 耗时约 6 小时完成破译，揭示了瓦格拉姆战役前夕的法军调动细节，成为大模型辅助历史密码学研究的标志性案例。</div>
+    <div class="tags"><span class="tag">大模型应用</span><span class="tag">密码学</span><span class="tag">案例</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">极客公园 · 2026-10-04</div>
+    <div class="title"><a href="https://www.geekpark.net/news/372074" target="_blank">Claude Code 的"乐高"模式：插件化副手 Agent 让开发者工作流深度重构</a></div>
+    <div class="summary">Anthropic 为 Claude Code 上线新插件"You Should Know"，可挂载副手 Agent 自动划重点；社区围绕其模块化"乐高"玩法形成二次开发生态。报道同时指出，GPT-6.1 Sol 实测口碑不佳（被指"又慢又懒"），客观上为 Claude Code 的扩张提供了窗口期。</div>
+    <div class="tags"><span class="tag">Claude Code</span><span class="tag">Agent</span><span class="tag">开发者生态</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔬</span>研究与开源</div>
+
+  <div class="card">
+    <div class="source">新智元 / Google · 2026-10-04</div>
+    <div class="title"><a href="https://aiera.com.cn/" target="_blank">谷歌开源 autofinetune：AI 智能体全流程接管大模型后训练</a></div>
+    <div class="summary">谷歌开源自动微调框架 autofinetune，由 AI 智能体完成修改训练脚本、执行实验、将验证有效的改进自动提交至 Git 的全流程，无需人工值守。该项目被视为"AI 自主改进 AI"（与同日 CASP 联名论文的警示形成互文）在工程层面的直接落地。</div>
+    <div class="tags"><span class="tag hot">开源</span><span class="tag">自动微调</span><span class="tag">Google</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 / Nature · 2026-10-04</div>
+    <div class="title"><a href="https://aiera.com.cn/" target="_blank">DeepMind 蛋白质水印研究登上《Nature》：AI 内容溯源防线延伸至生物设计领域</a></div>
+    <div class="summary">Google DeepMind 宣布已为 AI 设计的蛋白质嵌入可验证水印，且团队已实际合成出带水印蛋白质，成果发表于《Nature》。该技术将数字内容溯源机制扩展至生物分子层面，为 AI 辅助生物设计建立了责任追踪与滥用防范的基础设施。</div>
+    <div class="tags"><span class="tag">DeepMind</span><span class="tag">AI for Science</span><span class="tag">生物安全</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 / LMSYS · 2026-10-04</div>
+    <div class="title"><a href="https://aiera.com.cn/" target="_blank">LMSYS 正式发表《Judging LLM-as-a-judge》：系统检验大模型互评的可靠性</a></div>
+    <div class="summary">Chatbot Arena 团队发表论文，系统性研究"大模型充当裁判"这一评测范式的有效性边界，并同步上线新评估工具。在评测数据污染与基准过拟合日益严重的背景下，该工作为模型能力评估提供了方法论层面的校准依据。</div>
+    <div class="tags"><span class="tag">评测方法</span><span class="tag">LMSYS</span><span class="tag">论文</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 / Nathan Lambert · 2026-10-04</div>
+    <div class="title"><a href="https://aiera.com.cn/" target="_blank">Nathan Lambert 创立非营利机构 Trillium Labs：专注前沿模型开源后训练配方</a></div>
+    <div class="summary">知名 AI 研究员 Nathan Lambert 宣布成立非营利机构 Trillium Labs，聚焦前沿 AI 模型的开源后训练（post-training）配方研究，旨在为开放社区提供可复现、可审计的训练方法论，对冲头部实验室日益封闭的技术路线。</div>
+    <div class="tags"><span class="tag">开源社区</span><span class="tag">后训练</span><span class="tag">机构动态</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🏭</span>产业与资本</div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-04</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/501605.html" target="_blank">AI 算力硬合作：马斯克 xAI 供应链继续倚重中国制造</a></div>
+    <div class="summary">量子位报道，在 AI 算力基础设施的硬件采购与集成环节，马斯克旗下企业仍深度依赖中国制造体系，反映出全球算力扩张周期中供应链的结构性依赖关系，亦折射中美科技博弈下产业分工的韧性。</div>
+    <div class="tags"><span class="tag">算力供应链</span><span class="tag">xAI</span><span class="tag">中国制造</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-04</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/501451.html" target="_blank">3D 生成赛道 ARR 两年翻百倍破 1 亿美元：GPT-6 是否会"吃掉"3D 公司？</a></div>
+    <div class="summary">一家 3D 生成领域创业公司在不到两年内实现 ARR 百倍增长、突破 1 亿美元。报道以 GPT-6 系列多模态能力扩张为背景，探讨通用大模型与垂直 3D 生成公司的竞合边界——实测显示 GPT-6.1 Sol 在 3D 任务上仍需 2–3 次迭代，专业工具短期内仍具效率优势。</div>
+    <div class="tags"><span class="tag">3D生成</span><span class="tag">商业化</span><span class="tag">创业</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-04</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/501506.html" target="_blank">最火 AI 岗位 FDE（前沿部署工程师）：月薪 5 万背后的职能画像</a></div>
+    <div class="summary">量子位梳理了当前 AI 行业最紧俏岗位 FDE（Forward Deployed Engineer）的职能结构：兼具模型理解、工程交付与客户场景翻译能力，薪酬水平达月薪 5 万元量级。该岗位的兴起标志大模型竞争从"模型能力"进入"落地交付"阶段。</div>
+    <div class="tags"><span class="tag">行业观察</span><span class="tag">人才市场</span><span class="tag">FDE</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 / The Information · 2026-10-04</div>
+    <div class="title"><a href="https://aiera.com.cn/" target="_blank">谷歌调整具身智能路线：放弃对标特斯拉擎天柱，转向"机器人界的安卓"平台战略</a></div>
+    <div class="summary">据 The Information 报道，谷歌决定不再聚焦单一旗舰人形机器人硬件，转而将 Gemini 打造为跨厂商的机器人通用智能平台，与特斯拉（Optimus）和苹果（自研旗舰人形机器人）的垂直整合路线形成战略分野。该决策将重塑具身智能产业的生态位竞争格局。</div>
+    <div class="tags"><span class="tag hot">具身智能</span><span class="tag">Google</span><span class="tag">机器人</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · 2026-10-04</div>
+    <div class="title"><a href="https://aiera.com.cn/" target="_blank">微软加入 Apache Ossie 联手 Snowflake：企业数据平台壁垒松动</a></div>
+    <div class="summary">长期固守自家数据平台 Fabric 的微软，决定加入行业组织 Apache Ossie 并与 Snowflake 合作，推动 AI 系统跨平台读取企业数据。此举被视为企业数据孤島在 Agent 时代被动摇的标志性事件——当 AI 智能体需要跨系统调度数据，封闭生态的维护成本已超过其战略收益。</div>
+    <div class="tags"><span class="tag">企业AI</span><span class="tag">微软</span><span class="tag">数据平台</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 / AMD Newsroom · 2026-10-04</div>
+    <div class="title"><a href="https://aiera.com.cn/" target="_blank">AMD 交付航天级 AI 芯片 Versal AI Core：目标太空极端环境连续运行 15 年</a></div>
+    <div class="summary">AMD 宣布航天级 Versal AI Core 芯片已交付航天客户，设计目标为在宇宙辐射环境下连续工作 15 年；同日 Google 披露首颗搭载 4 颗 Trillium TPU 的测试卫星已在轨正常运行。AI 算力的空间化部署从概念验证进入工程实施阶段。</div>
+    <div class="tags"><span class="tag">航天AI</span><span class="tag">AMD</span><span class="tag">太空算力</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>10月4日的三条主线值得记录。其一，算力供给侧出现结构性变化：AMD 以 Helios 机架投产、Cerebras 推理联盟、20 亿英镑英国投资三连击，正式从"备选供应商"升级为可与英伟达对位竞争的第二极，且 OpenAI 与 Anthropic 的双向采购表明头部实验室正主动推行算力多元化策略。其二，模型发布节奏进入"周更"状态：GPT-6.1 Sol Ultrafast、Gemini 4 Argon、Fable 5.5 三款旗舰在同一窗口期竞逐，但 Sol 的口碑争议与 Anthropic 将旗舰留待 IPO 的策略，说明模型竞争已从纯能力比拼延伸至资本运作与产品叙事层面。其三，Hinton、Bengio 等 22 人联名论文与谷歌 autofinetune 的开源同日出现，构成耐人寻味的对照：学界警示递归自我改进的风险边界，工程界则已将"AI 改进 AI"推进至无人值守的自动化管线。安全话语与技术实践的落差，正在加速扩大。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026年10月05日生成 · 数据来源：量子位、新智元、极客公园、甲子光年等中文AI媒体</p>
+</div>
+
+</div>
+</body>
+</html>
