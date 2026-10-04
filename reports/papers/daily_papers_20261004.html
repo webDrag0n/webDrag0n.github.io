@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年10月04日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  .header { text-align: center; padding: 40px 20px 30px; margin-bottom: 30px; }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px; font-weight: 700; color: var(--text);
+    margin-bottom: 14px; padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+  .card .title { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .card .title a { color: var(--accent); text-decoration: none; }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px; padding: 2px 10px; border-radius: 12px;
+    background: var(--tag-bg); color: var(--tag-text);
+  }
+  .card .tag.hot { background: #ffeaa7; color: #d63031; font-weight: 600; }
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px; font-weight: 700; color: #e17055;
+    text-transform: uppercase; margin-bottom: 4px;
+  }
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+  .footer {
+    text-align: center; font-size: 12px; color: #b2bec3;
+    margin-top: 40px; padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年10月04日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>蒸馏动力学系统性研究挑战"on-policy 必然更优"的固有认知，在 HuggingFace 获 153 票成为本周最热；rank-8 微型 LoRA 即可解锁 Transformer 深层推理能力；多模态侧，OmniSeek 将 Omni-LLM 改造为主动式多轮工具调用智能体；具身智能方向，World-Action Model 呈现统一化趋势（UniWAM / SkeleWAM）；开源生态中，Claude Opus 5.5 视频工作流类 awesome 列表集中涌现，Awesome-Video-Generation-Post-Training 成为视频生成后训练领域首份系统性综述索引。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日焦点</div>
+
+  <div class="hot-topic">
+    <div class="label">Hot · HuggingFace 153 票</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.35259">On-Policy or Off-Policy Learning? A Systematic Study of Distillation Dynamics</a></div>
+    <div class="summary">剑桥大学与 van der Schaar Lab 在受控的强-弱蒸馏设置下，独立变化 rollout 策略、token 级 KL 方向与学习率，跨越 Llama3 与 Qwen2.5 系列及科学、医学、算术推理任务进行系统比较。研究表明 rollout 策略并非蒸馏成败的核心因素：forward KL 对 rollout 策略极为稳健，reverse KL 则显著偏好学生自生成轨迹；学习率主导遗忘与更新稀疏性，on-policy 数据仅在 Countdown 难例泛化上表现出有限优势。该结论对 RL vs. SFT 之争提供了重要的去混淆证据。</div>
+    <div class="tags"><span class="tag hot">热门</span><span class="tag">LLM</span><span class="tag">蒸馏</span><span class="tag">cs.CL</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">Hot · HuggingFace 62 票</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.36585">Transformers Stop Thinking Too Early, and a Tiny LoRA Fixes It</a></div>
+    <div class="summary">对 13 个基座模型的实证分析显示，预训练 Transformer 在上下文引用追踪任务上仅利用 1.4–3.6 行深度，深层容量大量闲置。作者发现仅在单一早期层训练 rank-8 LoRA（其余权重全部冻结），即可将 Qwen3-8B 在 24 行链式引用上的精确匹配准确率从 15.5% 提升至 99%，并观察到中层"接力"机制：程序行通过短程中层传递链身份，冻结注意力头逐层读取。该结果说明默认推理严重低估了模型可通过微小编辑调用的潜在计算量。</div>
+    <div class="tags"><span class="tag hot">热门</span><span class="tag">LLM</span><span class="tag">可解释性</span><span class="tag">LoRA</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型与训练方法</div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CL · 2026-10-01</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.02140">Finetuning with Sampling: SFT Learns Better Than You Think</a></div>
+    <div class="summary">MIT 与 Harvard 合作研究指出，后训练中"RL 泛化强、SFT 易遗忘"的传统认知部分源于评估偏差。通过在 SFT 中引入采样机制而非纯教师强制，SFT 在新任务上的泛化能力可接近甚至匹敌 RL，同时更好地保留既有能力。该工作为低成本后训练路线提供了理论支撑。</div>
+    <div class="tags"><span class="tag">LLM</span><span class="tag">后训练</span><span class="tag">SFT</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.LG · 2026-10-01</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.02185">Decoding Looped Transformers Better for (Almost) Free</a></div>
+    <div class="summary">Looped Transformer 通过共享模块的循环执行实现参数高效，但标准解码丢弃了中间循环的表示。作者提出近乎零成本的解码改进，利用各循环的中间状态进行一致性加权解码，在不增加参数的前提下显著提升下游精度。HuggingFace 获 25 票关注。</div>
+    <div class="tags"><span class="tag">架构</span><span class="tag">推理优化</span><span class="tag">cs.LG</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.LG · 2026-10-01</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.02199">TACO: Ternary Absolute-max Column-wise One-sparse Optimizer for LLM Fine-Tuning</a></div>
+    <div class="summary">针对全参数微调中优化器状态的显存瓶颈，TACO 提出三元绝对值列稀疏化优化器，在保持一阶梯度信息的前提下将优化器状态压缩至极低水平，使更大规模模型可在消费级 GPU 上完成微调，为低资源微调提供了新的工程路径。</div>
+    <div class="tags"><span class="tag">优化器</span><span class="tag">微调</span><span class="tag">cs.LG</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态与视频生成</div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CV · 2026-10-01</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.02181">OmniSeek: Native Tool Integration for Multi-turn Audio-Visual Reasoning</a></div>
+    <div class="summary">提出将 Omni-LLM 从单次前向的被动处理者改造为主动式多轮推理智能体的框架。OmniSeek 将证据获取内化为推理过程的一部分，模型可在多轮交互中自主调用视听工具、按需检索音视频片段，在复杂视听问答任务上显著优于一次性处理基线。</div>
+    <div class="tags"><span class="tag">多模态</span><span class="tag">Agent</span><span class="tag">工具调用</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CV · 2026-10-01</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.02197">HiPhy: Hierarchical Alignment for Physically-Plausible Multi-Principle Video Generation</a></div>
+    <div class="summary">针对视频生成模型在多物理定律并发场景下的失真问题，HiPhy 提出分层对齐框架，将物理约束解耦为多个可独立优化的原则层，在保持视觉保真度的同时显著改善生成视频对重力、碰撞、流体等复合物理规律的遵循程度。</div>
+    <div class="tags"><span class="tag">视频生成</span><span class="tag">物理对齐</span><span class="tag">cs.CV</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace · 44 票 · 2026-10-02</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.00812">Video Generation Models: A Survey of Post-Training and Alignment</a></div>
+    <div class="summary">首份系统性梳理视频生成模型后训练与对齐技术的综述，覆盖奖励建模、偏好优化、物理一致性对齐与评估基准等方向，并配套开源 awesome 列表（Awesome-Video-Generation-Post-Training），已成为该方向的标准参考索引。</div>
+    <div class="tags"><span class="tag hot">综述</span><span class="tag">视频生成</span><span class="tag">开源</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>具身智能与机器人</div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.RO · 2026-10-01</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.02054">UniWAM: Unified World-Action Model</a></div>
+    <div class="summary">提出统一的世界-动作模型架构，弥合 VLA 模型缺乏世界动力学先验与世界-动作模型缺乏语义理解之间的鸿沟。UniWAM 在同一框架内联合建模视觉理解与动作生成，在多项操作基准上取得一致提升，代表 World-Action Model 的统一化趋势。</div>
+    <div class="tags"><span class="tag">VLA</span><span class="tag">世界模型</span><span class="tag">cs.RO</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.AI · 2026-10-01</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.02204">Reconstruct, Practice, Go Real: Guided Self-Improvement for Embodied Agents</a></div>
+    <div class="summary">提出 RPG 框架，使具身智能体在无需人工设计奖励与技能库的前提下实现自主能力提升：通过重构任务场景、在仿真中练习、再迁移至真实世界的三阶段循环，系统性降低机器人能力扩展的人力成本。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">自我改进</span><span class="tag">cs.AI</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📚</span>开源动态与 Awesome 列表</div>
+
+  <div class="card">
+    <div class="source">GitHub · awesome · 2026-09-27</div>
+    <div class="title"><a href="https://github.com/yihui-dev/awesome-opus5-5-videos">awesome-opus5-5-videos</a> <span style="font-size:13px;color:#636e72;">★ 1,566</span></div>
+    <div class="summary">本周增速最快的 awesome 列表，系统收录 Claude Opus 5.5 生成的病毒式传播视频及其原始提示词，按效果类型分类并附原帖链接。同类列表（awesome-claude-5-5-videos ★446、awesome-claude-video-skills ★395）集中涌现，反映视频生成工作流社区的快速组织化。</div>
+    <div class="tags"><span class="tag hot">新兴</span><span class="tag">Awesome</span><span class="tag">视频生成</span><span class="tag">Claude</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · awesome · 2026-09-24</div>
+    <div class="title"><a href="https://github.com/wildminder/awesome-qwen-image">awesome-qwen-image</a> <span style="font-size:13px;color:#636e72;">★ 116</span></div>
+    <div class="summary">Qwen-Image 2.1 生态的社区索引，收录检查点、量化版本、提示词引擎、LoRA 及周边工具链，是当前 Qwen 图像生成生态最完整的导航资源，对跟踪国产开源视觉模型生态具有参考价值。</div>
+    <div class="tags"><span class="tag">Awesome</span><span class="tag">Qwen</span><span class="tag">图像生成</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 趋势 · 2026-10-02</div>
+    <div class="title"><a href="https://github.com/zzzz7788990213-ops/EvoVLM">EvoVLM</a> <span style="font-size:13px;color:#636e72;">★ 137 · 新建 2 天</span></div>
+    <div class="summary">提出 LLM 引导的进化搜索框架，用于自动演化多模态推理程序（Evolving Multimodal Inference Programs），在视觉推理任务上以更少计算量达到更高精度，是 VLM 推理优化方向值得关注的新开源项目。</div>
+    <div class="tags"><span class="tag hot">新项目</span><span class="tag">VLM</span><span class="tag">进化搜索</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>本期研究呈现两条清晰的理论修正线索。其一，蒸馏动力学与 SFT 采样的两项独立工作共同挑战了后训练领域的固有假设：on-policy rollout 并非必然更优，SFT 的劣势部分源于评估偏差而非方法本身，这将重塑 RL 与 SFT 的资源分配逻辑。其二，Looped Transformer 与微型 LoRA 的研究表明，现有模型的深层计算容量远未被充分利用，轻量干预即可释放显著性能增益，提示架构创新与参数高效微调仍存在大量未被探索的空间。应用层面，World-Action Model 正从分散探索走向统一架构，OmniSeek 则展示了多模态智能体从被动感知到主动证据获取的范式转变。开源生态中，Claude 视频工作流类 awesome 列表的集中涌现，标志着生成式 AI 应用社区正在快速形成结构化的知识沉淀机制。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-10-04 · ArXiv cs.AI/cs.CL/cs.CV/cs.LG/cs.RO · HuggingFace Daily Papers · GitHub Trending</p>
+</div>
+
+</div>
+</body>
+</html>
