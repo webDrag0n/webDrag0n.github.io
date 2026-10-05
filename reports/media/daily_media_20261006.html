@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年10月06日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年10月06日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>昨日（10月5日）中文 AI 媒体焦点高度集中：Hinton 与 Bengio 领衔 22 位学者发表首篇系统性「递归自我改进（RSI）」论文，警示 AI 研发自动化可能触发智能爆炸；2026 年诺贝尔生理学或医学奖授予光遗传学三位奠基人，为神经科学与 AI 交叉领域写下注脚；谷歌 Gemini 4 Argon 携 RSI 叙事登顶多项基准，OpenAI 则以 Codex「28 天日更承诺」回应竞争压力。国产侧，DeepSeek 昇腾算子开源与中国决策模型 StartLux-Decision 登顶，构成自主算力与开源生态的延续议题。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>头条与前沿模型</div>
+
+  <div class="hot-topic">
+    <div class="label">🔴 焦点事件</div>
+    <div class="card" style="background:transparent;border:none;box-shadow:none;padding:0;margin:0;">
+      <div class="source">量子位 · 2026-10-05</div>
+      <div class="title"><a href="https://www.qbitai.com/2026/10/501705.html">Hinton 发表首篇 RSI 论文：AI 研发自动化或触发智能爆炸</a></div>
+      <div class="summary">Geoffrey Hinton、Yoshua Bengio、Andrew Barto、OpenAI 首席科学家 Jakub Pachocki 等 22 位学者联合发表论文《What if automating AI R&D triggers an intelligence explosion?》。论文援引 Anthropic 内部数据：AI 自主完成研发工作的比例从 2026 年 3 月的约 1% 升至 8 月的 26%；一旦 AI 研发自动化闭环形成，数年的技术进步可能被压缩至数月乃至数周。作者群体涵盖图灵奖与诺贝尔奖得主，使该文成为 RSI 议题从科幻讨论进入主流学术议程的标志性事件。</div>
+      <div class="tags">
+        <span class="tag hot">头条</span>
+        <span class="tag">RSI</span>
+        <span class="tag">AI 安全</span>
+        <span class="tag">智能爆炸</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-05</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/501720.html">2026 诺贝尔生理学或医学奖授予光遗传学三位奠基人</a></div>
+    <div class="summary">Karl Deisseroth、Peter Hegemann 与 Georg Nagel 因「光控离子通道与光遗传学」的发现共同获奖。该技术路线起始于单细胞绿藻中的光敏离子通道（Channelrhodopsin-2），2005 年 Deisseroth 团队将其引入哺乳动物神经元，实现了毫秒级、细胞类型特异性的神经活动操控，使神经科学研究从相关性观察推进至因果性验证，已成为记忆、成瘾、精神疾病机制研究的基础方法学。</div>
+    <div class="tags">
+      <span class="tag hot">热点</span>
+      <span class="tag">诺贝尔奖</span>
+      <span class="tag">神经科学</span>
+      <span class="tag">光遗传学</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-02（国庆假期持续发酵）</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/499663.html">谷歌 Gemini 4 Argon 发布：多项基准登顶，RSI 叙事加持</a></div>
+    <div class="summary">谷歌旗舰模型 Gemini 4 Argon 在 DeepSWE v1.1 长期软件工程任务上取得 77.9%，高于 Claude Opus 5.5（74.2%）与 GPT-6 Astra（74.1%）；以 1525 分位列 Text Arena 第一，并支持最高百万 Token 输出，面向编程、金融、法律等长程工作流。定价为每百万输入 Token 2 美元、输出 10 美元，单任务成本较 Astra 低约四成。模型当前优先向网络安全团队开放，防御性漏洞发现与修补能力为官方重点宣传方向。</div>
+    <div class="tags">
+      <span class="tag hot">新模型</span>
+      <span class="tag">Google</span>
+      <span class="tag">Gemini 4</span>
+      <span class="tag">基准评测</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">钛媒体 / 投资界等 · 9月30日发布，国庆假期持续传播</div>
+    <div class="title"><a href="https://www.tmtpost.com/nictation/8158961.html">StartLux 发布开源决策模型 StartLux-Decision，38 项基准中 31 项超越 Jev</a></div>
+    <div class="summary">上海人工智能公司 StartLux（原点星辉）推出开源决策模型 StartLux-Decision，一次性发布 0.8B / 2B / 4B / 9B / 27B 五档参数版本并提供本地部署量化模型。在独立评测 Decision Index 0.2.1 中，27B 版本得分 63.88，38 项基准中 31 项高于 Jev 1.13；在 JevBench-Hard 的 111 道高难度题目中仅错 23 题。被多家媒体描述为 RSI 方法在决策模型领域的又一次验证。</div>
+    <div class="tags">
+      <span class="tag">开源模型</span>
+      <span class="tag">决策智能</span>
+      <span class="tag">国产模型</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🏭</span>产业与公司动态</div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-05</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/501700.html">OpenAI Codex 负责人承诺 28 天日更：每日交付改进或重置额度</a></div>
+    <div class="summary">OpenAI Codex 负责人 Tibo Sottiaux 宣布未来 28 天内每日二选一：交付一项对多数用户明显有用的改进，或进行完整额度重置。背景是 DevDay 一次释出 20 余项更新引发「重点模糊」的批评，以及模型任务中断、套餐缩水等体验问题；分析普遍将其解读为 Claude Opus 5.5 竞争压力下的用户留存策略。事件亦引发与 Grok 工程师的公开交锋，折射出编程智能体赛道的激烈竞争态势。</div>
+    <div class="tags">
+      <span class="tag">OpenAI</span>
+      <span class="tag">Codex</span>
+      <span class="tag">编程智能体</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">雷锋网 · 2026-10-04/05</div>
+    <div class="title"><a href="https://m.leiphone.com/category/yanxishe/UUIfK7eeFE9Ws1JI.html">DeepSeek 开源昇腾算子工具链，国产算力生态持续去 CUDA 化</a></div>
+    <div class="summary">DeepSeek 将面向英伟达 GPU 的全套算子开发工具链迁移并开源至华为昇腾 950 NPU 平台，共六个基础设施组件，基于 TileLang 编程模型，部分场景提速达 10.7 倍。报道同时指出「部分算子仍仅支持 CUDA」的现实约束。此举被视为国产大模型与国产芯片协同解耦 CUDA 生态绑定的关键一步，延续了节前 DeepSeek 弹性计算团队扩招所释放的算力基建扩张信号。</div>
+    <div class="tags">
+      <span class="tag">DeepSeek</span>
+      <span class="tag">华为昇腾</span>
+      <span class="tag">算力自主</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">雷锋网 · 2026-10-05</div>
+    <div class="title"><a href="https://www.leiphone.com/">从 Codex Harness 开源，看 AI 公司的护城河何在</a></div>
+    <div class="summary">OpenAI 以 Apache-2.0 许可全面开源 Codex Harness 三大核心组件（CLI 工具、官方 SDK、app-server），允许第三方在其上构建自有产品并掌控界面、数据与权限。文章借此讨论：当模型能力趋同、Harness（智能体脚手架）开源成为常态，AI 公司的竞争壁垒将从模型本身转向数据闭环、分发渠道与工程化纵深。Greg Brockman 公开表示「Codex 能驱动的远不止编程工具」。</div>
+    <div class="tags">
+      <span class="tag">开源</span>
+      <span class="tag">智能体架构</span>
+      <span class="tag">商业模式</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-04</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/501605.html">AI 算力合作新动向：马斯克被报道倾向「英特尔工艺 + 台积电封装」混搭方案</a></div>
+    <div class="summary">报道梳理了马斯克旗下 AI 算力采购的可能路径：前端采用英特尔 14A 先进制程，后端交由台积电承接工厂运营、良率与先进封装环节。该组合折射出当前先进 AI 芯片供给的结构性约束——单一厂商难以同时满足制程领先与量产良率的双重要求，「混合代工」正在成为头部算力买家的现实选项。</div>
+    <div class="tags">
+      <span class="tag">AI 芯片</span>
+      <span class="tag">台积电</span>
+      <span class="tag">供应链</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔬</span>技术解读与研究</div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-02</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/499991.html">丘成桐新论文致谢 GPT 与 Claude：AI 辅助攻克 70 年悬案「怪球」正曲率问题</a></div>
+    <div class="summary">丘成桐参与的最新微分几何论文在致谢中明确感谢 GPT-6 Astra 与 Claude Pro「在部分证明策略的探索和计算中提供帮助」。论文处理的是七维空间 27 种怪球（exotic sphere）是否均可赋予严格正截面曲率度量的问题——该问题 1956 年由 Milnor 的工作引出，丘成桐 1982 年将其列入个人问题清单第二位。若证明获学界接受，将终结这一悬置 70 年的经典猜想，亦构成 AI 深度参与前沿数学研究的标志性案例。</div>
+    <div class="tags">
+      <span class="tag">AI for Science</span>
+      <span class="tag">数学</span>
+      <span class="tag">微分几何</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-03</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/501381.html">DeepSeek 弹性计算团队大规模扩招，招聘 JD 附技术报告</a></div>
+    <div class="summary">DeepSeek 弹性计算团队释放大量岗位，重点招募资深工程师，并以技术报告形式随岗位描述公开其基础设施技术路线。结合此前昇腾算子开源动作，显示 DeepSeek 正围绕下一代模型训练与推理的算力底座进行系统性人才与技术储备，V4 系列模型的基础设施准备信号明显。</div>
+    <div class="tags">
+      <span class="tag">DeepSeek</span>
+      <span class="tag">基础设施</span>
+      <span class="tag">人才</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-04</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/501506.html">硅谷最热 AI 岗位 FDE：月薪 5 万美元背后的角色定义</a></div>
+    <div class="summary">前沿部署工程师（Forward Deployed Engineer, FDE）成为硅谷薪酬最高的新兴 AI 岗位之一，月薪达 5 万美元量级。该角色介于解决方案架构师与产品经理之间，核心职责是将大模型能力在客户真实业务场景中完成端到端落地。报道指出，FDE 的兴起反映了基础模型竞争转向「最后一公里」交付能力的行业趋势，并对该岗位的长期存续性进行了讨论。</div>
+    <div class="tags">
+      <span class="tag">行业观察</span>
+      <span class="tag">AI 落地</span>
+      <span class="tag">硅谷</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">💬</span>观点与评论</div>
+
+  <div class="card">
+    <div class="source">TechCrunch（中文媒体转引）· 2026-10-05</div>
+    <div class="title"><a href="https://techcrunch.com/">「超级智能」叙事与不具约束力的安全承诺，能否修复 AI 行业的公众形象？</a></div>
+    <div class="summary">针对多家头部实验室近期以「超级智能」愿景配合自愿性安全承诺的公关策略，评论指出：缺乏强制约束力的安全框架难以回应外界对竞争竞赛化、安全团队动荡（OpenAI 安全负责人离职、员工因泄密被开除等事件）的质疑。RSI 论文的发表恰逢其时，为「自律叙事」提供了来自学术共同体的对照视角。</div>
+    <div class="tags">
+      <span class="tag">AI 治理</span>
+      <span class="tag">安全</span>
+      <span class="tag">行业批评</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-04</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/501451.html">GPT-6 时代的 3D 内容公司：两年内 ARR 增长百倍突破 1 亿美元</a></div>
+    <div class="summary">报道追踪一家专业 3D 模型公司在通用多模态模型快速迭代背景下的逆势增长：不到两年 ARR 翻百倍、突破 1 亿美元。核心论点在于，通用大模型的能力提升反而抬升了对高精度、专业级 3D 资产与工具链的稀缺性需求，「被吃掉」与「被放大」取决于公司在数据资产与工作流嵌入深度上的壁垒构建。</div>
+    <div class="tags">
+      <span class="tag">3D 生成</span>
+      <span class="tag">商业化</span>
+      <span class="tag">垂直壁垒</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>昨日最值得记录的事件，是 RSI（递归自我改进）正式从业余讨论进入主流学术议程：Hinton、Bengio 与 OpenAI 首席科学家共同署名的论文援引 Anthropic 内部数据——AI 自主承担研发工作的比例半年内从 1% 升至 26%——使「智能爆炸」从哲学设问转为可观测的工程趋势。同日，Gemini 4 Argon 以 RSI 叙事登顶基准、OpenAI 以 28 天日更承诺应对竞争，头部实验室的迭代节奏本身已成为该论点的现实注脚。诺奖授予光遗传学则提示另一条脉络：AI 与神经科学的双向启发仍在加深。国产侧，DeepSeek 昇腾算子开源与决策模型登顶，显示自主算力与开源生态的协同正在从叙事走向可验证的工程进展。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-10-06 生成</p>
+</div>
+
+</div>
+</body>
+</html>
