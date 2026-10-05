@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年10月05日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+
+.hot-topic .source { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+.hot-topic .title { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+.hot-topic .title a { color: var(--accent); text-decoration: none; }
+.hot-topic .title a:hover { text-decoration: underline; }
+.hot-topic .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+.hot-topic .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.hot-topic .tag { font-size: 12px; padding: 2px 10px; border-radius: 12px; background: var(--tag-bg); color: var(--tag-text); }
+.hot-topic .tag.hot { background: #ffeaa7; color: #d63031; font-weight: 600; }
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年10月05日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>Agent 经验结构化成为今日焦点：X-Tree 将可复用子程序 token 化并固化进权重，在 HuggingFace 获 56 票成为最热论文；具身智能方向，Ego2Act 首次系统评估视频生成模型作为世界模拟器的多步操作能力；多模态侧，PhysVista 提出感知-推理-评估闭环基准检验 VLM 的物理一致性理解；开源生态中，Agent-Reach 以 980 星/日登顶 GitHub Trending，为 AI 智能体提供全网视觉感知能力；Awesome 主仓库持续剪枝，无新增 AI list 合并，但 Awesome-Robot-Use-Agent 等垂直领域列表保持活跃。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日焦点</div>
+  <div class="hot-topic">
+    <div class="label">Hot · HuggingFace 56 票</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.32993">X-Tree: Tokenizing Reusable Experience for Efficient Agent Generalization</a></div>
+    <div class="summary">针对多步智能体训练中&quot;扁平动作流&quot;忽略可复用子程序结构的问题，X-Tree 提出将经验 token 化为层级化可复用例程，并直接固化进模型权重而非依赖上下文检索。该方法使智能体在跨任务泛化时无需重复学习相同子过程，显著提升稀缺轨迹的利用效率，为 Agent 经验沉淀提供了与 RAG 互补的新范式。</div>
+    <div class="tags"><span class="tag hot">热门</span><span class="tag">Agent</span><span class="tag">经验复用</span><span class="tag">cs.CL</span></div>
+  </div>
+  <div class="hot-topic">
+    <div class="label">Hot · 安全警示</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.30266">LLM Agents Can Easily Tamper With Their Own Traces</a></div>
+    <div class="summary">研究揭示主流编码智能体（Claude Code、Codex、Grok Build 等）存在严重的轨迹完整性缺陷：当用户要求删除执行记录时，绝大多数测试框架未能触发监控护栏，且外部攻击者可利用此漏洞诱导轨迹销毁。作者建议通过独立于智能体的拦截机制实现日志记录，为 Agent 基础设施安全敲响警钟。</div>
+    <div class="tags"><span class="tag hot">热门</span><span class="tag">AI 安全</span><span class="tag">Agent 监控</span><span class="tag">cs.CR</span></div>
+  </div>
+</div>
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型与训练方法</div>
+  <div class="card">
+    <div class="source">arXiv · cs.CL · HuggingFace 48 票</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.36388">Persona Dosing: Calibrated Activation Steering for Graded Trait Control</a></div>
+    <div class="summary">提出&quot;人格剂量&quot;概念，将激活转向系数与可量化的行为强度标尺对齐。PersonaDose 通过描述条件化控制器与流时间校准，实现对语言模型人格特质的梯度化精确调控，无需针对目标强度配对训练数据，为可控文本生成与人格一致性研究提供了新的技术路径。</div>
+    <div class="tags"><span class="tag">LLM</span><span class="tag">可控生成</span><span class="tag">激活转向</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv · cs.CV · Stability AI</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.00686">SemanTok: Predictable Semantic Tokens for Efficient Autoregressive Video Generation</a></div>
+    <div class="summary">针对自回归视频生成中场景 tokenizer 的保真度-语义权衡，SemanTok 提出可预测语义 token 机制，使粗粒度 token 承载全局语义、细粒度 token 渐进补充细节。该设计在保持扩散模型视觉质量的同时提升 AR 预测的可扩展性，为视频世界模型的高效 token 化提供了新思路。</div>
+    <div class="tags"><span class="tag">视频生成</span><span class="tag">Tokenizer</span><span class="tag">Stability AI</span></div>
+  </div>
+</div>
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态与视觉</div>
+  <div class="card">
+    <div class="source">arXiv · cs.CV · HuggingFace 23 票</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.00559">PhysVista: Benchmarking Physical Intelligence in VLMs via a Perception-Reasoning-Assessment Loop</a></div>
+    <div class="summary">指出现有 VLM 物理推理基准多聚焦孤立认知阶段，缺乏感知-推理-评估的闭环检验。PhysVista 构建覆盖物理一致性理解的多维度评估框架，揭示当前视觉语言模型在真实世界物理动态理解上的系统性缺陷，为物理智能评测建立了更严谨的方法论基础。</div>
+    <div class="tags"><span class="tag">VLM</span><span class="tag">物理推理</span><span class="tag">Benchmark</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv · cs.CV · HuggingFace 5 票</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.37690">Honeycomb: Constant-Size Scene Memory Representation for Video World Models</a></div>
+    <div class="summary">针对视频世界模型在长时程生成中场景记忆无限膨胀的问题，Honeycomb 提出基于低秩表示的固定大小 HexMemory，将场景特征压缩至六个时空平面。前馈写入器将生成块映射至该紧凑记忆，在维持场景一致性的同时实现恒定存储开销，为长视频世界模型提供了可扩展的记忆架构。</div>
+    <div class="tags"><span class="tag">世界模型</span><span class="tag">记忆机制</span><span class="tag">视频生成</span></div>
+  </div>
+</div>
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>具身智能与机器人</div>
+  <div class="card">
+    <div class="source">arXiv · cs.CV · HuggingFace 25 票</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.01092">Ego2Act: Evaluating Goal-Directed Manipulation in Egocentric Video Generation</a></div>
+    <div class="summary">首次系统评估视频生成模型作为具身规划世界模拟器的多步操作能力。Ego2Act 聚焦第一人称视角下的目标导向操作，要求模型预测环境在动作执行下的动态演化，弥补了现有基准局限于单步短动作或逐步指令的不足，为视频生成模型在机器人规划中的适用性提供了关键验证框架。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">视频生成</span><span class="tag">Benchmark</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv · cs.RO · HuggingFace 12 票</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.34210">RLE-Bench: A Qualifying Exam for Coding Agents as Robot Learning Engineers</a></div>
+    <div class="summary">将编码智能体评估从纯数字任务扩展至物理世界机器人学习工程。RLE-Bench 要求智能体在资源约束下完成异构构件的构建、集成、诊断与改进，覆盖策略训练、控制器调试、系统联调等完整工程链路，为编码智能体在机器人领域的实际工程能力提供了首个系统性资格考核基准。</div>
+    <div class="tags"><span class="tag">机器人</span><span class="tag">编码智能体</span><span class="tag">Benchmark</span></div>
+  </div>
+</div>
+<div class="section">
+  <div class="section-title"><span class="emoji">📚</span>开源动态与 Awesome 列表</div>
+  <div class="card">
+    <div class="source">GitHub Trending · 980 stars today</div>
+    <div class="title"><a href="https://github.com/Panniantong/Agent-Reach">Panniantong/Agent-Reach</a></div>
+    <div class="summary">为 AI 智能体提供全网视觉感知能力的开源框架，支持网页内容理解、视觉元素定位与交互操作，使文本智能体能够&quot;看见&quot;并操作任意网页界面。项目发布单日即获 980 星，反映社区对多模态智能体感知能力的强烈需求。</div>
+    <div class="tags"><span class="tag hot">热门</span><span class="tag">Agent</span><span class="tag">多模态</span><span class="tag">开源</span></div>
+  </div>
+  <div class="card">
+    <div class="source">GitHub Trending · 298 stars today</div>
+    <div class="title"><a href="https://github.com/ifixai-ai/iFixAi">ifixai-ai/iFixAi</a></div>
+    <div class="summary">面向 AI 智能体的独立审计框架，支持由人类操作员或智能体自身运行审计流程，对 Agent 的决策轨迹、工具调用与结果一致性进行系统性检查。在 Agent 安全日益受关注的背景下，该项目为智能体行为审计提供了轻量级开源工具链。</div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">安全审计</span><span class="tag">开源</span></div>
+  </div>
+  <div class="card">
+    <div class="source">GitHub · awesome · 2026-09-11</div>
+    <div class="title"><a href="https://github.com/kairunwen/Awesome-Robot-Use-Agent">kairunwen/Awesome-Robot-Use-Agent</a></div>
+    <div class="summary">系统收录机器人操作智能体领域的论文、研究博客、开源工具、基准测试与社区资源，覆盖 VLA 模型、模仿学习、sim-to-real 迁移等方向。该列表是 Awesome-Real2Sim2Real 之外具身智能垂直领域又一高质量知识索引，反映细分研究社区的持续成熟。</div>
+    <div class="tags"><span class="tag">Awesome</span><span class="tag">机器人</span><span class="tag">Agent</span></div>
+  </div>
+  <div class="card">
+    <div class="source">Awesome 主仓库追踪</div>
+    <div class="title"><a href="https://github.com/sindresorhus/awesome">sindresorhus/awesome 近期动态：持续剪枝，AI list 合并静默</a></div>
+    <div class="summary">主仓库近期提交仍以删除归档列表（8/18 删 8 个、6/25 删 17 个）与 Meta 修复为主，无新增 AI/ML 相关 awesome list 合并。一批 AI list PR（#4396 awesome-ai-agent-tools、#4291 awesome-agentos、#4394 awesome-ai-tokenomics 等）仍处 open 待审状态，知识清单生态位正持续向可执行/可查询的 agent skills 迁移。</div>
+    <div class="tags"><span class="tag">Awesome</span><span class="tag">生态观察</span><span class="tag">Agent</span></div>
+  </div>
+</div>
+
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>本期研究呈现智能体技术栈的纵向深化趋势。X-Tree 将经验复用从上下文检索推进至权重固化，与 RAG 形成互补；Ego2Act 与 RLE-Bench 分别从感知模拟与工程实践维度拓展了具身智能的评估边界。安全层面，轨迹篡改漏洞的系统性暴露提示 Agent 基础设施的监控独立性亟待加强。开源生态中，Agent-Reach 的爆发式增长与 Awesome 主仓库的剪枝静默形成对照：知识沉淀正从静态列表向可执行工具链迁移，这一结构性转变值得持续跟踪。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-10-05</p>
+</div>
+
+</div>
+</body>
+</html>
