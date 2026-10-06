@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年10月06日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年10月06日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>本期 arXiv 呈现明显的"效率化"与"世界建模"双主线：LLM 引导的程序进化开始以单位成本收益为优化目标（FrugalEvo），后训练数据选择通过输出层梯度将特征提取成本降低近 10 倍（LESSER）；世界模型方向则涌现出持续适应的分层遗忘机制与 4D 逆图形基准。机器人领域，主动凝视框架 EyeRobot 2.0 以单双目相机实现精细双臂操作。开源侧 GitHub Trending 被 AI Agent 工具链占据，Agent-Reach、claude-mem、text-to-cad 等项目日增星数百，awesome 主仓库近期合并了 Agent Swarm 与 awesome-bio-agent-skills 两个 AI 方向列表。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">Hot Topic</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.03695">Language Models that Play Chess and Explain Their Moves（Queen）</a></div>
+    <div class="summary">普林斯顿大学团队提出 Queen：一个 4B 参数的国际象棋语言模型，能够以典型特级大师水平对弈，同时用自然语言解释其行棋计划。其核心是编码器-解码器架构结合迭代蒸馏算法：将"沉默"的专家级象棋编码器通过交叉注意力接入指令微调 LM，并以问答课程抽取象棋概念，再经迭代蒸馏持续提升解释质量。该工作为"领域专家表征 + 语言推理"的可解释 AI 范式提供了范例。</div>
+    <div class="tags">
+      <span class="tag hot">LLM 可解释性</span>
+      <span class="tag">cs.CL</span>
+      <span class="tag">arXiv 2610.03695</span>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">Hot Topic</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.03710">EyeRobot 2.0: Active Gaze for Precise Manipulation without Wrist Cameras</a></div>
+    <div class="summary">UC Berkeley（Jitendra Malik 团队）受人类视觉启发，提出主动凝视框架 EyeRobot 2.0：仅用一个双目相机，通过旋转两个视点将视线汇聚于场景中的 3D 注视点，并对图像中心做中央凹式的视觉 token 分配，将算力聚焦于任务相关特征。系统采用分层强化学习：底层注视伺服策略以稠密几何奖励训练，高层目标选择器与 BC 夹爪策略协同训练，实现无需腕部相机的精细双臂操作。</div>
+    <div class="tags">
+      <span class="tag hot">具身智能</span>
+      <span class="tag">机器人操作</span>
+      <span class="tag">arXiv 2610.03710</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>论文精选</div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.NE / cs.AI · 2026-10-02</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.03675">FrugalEvo: Towards Cost-Aware LLM-Guided Program Evolution</a></div>
+    <div class="summary">针对 AlphaEvolve 类 LLM 进化方法只关注固定迭代次数内性能增益的问题，NUS 团队主张以"单位成本增益"为优化目标，提出成本感知的进化框架 FrugalEvo：由强而贵的大模型探索解题策略，廉价模型负责实现与迭代精修代码；并设计缓存高效的进化流程，通过最大化跨进化步的前缀共享提升 KV cache 复用。作者同时提出预算感知的 BA-AUC 指标，用于在固定成本预算下度量解的质量曲线。</div>
+    <div class="tags">
+      <span class="tag">LLM 进化</span>
+      <span class="tag">成本优化</span>
+      <span class="tag">arXiv 2610.03675</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.LG · 2026-10-02</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.03702">LESSER: Post-Training Data Selection with Output-Layer Gradients</a></div>
+    <div class="summary">宾夕法尼亚大学团队发现：在基于梯度的后训练数据选择中，仅使用输出层梯度即可获得与全参数梯度相当的选择效果，而计算只需一次前向传播。实现为即插即用封装器 LESSER，在 SFT 基准上将特征提取 FLOP 降低 9.7 倍、RL 基准降低 3.0 倍，同时在下游任务上保持与全梯度方法一致的性能，为大候选池的低成本数据筛选提供了可行路径。</div>
+    <div class="tags">
+      <span class="tag">数据选择</span>
+      <span class="tag">后训练</span>
+      <span class="tag">arXiv 2610.03702</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.LG / cs.AI / cs.CV · 2026-10-02</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.03713">What Should World Models Forget? Stratified Retention for Continual Adaptation</a></div>
+    <div class="summary">马里兰大学团队指出：持续学习中"对旧数据退化即失败"的惯例不适用于世界模型——其预测目标（环境）本身会变化，旧知识过期后主动遗忘是必需行为而非缺陷。论文主张按不变性时间尺度对记忆分层：物理定律、物体恒常性等不变量永不修订，实例级知识则应随环境漂移更新，为持续适应的世界模型首次形式化了"该忘什么"的问题。</div>
+    <div class="tags">
+      <span class="tag">世界模型</span>
+      <span class="tag">持续学习</span>
+      <span class="tag">arXiv 2610.03713</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CV / cs.AI · 2026-10-02</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.03715">4DCodeBench: Benchmarking Agents on Inverse Graphics of Dynamic Scenes</a></div>
+    <div class="summary">JHU 与 MIT（Tenenbaum、Yuille 团队）联合发布 4DCodeBench：要求智能体从视频出发，以可执行图形程序的形式重建动态场景（4D 逆图形），涵盖形变、流体、断裂等物理现象。对前沿模型的大规模评测表明：强静态重建能力尚不能转化为对复杂动态的可靠重建，该基准为追踪"以代码理解世界动态"的智能体进展提供了测试床。</div>
+    <div class="tags">
+      <span class="tag">多模态智能体</span>
+      <span class="tag">逆图形</span>
+      <span class="tag">arXiv 2610.03715</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily Papers · 2026-09-28</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.38078">MotorMind: Scaffolding General Vision Language Models for Zero-Shot Robot Manipulation</a></div>
+    <div class="summary">HuggingFace 每日论文榜持续关注的世界动作模型（WAM）方向：MotorMind 通过为通用 VLM 搭建脚手架实现零样本机器人操作，配合同期《World Action Modeling with Progressive Visual Planning》与《Native Action-Prior Learning from Videos》，显示"仅观察视频学习动作先验、摆脱动作标注轨迹依赖"已成为 VLA 扩展性研究的核心议题。</div>
+    <div class="tags">
+      <span class="tag">VLA</span>
+      <span class="tag">世界动作模型</span>
+      <span class="tag">arXiv 2609.38078</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">⭐</span>开源动态与 Awesome 列表</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · Python · +1,155 stars/day</div>
+    <div class="title"><a href="https://github.com/Panniantong/Agent-Reach">Agent-Reach — 给 AI Agent 一双看见整个互联网的眼睛</a></div>
+    <div class="summary">单日增星过千的开源 CLI：让 AI 智能体零 API 费用读取与检索 Twitter、Reddit、YouTube、GitHub、Bilibili、小红书等平台内容，是本周 Agent 工具链中最抢眼的新秀。同期上榜的 Agent 基建还包括 claude-mem（+534/天，跨会话持久记忆）、text-to-cad（+437/天，让 Agent 具备 CAD 能力）、OpenMontage（+742/天，开源智能体视频生产系统，含 700+ Agent 技能文件）与 agency-agents（+744/天，完整 AI 代理团队）。Agent 工具生态正从"单点工具"走向"感官+记忆+专长"的全栈化。</div>
+    <div class="tags">
+      <span class="tag hot">开源热榜</span>
+      <span class="tag">AI Agent</span>
+      <span class="tag">工具链</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">sindresorhus/awesome · 近期合并</div>
+    <div class="title"><a href="https://github.com/sindresorhus/awesome">Awesome 主仓库动态：AI Agent 类列表持续入库</a></div>
+    <div class="summary">主仓库近期合并了 <strong>Agent Swarm</strong>（PR #4280，AI 智能体流水线自动化软件开发）与 <strong>awesome-bio-agent-skills</strong>（PR #4282，生物领域 Agent 技能集合）两个 AI 方向列表；同时进行了两次大规模清理（#4278、#4390，合计移除 25 个已归档列表），维护策略明显收紧。社区侧，AI/ML 相关 awesome-list 更新活跃，新增以"实时追踪"为特色的 awesome-agent-skills（带质量评级的 Agent 技能精选，日更）等列表，反映 Agent Skills 生态正成为列表策展的新热点。</div>
+    <div class="tags">
+      <span class="tag">awesome list</span>
+      <span class="tag">Agent Skills</span>
+      <span class="tag">策展动态</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>本期 arXiv 的关键词是"成本"与"记忆"。FrugalEvo 以强弱模型分工加前缀缓存复用，把 LLM 进化从"堆迭代"拉向"算经济账"；LESSER 则证明输出层梯度即可替代全梯度做后训练数据筛选，特征提取成本骤降近十倍——两者共同指向一个趋势：大模型后训练正在从效果优先转向性价比优先。世界建模方向同样活跃：分层遗忘机制首次为持续世界模型回答了"该忘什么"，4DCodeBench 则暴露出前沿模型从静态重建到动态理解之间的明显鸿沟。机器人侧，EyeRobot 2.0 的主动凝视方案用一只双目相机替代腕部相机阵列，是感知硬件简化的代表性工作。开源生态方面，GitHub 热榜已被 Agent 感官、记忆与技能工具全面占据，awesome 主仓库亦持续吸收 Agent 类列表——Agent 基础设施的标准化与策展化正在加速。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-10-06</p>
+</div>
+
+</div>
+</body>
+</html>
