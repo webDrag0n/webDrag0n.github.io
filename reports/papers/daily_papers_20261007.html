@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年10月07日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年10月07日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>Yann LeCun 团队发布层级化 JEPA 世界模型 H-JEPA，为长时程视觉规划提供端到端训练范式；UC Berkeley 研究揭示基础模型的推理能力可由训练数据中的起始 token 线索激发，无需强化学习即可逼近 RL 后训练效果；机器人方向，InterMimicGen 通过自进化运动模仿扩展人形机器人移动操作数据，递归视频上下文学习让 VLA 智能体从演示视频中持续改进；视频生成领域 S2PD 以串行-并行混合扩散提升物理一致性。开源生态方面，世界模型主题 awesome 列表持续升温。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日焦点</div>
+
+  <div class="hot-topic">
+    <div class="label">Hot · World Model</div>
+    <div class="source">arXiv 2610.06805 · cs.LG / cs.RO · 2026-10-05</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.06805">H-JEPA: End-to-End Learning of Hierarchical World Models for Visual Planning</a></div>
+    <div class="summary">Wancong Zhang、Basile Terver、Michael Rabbat、Yann LeCun、Randall Balestriero。针对潜空间世界模型在长时程规划中难以跨时间尺度与抽象层级推理的问题，H-JEPA 提出端到端训练层级化世界模型的完整方案，在不同抽象层级分别预测与规划，突破了现有任务无关 JEPA 模型单一时间尺度或共享潜空间的局限，为视觉规划提供了新的架构基础。</div>
+    <div class="tags">
+      <span class="tag hot">LeCun</span>
+      <span class="tag">世界模型</span>
+      <span class="tag">视觉规划</span>
+      <span class="tag">JEPA</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.06851 · cs.LG / cs.CL · UC Berkeley · 2026-10-05</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.06851">Base Models Can Reason By Taking a Cue From Training Data</a></div>
+    <div class="summary">Sophie L. Wang、Alexei A. Efros 等。研究系统分析了预训练数据如何在模型响应的起始 token 与后续推理行为之间建立关联。实验证明，仅通过固定特定的起始 token 线索，未经强化学习后训练的基础模型即可达到与 RL 微调模型相竞争的推理表现，为理解"推理能力从何而来"提供了新的实证视角，对后训练范式具有重要启示。</div>
+    <div class="tags">
+      <span class="tag">LLM 推理</span>
+      <span class="tag">预训练数据</span>
+      <span class="tag">RL 后训练</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>LLM 与智能体</div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.06830 · cs.CL · 2026-10-05</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.06830">MemPilot: Orchestrating On-Demand Multimodal Memory Curation for LLM Agents</a></div>
+    <div class="summary">针对现有智能体记忆系统以查询无关方式构建记忆、造成预处理开销冗余且易丢失关键细节的问题，MemPilot 提出按需多模态记忆编排机制，根据下游查询动态组织记忆内容，在保留关键信息的同时显著降低记忆构建成本，为长期运行的 LLM 智能体提供更高效的记忆管理框架。</div>
+    <div class="tags">
+      <span class="tag">Agent 记忆</span>
+      <span class="tag">多模态</span>
+      <span class="tag">LLM Agent</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.06829 · cs.CL · 2026-10-05</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.06829">CLIFT: Conformal Self-Verification for Web Agent Training and Test-Time Scaling</a></div>
+    <div class="summary">开源 Web 智能体的强化学习训练长期受制于弱监督信号：二值任务成功信号过于稀疏，而前沿模型评判成本高昂。CLIFT 引入基于共形预测的自验证机制，以统计保证的置信度估计替代昂贵的外部评判，同时支持训练阶段的信用分配与测试阶段的推理扩展，为 Web 智能体的可扩展训练提供了新路径。</div>
+    <div class="tags">
+      <span class="tag">Web Agent</span>
+      <span class="tag">强化学习</span>
+      <span class="tag">共形预测</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态与视频生成</div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.06847 · cs.CV · 2026-10-05</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.06847">S2PD: Serial-to-Parallel Diffusion for Physically and Logically Consistent Video Generation</a></div>
+    <div class="summary">双向视频扩散模型以并行方式对整段视频去噪，但即使在近乎无限的分布内数据上训练，仍会违反物理定律与简单符号规则。S2PD 提出串行到并行的混合扩散策略，结合自回归生成的因果一致性与并行采样的效率优势，在程序化生成长视频中显著提升物理与逻辑一致性。</div>
+    <div class="tags">
+      <span class="tag">视频扩散</span>
+      <span class="tag">物理一致性</span>
+      <span class="tag">生成模型</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.06844 · cs.CV · 2026-10-05</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.06844">Learning to Read the Contextual Tokens in Diffusion Transformers</a></div>
+    <div class="summary">多模态扩散 Transformer（MM-DiT）在生成全程联合处理视觉与文本表征，文本 token 经多模态注意力反复更新形成动态"上下文 token"，但其功能机制长期不明。该工作提出一套分析框架，系统刻画上下文 token 在生成过程中的演化规律与语义角色，为理解和改进 MM-DiT 的跨模态交互机制奠定基础。</div>
+    <div class="tags">
+      <span class="tag">MM-DiT</span>
+      <span class="tag">可解释性</span>
+      <span class="tag">多模态生成</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>具身智能与机器人</div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.06850 · cs.RO · 2026-10-05</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.06850">InterMimicGen: Scaling Humanoid Loco-Manipulation through Self-Evolving Motion Imitation</a></div>
+    <div class="summary">人类捕获的人-物交互数据为人形机器人移动操作提供丰富监督，但数据稀疏、异构且无法直接执行。InterMimicGen 提出自进化运动模仿框架，机器人运动数据与跟踪策略相互迭代改进，实现数据规模与策略性能的协同扩展，为人形机器人全身移动操作的数据瓶颈提供了可行的自动化解决方案。</div>
+    <div class="tags">
+      <span class="tag">人形机器人</span>
+      <span class="tag">运动模仿</span>
+      <span class="tag">数据扩展</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.06843 · cs.RO / cs.CL · 2026-10-05</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.06843">Recursive Video In-Context Learning for Agentic Robot</a></div>
+    <div class="summary">编排冻结 VLA 策略的 LLM 智能体通常依赖文本记忆跨回合改进，但文本只能记录"做了什么"，无法保留"如何做"。该工作提出递归视频上下文学习机制，将演示视频递归压缩为可被智能体上下文高效利用的表征，避免完整视频拖慢推理或固定关键帧丢失细节，使机器人智能体能够从视频演示中持续积累操作技能。</div>
+    <div class="tags">
+      <span class="tag">VLA</span>
+      <span class="tag">上下文学习</span>
+      <span class="tag">机器人智能体</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📚</span>开源生态与 Awesome 动态</div>
+
+  <div class="card">
+    <div class="source">GitHub · sindresorhus/awesome 及社区</div>
+    <div class="title"><a href="https://github.com/matrix-agent/awesome-agentic-world-modeling">世界模型主题 Awesome 列表持续升温</a></div>
+    <div class="summary">主仓库 sindresorhus/awesome 近期以维护性更新为主（清理归档列表、修复校验器），此前合并的 Copilot Agents 列表持续活跃。社区侧值得关注的动向：matrix-agent/awesome-agentic-world-modeling（⭐324，2026年4月创建，覆盖 Agentic World Modeling 的基础、能力与规律）与 ALEEEHU/World-Simulator（⭐391，收录 IEEE TPAMI 2026 世界模拟综述及资源）近期高频更新；Agent 技能类列表（trending-claude-skills、awesome-agent-skills 等）也呈快速涌现态势，反映"世界模型 + 智能体"已成为开源知识组织的新热点。</div>
+    <div class="tags">
+      <span class="tag">Awesome</span>
+      <span class="tag">世界模型</span>
+      <span class="tag">Agent Skills</span>
+      <span class="tag">开源</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今日 ArXiv 呈现三条清晰主线。其一，世界模型研究进入架构深化期：LeCun 团队的 H-JEPA 将层级化抽象引入端到端世界模型训练，与开源社区世界模型 awesome 列表的活跃形成呼应，该方向正从概念验证走向系统化。其二，推理能力的来源问题取得机制性进展：Berkeley 的工作表明基础模型的推理行为可由预训练数据中的起始 token 线索直接激发，对"RL 后训练是否必需"提出实证挑战，可能影响后训练资源分配策略。其三，智能体基础设施日趋完善——MemPilot 的按需记忆编排、CLIFT 的共形自验证分别从记忆与监督信号两个维度降低智能体训练与运行成本。机器人侧，自进化数据生成与视频上下文学习指向同一目标：让策略从演示中自主积累技能，缓解真机数据稀缺。整体而言，基础研究正沿着"更高效的数据利用"与"更本质的机制理解"两条轴线稳步推进。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026年10月07日</p>
+</div>
+
+</div>
+</body>
+</html>
