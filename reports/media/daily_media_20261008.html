@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年10月08日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年10月08日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>10月7日的核心事件由 OpenAI 主导：一次性公开 722 篇内部模型生成的数学成果，触及准黎曼猜想、希尔伯特第十问题、BSD 猜想与霍奇猜想等重大命题，并同步下调 API 定价、免费开放 Auto-review 功能；Grok 4.7 登陆 Microsoft Foundry，Google Gemini Live 推出实时视觉辅助，MIT 与 Meta 联合发布可自我评判草稿的 DREAM 模型。产业层面，物理仿真公司 Vinci Physics 完成 2.5 亿美元 B 轮融资，Meta 与微软被曝大幅削减 Claude 用量以控制 Token 成本。学术界则围绕自进化正则化（RRSI）与空间智能执行断层（VA-Bench）展开方法层面的反思。</p>
+</div>
+
+<!-- 头条 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>头条聚焦</div>
+
+  <div class="hot-topic">
+    <div class="label">今日焦点</div>
+    <div class="card" style="background:transparent;border:none;box-shadow:none;padding:8px 0 0;">
+      <div class="source">量子位 · 机器之心</div>
+      <div class="title"><a href="https://www.qbitai.com/2026/10/501749.html">OpenAI 公开 722 篇内部模型数学成果：准黎曼猜想、BSD 猜想、霍奇猜想均在列</a></div>
+      <div class="summary">OpenAI 通过 GitHub 仓库集中发布由一个未公开内部模型生成的 722 篇数学手稿，归并为 372 组结果，覆盖数论、代数几何、统计力学等 17 个方向。其中声称将 ζ 函数及狄利克雷 L 函数的无零点区域推进至实部大于 7/8，并给出有理数域上希尔伯特第十问题的不可判定性证明，部分成果附 Lean 形式化验证。模型在约 4000 个研究问题上进行尝试，单项成果平均算力约相当于 ChatGPT Pro 连续思考 3 小时。OpenAI 同时与普林斯顿高等研究院合作制定 AI 数学成果的发布规范。多位菲尔兹奖得主表示关注但未对其正确性背书。</div>
+      <div class="tags">
+        <span class="tag hot">多源报道</span>
+        <span class="tag">OpenAI</span>
+        <span class="tag">AI for Math</span>
+        <span class="tag">形式化证明</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">机器之心</div>
+    <div class="title"><a href="https://www.163.com/dy/article/L8LFKVGJ0511AQHO.html">OpenAI 一日四更：API 最高档付费砍半，Auto-review 全面免费</a></div>
+    <div class="summary">OpenAI 在开发者侧密集推出四项更新：API 付费层级由五档简化为 Build、Launch、Grow 三档，最高档费用下调约一半；原「Approve for me」模式正式定名 Auto-review 并向全部开发者免费开放；同步提升响应速度与配额上限。此举被视为在 Anthropic、Google 竞争压力下巩固开发者生态的关键举措。</div>
+    <div class="tags">
+      <span class="tag">OpenAI</span>
+      <span class="tag">API 定价</span>
+      <span class="tag">开发者生态</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 机器之心</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/501803.html">AI 影视公司 Utopai 文生视频模型登 Artificial Analysis 全球第二</a></div>
+    <div class="summary">独立评测机构 Artificial Analysis 最新文生视频盲评榜单显示，Utopai Studios 的 Utopai X 以 1150 分位列全球第二，仅次于阿里 Wan 3.0，分差仅 7 分。Utopai 由 00 后华裔创业者、前 Google X 成员 Cecilia Shen 联合创立，获《Variety》「全球最大独立 AI 原生影视公司」之称，福布斯估算其估值约 10 亿美元，《怪物史莱克》编剧亦已加入。评测样例显示其在手持跟拍物理一致性、光影材质控制等难点上表现稳定。</div>
+    <div class="tags">
+      <span class="tag hot">视频生成</span>
+      <span class="tag">Utopai</span>
+      <span class="tag">AI 影视</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">行业资讯（无矩AI 等）</div>
+    <div class="title">Grok 4.7 上线 Microsoft Foundry，进入 Azure 企业生态</div>
+    <div class="summary">SpaceXAI（xAI）于 10 月 7 日宣布 Grok 4.7 正式登陆 Microsoft Foundry 平台，企业用户可在 Azure 生态内直接调用。官方尚未披露参数规模、基准成绩与定价细节，但版本号跳跃幅度暗示较显著的能力升级。此举意味着 Grok 系列在企业级分发渠道上进一步与 OpenAI、Anthropic 形成正面竞争。</div>
+    <div class="tags">
+      <span class="tag">Grok 4.7</span>
+      <span class="tag">Microsoft Foundry</span>
+      <span class="tag">模型发布</span>
+    </div>
+  </div>
+</div>
+
+<!-- 产业与融资 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">💼</span>产业与融资</div>
+
+  <div class="card">
+    <div class="source">行业资讯</div>
+    <div class="title">物理仿真 AI 公司 Vinci Physics 完成 2.5 亿美元 B 轮融资，估值 15 亿美元</div>
+    <div class="summary">Vinci Physics 宣布完成 2.5 亿美元 B 轮融资，由 Advent International、淡马锡与 Xora Innovation 联合领投，AMD Ventures、Eclipse Ventures 参投，投后估值达 15 亿美元；Khosla Ventures 自种子轮起持续加注。公司定位为「物理 AI」，旨在让工程师在设计早期即可预见物理后果，标志着 AI 与工程仿真的结合正获得资本高度关注。</div>
+    <div class="tags">
+      <span class="tag">融资</span>
+      <span class="tag">物理 AI</span>
+      <span class="tag">工程仿真</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">机器之心（引 The Information）</div>
+    <div class="title"><a href="https://www.163.com/dy/article/L8LGL9MK0511AQHO.html">Token 成本承压：Meta、微软大幅削减 Claude 使用</a></div>
+    <div class="summary">据 The Information 报道，Meta 内部 Claude Code 月活用户已从 6 万降至 3 万，降幅 50%，转而采用自研 Muse Code 替代；微软将内部 Claude 支出削减逾 33%，单人月度 Token 预算由 10 万美元压缩至 1 万美元，并由 Copilot 自动路由至成本更低的模型。在 Anthropic 冲刺 IPO 的关键节点，头部客户的用量收缩为其企业级收入前景蒙上阴影，亦反映出大模型推理成本已成为企业 IT 预算的硬约束。</div>
+    <div class="tags">
+      <span class="tag">Anthropic</span>
+      <span class="tag">推理成本</span>
+      <span class="tag">行业格局</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/501791.html">Meshy 入选 a16z 消费级 AI 应用月收入 Top 50，为唯一 AI 3D 公司</a></div>
+    <div class="summary">Andreessen Horowitz 发布第七版《百强 AI 消费者应用》报告，首次依据 YipitData 银行卡消费数据增设月收入榜单。AI 3D 多模态模型公司 Meshy 位列第 31 名，为榜单中唯一的 AI 3D 企业，与 OpenAI、Anthropic、Canva 等共同上榜。a16z 指出，头部创意类产品的持续付费建立在自研模型之上，AI 3D 已成为与语言、图像、视频并列的独立付费品类。</div>
+    <div class="tags">
+      <span class="tag">a16z</span>
+      <span class="tag">AI 3D</span>
+      <span class="tag">消费级应用</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">行业资讯</div>
+    <div class="title">Vinod Khosla 押注个人 AI 代理 Wajo：以信任与安全为架构优先</div>
+    <div class="summary">由前 Google 与 DeepMind 工程师 Shivani Poddar 创立的 Wajo 获 Vinod Khosla、Jeff Dean 等投资，定位为「信任优先」的个人代理：可跨 iMessage 与 WhatsApp 执行任务，代用户致电商家完成预订，并通过专利虚拟信用卡系统代付而不泄露用户信息。产品上线于 9 月底，已覆盖 107 个国家，用户量增长 10 倍。个人代理赛道正从「工具辅助」向「全权代理」演进。</div>
+    <div class="tags">
+      <span class="tag">AI Agent</span>
+      <span class="tag">个人助理</span>
+      <span class="tag">隐私安全</span>
+    </div>
+  </div>
+</div>
+
+<!-- 技术与研究 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔬</span>技术与研究</div>
+
+  <div class="card">
+    <div class="source">机器之心</div>
+    <div class="title"><a href="https://www.163.com/dy/article/L8LIEOLU0511AQHO.html">陈丹琦团队：4B 参数模型国际象棋对弈比肩大师，并具备讲棋能力</a></div>
+    <div class="summary">普林斯顿大学陈丹琦团队展示了一项棋类 AI 研究：仅 4B 参数的模型在国际象棋对弈中达到大师级水平，同时能够以自然语言解释局面评估与走子逻辑，弥合了「专家模型沉默、语言模型不精」的长期断层。研究为小参数模型在垂直推理领域的专业化训练提供了新范式。</div>
+    <div class="tags">
+      <span class="tag">小模型</span>
+      <span class="tag">可解释性</span>
+      <span class="tag">棋类 AI</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">机器之心</div>
+    <div class="title"><a href="https://www.163.com/dy/article/L8LFP9FH0511AQHO.html">自进化也会过拟合：Google 等提出 RRSI，为智能体自改进施加正则化</a></div>
+    <div class="summary">针对递归自我改进（RSI）范式，Google 等机构提出正则化递归自改进框架 RRSI（Regularized Recursive Self-Improvement）。研究指出，智能体 Harness 的自改进过程同样存在过拟合风险——在特定任务分布上过度优化会导致泛化能力下降。RRSI 通过正则化搜索、候选版本隔离管理与评审筛查机制，实现可审计、可控的自我改进，为近期 RSI 热潮提供了方法论层面的冷静注脚。</div>
+    <div class="tags">
+      <span class="tag">RSI</span>
+      <span class="tag">Agent Harness</span>
+      <span class="tag">方法论</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">机器之心</div>
+    <div class="title"><a href="https://www.163.com/dy/article/L8LFI5HS0511AQHO.html">VA-Bench 揭示大模型空间智能的「执行断层」：看懂不等于做对</a></div>
+    <div class="summary">VA-Bench 评测基准以「观察—推理—行动—修正」闭环测试 12 个多模态大模型在真实机器人操作中的空间智能：14 类任务、280 个经物理验证的场景。结果显示，头部模型在目标识别定位上接近满分，但完整任务成功率仅约一半，Qwen3.8-max、Opus-5 与 GPT-5.6 均呈现显著的动作执行断层。该基准为具身智能研究提供了更严格的度量工具。</div>
+    <div class="tags">
+      <span class="tag">具身智能</span>
+      <span class="tag">评测基准</span>
+      <span class="tag">空间智能</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">机器之心</div>
+    <div class="title"><a href="https://www.163.com/dy/article/L8L6V1IK0511AQHO.html">三星与上海交大提出 RoboICL：无需参数更新的具身上下文学习</a></div>
+    <div class="summary">RoboICL 提出一种基于 GPT-6 Astra 的具身上下文学习框架，将示范上下文与交互记忆分离，采用统一的「观察—动作—回执」语法，在无需机器人专用参数更新、无需训练 VLA 模型的前提下实现机器人控制，并在多项机器人操控评测中全面领先。该工作表明通用多模态大模型的上下文学习能力可直接迁移至具身操控场景。</div>
+    <div class="tags">
+      <span class="tag">具身智能</span>
+      <span class="tag">In-Context Learning</span>
+      <span class="tag">机器人操控</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">行业资讯（MIT × Meta）</div>
+    <div class="title">MIT 与 Meta 发布 DREAM：可生成图像并自我评判草稿的统一模型</div>
+    <div class="summary">MIT 与 Meta 联合发布 DREAM 模型，兼具图像理解与文本到图像生成能力，其亮点在于「自我评判」机制——模型可对自身生成的粗略草稿进行评估与迭代，直至产出最优版本。该机制带来更强的视觉能力与图像质量，配合外部重排序器时生成速度提升约 10%，为自主式图像生成系统提供了新方向。</div>
+    <div class="tags">
+      <span class="tag">多模态</span>
+      <span class="tag">图像生成</span>
+      <span class="tag">自我评判</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">行业资讯（Google）</div>
+    <div class="title">Gemini Live 推出 Guided Vision：面向视障人群的实时视觉辅助</div>
+    <div class="summary">Google 宣布 Gemini Live 上线 Guided Vision 功能，与盲人及低视力社区共同打造：用户共享摄像头画面后，可获得对话式、实时的动态音频描述与语言重构提示，辅助探索周围环境。该功能体现了大模型实时视觉理解能力在无障碍场景的实质性落地。</div>
+    <div class="tags">
+      <span class="tag">Google Gemini</span>
+      <span class="tag">无障碍</span>
+      <span class="tag">实时视觉</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">行业资讯（Meta × PyTorch）</div>
+    <div class="title">Meta 将 TBE 内核从 CUDA 迁移至 FBTriton：推荐模型前向提速 1.28 倍</div>
+    <div class="summary">Meta 贡献者已将推荐系统关键的 Table Batched Embedding（TBE）内核从 CUDA 全面替换为基于 Triton 的 FBTriton，实现前向传播最高提速 1.28 倍、反向传播提速 2 倍，并显著提升开发者效率。该迁移是 Meta 构建开放 AI 基础设施路线的重要一步，亦验证了 Triton 在生产级工作负载中的成熟度。</div>
+    <div class="tags">
+      <span class="tag">AI Infra</span>
+      <span class="tag">Triton</span>
+      <span class="tag">推荐系统</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>10月7日的信息密度集中于一条主线：AI 正从「能力展示」转向「科研产出与成本结构的深水区」。OpenAI 一次性公开 722 篇数学成果，无论最终验证结果如何，其意义在于将 AI 辅助数学研究从单点突破推向规模化产出，并与普林斯顿高等研究院共建发布规范——这标志着 AI4Science 开始进入学术建制化阶段。与之对照的是产业端的理性收缩：Meta 与微软大幅削减 Claude 用量、OpenAI 主动腰斩 API 定价，共同指向推理成本已成为行业竞争的决胜变量。研究层面，RRSI 为自进化过热降温，VA-Bench 戳破空间智能的「纸面聪明」，均属方法论层面的必要冷思考。整体判断：模型能力仍在快速上行，但评价坐标已从 benchmark 分数转向可验证的科研贡献与可持续的单位经济学。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-10-08 · 数据来源：量子位 / 机器之心 / 新智元 / 晚点LatePost / 甲子光年 / 行业资讯聚合</p>
+</div>
+
+</div>
+</body>
+</html>
