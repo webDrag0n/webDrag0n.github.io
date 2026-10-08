@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年10月08日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年10月08日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>RL-only 领域自适应路线迎来重要验证：HuatuoGPT-3 证明无需 SFT 冷启动亦可完成医疗领域专家化；跨分词器在策略蒸馏的"对齐覆盖"假设被系统性质疑；智能体安全方向出现基于 Web 世界模型的对抗训练框架 AdvSim2Real；机器人学习方面，QF3 为流策略的在线强化学习后训练提供高效方案；开源社区 Agent Skills 生态持续升温，awesome-agentic-ai-zh 等高质量列表活跃更新。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日焦点</div>
+
+  <div class="hot-topic">
+    <div class="label">Hot · LLM / 领域自适应</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.05966">HuatuoGPT-3: RL-Only Domain Adaptation from Base Models</a></div>
+    <div class="summary">针对领域自适应主流的 SFT+RL 流水线，作者指出 SFT 冷启动会压缩探索多样性并引入多阶段优化复杂性，转而提出纯强化学习的领域自适应路线。HuatuoGPT-3 直接从基座模型出发进行 RL 训练，在医疗领域任务上达到专家级表现，为"无 SFT"的后训练范式提供了有力证据。</div>
+    <div class="tags">
+      <span class="tag hot">HuggingFace Daily</span>
+      <span class="tag">cs.CL</span>
+      <span class="tag">强化学习</span>
+      <span class="tag">医疗 LLM</span>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">Hot · Agent 安全</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.08773">AdvSim2Real: Training Web Agents Against Adaptive Prompt Injection in a Web World Model</a></div>
+    <div class="summary">Web 智能体在执行用户请求时必须读取第三方页面内容，因而天然暴露于提示注入攻击之下。该工作构建了一个 Web 世界模型用于模拟自适应注入攻击，并在此环境中对智能体进行对抗训练，突破了现有静态防御难以应对自适应攻击者的局限，为智能体安全训练提供了可扩展的仿真范式。</div>
+    <div class="tags">
+      <span class="tag hot">提示注入</span>
+      <span class="tag">cs.CL</span>
+      <span class="tag">Web Agent</span>
+      <span class="tag">世界模型</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>论文精选（LLM / 多模态）</div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.08448 · cs.CL · HuggingFace Daily Papers 榜首</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.08448">Rethinking Cross-Tokenizer On-Policy Distillation: From Alignment Coverage to Supervision Reliability</a></div>
+    <div class="summary">在策略蒸馏（OPD）在异构分词器场景下面临序列级与词表级对齐难题。本文系统检验了"扩大对齐覆盖即可改善学习"的既有假设，通过三组实验指出监督信号的可靠性比对齐覆盖率更为关键，为跨分词器蒸馏方法的设计提供了修正性结论。</div>
+    <div class="tags"><span class="tag">知识蒸馏</span><span class="tag">On-Policy Distillation</span><span class="tag">cs.CL</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.08778 · cs.AI, cs.CL</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.08778">Sherpa: Teaching LLMs to Teach Adaptively</a></div>
+    <div class="summary">"会解题"不等于"会教题"。现有将 LLM 训练为教师的方法依赖示范、偏好数据或预定义教学标准。Sherpa 提出让 LLM 依据学习者的实时状态自适应调整教学策略的训练框架，在教育型大模型方向上迈出了从"固定教学法"到"自适应教学法"的一步。</div>
+    <div class="tags"><span class="tag">教育 AI</span><span class="tag">自适应教学</span><span class="tag">cs.CL</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.05912 · cs.AI · HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.05912">MiniCorp: The Last Mile of the AI Agent Firm</a></div>
+    <div class="summary">面向"企业自主运转"这一智能体研究的长期目标，本文指出纵向企业数据稀缺、获取成本高且受隐私约束，历史档案亦不完备。MiniCorp 通过合成企业环境为训练与评估企业级智能体提供可控试验场，是 AI Agent Firm 方向的基础设施建设性工作。</div>
+    <div class="tags"><span class="tag">多智能体</span><span class="tag">企业智能体</span><span class="tag">cs.AI</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.08791 · cs.CV</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.08791">World Models' Last Exam in Physics</a></div>
+    <div class="summary">视频世界模型可生成视觉上逼真但物理上不一致的序列，对其在具身智能预测与规划中的可靠性构成挑战。该工作超越基于模型裁判或参考视频的评估方式，将物理测试从力学扩展到更广泛的物理定律，对世界模型的物理一致性进行直接检验，揭示了当前模型的系统性短板。</div>
+    <div class="tags"><span class="tag">世界模型</span><span class="tag">物理一致性</span><span class="tag">评测基准</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>具身智能 / 机器人</div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.08789 · cs.RO, cs.LG</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.08789">QF3: Fast Flow RL with Filtered Q-Gradients</a></div>
+    <div class="summary">流策略（Flow Policy）已成为机器人模仿学习的标准策略类别，但其在线强化学习后训练仍具挑战。QF3 提出一种在线离策略 RL 算法，通过过滤 Q 梯度实现对流策略的高效改进，兼顾从零交互学习与预训练策略的在线精调，为流策略的 RL 后训练提供了实用工具。</div>
+    <div class="tags"><span class="tag">机器人学习</span><span class="tag">Flow Policy</span><span class="tag">强化学习</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🌟</span>开源与 Awesome 动态</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · addyosmani/agent-skills · ★102.8k · 单日 +677</div>
+    <div class="title"><a href="https://github.com/addyosmani/agent-skills">addyosmani/agent-skills：面向 AI 编码智能体的生产级工程技能库</a></div>
+    <div class="summary">Agent Skills 生态持续升温：该仓库收录面向编码智能体的生产级技能（skills），单日增长逾 600 star，累计突破 10 万。同类项目 cloudflare/security-audit-skill（安全审计技能）亦进入今日趋势榜，反映"技能化智能体"正成为开源社区的工程共识。</div>
+    <div class="tags"><span class="tag hot">GitHub Trending</span><span class="tag">Agent Skills</span><span class="tag">开源生态</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · Awesome Lists · 本周活跃更新</div>
+    <div class="title"><a href="https://github.com/WenyuChiou/awesome-agentic-ai-zh">awesome-agentic-ai-zh</a> 与 <a href="https://github.com/WangRongsheng/awesome-LLM-resources">awesome-LLM-resources</a> 等高质量列表持续更新</div>
+    <div class="summary">sindresorhus/awesome 主仓近期以元维护为主（清理归档列表、修复 lint）。以之为索引向下游追踪，AI 方向活跃列表亮点包括：awesome-agentic-ai-zh（★7.4k，繁中/简中/英文三语 Agentic AI 学习路线图，10 月 7 日更新）、awesome-LLM-resources（★9.0k，覆盖多模态、Agent、MCP、推理等全栈 LLM 资料），以及新兴主题列表 awesome-agent-observability（LLM/Agent 可观测性工具与标准）。</div>
+    <div class="tags"><span class="tag">Awesome List</span><span class="tag">Agentic AI</span><span class="tag">可观测性</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今日研究图景呈现三条清晰主线。其一，后训练范式持续重构：HuatuoGPT-3 以纯 RL 路线完成医疗领域专家化，与跨分词器蒸馏研究共同指向"监督信号质量优先于流程惯性"的方法论转向。其二，智能体安全从被动防御走向主动对抗：AdvSim2Real 以 Web 世界模型承载自适应提示注入训练，标志着 Agent 安全评估向动态对抗环境迁移。其三，世界模型进入"物理大考"阶段，物理一致性正取代视觉逼真度成为核心评测维度，并与 QF3 等机器人 RL 工作共同支撑具身智能的可靠性议程。开源侧，Agent Skills 模式与可观测性 awesome 列表的兴起，显示智能体工程化正从框架竞争转向标准化资产沉淀。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-10-08 生成</p>
+</div>
+
+</div>
+</body>
+</html>
