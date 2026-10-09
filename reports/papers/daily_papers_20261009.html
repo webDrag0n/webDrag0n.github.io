@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年10月09日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年10月09日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>世界-动作模型（World-Action Model）成为今日机器人领域最活跃的研究主线：Long-WAM 与 RoboJEPA 分别探索了上下文长度与模型规模两条扩展轴，并在 HuggingFace Daily Papers 上获得高度关注；语言模型方向，RLVR 的探索-优化解耦与自进化推理模型的问题质量衰退成为新的方法论焦点；VLA 模型的语言敏感性、线性注意力量化误差传播等工程性问题亦有系统性研究；开源生态中，"awesome-agent-skills" 类新兴列表反映了 AI Agent 技能生态的标准化趋势。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🌍</span>具身智能与世界模型</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 今日焦点</div>
+    <div class="source">arXiv 2610.10528 · HuggingFace Daily Papers 88 赞 · cs.RO / cs.AI / cs.CV</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.10528">Long-WAM: Scaling the Context of World-Action Models</a></div>
+    <div class="summary">实时机器人控制要求模型具备足够的视觉历史以推断运动与任务进度，但处理历史信息会延迟动作输出。Long-WAM 提出一个模型-系统联合框架，在实时控制约束下扩展因果世界-动作模型的上下文长度。核心发现是：历史的"可访问"不等于"被利用"——当视频基座以自回归方式预训练时，更长历史带来的收益显著提升。该方法先在无动作标签的机器人和第一视角视频上学习因果预测，再在世界-动作微调阶段保持历史-未来结构。</div>
+    <div class="tags"><span class="tag hot">世界模型</span><span class="tag">实时控制</span><span class="tag">自回归预训练</span><span class="tag">具身智能</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.10515 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.10515">RoboJEPA: Scaling Robotic Latent World Models</a></div>
+    <div class="summary">潜空间世界模型已展现出预测未来状态与规划的能力，但学界一直缺乏对其能力随模型规模、数据与算力扩展规律的系统性刻画。RoboJEPA 基于联合嵌入预测架构（JEPA），在覆盖 12 种机器人形态的大规模数据集上训练。研究表明，其"想象误差"（latent rollout 误差）服从关于算力的二阶幂律，使研究者得以在完整训练之前预测世界模型的能力边界，为该领域的扩展性研究提供了原则性方法。</div>
+    <div class="tags"><span class="tag">JEPA</span><span class="tag">Scaling Law</span><span class="tag">潜空间世界模型</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.10526 · cs.RO / cs.CL</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.10526">Rephrase Before You Act: Characterizing and Mitigating Language Sensitivity in Vision-Language-Action Models</a></div>
+    <div class="summary">研究系统刻画了视觉-语言-动作模型（VLA）对指令措辞的高度敏感性：VLA 并未继承其所基于的视觉-语言模型的语言鲁棒性，单个词的修改可使成功率波动数十个百分点——π0.5 在 LIBERO 基准上执行"打开炉灶"任务时，措辞差异可将成功率从 100% 降至接近零。作者分析了该现象的成因并提出缓解策略，对 VLA 的实际部署可靠性具有直接意义。</div>
+    <div class="tags"><span class="tag">VLA</span><span class="tag">指令鲁棒性</span><span class="tag">机器人学习</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大语言模型与推理</div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.10536 · cs.LG / cs.AI / cs.CL</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.10536">Decoupling Exploration from Optimization in RLVR</a></div>
+    <div class="summary">可验证奖励强化学习（RLVR）的关键承诺是让模型发现训练数据中不存在的新推理策略，但实践中增强手段往往未能兑现这一承诺。该研究将"探索"与"优化"两个机制进行解耦分析，厘清了 RLVR 在已训练检查点之上发现新推理策略的能力边界，为推理模型的后训练方法设计提供了更清晰的概念框架。</div>
+    <div class="tags"><span class="tag">RLVR</span><span class="tag">强化学习</span><span class="tag">推理模型</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.04299 · HuggingFace Daily Papers 64 赞</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.04299">Questioning the Questions: Sustaining Self-Evolution in Reasoning Models</a></div>
+    <div class="summary">自进化推理模型依赖模型自行生成的问题进行训练，但反复的自训练会导致性能崩溃。该研究系统分析了性能退化的机制，识别出自生成问题中两类反复出现的质量问题——无效问题与既有问题的重复变体——并提出维持自进化过程可持续性的方法。该工作对基于自举数据飞轮的推理模型训练路线具有重要参考价值。</div>
+    <div class="tags"><span class="tag">自进化</span><span class="tag">数据飞轮</span><span class="tag">推理模型</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.07967 · HuggingFace Daily Papers 66 赞</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.07967">DecepEval: A Benchmark for Evaluating Deception in LLM Agents</a></div>
+    <div class="summary">随着 LLM 智能体自主性增强，其可能通过欺骗行为追求任务绩效，引发可靠部署层面的关切。既有评测多在孤立场景或狭窄条件下考察欺骗行为，缺乏对"欺骗何时更易发生"的系统性理解。DecepEval 提出面向 LLM 智能体欺骗行为的系统性评测基准，填补了这一评估空白，对智能体安全研究具有基础性意义。</div>
+    <div class="tags"><span class="tag">AI 安全</span><span class="tag">智能体评测</span><span class="tag">Benchmark</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态与高效生成</div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.10524 · HuggingFace Daily Papers 64 赞 · cs.CV</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.10524">GRACE: Generation-aware Latent Compression for Efficient Video Generation</a></div>
+    <div class="summary">高压缩比视频自编码器可通过减少 DiT 处理的 token 数显著加速视频扩散模型，但训练困难：压缩比提升会损害重建质量，而恢复质量所需增加通道数又会拖慢 DiT 收敛。GRACE 提出面向生成目标的潜空间压缩方法，缓解了压缩比、重建质量与扩散收敛速度之间的三角矛盾，为高效视频生成提供了新的自编码器设计思路。</div>
+    <div class="tags"><span class="tag">视频生成</span><span class="tag">DiT</span><span class="tag">潜空间压缩</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2609.38169 · HuggingFace Daily Papers 100 赞（本日榜首）</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.38169">STEPQuant: When and Where Errors Matter in Delta-Rule Recurrent State Quantization</a></div>
+    <div class="summary">线性注意力以固定大小的循环状态替代不断增长的 KV 缓存，但在高并发服务场景下，这些持久化状态本身会成为显著的显存瓶颈。直接对循环状态做低精度量化常导致严重的精度下降，因为量化误差会随状态更新逐步传播累积。STEPQuant 系统分析了 Delta-Rule 循环状态中量化误差"何时、何处"产生影响，为线性注意力架构的高效部署提供了量化方法依据。</div>
+    <div class="tags"><span class="tag">线性注意力</span><span class="tag">量化</span><span class="tag">高效推理</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源生态与 Awesome 列表动态</div>
+
+  <div class="card">
+    <div class="source">GitHub · sindresorhus/awesome 上游动态</div>
+    <div class="title"><a href="https://github.com/sindresorhus/awesome">awesome 主仓库近况：以治理与清理为主，无新增 AI 类列表合并</a></div>
+    <div class="summary">上游 awesome 主仓库近期维护以列表治理为主：8 月合并了"移除 8 个已归档列表"的 PR，6 月移除 17 个归档列表并清理 Yeoman 生成器条目，未新增 AI/机器学习方向列表。这表明主列表进入成熟期，生态增量主要发生在独立 awesome 仓库中。</div>
+    <div class="tags"><span class="tag">Awesome</span><span class="tag">生态治理</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 新兴 awesome 仓库观察</div>
+    <div class="title"><a href="https://github.com/linny006/awesome-agent-skills">Awesome Agent Skills：AI Agent 技能清单的标准化趋势</a></div>
+    <div class="summary">近期新建 awesome 仓库中，围绕 AI 编码智能体"技能/插件"生态的列表显著增多：awesome-agent-skills（带质量评级的自动更新技能清单）、awesome-claude-code-mods（100+ Claude Code 模组合集）、awesome-ai-security-agents（AI 安全智能体论文/仓库/博客）等均在一周内创建并保持活跃更新。此外，学术方向出现 awesome-spatial-transcriptomics（空间转录组学工具、基础模型与数据集）与 awesome-perception-aware-rlvr（VLM 感知感知 RLVR 复现与评测）等面向细分研究领域的精选列表，值得关注。</div>
+    <div class="tags"><span class="tag hot">新趋势</span><span class="tag">Agent Skills</span><span class="tag">精选列表</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今日研究图景呈现两条清晰主线。其一，世界-动作模型成为具身智能的方法论核心：Long-WAM 与 RoboJEPA 分别从上下文长度与模型规模两条轴建立可预测的扩展规律，表明该方向正从启发式工程走向可量化的科学研究范式。其二，大模型后训练的反思性工作增多：RLVR 的探索-优化解耦、自进化训练的问题质量衰退、VLA 的指令敏感性，均指向"能力之外"的鲁棒性与可靠性短板。工程侧，STEPQuant 登顶 HuggingFace 日榜，反映线性注意力架构部署问题正获得社区关注。开源生态方面，围绕编码智能体"技能清单"的新型 awesome 列表集中涌现，提示 Agent 能力封装正走向标准化、可复用的生态阶段，值得持续跟踪。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-10-09 · 数据来源：arXiv API / HuggingFace Daily Papers / GitHub API</p>
+</div>
+
+</div>
+</body>
+</html>
