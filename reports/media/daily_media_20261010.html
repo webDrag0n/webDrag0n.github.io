@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年10月10日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年10月10日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>10月9日中文AI媒体焦点集中于三条主线：其一，谷歌云发布企业级 Gemini Agent、联想 TianxiCode 登顶 SWE-bench-Live、华为系 openJiuwen 开源 AgentOS，办公与代码智能体赛道密集落子；其二，具身智能进入评测与商业化深水区——清华系星动纪元世界动作模型登顶 RoboDojo、Sharpa 发布全栈灵巧操作产品、因果智能实现机器人 0.2 秒急停；其三，Manus 完成超 5 亿美元融资并重启北京团队，OpenAI 集中发布数学成果遭陶哲轩等数学家公开抵制，引发学界对科研范式的激烈争论。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>焦点事件</div>
+
+  <div class="hot-topic">
+    <div class="label">热点聚焦</div>
+    <div class="card" style="background:transparent;border:none;box-shadow:none;padding:6px 0 0;">
+      <div class="source">量子位 · 极客公园 · 多源合并</div>
+      <div class="title"><a href="https://www.qbitai.com/2026/10/502083.html">谷歌云发布企业通用智能体 Gemini Agent，可调用竞品 Claude</a></div>
+      <div class="summary">Google Cloud 在 Gemini at Work 2026 大会上由 CEO Thomas Kurian 署名发布 Gemini Agent：定位覆盖资料检索、邮件撰写、数据分析、代码编写与跨应用工具调用的长期运行通用办公智能体。两项设计尤为突出：一是智能体具备独立企业身份（邮箱、日历、账号），以"AI 同事"形态嵌入组织；二是支持按任务自动选择底层模型，包括对 Anthropic Claude 的调用，显示办公智能体竞争已进入多模型互操作阶段。</div>
+      <div class="tags">
+        <span class="tag hot">热点</span>
+        <span class="tag">智能体</span>
+        <span class="tag">谷歌</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 雷峰网（AI科技评论） · 多源合并</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/502426.html">字节 TRAE 双端融合：Code 与 Work 合并为统一开发平台</a></div>
+    <div class="summary">字节跳动旗下 AI 开发工具 TRAE 于 10 月 9 日宣布全面升级，TraeCode 与 TraeWork 双端融合，统一为同时具备 Agent 模式与 IDE 模式的全链路开发平台。Agent 模式提供全局工作台，支持在同一窗口内管理项目并将编码、文档、交付材料等任务分派给多个智能体并行推进，标志着国产 AI IDE 从单点编码辅助走向"编码+办公"一体化工作台形态。</div>
+    <div class="tags">
+      <span class="tag">AI编程</span>
+      <span class="tag">字节跳动</span>
+      <span class="tag">智能体</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 多源合并</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/502422.html">联想天禧 TianxiCode 登顶 SWE-bench-Live 全球第一</a></div>
+    <div class="summary">联想天禧 AI 自研代码智能体框架 TianxiCode 配合 DeepSeek-v4.1-Flash 模型，在软件工程权威评测 SWE-bench-Live（Lite 分榜）以 71% 的问题解决率位列全球第一，并通过官方 Verified 严格审核。该评测要求智能体在可复现的真实 GitHub 项目环境中完成检索、规划、工具调用与自测修复全链路，此次成绩将国产自研 Agent 的工程能力置于公开可比基准之上。</div>
+    <div class="tags">
+      <span class="tag">代码智能体</span>
+      <span class="tag">联想</span>
+      <span class="tag">DeepSeek</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/502106.html">华为系 openJiuwen 发布并开源企业级 AgentOS</a></div>
+    <div class="summary">由华为 2012 实验室、华为云等团队联合高校与开发者构建的开源智能体平台 openJiuwen 发布企业级 AgentOS，将多智能体协同、自演进、算力亲和与企业级安全能力整合进统一底座。平台通过蜂群协同与工作流编排支持任务拆解与并行执行，依托执行轨迹与用户反馈实现经验沉淀，并以插件化架构连接上层应用与底层模型、算力资源，目标直指企业智能体的规模化落地。</div>
+    <div class="tags">
+      <span class="tag">开源</span>
+      <span class="tag">华为</span>
+      <span class="tag">企业智能体</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能与机器人</div>
+
+  <div class="card">
+    <div class="source">量子位 · 多源合并</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/502125.html">清华系星动纪元世界动作模型 VPP2 登顶 RoboDojo 全球榜单</a></div>
+    <div class="summary">星动纪元自研的世界动作模型 VPP2 登顶由香港大学 MMLab 牵头、全球近 20 所学术机构共建的 RoboDojo 仿真评测榜单，综合成功率 32.26%、综合得分 39.26 双双第一，超越 GPT-6-Astra、Physical Intelligence π0.5 与英伟达 GR00T-N1.7。其技术路径是将视频预测与动作学习解耦并分阶段训练，在不依赖外挂与额外数据的条件下取得领先。</div>
+    <div class="tags">
+      <span class="tag hot">热点</span>
+      <span class="tag">具身智能</span>
+      <span class="tag">世界模型</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/502411.html">因果智能落地真实世界：机器人实现 0.2 秒急停与秒级重规划</a></div>
+    <div class="summary">相关演示显示，机器人在关闭微波炉门过程中遭遇人手突然插入时，可在 0.2 秒内紧急悬停；面对混入金属易拉罐的餐盘，机械臂会先剔除危险品再执行加热指令。上述行为并非预录动作或统计相关性驱动，而是基于因果推理对光照变化、干扰冲击与隐含意图保持鲁棒，被视作具身智能从"背题式"演示走向真实物理交互的标志性进展。</div>
+    <div class="tags">
+      <span class="tag">因果智能</span>
+      <span class="tag">机器人</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/502330.html">IROS 现场：Sharpa 发布全栈灵巧操作产品线</a></div>
+    <div class="summary">禾赛科技创始团队再创业的具身智能公司 Sharpa 在 IROS 期间一次性推出三款产品：首款全自研通用人形机器人 D01、新一代触觉灵巧手 W02，以及外骨骼数据手套 AE01。"手、本体、数据入口"的组合直指行业核心命题——灵巧操作从舞台演示走向真实商业价值，需要硬件自由度、触觉感知与数据采集基础设施的系统性闭环。</div>
+    <div class="tags">
+      <span class="tag">灵巧操作</span>
+      <span class="tag">人形机器人</span>
+      <span class="tag">IROS</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/502096.html">AgentGarten：代码与扩散模型构建的智能体实时试炼场</a></div>
+    <div class="summary">MirroS 团队发布 AgentGarten，将可执行代码环境与实时神经渲染器连接：代码定义物理规则，扩散模型以超过 30 fps 生成视觉反馈，智能体在其中持续行动、观察与复盘。经典捉迷藏实验中，躲藏者第 4 轮学会搭建掩体，搜寻者第 10 轮掌握借坡道翻墙，并在失败后自主调整策略——策略演化由智能体自写的"实验手册"驱动，为智能体自我进化研究提供了新的训练范式。</div>
+    <div class="tags">
+      <span class="tag">智能体训练</span>
+      <span class="tag">扩散模型</span>
+      <span class="tag">研究</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔬</span>技术解读与研究</div>
+
+  <div class="card">
+    <div class="source">量子位 · IT之家 · 多源合并</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/502364.html">字节 Seed 团队揭示 DeepSeek 长上下文"时强时弱"成因</a></div>
+    <div class="summary">字节 Seed 团队 9 月底在 arXiv 提交的研究指出，DeepSeek-V4 系列模型的表现会随信息输入位置呈现约每 4 个 Token 的周期性波动——在 128K 长上下文检索测试中，同一条信息仅改变位置，检索准确率最高相差 40.2 个百分点。研究将其归因于分块 KV 缓存压缩带来的相位敏感性，为理解大模型长上下文稳定性提供了新的机制性解释。</div>
+    <div class="tags">
+      <span class="tag">长上下文</span>
+      <span class="tag">KV Cache</span>
+      <span class="tag">字节Seed</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">雷峰网（AI科技评论）</div>
+    <div class="title"><a href="https://www.leiphone.com/latest/index/id/4768">华为已为 KV Cache 单独做存储，专用 SSD 规格尚未定型</a></div>
+    <div class="summary">随着推理负载增长，KV Cache 正从易失缓存演变为需要独立管理的存储层级。华为已着手为 KV Cache 构建专用存储体系，但专用 SSD 的规格标准仍未确定。该动向表明推理系统的存储架构正在重构，存储介质、带宽与生命周期管理或成为下一阶段算力基础设施竞争的新变量。</div>
+    <div class="tags">
+      <span class="tag">推理基础设施</span>
+      <span class="tag">华为</span>
+      <span class="tag">存储</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">雷峰网（AI科技评论）</div>
+    <div class="title"><a href="https://www.leiphone.com/category/ai/n2GjuJRnM4utgaun.html">Claude Haiku 5.5 降本背后：模型按任务动态分配推理</a></div>
+    <div class="summary">Anthropic 新一代轻量模型 Claude Haiku 5.5 在操作能力显著提升的同时，引入按任务复杂度动态分配推理量的机制；当上下文超过 10 万 Token 后，输入输出单价均上涨 5 倍。定价结构的这一变化，反映出前沿厂商在"能力—成本"权衡上的精细化策略，复杂编程等长链路任务仍构成轻量模型的能力边界。</div>
+    <div class="tags">
+      <span class="tag">模型定价</span>
+      <span class="tag">Anthropic</span>
+      <span class="tag">推理优化</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🏢</span>行业与融资</div>
+
+  <div class="card">
+    <div class="source">量子位 · 投资界 · 多源合并</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/502009.html">Manus 完成超 5 亿美元新融资，重启北京办公室扩张招聘</a></div>
+    <div class="summary">Manus 母公司蝴蝶效应于 10 月 8 日宣布完成超 5 亿美元新一轮融资，由博裕投资、IDG 资本领投，腾讯、红杉中国、真格基金等老股东继续加持。与此同时，Manus 正在北京重建面向中国市场的团队，开放岗位从节前 11 个增至 17 个，涵盖 AI Agent 产品经理、Agent Harness 工程师、评测工程师与 LLM 算法工程师等核心序列，显示其重新切入国内智能体市场的明确意图。</div>
+    <div class="tags">
+      <span class="tag hot">热点</span>
+      <span class="tag">融资</span>
+      <span class="tag">智能体</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">极客公园</div>
+    <div class="title"><a href="http://www.geekpark.net/news/372148">鲲为科技完成 4 亿元融资：超声穿颅实时成像打开脑科学新路径</a></div>
+    <div class="summary">深圳鲲为科技近期完成 4 亿元新一轮融资，新增股东包括 XVC、红杉中国，老股东夏尔巴、腾讯加仓。该公司放弃行业惯用的高频路线，转向低频段并将算力与算法引入物理声场，实现穿透颅骨的高分辨率实时成像——中脑核团、侧脑室与微细血管血流动态可被毫秒级捕捉。该技术将超声从成像工具升维为"声学空间智能"，在脑科学与通用人工智能交叉领域具备平台型潜力。</div>
+    <div class="tags">
+      <span class="tag">融资</span>
+      <span class="tag">脑科学</span>
+      <span class="tag">医疗AI</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/502359.html">Google 医疗 AI 研究首登《柳叶刀》主刊：诊前评估改善医患关系</a></div>
+    <div class="summary">Google 与贝斯以色列女执事医疗中心合作的真实临床研究发表于《柳叶刀》主刊：98 名患者在急诊就诊前使用研究级诊断 AI 聊天机器人 AMIE，全程无对话因安全标准被中断；75% 的场景中 AI 摘要帮助医生提前准备接诊，超过半数案例中 AI 输出改变了医生诊疗思路，鉴别诊断与最终确诊吻合度达 90%。该结果为面向患者端的医疗 AI 提供了迄今较高等级的临床证据。</div>
+    <div class="tags">
+      <span class="tag">医疗AI</span>
+      <span class="tag">谷歌</span>
+      <span class="tag">临床研究</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · IT之家 · 多源合并</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/502089.html">陶哲轩牵头联合声明，数学界公开抵制 OpenAI 数学成果发布方式</a></div>
+    <div class="summary">OpenAI 于 10 月 6 日一次性发布 700 余份 AI 数学解答预印本（涵盖 372 个数学结果族），不到 24 小时即因符号错误撤回其中三篇。菲尔兹奖得主陶哲轩随后牵头人类数学协会（AHM）发布联合声明，敦促数学家停止与 OpenAI 合作、回归以人类理解为核心的科学愿景。事件将"算力驱动的大规模成果发布"与传统数学共同体的验证规范之间的冲突推至台前，成为 AI 参与基础科学研究的范式争议焦点。</div>
+    <div class="tags">
+      <span class="tag">OpenAI</span>
+      <span class="tag">AI for Math</span>
+      <span class="tag">学术争议</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>本期中文 AI 媒体图景呈现清晰的"智能体产业化"主线：谷歌 Gemini Agent、字节 TRAE、联想 TianxiCode 与华为 openJiuwen 同日密集落子，办公与代码智能体正从单点工具走向具备企业身份、多模型调度与自演进能力的系统级平台；联想以 DeepSeek 为底座登顶 SWE-bench-Live，进一步验证了"国产模型+自研智能体框架"的可比工程实力。具身智能方面，星动纪元登顶 RoboDojo、因果智能实现 0.2 秒急停，显示中国团队在评测与物理鲁棒性上的实质进展。值得关注的两条暗线：一是 Manus 携 5 亿美元融资回归国内市场，预示智能体竞争进入资本与人才的双重争夺；二是 OpenAI 数学成果发布遭数学界公开抵制，暴露出"算力霸权式科研"与学术验证规范之间的深层张力。基础设施侧，KV Cache 专用存储与动态推理定价的出现，提示推理成本治理正在成为下一阶段产业竞争的关键变量。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026年10月10日 · 覆盖 2026-10-09 中文媒体</p>
+</div>
+
+</div>
+</body>
+</html>
