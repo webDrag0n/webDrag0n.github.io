@@ -1,11 +1,19 @@
 #!/usr/bin/env python3
-"""Scan reports/ and generate reports/index.html — the AI Daily hub page."""
+"""Scan reports/ and generate:
+  - reports/index.html  (human-readable hub)
+  - reports/rss.xml     (RSS 2.0 feed for both series)
+  - reports/index.json  (machine-readable full index)
+  - reports/latest.json (latest entry of each series, for agents)
+"""
 import os, re, json
+from datetime import datetime, timezone
+from email.utils import format_datetime
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(BASE)
 PAPERS_DIR = os.path.join(BASE, 'papers')
 MEDIA_DIR = os.path.join(BASE, 'media')
+SITE = 'https://webdrag0n.github.io/reports'
 
 def collect(d, prefix):
     items = []
@@ -109,5 +117,79 @@ html = f'''<!DOCTYPE html>
 out = os.path.join(BASE, 'index.html')
 with open(out, 'w', encoding='utf-8') as f:
     f.write(html)
+
+# ── RSS 2.0 ──────────────────────────────────────────────────────────
+def rss_items(items, subdir, series_title):
+    rows = []
+    for it in items:
+        dt = datetime.strptime(it['raw'], '%Y%m%d').replace(hour=8, tzinfo=timezone.utc)
+        url = f"{SITE}/{subdir}/{it['file']}"
+        rows.append(f'''    <item>
+      <title>{series_title} — {it['date']}</title>
+      <link>{url}</link>
+      <guid isPermaLink="true">{url}</guid>
+      <pubDate>{format_datetime(dt)}</pubDate>
+      <description>{series_title} for {it['date']}</description>
+    </item>''')
+    return '\n'.join(rows)
+
+all_items = []
+for it in papers: all_items.append(('papers', it))
+for it in media:  all_items.append(('media', it))
+all_items.sort(key=lambda x: x[1]['raw'], reverse=True)
+
+rss_entries = []
+for subdir, it in all_items:
+    title = 'AI Paper Digest' if subdir == 'papers' else 'AI Media Daily'
+    dt = datetime.strptime(it['raw'], '%Y%m%d').replace(hour=8, tzinfo=timezone.utc)
+    url = f"{SITE}/{subdir}/{it['file']}"
+    rss_entries.append(f'''    <item>
+      <title>{title} — {it['date']}</title>
+      <link>{url}</link>
+      <guid isPermaLink="true">{url}</guid>
+      <pubDate>{format_datetime(dt)}</pubDate>
+      <description>{title} for {it['date']}</description>
+    </item>''')
+
+rss = f'''<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>AI Daily — Lin Zexin</title>
+    <link>{SITE}/</link>
+    <description>Daily AI paper digests and Chinese AI media roundups.</description>
+    <language>zh-cn</language>
+    <lastBuildDate>{format_datetime(datetime.now(timezone.utc))}</lastBuildDate>
+{chr(10).join(rss_entries)}
+  </channel>
+</rss>
+'''
+
+with open(os.path.join(BASE, 'rss.xml'), 'w', encoding='utf-8') as f:
+    f.write(rss)
+
+# ── JSON index (for agents) ─────────────────────────────────────────
+idx = {
+    'site': SITE,
+    'generated_at': datetime.now(timezone.utc).isoformat(),
+    'series': {
+        'papers': {'title': 'AI Paper Digest', 'url_prefix': f'{SITE}/papers/', 'count': len(papers),
+                   'items': [{'date': it['date'], 'url': f'{SITE}/papers/{it["file"]}'} for it in papers]},
+        'media':  {'title': 'AI Media Daily', 'url_prefix': f'{SITE}/media/', 'count': len(media),
+                   'items': [{'date': it['date'], 'url': f'{SITE}/media/{it["file"]}'} for it in media]},
+    }
+}
+with open(os.path.join(BASE, 'index.json'), 'w', encoding='utf-8') as f:
+    json.dump(idx, f, indent=2, ensure_ascii=False)
+
+# ── latest.json (quick poll endpoint) ────────────────────────────────
+latest = {
+    'generated_at': datetime.now(timezone.utc).isoformat(),
+    'papers': {'date': papers[0]['date'], 'url': f'{SITE}/papers/{papers[0]["file"]}'} if papers else None,
+    'media':  {'date': media[0]['date'],  'url': f'{SITE}/media/{media[0]["file"]}'}  if media  else None,
+}
+with open(os.path.join(BASE, 'latest.json'), 'w', encoding='utf-8') as f:
+    json.dump(latest, f, indent=2, ensure_ascii=False)
+
 print(f'✅ Generated {out}')
 print(f'   papers: {len(papers)}  media: {len(media)}')
+print(f'   rss.xml · index.json · latest.json also written')

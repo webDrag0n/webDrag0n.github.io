@@ -1,0 +1,1039 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>AI Daily — Lin Zexin</title>
+    <link>https://webdrag0n.github.io/reports/</link>
+    <description>Daily AI paper digests and Chinese AI media roundups.</description>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 10 Oct 2026 19:13:14 +0000</lastBuildDate>
+    <item>
+      <title>AI Media Daily — 2026-10-11</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261011.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261011.html</guid>
+      <pubDate>Sun, 11 Oct 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-10-11</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-10-10</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261010.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261010.html</guid>
+      <pubDate>Sat, 10 Oct 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-10-10</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-10-10</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261010.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261010.html</guid>
+      <pubDate>Sat, 10 Oct 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-10-10</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-10-09</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261009.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261009.html</guid>
+      <pubDate>Fri, 09 Oct 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-10-09</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-10-09</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261009.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261009.html</guid>
+      <pubDate>Fri, 09 Oct 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-10-09</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-10-08</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261008.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261008.html</guid>
+      <pubDate>Thu, 08 Oct 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-10-08</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-10-08</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261008.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261008.html</guid>
+      <pubDate>Thu, 08 Oct 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-10-08</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-10-07</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261007.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261007.html</guid>
+      <pubDate>Wed, 07 Oct 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-10-07</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-10-07</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261007.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261007.html</guid>
+      <pubDate>Wed, 07 Oct 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-10-07</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-10-06</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261006.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261006.html</guid>
+      <pubDate>Tue, 06 Oct 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-10-06</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-10-06</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261006.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261006.html</guid>
+      <pubDate>Tue, 06 Oct 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-10-06</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-10-05</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261005.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261005.html</guid>
+      <pubDate>Mon, 05 Oct 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-10-05</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-10-05</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261005.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261005.html</guid>
+      <pubDate>Mon, 05 Oct 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-10-05</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-10-04</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261004.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261004.html</guid>
+      <pubDate>Sun, 04 Oct 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-10-04</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-10-04</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261004.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261004.html</guid>
+      <pubDate>Sun, 04 Oct 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-10-04</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-10-03</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261003.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261003.html</guid>
+      <pubDate>Sat, 03 Oct 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-10-03</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-10-03</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261003.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261003.html</guid>
+      <pubDate>Sat, 03 Oct 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-10-03</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-10-02</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261002.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261002.html</guid>
+      <pubDate>Fri, 02 Oct 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-10-02</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-10-02</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261002.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261002.html</guid>
+      <pubDate>Fri, 02 Oct 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-10-02</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-10-01</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261001.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261001.html</guid>
+      <pubDate>Thu, 01 Oct 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-10-01</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-10-01</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261001.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261001.html</guid>
+      <pubDate>Thu, 01 Oct 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-10-01</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-09-30</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260930.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260930.html</guid>
+      <pubDate>Wed, 30 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-09-30</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-09-30</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260930.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260930.html</guid>
+      <pubDate>Wed, 30 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-09-30</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-09-29</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260929.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260929.html</guid>
+      <pubDate>Tue, 29 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-09-29</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-09-29</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260929.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260929.html</guid>
+      <pubDate>Tue, 29 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-09-29</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-09-28</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260928.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260928.html</guid>
+      <pubDate>Mon, 28 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-09-28</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-09-28</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260928.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260928.html</guid>
+      <pubDate>Mon, 28 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-09-28</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-09-27</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260927.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260927.html</guid>
+      <pubDate>Sun, 27 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-09-27</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-09-27</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260927.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260927.html</guid>
+      <pubDate>Sun, 27 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-09-27</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-09-26</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260926.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260926.html</guid>
+      <pubDate>Sat, 26 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-09-26</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-09-26</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260926.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260926.html</guid>
+      <pubDate>Sat, 26 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-09-26</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-09-25</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260925.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260925.html</guid>
+      <pubDate>Fri, 25 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-09-25</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-09-25</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260925.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260925.html</guid>
+      <pubDate>Fri, 25 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-09-25</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-09-24</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260924.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260924.html</guid>
+      <pubDate>Thu, 24 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-09-24</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-09-24</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260924.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260924.html</guid>
+      <pubDate>Thu, 24 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-09-24</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-09-23</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260923.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260923.html</guid>
+      <pubDate>Wed, 23 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-09-23</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-09-23</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260923.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260923.html</guid>
+      <pubDate>Wed, 23 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-09-23</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-09-22</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260922.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260922.html</guid>
+      <pubDate>Tue, 22 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-09-22</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-09-22</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260922.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260922.html</guid>
+      <pubDate>Tue, 22 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-09-22</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-09-21</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260921.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260921.html</guid>
+      <pubDate>Mon, 21 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-09-21</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-09-21</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260921.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260921.html</guid>
+      <pubDate>Mon, 21 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-09-21</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-09-12</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260912.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260912.html</guid>
+      <pubDate>Sat, 12 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-09-12</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-09-12</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260912.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260912.html</guid>
+      <pubDate>Sat, 12 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-09-12</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-09-11</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260911.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260911.html</guid>
+      <pubDate>Fri, 11 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-09-11</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-09-11</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260911.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260911.html</guid>
+      <pubDate>Fri, 11 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-09-11</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-09-10</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260910.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260910.html</guid>
+      <pubDate>Thu, 10 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-09-10</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-09-10</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260910.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260910.html</guid>
+      <pubDate>Thu, 10 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-09-10</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-09-09</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260909.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260909.html</guid>
+      <pubDate>Wed, 09 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-09-09</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-09-09</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260909.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260909.html</guid>
+      <pubDate>Wed, 09 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-09-09</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-09-08</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260908.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260908.html</guid>
+      <pubDate>Tue, 08 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-09-08</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-09-08</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260908.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260908.html</guid>
+      <pubDate>Tue, 08 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-09-08</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-09-07</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260907.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260907.html</guid>
+      <pubDate>Mon, 07 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-09-07</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-09-07</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260907.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260907.html</guid>
+      <pubDate>Mon, 07 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-09-07</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-09-06</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260906.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260906.html</guid>
+      <pubDate>Sun, 06 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-09-06</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-09-05</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260905.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260905.html</guid>
+      <pubDate>Sat, 05 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-09-05</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-09-05</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260905.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260905.html</guid>
+      <pubDate>Sat, 05 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-09-05</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-09-04</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260904.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260904.html</guid>
+      <pubDate>Fri, 04 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-09-04</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-09-04</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260904.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260904.html</guid>
+      <pubDate>Fri, 04 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-09-04</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-09-03</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260903.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260903.html</guid>
+      <pubDate>Thu, 03 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-09-03</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-09-03</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260903.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260903.html</guid>
+      <pubDate>Thu, 03 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-09-03</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-09-02</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260902.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260902.html</guid>
+      <pubDate>Wed, 02 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-09-02</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-09-02</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260902.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260902.html</guid>
+      <pubDate>Wed, 02 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-09-02</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-09-01</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260901.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260901.html</guid>
+      <pubDate>Tue, 01 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-09-01</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-09-01</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260901.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260901.html</guid>
+      <pubDate>Tue, 01 Sep 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-09-01</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-31</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260831.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260831.html</guid>
+      <pubDate>Mon, 31 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-31</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-30</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260830.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260830.html</guid>
+      <pubDate>Sun, 30 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-30</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-30</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260830.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260830.html</guid>
+      <pubDate>Sun, 30 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-30</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-29</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260829.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260829.html</guid>
+      <pubDate>Sat, 29 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-29</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-29</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260829.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260829.html</guid>
+      <pubDate>Sat, 29 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-29</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-27</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260827.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260827.html</guid>
+      <pubDate>Thu, 27 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-27</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-27</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260827.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260827.html</guid>
+      <pubDate>Thu, 27 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-27</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-26</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260826.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260826.html</guid>
+      <pubDate>Wed, 26 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-26</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-26</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260826.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260826.html</guid>
+      <pubDate>Wed, 26 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-26</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-25</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260825.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260825.html</guid>
+      <pubDate>Tue, 25 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-25</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-25</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260825.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260825.html</guid>
+      <pubDate>Tue, 25 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-25</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-24</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260824.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260824.html</guid>
+      <pubDate>Mon, 24 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-24</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-24</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260824.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260824.html</guid>
+      <pubDate>Mon, 24 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-24</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-23</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260823.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260823.html</guid>
+      <pubDate>Sun, 23 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-23</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-23</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260823.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260823.html</guid>
+      <pubDate>Sun, 23 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-23</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-22</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260822.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260822.html</guid>
+      <pubDate>Sat, 22 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-22</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-22</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260822.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260822.html</guid>
+      <pubDate>Sat, 22 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-22</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-21</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260821.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260821.html</guid>
+      <pubDate>Fri, 21 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-21</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-21</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260821.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260821.html</guid>
+      <pubDate>Fri, 21 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-21</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-20</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260820.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260820.html</guid>
+      <pubDate>Thu, 20 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-20</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-20</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260820.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260820.html</guid>
+      <pubDate>Thu, 20 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-20</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-19</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260819.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260819.html</guid>
+      <pubDate>Wed, 19 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-19</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-19</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260819.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260819.html</guid>
+      <pubDate>Wed, 19 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-19</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-18</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260818.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260818.html</guid>
+      <pubDate>Tue, 18 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-18</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-18</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260818.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260818.html</guid>
+      <pubDate>Tue, 18 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-18</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-17</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260817.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260817.html</guid>
+      <pubDate>Mon, 17 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-17</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-17</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260817.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260817.html</guid>
+      <pubDate>Mon, 17 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-17</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-16</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260816.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260816.html</guid>
+      <pubDate>Sun, 16 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-16</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-16</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260816.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260816.html</guid>
+      <pubDate>Sun, 16 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-16</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-15</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260815.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260815.html</guid>
+      <pubDate>Sat, 15 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-15</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-15</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260815.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260815.html</guid>
+      <pubDate>Sat, 15 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-15</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-14</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260814.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260814.html</guid>
+      <pubDate>Fri, 14 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-14</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-14</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260814.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260814.html</guid>
+      <pubDate>Fri, 14 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-14</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-13</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260813.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260813.html</guid>
+      <pubDate>Thu, 13 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-13</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-13</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260813.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260813.html</guid>
+      <pubDate>Thu, 13 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-13</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-12</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260812.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260812.html</guid>
+      <pubDate>Wed, 12 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-12</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-12</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260812.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260812.html</guid>
+      <pubDate>Wed, 12 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-12</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-11</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260811.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260811.html</guid>
+      <pubDate>Tue, 11 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-11</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-11</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260811.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260811.html</guid>
+      <pubDate>Tue, 11 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-11</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-10</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260810.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260810.html</guid>
+      <pubDate>Mon, 10 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-10</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-10</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260810.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260810.html</guid>
+      <pubDate>Mon, 10 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-10</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-09</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260809.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260809.html</guid>
+      <pubDate>Sun, 09 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-09</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-09</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260809.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260809.html</guid>
+      <pubDate>Sun, 09 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-09</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-08</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260808.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260808.html</guid>
+      <pubDate>Sat, 08 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-08</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-08</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260808.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260808.html</guid>
+      <pubDate>Sat, 08 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-08</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-07</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260807.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260807.html</guid>
+      <pubDate>Fri, 07 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-07</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-07</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260807.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260807.html</guid>
+      <pubDate>Fri, 07 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-07</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-06</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260806.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260806.html</guid>
+      <pubDate>Thu, 06 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-06</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-06</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260806.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260806.html</guid>
+      <pubDate>Thu, 06 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-06</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-05</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260805.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260805.html</guid>
+      <pubDate>Wed, 05 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-05</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-05</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260805.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260805.html</guid>
+      <pubDate>Wed, 05 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-05</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-04</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260804.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260804.html</guid>
+      <pubDate>Tue, 04 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-04</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-04</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260804.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260804.html</guid>
+      <pubDate>Tue, 04 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-04</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-03</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260803.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260803.html</guid>
+      <pubDate>Mon, 03 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-03</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-03</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260803.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260803.html</guid>
+      <pubDate>Mon, 03 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-03</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-02</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260802.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260802.html</guid>
+      <pubDate>Sun, 02 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-02</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-02</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260802.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260802.html</guid>
+      <pubDate>Sun, 02 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-02</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-08-01</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260801.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260801.html</guid>
+      <pubDate>Sat, 01 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-08-01</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-08-01</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260801.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260801.html</guid>
+      <pubDate>Sat, 01 Aug 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-08-01</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-07-31</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260731.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260731.html</guid>
+      <pubDate>Fri, 31 Jul 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-07-31</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-07-31</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260731.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260731.html</guid>
+      <pubDate>Fri, 31 Jul 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-07-31</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-07-30</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260730.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260730.html</guid>
+      <pubDate>Thu, 30 Jul 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-07-30</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-07-30</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260730.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260730.html</guid>
+      <pubDate>Thu, 30 Jul 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-07-30</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-07-29</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260729.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260729.html</guid>
+      <pubDate>Wed, 29 Jul 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-07-29</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-07-29</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260729.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260729.html</guid>
+      <pubDate>Wed, 29 Jul 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-07-29</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-07-28</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260728.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260728.html</guid>
+      <pubDate>Tue, 28 Jul 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-07-28</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-07-28</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260728.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260728.html</guid>
+      <pubDate>Tue, 28 Jul 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-07-28</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-07-27</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260727.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260727.html</guid>
+      <pubDate>Mon, 27 Jul 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-07-27</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-07-27</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260727.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260727.html</guid>
+      <pubDate>Mon, 27 Jul 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-07-27</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-07-26</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260726.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260726.html</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-07-26</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-07-26</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260726.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260726.html</guid>
+      <pubDate>Sun, 26 Jul 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-07-26</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-07-25</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260725.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260725.html</guid>
+      <pubDate>Sat, 25 Jul 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-07-25</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-07-25</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260725.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260725.html</guid>
+      <pubDate>Sat, 25 Jul 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-07-25</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-07-24</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260724.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260724.html</guid>
+      <pubDate>Fri, 24 Jul 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-07-24</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-07-24</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260724.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260724.html</guid>
+      <pubDate>Fri, 24 Jul 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-07-24</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-07-23</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260723.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260723.html</guid>
+      <pubDate>Thu, 23 Jul 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-07-23</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-07-23</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260723.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260723.html</guid>
+      <pubDate>Thu, 23 Jul 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-07-23</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-07-22</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260722.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260722.html</guid>
+      <pubDate>Wed, 22 Jul 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-07-22</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-07-22</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260722.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260722.html</guid>
+      <pubDate>Wed, 22 Jul 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-07-22</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-07-21</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260721.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260721.html</guid>
+      <pubDate>Tue, 21 Jul 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-07-21</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-07-21</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260721.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260721.html</guid>
+      <pubDate>Tue, 21 Jul 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-07-21</description>
+    </item>
+    <item>
+      <title>AI Paper Digest — 2026-07-20</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20260720.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20260720.html</guid>
+      <pubDate>Mon, 20 Jul 2026 08:00:00 +0000</pubDate>
+      <description>AI Paper Digest for 2026-07-20</description>
+    </item>
+    <item>
+      <title>AI Media Daily — 2026-07-20</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20260720.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20260720.html</guid>
+      <pubDate>Mon, 20 Jul 2026 08:00:00 +0000</pubDate>
+      <description>AI Media Daily for 2026-07-20</description>
+    </item>
+  </channel>
+</rss>
