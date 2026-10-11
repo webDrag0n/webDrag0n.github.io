@@ -1,12 +1,16 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-10-10T19:13:14.791357+00:00",
+  "generated_at": "2026-10-11T12:45:26.136370+00:00",
   "series": {
     "papers": {
       "title": "AI Paper Digest",
       "url_prefix": "https://webdrag0n.github.io/reports/papers/",
-      "count": 73,
+      "count": 74,
       "items": [
+        {
+          "date": "2026-10-11",
+          "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261011.html"
+        },
         {
           "date": "2026-10-10",
           "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261010.html"
