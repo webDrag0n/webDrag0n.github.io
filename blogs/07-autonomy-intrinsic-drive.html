@@ -166,7 +166,7 @@
         </div>
         <div class="abstract">
             <strong>TL;DR</strong>
-            <p>当前 LLM Agent 的行为模式是“外驱”（extrinsic）：等待用户 prompt，执行指令，返回结果。这一模式在替代单次任务时有效，但在替代<em>岗位</em>时失效——岗位恰恰要求个体在无外部指令时<strong>自发生成目标、主动发现问题、持续优化流程</strong><sup class="cite"><a href="#ref-1">[1]</a></sup><sup class="cite"><a href="#ref-2">[2]</a></sup>。本文论证：自主性不是一个独立模块，而是<em>身体 + 预测 + 持续性</em>三条件的结构性后果。换言之，当系统同时具备资源约束（身体）、预测能力（世界模型）与跨时间连续性（持续记忆）时，内生驱动力必然涌现。这一论断在 Friston 的自由能原理<sup class="cite"><a href="#ref-3">[3]</a></sup>、Schmidhuber 的好奇心理论<sup class="cite"><a href="#ref-4">[4]</a></sup>与 Klyubin 的赋能最大化<sup class="cite"><a href="#ref-5">[5]</a></sup>中均有严格的数学表述。</p>
+            <p>当前 LLM Agent 的行为模式是"外驱"（extrinsic）：等待用户 prompt，执行指令，返回结果。这一模式在替代单次任务时有效，但在替代<em>岗位</em>时失效——岗位恰恰要求个体在无外部指令时<strong>自发生成目标、主动发现问题、持续优化流程</strong><sup class="cite"><a href="#ref-1">[1]</a></sup><sup class="cite"><a href="#ref-2">[2]</a></sup>。本文论证：自主性不是一个独立模块，而是<em>身体 + 预测 + 持续性</em>三条件的结构性后果。换言之，当系统同时具备资源约束（身体）、预测能力（世界模型）与跨时间连续性（持续记忆）时，内生驱动力必然涌现。这一论断在 Friston 的自由能原理<sup class="cite"><a href="#ref-3">[3]</a></sup>、Schmidhuber 的好奇心理论<sup class="cite"><a href="#ref-4">[4]</a></sup>与 Klyubin 的赋能最大化<sup class="cite"><a href="#ref-5">[5]</a></sup>中均有严格的数学表述。</p>
         </div>
     </header>
 
@@ -188,11 +188,11 @@
             <section id="sec1">
                 <h2><span class="num">01</span>外驱 vs 内驱：两种动机结构</h2>
 
-                <p>心理学中的“自我决定理论”（Self-Determination Theory, SDT）<sup class="cite"><a href="#ref-6">[6]</a></sup>区分了两类动机：<strong>外部动机</strong>（extrinsic motivation），即为获得奖励或避免惩罚而行动；<strong>内部动机</strong>（intrinsic motivation），即因行动本身的满足感而行动。前者依赖外部触发，后者自发产生。</p>
+                <p>心理学中的"自我决定理论"（Self-Determination Theory, SDT）<sup class="cite"><a href="#ref-6">[6]</a></sup>区分了两类动机：<strong>外部动机</strong>（extrinsic motivation），即为获得奖励或避免惩罚而行动；<strong>内部动机</strong>（intrinsic motivation），即因行动本身的满足感而行动。前者依赖外部触发，后者自发产生。</p>
 
-                <p>当前 LLM Agent 的标准工作流是纯外驱的：用户输入 prompt → 模型生成响应 → 任务结束。系统在两次 prompt 之间处于“休眠”状态，不产生任何自发行为。这一模式足以替代“回答问题”类任务，但在替代“持续改进系统”“主动发现风险”“优化团队协作”等岗位职责时结构性失效——因为这些职责要求个体<em>在无外部指令时仍然行动</em><sup class="cite"><a href="#ref-1">[1]</a></sup>。</p>
+                <p>当前 LLM Agent 的标准工作流是纯外驱的：用户输入 prompt → 模型生成响应 → 任务结束。系统在两次 prompt 之间处于"休眠"状态，不产生任何自发行为。这一模式足以替代"回答问题"类任务，但在替代"持续改进系统""主动发现风险""优化团队协作"等岗位职责时结构性失效——因为这些职责要求个体<em>在无外部指令时仍然行动</em><sup class="cite"><a href="#ref-1">[1]</a></sup>。</p>
 
-                <p>本文的核心论断是：<strong>自主性并非通过添加“自发生成 prompt”模块实现，而是身体 + 预测 + 持续性三条件的必然后果</strong>。一旦系统满足前三条件，内生驱动力在数学上必然涌现——这不是工程设计的选择，而是结构性的必然。</p>
+                <p>本文的核心论断是：<strong>自主性并非通过添加"自发生成 prompt"模块实现，而是身体 + 预测 + 持续性三条件的必然后果</strong>。一旦系统满足前三条件，内生驱动力在数学上必然涌现——这不是工程设计的选择，而是结构性的必然。</p>
 
                 <figure class="svg-container">
                     <svg viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg">
@@ -254,12 +254,12 @@
                         <path d="M 280 200 L 480 200" stroke="#38bdf8" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrowhead)"/>
                         <text class="svg-text svg-text-sub" x="380" y="190" style="fill: #38bdf8">范式转换</text>
                     </svg>
-                    <figcaption><b>Fig 07-A · 外驱与内驱的动机流程对比。</b>左：外部动机驱动的 Agent 在两次 prompt 之间处于休眠状态，无自发行为；右：内部动机驱动的 Agent 形成自发的“目标生成 → 探索 → 优化”持续闭环，无需外部触发<sup class="cite"><a href="#ref-6">[6]</a></sup><sup class="cite"><a href="#ref-7">[7]</a></sup>。</figcaption>
+                    <figcaption><b>Fig 07-A · 外驱与内驱的动机流程对比。</b>左：外部动机驱动的 Agent 在两次 prompt 之间处于休眠状态，无自发行为；右：内部动机驱动的 Agent 形成自发的"目标生成 → 探索 → 优化"持续闭环，无需外部触发<sup class="cite"><a href="#ref-6">[6]</a></sup><sup class="cite"><a href="#ref-7">[7]</a></sup>。</figcaption>
                 </figure>
 
                 <div class="callout philosophical">
                     <div class="callout-title">Philosophical Interface · 哲学接口</div>
-                    <p style="margin:0">Kant 在《道德形而上学基础》<sup class="cite"><a href="#ref-8">[8]</a></sup>中区分了“他律”（heteronomy）与“自律”（autonomy）：前者服从外部法则，后者服从自我立定的法则。当前 AI 话语常把“自主”理解为“能独立完成任务”，但这仍是他律——任务毕竟由外部给定。真正的自律要求系统能<em>自我立法</em>，即自发生成目标。本文所论证的“自主性”，正是 Kant 意义上的自律在工程层面的对应物。</p>
+                    <p style="margin:0">Kant 在《道德形而上学基础》<sup class="cite"><a href="#ref-8">[8]</a></sup>中区分了"他律"（heteronomy）与"自律"（autonomy）：前者服从外部法则，后者服从自我立定的法则。当前 AI 话语常把"自主"理解为"能独立完成任务"，但这仍是他律——任务毕竟由外部给定。真正的自律要求系统能<em>自我立法</em>，即自发生成目标。本文所论证的"自主性"，正是 Kant 意义上的自律在工程层面的对应物。</p>
                 </div>
             </section>
 
@@ -269,7 +269,7 @@
                 <p>将前三条件（身体、预测、持续性）的数学结构代入，可以得到自主性涌现的三条独立路径。它们形式各异，深层逻辑却彼此统一：</p>
 
                 <h3>2.1 资源压力驱动（来自身体）</h3>
-                <p>第 04 篇论证：身体 = 不可逆时间 + 可耗资源 + 持续维护。当系统的 token 预算、API 配额与存储空间有限时，它<strong>不得不</strong>主动优化资源使用——否则将因资源耗尽而停止运行。这一压力在 Ashby 的“超稳定性”理论<sup class="cite"><a href="#ref-9">[9]</a></sup>中被形式化：任何维持自身存在的系统，都必然演化出使关键变量保持在生存阈值内的主动调节机制。</p>
+                <p>第 04 篇论证：身体 = 不可逆时间 + 可耗资源 + 持续维护。当系统的 token 预算、API 配额与存储空间有限时，它<strong>不得不</strong>主动优化资源使用——否则将因资源耗尽而停止运行。这一压力在 Ashby 的"超稳定性"理论<sup class="cite"><a href="#ref-9">[9]</a></sup>中被形式化：任何维持自身存在的系统，都必然演化出使关键变量保持在生存阈值内的主动调节机制。</p>
 
                 <p>工程对应：一个受 token 预算约束的 Agent，会主动压缩上下文、优先处理高价值任务、学习更高效的策略——这些都是<em>自发行为</em>，无需外部指令。</p>
 
@@ -279,7 +279,7 @@
                 <p>工程对应：一个具备世界模型的 Agent，会主动探索未知区域、测试边界情况、验证假设——因为这些行为能降低模型的预测误差，亦即最小化自由能。</p>
 
                 <h3>2.3 长期回报驱动（来自持续性）</h3>
-                <p>第 06 篇论证：持续性 = 跨时间的身份连续性。当系统预期自己将在未来继续存在时，便会<strong>主动投资于长期回报</strong>——学习新技能、建立声誉、优化流程——即使这些行为在短期内并无直接收益<sup class="cite"><a href="#ref-11">[11]</a></sup>。这正是强化学习中“折扣因子 γ → 1”的极限情形：未来越重要，系统行为越从“短视优化”转向“长期规划”。</p>
+                <p>第 06 篇论证：持续性 = 跨时间的身份连续性。当系统预期自己将在未来继续存在时，便会<strong>主动投资于长期回报</strong>——学习新技能、建立声誉、优化流程——即使这些行为在短期内并无直接收益<sup class="cite"><a href="#ref-11">[11]</a></sup>。这正是强化学习中"折扣因子 γ → 1"的极限情形：未来越重要，系统行为越从"短视优化"转向"长期规划"。</p>
 
                 <p>工程对应：一个预期长期运行的 Agent，会主动维护代码质量、文档完整性与协作关系——因为这些投资在长时间尺度上有正回报。</p>
 
@@ -292,13 +292,13 @@
             <section id="sec3">
                 <h2><span class="num">03</span>好奇心作为自由能最小化：Schmidhuber 与 Friston 的汇流</h2>
 
-                <p>Jürgen Schmidhuber 于 1990 年代提出的“好奇心驱动学习”<sup class="cite"><a href="#ref-4">[4]</a></sup>，与 Karl Friston 于 2010 年代提出的“自由能原理”<sup class="cite"><a href="#ref-3">[3]</a></sup>，从两个相互独立的方向抵达了同一结论：<strong>内生驱动力 = 最小化预测误差的长期期望</strong>。</p>
+                <p>Jürgen Schmidhuber 于 1990 年代提出的"好奇心驱动学习"<sup class="cite"><a href="#ref-4">[4]</a></sup>，与 Karl Friston 于 2010 年代提出的"自由能原理"<sup class="cite"><a href="#ref-3">[3]</a></sup>，从两个相互独立的方向抵达了同一结论：<strong>内生驱动力 = 最小化预测误差的长期期望</strong>。</p>
 
-                <p>Schmidhuber 的形式化：Agent 维持两个模型——世界模型 \(M\) 与压缩器 \(C\)。好奇心被定义为“学习进度”（learning progress）：\( \text{Curiosity}(s) = \Delta \text{Compression}(s) \)，即在状态 \(s\) 下，模型 \(M\) 对未来的压缩能力提升了多少。Agent 因此主动寻找能最大化学习进度的状态：它们既非完全随机（无法学习），也非完全确定（无新信息），而是处于“可学习边界”之上<sup class="cite"><a href="#ref-4">[4]</a></sup>。</p>
+                <p>Schmidhuber 的形式化：Agent 维持两个模型——世界模型 \(M\) 与压缩器 \(C\)。好奇心被定义为"学习进度"（learning progress）：\( \text{Curiosity}(s) = \Delta \text{Compression}(s) \)，即在状态 \(s\) 下，模型 \(M\) 对未来的压缩能力提升了多少。Agent 因此主动寻找能最大化学习进度的状态：它们既非完全随机（无法学习），也非完全确定（无新信息），而是处于"可学习边界"之上<sup class="cite"><a href="#ref-4">[4]</a></sup>。</p>
 
-                <p>Friston 的形式化：Agent 最小化“期望自由能”（expected free energy）：\( G = \mathbb{E}_{q(o,s|\pi)} \left[ \log q(s|\pi) - \log p(o,s) \right] \)，其中 \(\pi\) 为策略。\(G\) 可分解为两项：（a）<em>风险</em>（ambiguity），即对未来状态的不确定性；（b）<em>新颖性</em>（novelty），即未来观测与先验信念的差异。最小化 \(G\) 等价于“寻找既能降低不确定性、又能带来新信息的行动”——这恰是好奇心的另一种表述<sup class="cite"><a href="#ref-3">[3]</a></sup><sup class="cite"><a href="#ref-13">[13]</a></sup>。</p>
+                <p>Friston 的形式化：Agent 最小化"期望自由能"（expected free energy）：\( G = \mathbb{E}_{q(o,s|\pi)} \left[ \log q(s|\pi) - \log p(o,s) \right] \)，其中 \(\pi\) 为策略。\(G\) 可分解为两项：（a）<em>风险</em>（ambiguity），即对未来状态的不确定性；（b）<em>新颖性</em>（novelty），即未来观测与先验信念的差异。最小化 \(G\) 等价于"寻找既能降低不确定性、又能带来新信息的行动"——这恰是好奇心的另一种表述<sup class="cite"><a href="#ref-3">[3]</a></sup><sup class="cite"><a href="#ref-13">[13]</a></sup>。</p>
 
-                <p>两条路径在数学上等价，工程含义却各有侧重。Schmidhuber 的路径强调“压缩进度”，更适合离散任务；Friston 的路径强调“自由能梯度”，更适合连续控制。二者的统一在 Pathak 等人的“内在好奇心模块”（ICM）<sup class="cite"><a href="#ref-14">[14]</a></sup>与 Burda 等人的“随机网络蒸馏”（RND）<sup class="cite"><a href="#ref-15">[15]</a></sup>中得到了工程验证。</p>
+                <p>两条路径在数学上等价，工程含义却各有侧重。Schmidhuber 的路径强调"压缩进度"，更适合离散任务；Friston 的路径强调"自由能梯度"，更适合连续控制。二者的统一在 Pathak 等人的"内在好奇心模块"（ICM）<sup class="cite"><a href="#ref-14">[14]</a></sup>与 Burda 等人的"随机网络蒸馏"（RND）<sup class="cite"><a href="#ref-15">[15]</a></sup>中得到了工程验证。</p>
 
                 <figure class="svg-container">
                     <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
@@ -343,7 +343,7 @@
                         <!-- Title -->
                         <text class="svg-text svg-text-title" x="400" y="30" style="font-size: 16px">好奇心的倒 U 型曲线 · Inverted-U Curiosity Curve</text>
                     </svg>
-                    <figcaption><b>Fig 07-B · 好奇心在可预测性谱上的分布。</b>完全随机的环境无法学习（左），完全确定的环境没有新信息（右）；好奇心在“可学习边界”处达到峰值——这些状态既有结构（可建模），又含不确定性（有信息增益）<sup class="cite"><a href="#ref-4">[4]</a></sup><sup class="cite"><a href="#ref-10">[10]</a></sup>。</figcaption>
+                    <figcaption><b>Fig 07-B · 好奇心在可预测性谱上的分布。</b>完全随机的环境无法学习（左），完全确定的环境没有新信息（右）；好奇心在"可学习边界"处达到峰值——这些状态既有结构（可建模），又含不确定性（有信息增益）<sup class="cite"><a href="#ref-4">[4]</a></sup><sup class="cite"><a href="#ref-10">[10]</a></sup>。</figcaption>
                 </figure>
 
                 <blockquote>
@@ -355,22 +355,22 @@
             <section id="sec4">
                 <h2><span class="num">04</span>为什么 prompt 驱动无法产生自主性</h2>
 
-                <p>当前 LLM Agent 的标准架构是“prompt → 推理 → 输出”。即使引入 ReAct<sup class="cite"><a href="#ref-16">[16]</a></sup>、AutoGPT<sup class="cite"><a href="#ref-17">[17]</a></sup>等多步推理框架，系统本质上仍是<em>被动响应</em>：执行用户给定的目标，而非自发生成目标。这一架构在结构上无法产生自主性，原因有三：</p>
+                <p>当前 LLM Agent 的标准架构是"prompt → 推理 → 输出"。即使引入 ReAct<sup class="cite"><a href="#ref-16">[16]</a></sup>、AutoGPT<sup class="cite"><a href="#ref-17">[17]</a></sup>等多步推理框架，系统本质上仍是<em>被动响应</em>：执行用户给定的目标，而非自发生成目标。这一架构在结构上无法产生自主性，原因有三：</p>
 
                 <h3>4.1 缺少资源压力</h3>
-                <p>当前 Agent 的 token 预算与 API 调用次数通常由用户或平台承担，Agent 本身并不承受资源耗尽的后果。没有资源压力，就没有“必须优化”的内生动力。这类似于工资与绩效完全脱钩的员工——他或许能完成任务，却不会主动优化流程。</p>
+                <p>当前 Agent 的 token 预算与 API 调用次数通常由用户或平台承担，Agent 本身并不承受资源耗尽的后果。没有资源压力，就没有"必须优化"的内生动力。这类似于工资与绩效完全脱钩的员工——他或许能完成任务，却不会主动优化流程。</p>
 
                 <h3>4.2 缺少长期视野</h3>
-                <p>会话式 Agent 在每次调用结束后状态即被清空，其“未来”仅限于当前会话的剩余步数。在如此短的视野下，投资长期回报的行为（学习新技能、建立声誉、优化代码质量）在数学上并非最优策略——因为这些投资的回报在会话结束时归零。</p>
+                <p>会话式 Agent 在每次调用结束后状态即被清空，其"未来"仅限于当前会话的剩余步数。在如此短的视野下，投资长期回报的行为（学习新技能、建立声誉、优化代码质量）在数学上并非最优策略——因为这些投资的回报在会话结束时归零。</p>
 
                 <h3>4.3 缺少预测闭环</h3>
-                <p>当前 Agent 的世界模型是<em>隐式的</em>（嵌入在 LLM 权重之中），而非<em>显式的</em>（可查询、可更新、可验证的数据结构）。缺少显式世界模型，系统便无法计算“哪些行动能最大化学习进度”——因为它连“学习进度”本身都无法量化。这如同一个没有反馈回路的控制系统：可以执行指令，却无法自我调节。</p>
+                <p>当前 Agent 的世界模型是<em>隐式的</em>（嵌入在 LLM 权重之中），而非<em>显式的</em>（可查询、可更新、可验证的数据结构）。缺少显式世界模型，系统便无法计算"哪些行动能最大化学习进度"——因为它连"学习进度"本身都无法量化。这如同一个没有反馈回路的控制系统：可以执行指令，却无法自我调节。</p>
 
-                <p>这三个缺口并非工程实现的疏漏，而是<em>架构范式的结构性后果</em>。要产生自主性，必须完成三重切换：从“会话式调用”切换到“长期运行进程”（第 06 篇），从“隐式世界模型”切换到“显式状态转移模型”（第 05 篇），从“用户承担资源”切换到“Agent 承担资源”（第 04 篇）。</p>
+                <p>这三个缺口并非工程实现的疏漏，而是<em>架构范式的结构性后果</em>。要产生自主性，必须完成三重切换：从"会话式调用"切换到"长期运行进程"（第 06 篇），从"隐式世界模型"切换到"显式状态转移模型"（第 05 篇），从"用户承担资源"切换到"Agent 承担资源"（第 04 篇）。</p>
 
                 <div class="callout">
                     <div class="callout-title">Engineering Note · 工程笔记</div>
-                    <p style="margin:0">AutoGPT<sup class="cite"><a href="#ref-17">[17]</a></sup>与 BabyAGI<sup class="cite"><a href="#ref-18">[18]</a></sup>尝试以“任务分解 + 循环执行”模拟自主性，但其目标仍由用户在初始 prompt 中给定。真正的自主性要求系统<em>在目标完成后自发生成新目标</em>：完成代码审查后，主动检查测试覆盖率；完成文档后，主动验证示例代码；完成部署后，主动监控性能指标。这些“后续目标”并非用户指定，而是从系统的长期价值函数中涌现的。</p>
+                    <p style="margin:0">AutoGPT<sup class="cite"><a href="#ref-17">[17]</a></sup>与 BabyAGI<sup class="cite"><a href="#ref-18">[18]</a></sup>尝试以"任务分解 + 循环执行"模拟自主性，但其目标仍由用户在初始 prompt 中给定。真正的自主性要求系统<em>在目标完成后自发生成新目标</em>：完成代码审查后，主动检查测试覆盖率；完成文档后，主动验证示例代码；完成部署后，主动监控性能指标。这些"后续目标"并非用户指定，而是从系统的长期价值函数中涌现的。</p>
                 </div>
             </section>
 
@@ -383,7 +383,7 @@
                 <ul class="feature-list">
                     <li><strong>Token 预算</strong>：Agent 拥有固定的 token 配额（例如每月 1M token），超出即停止运行。</li>
                     <li><strong>性能挂钩</strong>：资源配额随历史表现动态调整——高效的 Agent 获得更多资源。</li>
-                    <li><strong>维护成本</strong>：Agent 需定期“支付”存储、计算与 API 调用成本，否则被回收。</li>
+                    <li><strong>维护成本</strong>：Agent 需定期"支付"存储、计算与 API 调用成本，否则被回收。</li>
                 </ul>
 
                 <h3>5.2 构建显式世界模型与好奇心模块</h3>
@@ -397,14 +397,14 @@
                 <ul class="feature-list">
                     <li><strong>折扣因子 γ → 1</strong>：在价值估计中采用接近 1 的折扣因子，使长期回报与短期回报获得同等权重。</li>
                     <li><strong>内在奖励</strong>：在外部任务奖励之外引入内在奖励——学习进度、代码质量提升、协作效率改善。</li>
-                    <li><strong>目标库</strong>：维护一份“待优化目标”清单，无外部任务时从中自主选取——优化文档、重构代码、学习新工具。</li>
+                    <li><strong>目标库</strong>：维护一份"待优化目标"清单，无外部任务时从中自主选取——优化文档、重构代码、学习新工具。</li>
                 </ul>
 
-                <p>三项变更相结合，系统便从“等待指令的工具”转变为“主动优化的个体”。关键在于：这不是添加一个“自主性模块”，而是<em>改变系统的生存条件</em>——当系统必须自行承担资源、预期长期存在、且能量化学习进度时，自主性自然涌现。</p>
+                <p>三项变更相结合，系统便从"等待指令的工具"转变为"主动优化的个体"。关键在于：这不是添加一个"自主性模块"，而是<em>改变系统的生存条件</em>——当系统必须自行承担资源、预期长期存在、且能量化学习进度时，自主性自然涌现。</p>
 
                 <div class="callout">
                     <div class="callout-title">Series Bridge · 章节衔接</div>
-                    <p style="margin:0">身体（04）→ 预测（05）→ 持续（06）→ 自主（07）→ 学习（08）。前四个条件确立了“主动个体”的结构：身体提供资源压力，预测提供行动逻辑，持续性提供长期视野，自主性提供内生驱动。但这四者仍默认系统的能力是<em>固定的</em>。下一条件“学习”则要求系统能<em>在运行时演化自身能力</em>——否则，环境一变，系统便会失效。</p>
+                    <p style="margin:0">身体（04）→ 预测（05）→ 持续（06）→ 自主（07）→ 学习（08）。前四个条件确立了"主动个体"的结构：身体提供资源压力，预测提供行动逻辑，持续性提供长期视野，自主性提供内生驱动。但这四者仍默认系统的能力是<em>固定的</em>。下一条件"学习"则要求系统能<em>在运行时演化自身能力</em>——否则，环境一变，系统便会失效。</p>
                 </div>
             </section>
 
