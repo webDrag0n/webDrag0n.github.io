@@ -1,11 +1,15 @@
 {
-  "generated_at": "2026-10-11T12:45:26.136867+00:00",
+  "generated_at": "2026-10-11T15:22:11.428084+00:00",
   "papers": {
     "date": "2026-10-11",
-    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261011.html"
+    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261011.html",
+    "overview": "小米开源全模态模型 MiMo-V2.6，以规模化 RL 推动模型自我改进；arXiv 当日热点集中于具身智能（单手人示范灵巧操作 Dex-One2Many、动作忠实的机器人世界模型 DreamTrue）与流式 VLM 评测（FastBench）；安全方向上，探针式欺骗检测 Caught in the Act 与 Agent 轨迹实时监控 OnTrack 引发关注；GitHub 趋势榜首位 morluto/rea（+25.5k⭐/日）主打 Agent 驱动的逆向工程；Awesome 生态中 awesome-agent-memory 等 AI 智能体记忆主题列表持续活跃。",
+    "digest": "今日 AI 进展呈现三条清晰主线。其一，开源大模型竞争进入\"RL 规模化\"阶段：小米 MiMo-V2.6 以全模态架构叠加 RL 算力扩张追求自我改进，并完整开放权重与训练实践，为社区提供了可复现的 RL 扩展范式。其二，具身智能研究正从单一任务模仿转向泛化能力建设——单示范灵巧操作、反事实后训练的世界模型、人形通才策略分别攻克数据成本、仿真偏差与指令泛化三大瓶颈。其三，随着 Agent 进入真实业务流，安全研究从事后审计走向实时干预，白盒探针欺骗检测与流式轨迹监控代表了可扩展监控的两条技术路线。GitHub 侧 Agent 工具链（rea 单日 2.5 万星）与 awesome-agent-memory 等列表的活跃，印证\"智能体工程化\"已成为社区资源投入的核心方向。"
   },
   "media": {
     "date": "2026-10-11",
-    "url": "https://webdrag0n.github.io/reports/media/daily_media_20261011.html"
+    "url": "https://webdrag0n.github.io/reports/media/daily_media_20261011.html",
+    "overview": "10月10日中文AI媒体报道密度整体偏低（周六效应），核心增量集中于三条主线：其一，谷歌 Nano Banana 2.1 图像生成模型进入规模化评测阶段，4K 直出与中文渲染能力显著改善；其二，非文本生成式模型 Jev 开发商 TypeSafe AI 完成 8.7 亿美元融资，估值 24 天内由 20 亿美元升至 75 亿美元，成为硅谷年度最陡峭的估值曲线；其三，特斯拉 FSD 在欧洲监管评估中受挫，叠加 Manus 重启北京办公室、西门子物理 AI 工业全栈布局，自动驾驶与具身智能的合规化、产业化进程持续分化。",
+    "digest": "10月10日的信息结构呈现典型的周末低密度特征，但三条线索具备趋势指示意义。其一，Nano Banana 2.1 的中文渲染优化表明头部实验室正将本土化能力作为多模态模型的差异化竞争维度，图像生成赛道的竞争焦点已从分辨率指标转向文本一致性与文化适配。其二，TypeSafe AI 在 24 天内估值增长 36 倍的案例，显示资本市场对\"后 Transformer 架构\"的定价已明显脱离传统估值锚点，需警惕非文本生成范式的叙事溢价。其三，特斯拉 FSD 欧洲受挫与 Manus 回归北京形成对照：自动驾驶与智能体两大产业化路径，均需在技术能力之外回应监管合规与地缘组织的约束。整体而言，行业正从能力竞赛阶段进入制度化适配阶段。"
   }
 }
