@@ -80,7 +80,7 @@
             margin: 0 auto;
             padding: 0 2rem;
             display: grid;
-            grid-template-columns: 280px 1fr;
+            grid-template-columns: 280px minmax(0, 1fr);
             gap: 4rem;
             align-items: start;
         }
@@ -361,6 +361,30 @@
         .nav-back:hover {
             color: var(--text-color);
         }
+    /* === overflow-guard === */
+        /* --- grid overflow fix: allow the flexible column to shrink --- */
+        .container { grid-template-columns: 280px minmax(0, 1fr); }
+        .content { min-width: 0; max-width: 100%; overflow-wrap: break-word; }
+        .content * { min-width: 0; }
+        /* long unbreakable strings (ids, urls, formulas-as-text) wrap instead of overflowing */
+        .content p, .content li, .content td, .content blockquote, .content .callout {
+            overflow-wrap: break-word; word-break: break-word; hyphens: auto;
+        }
+        /* MathJax display math scrolls horizontally instead of breaking layout */
+        .content mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+        mjx-container { max-width: 100%; }
+        /* mermaid / figures / svg never exceed the column */
+        .mermaid { overflow-x: auto; max-width: 100%; }
+        figure, .svg-container { max-width: 100%; }
+        figure svg, .svg-container svg { max-width: 100%; height: auto; }
+        img { max-width: 100%; height: auto; }
+        /* tables wrap / scroll */
+        .content table { display: block; max-width: 100%; overflow-x: auto; }
+        table.ref-table td { overflow-wrap: break-word; word-break: break-word; }
+        /* code blocks scroll */
+        .content pre { overflow-x: auto; max-width: 100%; }
+        .content code { overflow-wrap: break-word; word-break: break-word; }
+        /* === /overflow-guard === */
     </style>
 </head>
 <body>
