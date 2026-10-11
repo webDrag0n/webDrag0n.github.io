@@ -200,7 +200,7 @@
 
         <div class="abstract">
             <strong>TL;DR</strong>
-            <p>"通用人工智能"（AGI）的"通用性"不应由 MMLU、ARC、HumanEval 等基准分数定义，而应由其能替代的人类组织化劳动比例衡量<sup class="cite"><a href="#ref-1">[1]</a></sup>。从 18 世纪蒸汽机到 21 世纪 LLM，每一次技术革命的经济价值都建立在劳动替代曲线之上<sup class="cite"><a href="#ref-2">[2]</a></sup><sup class="cite"><a href="#ref-3">[3]</a></sup><sup class="cite"><a href="#ref-4">[4]</a></sup>。本文论证：AGI 的工程目标必须从"更聪明的回答"切换为"可替代一个完整岗位乃至组织"，并由此引出 Org-Replace-Rate、Autonomy-Hours、Persistence-Horizon、Self-Maintenance-Cost 等可替代性度量，作为评价新一代 AI 的真正坐标系。</p>
+            <p>"通用人工智能"（AGI）的"通用性"不应由 MMLU、ARC、HumanEval 等基准分数定义，而应由其可替代的人类组织化劳动比例衡量<sup class="cite"><a href="#ref-1">[1]</a></sup>。从 18 世纪的蒸汽机到 21 世纪的 LLM，每一次技术革命的经济价值都建立在劳动替代曲线之上<sup class="cite"><a href="#ref-2">[2]</a></sup><sup class="cite"><a href="#ref-3">[3]</a></sup><sup class="cite"><a href="#ref-4">[4]</a></sup>。本文论证：AGI 的工程目标必须从"更聪明的回答"切换为"可替代一个完整岗位乃至组织"，并由此引出 Org-Replace-Rate、Autonomy-Hours、Persistence-Horizon、Self-Maintenance-Cost 等可替代性度量，作为评价新一代 AI 的真正坐标系。</p>
         </div>
     </header>
 
@@ -222,24 +222,24 @@
             <section id="sec1">
                 <h2><span class="num">01</span>智力定义的陷阱：从图灵测试到 MMLU</h2>
 
-                <p>在 AI 学界与公众话语之间，存在一个长期未被弥合的鸿沟。学界倾向于把"智能"定义为可在特定基准上达到或超越人类水平的能力——MMLU<sup class="cite"><a href="#ref-5">[5]</a></sup>、ARC-AGI<sup class="cite"><a href="#ref-6">[6]</a></sup>、HumanEval<sup class="cite"><a href="#ref-7">[7]</a></sup>、GPQA<sup class="cite"><a href="#ref-8">[8]</a></sup>等评测集成为"通用性"的事实标尺。Legg 与 Hutter 在 2007 年给出过一个数学上极优雅的"通用智能"定义<sup class="cite"><a href="#ref-9">[9]</a></sup>，把智能形式化为在所有可计算环境上的累积奖励的加权和。这一定义在理论上漂亮，但在工程实践上几乎完全脱轨：现实世界并不会按照"奖励函数已知 + 环境可枚举"的假设运行。</p>
+                <p>在 AI 学界与公众话语之间，存在一个长期未被弥合的鸿沟。学界倾向于把"智能"定义为可在特定基准上达到或超越人类水平的能力——MMLU<sup class="cite"><a href="#ref-5">[5]</a></sup>、ARC-AGI<sup class="cite"><a href="#ref-6">[6]</a></sup>、HumanEval<sup class="cite"><a href="#ref-7">[7]</a></sup>、GPQA<sup class="cite"><a href="#ref-8">[8]</a></sup>等评测集成为"通用性"的事实标尺。Legg 与 Hutter 在 2007 年给出过一个数学上极为优雅的"通用智能"定义<sup class="cite"><a href="#ref-9">[9]</a></sup>，把智能形式化为在所有可计算环境上累积奖励的加权和。这一定义在理论上漂亮，但在工程实践上几乎完全脱轨：现实世界并不会按照"奖励函数已知 + 环境可枚举"的假设运行。</p>
 
-                <p>主流 AGI 评估的更深问题在于：<strong>它把"智能"从"在场"中剥离了出来</strong>。一份测试题集，无论多大，都把智能压扁成"在零时间、零成本、零后果的条件下选择正确答案"的能力。但人作为劳动者所承担的，从来不只是答题——人必须<em>持续在场</em>，必须承担<em>错误的真实代价</em>，必须维护<em>对同事、客户、组织的信誉与关系</em>。一个 MMLU 满分但没有持续身份、没有真实成本、没有长期关系的系统，其"智能"在经济意义上是悬浮的。</p>
+                <p>主流 AGI 评估的更深问题在于：<strong>它把"智能"从"在场"中剥离了出来</strong>。一份测试题集，无论多大，都把智能压扁为"在零时间、零成本、零后果的条件下选择正确答案"的能力。但人作为劳动者所承担的，从来不只是答题——人必须<em>持续在场</em>，必须承担<em>错误的真实代价</em>，必须维护<em>对同事、客户与组织的信誉和关系</em>。一个 MMLU 满分却没有持续身份、没有真实成本、没有长期关系的系统，其"智能"在经济意义上是悬浮的。</p>
 
-                <p>Hernández-Orallo<sup class="cite"><a href="#ref-10">[10]</a></sup>对这一问题给出过迄今最系统的分析：现有 AI 评估范式是"心理测量学"（psychometrics）的延伸，假定智能可由大量标准化题目的分布来表征。但这种范式在测量"具备身体的、连续运行的、自主的认知体"时存在系统性盲点——因为它把一切可观察的行为切片成离散的题目，从而无法捕捉跨越长时间尺度的能力（持续目标维持、关系经营、声誉积累等）。</p>
+                <p>Hernández-Orallo<sup class="cite"><a href="#ref-10">[10]</a></sup>对这一问题给出过迄今最系统的分析：现有 AI 评估范式是"心理测量学"（psychometrics）的延伸，假定智能可由大量标准化题目的分布来表征。但这种范式在测量"具备身体的、连续运行的、自主的认知体"时存在系统性盲点——它把一切可观察的行为切片成离散题目，从而无法捕捉跨越长时间尺度的能力（持续目标维持、关系经营、声誉积累等）。</p>
 
                 <div class="callout philosophical">
                     <div class="callout-title">Philosophical Interface · 哲学接口</div>
-                    <p style="margin:0">第 01 篇区分过 Heidegger 的 <em>vorhanden</em>（现成在手）与 <em>zuhanden</em>（上手之物）<sup class="cite"><a href="#ref-11">[11]</a></sup>。MMLU 类基准是经典的 <em>vorhanden</em> 范式：智能被作为可被测量的对象拎出处境。AGI 的真正门槛要求它进入 <em>zuhanden</em> 模式——成为在某个处境中持续运作的"在场者"。这意味着评估范式本身必须从测量学切换为运营学（operational metrics）。</p>
+                    <p style="margin:0">第 01 篇区分过 Heidegger 的 <em>vorhanden</em>（现成在手）与 <em>zuhanden</em>（上手之物）<sup class="cite"><a href="#ref-11">[11]</a></sup>。MMLU 类基准是典型的 <em>vorhanden</em> 范式：智能被作为可测量的对象拎出处境。而 AGI 的真正门槛要求它进入 <em>zuhanden</em> 模式——成为在某个处境中持续运作的"在场者"。这意味着评估范式本身必须从测量学切换为运营学（operational metrics）。</p>
                 </div>
             </section>
 
             <section id="sec2">
                 <h2><span class="num">02</span>价值的锚：从蒸汽机到 LLM 的劳动替代曲线</h2>
 
-                <p>如果不以"智力测试"作为价值锚，AGI 的价值应当锚定在何处？经济史给出了一个清晰且毫不浪漫的答案：<strong>每一次主要的技术革命，其经济价值都来自对人类劳动的替代或增强</strong>。蒸汽机替代了畜力与人力的物理劳动；电力革命扩展了精密工业；二十世纪后半期的计算机革命替代了大量重复的脑力劳动；互联网压缩了协调成本；而当代 LLM 正在把这条曲线延伸到曾被视为"创造性"的认知劳动<sup class="cite"><a href="#ref-2">[2]</a></sup><sup class="cite"><a href="#ref-3">[3]</a></sup><sup class="cite"><a href="#ref-12">[12]</a></sup>。</p>
+                <p>如果不以"智力测试"作为价值锚，AGI 的价值应当锚定在何处？经济史给出了一个清晰而毫不浪漫的答案：<strong>每一次主要的技术革命，其经济价值都来自对人类劳动的替代或增强</strong>。蒸汽机替代了畜力与人力的物理劳动；电力革命扩展了精密工业；20 世纪后半叶的计算机革命替代了大量重复的脑力劳动；互联网压缩了协调成本；而当代 LLM 正把这条曲线延伸到曾被视为"创造性"的认知劳动<sup class="cite"><a href="#ref-2">[2]</a></sup><sup class="cite"><a href="#ref-3">[3]</a></sup><sup class="cite"><a href="#ref-12">[12]</a></sup>。</p>
 
-                <p>Acemoglu 与 Restrepo 在《人与机器的赛跑》<sup class="cite"><a href="#ref-2">[2]</a></sup>中给出了一个简洁的产业组织模型：技术进步的经济效应可以被分解为<em>替代效应</em>（displacement effect）与<em>恢复效应</em>（reinstatement effect）。前者把任务从人移交给机器，后者由于生产率提升而创造出新任务。两个效应的<strong>相对速度</strong>决定了劳动力市场是被压缩还是被扩张。LLM 的关键特性是替代效应触及的任务范围比以往任何技术都更广——从客服、初级编程、内容创作、文档处理到中层协调，被一次性置入替代曲线<sup class="cite"><a href="#ref-13">[13]</a></sup><sup class="cite"><a href="#ref-14">[14]</a></sup>。</p>
+                <p>Acemoglu 与 Restrepo 在《人与机器的赛跑》<sup class="cite"><a href="#ref-2">[2]</a></sup>中给出了一个简洁的产业组织模型：技术进步的经济效应可分解为<em>替代效应</em>（displacement effect）与<em>恢复效应</em>（reinstatement effect）——前者把任务从人移交给机器，后者因生产率提升而创造出新任务。两个效应的<strong>相对速度</strong>，决定劳动力市场被压缩还是被扩张。LLM 的关键特性在于，其替代效应触及的任务范围比以往任何技术都更广——从客服、初级编程、内容创作、文档处理到中层协调，被一次性置入替代曲线<sup class="cite"><a href="#ref-13">[13]</a></sup><sup class="cite"><a href="#ref-14">[14]</a></sup>。</p>
 
                 <figure class="svg-container">
                     <svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg">
@@ -303,27 +303,27 @@
                     <figcaption><b>Fig 02-A · 五次技术革命的劳动替代价值曲线（双对数）。</b>从蒸汽到 LLM，每次革命的经济价值都正比于其单位时间内可替代的人类劳动量。LLM 是这条曲线上首次显著进入"认知与创造劳动"区段的技术；AGI 则被定位为该曲线进一步爬升的极限点。数据点来源综合 Acemoglu &amp; Restrepo<sup class="cite"><a href="#ref-2">[2]</a></sup>、Brynjolfsson &amp; McAfee<sup class="cite"><a href="#ref-3">[3]</a></sup>、Frey &amp; Osborne<sup class="cite"><a href="#ref-13">[13]</a></sup>、McKinsey<sup class="cite"><a href="#ref-14">[14]</a></sup>。</figcaption>
                 </figure>
 
-                <p>这一图景对 AGI 定义有一个直接而苛刻的推论：<strong>AGI 的"通用性"在经济上等价于可替代的劳动种类的<em>跨度</em>（breadth），而非任一单项任务的<em>深度</em>（depth）</strong>。一个仅能下棋但棋艺无敌的系统不是 AGI，因为它的替代跨度为零；一个在多数岗位上仅达到中等水平、但能持续在场维护这些岗位的系统，反而更接近 AGI 的经济定义。</p>
+                <p>这一图景对 AGI 的定义有一个直接而苛刻的推论：<strong>AGI 的"通用性"在经济上等价于可替代劳动种类的<em>跨度</em>（breadth），而非任一单项任务的<em>深度</em>（depth）</strong>。一个只能下棋却棋艺无敌的系统不是 AGI，因为它的替代跨度为零；相反，一个在多数岗位上仅达中等水平、却能持续在场维护这些岗位的系统，反而更接近 AGI 的经济定义。</p>
 
                 <div class="callout formal">
                     <div class="callout-title">Formal Box · 形式化定义</div>
                     <p style="margin:0">把可替代劳动的集合记作 \( \mathcal{T} \)，每项任务 \( t \in \mathcal{T} \) 的人类时薪记作 \( w(t) \)，AI 替代的可行性记作 \( \rho(t) \in [0,1] \)。则 AI 系统 \( A \) 的<em>劳动替代价值</em>可形式化为：</p>
                     <p style="text-align:center; margin: 0.8rem 0 0;">\( V(A) = \int_{\mathcal{T}} \rho_A(t)\, w(t)\, \mu(t)\, dt \)</p>
-                    <p style="margin: 0.5rem 0 0">其中 \( \mu(t) \) 为任务 \(t\) 的市场规模分布。AGI 在经济意义上的定义即：\(V(A)\) 在 \(\mathcal{T}\) 全集上达到与平均人类劳动者同阶。注意 \( \rho_A(t) \) 并不仅取决于 \(A\) 的能力，还取决于 \(A\) 是否能<em>持续在场</em>地执行 \(t\)——这把后续的身体、持续、自主等条件直接接入到经济价值函数中。</p>
+                    <p style="margin: 0.5rem 0 0">其中 \( \mu(t) \) 为任务 \(t\) 的市场规模分布。AGI 在经济意义上的定义即：\(V(A)\) 在 \(\mathcal{T}\) 全集上达到与平均人类劳动者同阶。注意 \( \rho_A(t) \) 并不仅取决于 \(A\) 的能力，还取决于 \(A\) 能否<em>持续在场</em>地执行 \(t\)——这把后续的身体、持续、自主等条件直接接入经济价值函数。</p>
                 </div>
             </section>
 
             <section id="sec3">
                 <h2><span class="num">03</span>软件持续吞噬组织：Excel → ERP → SaaS → Agent</h2>
 
-                <p>如果劳动替代是技术的经济一阶项，那么软件革命可以被理解为劳动替代曲线上的一个特定子段：<em>组织化劳动的替代</em>。Marc Andreessen 的"软件吞噬世界"<sup class="cite"><a href="#ref-15">[15]</a></sup>是一个流行表述；其更精确的版本来自 Brynjolfsson 与 McAfee：软件并不是吞噬世界，而是<strong>吞噬组织</strong>——它把原本由人类组织通过流程、岗位、协调实现的功能，逐步内化为可自动化的代码与数据流<sup class="cite"><a href="#ref-3">[3]</a></sup>。</p>
+                <p>如果劳动替代是技术的经济一阶项，那么软件革命可以被理解为劳动替代曲线上的一个特定子段：<em>组织化劳动的替代</em>。Marc Andreessen 的"软件吞噬世界"<sup class="cite"><a href="#ref-15">[15]</a></sup>是一个流行表述；其更精确的版本来自 Brynjolfsson 与 McAfee：软件吞噬的并不是"世界"，而是<strong>组织</strong>——它把原本由人类组织通过流程、岗位与协调实现的功能，逐步内化为可自动化的代码与数据流<sup class="cite"><a href="#ref-3">[3]</a></sup>。</p>
 
-                <p>这条吞噬的路径有四个明显的阶段：</p>
+                <p>这条吞噬路径有四个明显的阶段：</p>
 
                 <ul class="feature-list">
-                    <li><strong>Excel 阶段（1980s）</strong>——把会计与基础数据处理流程从人脑迁移到电子表格。一个曾需要 20 名会计的部门可以缩减到 3 名分析师。</li>
-                    <li><strong>ERP 阶段（1990s）</strong>——把跨部门的业务流程编码进系统（SAP、Oracle）。中层管理岗位被流程定义所替代<sup class="cite"><a href="#ref-3">[3]</a></sup>。</li>
-                    <li><strong>SaaS 阶段（2010s）</strong>——把整个企业基础设施变成可订阅的服务。"基础设施岗位"（IT、运维、客服系统）大规模外包给云。</li>
+                    <li><strong>Excel 阶段（1980s）</strong>——把会计与基础数据处理流程从人脑迁移到电子表格。一个曾需要 20 名会计的部门，可以缩减到 3 名分析师。</li>
+                    <li><strong>ERP 阶段（1990s）</strong>——把跨部门业务流程编码进系统（SAP、Oracle），中层管理岗位被流程定义所替代<sup class="cite"><a href="#ref-3">[3]</a></sup>。</li>
+                    <li><strong>SaaS 阶段（2010s）</strong>——把整个企业基础设施变成可订阅的服务，"基础设施岗位"（IT、运维、客服系统）被大规模外包给云。</li>
                     <li><strong>Agent 阶段（2024–）</strong>——首次开始替代<em>岗位本身</em>，而非岗位所使用的<em>工具</em><sup class="cite"><a href="#ref-16">[16]</a></sup><sup class="cite"><a href="#ref-17">[17]</a></sup>。</li>
                 </ul>
 
@@ -368,29 +368,29 @@
                         <!-- Y axis label -->
                         <text class="svg-text svg-text-sub" x="460" y="25">劳动替代金字塔 · Labor Replacement Pyramid</text>
                     </svg>
-                    <figcaption><b>Fig 02-B · 劳动替代金字塔。</b>底层物理劳动最易替代（工业机器人长期渗透），顶层战略决策最难替代。LLM/Agent 是首次显著进入"中层协调"层的技术，但要触达顶层"战略决策"必须满足后续六条件。渗透率数据综合 Frey &amp; Osborne<sup class="cite"><a href="#ref-13">[13]</a></sup>、McKinsey<sup class="cite"><a href="#ref-14">[14]</a></sup>、Anthropic Economic Index 2024<sup class="cite"><a href="#ref-19">[19]</a></sup>。</figcaption>
+                    <figcaption><b>Fig 02-B · 劳动替代金字塔。</b>底层物理劳动最易替代（工业机器人长期渗透），顶层战略决策最难替代。LLM / Agent 是首次显著进入"中层协调"层的技术，但要触达顶层"战略决策"必须满足后续六条件。渗透率数据综合 Frey &amp; Osborne<sup class="cite"><a href="#ref-13">[13]</a></sup>、McKinsey<sup class="cite"><a href="#ref-14">[14]</a></sup>、Anthropic Economic Index 2024<sup class="cite"><a href="#ref-19">[19]</a></sup>。</figcaption>
                 </figure>
 
-                <p>这一阶段化路径揭示了一个关键事实：<strong>每一次软件吞噬组织的边界扩张，都对应着一次"被替代单元"的尺度上升</strong>——从单个动作（Excel 公式），到流程（ERP 工作流），到岗位（SaaS 替代部门基础设施），到<em>完整的劳动单元</em>（Agent 替代岗位本身）。AGI 是这条路径的极限点：被替代单元从单个岗位扩展到完整组织。</p>
+                <p>这一阶段化路径揭示了一个关键事实：<strong>每一次软件吞噬组织的边界扩张，都对应着一次"被替代单元"的尺度上升</strong>——从单个动作（Excel 公式），到流程（ERP 工作流），到岗位（SaaS 替代部门基础设施），再到<em>完整的劳动单元</em>（Agent 替代岗位本身）。AGI 正是这条路径的极限点：被替代单元从单个岗位扩展到完整组织。</p>
 
-                <p>但这一极限点并不是"再多增加一个 SaaS 模块"可以达到的。一个组织不仅是岗位的集合，更是<em>岗位之间的协调闭环</em>。任何能替代完整组织的系统，必须能复现这个闭环——而这就需要后续六条件中的任意一条都不能缺失。</p>
+                <p>但这一极限点并非"再多增加一个 SaaS 模块"所能达到。一个组织不仅是岗位的集合，更是<em>岗位之间的协调闭环</em>。任何能替代完整组织的系统，都必须复现这一闭环——而这要求后续六条件缺一不可。</p>
             </section>
 
             <section id="sec4">
                 <h2><span class="num">04</span>单位劳动的可替代性测度</h2>
 
-                <p>把"AGI = 替代多少劳动"这一定义工程化，需要给出可测的"可替代性"度量。Autor 在 2015 年的经典论文<sup class="cite"><a href="#ref-12">[12]</a></sup>提出过一个简洁的二分：可被显式规则化的<em>例行任务</em>（routine）易被替代，需要隐式上下文判断的<em>非例行任务</em>（non-routine）难被替代。这一二分在自动化时代足够用，但在 LLM 时代失效——因为 LLM 在大量"非例行"任务上表现良好，但在<em>需要跨长时间维持的</em>任务上仍然不能胜任。</p>
+                <p>把"AGI = 替代多少劳动"这一定义工程化，需要给出可测的"可替代性"度量。Autor 在 2015 年的经典论文<sup class="cite"><a href="#ref-12">[12]</a></sup>中提出过一个简洁的二分：可被显式规则化的<em>例行任务</em>（routine）易被替代，需要隐式上下文判断的<em>非例行任务</em>（non-routine）难以替代。这一二分在自动化时代足够用，但在 LLM 时代失效——LLM 在大量"非例行"任务上表现良好，却在<em>需要跨长时间维持的</em>任务上仍然不能胜任。</p>
 
                 <p>因此，本系列提出一个更细粒度的<strong>四维可替代性度量</strong>，作为 AGI 评估坐标系的核心：</p>
 
                 <ul class="feature-list">
-                    <li><strong>Org-Replace-Rate（组织替代率）</strong>：在给定组织规模上，AI 系统能独立执行的岗位比例。这是 Acemoglu 替代效应<sup class="cite"><a href="#ref-2">[2]</a></sup>的可观测代理。</li>
+                    <li><strong>Org-Replace-Rate（组织替代率）</strong>：在给定规模的组织上，AI 系统能独立执行的岗位比例。这是 Acemoglu 替代效应<sup class="cite"><a href="#ref-2">[2]</a></sup>的可观测代理。</li>
                     <li><strong>Autonomy-Hours（自主小时数）</strong>：系统在不接受外部指令的条件下能自主推进任务的最长时间窗口。这映射到第 07 篇的"自主性"条件。</li>
-                    <li><strong>Persistence-Horizon（持续视野）</strong>：系统能维持目标、记忆、关系的最长时间尺度。这映射到第 06 篇的"持续性"。</li>
+                    <li><strong>Persistence-Horizon（持续视野）</strong>：系统能维持目标、记忆与关系的最长时间尺度。这映射到第 06 篇的"持续性"。</li>
                     <li><strong>Self-Maintenance-Cost（自维护成本）</strong>：系统持续在线、维护身份、补充资源所需的单位时间成本。这映射到第 04 篇的"身体"条件。</li>
                 </ul>
 
-                <p>这四个度量与传统基准（MMLU 等）正交。一个 MMLU 满分但 Autonomy-Hours 仅有数小时的系统，无法替代任何需要主动跟进的岗位；一个 MMLU 平庸但 Persistence-Horizon 达到数月的系统，反而可以承担长期项目协调。Morris 等人在《Levels of AGI》<sup class="cite"><a href="#ref-18">[18]</a></sup>中给出过一个分级框架，但其分级标准仍以"能力深度"为主轴，未充分纳入持续性与自主性。本系列后续章节将把这四维度量逐一接入到对应的工程条件。</p>
+                <p>这四个度量与传统基准（MMLU 等）正交。一个 MMLU 满分但 Autonomy-Hours 仅有数小时的系统，无法替代任何需要主动跟进的岗位；反之，一个 MMLU 平庸但 Persistence-Horizon 达到数月的系统，反而可以承担长期项目协调。Morris 等人在《Levels of AGI》<sup class="cite"><a href="#ref-18">[18]</a></sup>中给出过一个分级框架，但其分级标准仍以"能力深度"为主轴，未充分纳入持续性与自主性。本系列后续各篇将把这四维度量逐一接入对应的工程条件。</p>
 
                 <figure class="svg-container">
                     <svg viewBox="0 0 900 380" xmlns="http://www.w3.org/2000/svg">
@@ -434,22 +434,22 @@
             <section id="sec5">
                 <h2><span class="num">05</span>从岗位替代到组织替代：为什么真正的 AGI 必须能运行整个公司</h2>
 
-                <p>把"替代单元"的尺度推到极限，便得到本系列的核心命题：<strong>真正的 AGI 必须能替代一个完整的组织</strong>。这一命题听起来近乎科幻，但它在经济学逻辑上是必然的：如果 AGI 仅能替代<em>岗位</em>但不能替代<em>组织</em>，那么经济价值的剩余部分（协调、决策、关系、资源调度）仍归属人类组织。在自由市场中，这一剩余会被快速整合为"半 AI 半人"组织——这正是 2024–2026 年的真实景观<sup class="cite"><a href="#ref-19">[19]</a></sup>。</p>
+                <p>把"替代单元"的尺度推到极限，便得到本系列的核心命题：<strong>真正的 AGI 必须能替代一个完整的组织</strong>。这一命题听起来近乎科幻，但在经济学逻辑上是必然的：如果 AGI 仅能替代<em>岗位</em>而不能替代<em>组织</em>，那么经济价值的剩余部分（协调、决策、关系、资源调度）仍归属人类组织；在自由市场中，这一剩余会被快速整合为"半 AI 半人"组织——这正是 2024–2026 年的真实景观<sup class="cite"><a href="#ref-19">[19]</a></sup>。</p>
 
-                <p>但这种半 AI 半人组织在经济竞争中并非稳态。一旦某个市场参与者构建出"全 AI 组织"——其岗位、协调、决策、资源治理全部由 AI 自治完成——它在边际成本上将与半人半 AI 组织产生量级差异。Bostrom 在《超级智能》<sup class="cite"><a href="#ref-20">[20]</a></sup>中讨论过这一动力学，并论证它会导致"回报加速循环"。Russell 在《人类相容》<sup class="cite"><a href="#ref-21">[21]</a></sup>中给出了相反方向的警告：这种循环若无对齐机制，会以人类价值的损失收尾。</p>
+                <p>但这种半 AI 半人组织在经济竞争中并非稳态。一旦某个市场参与者构建出"全 AI 组织"——其岗位、协调、决策、资源治理全部由 AI 自治完成——它在边际成本上将产生与半人半 AI 组织的量级差异。Bostrom 在《超级智能》<sup class="cite"><a href="#ref-20">[20]</a></sup>中讨论过这一动力学，并论证它会导致"回报加速循环"；Russell 在《人类相容》<sup class="cite"><a href="#ref-21">[21]</a></sup>中则给出相反方向的警告：这种循环若无对齐机制，将以人类价值的损失收尾。</p>
 
-                <p>无论你接受 Bostrom 的乐观加速论还是 Russell 的悲观警示论，都不能否认一个事实：<em>组织替代</em>是 AGI 价值函数的极限点。这一点在经济学上是闭合的，无需诉诸"意识"、"理解"等争议概念。这也正是本系列把"组织"作为后续推导起点的原因——它把 AGI 的工程目标从抽象的"智力测量"切换为可观测的"组织级劳动单元的替代"。</p>
+                <p>无论接受 Bostrom 的乐观加速论，还是 Russell 的悲观警示论，都无法否认一个事实：<em>组织替代</em>是 AGI 价值函数的极限点。这一点在经济学上是闭合的，无需诉诸"意识""理解"等争议概念。这也正是本系列把"组织"作为后续推导起点的原因——它把 AGI 的工程目标从抽象的"智力测量"切换为可观测的"组织级劳动单元的替代"。</p>
 
                 <blockquote>
                     "The marginal cost advantage of an autonomous AI organization, once achieved, will be of a different order from any cost advantage in human history."
                     — 对 Bostrom<sup class="cite"><a href="#ref-20">[20]</a></sup>论证的核心总结
                 </blockquote>
 
-                <p>下一篇<a href="03-organization-as-intelligence-ceiling.html" style="color:var(--accent-color);text-decoration:none;border-bottom:1px dotted var(--accent-color)">第 03 篇</a>将以这一目标为前提，正面诊断当前 Agent 的结构性缺陷：成熟组织的六项核心能力是什么？为什么 prompt → task → stop 范式无论参数规模如何都触不到这些能力？这一缺陷诊断会直接指出 AGI 必须满足的六个本体条件，从而把第 04–08 篇的工程化推导链锁定。</p>
+                <p>下一篇<a href="03-organization-as-intelligence-ceiling.html" style="color:var(--accent-color);text-decoration:none;border-bottom:1px dotted var(--accent-color)">第 03 篇</a>将以这一目标为前提，正面诊断当前 Agent 的结构性缺陷：成熟组织的六项核心能力是什么？为什么 prompt → task → stop 范式无论参数规模如何都触不到这些能力？这一缺陷诊断将直接指出 AGI 必须满足的六个本体条件，从而锁定第 04–08 篇的工程化推导链。</p>
 
                 <div class="callout">
                     <div class="callout-title">Series Bridge · 章节衔接</div>
-                    <p style="margin:0">本篇把 AGI 价值锚定为"组织化劳动的替代"。第 01 篇从哲学上指出"个体"的本质是自我维护闭环。把两者合并：<em>能替代组织化劳动的 AGI，必然是一个能持续维护自身存在的数字个体</em>。这一隐含命题将贯穿后续七篇的工程化展开。</p>
+                    <p style="margin:0">本篇把 AGI 的价值锚定为"组织化劳动的替代"；第 01 篇则从哲学上指出"个体"的本质是自我维护闭环。两者合并，得到一个隐含命题：<em>能替代组织化劳动的 AGI，必然是一个能持续维护自身存在的数字个体</em>。它将贯穿后续七篇的工程化展开。</p>
                 </div>
             </section>
 
