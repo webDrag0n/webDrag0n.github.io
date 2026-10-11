@@ -106,6 +106,37 @@
         .ad-footer { text-align: center; margin-top: 50px; font-size: .8rem; color: var(--ad-sub); }
         .ad-footer a { color: var(--ad-accent); text-decoration: none; }
         .ad-footer a:hover { text-decoration: underline; }
+
+        /* ── access / integration panel ── */
+        .ad-access {
+            background: var(--ad-card); border: 1px solid var(--ad-border);
+            border-radius: 14px; padding: 18px 22px; margin-bottom: 34px;
+        }
+        .ad-access-row { padding: 10px 0; }
+        .ad-access-row + .ad-access-row { border-top: 1px solid var(--ad-border); }
+        .ad-access-head { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+        .ad-access-icon { font-size: 1.2rem; }
+        .ad-access-head h3 { font-size: 1rem; font-weight: 700; margin: 0; }
+        .ad-access-body p { font-size: .86rem; color: var(--ad-sub); margin: 4px 0 8px; }
+        .ad-url-row { display: flex; gap: 8px; align-items: stretch; flex-wrap: wrap; }
+        .ad-url {
+            flex: 1 1 auto; min-width: 0; overflow-x: auto; white-space: nowrap;
+            background: var(--ad-bg); border: 1px solid var(--ad-border);
+            border-radius: 8px; padding: 9px 12px;
+            font-family: 'SF Mono', 'Fira Code', monospace; font-size: .8rem;
+        }
+        .ad-prompt { white-space: normal; word-break: break-all; line-height: 1.5; }
+        .ad-copy {
+            flex: 0 0 auto; align-self: center;
+            background: var(--ad-accent); color: #fff; border: none;
+            border-radius: 8px; padding: 8px 14px; font-size: .8rem;
+            cursor: pointer; white-space: nowrap;
+        }
+        .ad-copy:hover { opacity: .88; }
+        .ad-access-note { font-size: .78rem; }
+        .ad-access-note a { color: var(--ad-accent); text-decoration: none; }
+        .ad-access-note a:hover { text-decoration: underline; }
+        .ad-access [hidden] { display: none !important; }
     </style>
 </head>
 <body>
@@ -124,6 +155,48 @@
     </nav>
 
     <div class="ad-container">
+        <!-- ── Access / integration panel (bilingual, follows lang-toggle) ── -->
+        <section class="ad-access">
+          <div class="ad-access-row">
+            <div class="ad-access-head">
+              <span class="ad-access-icon">📡</span>
+              <h3 class="lang-zh">RSS 订阅</h3>
+              <h3 class="lang-en" hidden>RSS Feed</h3>
+            </div>
+            <div class="ad-access-body">
+              <p class="lang-zh">把下面地址粘贴到任意 RSS 阅读器即可订阅：</p>
+              <p class="lang-en" hidden>Paste this URL into any RSS reader:</p>
+              <div class="ad-url-row">
+                <code class="ad-url">https://webdrag0n.github.io/reports/rss.xml</code>
+                <button class="ad-copy" data-copy="https://webdrag0n.github.io/reports/rss.xml">
+                  <span class="lang-zh">复制</span><span class="lang-en" hidden>Copy</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="ad-access-row">
+            <div class="ad-access-head">
+              <span class="ad-access-icon">🤖</span>
+              <h3 class="lang-zh">Agent 接入</h3>
+              <h3 class="lang-en" hidden>Agent Access</h3>
+            </div>
+            <div class="ad-access-body">
+              <p class="lang-zh">把这行提示词发给任何 AI agent，它就能自己拉取最新日报：</p>
+              <p class="lang-en" hidden>Give this one-line prompt to any AI agent so it fetches the latest digest:</p>
+              <div class="ad-url-row">
+                <code class="ad-url ad-prompt lang-zh">定时抓取 https://webdrag0n.github.io/reports/latest.json ，取其中 papers 和 media 的 url 拉取 HTML 并总结要点给我。</code>
+                <code class="ad-url ad-prompt lang-en" hidden>Fetch https://webdrag0n.github.io/reports/latest.json on a schedule, pull the papers &amp; media URLs, and summarize the key points for me.</code>
+                <button class="ad-copy" data-copy-zh="定时抓取 https://webdrag0n.github.io/reports/latest.json ，取其中 papers 和 media 的 url 拉取 HTML 并总结要点给我。" data-copy-en="Fetch https://webdrag0n.github.io/reports/latest.json on a schedule, pull the papers & media URLs, and summarize the key points for me.">
+                  <span class="lang-zh">复制</span><span class="lang-en" hidden>Copy</span>
+                </button>
+              </div>
+              <p class="ad-access-note lang-zh">数据端点：<a href="latest.json">latest.json</a>（最新一期）· <a href="index.json">index.json</a>（全部索引）</p>
+              <p class="ad-access-note lang-en" hidden>Data endpoints: <a href="latest.json">latest.json</a> (latest) · <a href="index.json">index.json</a> (full index)</p>
+            </div>
+          </div>
+        </section>
+
         
     <section class="hero">
       <div class="hero-head">
@@ -3865,11 +3938,13 @@
         </div>
 
         <div class="ad-footer">
-            <p>📡 <a href="rss.xml">RSS 订阅</a> · 🤖 Agent API: <a href="latest.json">latest.json</a> / <a href="index.json">index.json</a></p>
-            <p>Auto-generated daily · digests extracted programmatically</p>
+            <p>📡 <a href="rss.xml">RSS</a> · 🤖 <a href="latest.json">latest.json</a> / <a href="index.json">index.json</a></p>
+            <p class="lang-zh">每日自动生成 · 摘要由程序从报告 HTML 提取，零模型调用</p>
+            <p class="lang-en" hidden>Auto-generated daily · digests extracted programmatically, zero LLM calls</p>
         </div>
     </div>
 
     <script src="../js/main.js"></script>
+    <script src="access.js"></script>
 </body>
 </html>

@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('lang-toggle').addEventListener('click', () => {
         currentLang = currentLang === 'en' ? 'zh' : 'en';
         renderAll(currentLang);
+        window.dispatchEvent(new CustomEvent('langchange', { detail: { lang: currentLang } }));
     });
 });
 
@@ -50,7 +51,8 @@ function updateStaticText(lang) {
             navHome: "Home",
             navAbout: "About",
             navBlog: "Blog",
-            navKb: "Knowledge Base"
+            navKb: "Knowledge Base",
+            navReports: "AI Daily"
         },
         zh: {
             aboutTitle: "关于我",
@@ -69,14 +71,15 @@ function updateStaticText(lang) {
             navHome: "主页",
             navAbout: "个人介绍",
             navBlog: "博客",
-            navKb: "知识库"
+            navKb: "知识库",
+            navReports: "AI 日报"
         }
     };
 
     const t = texts[lang];
     document.querySelectorAll('[data-nav]').forEach(a => {
         const key = a.getAttribute('data-nav');
-        const map = { home: t.navHome, about: t.navAbout, blog: t.navBlog, kb: t.navKb };
+        const map = { home: t.navHome, about: t.navAbout, blog: t.navBlog, kb: t.navKb, reports: t.navReports };
         if (map[key]) a.textContent = map[key];
     });
     document.getElementById('contact-title') && (document.getElementById('contact-title').textContent = t.contactTitle);
