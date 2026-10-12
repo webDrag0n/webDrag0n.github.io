@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 11 Oct 2026 16:01:02 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 00:10:16 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-10-12</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261012.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261012.html</guid>
+      <pubDate>Mon, 12 Oct 2026 08:00:00 +0000</pubDate>
+      <description>本期 ArXiv 呈现三条清晰主线：其一，Agentic World Model 与 具身智能 持续升温，DreamTrue、SuperNav、In-context Robot Learning 等工作把 VLA 与视频世界模型推向可泛化的机器人控制；其二，多模态推理 从&quot;被动感知&quot;走向&quot;预测性空间推理&quot;（SpaceCast-Bench、FastBench、WOVEN），强调模型对未见状态的前瞻推断；其三，开源与 awesome 生态 围绕新一代 System One / 决策模型（Jev、Claude Opus 5.5）形成爆发式增长，多个高星标 curated list 涌现，社区知识工程</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-10-11</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261011.html</link>

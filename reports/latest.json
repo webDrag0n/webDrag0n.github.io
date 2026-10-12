@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-11T16:01:02.309890+00:00",
+  "generated_at": "2026-10-12T00:10:16.379730+00:00",
   "papers": {
-    "date": "2026-10-11",
-    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261011.html",
-    "overview": "小米开源全模态模型 MiMo-V2.6，以规模化 RL 推动模型自我改进；arXiv 当日热点集中于具身智能（单手人示范灵巧操作 Dex-One2Many、动作忠实的机器人世界模型 DreamTrue）与流式 VLM 评测（FastBench）；安全方向上，探针式欺骗检测 Caught in the Act 与 Agent 轨迹实时监控 OnTrack 引发关注；GitHub 趋势榜首位 morluto/rea（+25.5k⭐/日）主打 Agent 驱动的逆向工程；Awesome 生态中 awesome-agent-memory 等 AI 智能体记忆主题列表持续活跃。",
-    "digest": "今日 AI 进展呈现三条清晰主线。其一，开源大模型竞争进入\"RL 规模化\"阶段：小米 MiMo-V2.6 以全模态架构叠加 RL 算力扩张追求自我改进，并完整开放权重与训练实践，为社区提供了可复现的 RL 扩展范式。其二，具身智能研究正从单一任务模仿转向泛化能力建设——单示范灵巧操作、反事实后训练的世界模型、人形通才策略分别攻克数据成本、仿真偏差与指令泛化三大瓶颈。其三，随着 Agent 进入真实业务流，安全研究从事后审计走向实时干预，白盒探针欺骗检测与流式轨迹监控代表了可扩展监控的两条技术路线。GitHub 侧 Agent 工具链（rea 单日 2.5 万星）与 awesome-agent-memory 等列表的活跃，印证\"智能体工程化\"已成为社区资源投入的核心方向。"
+    "date": "2026-10-12",
+    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261012.html",
+    "overview": "本期 ArXiv 呈现三条清晰主线：其一，Agentic World Model 与 具身智能 持续升温，DreamTrue、SuperNav、In-context Robot Learning 等工作把 VLA 与视频世界模型推向可泛化的机器人控制；其二，多模态推理 从\"被动感知\"走向\"预测性空间推理\"（SpaceCast-Bench、FastBench、WOVEN），强调模型对未见状态的前瞻推断；其三，开源与 awesome 生态 围绕新一代 System One / 决策模型（Jev、Claude Opus 5.5）形成爆发式增长，多个高星标 curated list 涌现，社区知识工程进入新一轮周期。",
+    "digest": "本期值得关注的信号有二。其一，具身智能与 Agentic World Model 正在合流——DreamTrue 用反事实后训练补足失败样本，Dex-One2Many 把单条人类视频扩展为多样化操作，VersaCamVLA 解除相机配置约束，方向一致：让机器人策略在分布外仍能稳定工作，是通往通用具身系统的关键工程问题。其二，benchmark 正在从\"静态感知\"转向\"前瞻推理\"，FastBench 与 SpaceCast-Bench 强调对高动态、未见状态的预测，多模态评估进入更严苛阶段。开源侧，rea 单日 2.5 万星说明 Agentic 工具链在安全/逆向领域已形成新势能；awesome 生态围绕 Opus 5.5、Jev、顶会 Figure 库等新型 curated list 呈现爆发，社区知识工程持续升温。"
   },
   "media": {
     "date": "2026-10-11",

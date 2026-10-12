@@ -1,11 +1,17 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-10-11T16:01:02.307840+00:00",
+  "generated_at": "2026-10-12T00:10:16.377256+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
-      "count": 74,
+      "count": 75,
       "items": [
+        {
+          "date": "2026-10-12",
+          "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261012.html",
+          "overview": "本期 ArXiv 呈现三条清晰主线：其一，Agentic World Model 与 具身智能 持续升温，DreamTrue、SuperNav、In-context Robot Learning 等工作把 VLA 与视频世界模型推向可泛化的机器人控制；其二，多模态推理 从\"被动感知\"走向\"预测性空间推理\"（SpaceCast-Bench、FastBench、WOVEN），强调模型对未见状态的前瞻推断；其三，开源与 awesome 生态 围绕新一代 System One / 决策模型（Jev、Claude Opus 5.5）形成爆发式增长，多个高星标 curated list 涌现，社区知识工程进入新一轮周期。",
+          "digest": "本期值得关注的信号有二。其一，具身智能与 Agentic World Model 正在合流——DreamTrue 用反事实后训练补足失败样本，Dex-One2Many 把单条人类视频扩展为多样化操作，VersaCamVLA 解除相机配置约束，方向一致：让机器人策略在分布外仍能稳定工作，是通往通用具身系统的关键工程问题。其二，benchmark 正在从\"静态感知\"转向\"前瞻推理\"，FastBench 与 SpaceCast-Bench 强调对高动态、未见状态的预测，多模态评估进入更严苛阶段。开源侧，rea 单日 2.5 万星说明 Agentic 工具链在安全/逆向领域已形成新势能；awesome 生态围绕 Opus 5.5、Jev、顶会 Figure 库等新型 curated list 呈现爆发，社区知识工程持续升温。"
+        },
         {
           "date": "2026-10-11",
           "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261011.html",
