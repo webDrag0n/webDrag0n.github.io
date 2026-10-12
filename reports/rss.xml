@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 12 Oct 2026 00:10:16 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 17:10:42 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-10-13</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261013.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261013.html</guid>
+      <pubDate>Tue, 13 Oct 2026 08:00:00 +0000</pubDate>
+      <description>智谱在 Zcode 中灰度上线 GLM-5.3-Highspeed，推理速度达 490 tokens/s；华为诺亚方舟实验室的 Memento 3 智能体以少 56% 的操作量通关 ARC-AGI-3 全部 25 款游戏；模思智能完成超 10 亿元 Pre-A 轮融资，押注全模态实时交互基座；统计显示 2026 年前三季度全球机器人与物理 AI 融资已近 480 亿美元，超过去年全年。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-10-12</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261012.html</link>
