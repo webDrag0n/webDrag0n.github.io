@@ -1,11 +1,17 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-10-12T17:10:42.359933+00:00",
+  "generated_at": "2026-10-13T00:06:55.447244+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
-      "count": 75,
+      "count": 76,
       "items": [
+        {
+          "date": "2026-10-13",
+          "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261013.html",
+          "overview": "小米发布 MiMo-V2.6 全模态系列，以规模化强化学习推动模型自我进化；HuggingFace 日榜由扩散模型在线强化学习（DiffusionART）与多模态空间表征（S-Space）领衔；具身智能方向涌现视觉接地的人形反射控制（Reflex）与个性化 VLA 操作（Splat2Act）；开源社区中 AI Agent 技能生态与安全类 awesome 列表持续升温。",
+          "digest": "本期研究图景呈现三条清晰主线。其一，强化学习重回大模型训练核心：小米 MiMo-V2.6 以规模化 RL 驱动全模态模型自我改进，DiffusionART 则将在线 RL 引入扩散模型对齐，RL 正从后训练工具演变为能力增长的主引擎。其二，智能体研究进入\"环境供给\"阶段：AgentGarten、SoftwareGym 等工作表明，智能体能力的瓶颈已从模型转向可扩展、保真的训练环境，环境合成成为新的基础设施竞赛。其三，具身智能走向纵深：Reflex 的反射式人形控制、Splat2Act 的场景个性化 VLA，均指向从实验室演示到真实部署的关键一跃；配套地，具身安全 awesome 列表的兴起预示社区开始系统性审视该方向的风险面。整体而言，\"自我改进 + 真实部署\"正在取代单纯的规模叙事，成为衡量研究价值的新坐标。"
+        },
         {
           "date": "2026-10-12",
           "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261012.html",

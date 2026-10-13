@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年10月13日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年10月13日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>小米发布 MiMo-V2.6 全模态系列，以规模化强化学习推动模型自我进化；HuggingFace 日榜由扩散模型在线强化学习（DiffusionART）与多模态空间表征（S-Space）领衔；具身智能方向涌现视觉接地的人形反射控制（Reflex）与个性化 VLA 操作（Splat2Act）；开源社区中 AI Agent 技能生态与安全类 awesome 列表持续升温。</p>
+</div>
+
+<!-- ==================== 头条 ==================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>头条焦点</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 头条 / 大模型</div>
+    <div class="source">arXiv 2610.11959 · HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.11959">MiMo-V2.6: Scaling Reinforcement Learning Towards Self-Improvement</a></div>
+    <div class="summary">小米 MiMo 团队发布 V2.6 系列技术报告，提出以强化学习为核心训练范式推动基础模型自我改进。该系列包含原生全模态（omni-modal）模型 MiMo-V2.6-Pro 与兼顾效率的 MiMo-V2.6-Flash，通过扩展 RL 计算规模推进模型智能前沿，权重已在 HuggingFace 开源（MiMo-V2.6-Flash-RL）。</div>
+    <div class="tags">
+      <span class="tag hot">头条</span><span class="tag">LLM</span><span class="tag">强化学习</span><span class="tag">开源权重</span>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 热点 / 生成模型</div>
+    <div class="source">arXiv 2610.12572 · HF Daily Papers 228 票</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.12572">DiffusionART: Efficient, Stable and Scalable Reinforcement of Diffusion Models</a></div>
+    <div class="summary">针对扩散模型的在线强化学习微调，指出逆向过程方法（如 Flow-GRPO）受限于信用分配效率，前向过程方法（如 DiffusionNFT）虽高效但不稳定。DiffusionART 在效率、稳定性与可扩展性之间取得平衡，为黑盒奖励下的扩散模型对齐提供了新范式，登顶 HuggingFace 日榜。</div>
+    <div class="tags">
+      <span class="tag hot">热点</span><span class="tag">扩散模型</span><span class="tag">RLHF</span><span class="tag">生成模型对齐</span>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 多模态与 VLM ==================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态 / VLM</div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.13527 · HF Daily Papers 201 票</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.13527">S-Space: Exploring Spatial Workspace in Multimodal Language Models</a></div>
+    <div class="summary">揭示多模态大语言模型内部存在线性表征子空间 S-Space，其中物体 token 表征编码连续空间关系，为理解 MLLM 空间推理的内部机制提供了可解释性视角。</div>
+    <div class="tags"><span class="tag">MLLM</span><span class="tag">空间推理</span><span class="tag">可解释性</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.07987 · HF Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.07987">VisionWeave: Weaving Elastic Visual Representations as a Native Capability of MLLMs</a></div>
+    <div class="summary">针对 MLLM 中固定尺寸稠密 patch token 带来的高计算成本问题，提出弹性视觉表征机制，根据视觉信息分布的不均匀性按需分配细粒度编码资源，将弹性表征构建为模型的原生能力。</div>
+    <div class="tags"><span class="tag">MLLM</span><span class="tag">高效视觉编码</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.13910 · cs.CL</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.13910">When VLMs Destroy What They Know: Spatial Representations Fall Below Lexical Priors</a></div>
+    <div class="summary">提出 EICS（评估不变概念稳定性）度量与 CASP-VL 基准，检验 VLM 内部表征在受控单概念干预下是否稳定编码结构化空间关系，发现其空间表征质量低于词汇先验，揭示了 VLM 推理能力的表征层面瓶颈。</div>
+    <div class="tags"><span class="tag">VLM</span><span class="tag">表征分析</span><span class="tag">基准</span></div>
+  </div>
+</div>
+
+<!-- ==================== 具身智能与机器人 ==================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>具身智能 / 机器人</div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.12772 · HF Daily Papers 129 票</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.12772">Reflex: Visually Grounded Reactive Humanoid Control</a></div>
+    <div class="summary">面向人形机器人的视觉接地反应式控制：使机器人能够对运动目标进行预判并做出反射式响应（如接球、闪避、接物），将日常人类的瞬时反应能力引入人形控制框架。</div>
+    <div class="tags"><span class="tag">人形机器人</span><span class="tag">全身控制</span><span class="tag">视觉伺服</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.13945 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.13945">Splat2Act: From Captured Scenes to Personalized VLA Manipulation</a></div>
+    <div class="summary">指出通用操作策略（如 π₀.₅）在真实用户场景中的抓取成功率可降至 0%，而逐户采集演示成本过高。Splat2Act 从捕获场景出发自动生成适配数据，实现 VLA 模型的个性化操作适配。</div>
+    <div class="tags"><span class="tag">VLA</span><span class="tag">3DGS</span><span class="tag">操作泛化</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.13929 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.13929">Chronos Policy: Learning Robot Policies on Physical Time</a></div>
+    <div class="summary">针对固定频率观测-动作序列在观测率变化、延迟与推理抖动下失效的问题，Chronos Policy 以观测捕获时间与动作执行时间为条件，将物理时间显式纳入策略学习，提升时序鲁棒性。</div>
+    <div class="tags"><span class="tag">机器人策略</span><span class="tag">时序建模</span></div>
+  </div>
+</div>
+
+<!-- ==================== Agent 与推理 ==================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>Agent 与推理</div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.12374 · HF Daily Papers 259 票</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.12374">AgentGarten: Code Worlds for Evolving Agents</a></div>
+    <div class="summary">提出以代码构建的交互式虚拟世界作为智能体训练场，使智能体在状态一致、可演化的环境中通过探索与交互学习，为智能体能力的可扩展进化提供基础设施。</div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">环境合成</span><span class="tag">自我进化</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.12242 · HF Daily Papers 130 票</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.12242">TokenRouter: Efficient Serving System for Token-Level LLM Routing</a></div>
+    <div class="summary">将 LLM 路由粒度从会话/查询级推进至 token 级，在推理服务中按 token 动态分配不同模型，推进 LLM 服务的成本-质量帕累托前沿。</div>
+    <div class="tags"><span class="tag">LLM 推理</span><span class="tag">模型路由</span><span class="tag">系统</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.12611 · HF Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.12611">SoftwareGym: Scaling Computer-Use Agent Training with Diverse Synthesized Software Environments</a></div>
+    <div class="summary">针对计算机使用智能体（CUA）训练中真实软件环境构建成本高、覆盖面窄的问题，提出可规模化合成多样化且可靠软件环境的方法，支撑 CUA 的大规模训练。</div>
+    <div class="tags"><span class="tag">CUA</span><span class="tag">环境合成</span><span class="tag">Agent 训练</span></div>
+  </div>
+</div>
+
+<!-- ==================== 开源动态 ==================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📦</span>开源与 Awesome 列表动态</div>
+
+  <div class="card">
+    <div class="source">GitHub · x-zheng16/Awesome-Embodied-AI-Safety ⭐152（活跃更新）</div>
+    <div class="title"><a href="https://github.com/x-zheng16/Awesome-Embodied-AI-Safety">Awesome-Embodied-AI-Safety：具身智能安全论文与资源列表</a></div>
+    <div class="summary">围绕《Safety in Embodied AI: A Survey of Risks, Attacks, and Defenses》综述维护的列表，已收录 500+ 论文，覆盖感知、认知、决策与执行层面的具身智能安全风险与防御，本周持续活跃更新，反映具身安全正成为独立研究方向。</div>
+    <div class="tags"><span class="tag">awesome list</span><span class="tag">具身智能</span><span class="tag">AI 安全</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · Frank-ZY-Dou/awesome-ai-3d-modeling-robotics ⭐79（新上榜）</div>
+    <div class="title"><a href="https://github.com/Frank-ZY-Dou/awesome-ai-3d-modeling-robotics">awesome-ai-3d-modeling-robotics：AI 驱动的 3D 建模与机器人控制</a></div>
+    <div class="summary">新增高质量列表，汇集带源码链接的 AI 3D 建模、工业设计与 CAD、机器人控制实例，连接生成式 3D 与具身操作两大热点，适合作为交叉方向入门索引。</div>
+    <div class="tags"><span class="tag">awesome list</span><span class="tag">3D 生成</span><span class="tag">机器人</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · mhtsec/ARTEX ⭐3.5k（10月8日创建）</div>
+    <div class="title"><a href="https://github.com/mhtsec/ARTEX">ARTEX：AI 自主渗透测试系统</a></div>
+    <div class="summary">百度"agent+"攻防挑战赛冠军项目，上线 5 天即获 3.5k+ star，展示 LLM 智能体在安全攻防自动化中的实战能力，是 Agent 落地垂直高风险场景的代表性开源案例。</div>
+    <div class="tags"><span class="tag">开源项目</span><span class="tag">安全 Agent</span><span class="tag hot">Trending</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · sindresorhus/awesome 主仓库</div>
+    <div class="title"><a href="https://github.com/sindresorhus/awesome">sindresorhus/awesome 主索引动态</a></div>
+    <div class="summary">主索引近期以维护性更新为主：清理 17+ 个已归档列表（6 月）、修复 lint 与链接（8–9 月），暂无新 AI 类列表合并；AI 方向的新增高质量列表主要通过社区独立仓库（如上述具身安全、3D 建模列表）生长，Agent 技能类列表（awesome-agent-skills 等）成为新兴细分方向。</div>
+    <div class="tags"><span class="tag">awesome</span><span class="tag">社区生态</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>本期研究图景呈现三条清晰主线。其一，强化学习重回大模型训练核心：小米 MiMo-V2.6 以规模化 RL 驱动全模态模型自我改进，DiffusionART 则将在线 RL 引入扩散模型对齐，RL 正从后训练工具演变为能力增长的主引擎。其二，智能体研究进入"环境供给"阶段：AgentGarten、SoftwareGym 等工作表明，智能体能力的瓶颈已从模型转向可扩展、保真的训练环境，环境合成成为新的基础设施竞赛。其三，具身智能走向纵深：Reflex 的反射式人形控制、Splat2Act 的场景个性化 VLA，均指向从实验室演示到真实部署的关键一跃；配套地，具身安全 awesome 列表的兴起预示社区开始系统性审视该方向的风险面。整体而言，"自我改进 + 真实部署"正在取代单纯的规模叙事，成为衡量研究价值的新坐标。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-10-13</p>
+</div>
+
+</div>
+</body>
+</html>

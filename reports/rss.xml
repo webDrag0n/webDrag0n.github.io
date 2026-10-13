@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 12 Oct 2026 17:10:42 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 00:06:55 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-10-13</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261013.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261013.html</guid>
+      <pubDate>Tue, 13 Oct 2026 08:00:00 +0000</pubDate>
+      <description>小米发布 MiMo-V2.6 全模态系列，以规模化强化学习推动模型自我进化；HuggingFace 日榜由扩散模型在线强化学习（DiffusionART）与多模态空间表征（S-Space）领衔；具身智能方向涌现视觉接地的人形反射控制（Reflex）与个性化 VLA 操作（Splat2Act）；开源社区中 AI Agent 技能生态与安全类 awesome 列表持续升温。</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-10-13</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261013.html</link>

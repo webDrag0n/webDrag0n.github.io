@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-12T17:10:42.362796+00:00",
+  "generated_at": "2026-10-13T00:06:55.449448+00:00",
   "papers": {
-    "date": "2026-10-12",
-    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261012.html",
-    "overview": "本期 ArXiv 呈现三条清晰主线：其一，Agentic World Model 与 具身智能 持续升温，DreamTrue、SuperNav、In-context Robot Learning 等工作把 VLA 与视频世界模型推向可泛化的机器人控制；其二，多模态推理 从\"被动感知\"走向\"预测性空间推理\"（SpaceCast-Bench、FastBench、WOVEN），强调模型对未见状态的前瞻推断；其三，开源与 awesome 生态 围绕新一代 System One / 决策模型（Jev、Claude Opus 5.5）形成爆发式增长，多个高星标 curated list 涌现，社区知识工程进入新一轮周期。",
-    "digest": "本期值得关注的信号有二。其一，具身智能与 Agentic World Model 正在合流——DreamTrue 用反事实后训练补足失败样本，Dex-One2Many 把单条人类视频扩展为多样化操作，VersaCamVLA 解除相机配置约束，方向一致：让机器人策略在分布外仍能稳定工作，是通往通用具身系统的关键工程问题。其二，benchmark 正在从\"静态感知\"转向\"前瞻推理\"，FastBench 与 SpaceCast-Bench 强调对高动态、未见状态的预测，多模态评估进入更严苛阶段。开源侧，rea 单日 2.5 万星说明 Agentic 工具链在安全/逆向领域已形成新势能；awesome 生态围绕 Opus 5.5、Jev、顶会 Figure 库等新型 curated list 呈现爆发，社区知识工程持续升温。"
+    "date": "2026-10-13",
+    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261013.html",
+    "overview": "小米发布 MiMo-V2.6 全模态系列，以规模化强化学习推动模型自我进化；HuggingFace 日榜由扩散模型在线强化学习（DiffusionART）与多模态空间表征（S-Space）领衔；具身智能方向涌现视觉接地的人形反射控制（Reflex）与个性化 VLA 操作（Splat2Act）；开源社区中 AI Agent 技能生态与安全类 awesome 列表持续升温。",
+    "digest": "本期研究图景呈现三条清晰主线。其一，强化学习重回大模型训练核心：小米 MiMo-V2.6 以规模化 RL 驱动全模态模型自我改进，DiffusionART 则将在线 RL 引入扩散模型对齐，RL 正从后训练工具演变为能力增长的主引擎。其二，智能体研究进入\"环境供给\"阶段：AgentGarten、SoftwareGym 等工作表明，智能体能力的瓶颈已从模型转向可扩展、保真的训练环境，环境合成成为新的基础设施竞赛。其三，具身智能走向纵深：Reflex 的反射式人形控制、Splat2Act 的场景个性化 VLA，均指向从实验室演示到真实部署的关键一跃；配套地，具身安全 awesome 列表的兴起预示社区开始系统性审视该方向的风险面。整体而言，\"自我改进 + 真实部署\"正在取代单纯的规模叙事，成为衡量研究价值的新坐标。"
   },
   "media": {
     "date": "2026-10-13",
