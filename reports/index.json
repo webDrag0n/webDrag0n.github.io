@@ -1,6 +1,6 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-10-13T00:06:55.447244+00:00",
+  "generated_at": "2026-10-13T17:13:36.765082+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
@@ -466,8 +466,14 @@
     },
     "media": {
       "title": "AI 科技日报",
-      "count": 75,
+      "count": 76,
       "items": [
+        {
+          "date": "2026-10-14",
+          "url": "https://webdrag0n.github.io/reports/media/daily_media_20261014.html",
+          "overview": "昨日（10月13日）中文 AI 媒体焦点集中于三条主线：其一，DeepSeek 被曝领投腾讯前 AI 科学家胡瀚创立的机器人公司 Winverse AI，梁文锋密集接触具身智能创业者，头部大模型厂商向物理世界延伸的信号明确；其二，AI Infra 融资创纪录——无问芯穹完成 23 亿元 C 轮融资，模思智能获超 10 亿元 Pre-A 轮，星尘智能估值升至 150 亿元；其三，模型侧动态密集，包括疑似 Claude 新模型灰度上线、微软发布 2nm Maia 300 芯片、蚂蚁「灵光 2.0」内测对标 Meta Muse。",
+          "digest": "昨日信息密度集中在「物理 AI」与「基础设施」两个层面。DeepSeek 领投 Winverse AI、星尘智能半年四轮融资、华为哈勃布局触觉传感，表明头部资本正沿「大模型—具身大脑—传感硬件」链条完成纵向布局；无问芯穹 23 亿元 C 轮则印证异构算力调度已成为国产 AI Infra 的核心叙事。模型侧值得关注的是两条暗线：Anthropic 疑似灰度路由新模型，以及其 ARA 安全实验所揭示的自主复制风险——能力演进与失控边界研究正在同步加速。微软 Maia 300 与 QwenGyre 的发布，则显示算力供给与训练框架效率仍是产业竞争的基础变量。"
+        },
         {
           "date": "2026-10-13",
           "url": "https://webdrag0n.github.io/reports/media/daily_media_20261013.html",

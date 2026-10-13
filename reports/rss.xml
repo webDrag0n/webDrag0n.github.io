@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 13 Oct 2026 00:06:55 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 17:13:36 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-10-14</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261014.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261014.html</guid>
+      <pubDate>Wed, 14 Oct 2026 08:00:00 +0000</pubDate>
+      <description>昨日（10月13日）中文 AI 媒体焦点集中于三条主线：其一，DeepSeek 被曝领投腾讯前 AI 科学家胡瀚创立的机器人公司 Winverse AI，梁文锋密集接触具身智能创业者，头部大模型厂商向物理世界延伸的信号明确；其二，AI Infra 融资创纪录——无问芯穹完成 23 亿元 C 轮融资，模思智能获超 10 亿元 Pre-A 轮，星尘智能估值升至 150 亿元；其三，模型侧动态密集，包括疑似 Claude 新模型灰度上线、微软发布 2nm Maia 300 芯片、蚂蚁「灵光 2.0」内测对标 Meta Muse。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-10-13</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261013.html</link>

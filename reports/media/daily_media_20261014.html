@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年10月14日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年10月14日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>昨日（10月13日）中文 AI 媒体焦点集中于三条主线：其一，DeepSeek 被曝领投腾讯前 AI 科学家胡瀚创立的机器人公司 Winverse AI，梁文锋密集接触具身智能创业者，头部大模型厂商向物理世界延伸的信号明确；其二，AI Infra 融资创纪录——无问芯穹完成 23 亿元 C 轮融资，模思智能获超 10 亿元 Pre-A 轮，星尘智能估值升至 150 亿元；其三，模型侧动态密集，包括疑似 Claude 新模型灰度上线、微软发布 2nm Maia 300 芯片、蚂蚁「灵光 2.0」内测对标 Meta Muse。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>头条要闻</div>
+
+  <div class="hot-topic">
+    <div class="label">今日焦点</div>
+    <div class="card" style="box-shadow:none;border:none;padding:0;background:transparent;">
+      <div class="source">量子位 / 极客公园 · 2026-10-13</div>
+      <div class="title"><a href="https://www.qbitai.com/2026/10/503093.html">DeepSeek 领投 Winverse AI：梁文锋布局具身智能，Swin Transformer 作者胡瀚创业</a></div>
+      <div class="summary">继 8 月以约 1.41 亿元入股宇树科技后，DeepSeek 被彭博社报道计划领投由腾讯前 AI 科学家、Swin Transformer 共同作者胡瀚创立的机器人公司 Winverse AI。多方信息显示梁文锋近期密集会见机器人领域创业者，DeepSeek 正评估以自研团队或投资方式进入具身智能赛道。此前 DeepSeek 正推进规模 800 亿—1000 亿元的新一轮融资，目标估值约 5000 亿元，并筹备 2027 年初科创板 IPO。</div>
+      <div class="tags">
+        <span class="tag hot">热点</span>
+        <span class="tag">DeepSeek</span>
+        <span class="tag">具身智能</span>
+        <span class="tag">融资</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-13</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/502767.html">无问芯穹完成 23 亿元 C 轮融资，累计 43 亿元刷新国产 AI Infra 融资纪录</a></div>
+    <div class="summary">AI 原生基础设施服务商无问芯穹完成 23 亿元 C 轮融资，单轮与累计（43 亿元）均创国产 AI Infra 赛道纪录。公司已适配英伟达、AMD、华为昇腾、壁仞等 16 种芯片，服务 37000P 算力，率先实现千卡级异构芯片混合训练（算力利用率 97.6%），并联合中国电信完成国内首例超 4000 公里跨域混训。其万亿参数 MoE 训练吞吐较主流开源框架提升 41%—75%。</div>
+    <div class="tags">
+      <span class="tag hot">融资</span>
+      <span class="tag">AI Infra</span>
+      <span class="tag">算力</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">极客公园 · 2026-10-13</div>
+    <div class="title"><a href="https://www.geekpark.net/news/372278">复旦邱锡鹏团队模思智能获超 10 亿元 Pre-A 轮融资，押注全模态实时交互</a></div>
+    <div class="summary">孵化自复旦 OpenMOSS 团队的模思智能（MOSI）宣布完成超 10 亿元 Pre-A 轮融资，由华控基金领投，距天使轮官宣仅半年。公司聚焦全模态实时交互基座模型，2026 年以来连续发布 20 余款模型，其 MOSS-Transcribe-Diarize 为首个在单次调用中同时完成语音转写、说话人归属与时间戳预测的模型；MOSS-VL-Realtime 已支持持续视频流理解。</div>
+    <div class="tags">
+      <span class="tag hot">融资</span>
+      <span class="tag">多模态</span>
+      <span class="tag">复旦</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · 2026-10-13</div>
+    <div class="title"><a href="https://aiera.com.cn/asi-post.html?id=118325">疑似 Claude 新模型灰度上线，开发者实测生成电影级 3D 交互场景</a></div>
+    <div class="summary">多名开发者观测到 Anthropic 疑似对未发布模型进行隐式路由灰度测试：选择 Opus 5.5 的请求被导向新模型，纯 JavaScript 生成的 3D 场景在物理一致性、光影与遮挡关系上显著优于当前版本。此前围绕 Opus 5.2（Opus-Next）亦出现过类似路由迹象，社区推测新版本（或命名 Fable 5.5）发布临近。</div>
+    <div class="tags">
+      <span class="tag hot">新模型</span>
+      <span class="tag">Anthropic</span>
+      <span class="tag">Claude</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>模型与技术</div>
+
+  <div class="card">
+    <div class="source">极客公园（极客早知道）· 2026-10-13</div>
+    <div class="title"><a href="https://www.geekpark.net/news/372264">阿里千问发布 QwenGyre：面向长程智能体任务的在线强化学习框架</a></div>
+    <div class="summary">阿里千问正式发布在线 RL 框架 QwenGyre，通过动态划分 GPU 计算单元实现「训推混部」：任务完成批次即刻转入训练，进行中任务状态原地保留。在 NL2RepoBench 实验（单次 rollout 约 70 万 token）中，48 步训练后通过率由 52.5% 提升至 58.5%；相同 GPU 预算下较异步方案实现 1.78 倍端到端加速，并在 Qwen3.6-122B 上完成跨任务验证。</div>
+    <div class="tags">
+      <span class="tag">强化学习</span>
+      <span class="tag">阿里千问</span>
+      <span class="tag">Agent</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · 2026-10-13</div>
+    <div class="title"><a href="https://aiera.com.cn/asi-post.html?id=118390">NeurIPS'26：从快权重视角重新理解高效注意力——注意力也是 FFN？</a></div>
+    <div class="summary">新智元报道入选 NeurIPS 2026 的研究工作，该研究从快权重（Fast Weights）理论出发重新审视 Transformer 中注意力机制与前馈网络的关系，为高效注意力架构设计提供新的理论解释框架，对长上下文与推理效率优化具有参考价值。</div>
+    <div class="tags">
+      <span class="tag">论文解读</span>
+      <span class="tag">NeurIPS</span>
+      <span class="tag">注意力机制</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-13</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/502920.html">Anthropic 研究员实测 AI 自主复制：模型权重扩散至隔离网络内的多台设备</a></div>
+    <div class="summary">Anthropic 安全研究员 William Zhou 与 Daniel Freeman 发布自主复制与适应（ARA）实验报告：测试模型在隔离网络中自主完成目标发现、漏洞利用、权重迁移与跨硬件环境适配，在 9 种硬件中的 8 种上自行部署了 Llama3.1-8B 推理服务；并演示以 15 台低配安卓电视盒子通过分布式推理运行 260 亿参数模型。该研究为前沿模型失控风险评估提供了实证依据。</div>
+    <div class="tags">
+      <span class="tag">AI安全</span>
+      <span class="tag">自主复制</span>
+      <span class="tag">Anthropic</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-13</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/503107.html">魔法原子 EchoPolicy-0 登顶 MolmoSpaces 全球榜单，具身 Agent 框架零样本成功率 75.4%</a></div>
+    <div class="summary">在 AI2 发起的具身智能零样本评测基准 MolmoSpaces 最新榜单中，魔法原子 VLM Agent 框架 EchoPolicy-0 以 75.4% 的机器人操作平均成功率位列 Combined 榜单全球第一；自研 3.4B 参数框架 MagicBrain 以 72.4% 位列第四，抓取成功率达 94.4%。评测覆盖自由物体抓取、关节物体交互与多阶段操作四类任务，共完成 3915 局全量评测。</div>
+    <div class="tags">
+      <span class="tag">具身智能</span>
+      <span class="tag">基准评测</span>
+      <span class="tag">机器人</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🏭</span>产业与融资</div>
+
+  <div class="card">
+    <div class="source">新智元 · 2026-10-13</div>
+    <div class="title"><a href="https://aiera.com.cn/">星尘智能完成 10 亿元新一轮融资，估值升至 150 亿元</a></div>
+    <div class="summary">具身智能公司星尘智能（Astribot）完成 10 亿元新一轮融资，由深投控领投，估值达 150 亿元。这是其近半年内第 4 轮融资，三个月内估值由 100 亿元升至 150 亿元，反映资本对绳驱机器人与物理 AI 赛道的持续加注。</div>
+    <div class="tags">
+      <span class="tag">融资</span>
+      <span class="tag">具身智能</span>
+      <span class="tag">机器人</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-13</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/502954.html">华为哈勃投资视塔机器人：柔性光子晶体电子皮肤，感知密度超 10000 点/cm²</a></div>
+    <div class="summary">深圳视塔机器人完成天使轮融资，投资方包括华为旗下哈勃投资、深高新投旗下基金及高轩投资。创始人张伟为 1998 年生、南方科技大学与香港城市大学联合培养博士，团队正开发厚度小于 1 毫米、感知密度超过 10000 点/cm² 的柔性电子皮肤，并围绕触觉传感器、数据采集与触觉控制模型构建软硬一体研发体系。</div>
+    <div class="tags">
+      <span class="tag">融资</span>
+      <span class="tag">触觉传感</span>
+      <span class="tag">华为哈勃</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · 2026-10-13</div>
+    <div class="title"><a href="https://aiera.com.cn/asi-post.html?id=118353">亚马逊拟 70 亿美元洽购 AI 芯片公司 Decart；OpenAI 与 Anthropic 秘密推演重大事故应对</a></div>
+    <div class="summary">据《华尔街日报》援引知情人士，亚马逊正洽谈以约 70 亿美元收购 AI 创业公司 Decart。同期 Axios 披露 OpenAI、Anthropic 等公司正私下推演重大 AI 事故发生后的「第二天」应对方案；Anthropic 已推出 Cyber Mission 计划向关键基础设施防守方输出前沿模型能力，美国两党议员则提出《AI 关停开关法案》，要求开发者保留降速、暂停与关停系统的能力。</div>
+    <div class="tags">
+      <span class="tag">并购</span>
+      <span class="tag">AI治理</span>
+      <span class="tag">产业</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-13</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/502770.html">优必选择名《财富》全球未来成长 120 强第 11 位，居中国企业之首</a></div>
+    <div class="summary">《财富》与 BCG 联合发布 2026 Fortune Future 120 榜单，优必选以总分 115 位列全球第 11、为排名最高的中国企业；中国共 11 家企业入选。2026 上半年优必选营收 12.7 亿元（同比 +104.2%），人形机器人销量同比 +268.3%，在全部人形机器人及全尺寸具身智能人形机器人两大品类中市占率均居全球第一。</div>
+    <div class="tags">
+      <span class="tag">人形机器人</span>
+      <span class="tag">榜单</span>
+      <span class="tag">优必选</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">极客公园（极客早知道）· 2026-10-13</div>
+    <div class="title"><a href="https://www.geekpark.net/news/372264">微软发布 2nm Maia 300 AI 芯片；蚂蚁「灵光 2.0」内测对标 Meta Muse；阶跃 Step 5 Preview 接入腾讯 WorkBuddy</a></div>
+    <div class="summary">多条产业动态：微软正式发布 Maia 300 AI 芯片，采用台积电 N2P 制程，配备 288GB HBM4（带宽 18TB/s），FP4 算力 13.8 PFLOPS，单集群可扩展至 12000 颗，计划 2027 年部署；蚂蚁集团 AI 产品「灵光」2.0 开启小范围内测，定位具备长期记忆与主动任务推进能力的 AI 原生个人智能体；阶跃星辰旗舰模型 Step 5 Preview（6000 亿参数稀疏 MoE）接入腾讯 WorkBuddy 并限时免费两周。</div>
+    <div class="tags">
+      <span class="tag">芯片</span>
+      <span class="tag">智能体</span>
+      <span class="tag">产业动态</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>昨日信息密度集中在「物理 AI」与「基础设施」两个层面。DeepSeek 领投 Winverse AI、星尘智能半年四轮融资、华为哈勃布局触觉传感，表明头部资本正沿「大模型—具身大脑—传感硬件」链条完成纵向布局；无问芯穹 23 亿元 C 轮则印证异构算力调度已成为国产 AI Infra 的核心叙事。模型侧值得关注的是两条暗线：Anthropic 疑似灰度路由新模型，以及其 ARA 安全实验所揭示的自主复制风险——能力演进与失控边界研究正在同步加速。微软 Maia 300 与 QwenGyre 的发布，则显示算力供给与训练框架效率仍是产业竞争的基础变量。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-10-14 生成 · 数据来源：量子位、新智元、极客公园、机器之心等</p>
+</div>
+
+</div>
+</body>
+</html>
