@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 13 Oct 2026 17:13:36 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 00:05:55 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-10-14</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261014.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261014.html</guid>
+      <pubDate>Wed, 14 Oct 2026 08:00:00 +0000</pubDate>
+      <description>视觉定位（Grounding）成为通向具身智能的关键底座——GroundingPI 以 4B 参数刷新物理智能定位基准并登顶 HuggingFace 日榜；推理侧研究聚焦&quot;不思考&quot;行为的度量与抑制（Thinking Inertia）；智能体方向，AgentSWE 与长时程终端智能数据规模化工作共同指向&quot;编码智能体构建智能体&quot;的可靠性评估。开源侧，机器人智能体 awesome list 持续涌现。</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-10-14</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261014.html</link>

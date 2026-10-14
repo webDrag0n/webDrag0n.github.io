@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年10月14日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年10月14日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>视觉定位（Grounding）成为通向具身智能的关键底座——GroundingPI 以 4B 参数刷新物理智能定位基准并登顶 HuggingFace 日榜；推理侧研究聚焦"不思考"行为的度量与抑制（Thinking Inertia）；智能体方向，AgentSWE 与长时程终端智能数据规模化工作共同指向"编码智能体构建智能体"的可靠性评估。开源侧，机器人智能体 awesome list 持续涌现。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>焦点论文</div>
+
+  <div class="hot-topic">
+    <div class="label">HuggingFace 日榜 Top 1 · 246 upvotes</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.39601">GroundingPI: A Grounding Foundation Model towards Physical Intelligence with Visual Primitives</a></div>
+    <div class="summary">提出 4B 参数的视觉定位基础模型 GroundingPI，面向物理智能场景下的精确定位需求——在杂乱环境、微小目标条件下仍能确定"哪个物体是目标、目标在何处"，且推理速度足以支撑闭环控制。论文指出现有 VLA 与世界-动作模型所依赖的通用视觉-语言骨干在此类场景下仍不可靠，GroundingPI 以视觉原语（visual primitives）为核心重构定位能力，为下游操作策略提供高质量感知底座。</div>
+    <div class="tags">
+      <span class="tag hot">多模态/VLM</span>
+      <span class="tag">具身智能</span>
+      <span class="tag">Visual Grounding</span>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">HuggingFace 日榜 Top 2 · 215 upvotes</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.11765">Thinking Inertia: LLMs Keep Thinking When Told Not To</a></div>
+    <div class="summary">系统研究大语言模型的"no-thinking"行为。作者指出既有工作以"关闭思考模式"或"无长思维链"作为 no-thinking 的代理指标均不可靠，并提出新的度量框架。实验揭示 LLM 存在"思维惯性"——即使被显式要求不思考，模型仍会延续推理行为。该研究对推理时计算控制（inference-time compute control）与高效部署具有直接意义。</div>
+    <div class="tags">
+      <span class="tag hot">LLM</span>
+      <span class="tag">推理效率</span>
+      <span class="tag">行为分析</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.13361 · cs.CL · HuggingFace 日榜 Top 3</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.13361">AgentSWE: Can Coding Agents Build the Agent You Actually Want?</a></div>
+    <div class="summary">针对"由编码智能体构建用户所需智能体"这一新兴委托范式，提出基准 AgentSWE。论文指出，现有评估均未检验被交付的智能体是否真正忠实于构建需求，而非仅"看起来可用"。AgentSWE 填补了这一评估空白，对智能体自动生成（agent-generated agents）的可靠性给出可量化的检验框架。</div>
+    <div class="tags">
+      <span class="tag">智能体评估</span>
+      <span class="tag">Benchmark</span>
+      <span class="tag">代码生成</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.13166 · cs.AI · 133 upvotes</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.13166">Scaling Agentic Data for Long-Horizon Terminal Intelligence</a></div>
+    <div class="summary">面向终端智能体（terminal agents）从局部操作走向真实世界专业任务的演进，研究长时程智能体轨迹数据的规模化构建。短轨迹仅能演示命令与工具调用，无法展现智能体如何通过探索积累证据、依据反馈持续调整策略并将中间结果转化为最终交付物。该工作系统化地解决高质量长时程轨迹数据的获取与规模化问题。</div>
+    <div class="tags">
+      <span class="tag">Agentic Data</span>
+      <span class="tag">长时程规划</span>
+      <span class="tag">终端智能体</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态与架构</div>
+
+  <div class="card">
+    <div class="source">arXiv 2609.39600 · cs.CV · 71 upvotes</div>
+    <div class="title"><a href="https://arxiv.org/abs/2609.39600">GroundAnything: Reconciling Parallel Decoding with Precise Visual Grounding at Flash Speed</a></div>
+    <div class="summary">将视觉定位重新表述为"视觉证据提取"问题：物体、位置与空间关系由图像与查询联合约束，其依赖关系并不蕴含内在的从左至右生成顺序。基于该洞察，作者以双向并行解码替代自回归串行预测，在保持定位精度的同时显著降低延迟，实现"极速"（flash-speed）视觉定位。与 GroundingPI 共同构成当日定位方向的双响。</div>
+    <div class="tags">
+      <span class="tag">并行解码</span>
+      <span class="tag">Visual Grounding</span>
+      <span class="tag">推理加速</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.13630 · cs.LG · 34 upvotes</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.13630">Multi-Stream Attention Residuals</a></div>
+    <div class="summary">将 Attention Residuals（沿网络深度轴的单流 softmax 注意力）推广为多头深度注意力机制 MSAR。借鉴序列轴多头注意力的成功经验，该方法在深度维度上实现内容依赖的多流检索，带来显著性能提升，为深层架构中的跨层信息路由提供了新的结构化机制。</div>
+    <div class="tags">
+      <span class="tag">架构创新</span>
+      <span class="tag">Attention</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>具身智能与机器人</div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.13945 · cs.RO · 2026-10-09</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.13945">Splat2Act: From Captured Scenes to Personalized VLA Manipulation</a></div>
+    <div class="summary">面向家庭与办公室场景下的个性化操作需求：用户期望通用操作策略能够识别并抓取"自己的"物体。Splat2Act 从捕获的场景重建（3D Gaussian Splatting 表示）出发，将场景先验注入 VLA 策略，实现从场景捕获到个性化操作的闭环，是通用操作策略落地个人环境的重要一步。</div>
+    <div class="tags">
+      <span class="tag">VLA</span>
+      <span class="tag">3DGS</span>
+      <span class="tag">个性化操作</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.13929 · cs.RO · 2026-10-09</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.13929">Chronos Policy: Learning Robot Policies on Physical Time</a></div>
+    <div class="summary">指出现有机器人策略将感知与控制转换为固定频率的观测-动作序列，物理时间仅隐式编码于序列位置中。Chronos Policy 直接在物理时间上学习策略，使时间信息显式化，提升策略在变速控制与时序敏感任务中的表现，为时序建模提供了新的策略学习视角。</div>
+    <div class="tags">
+      <span class="tag">机器人策略</span>
+      <span class="tag">时序建模</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📦</span>开源与 Awesome 动态</div>
+
+  <div class="card">
+    <div class="source">GitHub · Awesome List 追踪</div>
+    <div class="title"><a href="https://github.com/kairunwen/Awesome-Robot-Use-Agent">Awesome-Robot-Use-Agent</a> · ★156</div>
+    <div class="summary">近期新兴的机器人智能体精选列表，系统收录"机器人使用智能体"（robot-use agent）方向的论文、研究博客、开源工具、基准与社区演示，近一周持续活跃更新，反映具身智能体社区资源的快速整合。同期值得关注的还有 <a href="https://github.com/Agenta-AI/awesome-ai-agent-platforms">awesome-ai-agent-platforms</a>（★428），收录开源 AI 智能体平台与智能体构建框架。另注：sindresorhus/awesome 主仓近期以清理归档列表为主（移除失效列表、修复链接），暂无新增 AI 类列表合并。</div>
+    <div class="tags">
+      <span class="tag">Awesome List</span>
+      <span class="tag">具身智能</span>
+      <span class="tag">资源索引</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 2026-10-14</div>
+    <div class="title"><a href="https://github.com/morluto/rea">morluto/rea</a> 与 <a href="https://github.com/vercel-labs/skills">vercel-labs/skills</a></div>
+    <div class="summary">今日 GitHub 趋势榜中，rea（利用智能体逆向工程任意应用行为直至原生二进制，当日新增 5.4 万星）与 vercel-labs/skills（面向编码智能体的技能包体系）位居前列。两者共同体现"智能体作为软件工程主体"的工具链生态正在快速成型，与今日 AgentSWE 等评估研究形成实践与理论的呼应。</div>
+    <div class="tags">
+      <span class="tag">GitHub Trending</span>
+      <span class="tag">Agent 工具链</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今日研究呈现清晰的双主线。其一，视觉定位正从通用 VLM 附属能力升格为独立的基础模型赛道：GroundingPI 面向物理智能重构定位底座，GroundAnything 则以并行解码消解自回归延迟，二者分别从"精度"与"速度"两端回答了 VLA 闭环控制的感知瓶颈。其二，智能体研究进入"元层级"：AgentSWE 检验编码智能体所构建智能体的需求忠实度，长时程终端数据工作则直面真实专业任务的轨迹规模化，Thinking Inertia 进一步揭示推理计算的行为级失控风险。评估、数据与推理控制同步推进，标志着智能体系统正从演示阶段迈向工程化可靠性阶段。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-10-14</p>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,11 +1,17 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-10-13T17:13:36.765082+00:00",
+  "generated_at": "2026-10-14T00:05:55.469861+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
-      "count": 76,
+      "count": 77,
       "items": [
+        {
+          "date": "2026-10-14",
+          "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261014.html",
+          "overview": "视觉定位（Grounding）成为通向具身智能的关键底座——GroundingPI 以 4B 参数刷新物理智能定位基准并登顶 HuggingFace 日榜；推理侧研究聚焦\"不思考\"行为的度量与抑制（Thinking Inertia）；智能体方向，AgentSWE 与长时程终端智能数据规模化工作共同指向\"编码智能体构建智能体\"的可靠性评估。开源侧，机器人智能体 awesome list 持续涌现。",
+          "digest": "今日研究呈现清晰的双主线。其一，视觉定位正从通用 VLM 附属能力升格为独立的基础模型赛道：GroundingPI 面向物理智能重构定位底座，GroundAnything 则以并行解码消解自回归延迟，二者分别从\"精度\"与\"速度\"两端回答了 VLA 闭环控制的感知瓶颈。其二，智能体研究进入\"元层级\"：AgentSWE 检验编码智能体所构建智能体的需求忠实度，长时程终端数据工作则直面真实专业任务的轨迹规模化，Thinking Inertia 进一步揭示推理计算的行为级失控风险。评估、数据与推理控制同步推进，标志着智能体系统正从演示阶段迈向工程化可靠性阶段。"
+        },
         {
           "date": "2026-10-13",
           "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261013.html",
