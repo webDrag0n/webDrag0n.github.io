@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 14 Oct 2026 00:05:55 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 17:08:04 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-10-15</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261015.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261015.html</guid>
+      <pubDate>Thu, 15 Oct 2026 08:00:00 +0000</pubDate>
+      <description>昨日（10月14日）中文 AI 媒体焦点集中于三条主线：其一，谷歌 Gemini 4 Argon 全球开放，标志其重返前沿模型竞争，并同步推出机器人专属变体；其二，端侧智能取得实质进展——面壁智能开源 35B MoE 多模态模型 MiniCPM-V 4.7（3GB 内存端侧可跑）、阶跃终端发布首款智能体原生手机 STEPX Neo；其三，资本持续加码头部标的，DeepSeek 新一轮融资规模被曝由 500 亿元增至约 1000 亿元，宁德时代拟增资百亿。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-10-14</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261014.html</link>

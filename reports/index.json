@@ -1,6 +1,6 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-10-14T00:05:55.469861+00:00",
+  "generated_at": "2026-10-14T17:08:04.120462+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
@@ -472,8 +472,14 @@
     },
     "media": {
       "title": "AI 科技日报",
-      "count": 76,
+      "count": 77,
       "items": [
+        {
+          "date": "2026-10-15",
+          "url": "https://webdrag0n.github.io/reports/media/daily_media_20261015.html",
+          "overview": "昨日（10月14日）中文 AI 媒体焦点集中于三条主线：其一，谷歌 Gemini 4 Argon 全球开放，标志其重返前沿模型竞争，并同步推出机器人专属变体；其二，端侧智能取得实质进展——面壁智能开源 35B MoE 多模态模型 MiniCPM-V 4.7（3GB 内存端侧可跑）、阶跃终端发布首款智能体原生手机 STEPX Neo；其三，资本持续加码头部标的，DeepSeek 新一轮融资规模被曝由 500 亿元增至约 1000 亿元，宁德时代拟增资百亿。",
+          "digest": "昨日的行业图景呈现出清晰的收敛趋势：大模型竞争正从参数与基准的军备竞赛，转向「可触达的执行能力」。谷歌 Gemini 4 Argon 携机器人专属变体重返前沿，印证头部实验室已将物理世界行动能力纳入旗舰模型的核心叙事；而面壁智能 35B MoE 以 3GB 内存登陆端侧，则从另一极证明高效架构设计正在消解云端与终端的能力鸿沟。更值得关注的是交互范式的转移——STEPX Neo 的智能体原生系统、千问 Go 的跨平台办事能力、Reflex Agent 的循环工作机制，共同指向 Agent 由「对话界面」演进为「操作系统级存在」的产业共识。资本端，DeepSeek 融资规模半月翻倍至千亿，显示市场对头部资产定价逻辑的重估。递归自我改进时间表的前移，则为上述繁荣增添了必须正视的安全注脚。"
+        },
         {
           "date": "2026-10-14",
           "url": "https://webdrag0n.github.io/reports/media/daily_media_20261014.html",

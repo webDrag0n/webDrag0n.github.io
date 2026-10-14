@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年10月15日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年10月15日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>昨日（10月14日）中文 AI 媒体焦点集中于三条主线：其一，谷歌 Gemini 4 Argon 全球开放，标志其重返前沿模型竞争，并同步推出机器人专属变体；其二，端侧智能取得实质进展——面壁智能开源 35B MoE 多模态模型 MiniCPM-V 4.7（3GB 内存端侧可跑）、阶跃终端发布首款智能体原生手机 STEPX Neo；其三，资本持续加码头部标的，DeepSeek 新一轮融资规模被曝由 500 亿元增至约 1000 亿元，宁德时代拟增资百亿。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>头条要闻</div>
+
+  <div class="hot-topic">
+    <div class="label">今日焦点</div>
+    <div class="card" style="box-shadow:none;border:none;padding:0;background:transparent;">
+      <div class="source">极客公园 / 综合 · 2026-10-14</div>
+      <div class="title"><a href="https://www.geekpark.net/news/372304">谷歌 Gemini 4 Argon 全球开放：时隔七个月重返前沿模型竞争，同步推出机器人专属变体</a></div>
+      <div class="summary">谷歌于 10 月 13 日至 14 日面向全球开发者与企业正式开放 Gemini 4 Argon，可通过 AI Studio、Gemini API 及 Antigravity 调用，Ultra 与 Pro 订阅用户同步获得访问权限。该模型聚焦编码、金融、法律、网络安全与科学等复杂现实任务，在多项领域基准上达到前沿水平（Artificial Analysis 评分 53，与 GPT-6 Astra 持平），支持百万级输出 Token，限时定价为每百万输入 2 美元、输出 10 美元。值得注意的是，谷歌同步发布了机器人专属变体，并成功驱动 Apptronik Apollo 人形机器人，标志着其向物理具身智能的战略延伸。</div>
+      <div class="tags">
+        <span class="tag hot">热点</span>
+        <span class="tag">新模型</span>
+        <span class="tag">Google</span>
+        <span class="tag">具身智能</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-14</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/503109.html">面壁智能开源 MiniCPM-V 4.7：35B MoE 多模态模型，3GB 内存即可在 iPhone 断网流畅运行</a></div>
+    <div class="summary">面壁智能联合 OpenBMB 正式开源 MiniCPM-V 4.7，包含 35B-A3B（系列首个 MoE 模型，总参数 35B、激活 3B）与 1B 两个版本。35B-A3B 在 iPhone 17 Pro Max 上以约 3GB 内存占用实现每秒 13+ Token 的解码速度，MMBench 达 91.72、MMMU 80.22、OmniDocBench v1.6 达 94.24（领先同梯队模型 12 分以上）；视觉压缩至 16 倍后精度损失不足 1 个点。官方称其为首个端侧流畅运行且性能无损的开源 MoE 多模态模型。</div>
+    <div class="tags">
+      <span class="tag hot">新模型</span>
+      <span class="tag">开源</span>
+      <span class="tag">端侧AI</span>
+      <span class="tag">多模态</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">极客公园（极客早知道）· 2026-10-14</div>
+    <div class="title"><a href="https://www.geekpark.net/news/372304">DeepSeek 新一轮融资临近完成：规模由 500 亿元增至约 1000 亿元，宁德时代拟增资百亿</a></div>
+    <div class="summary">据多名交易人士透露，DeepSeek 最新一轮融资拟融资金额在不到半个月内由 500 亿元翻倍至约 1000 亿元。新进投资方包括石溪资本、中芯聚源、CPE 源峰、君联资本、吉利等产业资本；老股东宁德时代拟加码约 100 亿元（首轮出资约 50 亿元），腾讯、IDG 资本、砺思资本、拾象资本亦在名单之中。本轮融资的加速扩容反映市场对头部国产大模型资产的高度追捧。</div>
+    <div class="tags">
+      <span class="tag hot">融资</span>
+      <span class="tag">DeepSeek</span>
+      <span class="tag">产业资本</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-14</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/503201.html">阶跃终端发布首款大模型原生智能体手机 STEPX Neo，搭载 Step AOS 1.0 与智能体阶跃 Amoo</a></div>
+    <div class="summary">大模型原生 AI 终端品牌 STEPX（阶跃终端）于 10 月 13 日在上海发布首款智能体原生手机 STEPX Neo，并已在京东、天猫、抖音同步开售。产品搭载从零为智能体构建的操作系统 Step AOS 1.0，将长期记忆、任务调度与安全机制融入系统底层，采用「双域记忆」架构区分用户域与智能体域；硬件上配备六麦克风阵列、低功耗音频感知芯片与 MiniLED 点阵背屏。该发布是消费级 Agent 硬件化的重要试水产品。</div>
+    <div class="tags">
+      <span class="tag">新产品</span>
+      <span class="tag">Agent</span>
+      <span class="tag">AI硬件</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>模型与技术</div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-14</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/503165.html">APUS AI 开源 Reflex Agent：响应速度最快达 Claude Code 3 倍，以记忆引擎支撑长周期任务</a></div>
+    <div class="summary">APUS AI 宣布以 MIT 协议开源 Personal Agent 产品 Reflex Agent。该产品基于自研决策模型 Reflex 构建 Harness，由模型承担模型路由、技能选择、结果审查与执行监督等决策职能，形成「决策—执行—反馈—再决策」的 Loop Working 循环；结合 Continuum 记忆引擎实现跨任务的历史信息按需检索，使 Agent 记忆不再受限于单次上下文窗口。实测响应速度最快可达 Claude Code、Codex 等主流 Agent 的 3 倍，提供桌面端、Web 与 SDK。</div>
+    <div class="tags">
+      <span class="tag">开源</span>
+      <span class="tag">Agent</span>
+      <span class="tag">APUS</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-14</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/503172.html">破晓智能联合天珑移动发布 SeePhys Hub：全身全模态数据采集系统补齐 Ego 数据缺失的身体与触觉信息</a></div>
+    <div class="summary">针对第一视角（Ego）数据难以完整记录全身姿态与接触力的问题，破晓智能于 10 月 14 日发布全身全模态数据采集系统 SeePhys Hub。设备由四目头环（360° 环视）、双腕手环、三个腰腿部动作追踪器与可选触觉手套组成，融合 IMU、UWB 测距与视觉信号恢复全身姿态，同步精度不超过 0.5 毫秒，头环重量不超过 220 克。创始人杨朔将其定位在「互联网视频—高精度动捕」数据金字塔的中间层，兼顾规模化采集潜力与完整交互记录。</div>
+    <div class="tags">
+      <span class="tag">具身智能</span>
+      <span class="tag">数据采集</span>
+      <span class="tag">可穿戴设备</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">极客公园 · 2026-10-14</div>
+    <div class="title"><a href="https://www.geekpark.net/news/372304">Anthropic 联创 Jack Clark：递归自我改进或于 2027 年实现，前沿模型科研效率已达人类专家 2.3 倍</a></div>
+    <div class="summary">Anthropic 联合创始人 Jack Clark 在最新一期《Import AI》中指出，AI 的科研创造力正快速提升，完整递归自我改进（RSI）的实现时间预期由 2028 年提前至 2027 年。P-Zero Research 新基准 TasteVal 显示，自 2025 年 12 月以来前沿模型的实验研究能力平均每 3 个月翻一番，Claude Opus 5.5 在实验设计与结果分析任务上显著超过 24 位专家构成的人类基准，计算资源效率达人类专家的 2.3 倍，单次尝试成本约为专家的 1/30。</div>
+    <div class="tags">
+      <span class="tag">AI安全</span>
+      <span class="tag">Anthropic</span>
+      <span class="tag">前沿研究</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🏭</span>产业与资本</div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-14</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/503198.html">铭芯启睿完成国际首款 1T4R 1Gb RRAM 芯片流片：密度 30Mb/mm²，访问延时小于 20ns</a></div>
+    <div class="summary">MemSilicon（铭芯启睿）于 10 月 12 日宣布完成基于 1TnR 技术路线的首代高密度、大容量 RRAM 芯片「泰山一号」流片。该芯片采用 28nm CMOS 工艺与 1T4R 单元结构，单芯片容量 1Gb，存储密度达 30Mb/mm²，访问延时小于 20ns，并集成片上硬件纠错电路。该技术路线与 CMOS 后道集成完全兼容，面向具身智能、AI PC 等终端对片上高密度大容量非易失存储的需求。</div>
+    <div class="tags">
+      <span class="tag">芯片</span>
+      <span class="tag">存储</span>
+      <span class="tag">RRAM</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-14</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/503173.html">商汤大装置助力上海量子城市首批政务智能体落地，防汛调度效率提升 80%</a></div>
+    <div class="summary">由商汤大装置与上海市规划资源局联合打造的「云宇星空大模型」完成升级，并基于此发布量子城市首批政务智能体，包括「禹智河洛」防汛智能体、「大略之眼」空间洞察智能体与「详规小工单」规划更新智能体。该模型作为全国首个规划资源领域行业基础大模型，已形成 1.3 万对高质量问答与 15 亿 Token 语料，覆盖规划设计、测绘地理与自然资源等领域，防汛调度场景效率提升达 80%。</div>
+    <div class="tags">
+      <span class="tag">政务AI</span>
+      <span class="tag">商汤</span>
+      <span class="tag">智能体落地</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">极客公园（极客早知道）· 2026-10-14</div>
+    <div class="title"><a href="https://www.geekpark.net/news/372304">千问 Personal Agent「千问 Go！」即将发布：可跨平台自主办事，实测为用户争取现金赔偿</a></div>
+    <div class="summary">阿里巴巴即将发布千问 Personal Agent「千问 Go！」，定位全球首个能为用户办事的个人 AI 助理，基于阿里生态与开放平台实现购物、打车、快递、理财等能力。实测案例显示其可自主查询航班延误信息并对接客服、拒绝代金券方案为用户争取到 70 元现金赔偿，亦可核查淘宝订单识别价保资格并退回差价。升级后的千问可自主查询操作各类授权平台，比对方案并完成目标任务。</div>
+    <div class="tags">
+      <span class="tag">Agent</span>
+      <span class="tag">阿里</span>
+      <span class="tag">个人助理</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🌐</span>应用与生态</div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-14</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/503211.html">AI 综艺成为内容新形态：AI 版「MrBeast」单条视频 189 万赞，LibTV 联合抖音扶持头部创作者</a></div>
+    <div class="summary">AI 生成内容正从短视频片段走向完整的综艺节目形态。创作者账号「十万个挑战」以 AI 制作的竞技挑战内容获得单条 189 万赞、账号粉丝超 200 万，商单报价达 15 万元；另一账号用 AI 重制经典综艺《变形计》，三期视频涨粉 12.7 万。AI 创作平台 LibTV 已与抖音「未来导演扶持计划」达成合作，联合扶持 AI 综艺创作。AI 正在重写综艺内容的成本结构与生产逻辑。</div>
+    <div class="tags">
+      <span class="tag">AIGC</span>
+      <span class="tag">内容生态</span>
+      <span class="tag">AI综艺</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">极客公园（极客早知道）· 2026-10-14</div>
+    <div class="title"><a href="https://www.geekpark.net/news/372304">苹果推出 Siri AI 带屏音箱 Apple HomeView：299 美元，支持最多六位家庭成员面部识别</a></div>
+    <div class="summary">苹果于 10 月 13 日推出智能家居管理设备 Apple HomeView，标准版与壁挂版均定价 299 美元，首批上市国家当日开启预购、11 月 13 日正式开售。设备搭载 A18 芯片与 7 英寸 Liquid Retina 显示屏，整合基于 Apple Intelligence 的 Siri AI，支持面部识别并可为最多六位家庭成员切换个性化内容，覆盖信息、FaceTime、日历与「查找」等应用，隐私与个性化隔离为设计核心。</div>
+    <div class="tags">
+      <span class="tag">苹果</span>
+      <span class="tag">AI硬件</span>
+      <span class="tag">智能家居</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>昨日的行业图景呈现出清晰的收敛趋势：大模型竞争正从参数与基准的军备竞赛，转向「可触达的执行能力」。谷歌 Gemini 4 Argon 携机器人专属变体重返前沿，印证头部实验室已将物理世界行动能力纳入旗舰模型的核心叙事；而面壁智能 35B MoE 以 3GB 内存登陆端侧，则从另一极证明高效架构设计正在消解云端与终端的能力鸿沟。更值得关注的是交互范式的转移——STEPX Neo 的智能体原生系统、千问 Go 的跨平台办事能力、Reflex Agent 的循环工作机制，共同指向 Agent 由「对话界面」演进为「操作系统级存在」的产业共识。资本端，DeepSeek 融资规模半月翻倍至千亿，显示市场对头部资产定价逻辑的重估。递归自我改进时间表的前移，则为上述繁荣增添了必须正视的安全注脚。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-10-15</p>
+</div>
+
+</div>
+</body>
+</html>
