@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年10月17日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年10月17日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>昨日（10月16日）中文 AI 媒体焦点集中于三条主线：其一，谷歌 Gemini 4 Argon 正式向全球开发者开放，评测对标 GPT-6 Astra 与 Opus 5.5，API 定价限时五折，标志谷歌重返前沿模型竞争第一梯队；其二，智能体能力向浏览器与企业纵深渗透——OpenAI 将 computer use 能力下放至 ChatGPT Chrome 扩展全量用户，国产 Work Agent 赛道多家厂商正面竞争；其三，具身智能持续高热，中国羽毛球机器人获吉尼斯纪录并获波士顿动力前高管认可，四川具身科技获超亿元融资押注情感陪伴人形机器人，清华系创业者持续入局物理世界模型。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>头条要闻</div>
+
+  <div class="hot-topic">
+    <div class="label">今日焦点</div>
+    <div class="card" style="box-shadow:none;border:none;padding:0;background:transparent;">
+      <div class="source">量子位 · 2026-10-16</div>
+      <div class="title"><a href="https://www.qbitai.com/2026/10/503701.html">谷歌 Gemini 4 Argon 正式开放：编程与复杂任务能力对标前沿，API 限时半价</a></div>
+      <div class="summary">谷歌于 10 月 16 日面向全球开发者、企业及付费订阅用户陆续开放 Gemini 4 Argon。该代模型主要加强编程、专业知识工作和复杂任务的持续执行能力，并推进视觉理解、空间推理与工具调用能力。谷歌自家评测覆盖办公、智能体编程、机器学习与科学推理等方向，整体达到 GPT-6 Astra、Opus 5.5 水平；第三方 Artificial Analysis 智能指数中，Argon High 与 GPT-6 Astra Max、Claude Fable 5.1 Max 并列 53 分。成本方面，Argon High 平均每任务成本 1.99 美元，比 Astra 低约 39%；API 首发定价为每百万输入 Token 2 美元、输出 10 美元（约为 Opus 5.5 的一半、Astra 的五分之一），优惠截至 11 月 30 日。</div>
+      <div class="tags">
+        <span class="tag hot">热点</span>
+        <span class="tag">新模型</span>
+        <span class="tag">Google</span>
+        <span class="tag">定价策略</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · 2026-10-16</div>
+    <div class="title"><a href="https://aiera.com.cn/">OpenAI 升级 ChatGPT Chrome 扩展：computer use 能力全量下放，跨标签页自动操作</a></div>
+    <div class="summary">OpenAI 正式官宣 ChatGPT 重大升级，将计算机使用（computer use）能力全面引入 Chrome 浏览器扩展。用户无需切换至专属 Work 模式，在普通聊天框内即可让模型翻阅多个打开的标签页进行对比、提炼与操作；新版侧边栏完整同步历史记录，所有 ChatGPT 套餐用户即日起免费使用。此举被视为 OpenAI 将 Agent 能力下沉至浏览器交互层的标志性动作，亦被市场解读为对 Anthropic Fable 5.5 及 Chrome 侧竞争的直接回应。</div>
+    <div class="tags">
+      <span class="tag hot">新产品</span>
+      <span class="tag">OpenAI</span>
+      <span class="tag">Agent</span>
+      <span class="tag">浏览器</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-16</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/503843.html">优必选发布 Thinker-WM：多模态统一表征世界模型，霸榜三大基准、单模型实现六大能力</a></div>
+    <div class="summary">优必选 Thinker 团队发布世界模型 Thinker-WM，基于统一的多模态表征（UDT）在单一模型内实现六项能力，并在三大基准上取得领先。研究团队设计了轻量级 Motion Probe（运动探针）验证实验：在冻结的 UDT 视觉表征上仅训练极小的运动预测头，即可恢复末端执行器位移，证明其视觉表征内蕴物理运动信息。该工作为机器人「看懂世界」到「预演下一步」的具身大脑路径提供了表征层面的实证依据。</div>
+    <div class="tags">
+      <span class="tag">世界模型</span>
+      <span class="tag">具身智能</span>
+      <span class="tag">优必选</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · 2026-10-16</div>
+    <div class="title"><a href="https://aiera.com.cn/">决策模型竞争加剧：国产决策模型新版本登顶，Liquid AI d1-ultra 免费开放</a></div>
+    <div class="summary">决策模型赛道于 10 月 16 日出现密集发布：国产决策模型新版本在相关榜单上实现对既有领先者 Jev 的断层领先；同日 Liquid AI 发布多模态决策模型 d1-ultra，在 Artificial Analysis 决策榜以 65 分登顶（Jev 为 58 分），并宣布路由判题输出 Token 全免费。决策模型作为 Agent 路由与判题的核心组件，正成为模型厂商差异化竞争的新焦点。</div>
+    <div class="tags">
+      <span class="tag">新模型</span>
+      <span class="tag">Agent</span>
+      <span class="tag">决策模型</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能与机器人</div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-16</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/503756.html">中国机器人羽毛球连打 1452 拍获吉尼斯纪录，波士顿动力前高管公开认可</a></div>
+    <div class="summary">浙江深辰凯动科技研发的羽毛球机器人实现连续对打 1452 拍并获吉尼斯世界纪录认证。波士顿动力前首席战略官 Marc Theermann 公开点评指出：羽毛球拦截需完成三维轨迹预测、AMR 移动平台与机械臂的实时协同，以及高速计算闭环，这一能力组合与物流仓储自动化中不规则物体高速分拣、动态拦截等核心难题同构。该公司由 A 股上市公司大千生态与前俄亥俄州立大学终身教授宣东团队于 2025 年 3 月联合发起，定位通用物理运动平台而非体育设备。</div>
+    <div class="tags">
+      <span class="tag hot">机器人</span>
+      <span class="tag">运动控制</span>
+      <span class="tag">吉尼斯纪录</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-16</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/503865.html">世界模型与 VLA 融合路径观察：蚂蚁灵波「通用大脑」跨 17 品牌 20 构型上岗药房</a></div>
+    <div class="summary">量子位发布关于世界模型与视觉-语言-动作（VLA）模型如何构建机器人「具身大脑」的行业观察。案例显示，张江 AI 创新小镇企业蚂蚁灵波的「灵波通用大脑」在预训练阶段适配 17 个主流机器人品牌、20 种机器人构型，实现同一大脑跨本体、跨任务运行，搭载该大脑的机器人已在上海国大药房多家门店正式上岗。行业共识正从「看懂世界」的感知表征转向「预演下一步」的预测与规划能力。</div>
+    <div class="tags">
+      <span class="tag">VLA</span>
+      <span class="tag">世界模型</span>
+      <span class="tag">商业化落地</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🏭</span>产业与资本</div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-16</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/503782.html">四川具身科技完成超 1 亿元 Pre-A 轮融资，押注「情绪价值」人形机器人爱湫</a></div>
+    <div class="summary">四川具身人形机器人科技有限公司（EIR）完成超 1 亿元 Pre-A 轮融资，与人形机器人中试熟化项目形成四川省、市、县三级国资联动支持格局。资金将用于标志性产品「爱湫」的迭代研发、万台级生产基地建设及销售体系搭建。EIR 提出 Emotion Native 理念，将情感陪伴作为产品原生目标，采用国内独创的 3D 超短焦投影面部方案呈现仿生表情；爱湫售价 9.8 万元起，为中小型双足人形机器人提供了新的价格竞争坐标。</div>
+    <div class="tags">
+      <span class="tag hot">融资</span>
+      <span class="tag">人形机器人</span>
+      <span class="tag">情感计算</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-16</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/503880.html">清华特奖得主入局物理世界模型：GeoPT 一作开启 AI 创业</a></div>
+    <div class="summary">又一位清华特等奖学金得主加入 AI 创业浪潮：GeoPT 论文第一作者入局物理世界模型方向创业。物理世界模型（Physical World Model）作为连接仿真与真实物理推理的关键技术，正成为高校顶尖人才创业的热门赛道，与前一日披露的梁文锋投资 Swin Transformer 作者布局具身大脑形成呼应，显示资本与人才正同步向具身智能底层技术汇聚。</div>
+    <div class="tags">
+      <span class="tag">创业</span>
+      <span class="tag">世界模型</span>
+      <span class="tag">清华系</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-16</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/503815.html">亚马逊 CTO Werner Vogels：警惕以恐惧驱动企业 AI 决策</a></div>
+    <div class="summary">68 岁的亚马逊 CTO Werner Vogels 在深圳交流中指出，企业不应因「错过 AI 窗口」的焦虑而仓促决策，「企业不会因为此刻没有用上 AI 就立即倒闭」。他建议企业在行动前让工程师与管理者充分理解技术能力边界，并以 2004 年亚马逊数据库故障后团队重构数据架构的亲身经历说明：真正有效的技术转型源于对自身问题结构的清晰认知，而非对新技术的恐慌性追逐。该观点为当前企业级 AI 落地热潮提供了审慎的方法论参照。</div>
+    <div class="tags">
+      <span class="tag">观点</span>
+      <span class="tag">企业AI</span>
+      <span class="tag">亚马逊</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🌐</span>模型动态与生态</div>
+
+  <div class="card">
+    <div class="source">新智元 · 2026-10-16</div>
+    <div class="title"><a href="https://aiera.com.cn/">OpenAI 全量推送全双工语音模型 GPT-Live-1.1：覆盖三大产品，新增 13 种声线</a></div>
+    <div class="summary">OpenAI 正式向所有用户全量推送全双工语音模型更新 GPT-Live-1.1，同步覆盖 ChatGPT、Codex 与 dots 三大产品，API 接口将于近期上线。本次更新新增 13 种声线，大幅削减对话卡顿时的「正在查询」等待提示，法语、德语、印地语、韩语等多语言声线的口音纯正度与表达丰富度显著提升。语音交互的流畅度竞争已成为头部模型厂商产品体验角力的新维度。</div>
+    <div class="tags">
+      <span class="tag">语音模型</span>
+      <span class="tag">OpenAI</span>
+      <span class="tag">产品更新</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · 2026-10-16</div>
+    <div class="title"><a href="https://aiera.com.cn/">英伟达开源 Nemotron 3.5 Super VL：120B 参数仅激活 12B，并发布 24GB 端侧版 Bolt</a></div>
+    <div class="summary">英伟达开源多模态模型 Nemotron 3.5 Super VL，总参数 120B、每次推理仅激活 12B，原生支持 1M 上下文，训练数据与配方一并公开，已上线 OpenRouter，单张 GPU 智能体任务吞吐最高提升 5 倍。同日发布的 Nemotron 3.5 Bolt 24GB 端侧版本采用 74B 总参、9B 激活的稀疏架构，可在单卡 24GB 显存消费级显卡运行，结合投机解码在 RTX Spark 上实现每秒约 84 Token 吞吐，推动大参数智能体向桌面端迁移。</div>
+    <div class="tags">
+      <span class="tag">开源</span>
+      <span class="tag">英伟达</span>
+      <span class="tag">MoE</span>
+      <span class="tag">端侧AI</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · 2026-10-16</div>
+    <div class="title"><a href="https://aiera.com.cn/">微软下一代基础模型 MAI-Base-2 完成预训练；Claude Fable 5.5 现身 Azure 正式可用</a></div>
+    <div class="summary">微软 AI 团队于 10 月 15 日完成下一代基础模型 MAI-Base-2 的预训练，被视为预训练阶段最耗算力关卡的通过；与此同时，Anthropic 的 Claude Fable 5.5 已出现在微软 Azure East US 2 模型目录中，状态为「正式可用」，两家在模型供给层面的合作关系进一步深化。基础模型阵营的重整（OpenAI—微软—Anthropic—谷歌）正进入新一轮竞合格局。</div>
+    <div class="tags">
+      <span class="tag">微软</span>
+      <span class="tag">Anthropic</span>
+      <span class="tag">基础模型</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · 2026-10-16</div>
+    <div class="title"><a href="https://aiera.com.cn/">前 OpenAI 可解释性主管发布《Zoom In》：万亿参数模型多数神经元职责单一可解</a></div>
+    <div class="summary">Goodfire 联合前 OpenAI 机制可解释性主管 Nick Cammarata 发布研究《Zoom In》，证实当前方法已能理解高达万亿参数模型中的绝大多数神经元，且现代大模型神经元职责呈现高度单一清晰的特征。该结论直接挑战了 Anthropic CEO Dario Amodei 此前「可解释性突破仍需 5 到 10 年」的判断，被部分业内人士视为深度学习机制可解释性方向的历史性进展，为超级智能的可读性与可控性研究提供了新的乐观依据。</div>
+    <div class="tags">
+      <span class="tag">可解释性</span>
+      <span class="tag">前沿研究</span>
+      <span class="tag">AI安全</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · 2026-10-16</div>
+    <div class="title"><a href="https://aiera.com.cn/">谷歌量子 AI 团队在 Willow 芯片实证「魔态培育」：错误率降低约 40 倍</a></div>
+    <div class="summary">谷歌量子人工智能团队在 Willow 芯片上首次于真实硬件中实证「魔态培育」（Magic State Cultivation）协议，将逻辑错误率降低约 40 倍，攻克了物理学界探索 20 余年的量子纠错关键瓶颈。该进展为容错量子计算的资源开销控制提供了新的工程路径，是量子计算走向实用化的重要节点。</div>
+    <div class="tags">
+      <span class="tag">量子计算</span>
+      <span class="tag">Google</span>
+      <span class="tag">基础研究</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>昨日行业叙事呈现显著的「落地收敛」特征。模型层，谷歌 Gemini 4 Argon 以对标前沿的评测成绩与五折定价策略重返第一梯队，叠加 Liquid AI 与国产决策模型的同日登顶，表明基础模型竞争正从单点能力比拼转向「性能—成本」综合曲线的工程化较量。应用层，OpenAI 将 computer use 能力无门槛下放至 Chrome 扩展，标志 Agent 从独立产品形态向浏览器等存量入口渗透，交互入口的争夺已进入实质阶段。具身智能方向，羽毛球机器人的吉尼斯纪录、世界模型表征的基准突破与亿元级融资并行，显示该领域正经历从演示验证到商业化定价的关键跨越。值得关注的结构性信号是：机制可解释性研究对「十年共识」的颠覆，或将在中期重塑大模型安全监管的技术前提。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-10-17</p>
+</div>
+
+</div>
+</body>
+</html>

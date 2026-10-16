@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 16 Oct 2026 00:08:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 17:11:04 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-10-17</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261017.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261017.html</guid>
+      <pubDate>Sat, 17 Oct 2026 08:00:00 +0000</pubDate>
+      <description>昨日（10月16日）中文 AI 媒体焦点集中于三条主线：其一，谷歌 Gemini 4 Argon 正式向全球开发者开放，评测对标 GPT-6 Astra 与 Opus 5.5，API 定价限时五折，标志谷歌重返前沿模型竞争第一梯队；其二，智能体能力向浏览器与企业纵深渗透——OpenAI 将 computer use 能力下放至 ChatGPT Chrome 扩展全量用户，国产 Work Agent 赛道多家厂商正面竞争；其三，具身智能持续高热，中国羽毛球机器人获吉尼斯纪录并获波士顿动力前高管认可，四川具身科技获超亿元融资押注情感陪伴人形机器人，清华系创业者持续入局物理世界模型。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-10-16</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261016.html</link>

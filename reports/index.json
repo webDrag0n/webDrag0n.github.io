@@ -1,6 +1,6 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-10-16T00:08:00.753986+00:00",
+  "generated_at": "2026-10-16T17:11:04.289472+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
@@ -478,8 +478,14 @@
     },
     "media": {
       "title": "AI 科技日报",
-      "count": 77,
+      "count": 78,
       "items": [
+        {
+          "date": "2026-10-17",
+          "url": "https://webdrag0n.github.io/reports/media/daily_media_20261017.html",
+          "overview": "昨日（10月16日）中文 AI 媒体焦点集中于三条主线：其一，谷歌 Gemini 4 Argon 正式向全球开发者开放，评测对标 GPT-6 Astra 与 Opus 5.5，API 定价限时五折，标志谷歌重返前沿模型竞争第一梯队；其二，智能体能力向浏览器与企业纵深渗透——OpenAI 将 computer use 能力下放至 ChatGPT Chrome 扩展全量用户，国产 Work Agent 赛道多家厂商正面竞争；其三，具身智能持续高热，中国羽毛球机器人获吉尼斯纪录并获波士顿动力前高管认可，四川具身科技获超亿元融资押注情感陪伴人形机器人，清华系创业者持续入局物理世界模型。",
+          "digest": "昨日行业叙事呈现显著的「落地收敛」特征。模型层，谷歌 Gemini 4 Argon 以对标前沿的评测成绩与五折定价策略重返第一梯队，叠加 Liquid AI 与国产决策模型的同日登顶，表明基础模型竞争正从单点能力比拼转向「性能—成本」综合曲线的工程化较量。应用层，OpenAI 将 computer use 能力无门槛下放至 Chrome 扩展，标志 Agent 从独立产品形态向浏览器等存量入口渗透，交互入口的争夺已进入实质阶段。具身智能方向，羽毛球机器人的吉尼斯纪录、世界模型表征的基准突破与亿元级融资并行，显示该领域正经历从演示验证到商业化定价的关键跨越。值得关注的结构性信号是：机制可解释性研究对「十年共识」的颠覆，或将在中期重塑大模型安全监管的技术前提。"
+        },
         {
           "date": "2026-10-15",
           "url": "https://webdrag0n.github.io/reports/media/daily_media_20261015.html",
