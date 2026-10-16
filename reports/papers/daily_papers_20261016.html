@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年10月16日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年10月16日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>本日 arXiv 新增论文呈现鲜明的「Agent 化」主线：普林斯顿团队提出多开发者共建的 Agentic 系统范式《The Wealth of Agents》，Berkeley 团队以扩散模型直接建模人形机器人控制网络权重；智能体 RL 方向涌现共演化行动-预测、批评引导在线蒸馏、特权价值自蒸馏等多项密集监督新方法；具身智能领域发布《Towards Agentic Robots》系统性综述；开源社区则以「$7 ESP32 让 AI 操控真 iPhone」项目领跑 GitHub 热榜。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>头条热点</div>
+
+  <div class="hot-topic">
+    <div class="label">Hot Topic · LLM Agent</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.20516">The Wealth of Agents: Scaling Agentic AI Across Developers</a></div>
+    <div class="summary">当前智能体系统普遍由单一开发者全权构建与部署，这一模式限制了系统规模的进一步扩展。论文系统研究多开发者智能体系统（Multi-Developer Agentic Systems, MDA），论证多个开发者协作构建智能体系统是突破规模边界的关键路径，并给出相应的架构原则与协作机制设计。该工作为 Agent 生态从「单作坊」走向「分工市场」提供了概念框架。</div>
+    <div class="tags">
+      <span class="tag hot">热点</span>
+      <span class="tag">LLM Agent</span>
+      <span class="tag">多智能体系统</span>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">Hot Topic · 具身智能</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.20606">Modeling and Understanding Neural Weights of Humanoid Policies with Diffusion</a></div>
+    <div class="summary">UC Berkeley 团队（Shankar Sastry 组）提出用扩散模型直接建模人形机器人控制策略的神经网络权重分布，而非沿用传统训练流程获得单一权重。研究开辟了「权重空间生成建模」这一新视角，有助于理解人形策略的结构特性，并为策略的快速生成、插值与迁移提供新工具。</div>
+    <div class="tags">
+      <span class="tag hot">热点</span>
+      <span class="tag">人形机器人</span>
+      <span class="tag">扩散模型</span>
+      <span class="tag">权重生成</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型与智能体强化学习</div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.20597 · cs.AI, cs.LG</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.20597">Co-Evolving Acting and Forecasting for Language Agents</a></div>
+    <div class="summary">针对语言智能体训练中长期 rollout 成本高昂、标准 Agentic RL 仅利用终端标量奖励的瓶颈，提出共演化行动与预测的训练框架，将中间步骤的监督信号显式纳入学习过程，显著提升样本效率与长程任务表现。</div>
+    <div class="tags">
+      <span class="tag">Agentic RL</span>
+      <span class="tag">语言智能体</span>
+      <span class="tag">长程任务</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.20572 · cs.LG, cs.AI · HuggingFace Daily Papers 上榜</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.20572">Recovering Reliable Supervision via Critique-Guided On-Policy Distillation</a></div>
+    <div class="summary">指出在线蒸馏（OPD）的关键失效模式：教师模型在学生错误前缀下并不总能「恢复」至正确答案（recoverability 假设不成立），导致监督信号被学生错误污染。提出批评引导的在线蒸馏方法，在错误 rollout 上恢复可靠监督，提升蒸馏稳定性与效果。</div>
+    <div class="tags">
+      <span class="tag">在线蒸馏</span>
+      <span class="tag">RLHF</span>
+      <span class="tag">后训练</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.20516 · cs.CL, cs.AI, cs.LG</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.20516">VASPO: Self-Distillation with Privileged Value Estimation</a></div>
+    <div class="summary">针对在线自蒸馏中监督信号仅反映局部 token 偏好、而非学生续写期望回报的问题，提出带特权价值估计的自蒸馏方法 VASPO，在 GRPO 框架之外提供更精确的信号标定，改进推理模型的后训练质量。</div>
+    <div class="tags">
+      <span class="tag">自蒸馏</span>
+      <span class="tag">GRPO</span>
+      <span class="tag">推理模型</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态与视觉</div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.20538 · cs.CL, cs.AI, cs.CV, cs.LG, cs.SE</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.20538">PrismaCoder: Pushing the Boundaries of Open Multimodal Code Intelligence through Decomposed Rubric Synthesis</a></div>
+    <div class="summary">多模态代码智能连接程序符号世界与其执行产生的视觉世界（图表、网页、动画、半结构化文档）。该工作通过分解式评分细则合成（Decomposed Rubric Synthesis）推进开放多模态代码模型的能力边界，缩小开源模型与专有模型在可交互代码产物生成上的差距。</div>
+    <div class="tags">
+      <span class="tag">多模态代码</span>
+      <span class="tag">开源模型</span>
+      <span class="tag">代码生成</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.20584 · cs.CV, cs.AI, cs.HC · HuggingFace Daily Papers 上榜</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.20584">Player-1: Learning to Play from Synthetic Experience</a></div>
+    <div class="summary">面向计算机操作智能体在游戏场景中的泛化难题，提出从合成经验中学习游戏操作的 Player-1 框架。游戏以其视觉丰富性与机制多样性成为通用数字控制的严苛试金石，该工作探索了以合成数据替代大规模人类示教的训练管线。</div>
+    <div class="tags">
+      <span class="tag">GUI Agent</span>
+      <span class="tag">合成数据</span>
+      <span class="tag">游戏智能体</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能与机器人</div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.20442 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.20442">Towards Agentic Robots: Model, Data, Environment, and Harness</a></div>
+    <div class="summary">基础模型正驱动机器人智能的范式转移：从低层动作预测走向对数据采集、模型训练、任务规划与真实执行的目标导向编排。论文将这一新兴范式刻画为「智能体化机器人」（Agentic Robots），并从模型、数据、环境与支撑设施四个维度给出系统性综述与研究路线图。</div>
+    <div class="tags">
+      <span class="tag">Agentic Robot</span>
+      <span class="tag">综述</span>
+      <span class="tag">VLA</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.20609 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.20609">SafeDriveVLA: Navigation-Conditioned World Model Dreaming for Conflict-Aware End-to-End Autonomous Driving</a></div>
+    <div class="summary">视觉-语言-动作（VLA）模型在自动驾驶中将导航接口从固定指令集扩展至自由形式自然语言，但同时引入新的脆弱面：驾驶员指令疏忽可能诱发驾驶冲突。SafeDriveVLA 通过导航条件下的世界模型「想象」机制实现冲突感知的端到端驾驶决策。</div>
+    <div class="tags">
+      <span class="tag">自动驾驶</span>
+      <span class="tag">VLA</span>
+      <span class="tag">世界模型</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">💻</span>开源动态与 Awesome 列表</div>
+
+  <div class="hot-topic">
+    <div class="label">GitHub 热榜 · 开源项目</div>
+    <div class="title"><a href="https://github.com/onehumanbeing/esp32-iphone-agent">onehumanbeing/esp32-iphone-agent ⭐2.4k+</a></div>
+    <div class="summary">用 7 美元的 ESP32 让任意 OpenAI 兼容视觉模型操控真实 iPhone：AirPlay 提供「眼睛」，USB HID 提供「双手」，无需 Mac、无需开发者账号。该项目将移动 GUI Agent 的硬件门槛降至极低，创建一周内即获超过 2400 星，成为本周增长最快的 AI 硬件开源项目之一。</div>
+    <div class="tags">
+      <span class="tag hot">本周爆款</span>
+      <span class="tag">GUI Agent</span>
+      <span class="tag">硬件</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · Awesome List 动态</div>
+    <div class="title"><a href="https://github.com/yzfly/awesome-context-engineering">yzfly/awesome-context-engineering ⭐210+</a></div>
+    <div class="summary">「上下文工程」（Context Engineering）主题精选列表持续高频更新，收录 AI 智能体与大模型上下文管理的资源、论文、工具与最佳实践，反映该主题已成为继 Prompt Engineering 之后的新工程范式焦点。同类活跃列表还包括 <a href="https://github.com/kairunwen/Awesome-Robot-Use-Agent">Awesome-Robot-Use-Agent</a>（机器人智能体论文与工具精选，⭐156+，10 月 15 日更新）与 <a href="https://github.com/milisp/awesome-codex-cli">awesome-codex-cli</a>（OpenAI Codex CLI 生态精选）。主仓库 sindresorhus/awesome 近期以清理归档列表、修复链接等维护性合并为主，暂无新增 AI 类列表。</div>
+    <div class="tags">
+      <span class="tag">Awesome List</span>
+      <span class="tag">Context Engineering</span>
+      <span class="tag">社区生态</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 新建开源项目</div>
+    <div class="title"><a href="https://github.com/outcrawlai/scout">outcrawlai/scout ⭐800+</a> · <a href="https://github.com/datalab-to/indra">datalab-to/indra ⭐350+</a></div>
+    <div class="summary">Scout：开源浏览器智能体，面向网页自动化任务；indra：面向 CPU 的快速 OCR 引擎，覆盖行检测、CTC 识别、阅读顺序与 Markdown 输出，延续 datalab-to 系列文档智能工具链。两者均为本周内创建并快速积累关注的新项目。</div>
+    <div class="tags">
+      <span class="tag">浏览器 Agent</span>
+      <span class="tag">OCR</span>
+      <span class="tag">文档智能</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>本日研究动态呈现清晰的「Agent 化」纵深推进态势：理论层面，多开发者智能体系统（MDA）的提出标志着 Agent 研究开始直面规模化协作的制度性问题，而非仅关注单体能力；训练层面，共演化行动-预测、批评引导蒸馏、特权价值估计三篇工作不约而同指向同一痛点——Agentic RL 的监督信号密度与可靠性，密集化、抗污染的训练信号正成为后训练研究的核心议题。具身智能方面，Berkeley 以扩散模型建模人形策略权重的工作开辟权重空间生成建模新方向，Agentic Robots 综述则为领域确立了模型-数据-环境-设施的四维分析框架。开源社区延续了「Agent 平民化」趋势，ESP32 控制 iPhone 项目以极低成本验证移动端 GUI Agent 的可及性，上下文工程类 Awesome 列表的持续活跃亦印证工程范式重心正从提示词转向上下文管理。整体而言，智能体从「单体能力」迈向「系统规模化」的叙事正在论文与开源两侧同步成形。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-10-16</p>
+</div>
+
+</div>
+</body>
+</html>

@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 14 Oct 2026 17:08:04 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 00:08:00 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-10-16</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261016.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261016.html</guid>
+      <pubDate>Fri, 16 Oct 2026 08:00:00 +0000</pubDate>
+      <description>本日 arXiv 新增论文呈现鲜明的「Agent 化」主线：普林斯顿团队提出多开发者共建的 Agentic 系统范式《The Wealth of Agents》，Berkeley 团队以扩散模型直接建模人形机器人控制网络权重；智能体 RL 方向涌现共演化行动-预测、批评引导在线蒸馏、特权价值自蒸馏等多项密集监督新方法；具身智能领域发布《Towards Agentic Robots》系统性综述；开源社区则以「$7 ESP32 让 AI 操控真 iPhone」项目领跑 GitHub 热榜。</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-10-15</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261015.html</link>
