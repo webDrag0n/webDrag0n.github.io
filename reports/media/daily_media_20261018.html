@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技日报 — 2026年10月18日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 科技日报</h1>
+  <div class="date">2026年10月18日</div>
+  <div class="subtitle">中文AI媒体精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>昨日（10月17日）中文 AI 媒体焦点集中于三条主线：其一，前沿模型竞争转向「性能—成本」综合较量——谷歌 Gemini 4 Argon 以约五分之一的价格正式冲击前沿格局，智谱发布法律垂类开源模型 GLM-Legal 并登顶双榜；其二，政策与供应链规则重塑——商务部、科技部拟增列 23 项 AI 技术出口管制，黄仁勋就 AI 安全「划红线」，台积电与 ASML 财报确认算力与设备供不应求至 2028 年；其三，资本向头部高度集中——Anthropic 三季度营收 168 亿美元冲刺史上最大 IPO，月之暗面完成 500 亿美元估值 Pre-IPO 融资并拟明年一季度赴港上市。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>头条要闻</div>
+
+  <div class="hot-topic">
+    <div class="label">今日焦点</div>
+    <div class="card" style="box-shadow:none;border:none;padding:0;background:transparent;">
+      <div class="source">综合报道 · 2026-10-17</div>
+      <div class="title"><a href="https://www.qbitai.com/2026/10/503701.html">谷歌 Gemini 4 Argon 正式发布：前沿能力对标 GPT-6 Astra，API 定价约为竞品五分之一</a></div>
+      <div class="summary">谷歌于 10 月 17 日前后正式推出前沿大模型 Gemini 4 Argon，宣称在编程、网络安全、科学、金融、法律等多项基准测试中超越 GPT-6 Astra、Claude Fable 5.1 与 Claude Opus 5.5；模型即日起向 Gemini 应用 Pro/Ultra 订阅用户及 Antigravity 平台开放。定价策略激进：输入 Token 优惠价每百万 2 美元、输出 10 美元，约为 OpenAI 与 Anthropic 同级模型的五分之一，被业界解读为将前沿模型竞争从「参数竞赛」拖入「成本战」。同日，Google DeepMind 展示四个 Gemini 4 Argon 智能体在无人类干预下于沙盒环境中 27 小时通关《Minecraft》末影龙，共编写 2,783 个程序并完成协作调试。</div>
+      <div class="tags">
+        <span class="tag hot">热点</span>
+        <span class="tag">新模型</span>
+        <span class="tag">Google</span>
+        <span class="tag">定价策略</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-17</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/503965.html">智谱发布法律垂类开源模型 GLM-Legal：Harvey LAB 与 LegalBench 双榜开放权重第一</a></div>
+    <div class="summary">智谱推出法律专用开源模型 GLM-Legal，基于轻量底座 GLM-5.3-Flash 经领域中期训练与强化学习构建。在 Vals AI 公布的法律测评中，GLM-Legal 以 19.2% 的任务全通过率和 86.23% 的准确率摘得 Harvey LAB 与 LegalBench 双榜开放权重模型榜首，覆盖合同审查、证据串联、跨境合规研究等真实法律工作流，并适配中文法律实务、英文法律任务及东南亚跨境合规场景。模型平均延迟约 37 分钟，定位离线长任务而非实时交互，同步开放 API 接入。</div>
+    <div class="tags">
+      <span class="tag hot">新模型</span>
+      <span class="tag">智谱</span>
+      <span class="tag">垂直模型</span>
+      <span class="tag">开源</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-17</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/503935.html">清华开源智能体操作系统 PilotDeck 2.0：任务成本降 83%，AI 记忆可查可改</a></div>
+    <div class="summary">清华大学 THUNLP 实验室联合面壁智能、OpenBMB 等团队开源智能体操作系统 PilotDeck 2.0，原生支持 MCP 协议。系统针对多项目文件混杂、长周期任务中断、模型调用成本过高等 Agent 落地痛点，提供项目隔离管理、可查可改的长期记忆、后台任务执行及按任务难度智能路由模型的能力；在 Workbuddy 等基准上任务成本降低 83%。该工作标志着 Agent 基础设施从单点工具向操作系统级平台演进。</div>
+    <div class="tags">
+      <span class="tag">开源</span>
+      <span class="tag">Agent</span>
+      <span class="tag">清华系</span>
+      <span class="tag">基础设施</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📜</span>政策与供应链</div>
+
+  <div class="card">
+    <div class="source">综合报道（人民日报海外版、财联社等）· 2026-10-17</div>
+    <div class="title"><a href="https://www.aitoollab.cn/news/">商务部、科技部拟增列 23 项人工智能技术出口管制，覆盖大模型、智能体与算力集群</a></div>
+    <div class="summary">商务部、科技部发布 2026 年第 48 号公告，就修订《中国禁止出口限制出口技术目录》公开征求意见，拟在人工智能、生物医药、光伏三领域增列 40 项关键技术，其中 AI 领域覆盖大模型、智能体、算力集群、信息处理相关 23 项技术；拟禁止出口的包括人工智能驱动的恶意代码生成与变异技术。公告明确已通过开源、学术论文等渠道进入公共领域的技术不纳入管理，目前对相关技术实施出口前登记等临时管理措施。此举被视为中国 AI 技术治理从「促进发展」向「发展与安全并重」的标志性调整。</div>
+    <div class="tags">
+      <span class="tag hot">政策</span>
+      <span class="tag">出口管制</span>
+      <span class="tag">AI治理</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">综合报道（华尔街见闻等）· 2026-10-17</div>
+    <div class="title"><a href="https://blog.aqcoder.cn/posts/a4649e87/">黄仁勋「划红线」：客户开发不安全 AI 软件，英伟达将停止供应芯片</a></div>
+    <div class="summary">英伟达 CEO 黄仁勋公开表示，若客户正在开发不安全的人工智能软件，他将停止向其供应芯片；同时认为 AI 软件可以得到控制并安全部署，呼吁行业加快将防控技术整合进 AI 系统。作为全球 AI 算力最大供给方，这一表态被解读为把 AI 安全从行业倡议推向供应链准入门槛，算力供应商首次将安全合规与硬件供给直接挂钩。</div>
+    <div class="tags">
+      <span class="tag">AI安全</span>
+      <span class="tag">英伟达</span>
+      <span class="tag">供应链</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">综合报道（财联社、36氪等）· 2026-10-17</div>
+    <div class="title"><a href="https://blog.aqcoder.cn/posts/a4649e87/">台积电、ASML 三季度财报双超预期：AI 算力需求强劲，芯片设备供不应求至 2028 年</a></div>
+    <div class="summary">台积电三季度营收约 331 亿美元、净利润约 148 亿美元、毛利率 59.5%，均超市场预期；管理层表示 AI 需求较三个月前更加强劲，AI 智能体带来的 CPU 需求远超当前供应能力，并将全年美元营收增速上调至约 44%。ASML 三季度净销售额 116.62 亿欧元（同比增 55.2%）、净利润 49.6 亿欧元（同比增 133.4%）创单季新高，CEO 明确预警 2027–2028 年设备供应无法充分满足需求，部分客户已开始咨询 2029 甚至 2030 年订单。</div>
+    <div class="tags">
+      <span class="tag">算力</span>
+      <span class="tag">半导体</span>
+      <span class="tag">财报</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">💰</span>产业与资本</div>
+
+  <div class="card">
+    <div class="source">综合报道（36氪、虎嗅、财联社等）· 2026-10-17</div>
+    <div class="title"><a href="https://blog.aqcoder.cn/posts/a4649e87/">Anthropic 三季度营收 168 亿美元并实现调整后盈利，冲刺「史上最大 IPO」</a></div>
+    <div class="summary">Anthropic 向潜在投资者披露三季度营收达 168 亿美元、环比增长约 45%（低于二季度的 143%），调整后实现盈利，正推进于 11 月（美国中期选举之后）上市，目标估值一度超 2 万亿美元；受增速明显放缓影响，部分投资者在投资者日上讨论将估值预期下调至约 1.5 万亿美元，其算力承诺与盈利能否「对账」成为市场焦点。SemiAnalysis 数据显示 Claude Code 已占 GitHub 全部代码提交量的逾 7%。</div>
+    <div class="tags">
+      <span class="tag hot">IPO</span>
+      <span class="tag">Anthropic</span>
+      <span class="tag">营收</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">综合报道（财联社、证券时报等）· 2026-10-17</div>
+    <div class="title"><a href="https://blog.aqcoder.cn/posts/a4649e87/">月之暗面完成 Pre-IPO 轮融资：估值约 500 亿美元，拟明年一季度港股上市</a></div>
+    <div class="summary">月之暗面（Moonshot AI / Kimi）已完成最后一轮私募融资（Pre-IPO 轮），投前估值约 500 亿美元，并正推进于明年第一季度在香港进行首次公开募股（IPO），已开始摸底投资者。公司 2026 年初曾密集完成多轮「小步快跑」式融资，估值在一年内从数十亿美元级别快速攀升至 500 亿美元，成为继智谱之后又一家进入上市通道的国产大模型头部企业。</div>
+    <div class="tags">
+      <span class="tag hot">融资</span>
+      <span class="tag">月之暗面</span>
+      <span class="tag">IPO</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">AI 新智界 · 2026-10-17</div>
+    <div class="title"><a href="https://www.aitntnews.com/newDetail.html?newId=19027">具身智能明星公司「一星机器人」确认解散，赛道冷热分化加剧</a></div>
+    <div class="summary">具身智能明星公司一星机器人（OneStar）解散传闻经媒体核实，公司目前已处于解散状态，具体原因尚未公开。该事件与近期具身智能赛道高频大额融资形成鲜明对照，显示行业在经历资本狂热后进入分化阶段，商业化验证能力正取代概念热度成为企业存续的关键变量。</div>
+    <div class="tags">
+      <span class="tag">具身智能</span>
+      <span class="tag">行业动态</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔬</span>研究与开源</div>
+
+  <div class="card">
+    <div class="source">综合报道 · 2026-10-17</div>
+    <div class="title"><a href="https://www.datalearner.com/ai-models/pretrained-models/beam">Reflection AI 发布 501B 开放权重模型 Beam：Apache 2.0 许可，23B 激活参数</a></div>
+    <div class="summary">英伟达投资的 Reflection AI 发布首个开放权重模型 Beam 1.0，采用 501B 总参、23B 激活的 MoE 架构，在 NVIDIA GB300 NVL72 上训练，基于 Blackwell Ultra 可实现超过 70K tokens/sec/GPU 的吞吐。模型以 Apache 2.0 许可开放权重，BF16、FP8 与 NVFP4 checkpoint 已在 Hugging Face 发布，配套 Mirror CLI 训练框架，并与 40 余家生态伙伴协作。SemiAnalysis 称其标志着「美国开源权重回归」，在 agentic 任务上表现强劲。</div>
+    <div class="tags">
+      <span class="tag">开源</span>
+      <span class="tag">MoE</span>
+      <span class="tag">基础模型</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">综合报道（智源社区、arXiv 等）· 2026-10-17</div>
+    <div class="title"><a href="https://blog.aqcoder.cn/posts/a4649e87/">AI for Science 持续升温：OpenAI 公开 722 篇 AI 数学手稿，「科研品味」评测基准问世</a></div>
+    <div class="summary">OpenAI 公开由内部模型生成的 722 篇数学手稿（约 372 组问题族），涵盖准黎曼猜想、霍奇猜想等前沿难题，附带全部论文、源码及部分 Lean 形式化证明，学界对其正确性、新颖性仍有争议；同期 P-Zero Research 推出 TasteVal 基准，用以评估 AI 是否具备过去被认为人类顶尖研究者独有的「科研品味」。MIT 同期研究显示，前沿模型解答理论科学问题的成功率 16 个月内从 2.8% 升至 34.6%，验证环节成为新瓶颈。</div>
+    <div class="tags">
+      <span class="tag">AI4Science</span>
+      <span class="tag">前沿研究</span>
+      <span class="tag">数学</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">综合报道 · 2026-10-17</div>
+    <div class="title"><a href="https://iaipie.com/2026年10月17日ai行业资讯速览/">vLLM 运行于约 50 万块 GPU，成为最大开源推理引擎之一</a></div>
+    <div class="summary">起源于 2022 年伯克利博士生 Woosuk Kwon「两周项目」的 vLLM，四年后已发展为拥有 3,000 名贡献者、运行在约 500,000 块 GPU 上的最大开源推理引擎之一。其发展历程印证了开源 AI 基础设施的产业影响力，推理效率优化已成为大模型规模化部署的核心支撑技术。</div>
+    <div class="tags">
+      <span class="tag">开源</span>
+      <span class="tag">推理引擎</span>
+      <span class="tag">基础设施</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>昨日行业呈现「价格战、合规化、资本收敛」三重奏。谷歌 Gemini 4 Argon 以五分之一定价将前沿模型竞争拖入成本战，智谱 GLM-Legal 则验证了垂类开源模型在专业性上的追平路径——模型层正从能力军备竞赛转向「性能—成本—场景」的综合工程较量。政策端，23 项 AI 技术出口管制与黄仁勋的供应链安全红线同日出现，表明 AI 治理正从软性倡议硬化为规则与准入门槛。资本端，Anthropic 168 亿美元营收与月之暗面 500 亿美元估值并行，叠加台积电、ASML「供不应求至 2028 年」的确认，资金向头部模型与基础设施的集中已进入自我强化周期；而一星机器人的解散则提示，具身智能赛道已越过概念验证期，商业化造血能力成为生死线。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-10-18</p>
+</div>
+
+</div>
+</body>
+</html>

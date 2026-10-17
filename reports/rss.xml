@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 17 Oct 2026 00:03:37 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2026 17:11:00 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-10-18</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261018.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261018.html</guid>
+      <pubDate>Sun, 18 Oct 2026 08:00:00 +0000</pubDate>
+      <description>昨日（10月17日）中文 AI 媒体焦点集中于三条主线：其一，前沿模型竞争转向「性能—成本」综合较量——谷歌 Gemini 4 Argon 以约五分之一的价格正式冲击前沿格局，智谱发布法律垂类开源模型 GLM-Legal 并登顶双榜；其二，政策与供应链规则重塑——商务部、科技部拟增列 23 项 AI 技术出口管制，黄仁勋就 AI 安全「划红线」，台积电与 ASML 财报确认算力与设备供不应求至 2028 年；其三，资本向头部高度集中——Anthropic 三季度营收 168 亿美元冲刺史上最大 IPO，月之暗面完成 500 亿美元估值 Pre-IPO 融资并拟明年一季度赴港上市。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-10-17</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261017.html</link>
