@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年10月17日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年10月17日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>GitHub Trending 被 Agent 工具链全面占据——Anthropic 官方插件目录、Agent Skills 框架与上下文优化工具集中爆发；学术界方面，自主机器学习工程（MLExpert）、面向灵巧操作的视觉-触觉-语言-动作模型（Spark-0）、以及机器人世界模型的测试时环境隐变量优化（T2-Z）构成本日研究主线，具身智能与 Agent 化趋势持续合流。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日焦点</div>
+
+  <div class="hot-topic">
+    <div class="label">Hot Topic · 开源生态</div>
+    <div class="title"><a href="https://github.com/anthropics/claude-plugins-official">anthropics/claude-plugins-official</a> — Agent 插件与 Skills 生态集中爆发</div>
+    <div class="summary">GitHub 日榜前 13 名中近半数与 AI Agent 工具链相关：Anthropic 官方插件目录（单日 +1,552 stars）、K-Dense-AI/scientific-agent-skills（+1,158，号称覆盖 25 万科研工作者的 Agent Skills 库）、affaan-m/ECC（Agent harness 性能优化，+1,057）、HKUDS/CLI-Anything（让一切软件 Agent-Native）、mksglu/context-mode（上下文窗口优化，工具输出压缩约 98%）、cursor/plugins 等同期上榜。Agent 基础设施正从框架竞争转向"插件/技能生态"竞争。</div>
+    <div class="tags">
+      <span class="tag hot">GitHub Trending</span>
+      <span class="tag">Agent</span>
+      <span class="tag">开源生态</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">ArXiv cs.CL / cs.LG · 2026-10-15 · <a href="https://arxiv.org/abs/2610.22344">2610.22344</a></div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.22344">MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering</a></div>
+    <div class="summary">面向 AI4AI 与递归自我改进（RSI）路径的通用智能体模型。作者指出，现有工作流驱动的 MLE 系统依赖复杂编排来管理长周期实验，而 MLExpert 尝试构建通用化的智能体模型，使 LLM 从"辅助科研"走向"自主开发并改进 AI 系统"，是 Agent 化科研工程方向的又一重要探索。</div>
+    <div class="tags">
+      <span class="tag">LLM Agent</span>
+      <span class="tag">AI4AI</span>
+      <span class="tag">AutoML</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>具身智能与机器人</div>
+
+  <div class="card">
+    <div class="source">ArXiv cs.RO · 2026-10-15 · <a href="https://arxiv.org/abs/2610.22342">2610.22342</a></div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.22342">Spark-0: Scaling Spatially Aligned Tactile Pretraining for Robot Dexterous Manipulation</a></div>
+    <div class="summary">提出空间对齐的视觉-触觉-语言-动作（VTLA）模型。通用机器人策略受益于大规模视觉预训练，但在接触丰富的灵巧操作中，力、顺应性与初期滑移难以从图像观测。Spark-0 在预训练阶段引入由触觉推导的图像空间接触图，以两种互补方式利用触觉信号，弥补纯视觉预训练在精细操作上的结构性缺陷。</div>
+    <div class="tags">
+      <span class="tag hot">触觉预训练</span>
+      <span class="tag">灵巧操作</span>
+      <span class="tag">VLA</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">ArXiv cs.RO / cs.CV · 2026-10-15 · <a href="https://arxiv.org/abs/2610.22364">2610.22364</a></div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.22364">T2-Z: Test-Time Optimization of Environment Latents for Robotic World Models</a></div>
+    <div class="summary">来自 Fei-Fei Li、Jiajun Wu 等团队。预测世界对动作的响应需要超越可观测信息：机器人须考虑摩擦、质量等物理属性及人为环境规则等不可直接观测的因素。T2-Z 为机器人世界模型引入可学习的环境隐变量，并在测试时对其进行优化，使世界模型能够在不显式建模全部环境参数的情况下推断隐含物理条件。</div>
+    <div class="tags">
+      <span class="tag">世界模型</span>
+      <span class="tag">测试时优化</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">ArXiv cs.CV / cs.RO · 2026-10-15 · <a href="https://arxiv.org/abs/2610.22363">2610.22363</a></div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.22363">P³-WAM: Perceive, Predict, and Plan — a Unified World Action Model for Egocentric Dexterous Manipulation</a></div>
+    <div class="summary">面向第一人称视角灵巧操作的统一世界-动作模型，通过三个互补模式联合学习 3D 感知、动作条件预测与目标导向规划：Perceive 从视频重建关节手部运动与相机轨迹；Predict 在给定动作下生成视觉未来；Plan 联合生成目标导向的行为序列，将感知-预测-规划整合于单一框架。</div>
+    <div class="tags">
+      <span class="tag">世界模型</span>
+      <span class="tag">灵巧操作</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型与架构</div>
+
+  <div class="card">
+    <div class="source">ArXiv cs.LG · 2026-10-15 · <a href="https://arxiv.org/abs/2610.22353">2610.22353</a></div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.22353">Rethinking Routing Exploration in Modern Mixture-of-Experts</a></div>
+    <div class="summary">现代 MoE 架构日益结合细粒度专家切分与共享专家两种设计：前者在固定激活率下提升专家组合的表达能力，后者引入对每个 token 均激活的专家。本文指出现代 MoE 路由中一个此前被忽视的效率问题，并重新审视路由探索机制，对大规模稀疏模型的训练效率具有直接参考价值。</div>
+    <div class="tags">
+      <span class="tag">MoE</span>
+      <span class="tag">模型架构</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">ArXiv cs.CL · 2026-10-15 · <a href="https://arxiv.org/abs/2610.22300">2610.22300</a></div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.22300">Knowledge That Is Linear Before Fine-Tuning Generalizes After It</a></div>
+    <div class="summary">区分语言模型中"活跃事实"（支持超越自身回忆的泛化）与"惰性事实"（可被回忆但不支持泛化）。研究表明，预训练中以线性方式编码的知识在微调后更易泛化，为理解微调动态与知识编辑提供了新的分析视角，对可控持续学习具有方法论意义。</div>
+    <div class="tags">
+      <span class="tag">知识表示</span>
+      <span class="tag">微调</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态与生成模型</div>
+
+  <div class="card">
+    <div class="source">ArXiv cs.CV · 2026-10-15 · <a href="https://arxiv.org/abs/2610.22371">2610.22371</a> · HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.22371">Gen4P: Video Generators are 4D Perceivers</a></div>
+    <div class="summary">将预训练视频生成器改造为前馈式 4D 感知器，从单目视频恢复 4D 几何与运动，无需迭代去噪。基于按需查询机制，Gen4P 在单次编码器前向中处理干净视频隐变量，并通过轻量交叉注意力解码器预测所请求的 4D 属性，展示了生成模型作为通用感知基础的可复用性。</div>
+    <div class="tags">
+      <span class="tag">视频生成</span>
+      <span class="tag">4D 重建</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📚</span>Awesome 列表动态</div>
+
+  <div class="card">
+    <div class="source">GitHub · sindresorhus/awesome & 新兴 AI 列表</div>
+    <div class="title"><a href="https://github.com/lobehub/awesome-rsi">lobehub/awesome-rsi</a> 等新兴 AI Awesome 列表受关注</div>
+    <div class="summary">sindresorhus/awesome 主仓库近期以维护性更新为主（8-9 月清理归档列表、修复 linter），暂无新 AI 列表合并。但社区侧涌现多个值得关注的新列表：<a href="https://github.com/lobehub/awesome-rsi">awesome-rsi</a>（递归自我改进研究图谱：模型、智能体、具身系统、自动化 AI 研发与基准，748 stars）、<a href="https://github.com/zjwzcx/Awesome-Astra-Embodied-AI">Awesome-Astra-Embodied-AI</a>（面向具身智能的 GPT-6 Astra 生态，1,165 stars）、<a href="https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents">Awesome-Reliable-Self-Evolving-Agents</a>（可靠自进化智能体综述，668 stars）。主题分布清晰指向 RSI、自进化 Agent 与具身智能三条研究热点。</div>
+    <div class="tags">
+      <span class="tag">Awesome</span>
+      <span class="tag">RSI</span>
+      <span class="tag">具身智能</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今日信号高度一致：Agent 化正从模型层下沉至工具链层。GitHub 日榜近半数为 Agent 插件、Skills 与上下文优化项目，Anthropic 官方插件目录的出现标志着插件生态进入厂商主导阶段。学术侧，MLExpert 推进自主机器学习工程，Spark-0 将触觉引入 VLA 预训练，T2-Z 让世界模型在测试时推断隐含环境参数——感知、规划与自我改进三条线索正在收敛。Awesome 社区的新列表同样聚焦 RSI 与自进化 Agent。短期看，上下文工程与技能复用是工程落地的主战场；中长期看，"AI 改进 AI"的闭环正在从叙事走向可复现的基准与框架。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · Generated 2026-10-17</p>
+</div>
+
+</div>
+</body>
+</html>

@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 16 Oct 2026 17:11:04 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2026 00:03:37 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-10-17</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261017.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261017.html</guid>
+      <pubDate>Sat, 17 Oct 2026 08:00:00 +0000</pubDate>
+      <description>GitHub Trending 被 Agent 工具链全面占据——Anthropic 官方插件目录、Agent Skills 框架与上下文优化工具集中爆发；学术界方面，自主机器学习工程（MLExpert）、面向灵巧操作的视觉-触觉-语言-动作模型（Spark-0）、以及机器人世界模型的测试时环境隐变量优化（T2-Z）构成本日研究主线，具身智能与 Agent 化趋势持续合流。</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-10-17</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261017.html</link>

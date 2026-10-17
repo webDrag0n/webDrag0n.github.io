@@ -1,11 +1,17 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-10-16T17:11:04.289472+00:00",
+  "generated_at": "2026-10-17T00:03:37.991018+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
-      "count": 78,
+      "count": 79,
       "items": [
+        {
+          "date": "2026-10-17",
+          "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261017.html",
+          "overview": "GitHub Trending 被 Agent 工具链全面占据——Anthropic 官方插件目录、Agent Skills 框架与上下文优化工具集中爆发；学术界方面，自主机器学习工程（MLExpert）、面向灵巧操作的视觉-触觉-语言-动作模型（Spark-0）、以及机器人世界模型的测试时环境隐变量优化（T2-Z）构成本日研究主线，具身智能与 Agent 化趋势持续合流。",
+          "digest": "今日信号高度一致：Agent 化正从模型层下沉至工具链层。GitHub 日榜近半数为 Agent 插件、Skills 与上下文优化项目，Anthropic 官方插件目录的出现标志着插件生态进入厂商主导阶段。学术侧，MLExpert 推进自主机器学习工程，Spark-0 将触觉引入 VLA 预训练，T2-Z 让世界模型在测试时推断隐含环境参数——感知、规划与自我改进三条线索正在收敛。Awesome 社区的新列表同样聚焦 RSI 与自进化 Agent。短期看，上下文工程与技能复用是工程落地的主战场；中长期看，\"AI 改进 AI\"的闭环正在从叙事走向可复现的基准与框架。"
+        },
         {
           "date": "2026-10-16",
           "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261016.html",
