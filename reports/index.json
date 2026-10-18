@@ -1,6 +1,6 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-10-18T00:06:41.963360+00:00",
+  "generated_at": "2026-10-18T17:07:04.167839+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
@@ -490,8 +490,14 @@
     },
     "media": {
       "title": "AI 科技日报",
-      "count": 79,
+      "count": 80,
       "items": [
+        {
+          "date": "2026-10-19",
+          "url": "https://webdrag0n.github.io/reports/media/daily_media_20261019.html",
+          "overview": "昨天中文AI圈被三件事刷屏：谷歌 Gemini 4 正式发布（API 限时半价，被称\"重回御三家\"）；OpenAI 宣称用 GPT 攻克千禧年难题的成果出现大反转；库克在上海确认苹果智能接入阿里千问、10月底推送国行测试版。此外清华开源智能体操作系统 PilotDeck 2.0（成本降 83%）、优必选多模态世界模型霸榜、具身智能融资持续火热，监管端中国拟限制 AI 等 40 项技术出口，值得关注。",
+          "digest": "昨天中文 AI 圈信息量拉满：谷歌 Gemini 4 发布并用半价 API 打价格战，大模型竞争进入存量厮杀；OpenAI\"GPT 攻克千禧年难题\"的成果翻车反转，再次提醒 AI4Science 的新闻要等同行评议；库克在上海官宣苹果智能接入阿里千问、月底推国行测试版，国产大模型拿下苹果背书。研究侧，清华开源智能体 OS（成本降 83%、记忆可编辑）和 VAST 实时世界模型，标志着 Agent 竞争转向系统层、世界模型加速平民化。产业端，中国拟限制 AI 等 40 项技术出口，技术主权博弈升级；36 氪那篇\"老板向 AI 许愿，员工让 AI 滚蛋\"则戳中落地真相——AI 的最后一公里是组织问题，不是技术问题。#AI日报 #大模型 #具身智能"
+        },
         {
           "date": "2026-10-18",
           "url": "https://webdrag0n.github.io/reports/media/daily_media_20261018.html",

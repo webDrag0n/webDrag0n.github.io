@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 18 Oct 2026 00:06:41 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2026 17:07:04 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-10-19</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261019.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261019.html</guid>
+      <pubDate>Mon, 19 Oct 2026 08:00:00 +0000</pubDate>
+      <description>昨天中文AI圈被三件事刷屏：谷歌 Gemini 4 正式发布（API 限时半价，被称&quot;重回御三家&quot;）；OpenAI 宣称用 GPT 攻克千禧年难题的成果出现大反转；库克在上海确认苹果智能接入阿里千问、10月底推送国行测试版。此外清华开源智能体操作系统 PilotDeck 2.0（成本降 83%）、优必选多模态世界模型霸榜、具身智能融资持续火热，监管端中国拟限制 AI 等 40 项技术出口，值得关注。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-10-18</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261018.html</link>
