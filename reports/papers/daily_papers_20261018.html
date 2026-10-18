@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年10月18日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年10月18日</div>
+  <div class="subtitle">ArXiv + GitHub + HuggingFace 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>本期 HuggingFace Daily Papers 呈现清晰的「Agent 基础设施」主线——OpenGCUA（315 票）与 FDE-Gym（283 票）分别代表通用计算机操作的全开源栈与真实交付场景评测，MAI-Gym 则补全 GUI 智能体的 RL 训练闭环；机器人方向迎来触觉预训练 Spark-0 与个性化操作基准 LIBERO-PeRM；开源社区层面，GitHub Trending 由 Claude Code 生态（官方插件目录、Skills 库、Agent 记忆方案）全面主导，Agent-Native 工具链成为本周确定性趋势。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日焦点</div>
+
+  <div class="hot-topic">
+    <div class="label">Hot · 开源 Agent 基础设施</div>
+    <div class="source">arXiv 2610.22200 · cs.CL · HuggingFace Daily Papers 315 ▲</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.22200" target="_blank">OpenGCUA: Toward a Fully Open Stack for Generalist Computer Use</a></div>
+    <div class="summary">计算机操作（Computer Use）正从纯 GUI 交互转向融合视觉与程序化接口的通用任务执行。OpenGCUA 提出面向通用计算机操作智能体的全开源技术栈，覆盖数据采集、训练到评测的完整链路，为社区提供可复现的基础设施，显著降低了该方向的进入门槛。</div>
+    <div class="tags">
+      <span class="tag hot">315 ▲ 热门</span>
+      <span class="tag">Computer-Use Agent</span>
+      <span class="tag">开源全栈</span>
+      <span class="tag">cs.CL</span>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">Hot · Agent 评测新范式</div>
+    <div class="source">arXiv 2610.22350 · cs.AI / cs.CL / cs.SE · HuggingFace Daily Papers 283 ▲</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.22350" target="_blank">FDE-Gym: The Last Mile of AI Delivery</a></div>
+    <div class="summary">现有智能体基准大多评测定义明确的任务（issue、规格说明、工单），而真实的客户交付场景截然不同：前置部署工程师（FDE）必须澄清模糊需求、在活跃系统中操作并处理意外约束。FDE-Gym 将评测目标对准「最后一公里」交付能力，是从实验室指标迈向工程现实的重要一步。</div>
+    <div class="tags">
+      <span class="tag hot">283 ▲ 热门</span>
+      <span class="tag">Agent Benchmark</span>
+      <span class="tag">软件工程</span>
+      <span class="tag">cs.SE</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>前沿研究</div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.20939 · HuggingFace Daily Papers 153 ▲</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.20939" target="_blank">MAI-Gym: An Open All-in-One Platform for GUI Agent Evaluation and RL Training</a></div>
+    <div class="summary">可验证奖励的在线强化学习已在数学、代码与工具使用上取得快速进展，但 GUI 智能体受限于交互环境的高成本而难以规模化。MAI-Gym 提供覆盖移动端与桌面端环境的一体化开源平台，将评测与 RL 训练整合于统一框架，补齐了 GUI Agent 规模化训练的关键基础设施。</div>
+    <div class="tags">
+      <span class="tag">153 ▲</span>
+      <span class="tag">GUI Agent</span>
+      <span class="tag">RLVR</span>
+      <span class="tag">开源平台</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.21261 · HuggingFace Daily Papers 105 ▲</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.21261" target="_blank">Behavioral Compositionality of Sparse Autoencoder Representations</a></div>
+    <div class="summary">稀疏自编码器（SAE）以稀疏、线性解码的特征表示模型激活，但这些特征的下游行为效应未必满足可加性。作者提出 SAE Additivity Residuals（SAR）以度量未被线性组合解释的行为变异，为可解释性研究提供了严格的组合性检验工具，提示 SAE 特征在行为层面存在系统性非线性。</div>
+    <div class="tags">
+      <span class="tag">105 ▲</span>
+      <span class="tag">可解释性</span>
+      <span class="tag">Sparse Autoencoder</span>
+      <span class="tag">Mechanistic Interpretability</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.22344 · cs.AI / cs.CL / cs.LG</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.22344" target="_blank">MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering</a></div>
+    <div class="summary">大语言模型正从辅助科研与工程扩展到自主开发与改进 AI 系统本身，将「AI for AI」（AI4AI）推进为通往递归自我改进（RSI）的路径。MLExpert 面向工作流驱动的机器学习工程（MLE），探索构建通用智能体模型以自主完成机器学习工程任务的完整闭环。</div>
+    <div class="tags">
+      <span class="tag">AI4AI</span>
+      <span class="tag">MLE Agent</span>
+      <span class="tag">递归自我改进</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.21095 · HuggingFace Daily Papers 40 ▲</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.21095" target="_blank">Can World and Action Modeling Benefit Each Other under Unified Causal Training?</a></div>
+    <div class="summary">世界建模与动作建模关系密切，但二者在统一因果训练下的互惠机制尚不明确。OneWM 提出简洁的统一因果训练框架，将动作同时作为条件与预测目标，系统验证了世界模型与动作模型在联合训练下的正向迁移，为具身智能的统一建模提供了实证依据。</div>
+    <div class="tags">
+      <span class="tag">World Model</span>
+      <span class="tag">Action Modeling</span>
+      <span class="tag">OneWM</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>具身智能与机器人</div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.22342 · cs.RO · 2026-10-15</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.22342" target="_blank">Spark-0: Scaling Spatially Aligned Tactile Pretraining for Robot Dexterous Manipulation</a></div>
+    <div class="summary">通用机器人策略受益于大规模视觉预训练，但在接触密集型灵巧操作中，力、顺应性与初始滑移等关键信号难以从图像观测。Spark-0 提出空间对齐的视觉-触觉联合预训练方案，通过规模化触觉表征学习弥补纯视觉策略在精细操作上的感知盲区。</div>
+    <div class="tags">
+      <span class="tag">触觉预训练</span>
+      <span class="tag">灵巧操作</span>
+      <span class="tag">多模态表征</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.22372 · cs.RO · 2026-10-15</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.22372" target="_blank">LIBERO-PeRM: Benchmarking Personalized Robotic Manipulation</a></div>
+    <div class="summary">个性化是通用机器人进入家庭环境、实现真正实用化的前提。尽管通用机器人操作已被广泛研究，个性化操作（PeRM）长期缺乏受控基准。LIBERO-PeRM 基于 LIBERO 框架构建，为个性化操作策略的系统性评测提供标准化协议，填补了这一方向的基础设施建设空白。</div>
+    <div class="tags">
+      <span class="tag">个性化操作</span>
+      <span class="tag">Benchmark</span>
+      <span class="tag">家庭机器人</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源社区动态</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 2026-10-18</div>
+    <div class="title"><a href="https://github.com/anthropics/claude-plugins-official" target="_blank">anthropics/claude-plugins-official</a> · 当日 +1,397 ★</div>
+    <div class="summary">Anthropic 官方维护的 Claude Code 高质量插件目录上线即登顶 GitHub 日榜，标志着 Agent 编码工具从单体 CLI 向可扩展插件生态演进。同期上榜的还有 Claude Code 智能体记忆方案 akitaonrails/ai-memory（Rust 实现）与 K-Dense-AI/scientific-agent-skills（177 个科学技能，+878 ★），Agent Skills 生态呈现快速收敛态势。</div>
+    <div class="tags">
+      <span class="tag hot">Trending #1</span>
+      <span class="tag">Agent 生态</span>
+      <span class="tag">Claude Code</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · sindresorhus/awesome 跟踪</div>
+    <div class="title"><a href="https://github.com/sindresorhus/awesome" target="_blank">Awesome 主索引动态：进入维护周期，Agentic AI 子列表持续活跃</a></div>
+    <div class="summary">本期对 sindresorhus/awesome 主仓库的跟踪显示，近三个月无新合并的 AI/机器学习类 awesome list，维护工作以清理归档列表为主（6 月移除 17 个、8 月移除 8 个归档列表），反映主索引进入存量优化阶段。AI 领域资源聚合的重心已转向专题列表（如 awesome-llm、awesome-ai-agents 等独立维护仓库）以及 HuggingFace Daily Papers 等动态源，建议后续跟踪重点相应调整。</div>
+    <div class="tags">
+      <span class="tag">Awesome List</span>
+      <span class="tag">资源索引</span>
+      <span class="tag">趋势观察</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>本期最显著的信号是 Agent 研究重心从「能力验证」向「基础设施」迁移：OpenGCUA、MAI-Gym 与 FDE-Gym 分别补齐全开源栈、RL 训练平台与真实交付评测三个环节，构成通用计算机操作智能体的完整工程闭环，学术评测与工业落地的边界正在被系统性地消解。机器人方向上，Spark-0 的触觉预训练与 LIBERO-PeRM 的个性化基准表明，具身智能正从通用性转向对物理接触与用户偏好的精细建模，这是家庭场景落地的必要前置条件。开源侧，GitHub Trending 由 Claude Code 插件与 Skills 生态主导，Agent-Native 工具链的社区共识已经确立。相比之下，awesome 主索引进入存量维护期，资源发现的主阵地已不可逆转地迁移至动态源。整体而言，本期的研究增量不在模型规模，而在评测真实性与基础设施完整性——这是 Agent 走向生产环境的标志性转折。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-10-18 · Generated by Hermes Agent</p>
+</div>
+
+</div>
+</body>
+</html>

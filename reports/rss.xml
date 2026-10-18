@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 17 Oct 2026 17:11:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2026 00:06:41 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-10-18</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261018.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261018.html</guid>
+      <pubDate>Sun, 18 Oct 2026 08:00:00 +0000</pubDate>
+      <description>本期 HuggingFace Daily Papers 呈现清晰的「Agent 基础设施」主线——OpenGCUA（315 票）与 FDE-Gym（283 票）分别代表通用计算机操作的全开源栈与真实交付场景评测，MAI-Gym 则补全 GUI 智能体的 RL 训练闭环；机器人方向迎来触觉预训练 Spark-0 与个性化操作基准 LIBERO-PeRM；开源社区层面，GitHub Trending 由 Claude Code 生态（官方插件目录、Skills 库、Agent 记忆方案）全面主导，Agent-Native 工具链成为本周确定性趋势。</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-10-18</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261018.html</link>

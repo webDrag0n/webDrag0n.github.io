@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-17T17:11:00.470531+00:00",
+  "generated_at": "2026-10-18T00:06:41.966234+00:00",
   "papers": {
-    "date": "2026-10-17",
-    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261017.html",
-    "overview": "GitHub Trending 被 Agent 工具链全面占据——Anthropic 官方插件目录、Agent Skills 框架与上下文优化工具集中爆发；学术界方面，自主机器学习工程（MLExpert）、面向灵巧操作的视觉-触觉-语言-动作模型（Spark-0）、以及机器人世界模型的测试时环境隐变量优化（T2-Z）构成本日研究主线，具身智能与 Agent 化趋势持续合流。",
-    "digest": "今日信号高度一致：Agent 化正从模型层下沉至工具链层。GitHub 日榜近半数为 Agent 插件、Skills 与上下文优化项目，Anthropic 官方插件目录的出现标志着插件生态进入厂商主导阶段。学术侧，MLExpert 推进自主机器学习工程，Spark-0 将触觉引入 VLA 预训练，T2-Z 让世界模型在测试时推断隐含环境参数——感知、规划与自我改进三条线索正在收敛。Awesome 社区的新列表同样聚焦 RSI 与自进化 Agent。短期看，上下文工程与技能复用是工程落地的主战场；中长期看，\"AI 改进 AI\"的闭环正在从叙事走向可复现的基准与框架。"
+    "date": "2026-10-18",
+    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261018.html",
+    "overview": "本期 HuggingFace Daily Papers 呈现清晰的「Agent 基础设施」主线——OpenGCUA（315 票）与 FDE-Gym（283 票）分别代表通用计算机操作的全开源栈与真实交付场景评测，MAI-Gym 则补全 GUI 智能体的 RL 训练闭环；机器人方向迎来触觉预训练 Spark-0 与个性化操作基准 LIBERO-PeRM；开源社区层面，GitHub Trending 由 Claude Code 生态（官方插件目录、Skills 库、Agent 记忆方案）全面主导，Agent-Native 工具链成为本周确定性趋势。",
+    "digest": "本期最显著的信号是 Agent 研究重心从「能力验证」向「基础设施」迁移：OpenGCUA、MAI-Gym 与 FDE-Gym 分别补齐全开源栈、RL 训练平台与真实交付评测三个环节，构成通用计算机操作智能体的完整工程闭环，学术评测与工业落地的边界正在被系统性地消解。机器人方向上，Spark-0 的触觉预训练与 LIBERO-PeRM 的个性化基准表明，具身智能正从通用性转向对物理接触与用户偏好的精细建模，这是家庭场景落地的必要前置条件。开源侧，GitHub Trending 由 Claude Code 插件与 Skills 生态主导，Agent-Native 工具链的社区共识已经确立。相比之下，awesome 主索引进入存量维护期，资源发现的主阵地已不可逆转地迁移至动态源。整体而言，本期的研究增量不在模型规模，而在评测真实性与基础设施完整性——这是 Agent 走向生产环境的标志性转折。"
   },
   "media": {
     "date": "2026-10-18",
