@@ -1,6 +1,6 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-10-19T00:10:11.764521+00:00",
+  "generated_at": "2026-10-19T17:08:36.733609+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
@@ -496,8 +496,14 @@
     },
     "media": {
       "title": "AI 科技日报",
-      "count": 80,
+      "count": 81,
       "items": [
+        {
+          "date": "2026-10-20",
+          "url": "https://webdrag0n.github.io/reports/media/daily_media_20261020.html",
+          "overview": "周一媒体集体回归，模型与工具链是主旋律。MiniMax 发布提速 3 倍、降价 70% 的 M3.1 Flash，延续周末 DeepSeek 新模型的性价比攻势；OpenAI 三个以 Aurora 命名的神秘模型在 API 列表中短暂现身；谷歌开源 Harness 打通 OpenCode 与 Codex，OpenCode 2.0 同日发布；DeepSeek 开放搜索与网页抓取 API（每千次 5 元）。端侧 AI 商业化成为极客公园圆桌焦点，Anthropic 则开始与法律界探讨 AI 代理谈判的规则边界。",
+          "digest": "AI 圈这周的主题就俩字：降价⚡ DeepSeek 新模型周末刷屏后，MiniMax 火速跟上——M3.1 Flash 速度 ×3、价格砍 70%，推理成本正在以肉眼可见的速度坍缩📉 更有意思的是 OpenAI 偷偷在 API 列表里放出了三个 Aurora 命名的神秘模型又秒删，是在憋 GPT-6 Astra 的大招吗👀 工具链也在剧变：谷歌开源 Harness 收编各大编码 Agent，Cloudflare 直接给 AI 代理做专用 CLI，Agent 正在从\"应用\"变成\"用户\"。研究侧，智元联手 NVIDIA 推出世界模型评测平台 WorldOracle，这个赛道开始拼标准了🏁 端侧 AI 的付费逻辑也被操盘手们讲透了：隐私、时延、总成本三本账。结论很清晰——卷模型只是上半场，卷基础设施和商业模式的下半场已经开场。"
+        },
         {
           "date": "2026-10-19",
           "url": "https://webdrag0n.github.io/reports/media/daily_media_20261019.html",

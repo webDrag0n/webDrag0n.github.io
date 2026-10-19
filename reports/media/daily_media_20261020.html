@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中文 AI 媒体日报 — 2026-10-20</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>中文 AI 媒体日报</h1>
+  <div class="date">2026 年 10 月 20 日（周二）</div>
+  <div class="subtitle">覆盖 10 月 19 日及周末要闻 · 来源：量子位 / 极客公园 / 36氪 / InfoQ / 少数派</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>周一媒体集体回归，模型与工具链是主旋律。MiniMax 发布提速 3 倍、降价 70% 的 M3.1 Flash，延续周末 DeepSeek 新模型的性价比攻势；OpenAI 三个以 Aurora 命名的神秘模型在 API 列表中短暂现身；谷歌开源 Harness 打通 OpenCode 与 Codex，OpenCode 2.0 同日发布；DeepSeek 开放搜索与网页抓取 API（每千次 5 元）。端侧 AI 商业化成为极客公园圆桌焦点，Anthropic 则开始与法律界探讨 AI 代理谈判的规则边界。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>大模型</div>
+
+  <div class="card">
+    <div class="source">36氪 · 10-19</div>
+    <div class="title"><a href="https://www.36kr.com/newsflashes/4032748449026946">MiniMax M3.1 Flash 上线：性能全面加强，速度提升 3 倍，价格降低 70%</a></div>
+    <div class="summary">轻量旗舰继续打"速度 × 成本"牌。在推理成本快速坍缩的当下，中小模型正以极致性价比抢占 Agent 与高频调用场景的基本盘。</div>
+    <div class="tags"><span class="tag hot">重点</span><span class="tag">大模型</span><span class="tag">MiniMax</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">极客公园 · 10-19</div>
+    <div class="title"><a href="http://www.geekpark.net/news/372514">OpenAI 三个神秘模型曝光；DeepSeek 开放搜索与网页抓取 API ｜ 极客早知道</a></div>
+    <div class="summary">aurora-red/green/blue 三个模型在 OpenAI API 列表中昙花一现，外界猜测为 GPT-6 Astra 后续检查点；DeepSeek 同步把自研搜索引擎做成每千次 5 元的 API 生意，直接切入 Agent 基础设施层。</div>
+    <div class="tags"><span class="tag hot">重点</span><span class="tag">OpenAI</span><span class="tag">DeepSeek</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">InfoQ · 10-19</div>
+    <div class="title"><a href="https://www.infoq.cn/article/bROfcYFpijQQVBz4NqDi">Jev 迎来中国挑战者：StartLux 登顶决策模型榜单，还学会了"拿不准再想"</a></div>
+    <div class="summary">决策型模型赛道出现国产新面孔，"不确定时延长思考"的元认知能力正成为评测新维度。</div>
+    <div class="tags"><span class="tag">大模型</span><span class="tag">国产模型</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 10-17（周末要闻）</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504067.html">DeepSeek 新模型发布，超级性价比斩杀一切</a></div>
+    <div class="summary">周末刷屏事件。DeepSeek 延续"低价高能"打法，新模型直接把推理成本曲线再压一档，是本周所有"降价"新闻的源头。</div>
+    <div class="tags"><span class="tag">大模型</span><span class="tag">DeepSeek</span><span class="tag">周末</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠</span>产品与工具</div>
+
+  <div class="card">
+    <div class="source">InfoQ · 10-19</div>
+    <div class="title"><a href="https://www.infoq.cn/article/AD1M3mJ2SH1dJrTA1r5q">谷歌开源 Harness，支持 OpenCode 和 Codex：国内开发者接入实测"真行"</a></div>
+    <div class="summary">Harness 开源落地，把主流编码 Agent 纳入统一执行框架，编码 Agent 的"运行时层"之争正式开场。</div>
+    <div class="tags"><span class="tag hot">重点</span><span class="tag">开源</span><span class="tag">Agent</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">InfoQ · 10-19</div>
+    <div class="title"><a href="https://www.infoq.cn/article/IK5AWDwovCu5lx3e3mhc">OpenCode 2.0 正式发布：一次"重大改造"，旧插件全部报废</a></div>
+    <div class="summary">大版本重构伴随生态断裂，短期阵痛换取长期架构空间——开源 Agent 工具的迭代速度正在逼近商业产品。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">编码工具</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">InfoQ · 10-19</div>
+    <div class="title"><a href="https://www.infoq.cn/article/Ddda0DF68laqfoqa4Lju">Cloudflare 推出面向 AI 代理的 CLI，并逐步停用 Wrangler</a></div>
+    <div class="summary">开发工具开始把 AI Agent 当作一等公民用户。"Agent 优先"的命令行设计或成基础设施新标配。</div>
+    <div class="tags"><span class="tag">开发者工具</span><span class="tag">Agent</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪 · 10-19</div>
+    <div class="title"><a href="https://www.36kr.com/newsflashes/4032708860433286">深兰科技发布自研影视智能体操作系统 DFAgent</a></div>
+    <div class="summary">垂直行业 Agent 操作系统继续涌现，影视制作成为"行业 OS"叙事的新试验田。</div>
+    <div class="tags"><span class="tag">行业应用</span><span class="tag">Agent</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 10-18（周末要闻）</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504136.html">VAST 开源实时世界模型 EdenLive：单消费级显卡、720P 超 24FPS</a></div>
+    <div class="summary">实时世界模型被压缩到单张消费级显卡可跑，交互式生成视频离"人人可用"又近一步。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">世界模型</span><span class="tag">周末</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔬</span>研究</div>
+
+  <div class="card">
+    <div class="source">36氪 · 10-19</div>
+    <div class="title"><a href="https://www.36kr.com/newsflashes/4032758104429449">智元联合 NVIDIA 及多所高校推出世界模型评测平台 WorldOracle</a></div>
+    <div class="summary">世界模型赛道从"拼生成"进入"拼评测"阶段，标准化基准将加速优胜劣汰，也利好具身智能研究复现。</div>
+    <div class="tags"><span class="tag hot">重点</span><span class="tag">世界模型</span><span class="tag">具身智能</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 10-17（周末要闻）</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/503910.html">Claude 半小时解开密码学悬案，学界集体走偏 20 年</a></div>
+    <div class="summary">AI 辅助科研的又一标志性案例：模型不仅解题，还指出了学界长达二十年的方向性偏差。</div>
+    <div class="tags"><span class="tag">AI for Science</span><span class="tag">周末</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 10-17（周末要闻）</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/503935.html">清华开源智能体操作系统：任务成本降 83%，AI 记忆可查可改</a></div>
+    <div class="summary">Agent 记忆管理从黑盒走向可审计，成本与控制力同步改善，是企业级 Agent 落地的关键拼图。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">Agent</span><span class="tag">周末</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🏭</span>行业与洞察</div>
+
+  <div class="card">
+    <div class="source">极客公园 · 10-19</div>
+    <div class="title"><a href="http://www.geekpark.net/news/372578">客户为什么愿意为端侧 AI 买单？五位一线操盘手讲透了</a></div>
+    <div class="summary">端侧 AI 的付费逻辑被拆解为隐私、时延与总成本三本账——在云端模型价格战之外，端侧正悄悄建立自己的商业闭环。</div>
+    <div class="tags"><span class="tag hot">重点</span><span class="tag">端侧 AI</span><span class="tag">商业化</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">极客公园 · 10-19</div>
+    <div class="title"><a href="http://www.geekpark.net/news/372514">Anthropic 与法律专家讨论 AI Agent 谈判规则；拟设"公共利益"基金注入 5% 股份</a></div>
+    <div class="summary">当 Agent 开始替用户砍价、谈薪资、处理纠纷，代理权限与行为边界的规则制定已提上日程；Anthropic 用股权基金为"AI 社会影响"提前买单。</div>
+    <div class="tags"><span class="tag">Anthropic</span><span class="tag">AI 治理</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">极客公园 · 10-19</div>
+    <div class="title"><a href="http://www.geekpark.net/news/372545">MemSilicon 完成超 4 亿元 A 轮融资，宣布战略升级</a></div>
+    <div class="summary">存储芯片赛道继续吸金，AI 推理对存力的饥渴正把上游半导体公司推上资本风口。</div>
+    <div class="tags"><span class="tag">融资</span><span class="tag">算力</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪 · 10-19</div>
+    <div class="title"><a href="https://www.36kr.com/newsflashes/4032794073174916">美国电力公司 AEP 携手亚马逊、X-energy 开发 960 兆瓦先进核电项目</a></div>
+    <div class="summary">AI 数据中心用电焦虑持续外溢，"算力—能源"捆绑投资已成为美国科技巨头的标准动作。</div>
+    <div class="tags"><span class="tag">算力</span><span class="tag">能源</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>AI 圈这周的主题就俩字：降价⚡ DeepSeek 新模型周末刷屏后，MiniMax 火速跟上——M3.1 Flash 速度 ×3、价格砍 70%，推理成本正在以肉眼可见的速度坍缩📉 更有意思的是 OpenAI 偷偷在 API 列表里放出了三个 Aurora 命名的神秘模型又秒删，是在憋 GPT-6 Astra 的大招吗👀 工具链也在剧变：谷歌开源 Harness 收编各大编码 Agent，Cloudflare 直接给 AI 代理做专用 CLI，Agent 正在从"应用"变成"用户"。研究侧，智元联手 NVIDIA 推出世界模型评测平台 WorldOracle，这个赛道开始拼标准了🏁 端侧 AI 的付费逻辑也被操盘手们讲透了：隐私、时延、总成本三本账。结论很清晰——卷模型只是上半场，卷基础设施和商业模式的下半场已经开场。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 生成于 2026-10-20 · 覆盖媒体：量子位 / 极客公园 / 36氪 / InfoQ / 少数派</p>
+</div>
+
+</div>
+</body>
+</html>

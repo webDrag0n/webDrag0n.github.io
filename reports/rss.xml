@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 19 Oct 2026 00:10:11 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2026 17:08:36 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-10-20</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261020.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261020.html</guid>
+      <pubDate>Tue, 20 Oct 2026 08:00:00 +0000</pubDate>
+      <description>周一媒体集体回归，模型与工具链是主旋律。MiniMax 发布提速 3 倍、降价 70% 的 M3.1 Flash，延续周末 DeepSeek 新模型的性价比攻势；OpenAI 三个以 Aurora 命名的神秘模型在 API 列表中短暂现身；谷歌开源 Harness 打通 OpenCode 与 Codex，OpenCode 2.0 同日发布；DeepSeek 开放搜索与网页抓取 API（每千次 5 元）。端侧 AI 商业化成为极客公园圆桌焦点，Anthropic 则开始与法律界探讨 AI 代理谈判的规则边界。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-10-19</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261019.html</link>
