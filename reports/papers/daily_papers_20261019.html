@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年10月19日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<!--
+  TEMPLATE STRUCTURE:
+  Replace {{PLACEHOLDERS}} with actual content.
+  
+  Sections:
+  - .header: icon, title, date, subtitle
+  - .summary-banner: one-paragraph overview of today's hot topics
+  - .section: grouped news (Headlines / Research / Industry / Open Source)
+  - .card: individual news item (source, title link, summary, tags)
+  - .hot-topic: highlighted breaking news
+  - .insights: editorial summary
+  - .footer: generation info
+-->
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年10月19日</div>
+  <div class="subtitle">ArXiv + HuggingFace Daily + GitHub Trending + Awesome 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>Agent 基础设施与研究今日全面升温：HuggingFace Daily 榜单前三名被 Agent 相关论文包揽——MJev-Spatial（354 ▲）以原生注意力匹配实现毫秒级空间智能，OpenGCUA（316 ▲）开源通用计算机操作全栈，Waypoint-OPD（668 ▲）提出门控在策略蒸馏迁移 RL 策略偏移；DeepMind 团队放出 4 个 Gemini 4 Argon 智能体在 Minecraft 中无脚本协作击败末影龙。开源社区方面，GitHub Trending 持续由 Claude Code 生态主导（官方插件目录、科研 Skills 库、CLI-Anything），Awesome 列表则新增多个 Agent Skills 与 MCP 合集。</p>
+</div>
+
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日焦点</div>
+
+  <div class="hot-topic">
+    <div class="label">Hot · 空间智能</div>
+    <div class="source">arXiv 2610.22276 · HuggingFace Daily Papers 354 ▲</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.22276" target="_blank">MJev-Spatial: System One Spatial Intelligence via Native Attention Matching</a></div>
+    <div class="summary">空间智能要求智能体以交互速率完成「哪个空间关系成立、物体有多远、该放在哪里」等判断。现有 VLM 依赖自由文本生成，需支付自回归解码与答案解析成本，尽管输出空间本身极为紧凑。MJev-Spatial 通过原生注意力匹配直接输出结构化空间判断，将空间推理从「System 2」式慢思考压缩到「System 1」式快反应，为具身智能的实时决策提供了新路径。</div>
+    <div class="tags">
+      <span class="tag hot">354 ▲ 热门</span>
+      <span class="tag">空间智能</span>
+      <span class="tag">VLM</span>
+      <span class="tag">具身智能</span>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">Hot · 开源 Agent 基础设施</div>
+    <div class="source">arXiv 2610.22200 · HuggingFace Daily Papers 316 ▲</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.22200" target="_blank">OpenGCUA: Toward a Fully Open Stack for Generalist Computer Use</a></div>
+    <div class="summary">计算机操作（Computer Use）正从纯 GUI 交互扩展到融合视觉与程序化接口的通用任务执行。OpenGCUA 定义了通用计算机操作智能体（GCUA），并提供覆盖数据、训练与评测的全开源技术栈，对标 GPT 级闭源实现，显著降低了社区进入该方向的门槛，有望成为 Computer-Use Agent 研究的标准基座。</div>
+    <div class="tags">
+      <span class="tag hot">316 ▲ 热门</span>
+      <span class="tag">Computer-Use Agent</span>
+      <span class="tag">开源全栈</span>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">Hot · RL 后训练</div>
+    <div class="source">arXiv 2610.21601 · HuggingFace Daily Papers 668 ▲</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.21601" target="_blank">Waypoint-OPD: Transferring RL-Induced Policy Shifts via Gated On-Policy Distillation</a></div>
+    <div class="summary">策略偏移蒸馏复用教师模型在 RL 前后的 log 概率差作为学生轨迹上的监督信号，但端点偏移无法揭示局部动作偏好在训练中的一致性演化。Waypoint-OPD 引入中间路径点与门控在策略蒸馏，更细粒度地迁移 RL 诱导的策略变化，为「蒸馏 RL 收益」这一后训练范式提供了更可靠的传输机制。668 票的社区热度印证了该方向的关注度。</div>
+    <div class="tags">
+      <span class="tag hot">668 ▲ 今日最热</span>
+      <span class="tag">RL 蒸馏</span>
+      <span class="tag">On-Policy Distillation</span>
+      <span class="tag">后训练</span>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">Hot · 多智能体协作</div>
+    <div class="source">arXiv 2610.22319 · cs.AI · DeepMind</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.22319" target="_blank">A team of Gemini 4 Argon agents beats Minecraft</a></div>
+    <div class="summary">DeepMind 团队将 4 个 Gemini 4 Argon 智能体放入沙盒 Minecraft 生存世界，目标只有一个：击败末影龙。每个智能体通过开源库 Mineflayer 控制玩家，经游戏内聊天与共享记忆协调——无人分配角色、无人编写游戏逻辑，所有程序均由智能体自行规划、编写与调试。这是多智能体系统中 emergent coordination 的一次生动展示。</div>
+    <div class="tags">
+      <span class="tag hot">DeepMind</span>
+      <span class="tag">Multi-Agent</span>
+      <span class="tag">Minecraft</span>
+      <span class="tag">Emergent Coordination</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>前沿研究 · Agent</div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.22350 · cs.AI / cs.SE · HuggingFace Daily Papers 285 ▲</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.22350" target="_blank">FDE-Gym: The Last Mile of AI Delivery</a></div>
+    <div class="summary">现有 Agent 基准评测的多是定义明确的任务，而真实客户交付截然不同：前置部署工程师必须澄清模糊需求、在活跃系统中操作并发现未声明的约束。FDE-Gym 提供 95 个来自 20 个客户场景的端到端交付任务，将评测对准「最后一公里」交付能力，是从实验室指标迈向工程现实的重要一步。</div>
+    <div class="tags">
+      <span class="tag">285 ▲</span>
+      <span class="tag">Agent Benchmark</span>
+      <span class="tag">软件工程</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.20939 · HuggingFace Daily Papers 154 ▲</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.20939" target="_blank">MAI-Gym: An Open All-in-One Platform for GUI Agent Evaluation and RL Training</a></div>
+    <div class="summary">可验证奖励的在线 RL 已在数学、代码与工具使用上取得快速进展，但 GUI 智能体受限于交互环境的高成本。MAI-Gym 提供覆盖移动端与桌面端的一体化开源平台，将评测、数据采集与在线 RL 训练整合于统一框架，补齐了 GUI Agent 规模化训练的关键基础设施。</div>
+    <div class="tags">
+      <span class="tag">154 ▲</span>
+      <span class="tag">GUI Agent</span>
+      <span class="tag">RLVR</span>
+      <span class="tag">开源平台</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.18813 · HuggingFace Daily Papers 202 ▲</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.18813" target="_blank">Self-Evolving Agent Harness</a></div>
+    <div class="summary">Harness 自演化在模型权重固定的前提下修订智能体的软件脚手架——提示词、记忆、工作流与可执行组件。作者将这一反馈驱动过程形式化，区分更新目标与提案/准入机制，为「不改权重、改脚手架」的 Agent 自我改进路线提供了清晰的概念框架。</div>
+    <div class="tags">
+      <span class="tag">202 ▲</span>
+      <span class="tag">Agent Harness</span>
+      <span class="tag">自我演化</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.22174 · HuggingFace Daily Papers 54 ▲</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.22174" target="_blank">Mosaic: Multi-Session Agentic Reinforcement Learning</a></div>
+    <div class="summary">现有 Agentic RL 假设单会话轨迹，但上下文压缩与子智能体分叉等技术会产生跨多会话的轨迹，造成训练假设与推理执行的不匹配。Mosaic 提出多会话 Agentic RL 框架，直面这一日益普遍的工程现实，为长程 Agent 训练扫清障碍。</div>
+    <div class="tags">
+      <span class="tag">54 ▲</span>
+      <span class="tag">Agentic RL</span>
+      <span class="tag">多会话</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.22322 · cs.MA / cs.AI</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.22322" target="_blank">Learning Self-Orchestration in Decentralized Agent Swarms</a></div>
+    <div class="summary">智能体集群的能力取决于个体成员及其协调方式，但现有多智能体系统通常在固定编排结构内训练。本文提出基于市场的后训练（MPT）框架，联合学习动作策略与自编排机制，让去中心化智能体集群自己学会如何组织协作。</div>
+    <div class="tags">
+      <span class="tag">Multi-Agent</span>
+      <span class="tag">自编排</span>
+      <span class="tag">cs.MA</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>前沿研究 · 训练与表征</div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.21439 · HuggingFace Daily Papers 56 ▲</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.21439" target="_blank">Each Reward to Its Relevant Tokens: Reward-Specific Token-Level Credit Assignment</a></div>
+    <div class="summary">多奖励 RL 训练中，GDPO 等方法分别归一化各奖励以保持优势区分度，但仍将每个奖励的优势均匀分摊到整条轨迹。本文提出奖励特定的 token 级信用分配，把「哪个奖励」精确对应到「哪些 token」，显著提升多约束场景下的训练效率与信号质量。</div>
+    <div class="tags">
+      <span class="tag">56 ▲</span>
+      <span class="tag">RLHF</span>
+      <span class="tag">信用分配</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.21261 · HuggingFace Daily Papers 106 ▲</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.21261" target="_blank">Behavioral Compositionality of Sparse Autoencoder Representations</a></div>
+    <div class="summary">稀疏自编码器以稀疏线性解码特征表示模型激活，但特征的下游行为效应未必可加。作者提出 SAE Additivity Residuals（SAR），度量未被给定交互阶数解释的行为变异，为机制可解释性研究提供了严格的组合性检验工具，揭示 SAE 特征在行为层面的系统性非线性。</div>
+    <div class="tags">
+      <span class="tag">106 ▲</span>
+      <span class="tag">可解释性</span>
+      <span class="tag">SAE</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.22353 · cs.LG</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.22353" target="_blank">Rethinking Routing Exploration in Modern Mixture-of-Experts</a></div>
+    <div class="summary">现代 MoE 架构日益结合细粒度专家切分与共享专家两种设计。作者系统重新审视 MoE 的路由探索机制，识别出既有设计中的结构性问题，为大规模稀疏模型的路由策略优化提供了新的分析视角与改进方向。</div>
+    <div class="tags">
+      <span class="tag">MoE</span>
+      <span class="tag">路由机制</span>
+      <span class="tag">架构研究</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>前沿研究 · 具身智能与世界模型</div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.21306 · HuggingFace Daily Papers 54 ▲</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.21306" target="_blank">VLA-Δ: Learning Physical State Transition for Vision-Language-Action Models</a></div>
+    <div class="summary">多数 VLA 模型直接将观测映射到示范动作，缺乏对中间物理状态变化的显式监督，容易过拟合观测-动作对应关系。VLA-Δ 引入物理状态转移学习，让模型显式建模动作引发的状态变化，提升泛化能力与物理一致性。</div>
+    <div class="tags">
+      <span class="tag">54 ▲</span>
+      <span class="tag">VLA</span>
+      <span class="tag">机器人</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.21095 · HuggingFace Daily Papers 40 ▲</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.21095" target="_blank">Can World and Action Modeling Benefit Each Other under Unified Causal Training?</a></div>
+    <div class="summary">世界建模与动作建模关系密切，但二者在统一因果训练下的互惠性尚不明确。OneWM 框架将动作同时作为世界预测的条件与策略学习的目标，在共享视频-动作架构内系统研究前向动力学与策略学习的相互增益，为统一世界模型-策略架构提供了实证依据。</div>
+    <div class="tags">
+      <span class="tag">40 ▲</span>
+      <span class="tag">世界模型</span>
+      <span class="tag">统一训练</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源社区动态</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · Python · 日榜</div>
+    <div class="title"><a href="https://github.com/anthropics/claude-plugins-official" target="_blank">anthropics/claude-plugins-official</a> <span style="color:#d63031;font-weight:600">+1,175 ★/日</span></div>
+    <div class="summary">Anthropic 官方维护的高质量 Claude Code 插件目录，标志着插件生态进入官方背书阶段。配合 K-Dense-AI/scientific-agent-skills（+663/日，科研 Agent Skills 库）与 HKUDS/CLI-Anything（+589/日，让所有软件 Agent-Native），Claude Code 生态几乎占据今日 GitHub Trending 半壁江山，Agent 工具链的标准化与分发渠道正在快速成型。</div>
+    <div class="tags">
+      <span class="tag hot">趋势榜</span>
+      <span class="tag">Claude Code</span>
+      <span class="tag">Agent 生态</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · Python · 日榜</div>
+    <div class="title"><a href="https://github.com/debpalash/VoiceStudio" target="_blank">debpalash/VoiceStudio</a> <span style="color:#d63031;font-weight:600">+2,082 ★/日</span></div>
+    <div class="summary">开源、完全本地运行的 ElevenLabs 替代品，支持声音克隆与多语言 TTS。语音合成的本地化方案持续受到社区追捧，隐私与成本优势是主要驱动力。</div>
+    <div class="tags">
+      <span class="tag hot">2K+ ★/日</span>
+      <span class="tag">TTS</span>
+      <span class="tag">本地化</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · awesome 列表动态</div>
+    <div class="title"><a href="https://github.com/linny006/awesome-agent-skills" target="_blank">awesome-agent-skills</a> · <a href="https://github.com/jaccen/Awesome-Gaussian-Skills" target="_blank">Awesome-Gaussian-Skills</a> · <a href="https://github.com/JustInCache/awesome-mcp-collection" target="_blank">awesome-mcp-collection</a></div>
+    <div class="summary">Awesome 生态持续围绕 Agent 主题扩张：awesome-agent-skills 提供带质量评级的 Agent Skills 精选并自动更新；Awesome-Gaussian-Skills 收录 900 篇 arXiv 验证的 3DGS 方法与 15 个 Agent Skills，并附带 34 个工具的 MCP server；awesome-mcp-collection 则主打 MCP server 的即插即用配置合集。sindresorhus/awesome 主仓本周亦有维护性合并（移除失效列表、修复格式问题）。</div>
+    <div class="tags">
+      <span class="tag">Awesome List</span>
+      <span class="tag">MCP</span>
+      <span class="tag">Agent Skills</span>
+    </div>
+  </div>
+</div>
+
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今天的榜单属于 Agent。学术侧，OpenGCUA 与 FDE-Gym 分别从开源栈与真实交付评测两端把「计算机操作智能体」推向工程化；Minecraft 的多智能体协作实验则展示了无预设分工的 emergent coordination，相当有想象力。训练侧，Waypoint-OPD 的 668 票说明 RL 蒸馏与策略偏移迁移已成为后训练社区的核心议题，配合 Mosaic 的多会话 Agentic RL 与 token 级 credit assignment，后训练方法论正快速细化。开源侧的趋势同样清晰：Claude Code 生态几乎占据 GitHub Trending 半壁江山，Skills/Plugins/MCP 正在形成新的分发渠道。整体来看，「让 Agent 真正做事」的基础设施竞赛已经打响，而评测与训练方法的迭代速度，将决定谁能率先跨越 demo 与产品之间的鸿沟。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-10-19 08:09</p>
+</div>
+
+</div>
+</body>
+</html>

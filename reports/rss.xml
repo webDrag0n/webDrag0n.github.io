@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 18 Oct 2026 17:07:04 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2026 00:10:11 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-10-19</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261019.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261019.html</guid>
+      <pubDate>Mon, 19 Oct 2026 08:00:00 +0000</pubDate>
+      <description>Agent 基础设施与研究今日全面升温：HuggingFace Daily 榜单前三名被 Agent 相关论文包揽——MJev-Spatial（354 ▲）以原生注意力匹配实现毫秒级空间智能，OpenGCUA（316 ▲）开源通用计算机操作全栈，Waypoint-OPD（668 ▲）提出门控在策略蒸馏迁移 RL 策略偏移；DeepMind 团队放出 4 个 Gemini 4 Argon 智能体在 Minecraft 中无脚本协作击败末影龙。开源社区方面，GitHub Trending 持续由 Claude Code 生态主导（官方插件目录、科研 Skills 库、CLI-Anything），A</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-10-19</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261019.html</link>

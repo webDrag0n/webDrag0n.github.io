@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-18T17:07:04.170750+00:00",
+  "generated_at": "2026-10-19T00:10:11.766954+00:00",
   "papers": {
-    "date": "2026-10-18",
-    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261018.html",
-    "overview": "本期 HuggingFace Daily Papers 呈现清晰的「Agent 基础设施」主线——OpenGCUA（315 票）与 FDE-Gym（283 票）分别代表通用计算机操作的全开源栈与真实交付场景评测，MAI-Gym 则补全 GUI 智能体的 RL 训练闭环；机器人方向迎来触觉预训练 Spark-0 与个性化操作基准 LIBERO-PeRM；开源社区层面，GitHub Trending 由 Claude Code 生态（官方插件目录、Skills 库、Agent 记忆方案）全面主导，Agent-Native 工具链成为本周确定性趋势。",
-    "digest": "本期最显著的信号是 Agent 研究重心从「能力验证」向「基础设施」迁移：OpenGCUA、MAI-Gym 与 FDE-Gym 分别补齐全开源栈、RL 训练平台与真实交付评测三个环节，构成通用计算机操作智能体的完整工程闭环，学术评测与工业落地的边界正在被系统性地消解。机器人方向上，Spark-0 的触觉预训练与 LIBERO-PeRM 的个性化基准表明，具身智能正从通用性转向对物理接触与用户偏好的精细建模，这是家庭场景落地的必要前置条件。开源侧，GitHub Trending 由 Claude Code 插件与 Skills 生态主导，Agent-Native 工具链的社区共识已经确立。相比之下，awesome 主索引进入存量维护期，资源发现的主阵地已不可逆转地迁移至动态源。整体而言，本期的研究增量不在模型规模，而在评测真实性与基础设施完整性——这是 Agent 走向生产环境的标志性转折。"
+    "date": "2026-10-19",
+    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261019.html",
+    "overview": "Agent 基础设施与研究今日全面升温：HuggingFace Daily 榜单前三名被 Agent 相关论文包揽——MJev-Spatial（354 ▲）以原生注意力匹配实现毫秒级空间智能，OpenGCUA（316 ▲）开源通用计算机操作全栈，Waypoint-OPD（668 ▲）提出门控在策略蒸馏迁移 RL 策略偏移；DeepMind 团队放出 4 个 Gemini 4 Argon 智能体在 Minecraft 中无脚本协作击败末影龙。开源社区方面，GitHub Trending 持续由 Claude Code 生态主导（官方插件目录、科研 Skills 库、CLI-Anything），Awesome 列表则新增多个 Agent Skills 与 MCP 合集。",
+    "digest": "今天的榜单属于 Agent。学术侧，OpenGCUA 与 FDE-Gym 分别从开源栈与真实交付评测两端把「计算机操作智能体」推向工程化；Minecraft 的多智能体协作实验则展示了无预设分工的 emergent coordination，相当有想象力。训练侧，Waypoint-OPD 的 668 票说明 RL 蒸馏与策略偏移迁移已成为后训练社区的核心议题，配合 Mosaic 的多会话 Agentic RL 与 token 级 credit assignment，后训练方法论正快速细化。开源侧的趋势同样清晰：Claude Code 生态几乎占据 GitHub Trending 半壁江山，Skills/Plugins/MCP 正在形成新的分发渠道。整体来看，「让 Agent 真正做事」的基础设施竞赛已经打响，而评测与训练方法的迭代速度，将决定谁能率先跨越 demo 与产品之间的鸿沟。"
   },
   "media": {
     "date": "2026-10-19",
