@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 19 Oct 2026 17:08:36 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 00:07:04 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-10-20</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261020.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261020.html</guid>
+      <pubDate>Tue, 20 Oct 2026 08:00:00 +0000</pubDate>
+      <description>今日 arXiv 机器人与 AI 板块集中爆发：MIT 团队用关节传感实现毫米级盲装、ETH 让灵巧手「用手指走路」、「自建实验室」把 AI 科学家推向全流程闭环；产业侧同样热闹——前 NVIDIA GR00T 研究员的 Dream Labs 携 9000 万美元种子轮出隐、奥特曼亲口确认 OpenAI 人形机器人计划，宇树发布 UniUni 集群控制系统。LLM 研究方面，「行为耦合」论文揭示微调的隐性副作用，推理蒸馏与长期记忆门控也有新进展。</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-10-20</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261020.html</link>

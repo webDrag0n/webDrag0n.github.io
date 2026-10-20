@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-19T17:08:36.738375+00:00",
+  "generated_at": "2026-10-20T00:07:04.427739+00:00",
   "papers": {
-    "date": "2026-10-19",
-    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261019.html",
-    "overview": "Agent 基础设施与研究今日全面升温：HuggingFace Daily 榜单前三名被 Agent 相关论文包揽——MJev-Spatial（354 ▲）以原生注意力匹配实现毫秒级空间智能，OpenGCUA（316 ▲）开源通用计算机操作全栈，Waypoint-OPD（668 ▲）提出门控在策略蒸馏迁移 RL 策略偏移；DeepMind 团队放出 4 个 Gemini 4 Argon 智能体在 Minecraft 中无脚本协作击败末影龙。开源社区方面，GitHub Trending 持续由 Claude Code 生态主导（官方插件目录、科研 Skills 库、CLI-Anything），Awesome 列表则新增多个 Agent Skills 与 MCP 合集。",
-    "digest": "今天的榜单属于 Agent。学术侧，OpenGCUA 与 FDE-Gym 分别从开源栈与真实交付评测两端把「计算机操作智能体」推向工程化；Minecraft 的多智能体协作实验则展示了无预设分工的 emergent coordination，相当有想象力。训练侧，Waypoint-OPD 的 668 票说明 RL 蒸馏与策略偏移迁移已成为后训练社区的核心议题，配合 Mosaic 的多会话 Agentic RL 与 token 级 credit assignment，后训练方法论正快速细化。开源侧的趋势同样清晰：Claude Code 生态几乎占据 GitHub Trending 半壁江山，Skills/Plugins/MCP 正在形成新的分发渠道。整体来看，「让 Agent 真正做事」的基础设施竞赛已经打响，而评测与训练方法的迭代速度，将决定谁能率先跨越 demo 与产品之间的鸿沟。"
+    "date": "2026-10-20",
+    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261020.html",
+    "overview": "今日 arXiv 机器人与 AI 板块集中爆发：MIT 团队用关节传感实现毫米级盲装、ETH 让灵巧手「用手指走路」、「自建实验室」把 AI 科学家推向全流程闭环；产业侧同样热闹——前 NVIDIA GR00T 研究员的 Dream Labs 携 9000 万美元种子轮出隐、奥特曼亲口确认 OpenAI 人形机器人计划，宇树发布 UniUni 集群控制系统。LLM 研究方面，「行为耦合」论文揭示微调的隐性副作用，推理蒸馏与长期记忆门控也有新进展。",
+    "digest": "今天最值得关注的信号是「具身智能正在从单点演示走向系统化工程」：Dream Labs 的 Dream-1 直接以公开 API 形式开放机器人大脑，意味着 VLA 模型开始像 LLM 一样走平台化路线；OpenAI 下场做人形，则把「软件定义硬件」的叙事推向顶点。学术侧，MIT 的 Blind Precise Assembly 提醒我们：高精度操作未必需要昂贵触觉传感器，关节本体感知被严重低估；Behavioral Couplings 则给所有做 SFT 的人敲了警钟——你训练的行为从来不是孤立的。建议重点关注机器人大脑 API 化与微调安全性这两条线的后续工作。"
   },
   "media": {
     "date": "2026-10-20",

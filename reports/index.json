@@ -1,11 +1,17 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-10-19T17:08:36.733609+00:00",
+  "generated_at": "2026-10-20T00:07:04.407863+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
-      "count": 81,
+      "count": 82,
       "items": [
+        {
+          "date": "2026-10-20",
+          "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261020.html",
+          "overview": "今日 arXiv 机器人与 AI 板块集中爆发：MIT 团队用关节传感实现毫米级盲装、ETH 让灵巧手「用手指走路」、「自建实验室」把 AI 科学家推向全流程闭环；产业侧同样热闹——前 NVIDIA GR00T 研究员的 Dream Labs 携 9000 万美元种子轮出隐、奥特曼亲口确认 OpenAI 人形机器人计划，宇树发布 UniUni 集群控制系统。LLM 研究方面，「行为耦合」论文揭示微调的隐性副作用，推理蒸馏与长期记忆门控也有新进展。",
+          "digest": "今天最值得关注的信号是「具身智能正在从单点演示走向系统化工程」：Dream Labs 的 Dream-1 直接以公开 API 形式开放机器人大脑，意味着 VLA 模型开始像 LLM 一样走平台化路线；OpenAI 下场做人形，则把「软件定义硬件」的叙事推向顶点。学术侧，MIT 的 Blind Precise Assembly 提醒我们：高精度操作未必需要昂贵触觉传感器，关节本体感知被严重低估；Behavioral Couplings 则给所有做 SFT 的人敲了警钟——你训练的行为从来不是孤立的。建议重点关注机器人大脑 API 化与微调安全性这两条线的后续工作。"
+        },
         {
           "date": "2026-10-19",
           "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261019.html",
