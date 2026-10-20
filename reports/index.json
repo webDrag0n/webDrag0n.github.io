@@ -1,6 +1,6 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-10-20T00:07:04.407863+00:00",
+  "generated_at": "2026-10-20T17:05:28.589720+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
@@ -502,8 +502,14 @@
     },
     "media": {
       "title": "AI 科技日报",
-      "count": 81,
+      "count": 82,
       "items": [
+        {
+          "date": "2026-10-21",
+          "url": "https://webdrag0n.github.io/reports/media/daily_media_20261021.html",
+          "overview": "昨天的中文 AI 媒体被两条主线刷屏：一是 MiniMax 发布 M3.1 Flash，输出速度卷到 200+ TPS、价格再砍一半，与 DeepSeek 上演「国产 Flash 双子星」性价比大战；二是 RSI（递归自我改进）成为学界与产业共同的新热词——谷歌开源 RSI 新成果、通研院孵化团队入局，MemT 1.0 则从模型层补上「记忆」拼图。此外 Claude 新模型「跳出思维定势」的曝光、智谱法律模型登顶、VAST 开源实时世界模型 EdenLive 等也值得关注。",
+          "digest": "昨天中文 AI 圈的焦点非常清晰：模型层在卷「又快又便宜」——MiniMax M3.1 Flash 把输出速度推到 200+ TPS、价格再砍一半，和 DeepSeek 组成国产 Flash 双子星，性价比大战正式开打。另一条暗线是 RSI（递归自我改进）突然升温：谷歌开源新成果、通研院团队入局、MemT 1.0 补上模型层记忆拼图，「能自我进化的 AI」从科幻词变成了工程议题。加上 Claude 新模型被曝能「跳出思维定势」、智谱在法律评测登顶全球，能看到一个共同趋势：大模型的竞争重心正在从参数和跑分，转向推理效率、记忆架构和专业可靠性这些更接近真实价值的维度。对应用开发者来说，现在是近一年来入手国产 API 性价比最高的窗口期。"
+        },
         {
           "date": "2026-10-20",
           "url": "https://webdrag0n.github.io/reports/media/daily_media_20261020.html",

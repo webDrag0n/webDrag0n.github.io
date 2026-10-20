@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中文 AI 媒体日报 — 2026-10-21</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .insight {
+    font-size: 13px;
+    color: var(--text);
+    background: #f1f8ff;
+    border-left: 3px solid var(--accent);
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .hot-topic .title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .hot-topic .title a { color: #e17055; text-decoration: none; }
+  .hot-topic .title a:hover { text-decoration: underline; }
+  .hot-topic .summary { font-size: 14px; color: var(--text-secondary); }
+  .hot-topic .insight { font-size: 13px; color: var(--text); margin-top: 8px; }
+
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📰</div>
+  <h1>中文 AI 媒体日报</h1>
+  <div class="date">2026 年 10 月 21 日 · 覆盖 10 月 20 日发布内容</div>
+  <div class="subtitle">来源：机器之心 · 量子位 · 36氪 · 少数派 等（去重后精选 12 条）</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>昨天的中文 AI 媒体被两条主线刷屏：一是 MiniMax 发布 M3.1 Flash，输出速度卷到 200+ TPS、价格再砍一半，与 DeepSeek 上演「国产 Flash 双子星」性价比大战；二是 RSI（递归自我改进）成为学界与产业共同的新热词——谷歌开源 RSI 新成果、通研院孵化团队入局，MemT 1.0 则从模型层补上「记忆」拼图。此外 Claude 新模型「跳出思维定势」的曝光、智谱法律模型登顶、VAST 开源实时世界模型 EdenLive 等也值得关注。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>头条热点</div>
+
+  <div class="hot-topic">
+    <div class="label">⚡ 刷屏话题 · 国产 Flash 大战</div>
+    <div class="title"><a href="https://www.36kr.com/p/4032947936662665" target="_blank">正面硬刚 DeepSeek：MiniMax M3.1 Flash 发布，输出卷到 200+ TPS，价格砍到 1/2</a></div>
+    <div class="summary">36氪 / 量子位 / 少数派早报多方报道：MiniMax M3.1 Flash 在 Agent 能力上冲到国产模型第一，同时把推理吞吐推到 200+ TPS 量级、API 价格再降一半。36氪另有评论文章《DeepSeek 第一，MiniMax 第二，国产 Flash 双子星杀疯了》，认为国产模型正在「快而便宜」这条曲线上形成全球比较优势。</div>
+    <div class="insight">编辑解读：大模型竞争的主战场正从「跑分」转向「单位 Token 的性价比」，推理效率工程的权重首次压过参数规模叙事，这对应用层是实打实的利好。</div>
+    <div class="tags"><span class="tag hot">刷屏</span><span class="tag">大模型</span><span class="tag">MiniMax</span><span class="tag">DeepSeek</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 / 机器之心（多家转载）</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504456.html" target="_blank">RSI 三块关键拼图：MemT 1.0 从模型层补上「记忆」；谷歌同日开源 RSI 新成果</a></div>
+    <div class="summary">递归自我改进（RSI）成为本周最热研究概念：MemT 1.0 试图从模型架构层解决长期记忆问题；谷歌开源的 RSI 成果被量子位形容为「华人浓度爆表」；北京通研院孵化的团队也被曝入局 RSI 方向，学界与产业同时押注。</div>
+    <div class="insight">编辑解读：RSI + 持久记忆是通往「能自我进化的 Agent」的两大前置条件，三条线同一天集中曝光，说明该方向已从论文议题进入工程军备竞赛阶段。</div>
+    <div class="tags"><span class="tag hot">RSI</span><span class="tag">研究</span><span class="tag">记忆架构</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504314.html" target="_blank">Claude 新模型曝光：能跳出思维定势，修 Bug 治标又治本</a></div>
+    <div class="summary">量子位报道，Anthropic 一款尚未官宣的新模型在内部测试中展现出「跳出思维定势」的推理特征——面对反复失败的调试路径会主动重构问题假设，而非在原有思路上打补丁。</div>
+    <div class="insight">编辑解读：如果属实，这意味着推理模型开始具备「元认知」雏形——知道自己在错路上比找到对的路更稀缺，对编程 Agent 的可靠性是质的提升。</div>
+    <div class="tags"><span class="tag">大模型</span><span class="tag">Anthropic</span><span class="tag">Agent</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>研究前沿</div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/503910.html" target="_blank">Claude 半小时解开密码学悬案，学界集体走偏 20 年</a></div>
+    <div class="summary">一个困扰密码学界约 20 年的公开问题被 Claude 在半小时内给出正确构造，且答案指向学界长期忽略的路线，引发「AI 辅助科研是否该重新定方向」的讨论。</div>
+    <div class="insight">编辑解读：AI 解开悬案的案例正从数学扩散到密码学，关键启示不在「快」，而在于 AI 没有人类社群的路径依赖——这正是 AI4S 的独特价值。</div>
+    <div class="tags"><span class="tag">AI4S</span><span class="tag">密码学</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/503965.html" target="_blank">智谱新模型，「懂法」方面全球第一了</a></div>
+    <div class="summary">智谱发布的新模型在法律垂直评测中登顶全球第一，覆盖法条理解、案例推理与合规问答等维度，被视为国产模型在专业垂直领域再下一城。</div>
+    <div class="insight">编辑解读：通用模型卷性价比的同时，垂直领域的「专业正确性」成为第二战场——法律、医疗这类高门槛场景的榜单冠军，比通用跑分更容易转化为付费客户。</div>
+    <div class="tags"><span class="tag">大模型</span><span class="tag">智谱</span><span class="tag">垂直领域</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504242.html" target="_blank">AI 开始挑战最复杂的系统：生命</a></div>
+    <div class="summary">综述性报道：从蛋白质设计到细胞级模拟，多家实验室正把大模型与世界模型方法引入生命科学，AI 处理的对象复杂度正在逼近系统生物学的上限。</div>
+    <div class="insight">编辑解读：继数学、代码之后，「生命」成为 AI 攻克的下一个复杂系统叙事，值得持续跟踪但短期需警惕概念过热。</div>
+    <div class="tags"><span class="tag">AI4S</span><span class="tag">生命科学</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>产品与工具</div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504136.html" target="_blank">VAST 开源实时世界模型 EdenLive：单消费级显卡、720P 超 24FPS</a></div>
+    <div class="summary">VAST 开源实时世界模型 EdenLive，可在单张消费级显卡上以 720P、超过 24FPS 的速度运行，把「可交互世界模型」的硬件门槛拉到了个人开发者可及的范围。</div>
+    <div class="insight">编辑解读：世界模型从云端演示走向本地实时，是具身智能与游戏/仿真两条线的共同基础设施，开源 + 消费级硬件的组合会显著放大社区创新。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">世界模型</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504415.html" target="_blank">Meshy 推出 Meshy Edit：一句指令实现 3D 模型局部编辑</a></div>
+    <div class="summary">3D 生成平台 Meshy 发布基于全新自研模型的 Meshy Edit，支持用自然语言对已有 3D 模型做局部修改，补上了 AI 3D 工作流中「可控编辑」这一长期短板。</div>
+    <div class="insight">编辑解读：生成只是起点，可控编辑才决定 AI 3D 能否进入真实生产管线——这一步对标的是图像领域 ControlNet/局部重绘当年的意义。</div>
+    <div class="tags"><span class="tag">3D生成</span><span class="tag">产品</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪</div>
+    <div class="title"><a href="https://www.36kr.com/p/4033567550739331" target="_blank">他们训了 35 万个 AI 假装被骗，让骗子白忙活 17 年</a></div>
+    <div class="summary">36氪报道一项另类 AI 安全实践：研究者训练了 35 万个模拟受害者的 AI，专门接听诈骗电话、拖住骗子的话术时间，从经济模型上让诈骗「不划算」。</div>
+    <div class="insight">编辑解读：用 AI 消耗黑产的注意力资源，是「以模制模」思路最有烟火气的落地案例，也提示反诈正在从拦截转向博弈。</div>
+    <div class="tags"><span class="tag">AI安全</span><span class="tag">反诈</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">cnBeta</div>
+    <div class="title"><a href="https://www.cnbeta.com.tw/articles/tech/1581316.htm" target="_blank">Google Gemini 4 Argon 已对部分用户开放，成为 Antigravity 默认模型</a></div>
+    <div class="summary">Google 新一代 Gemini 4 Argon 已在 Antigravity 编程环境中被设为默认模型并向部分用户开放；同日 Google 还推出了本地优先的 AI 会议助手，直接对标 Granola。</div>
+    <div class="insight">编辑解读：Gemini 4 选择编程环境作为首发场景，再次印证「代码是检验模型能力的第一战场」；本地优先会议助手则踩中了隐私敏感用户的痛点。</div>
+    <div class="tags"><span class="tag">大模型</span><span class="tag">Google</span><span class="tag">工具</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🏭</span>行业与算力</div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504421.html" target="_blank">首 Token 延迟降低 32.4%：是石科技集群调度大招，国产推理再提效</a></div>
+    <div class="summary">是石科技公布集群调度优化方案，首 Token 延迟（TTFT）降低 32.4%，主打国产算力环境下的推理效率提升，与 Flash 模型降价形成「软硬协同」的呼应。</div>
+    <div class="insight">编辑解读：模型降价与推理优化同时发生，说明国产推理栈已进入「系统级优化」深水区，TTFT 这类体验指标开始被当作核心竞争力宣传。</div>
+    <div class="tags"><span class="tag">推理优化</span><span class="tag">国产算力</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504188.html" target="_blank">日均 6 万亿 Token 服务背后：商汤大装置如何提升推理效能？</a></div>
+    <div class="summary">商汤披露其大装置日均 Token 服务量达 6 万亿，并详解了在调度、显存与多租户隔离上的推理效能工程实践。</div>
+    <div class="insight">编辑解读：日均 Token 量正在成为衡量 AI 基础设施厂商的新「GMV」，6 万亿这个数字本身比技术细节更能说明推理需求的爆发速度。</div>
+    <div class="tags"><span class="tag">算力</span><span class="tag">商汤</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>昨天中文 AI 圈的焦点非常清晰：模型层在卷「又快又便宜」——MiniMax M3.1 Flash 把输出速度推到 200+ TPS、价格再砍一半，和 DeepSeek 组成国产 Flash 双子星，性价比大战正式开打。另一条暗线是 RSI（递归自我改进）突然升温：谷歌开源新成果、通研院团队入局、MemT 1.0 补上模型层记忆拼图，「能自我进化的 AI」从科幻词变成了工程议题。加上 Claude 新模型被曝能「跳出思维定势」、智谱在法律评测登顶全球，能看到一个共同趋势：大模型的竞争重心正在从参数和跑分，转向推理效率、记忆架构和专业可靠性这些更接近真实价值的维度。对应用开发者来说，现在是近一年来入手国产 API 性价比最高的窗口期。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 生成于 2026-10-21 · 数据为公开报道整理，已去重归类</p>
+</div>
+
+</div>
+</body>
+</html>

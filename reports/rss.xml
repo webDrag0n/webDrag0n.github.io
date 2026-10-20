@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 20 Oct 2026 00:07:04 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 17:05:28 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-10-21</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261021.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261021.html</guid>
+      <pubDate>Wed, 21 Oct 2026 08:00:00 +0000</pubDate>
+      <description>昨天的中文 AI 媒体被两条主线刷屏：一是 MiniMax 发布 M3.1 Flash，输出速度卷到 200+ TPS、价格再砍一半，与 DeepSeek 上演「国产 Flash 双子星」性价比大战；二是 RSI（递归自我改进）成为学界与产业共同的新热词——谷歌开源 RSI 新成果、通研院孵化团队入局，MemT 1.0 则从模型层补上「记忆」拼图。此外 Claude 新模型「跳出思维定势」的曝光、智谱法律模型登顶、VAST 开源实时世界模型 EdenLive 等也值得关注。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-10-20</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261020.html</link>
