@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 每日研究日报 — 2026-10-21</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+  .card .title { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .card .title a { color: var(--accent); text-decoration: none; }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+  .card .takeaway { font-size: 13px; color: var(--text); background:#f1f2f6; border-radius:6px; padding:6px 10px; margin-bottom:8px; }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag { font-size: 12px; padding: 2px 10px; border-radius: 12px; background: var(--tag-bg); color: var(--tag-text); }
+  .card .tag.hot { background: #ffeaa7; color: #d63031; font-weight: 600; }
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label { font-size: 12px; font-weight: 700; color: #e17055; text-transform: uppercase; margin-bottom: 4px; }
+  .hot-topic .title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .hot-topic .title a { color: var(--accent); text-decoration: none; }
+  .hot-topic .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+  .hot-topic .takeaway { font-size: 13px; color: var(--text); background:#fff3d6; border-radius:6px; padding:6px 10px; margin-bottom:8px; }
+  .hot-topic .tags { display:flex; gap:6px; flex-wrap:wrap; }
+  .hot-topic .tag { font-size:12px; padding:2px 10px; border-radius:12px; background:#ffeaa7; color:#d63031; font-weight:600; }
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 每日研究日报</h1>
+  <div class="date">2026 年 10 月 21 日 · 星期三</div>
+  <div class="subtitle">arXiv · HuggingFace Daily Papers · GitHub Trending · Robot Overflow</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今天的头条属于具身智能——奥特曼亲口确认 OpenAI 正在造人形机器人、2027 年演示；资本市场同步沸腾：Eka 以 14.5 亿美元估值拿下 1.5 亿美元 A 轮，前 NVIDIA GR00T 研究员创办的 Dream Labs 携 9000 万美元种子轮出关，宇树市值两日暴涨 25% 突破 2100 亿元。学术侧，Apple 的 OpenVLHarness、斯坦福的 Halcyon（无语言预训练的文生图）、Hochreiter 团队的 KronLSTM 长上下文线性注意力、以及一批 Agent 世界模型与记忆原生化工作（WildAWM、MemT-1.0、Agim）共同刷屏 HuggingFace 日榜。</p>
+</div>
+
+<!-- ============ 热点聚焦 ============ -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>热点聚焦</div>
+
+  <div class="hot-topic">
+    <div class="label">Breaking · 具身智能</div>
+    <div class="title"><a href="https://www.engadget.com/2285040/openai-humanoid-robot-sam-altman-statement-real-challenge/">奥特曼确认 OpenAI 将造人形机器人，预计 2027 年演示</a></div>
+    <div class="summary">奥特曼在播客中确认 OpenAI 将做人形机器人，并称「控制软件比机身更重要」；官网已挂出 27 个机器人相关岗位。Engadget 指出尚无产品形态、定价与发布日期。</div>
+    <div class="takeaway">💡 解读：大模型公司正式下场造本体，「大脑自研、身体开放」的产业分工或将被打破，对 Figure、1X 等合作伙伴关系影响深远。</div>
+    <div class="tags"><span class="tag">OpenAI</span><span class="tag">人形机器人</span><span class="tag">Robot Overflow</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">Funding · 物理 AI</div>
+    <div class="title"><a href="https://techcrunch.com/2026/10/20/eka-is-worth-1-45-billion-thanks-to-a-physical-ai-model-that-has-experts-raving/">Eka 完成 1.5 亿美元 A 轮，估值 14.5 亿美元，主打力觉机器人模型</a></div>
+    <div class="summary">a16z 与 F-Prime 领投。Eka 在仿真中以强化学习训练视觉-力-动作模型，搭配成本不到 1000 美元的自研力感知夹爪，宣称每小时拣选约 1500 件（人类约 600 件），工业试点已启动。</div>
+    <div class="takeaway">💡 解读：「力觉优先」路线拿到大额验证——触觉/力反馈正从学术话题变成 VC 下注的差异化护城河。</div>
+    <div class="tags"><span class="tag">融资</span><span class="tag">力觉模型</span><span class="tag">仓储物流</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">Funding · 机器人基础模型</div>
+    <div class="title"><a href="https://www.financialcontent.com/article/bizwire-2026-10-19-dream-labs-raises-90m-seed-to-build-the-brain-for-everyday-robots">前 NVIDIA GR00T 研究员创立 Dream Labs，获 9000 万美元种子轮并发布 Dream-1</a></div>
+    <div class="summary">B Capital 与 Kindred Ventures 领投。Dream-1 从人类视频中学习，可通过公开 API 驱动从未见过的夹爪机器人；网页 Playground 可远程操控旧金山一台真实机器人，资金主要投向算力。</div>
+    <div class="takeaway">💡 解读：GR00T 系人才外溢创业，「视频学习 + 跨本体 API」成为机器人基础模型的新范式叙事，9000 万种子轮足见赛道热度。</div>
+    <div class="tags"><span class="tag">融资</span><span class="tag">VLA</span><span class="tag">NVIDIA系创业</span></div>
+  </div>
+
+</div>
+
+<!-- ============ 机器人 / 具身智能 ============ -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>机器人 · 具身智能</div>
+
+  <div class="card">
+    <div class="source">Fortune · 2026-10-19</div>
+    <div class="title"><a href="https://fortune.com/2026/10/19/how-boston-dynamics-turning-robots-into-a-real-business-cfo/">波士顿动力 CFO：Atlas 约 70% 成本在执行器，现代摩比斯将按成本价生产</a></div>
+    <div class="summary">Spot 售价约 10–30 万美元，英特尔为大客户之一；现代承诺在现代与起亚工厂部署约 5 万台机器人。CFO 强调先控成本、再快速放量。</div>
+    <div class="takeaway">💡 解读：执行器占成本七成，直接点名了人形机器人降本的主战场——垂直整合供应链者胜。</div>
+    <div class="tags"><span class="tag">Boston Dynamics</span><span class="tag">供应链</span><span class="tag">量产</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">21世纪经济报道 · 2026-10-20</div>
+    <div class="title"><a href="https://m.21jingji.com/article/20261020/herald/e8563875456e1deca4ba5f441bb437eb.html">宇树科技股价续涨，总市值突破 2100 亿元</a></div>
+    <div class="summary">10 月 20 日早盘再涨超 7%，两日累计约 25%。上涨与国家统计局公布前三季度工业机器人产量同比增长 29.1% 的行业数据共振。</div>
+    <div class="takeaway">💡 解读：资本市场正在用真金白银给「具身智能量产元年」定价，板块情绪与基本面数据形成正反馈。</div>
+    <div class="tags"><span class="tag">宇树</span><span class="tag">二级市场</span><span class="tag hot">热度</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GlobeNewswire · 2026-10-19</div>
+    <div class="title"><a href="https://www.manilatimes.net/2026/10/20/tmt-newswire/globenewswire/bitcoin-japan-signs-exclusive-agreement-to-bring-ubtech-humanoid-robots-to-japan/2449086">Bitcoin Japan 签约独家代理优必选六款机器人进入日本</a></div>
+    <div class="summary">涵盖 Walker S2、Walker Tienkung、Tienkung Dex、Sky Walker、Walker C1、Cruzr S2；独家期 36 个月，自 Walker C1 通过日本认证起算。</div>
+    <div class="takeaway">💡 解读：中国人形机器人出海从东南亚、中东延伸至日本高端市场，渠道战先于产品战打响。</div>
+    <div class="tags"><span class="tag">优必选</span><span class="tag">出海</span><span class="tag">日本市场</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.RO · 2026-10-19</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.26855">Ropedia W0：跨本体 Loco-Manipulation 世界模型，引入人类经验数据</a></div>
+    <div class="summary">面向移动操作的世界模型，解决不同本体动作空间异构、多模态监督稀缺的问题，将人类第一视角经验纳入训练（HF 日榜 109 赞，同团队 EgoXperience/Holi-World 同步上榜）。</div>
+    <div class="takeaway">💡 解读：「人类视频经验 → 机器人世界模型」的迁移路径正在体系化，与 Dream-1 的产业动向互为印证。</div>
+    <div class="tags"><span class="tag">世界模型</span><span class="tag">移动操作</span><span class="tag">HF日榜</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.RO · 2026-10-19</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.26765">HandsOn：面向可泛化灵巧操作的大规模仿真基准</a></div>
+    <div class="summary">可组合仿真平台，支持 5 种机械臂、6 类灵巧手，跨本体、跨物体、跨任务评测通用操作能力。</div>
+    <div class="takeaway">💡 解读：灵巧手赛道论文与融资双热（配合 DexOAK 重定向、触觉手内旋转等同期工作），标准化 benchmark 是生态成熟的前置信号。</div>
+    <div class="tags"><span class="tag">灵巧手</span><span class="tag">Benchmark</span><span class="tag">仿真</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.RO · 2026-10-19</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.26848">Physical RSI 能力从何而来？LLM-as-policy 的观测性 Scaling Law</a></div>
+    <div class="summary">Galbot 团队提出 PhysRSI-eval，从首次成功率、效率、成功率、预算、失败改进五个轴量化物理世界的递归自我改进能力。</div>
+    <div class="takeaway">💡 解读：「自我改进」从数字空间走向物理空间的可测量化，是具身智能走向自主进化的关键一步。</div>
+    <div class="tags"><span class="tag">自我改进</span><span class="tag">Scaling Law</span><span class="tag">Galbot</span></div>
+  </div>
+
+</div>
+
+<!-- ============ 大模型 / Agent ============ -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 · Agent</div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CL · Apple · HF 日榜 84 赞</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.26860">OpenVLHarness：真实世界视觉 Agent 工具调用与多模态记忆</a></div>
+    <div class="summary">22 个基准的对照实验表明：单纯增加基座模型推理预算收益有限，视觉 Agent 需要外部工具与多模态记忆的系统性配合。</div>
+    <div class="takeaway">💡 解读：Apple 给「堆 test-time compute」泼了冷水——harness 工程（工具+记忆）才是视觉 Agent 的主战场。</div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">多模态</span><span class="tag">Apple</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.AI · 2026-10-19</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.26828">WildAWM：野外计算机使用 Agent 的环境合成（Agent World Model in the Wild）</a></div>
+    <div class="summary">Agent 学习正从「学人类数据」转向「与世界交互」，但直接在真实系统上规模化训练有安全风险；WildAWM 用世界模型合成 computer-use 环境。</div>
+    <div class="takeaway">💡 解读：与 CoworkEnv、Agentic Imagination 同日共振——「合成环境训练 Agent」已从 idea 变成扎堆的方法论。</div>
+    <div class="tags"><span class="tag">Computer Use</span><span class="tag">世界模型</span><span class="tag">环境合成</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.LG · MemTensor · HF 日榜 109 赞</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.26825">MemT-1.0：迈向记忆原生化的基础模型架构</a></div>
+    <div class="summary">将记忆内化为模型计算的一部分而非外挂 RAG，使基础模型能够持续累积与利用信息。</div>
+    <div class="takeaway">💡 解读：「记忆原生」接续 LatComm（上下文压缩复用）、KEEP-Bench（压缩保真度评测）同日出现，长上下文竞争正从「窗口长度」转向「记忆架构」。</div>
+    <div class="tags"><span class="tag">记忆架构</span><span class="tag">基础模型</span><span class="tag">HF日榜</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.LG · Hochreiter 团队 / NX-AI · 2026-10-19</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.26834">KronLSTM：基于 Kronecker Delta 规则的长上下文线性注意力</a></div>
+    <div class="summary">为 xLSTM 家族引入记忆修正机制，沿单一方向修改关联矩阵记忆，实现长上下文下的定向纠错。</div>
+    <div class="takeaway">💡 解读：LSTM 之父持续给线性注意力路线输血，与清华《Competing Learning in Hybrid Architectures》合看：混合架构中层间竞争与记忆机制是下一阶段的理论焦点。</div>
+    <div class="tags"><span class="tag">线性注意力</span><span class="tag">xLSTM</span><span class="tag">架构</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CL · 2026-10-19</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.26809">Safety Mid-Training：把安全内化为 LLM 的基础能力</a></div>
+    <div class="summary">指出安全对齐若只在 post-training 阶段进行，后续训练会退化；提出在 pre- 与 post-training 之间加入安全中期训练。</div>
+    <div class="takeaway">💡 解读：安全从「裱糊层」走向「地基」，对持续预训练/微调盛行的产业界是及时的工程提醒。</div>
+    <div class="tags"><span class="tag">安全对齐</span><span class="tag">训练流程</span></div>
+  </div>
+
+</div>
+
+<!-- ============ 多模态 / 生成 ============ -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🎨</span>多模态 · 生成模型</div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CV · Stanford · 2026-10-19</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.26863">Halcyon：不需要语言预训练的文生图生成模型</a></div>
+    <div class="summary">斯坦福团队质疑「文生图必须依赖互联网规模语言预训练」的共识，提出从零预训练的早期融合多模态自回归模型家族。</div>
+    <div class="takeaway">💡 解读：对「语言先验不可或缺」的一次正面挑战——若成立，T2I 的训练成本与数据配方都将重写。</div>
+    <div class="tags"><span class="tag">文生图</span><span class="tag">自回归</span><span class="tag">Stanford</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CV · 2026-10-19</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.26801">Mise-en-Video：多镜头视频生成的细粒度 3D 控制</a></div>
+    <div class="summary">面向叙事创作的多镜头视频生成，兼顾镜头间一致性与细粒度可控性。</div>
+    <div class="takeaway">💡 解读：视频生成从「单镜头炫技」卷向「多镜头叙事」，可控性是内容工业化落地的分水岭。</div>
+    <div class="tags"><span class="tag">视频生成</span><span class="tag">3D控制</span></div>
+  </div>
+
+</div>
+
+<!-- ============ 开源动态 ============ -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠</span>开源动态 · GitHub Trending</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 今日 +3,861 ⭐</div>
+    <div class="title"><a href="https://github.com/MadsLorentzen/ai-job-search">MadsLorentzen/ai-job-search — 跑在本机的 AI 求职自动化框架</a></div>
+    <div class="summary">基于 Claude 的本地求职申请框架，今日 GitHub 全站趋势榜首，断层领先。</div>
+    <div class="takeaway">💡 解读：Agent 落地最快的是「替人干活」的垂直场景；求职自动化是继 coding 之后又一个爆点。</div>
+    <div class="tags"><span class="tag">Python</span><span class="tag">Agent应用</span><span class="tag hot">Trending #1</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 今日 +1,712 ⭐</div>
+    <div class="title"><a href="https://github.com/cloudflare/security-audit-skill">cloudflare/security-audit-skill — 多阶段安全审计的 coding-agent 技能包</a></div>
+    <div class="summary">Cloudflare 官方出品的 Agent skill，输出独立可验证、机器可读的审计结果。</div>
+    <div class="takeaway">💡 解读：大厂开始为 Agent 生态官方下场写「技能」，skill 正成为新的分发格式（同日 anthropics/knowledge-work-plugins 亦上榜）。</div>
+    <div class="tags"><span class="tag">Cloudflare</span><span class="tag">Agent Skill</span><span class="tag">安全</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 今日 +1,565 ⭐ / +1,240 ⭐ / +802 ⭐</div>
+    <div class="title"><a href="https://github.com/stablyai/orca">stablyai/orca</a> · <a href="https://github.com/anomalyco/opencode">anomalyco/opencode</a> · <a href="https://github.com/Graphify-Labs/graphify">Graphify-Labs/graphify</a></div>
+    <div class="summary">Agent 舰队管理台 Orca、开源编程 Agent opencode、把代码库+文档+SQL 一键变成可查询知识图谱的 graphify 同日上榜；headroom（给 Agent 压缩 token，+549⭐）与金融基础模型 Kronos（+733⭐）紧随其后。</div>
+    <div class="takeaway">💡 解读：今日 Trending 几乎被 Agent 基础设施霸榜——多 Agent 编排、上下文压缩、代码知识图谱，「Agent 工具链」已成独立赛道。</div>
+    <div class="tags"><span class="tag">多Agent</span><span class="tag">开发者工具</span><span class="tag">知识图谱</span></div>
+  </div>
+
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今天最值得记住的不是某一篇论文，而是「大脑」与「身体」的双向奔赴：奥特曼官宣 OpenAI 自研人形机器人，Eka 与 Dream Labs 两家「机器人大脑」公司同日拿下大额融资，学术侧 Ropedia、PhysRSI、HandsOn 则把世界模型、自我改进与灵巧操作推向可测量、可复现。产业与论文罕见地在同一天讲了同一个故事——具身智能的竞争焦点已从「能不能动」转向「怎么学、怎么降本、怎么量产」。与此同时，GitHub 趋势榜被 Agent 工具链霸榜，提醒我们这轮 Agent 热的基础设施红利才刚刚开始。适合关注：执行器降本、力觉模型、Agent skill 生态。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-10-21 · 数据源：arXiv / HuggingFace Daily Papers / GitHub Trending / Robot Overflow</p>
+</div>
+
+</div>
+</body>
+</html>

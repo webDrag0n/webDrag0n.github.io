@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-20T17:05:28.601402+00:00",
+  "generated_at": "2026-10-21T00:06:30.500303+00:00",
   "papers": {
-    "date": "2026-10-20",
-    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261020.html",
-    "overview": "今日 arXiv 机器人与 AI 板块集中爆发：MIT 团队用关节传感实现毫米级盲装、ETH 让灵巧手「用手指走路」、「自建实验室」把 AI 科学家推向全流程闭环；产业侧同样热闹——前 NVIDIA GR00T 研究员的 Dream Labs 携 9000 万美元种子轮出隐、奥特曼亲口确认 OpenAI 人形机器人计划，宇树发布 UniUni 集群控制系统。LLM 研究方面，「行为耦合」论文揭示微调的隐性副作用，推理蒸馏与长期记忆门控也有新进展。",
-    "digest": "今天最值得关注的信号是「具身智能正在从单点演示走向系统化工程」：Dream Labs 的 Dream-1 直接以公开 API 形式开放机器人大脑，意味着 VLA 模型开始像 LLM 一样走平台化路线；OpenAI 下场做人形，则把「软件定义硬件」的叙事推向顶点。学术侧，MIT 的 Blind Precise Assembly 提醒我们：高精度操作未必需要昂贵触觉传感器，关节本体感知被严重低估；Behavioral Couplings 则给所有做 SFT 的人敲了警钟——你训练的行为从来不是孤立的。建议重点关注机器人大脑 API 化与微调安全性这两条线的后续工作。"
+    "date": "2026-10-21",
+    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261021.html",
+    "overview": "今天的头条属于具身智能——奥特曼亲口确认 OpenAI 正在造人形机器人、2027 年演示；资本市场同步沸腾：Eka 以 14.5 亿美元估值拿下 1.5 亿美元 A 轮，前 NVIDIA GR00T 研究员创办的 Dream Labs 携 9000 万美元种子轮出关，宇树市值两日暴涨 25% 突破 2100 亿元。学术侧，Apple 的 OpenVLHarness、斯坦福的 Halcyon（无语言预训练的文生图）、Hochreiter 团队的 KronLSTM 长上下文线性注意力、以及一批 Agent 世界模型与记忆原生化工作（WildAWM、MemT-1.0、Agim）共同刷屏 HuggingFace 日榜。",
+    "digest": "今天最值得记住的不是某一篇论文，而是「大脑」与「身体」的双向奔赴：奥特曼官宣 OpenAI 自研人形机器人，Eka 与 Dream Labs 两家「机器人大脑」公司同日拿下大额融资，学术侧 Ropedia、PhysRSI、HandsOn 则把世界模型、自我改进与灵巧操作推向可测量、可复现。产业与论文罕见地在同一天讲了同一个故事——具身智能的竞争焦点已从「能不能动」转向「怎么学、怎么降本、怎么量产」。与此同时，GitHub 趋势榜被 Agent 工具链霸榜，提醒我们这轮 Agent 热的基础设施红利才刚刚开始。适合关注：执行器降本、力觉模型、Agent skill 生态。"
   },
   "media": {
     "date": "2026-10-21",
