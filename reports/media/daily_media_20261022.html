@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中文 AI 媒体日报 — 2026-10-22</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  .header { text-align: center; padding: 40px 20px 30px; margin-bottom: 30px; }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+  .summary-banner {
+    background: var(--card-bg); border-radius: 12px; padding: 20px 24px;
+    margin-bottom: 24px; border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px; font-weight: 700; color: var(--text);
+    margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+  .card {
+    background: var(--card-bg); border-radius: 10px; padding: 18px 22px;
+    margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+  .card .title { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .card .title a { color: var(--accent); text-decoration: none; }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+  .card .insight { font-size: 13px; color: var(--text-secondary); margin-bottom: 8px; padding: 8px 12px; background: #f0f7ff; border-radius: 6px; border-left: 3px solid var(--accent); }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag { font-size: 12px; padding: 2px 10px; border-radius: 12px; background: var(--tag-bg); color: var(--tag-text); }
+  .card .tag.hot { background: #ffeaa7; color: #d63031; font-weight: 600; }
+  .hot-topic {
+    background: #fff8e1; border: 1px solid #ffe082; border-radius: 10px;
+    padding: 18px 22px; margin-bottom: 16px;
+  }
+  .hot-topic .label { font-size: 12px; font-weight: 700; color: #e17055; text-transform: uppercase; margin-bottom: 4px; }
+  .hot-topic .title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .hot-topic .title a { color: #e17055; text-decoration: none; }
+  .hot-topic .title a:hover { text-decoration: underline; }
+  .hot-topic .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+  .hot-topic .insight { font-size: 13px; color: var(--text-secondary); padding: 8px 12px; background: #fff3d6; border-radius: 6px; border-left: 3px solid #e17055; }
+  .insights { background: var(--card-bg); border-radius: 12px; padding: 24px; margin-top: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .insights h3 { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+  .footer { text-align: center; font-size: 12px; color: #b2bec3; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📰</div>
+  <h1>中文 AI 媒体日报</h1>
+  <div class="date">2026 年 10 月 22 日（收录 10 月 21 日文章）</div>
+  <div class="subtitle">来源：量子位 · 新智元 · 36氪 · 极客公园 · 少数派 等</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>Anthropic 招股书曝光半年净亏 807 亿美元，AI 公司烧钱竞赛进入「拼家底」阶段；奇瑞全球创新大会亮出紫微芯片 + CheryMind 垂类大模型 + 世界引擎组合拳，车企卷向物理 AI；清华 AIR 孵化「紫荆AI医院」以多智能体协同重构医疗；DeepSeek 领投 Swin Transformer 作者创业项目，具身智能投资再加码；AI 蛋白质设计、AI 辅助密码学突破等科研线持续出圈。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>头条聚焦</div>
+
+  <div class="hot-topic">
+    <div class="label">今日头条</div>
+    <div class="title"><a href="https://www.163.com/dy/article/L9Q1L0CU0511ABV6.html" target="_blank">半年净亏 807 亿美元！Anthropic 招股书曝光，AI 公司上市前夜的「烧钱答卷」</a></div>
+    <div class="summary">新智元 / 智东西 / 36氪多方报道：Anthropic 招股书显示上半年营收 163 亿美元（同比增长 12 倍），但净亏损高达 807 亿美元；剔除会计调整后的实际运营亏损约 87 亿美元，已超 2025 年全年亏损总额。公司估值约 2 万亿人民币，市销率 30 倍以上，成为 AI 大模型公司 IPO 的标杆案例。</div>
+    <div class="insight">编辑解读：营收爆发与亏损放大同时发生，说明前沿大模型的商业模式仍处在「用亏损换规模」阶段；这个案例会把 AI 公司的估值争论从「技术故事」拉回到「单位经济模型」层面。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">极客公园 · 2026-10-21</div>
+    <div class="title"><a href="http://www.geekpark.net/news/372698" target="_blank">奇瑞全球创新大会：紫微芯片、CheryMind 大模型、世界引擎，车企的科技叙事再升级</a></div>
+    <div class="summary">奇瑞发布自研「紫微」芯片系列（C/S/M 三条线，C100 单颗 1200 TOPS、双芯 2400 TOPS、带宽 600GB/s，2027 年上车），同时推出垂类基础大模型 CheryMind 与「全维世界引擎」CHERY AWE（世界模型 + 构境/观语/行策三个细分模型），并宣布原生 Robotaxi 目标 2030 年全球运营 10 万辆。</div>
+    <div class="insight">编辑解读：当车企开始同时自研芯片、大模型与世界模型，「智能车公司」和「AI 公司」的边界已经实质性消失——这既是竞争门槛的抬升，也意味着未来车企估值将越来越按科技公司逻辑定价。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-21</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504734.html" target="_blank">清华 AIR 孵化「紫荆AI医院」：多智能体协同，让医生的 AI 分身集体「坐诊」</a></div>
+    <div class="summary">张亚勤院士创办的清华 AIR 孵化企业紫荆智康，将「紫荆AI医院」（Agent Hospital）升级为多分身智能体协同系统：同科室病症由单个 AI 分身辅助，跨科室复杂问题则由多个专科 Agent 协同「会诊」，试图把 MDT（多学科会诊）的成本与时效门槛大幅降低，目前已在全国多家医院上线测试。</div>
+    <div class="insight">编辑解读：医疗是 Agent 落地最「硬核」的场景之一，从单体 Agent 到多专科 Agent 协同，本质上是把「组织能力」编码进 AI 系统——这一步比模型能力本身更能决定医疗 AI 的实际价值。</div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>大模型与 Agent</div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-20</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504517.html" target="_blank">MiniMax 爆改 Flash 战力冲上「国模 Agent 第一」，全时段地板价</a></div>
+    <div class="summary">MiniMax 发布新版本 Flash 模型，Agent 能力在多项榜单冲上国产模型第一，同时把 API 定价压到「全时段地板价」，延续国产模型「高性能 + 低价格」的组合策略，直接对标 DeepSeek 的性价比叙事。</div>
+    <div class="insight">编辑解读：国产模型竞争的主战场已从「跑分」转向「Agent 可用性 × 单位 Token 成本」，价格战叠加能力战，应用层开发者是最大受益者。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪 · 2026-10-21</div>
+    <div class="title"><a href="https://36kr.com/p/4035016423347077" target="_blank">AI 的下一站：从 Personal Agent 到灯塔工厂</a></div>
+    <div class="summary">36氪评论文章提出：AI 落地的叙事正从消费端的「个人助理」转向工业端的「灯塔工厂」，制造、质检、排产等场景的 Agent 渗透率被低估，「AI + 制造」可能是中国 AI 应用最具全球比较优势的方向。</div>
+    <div class="insight">编辑解读：中国拥有全球最完整的工业体系，如果 Agent 能在工厂场景跑通 ROI，将形成与欧美「SaaS 化 AI」截然不同的路径，值得长期跟踪。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪 · 2026-10-21</div>
+    <div class="title"><a href="https://36kr.com/p/4034229489701764" target="_blank">李泽湘系团队推贴在手机背后的墨水屏 Agent，获祥峰、五源、源码投资</a></div>
+    <div class="summary">硬氪首发：一款磁吸在手机背面的墨水屏 Agent 硬件完成融资，定位「低打扰的 AI 副屏」，可显示日程、通知与 AI 摘要，主打开会、阅读等场景的「免打断」体验，李泽湘系团队背景获多家一线机构加持。</div>
+    <div class="insight">编辑解读：AI 硬件开始分化为「主设备替代」与「副屏补位」两条路线，后者以低功耗 + 低打扰为卖点，落地风险更小，可能是 Agent 硬件最先跑通的形态。</div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧬</span>研究与前沿</div>
+
+  <div class="card">
+    <div class="source">新智元 · 2026-10-21</div>
+    <div class="title"><a href="https://www.163.com/dy/article/L9OEK5IC0511ABV6.html" target="_blank">Claude 首次设计出抗蝎毒蛋白：狂算 64 小时，已过实验验证</a></div>
+    <div class="summary">新智元报道：Anthropic 的 Claude 模型在一项任务中从零设计出具备抗蝎毒活性的蛋白质，经过 64 小时的推理计算生成候选序列，并已在湿实验中验证有效，被视为 AI 蛋白质设计领域的标志性进展。</div>
+    <div class="insight">编辑解读：AI4S 正从「预测结构」走向「设计功能」，蛋白质设计是 AI 产生「可验证、可商用」科研成果最快的赛道之一，后续在医药与合成生物学的转化值得重点关注。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · 2026-10-21</div>
+    <div class="title"><a href="https://www.163.com/dy/article/L9Q1KASL0511ABV6.html" target="_blank">走向超级智能体，AI 还需要「主动性」：UIUC、谷歌等联合综述</a></div>
+    <div class="summary">UIUC 联合谷歌等机构发布综述，系统梳理「主动式 AI」（Proactive AI）的研究版图：当前 Agent 多为「被动响应」，而真正的超级智能体需要具备主动发起任务、识别时机、管理长期目标的能力，综述归纳了该方向的技术路线与开放问题。</div>
+    <div class="insight">编辑解读：「主动性」是 Agent 从工具走向「同事」的关键分水岭，也是当前产品体验差距最大的地方——谁先解决「何时该主动、何时该闭嘴」，谁就能做出真正可用的个人 AI。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">新智元 · 2026-10-21</div>
+    <div class="title"><a href="https://www.163.com/dy/article/L9Q1KGOL0511ABV6.html" target="_blank">自进化 AI「杀」进物理世界：王者峡谷屠神，从 0 打到全胜</a></div>
+    <div class="summary">报道一项自进化 AI 系统的最新进展：在《王者荣耀》等复杂对战环境中，AI 从零开始通过对战自我迭代，最终达到「全胜」水平，并已开始向物理世界的机器人控制迁移，被视为「游戏 AI 走向具身智能」的标志性节点。</div>
+    <div class="insight">编辑解读：游戏环境是自进化 AI 的最佳「演武场」，当仿真到现实（sim2real）的迁移链条被打通，具身智能的数据瓶颈有望被系统性缓解。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-21</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504653.html" target="_blank">LeCun 押注的世界模型，清华系千诀科技做进了机器人：发布预测式世界模型 Polibrain</a></div>
+    <div class="summary">在南京举办的 2026 物理 AI 与世界模型大会上，清华系具身智能公司千诀科技发布预测式世界模型 Polibrain：不堆画面预测，主打物理规律建模与跨本体复用，已在四足、人形、轮式、双臂等机器人形态上适配；其隐变量可辨识性研究比 LeCun 团队相近工作早约一年。</div>
+    <div class="insight">编辑解读：世界模型路线之争正在分化——「像素级预测」与「物理规律抽象」两条路线并行，后者在数据效率与跨本体泛化上更具潜力，是具身智能「大脑」的重要候选方案。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-20</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504421.html" target="_blank">首 Token 延迟降低 32.4%：是石科技集群调度大招，国产推理再提效</a></div>
+    <div class="summary">国产推理优化持续内卷：是石科技通过集群调度层面的创新，将大模型首 Token 延迟降低 32.4%，在不更换硬件的前提下显著改善推理服务的响应体验与吞吐效率。</div>
+    <div class="insight">编辑解读：推理效率优化的重心正从单卡算子转向集群调度与系统协同，「系统级 AI 工程」正在成为国产推理服务的核心竞争力。</div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">💼</span>行业与资本</div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-13（持续发酵）</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/503093.html" target="_blank">梁文锋投了 Swin Transformer 作者：DeepSeek 领投 Winverse AI，具身大脑布局再落一子</a></div>
+    <div class="summary">继 8 月约 1.41 亿元入股宇树科技后，DeepSeek 创始人梁文锋再度出手：计划领投具身智能初创 Winverse AI 数千万美元种子轮，投后估值约 4 亿美元（约 28 亿人民币）。Winverse AI 由前腾讯混元杰出科学家、Swin Transformer 共同作者胡瀚创立。</div>
+    <div class="insight">编辑解读：DeepSeek 在两个月内连续投资机器人本体与具身大脑，信号非常明确——大模型公司正在通过资本手段锁定「AI 进入物理世界」的入口，具身智能的军备竞赛已从技术层蔓延到资本层。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪 · 2026-10-21</div>
+    <div class="title"><a href="https://36kr.com/p/4035014691345540" target="_blank">华为、高瓴押注：物理空间智能基础设施公司完成超亿元融资</a></div>
+    <div class="summary">36氪首发：一家聚焦「物理空间智能基础设施」的公司完成超亿元融资，投资方包括华为、高瓴等。公司方向为物理世界的数字化与智能化底座，服务于具身智能、智慧城市等场景。</div>
+    <div class="insight">编辑解读：「物理空间智能」正在成为新风口，大厂与顶级机构的联合下注说明该方向被视为具身智能的「卖水人」——基础设施层往往比应用层更早兑现商业价值。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-10-21</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504608.html" target="_blank">飞书 × 豆包发起「工作 AI 先锋未来人才大赛」：企业正在争抢会用 AI 做成事的人</a></div>
+    <div class="summary">飞书联合豆包发起面向职场人的 AI 应用大赛，聚焦真实工作场景中的 AI 落地案例，反映出企业侧对「会用 AI 解决实际问题」人才的强烈需求，AI 应用能力正成为新的职场硬通货。</div>
+    <div class="insight">编辑解读：当模型能力趋于同质化，「人会不会用 AI」成为组织效率的新变量——AI 素养培训与工具链建设，正在成为企业软件厂商的新战场。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">少数派 · 2026-10-21</div>
+    <div class="title"><a href="https://sspai.com/post/116887" target="_blank">派早报：美国政府指示各机构停用 DeepSeek、理想发布「连山」自研三电体系</a></div>
+    <div class="summary">少数派早报汇总：美国政府指示各机构停用 DeepSeek 产品，地缘因素对 AI 服务出海的影响持续；理想汽车发布自研三电体系「连山」，新能源车企核心技术自研化趋势延续。</div>
+    <div class="insight">编辑解读：AI 服务的地缘合规风险正在显性化，国产模型出海需要更早布局多区域合规架构；与此同时，三电自研也说明「全栈自研」正在从智驾蔓延到整车所有核心系统。</div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>昨日中文 AI 媒体的三条主线清晰可见：一是 Anthropic 招股书把「AI 公司烧钱换规模」的账本彻底摊开，807 亿美元半年净亏让所有从业者重新思考大模型商业化的节奏；二是「物理 AI」叙事全面升温——奇瑞把芯片、大模型、世界引擎打包发布，DeepSeek 连续出手投资具身智能，清华系公司把世界模型做进真实机器人，AI 从数字世界向物理世界的迁移正在加速；三是 Agent 落地走向纵深，从清华 AIR 的多智能体医疗协同，到 UIUC/谷歌关于「主动式 AI」的综述，行业共识正在形成：下一代 Agent 比拼的不是对话能力，而是组织协作与主动性。技术、资本、场景三条线同时发力，这个秋天 AI 行业的密度有点高。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-10-22 · 编辑整理</p>
+</div>
+
+</div>
+</body>
+</html>

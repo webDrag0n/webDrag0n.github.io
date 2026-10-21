@@ -1,6 +1,6 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-10-21T00:06:30.498319+00:00",
+  "generated_at": "2026-10-21T17:10:26.410848+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
@@ -508,8 +508,14 @@
     },
     "media": {
       "title": "AI 科技日报",
-      "count": 82,
+      "count": 83,
       "items": [
+        {
+          "date": "2026-10-22",
+          "url": "https://webdrag0n.github.io/reports/media/daily_media_20261022.html",
+          "overview": "Anthropic 招股书曝光半年净亏 807 亿美元，AI 公司烧钱竞赛进入「拼家底」阶段；奇瑞全球创新大会亮出紫微芯片 + CheryMind 垂类大模型 + 世界引擎组合拳，车企卷向物理 AI；清华 AIR 孵化「紫荆AI医院」以多智能体协同重构医疗；DeepSeek 领投 Swin Transformer 作者创业项目，具身智能投资再加码；AI 蛋白质设计、AI 辅助密码学突破等科研线持续出圈。",
+          "digest": "昨日中文 AI 媒体的三条主线清晰可见：一是 Anthropic 招股书把「AI 公司烧钱换规模」的账本彻底摊开，807 亿美元半年净亏让所有从业者重新思考大模型商业化的节奏；二是「物理 AI」叙事全面升温——奇瑞把芯片、大模型、世界引擎打包发布，DeepSeek 连续出手投资具身智能，清华系公司把世界模型做进真实机器人，AI 从数字世界向物理世界的迁移正在加速；三是 Agent 落地走向纵深，从清华 AIR 的多智能体医疗协同，到 UIUC/谷歌关于「主动式 AI」的综述，行业共识正在形成：下一代 Agent 比拼的不是对话能力，而是组织协作与主动性。技术、资本、场景三条线同时发力，这个秋天 AI 行业的密度有点高。"
+        },
         {
           "date": "2026-10-21",
           "url": "https://webdrag0n.github.io/reports/media/daily_media_20261021.html",
