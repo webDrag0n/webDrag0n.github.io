@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 21 Oct 2026 17:10:26 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 00:06:26 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-10-22</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261022.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261022.html</guid>
+      <pubDate>Thu, 22 Oct 2026 08:00:00 +0000</pubDate>
+      <description>今天具身智能赛道格外热闹：英伟达在 GTC 柏林发布 Isaac 全家桶（参考人形机器人 Agile ONE SN、Isaac Lab 3.0、Halos 安全平台），舍弗勒太仓人形机器人灯塔工厂正式开业；智元定档今天 AI WAVE 连发七项成果，下月还要直播 6 台 G2 在便利店连轴转 24 小时。学术侧，HuggingFace 日榜被「Joints, Camera, Action!」（视频+3D 动作联合生成）以 21 票领跑，Agent 训练方向 Self-Credit、HarnessAdapt-RL、Cache Engineering 三连发；开源侧 Cloudflare 的 co</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-10-22</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261022.html</link>

@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-21T17:10:26.413076+00:00",
+  "generated_at": "2026-10-22T00:06:26.625081+00:00",
   "papers": {
-    "date": "2026-10-21",
-    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261021.html",
-    "overview": "今天的头条属于具身智能——奥特曼亲口确认 OpenAI 正在造人形机器人、2027 年演示；资本市场同步沸腾：Eka 以 14.5 亿美元估值拿下 1.5 亿美元 A 轮，前 NVIDIA GR00T 研究员创办的 Dream Labs 携 9000 万美元种子轮出关，宇树市值两日暴涨 25% 突破 2100 亿元。学术侧，Apple 的 OpenVLHarness、斯坦福的 Halcyon（无语言预训练的文生图）、Hochreiter 团队的 KronLSTM 长上下文线性注意力、以及一批 Agent 世界模型与记忆原生化工作（WildAWM、MemT-1.0、Agim）共同刷屏 HuggingFace 日榜。",
-    "digest": "今天最值得记住的不是某一篇论文，而是「大脑」与「身体」的双向奔赴：奥特曼官宣 OpenAI 自研人形机器人，Eka 与 Dream Labs 两家「机器人大脑」公司同日拿下大额融资，学术侧 Ropedia、PhysRSI、HandsOn 则把世界模型、自我改进与灵巧操作推向可测量、可复现。产业与论文罕见地在同一天讲了同一个故事——具身智能的竞争焦点已从「能不能动」转向「怎么学、怎么降本、怎么量产」。与此同时，GitHub 趋势榜被 Agent 工具链霸榜，提醒我们这轮 Agent 热的基础设施红利才刚刚开始。适合关注：执行器降本、力觉模型、Agent skill 生态。"
+    "date": "2026-10-22",
+    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261022.html",
+    "overview": "今天具身智能赛道格外热闹：英伟达在 GTC 柏林发布 Isaac 全家桶（参考人形机器人 Agile ONE SN、Isaac Lab 3.0、Halos 安全平台），舍弗勒太仓人形机器人灯塔工厂正式开业；智元定档今天 AI WAVE 连发七项成果，下月还要直播 6 台 G2 在便利店连轴转 24 小时。学术侧，HuggingFace 日榜被「Joints, Camera, Action!」（视频+3D 动作联合生成）以 21 票领跑，Agent 训练方向 Self-Credit、HarnessAdapt-RL、Cache Engineering 三连发；开源侧 Cloudflare 的 coding-agent 安全审计 skill 单日狂揽 2000+ star，vLLM、ComfyUI 持续高热。",
+    "digest": "今天最值得记住的画面，是舍弗勒太仓工厂里六台人形机器人在装配——机器人关节。产业开始自举：造机器人的产线雇机器人，英伟达则趁机把 Isaac 全家桶打包成「机器人界的 CUDA」，从参考硬件到仿真到安全认证一站式锁生态。学术圈遥相呼应：UniWALM 把世界模型、动作和语言塞进同一个表征，Self-Credit 和 HarnessAdapt-RL 则回答 Agent 时代两个真问题——长程奖励怎么记账、脚手架能不能一起训练。值得注意的是「上下文经济学」悄然升温：Cache Engineering 论文与 headroom 压缩工具同日走红，说明 Agent 的成本瓶颈正从算力转向显存与 token。最后泼一点冷水：宇树 388 倍市盈率、公司自己发公告提示估值风险——技术曲线很陡，但商业兑现仍是慢变量。看热闹之余，建议重点读 Task Composition 那篇：每个任务单独都会、组合起来就翻车，这对所有 Agent 应用都是一记警钟。"
   },
   "media": {
     "date": "2026-10-22",

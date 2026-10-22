@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 日报 — 2026-10-22</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .insight { font-size: 13px; color: var(--text); background:#f1f8ff; border-left:3px solid var(--accent); padding:8px 12px; border-radius:6px; margin-bottom:8px; }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 日报 · 论文 × 开源 × 具身智能</h1>
+  <div class="date">2026 年 10 月 22 日 · 星期四</div>
+  <div class="subtitle">来源：arXiv · HuggingFace Daily Papers · GitHub Trending · Robot Overflow · Awesome Lists</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今天具身智能赛道格外热闹：英伟达在 GTC 柏林发布 Isaac 全家桶（参考人形机器人 Agile ONE SN、Isaac Lab 3.0、Halos 安全平台），舍弗勒太仓人形机器人灯塔工厂正式开业；智元定档今天 AI WAVE 连发七项成果，下月还要直播 6 台 G2 在便利店连轴转 24 小时。学术侧，HuggingFace 日榜被「Joints, Camera, Action!」（视频+3D 动作联合生成）以 21 票领跑，Agent 训练方向 Self-Credit、HarnessAdapt-RL、Cache Engineering 三连发；开源侧 Cloudflare 的 coding-agent 安全审计 skill 单日狂揽 2000+ star，vLLM、ComfyUI 持续高热。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>头条热点</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 今日焦点</div>
+    <div class="source">NVIDIA Newsroom · 2026-10-21</div>
+    <div class="title"><a href="https://nvidianews.nvidia.com/news/nvidia-advances-isaac-platform-for-general-purpose-robotics-with-new-reference-humanoid-frameworks-simulation-pipelines-and-data">英伟达 GTC 柏林扩展 Isaac 平台：参考人形机器人、Isaac Lab 3.0、Halos 安全平台</a></div>
+    <div class="summary">Agile ONE SN（1.40 米、31 自由度，搭载 Jetson Thor 与 GR00T）成为官方参考人形机器人，2027 年初上市；Isaac Lab 3.0 正式可用，新增开源 Isaac OS、2000 余件 SimReady 资产和 Human 1M 数据集。</div>
+    <div class="insight">英伟达正把机器人软件栈做成「机器人界的 CUDA」——参考硬件 + 仿真 + 数据 + 安全认证一站式打包，生态锁定效应开始显现。</div>
+    <div class="tags"><span class="tag hot">热点</span><span class="tag">具身智能</span><span class="tag">仿真</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">PedAily 投资界 · 2026-10-21</div>
+    <div class="title"><a href="https://news.pedaily.cn/202610/570626.shtml">智元定档 10 月 22 日 AI WAVE：七项成果连发，随后 24 小时便利店考核</a></div>
+    <div class="summary">智元将在 10 月 22–30 日连续发布七项成果，含物理推理数据集、Genie Studio 2.0、G2 Max 工业机器人与基座大模型；11 月 2–3 日 6 台 G2 将在便利店连续工作 24 小时并直播。</div>
+    <div class="insight">「24 小时便利店直播」是具身智能的图灵测试式公开考核——把可靠性从实验室指标变成可围观的真人秀，压力给到了所有同行。</div>
+    <div class="tags"><span class="tag hot">今日发生</span><span class="tag">人形机器人</span><span class="tag">智元</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily Papers · 21 票</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.28632">Joints, Camera, Action! Co-Generating 3D Motion and Video for Arbitrary Rigs</a></div>
+    <div class="summary">视频生成模型能画出逼真动作，但无法把动作「取回来」驱动具体 3D 资产。该模型联合生成视频与任意骨骼 rig 的 3D 动作，并配准相机将动作放回 3D 场景。</div>
+    <div class="insight">把视频生成从「像素玩具」变成「可复用的 3D 动作发生器」，对游戏、动画和机器人模仿学习的数据管线都是实质利好。</div>
+    <div class="tags"><span class="tag">视频生成</span><span class="tag">3D 动作</span><span class="tag">HF 日榜 Top1</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>机器人与具身智能（Robot Overflow 近三日）</div>
+
+  <div class="card">
+    <div class="source">TechCrunch · 2026-10-20 · 重要性 ★★</div>
+    <div class="title"><a href="https://techcrunch.com/2026/10/20/eka-is-worth-1-45-billion-thanks-to-a-physical-ai-model-that-has-experts-raving/">Eka 完成 1.5 亿美元 A 轮，估值 14.5 亿美元，主打力觉机器人模型</a></div>
+    <div class="summary">a16z 与 F-Prime 领投。Eka 在仿真中用强化学习训练视觉-力-动作模型，搭配成本不足 1000 美元的自研力感知夹爪，宣称机器人每小时可拣约 1500 件（人约 600 件），工业客户试点进行中。</div>
+    <div class="insight">「力觉 + 低价硬件」路线用经济性打分拣场景，1500 件/小时如果属实，已跨过仓储自动化的 ROI 拐点。</div>
+    <div class="tags"><span class="tag hot">融资</span><span class="tag">物理 AI</span><span class="tag">仓储</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Gasgoo · 2026-10-20 · 重要性 ★★</div>
+    <div class="title"><a href="https://autonews.gasgoo.com/articles/news/schaeffler-opens-taicang-factory-integrating-humanoid-robot-production-and-training-2112476547277017089">舍弗勒太仓人形机器人灯塔工厂开业，人形机器人参与关节模组装配</a></div>
+    <div class="summary">约 7500 平方米工厂 10 月 20 日开业，六台人形机器人在关节模组产线上承担分拣、压装、检测和包装，配训练场景与数字孪生。舍弗勒称人形机器人累计订单约 4 亿欧元。</div>
+    <div class="insight">人形机器人进入真实产线的标志性案例——注意是造机器人关节的工厂用机器人，自举循环开始转动。</div>
+    <div class="tags"><span class="tag">落地</span><span class="tag">人形机器人</span><span class="tag">工业</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Reuters · 2026-10-21 · 重要性 ★★</div>
+    <div class="title"><a href="https://www.thestar.com.my/tech/tech-news/2026/10/21/germany039s-agile-to-make-up-to-2000-humanoid-robots-with-nvidia-ceo-says">Agile Robots 联手英伟达，明年最多造 2000 台小型科研人形机器人</a></div>
+    <div class="summary">Agile 的 ONE S / ONE SN 为约 1.4 米的科研人形机器人，SN 为英伟达配置版（Jetson Thor + GR00T）。2026 年底前开产，明年计划 1000–2000 台。</div>
+    <div class="insight">科研人形机器人开始走「千元 GPU 式」铺货路线——先把硬件铺进实验室，标准与生态自然随之而来。</div>
+    <div class="tags"><span class="tag">量产</span><span class="tag">英伟达生态</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">RoboticsTomorrow · 2026-10-21 · 重要性 ★★</div>
+    <div class="title"><a href="https://www.roboticstomorrow.com/news/2026/10/21/schaeffler-and-nvidia-collaborate-to-accelerate-humanoid-robot-deployment-through-ai-powered-digital-twins/27267">舍弗勒执行器成为英伟达 Newton 引擎的人形机器人数字孪生基础组件</a></div>
+    <div class="summary">舍弗勒将作为执行器技术提供方，为英伟达开源物理引擎 Newton 提供每个执行器的高保真数字孪生，目标是缩小 sim-to-real 差距、实现人形机器人零样本部署。</div>
+    <div class="insight">零部件厂商给物理引擎「喂」高保真模型，是 sim2real 最难环节——执行器建模——被产业级资源接管了。</div>
+    <div class="tags"><span class="tag">数字孪生</span><span class="tag">Sim2Real</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">21 世纪经济报道 · 2026-10-20 · 重要性 ★★</div>
+    <div class="title"><a href="https://m.21jingji.com/article/20261020/herald/e8563875456e1deca4ba5f441bb437eb.html">宇树科技股价续涨总市值超 2100 亿元，公司公告提示估值风险</a></div>
+    <div class="summary">宇树 10 月 20 日早盘再涨超 7%，两日累计约 25%，滚动市盈率 388 倍（行业均值约 39.5 倍）。公司发布异常波动公告，提示行业商业化尚早、估值存在回归风险。</div>
+    <div class="insight">二级市场把「人形机器人预期」打满的速度远快于产业落地速度，公司自己下场提示风险，值得冷静看待。</div>
+    <div class="tags"><span class="tag">资本市场</span><span class="tag">宇树</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Agility Robotics · 2026-10-20 · 重要性 ★★</div>
+    <div class="title"><a href="https://www.agilityrobotics.com/content/agco-and-agility-robotics-advance-smart-manufacturing-with-humanoid-robot-pilot-in-hesston-kansas-facility">AGCO 签署商业协议，2027 年起在堪萨斯工厂试用 Agility 的 Digit</a></div>
+    <div class="summary">试点位于 AGCO 堪萨斯州赫斯顿工厂，2027 年开始，先做零件分拣码放和料箱入库。AGCO 成为继丰田、GXO、舍弗勒之后 Digit 的又一客户。</div>
+    <div class="insight">Digit 的客户名单稳步拉长，人形机器人商业化「慢但扎实」路线与资本市场的快热形成有趣对照。</div>
+    <div class="tags"><span class="tag">商业化</span><span class="tag">Digit</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">The AI Insider · 2026-10-20 · 重要性 ★★</div>
+    <div class="title"><a href="https://theaiinsider.tech/2026/10/20/neura-robotics-nxai-partner-to-build-memory-system-for-physical-ai/">NEURA 与 NXAI 合作为认知机器人打造 xLSTM 记忆模型</a></div>
+    <div class="summary">NEURA 将把 Neuron AI 与 NXAI 的 xLSTM 架构结合，让机器人拥有跟踪多步任务的工作记忆和回忆过往尝试的情景记忆，接入 Neuraverse 平台并可在 NEURA Gym 中测试。</div>
+    <div class="insight">xLSTM 进机器人记忆系统，是「非 Transformer 架构」在具身智能里寻找差异化立足点的信号。</div>
+    <div class="tags"><span class="tag">机器人记忆</span><span class="tag">xLSTM</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>论文精选（arXiv / HuggingFace Daily Papers）</div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.28626 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.28626">UniWALM: Unified World Action Language Model for Embodied Robot Control</a></div>
+    <div class="summary">提出统一的世界-动作-语言模型，在单一共享表征中同时学习视频、动作与语言，每种模态既作条件信号又作监督目标，验证联合生成语言能否改善操作控制。</div>
+    <div class="insight">「世界模型 + VLA + 语言」三位一体是具身大模型的收敛方向，UniWALM 是这条路线的又一有力实证。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">世界模型</span><span class="tag">VLA</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily · 4 票</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.28388">Self-Credit: Credit Assignment for Long-Horizon Agentic RL via Intra-group Rescaling</a></div>
+    <div class="summary">针对长程 Agentic RL 中稀疏奖励导致的信用分配难题，Self-Credit 通过组内重缩放，从稀疏结果奖励中自生成稠密监督信号：rollout 时策略模型生成带引用的摘要，回溯定位关键步骤。</div>
+    <div class="insight">让模型自己给长程轨迹「记账」，是稀疏奖励 Agent 训练的务实解法，比训一个独立过程奖励模型便宜得多。</div>
+    <div class="tags"><span class="tag">Agent RL</span><span class="tag">信用分配</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily · 4 票</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.28069">Training the Whole Agent, Not Just the Model (HarnessAdapt-RL)</a></div>
+    <div class="summary">训练编码 Agent 时通常只更新策略而固定 harness。HarnessAdapt-RL 在 RL 过程中同时调整策略与脚手架：冻结教师针对有缺陷的修复策略生成任务级机制技能，并处理跨任务反复出现的交互问题。</div>
+    <div class="insight">「脚手架也是可学习参数」——Agent 工程开始把工程构件纳入训练闭环，这可能比堆模型规模收益更快。</div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">训练方法</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.28577 · cs.CL</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.28577">Cache Engineering for Agents</a></div>
+    <div class="summary">随着 Agent 轨迹增长，KV cache 的 I/O 与存储成为主导成本，甚至超出最大上下文长度。本文系统讨论面向 Agent 的缓存工程，区别于以往靠裁剪/摘要历史的上下文工程。</div>
+    <div class="insight">长程 Agent 的成本瓶颈正从「算力」转向「显存搬运」，缓存工程会是接下来 Agent 基础设施的热门赛道。</div>
+    <div class="tags"><span class="tag">推理优化</span><span class="tag">KV Cache</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.28601 · cs.AI</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.28601">Evolving Agent Interfaces</a></div>
+    <div class="summary">计算机操作 Agent 受限于人类手工设计的接口（逐格填表格 vs 一行代码）。作者主张接口设计本身应当自动化进化，让 Agent 自主选择何时用何种接口。</div>
+    <div class="insight">接口不该是给 Agent 的「施舍」，而该由 Agent 自己进化出来——这个视角可能重新定义 computer-use 的工程范式。</div>
+    <div class="tags"><span class="tag">Computer Use</span><span class="tag">Agent 接口</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.28584 · cs.AI</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.28584">CoRAL: Beyond the Sequentiality Bottleneck — 扩散-自回归混合多模态推理框架</a></div>
+    <div class="summary">自回归模型存在推理串行瓶颈，扩散语言模型可并行但语义连贯性不足。CoRAL 采用非对称规划-执行架构：扩散规划器并行生成 K 条推理轨迹，大型自回归执行器负责落地。</div>
+    <div class="insight">「扩散做发散、自回归做收敛」的分工非常直觉且工程友好，是混合架构里少见的角色清晰的方案。</div>
+    <div class="tags"><span class="tag">推理架构</span><span class="tag">扩散语言模型</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.28576 · cs.LG</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.28576">The Token-Energy Law of LLM Decode</a></div>
+    <div class="summary">提出 Token-Energy 定律：用「活跃字节数」和「实际解码时间」两个核心维度，建立 GPU 板级每 token 能耗的紧凑可解释模型，用于指导高能效部署。</div>
+    <div class="insight">当推理成本开始按「焦耳/token」计价，这类可解释的能耗定律就是容量规划和硬件选型的标尺。</div>
+    <div class="tags"><span class="tag">推理能耗</span><span class="tag">系统</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily · 7 票</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.27190">On the Fragility of Tasks under Composition: Implicit Budgeting in Language Models</a></div>
+    <div class="summary">发现根本局限：模型在单 prompt 内处理多个任务时错误率显著上升，即使每个子任务单独都能可靠解决；这种退化无法用独立错误累积完全解释，暗示存在隐式的内部预算机制。</div>
+    <div class="insight">「每个都会，合起来就翻车」——对依赖复杂指令编排的 Agent 应用是直接警告，值得所有 prompt 工程师一读。</div>
+    <div class="tags"><span class="tag">LLM 能力边界</span><span class="tag">任务组合</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily · 4 票</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.28554">OverSeer: Multi-Agent World Models Beyond What Agents See</a></div>
+    <div class="summary">将视频世界模型扩展到多智能体需生成多个时间上、智能体间一致的视角流。OverSeer 用空间固定的辅助相机视角作为「世界中心表征」的代理，增强各智能体的自我中心视角。</div>
+    <div class="insight">固定辅助视角充当多智能体之间的「公共坐标系」，思路简洁，对多机器人协作仿真有直接借鉴价值。</div>
+    <div class="tags"><span class="tag">世界模型</span><span class="tag">多智能体</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.28578 · cs.AI</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.28578">Sage-A1.5: From Long-Horizon Execution to Scientific Exploration with Capability Composition</a></div>
+    <div class="summary">35B MoE agentic 模型，通过自适应能力组合推进长程问题求解，强调 agentic 编排、验证与开放式科学发现三项改进，不仅会做单任务，还会在执行中组织工作、修正路线。</div>
+    <div class="insight">中等规模 MoE + 强编排的路线，正在验证「Agent 能力 ≠ 模型规模」这条性价比路径。</div>
+    <div class="tags"><span class="tag">Agent 模型</span><span class="tag">MoE</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源动态（GitHub Trending · Awesome Lists）</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 今日 +2012 ⭐</div>
+    <div class="title"><a href="https://github.com/cloudflare/security-audit-skill">cloudflare/security-audit-skill</a> — coding-agent 多阶段安全审计技能</div>
+    <div class="summary">Cloudflare 出品的 coding-agent skill：多阶段安全审计流程，产出独立验证、机器可读的审计结论。单日 2000+ star 登顶今日趋势榜。</div>
+    <div class="insight">「Skill 即安全流程」——大模型 Agent 的能力封装形态正在被大厂正式采用，审计这种强流程场景尤其合适。</div>
+    <div class="tags"><span class="tag hot">今日最热</span><span class="tag">Agent Skill</span><span class="tag">安全</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 今日 +1541 ⭐</div>
+    <div class="title"><a href="https://github.com/stablyai/orca">stablyai/orca</a> — Agent 舰队工作台</div>
+    <div class="summary">同时管理 Grok Bot、Claude Code 等多个编码 Agent 的工作台，支持桌面、移动与远程运行时，用自己的订阅即可跑任意编码 Agent。</div>
+    <div class="insight">多 Agent 并行干活已成常态，「Agent 编排工作台」这类元工具开始成为新的流量入口。</div>
+    <div class="tags"><span class="tag">Agent 工具</span><span class="tag">多智能体</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 今日 +474 ⭐</div>
+    <div class="title"><a href="https://github.com/headroomlabs-ai/headroom">headroomlabs-ai/headroom</a> — LLM 上下文压缩层</div>
+    <div class="summary">在工具输出、日志、文件和 RAG 块进入 LLM 之前先行压缩：编码 Agent 省 20% token，JSON 场景省 60–95%，提供库、代理和 MCP server 三种形态。</div>
+    <div class="insight">与今日论文「Cache Engineering for Agents」互为呼应——上下文经济学正成为 Agent 基础设施的核心议题。</div>
+    <div class="tags"><span class="tag">上下文压缩</span><span class="tag">MCP</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 今日 +1433 ⭐</div>
+    <div class="title"><a href="https://github.com/Graphify-Labs/graphify">Graphify-Labs/graphify</a> — 代码库转知识图谱</div>
+    <div class="summary">把代码库连同文档、SQL schema、配置和 PDF 转成可查询知识图谱；本地确定性 AST 解析、无向量库，提供 Claude Code / Cursor / Codex / Gemini CLI 的 /graphify skill。</div>
+    <div class="insight">「无向量库的确定性代码图谱」是对 RAG 黑盒的纠偏——可解释、可审计的上下文供给更适合严肃工程。</div>
+    <div class="tags"><span class="tag">知识图谱</span><span class="tag">代码理解</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 持续高热</div>
+    <div class="title"><a href="https://github.com/vllm-project/vllm">vllm-project/vllm</a> (+441) · <a href="https://github.com/Comfy-Org/ComfyUI">Comfy-Org/ComfyUI</a> (+939) · <a href="https://github.com/shiyu-coder/Kronos">shiyu-coder/Kronos</a> (+575)</div>
+    <div class="summary">推理引擎 vLLM 与扩散模型 GUI ComfyUI 维持长期高热；金融市场基础模型 Kronos（「金融市场的语言基座模型」）连续多日上榜，累计 42.8k star。</div>
+    <div class="insight">基础设施双雄热度不减；垂直领域基座模型（金融 Kronos）证明了「foundation model for X」叙事仍有生命力。</div>
+    <div class="tags"><span class="tag">推理引擎</span><span class="tag">金融大模型</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Awesome Lists · GitHub Search</div>
+    <div class="title">Awesome 列表动态：具身智能与机器人学习类列表密集更新</div>
+    <div class="summary">近 24 小时更新的相关列表：<a href="https://github.com/JethroJames/awesome-robots-icl">awesome-robots-icl</a>（机器人上下文学习综述配套，⭐138）、<a href="https://github.com/IRMVLab/awesome-robot-learning-from-human-videos">awesome-robot-learning-from-human-videos</a>（从人类视频学习机器人策略，⭐164）、<a href="https://github.com/afinitus/awesome-hill-climbing">awesome-hill-climbing</a>（机器人策略最后一公里改进：RL 微调、蒸馏）、<a href="https://github.com/RoboAgentLab/awesome-agentic-robotics">awesome-agentic-robotics</a>（Agentic 机器人研究、基准与开源资源）。</div>
+    <div class="insight">新 awesome 列表的主题分布本身就是风向标——「从人类视频学习」「策略最后一公里」「Agentic robotics」三个新列表，精准对应具身智能当前三大痛点。</div>
+    <div class="tags"><span class="tag">Awesome</span><span class="tag">具身智能</span><span class="tag">资源汇总</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今天最值得记住的画面，是舍弗勒太仓工厂里六台人形机器人在装配——机器人关节。产业开始自举：造机器人的产线雇机器人，英伟达则趁机把 Isaac 全家桶打包成「机器人界的 CUDA」，从参考硬件到仿真到安全认证一站式锁生态。学术圈遥相呼应：UniWALM 把世界模型、动作和语言塞进同一个表征，Self-Credit 和 HarnessAdapt-RL 则回答 Agent 时代两个真问题——长程奖励怎么记账、脚手架能不能一起训练。值得注意的是「上下文经济学」悄然升温：Cache Engineering 论文与 headroom 压缩工具同日走红，说明 Agent 的成本瓶颈正从算力转向显存与 token。最后泼一点冷水：宇树 388 倍市盈率、公司自己发公告提示估值风险——技术曲线很陡，但商业兑现仍是慢变量。看热闹之余，建议重点读 Task Composition 那篇：每个任务单独都会、组合起来就翻车，这对所有 Agent 应用都是一记警钟。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-10-22 · 数据来源：arXiv API · HuggingFace Daily Papers · GitHub Trending · Robot Overflow</p>
+</div>
+
+</div>
+</body>
+</html>
