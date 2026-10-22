@@ -1,6 +1,6 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-10-22T00:06:26.622955+00:00",
+  "generated_at": "2026-10-22T17:09:38.811537+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
@@ -514,8 +514,14 @@
     },
     "media": {
       "title": "AI 科技日报",
-      "count": 83,
+      "count": 84,
       "items": [
+        {
+          "date": "2026-10-23",
+          "url": "https://webdrag0n.github.io/reports/media/daily_media_20261023.html",
+          "overview": "昨日中文 AI 媒体焦点高度集中：DeepSeek 系动作持续刷屏——梁文锋出手投资 Swin Transformer 作者的具身智能公司，DeepSeek 新模型「斩杀 GPT-6」引发热议；蚂蚁数科发布决策模型 LingDT-Decision-1.0，中电信开源意图理解模型 Xing4.0-29B-Intent；Claude 新模型曝光、谷歌开源 TorchTPU；产业端，特斯拉财报利润腰斩、轻舟城市 NOA 4 个月落地 9 款车，Physical AI 与世界模型成为新的叙事主线。",
+          "digest": "昨天最值得记住的三件事：其一，DeepSeek 新模型据称在编程基准上超越 GPT-6，梁文锋同时出手投资 Swin Transformer 作者的具身智能公司——国产开源阵营一边拔高模型上限，一边向物理世界延伸；其二，「决策模型」「意图理解模型」等专用模型密集发布，大厂开始用垂直小模型切入金融、客服等确定性场景；其三，Physical AI 暗流涌动，OpenAI 的具身数据供应链、清华系世界模型进机器人，说明下一阶段的竞争焦点正从语言转向物理。普通开发者的机会在于：编程 Agent 能力普惠化正在加速，「许愿式编程」时代，会用模型比会写代码更重要。"
+        },
         {
           "date": "2026-10-22",
           "url": "https://webdrag0n.github.io/reports/media/daily_media_20261022.html",

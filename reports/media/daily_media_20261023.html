@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中文 AI 媒体日报 — 2026-10-23</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .comment {
+    font-size: 13px;
+    color: var(--text);
+    background: #f4f8fb;
+    border-left: 3px solid var(--accent);
+    padding: 8px 12px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 8px;
+  }
+  .card .comment b { color: var(--accent); }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>中文 AI 媒体日报</h1>
+  <div class="date">2026 年 10 月 23 日 · 星期五</div>
+  <div class="subtitle">收录 2026-10-22 发布内容 · 来源：机器之心 / 量子位 / 新智元 / 36氪 / 少数派 / 极客公园 / 智东西 / InfoQ 等</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>昨日中文 AI 媒体焦点高度集中：DeepSeek 系动作持续刷屏——梁文锋出手投资 Swin Transformer 作者的具身智能公司，DeepSeek 新模型「斩杀 GPT-6」引发热议；蚂蚁数科发布决策模型 LingDT-Decision-1.0，中电信开源意图理解模型 Xing4.0-29B-Intent；Claude 新模型曝光、谷歌开源 TorchTPU；产业端，特斯拉财报利润腰斩、轻舟城市 NOA 4 个月落地 9 款车，Physical AI 与世界模型成为新的叙事主线。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>头条热点</div>
+
+  <div class="hot-topic">
+    <div class="label">Hot · 刷屏</div>
+    <div class="card" style="box-shadow:none;border:none;padding:0;background:transparent;">
+      <div class="source">智东西</div>
+      <div class="title"><a href="https://zhidx.com/p/601905.html">梁圣又掀桌了！DeepSeek 新模型斩杀 GPT-6，许愿式编程时代降临</a></div>
+      <div class="summary">DeepSeek 发布新一代模型，在多项编程与推理基准上超越 GPT-6，「许愿式编程」（自然语言直接生成完整应用）成为社区讨论焦点。</div>
+      <div class="comment"><b>编辑解读：</b>国产开源模型再次在旗舰能力上正面硬刚硅谷头部模型，编程场景已成为大模型竞争的最高地，「说一句话出一个应用」的产品形态正在重塑开发者工具链。</div>
+      <div class="tags"><span class="tag hot">刷屏</span><span class="tag">DeepSeek</span><span class="tag">大模型</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504734.html">梁文锋投了 Swin Transformer 作者！DeepSeek 开始布局具身大脑</a></div>
+    <div class="summary">DeepSeek 创始人梁文锋被曝投资由 Swin Transformer 作者创立的具身智能公司，DeepSeek 版图从语言模型延伸至机器人「大脑」。</div>
+    <div class="comment"><b>编辑解读：</b>头部大模型公司向具身智能下注已成共识，语言智能向物理世界外溢是本轮 AI 周期确定性最高的方向之一。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">DeepSeek</span><span class="tag">投资</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504314.html">Claude 新模型曝光！能跳出思维定势，修 Bug 治标又治本</a></div>
+    <div class="summary">Anthropic 新模型信息流出，在调试场景中展现出「跳出思维定势」的根因分析能力；同期 OpenAI 仅更新 6.1 Terra。</div>
+    <div class="comment"><b>编辑解读：</b>从「补代码」到「修系统」，模型在软件工程链路上的能力边界继续外推，Agentic coding 的竞争进入深水区。</div>
+    <div class="tags"><span class="tag">Claude</span><span class="tag">大模型</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型与开源</div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504879.html">又一国产决策模型发布！准确率超过微软和 Jev 等决策模型</a></div>
+    <div class="summary">10 月 22 日，蚂蚁数科正式发布决策模型 LingDT-Decision-1.0，面向金融与产业决策场景。</div>
+    <div class="comment"><b>编辑解读：</b>通用大模型之外，「决策智能」正成为大厂差异化竞争的垂直赛道，金融风控与经营决策是最先落地的场景。</div>
+    <div class="tags"><span class="tag">蚂蚁数科</span><span class="tag">决策模型</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504832.html">既能「做选择题」，也能「做填空题」——星辰意图理解模型 Xing4.0-29B-Intent 发布</a></div>
+    <div class="summary">中电信人工智能科技有限公司星辰通用人工智能实验室正式发布并开源意图理解专用模型 Xing4.0-29B-Intent。</div>
+    <div class="comment"><b>编辑解读：</b>运营商系实验室持续押注「专用小模型」路线，意图理解这类贴近客服与终端场景的能力，是 To B 落地的高频刚需。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">中电信</span><span class="tag">意图理解</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504517.html">国模 Agent 第一！MiniMax 爆改 Flash 战力，全时段大肥鱼谷价</a></div>
+    <div class="summary">MiniMax 新一代 Flash 模型在 Agent 能力榜单上登顶国产模型第一，并祭出极具攻击性的定价策略。</div>
+    <div class="comment"><b>编辑解读：</b>Agent 能力 + 价格战双管齐下，国产模型在推理成本上的内卷仍在继续，开发者是最大受益方。</div>
+    <div class="tags"><span class="tag">MiniMax</span><span class="tag">Agent</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">少数派</div>
+    <div class="title"><a href="https://sspai.com/post/116953">派早报：荣耀发布 WIN2 系列新品、Google 开源 TorchTPU 等</a></div>
+    <div class="summary">Google 开源 TorchTPU，让 PyTorch 工作负载更便捷地运行在 TPU 上；荣耀发布 WIN2 系列新品。</div>
+    <div class="comment"><b>编辑解读：</b>TorchTPU 开源进一步降低了 TPU 生态的迁移门槛，算力平台的竞争正在从硬件转向软件栈亲和力。</div>
+    <div class="tags"><span class="tag">Google</span><span class="tag">开源</span><span class="tag">算力</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🏭</span>行业与产品</div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504841.html">特斯拉利润腰斩，一夜跌没「通用汽车」！马斯克：FSD 在中国也会遥遥领先</a></div>
+    <div class="summary">特斯拉最新财报利润腰斩，市值一夜蒸发一个通用汽车；FSD 一年增长 70 万付费用户，马斯克放话 FSD 入华也会领先。</div>
+    <div class="comment"><b>编辑解读：</b>硬件利润承压之下，特斯拉估值逻辑进一步向「FSD 订阅 + 机器人」倾斜，中国市场成为其智驾叙事的必争之地。</div>
+    <div class="tags"><span class="tag">特斯拉</span><span class="tag">自动驾驶</span><span class="tag">财报</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504638.html">量智齐飞！4 个月 9 款车落地，轻舟城市 NOA 击穿 10-20 万体验天花板</a></div>
+    <div class="summary">轻舟智航城市 NOA 方案 4 个月内落地 9 款车型，百万台搭载打底，智驾普及与安全并重。</div>
+    <div class="comment"><b>编辑解读：</b>城市 NOA 下探至 10-20 万主流价格带，智驾供应商竞争从「技术演示」进入「规模交付」阶段。</div>
+    <div class="tags"><span class="tag">智能驾驶</span><span class="tag">量产</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">极客公园</div>
+    <div class="title"><a href="https://news.qq.com/rain/a/20261022A03M8R00">码刻｜Flowtica 发布新品 Verso，想成为擅长开会的 AI 硬件</a></div>
+    <div class="summary">AI 硬件品牌 Flowtica 的 AI 墨水屏产品 Verso 正式发布，主打会议场景的记录与整理。</div>
+    <div class="comment"><b>编辑解读：</b>AI 硬件赛道开始从「通用形态」转向「垂直场景深耕」，会议办公是付费意愿最明确的切口之一。</div>
+    <div class="tags"><span class="tag">AI 硬件</span><span class="tag">新品</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">少数派</div>
+    <div class="title"><a href="https://sspai.com/post/116923">前瞻｜Apple 新品看点：MacBook 或将推出 OLED 触屏版本</a></div>
+    <div class="summary">苹果新品前瞻：MacBook 产品线可能迎来 OLED 触屏版本，智能家居中枢新品亦在筹备中。</div>
+    <div class="comment"><b>编辑解读：</b>OLED 触屏 MacBook 若成真，将是苹果十年来对 Mac 形态最大的一次妥协与革新，也为端侧 AI 交互铺路。</div>
+    <div class="tags"><span class="tag">Apple</span><span class="tag">硬件</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔬</span>研究与前瞻</div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504653.html">LeCun 押注的世界模型，中国一家清华系公司已经做进了机器人</a></div>
+    <div class="summary">世界模型赛道新看点：千诀科技在隐变量可辨识性方向的研究比 LeCun 相近工作早一年，不堆画面预测，主打物理规律与跨本体复用。</div>
+    <div class="comment"><b>编辑解读：</b>世界模型正在从学术概念走向机器人工程化，「物理规律先验」路线与视频预测路线的分野值得持续跟踪。</div>
+    <div class="tags"><span class="tag">世界模型</span><span class="tag">机器人</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504800.html">谁在给 OpenAI 供应具身数据？</a></div>
+    <div class="summary">OpenAI 被曝挤进全球 Physical AI 核心供应链，具身数据采集与供应体系浮出水面。</div>
+    <div class="comment"><b>编辑解读：</b>具身智能的瓶颈已从模型转向数据，「数据供应链」将成为下一阶段 Physical AI 竞争的隐形战场。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">OpenAI</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504421.html">首 Token 延迟降低 32.4%！是石科技集群调度大招，国产推理再提效</a></div>
+    <div class="summary">是石科技发布 TokenFleet 调度框架，将大模型推理首 Token 延迟降低 32.4%。</div>
+    <div class="comment"><b>编辑解读：</b>推理侧的「降本增效」仍在快速迭代，调度与系统层优化是国产推理栈拉开体验差距的关键。</div>
+    <div class="tags"><span class="tag">推理优化</span><span class="tag">基础设施</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504415.html">Meshy 推出 Meshy Edit：基于全新自研 AI 模型，一句指令实现 3D 模型局部编辑</a></div>
+    <div class="summary">圈选修改区域、一句话描述改动，约一分钟生成新模型，未选中区域保持原样。</div>
+    <div class="comment"><b>编辑解读：</b>3D 生成从「整体生成」进化到「局部可控编辑」，是 AIGC 走向专业工作流的标志性一步。</div>
+    <div class="tags"><span class="tag">3D 生成</span><span class="tag">工具</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>昨天最值得记住的三件事：其一，DeepSeek 新模型据称在编程基准上超越 GPT-6，梁文锋同时出手投资 Swin Transformer 作者的具身智能公司——国产开源阵营一边拔高模型上限，一边向物理世界延伸；其二，「决策模型」「意图理解模型」等专用模型密集发布，大厂开始用垂直小模型切入金融、客服等确定性场景；其三，Physical AI 暗流涌动，OpenAI 的具身数据供应链、清华系世界模型进机器人，说明下一阶段的竞争焦点正从语言转向物理。普通开发者的机会在于：编程 Agent 能力普惠化正在加速，「许愿式编程」时代，会用模型比会写代码更重要。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 生成于 2026-10-23</p>
+</div>
+
+</div>
+</body>
+</html>

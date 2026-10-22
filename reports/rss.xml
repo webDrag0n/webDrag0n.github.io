@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 22 Oct 2026 00:06:26 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 17:09:38 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-10-23</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261023.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261023.html</guid>
+      <pubDate>Fri, 23 Oct 2026 08:00:00 +0000</pubDate>
+      <description>昨日中文 AI 媒体焦点高度集中：DeepSeek 系动作持续刷屏——梁文锋出手投资 Swin Transformer 作者的具身智能公司，DeepSeek 新模型「斩杀 GPT-6」引发热议；蚂蚁数科发布决策模型 LingDT-Decision-1.0，中电信开源意图理解模型 Xing4.0-29B-Intent；Claude 新模型曝光、谷歌开源 TorchTPU；产业端，特斯拉财报利润腰斩、轻舟城市 NOA 4 个月落地 9 款车，Physical AI 与世界模型成为新的叙事主线。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-10-22</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261022.html</link>
