@@ -1,6 +1,6 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-10-22T17:09:38.811537+00:00",
+  "generated_at": "2026-10-23T17:09:51.834917+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
@@ -514,8 +514,14 @@
     },
     "media": {
       "title": "AI 科技日报",
-      "count": 84,
+      "count": 85,
       "items": [
+        {
+          "date": "2026-10-24",
+          "url": "https://webdrag0n.github.io/reports/media/daily_media_20261024.html",
+          "overview": "昨日中文 AI 媒体的主线清晰：开源生成模型迎来高光时刻——OpenMOSS 的 5B 生图模型 MOSS-Image 上线 4 天海外下载破百万、登顶 Hugging Face 趋势榜；Physical AI 密集刷屏，南京物理 AI 大会三位图灵奖得主发声，高德发布全身基座模型 λ0，国产团队用一张 5090 跑起 34B 实时世界模型；产品端，Anthropic 推出主动干活的智能体 Claude Duet，科大讯飞 1024 开发者节发布端云一体星火 X2.6 与 Agent OS，声网提出「对话 AGI」五级框架——AI 正从「能聊」全面转向「能干活」。",
+          "digest": "昨日中文 AI 媒体最值得记住的三条线索：其一，开源生成模型再出爆款——OpenMOSS 的 MOSS-Image 上线 4 天海外下载破百万，靠「剔除 AI 生成数据」的自然画风登顶 Hugging Face，说明审美差异化正在成为开源模型的新护城河；其二，Physical AI 全面升温，南京物理 AI 大会三位图灵奖得主站台，高德发布全身基座模型 λ0，国产团队甚至用一张 5090 跑起 34B 实时世界模型，「理解物理世界」正在接棒「参数竞赛」；其三，产品端集体从「能聊」转向「能干活」：Anthropic 的 Claude Duet 能主动接管跨应用任务，讯飞星火 X2.6 走端云一体，声网提出对话 AGI 五级框架。给读者的建议：关注 MOSS-Image 的本地工作流玩法，以及 Claude Duet 这类主动型 Agent 的安全边界设计。"
+        },
         {
           "date": "2026-10-23",
           "url": "https://webdrag0n.github.io/reports/media/daily_media_20261023.html",

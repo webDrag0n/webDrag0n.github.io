@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 22 Oct 2026 17:09:38 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 17:09:51 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-10-24</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261024.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261024.html</guid>
+      <pubDate>Sat, 24 Oct 2026 08:00:00 +0000</pubDate>
+      <description>昨日中文 AI 媒体的主线清晰：开源生成模型迎来高光时刻——OpenMOSS 的 5B 生图模型 MOSS-Image 上线 4 天海外下载破百万、登顶 Hugging Face 趋势榜；Physical AI 密集刷屏，南京物理 AI 大会三位图灵奖得主发声，高德发布全身基座模型 λ0，国产团队用一张 5090 跑起 34B 实时世界模型；产品端，Anthropic 推出主动干活的智能体 Claude Duet，科大讯飞 1024 开发者节发布端云一体星火 X2.6 与 Agent OS，声网提出「对话 AGI」五级框架——AI 正从「能聊」全面转向「能干活」。</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-10-23</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261023.html</link>

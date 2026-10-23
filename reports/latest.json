@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T17:09:38.813813+00:00",
+  "generated_at": "2026-10-23T17:09:51.836419+00:00",
   "papers": {
     "date": "2026-10-22",
     "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261022.html",
@@ -7,9 +7,9 @@
     "digest": "今天最值得记住的画面，是舍弗勒太仓工厂里六台人形机器人在装配——机器人关节。产业开始自举：造机器人的产线雇机器人，英伟达则趁机把 Isaac 全家桶打包成「机器人界的 CUDA」，从参考硬件到仿真到安全认证一站式锁生态。学术圈遥相呼应：UniWALM 把世界模型、动作和语言塞进同一个表征，Self-Credit 和 HarnessAdapt-RL 则回答 Agent 时代两个真问题——长程奖励怎么记账、脚手架能不能一起训练。值得注意的是「上下文经济学」悄然升温：Cache Engineering 论文与 headroom 压缩工具同日走红，说明 Agent 的成本瓶颈正从算力转向显存与 token。最后泼一点冷水：宇树 388 倍市盈率、公司自己发公告提示估值风险——技术曲线很陡，但商业兑现仍是慢变量。看热闹之余，建议重点读 Task Composition 那篇：每个任务单独都会、组合起来就翻车，这对所有 Agent 应用都是一记警钟。"
   },
   "media": {
-    "date": "2026-10-23",
-    "url": "https://webdrag0n.github.io/reports/media/daily_media_20261023.html",
-    "overview": "昨日中文 AI 媒体焦点高度集中：DeepSeek 系动作持续刷屏——梁文锋出手投资 Swin Transformer 作者的具身智能公司，DeepSeek 新模型「斩杀 GPT-6」引发热议；蚂蚁数科发布决策模型 LingDT-Decision-1.0，中电信开源意图理解模型 Xing4.0-29B-Intent；Claude 新模型曝光、谷歌开源 TorchTPU；产业端，特斯拉财报利润腰斩、轻舟城市 NOA 4 个月落地 9 款车，Physical AI 与世界模型成为新的叙事主线。",
-    "digest": "昨天最值得记住的三件事：其一，DeepSeek 新模型据称在编程基准上超越 GPT-6，梁文锋同时出手投资 Swin Transformer 作者的具身智能公司——国产开源阵营一边拔高模型上限，一边向物理世界延伸；其二，「决策模型」「意图理解模型」等专用模型密集发布，大厂开始用垂直小模型切入金融、客服等确定性场景；其三，Physical AI 暗流涌动，OpenAI 的具身数据供应链、清华系世界模型进机器人，说明下一阶段的竞争焦点正从语言转向物理。普通开发者的机会在于：编程 Agent 能力普惠化正在加速，「许愿式编程」时代，会用模型比会写代码更重要。"
+    "date": "2026-10-24",
+    "url": "https://webdrag0n.github.io/reports/media/daily_media_20261024.html",
+    "overview": "昨日中文 AI 媒体的主线清晰：开源生成模型迎来高光时刻——OpenMOSS 的 5B 生图模型 MOSS-Image 上线 4 天海外下载破百万、登顶 Hugging Face 趋势榜；Physical AI 密集刷屏，南京物理 AI 大会三位图灵奖得主发声，高德发布全身基座模型 λ0，国产团队用一张 5090 跑起 34B 实时世界模型；产品端，Anthropic 推出主动干活的智能体 Claude Duet，科大讯飞 1024 开发者节发布端云一体星火 X2.6 与 Agent OS，声网提出「对话 AGI」五级框架——AI 正从「能聊」全面转向「能干活」。",
+    "digest": "昨日中文 AI 媒体最值得记住的三条线索：其一，开源生成模型再出爆款——OpenMOSS 的 MOSS-Image 上线 4 天海外下载破百万，靠「剔除 AI 生成数据」的自然画风登顶 Hugging Face，说明审美差异化正在成为开源模型的新护城河；其二，Physical AI 全面升温，南京物理 AI 大会三位图灵奖得主站台，高德发布全身基座模型 λ0，国产团队甚至用一张 5090 跑起 34B 实时世界模型，「理解物理世界」正在接棒「参数竞赛」；其三，产品端集体从「能聊」转向「能干活」：Anthropic 的 Claude Duet 能主动接管跨应用任务，讯飞星火 X2.6 走端云一体，声网提出对话 AGI 五级框架。给读者的建议：关注 MOSS-Image 的本地工作流玩法，以及 Claude Duet 这类主动型 Agent 的安全边界设计。"
   }
 }

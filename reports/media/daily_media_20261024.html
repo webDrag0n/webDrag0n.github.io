@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中文 AI 媒体日报 — 2026-10-24</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .comment {
+    font-size: 13px;
+    color: var(--text);
+    background: #f4f8fb;
+    border-left: 3px solid var(--accent);
+    padding: 8px 12px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 8px;
+  }
+  .card .comment b { color: var(--accent); }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>中文 AI 媒体日报</h1>
+  <div class="date">2026 年 10 月 24 日 · 星期六</div>
+  <div class="subtitle">收录 2026-10-23 发布内容 · 来源：量子位 / 少数派 / 机器之心 / 新智元 / 36氪 / 极客公园 等</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>昨日中文 AI 媒体的主线清晰：开源生成模型迎来高光时刻——OpenMOSS 的 5B 生图模型 MOSS-Image 上线 4 天海外下载破百万、登顶 Hugging Face 趋势榜；Physical AI 密集刷屏，南京物理 AI 大会三位图灵奖得主发声，高德发布全身基座模型 λ0，国产团队用一张 5090 跑起 34B 实时世界模型；产品端，Anthropic 推出主动干活的智能体 Claude Duet，科大讯飞 1024 开发者节发布端云一体星火 X2.6 与 Agent OS，声网提出「对话 AGI」五级框架——AI 正从「能聊」全面转向「能干活」。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>头条热点</div>
+
+  <div class="hot-topic">
+    <div class="label">Hot · 开源刷屏</div>
+    <div class="card" style="box-shadow:none;border:none;padding:0;background:transparent;">
+      <div class="source">量子位</div>
+      <div class="title"><a href="https://www.qbitai.com/2026/10/504930.html">国产 5B 生图模型海外突然爆火，4 天超百万下载</a></div>
+      <div class="summary">模思智能与 OpenMOSS 团队开源的 MOSS-Image 凭借「没有 AI 味」的自然感在海外社区走红，登顶 Hugging Face 文生图趋势榜，GitHub 迅速破 1.4k Stars。社区猜测其从训练数据中剔除 AI 生成图像，是画面自然的关键。</div>
+      <div class="comment"><b>编辑解读：</b>当多数生图模型陷入「精美但一眼 AI」的同质化，MOSS-Image 用「数据洁癖」打出差异化，再次证明开源社区的审美投票比跑分更能决定一个模型的生命力。</div>
+      <div class="tags"><span class="tag hot">刷屏</span><span class="tag">开源</span><span class="tag">文生图</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">少数派（派早报）</div>
+    <div class="title"><a href="https://sspai.com/post/117104">Anthropic 推出 Claude Duet：可主动工作的 AI 智能体</a></div>
+    <div class="summary">Claude Duet 基于 Opus 5.5 构建，可每天整理跨应用事项、主动提醒、在用户离开后继续后台执行任务，接入 Claude Marketplace 超 6000 个连接器，支持经用户确认的线上支付，iOS/Android/网页版同步上线。</div>
+    <div class="comment"><b>编辑解读：</b>从「对话助手」到「主动智能体」，Duet 把 Agent 的竞争拉到「常驻后台 + 跨应用执行」的新维度，而其支付前必须用户批准、敏感信息专门拦截的设计，也为主动型 Agent 划出了安全范本。</div>
+    <div class="tags"><span class="tag hot">热门</span><span class="tag">Anthropic</span><span class="tag">Agent</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504915.html">南京物理 AI 上大分！三位图灵奖得主发声，50 个应用场景亮相</a></div>
+    <div class="summary">2026 物理 AI 与世界模型大会在南京启幕，三位图灵奖得主围绕「机器能否理解世界」发声，50 个物理 AI 应用场景集中亮相，行业共识是 AI 正站在从「计算」到「理解」的范式转换路口。</div>
+    <div class="comment"><b>编辑解读：</b>世界模型与物理 AI 已从学术概念变成有大会、有场景、有政策背书的产业赛道，2026 下半年它很可能接替「大模型参数竞赛」成为中文媒体的第一叙事。</div>
+    <div class="tags"><span class="tag">世界模型</span><span class="tag">Physical AI</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型与产品</div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/505083.html">科大讯飞首发星辰 TaaS 平台：星火 X2.6、SparkAudio 1.0、Agent OS 齐发</a></div>
+    <div class="summary">2026 科大讯飞全球 1024 开发者节开幕，发布端云一体星火 X2.6（基于全国产算力，代码与智能体能力突破）、星辰 TaaS 平台、语音基座大模型 SparkAudio 1.0，以及智能体协同平台 Agent OS。刘庆峰提出「60% 应用本地完成、30% 云端协同」的端云一体路线。</div>
+    <div class="comment"><b>编辑解读：</b>「全国产算力 + 端云一体」是讯飞给出的成本与安全答案，TaaS（Token 即服务）的提法，本质是把模型能力做成可计量的工业原料，To B 落地的故事越来越具体了。</div>
+    <div class="tags"><span class="tag">科大讯飞</span><span class="tag">星火X2.6</span><span class="tag">全国产算力</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504913.html">iRTE2026：声网 CEO 赵斌提出五级对话能力框架，实时互动迈入对话 AGI 时代</a></div>
+    <div class="summary">声网创始人赵斌在 iRTE2026 实时智能大会提出「五级对话能力」框架，勾勒对话式 AI 从基础应答走向深度理解与关系沟通的演进路径，实时互动的对象正从人与人扩展到人与 Agent。</div>
+    <div class="comment"><b>编辑解读：</b>当 AI 从「回答问题」走向「持续交流」，低延迟实时交互基础设施成了 Agent 体验的隐形地基，声网在用自动驾驶式的分级叙事抢占「对话 AGI」的定义权。</div>
+    <div class="tags"><span class="tag">对话式AI</span><span class="tag">实时互动</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/505032.html">企业 AI 需要两个世界模型</a></div>
+    <div class="summary">MIT NANDA 报告显示 95% 的企业生成式 AI 试点没有带来可衡量的损益回报，而 90% 以上员工已在用个人 AI 工具。文章借特赞的实践提出：企业需要同时构建「业务世界模型」与「组织世界模型」，让 Agent 真正懂业务。</div>
+    <div class="comment"><b>编辑解读：</b>「AI 被用起来了，但停在个人层面」是当下企业 AI 的真实困境，两个世界模型的框架把问题从「买工具」引回「建资产」，值得每一个推 AI 转型的团队对照自查。</div>
+    <div class="tags"><span class="tag">企业AI</span><span class="tag">Agent</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504901.html">百度世界 2026 前瞻：聚焦「智能组织」，10+ 重磅分论坛解码 AI 组织进化</a></div>
+    <div class="summary">百度世界 2026 将于 11 月 12 日举行，主议题锁定「智能组织」——企业 AI 转型从单点工具提效走向系统性组织重构，10+ 分论坛将全面展开。</div>
+    <div class="comment"><b>编辑解读：</b>大厂大会的主题从「模型能力」转向「组织重构」，说明行业共识已经形成：模型不再是瓶颈，组织和流程才是。</div>
+    <div class="tags"><span class="tag">百度</span><span class="tag">行业观察</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>Physical AI 与具身智能</div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504905.html">高德发布首个基于开放世界行为的全身基座模型 λ0</a></div>
+    <div class="summary">阿里巴巴旗下高德发布全身基座模型 λ0，仅依靠人类行动数据即可让机器人学习移动、姿态与双手操作的全身协调，在 SIMPLE 仿真基准与多项真机评测取得 SOTA，数据采集效率约为主流方法 3.4 倍，真机任务成功率较最强基线提升 22.5%。</div>
+    <div class="comment"><b>编辑解读：</b>从「局部动作学习」到「全身动作对齐」，λ0 把具身数据采集的成本曲线往下压了一个量级，地图公司做机器人基座模型，看中的是真实世界行为数据这张王牌。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">高德</span><span class="tag">基座模型</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504931.html">一张 5090 跑起 34B 实时世界模型，国产玩家拿下英伟达大奖</a></div>
+    <div class="summary">达瓦科技的实时世界模型产品 Scenes AI 在 2026 NVIDIA 创业企业展示中拿下「半程展示卓越企业奖」。与主流视频模型「预测下一帧」不同，Scenes AI 维护一个持续运行的世界状态，只更新变化的部分，单张 RTX 5090 即可实时运行 34B 模型。</div>
+    <div class="comment"><b>编辑解读：</b>「状态更新」对「逐帧预测」的路线分歧正在拉开：前者把世界模型从算力怪兽变成单卡可跑的产品，消费级硬件 + 实时世界模型，虚拟片场只是第一个被改造的行业。</div>
+    <div class="tags"><span class="tag">世界模型</span><span class="tag">实时渲染</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🏥</span>应用与行业</div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504734.html">多智能体协同重构医疗 AI！清华 AIR 孵化：医生 AI 分身「坐诊」医院</a></div>
+    <div class="summary">张亚勤创办的清华 AIR 孵化企业紫荆智康推出「紫荆AI医院」，已在多地医院上线测试：每位医生拥有专属 AI 分身辅助判断，多专科智能体协同会诊，诊室外的随访与健康管理也由 AI 接管。</div>
+    <div class="comment"><b>编辑解读：</b>医疗是多智能体协同最有说服力的落地场景——科室分工天然对应 Agent 分工，「AI 分身 + 人机共诊」可能是医院接受度最高的 AI 形态。</div>
+    <div class="tags"><span class="tag">医疗AI</span><span class="tag">多智能体</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504730.html">生数科技 Motubrain 团队将直播 Physical AI 训练全流程，持续半个月</a></div>
+    <div class="summary">生数科技世界模型团队开启 Motubrain 2.0 训练全流程公开直播，计划持续半个月，向公众展示具身模型从数据到训练的全过程，回答「Physical AI 究竟如何实现」。</div>
+    <div class="comment"><b>编辑解读：</b>训练过程公开直播正在成为国产模型团队的新型「技术营销」，透明度本身就是一种竞争力，也让 Physical AI 的工程细节第一次被大规模围观。</div>
+    <div class="tags"><span class="tag">Physical AI</span><span class="tag">开源精神</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504618.html">实探宁德时代总部：「去宁化」是喊太大声了</a></div>
+    <div class="summary">记者实地探访宁德时代总部，回应行业「去宁化」传闻：从产能、技术迭代到客户结构，宁德时代在动力与储能电池上的护城河依然深厚，所谓「去宁化」更多是口号而非现实。</div>
+    <div class="comment"><b>编辑解读：</b>AI 算力竞赛的尽头是能源与电池，宁王的这篇实探提醒我们：热闹在上层应用，底气在底层供应链。</div>
+    <div class="tags"><span class="tag">产业</span><span class="tag">能源</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠</span>工具与生态</div>
+
+  <div class="card">
+    <div class="source">少数派（派早报）</div>
+    <div class="title"><a href="https://sspai.com/post/117104">派早报：Insta360 发布 Insta360 Mic，澳大利亚裁定苹果必须开放侧载</a></div>
+    <div class="summary">Insta360 发布定位介于 Mic Pro 与 Mic Air 之间的无线麦克风 Insta360 Mic，支持 32-bit 浮点内录与四发一收；澳大利亚法院裁定苹果必须开放 iPhone 侧载与第三方支付；Bose 完成收购 Skullcandy。</div>
+    <div class="comment"><b>编辑解读：</b>苹果侧载开放再添一国，平台围墙正在被各国监管逐一拆除，应用分发与支付生态的连锁反应值得开发者提前布局。</div>
+    <div class="tags"><span class="tag">硬件</span><span class="tag">平台生态</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504608.html">飞书豆包工作 AI 先锋未来人才大赛：企业正在争抢会用 AI 做成事的人</a></div>
+    <div class="summary">飞书豆包工作 AI 先锋未来人才大赛总决赛在北京举行，12 组选手围绕企业真实业务问题用飞书与豆包完成调研、协作与交付，飞书 CEO 谢欣及多位企业家现场评审，「会用 AI 做成事」成为人才评价新标准。</div>
+    <div class="comment"><b>编辑解读：</b>「AI 原生工作力」正在从口号变成招聘硬指标，工具厂商办赛的深层逻辑是：谁先定义了 AI 时代的工作方式，谁就锁定了下一代办公入口。</div>
+    <div class="tags"><span class="tag">AI办公</span><span class="tag">人才</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>昨日中文 AI 媒体最值得记住的三条线索：其一，开源生成模型再出爆款——OpenMOSS 的 MOSS-Image 上线 4 天海外下载破百万，靠「剔除 AI 生成数据」的自然画风登顶 Hugging Face，说明审美差异化正在成为开源模型的新护城河；其二，Physical AI 全面升温，南京物理 AI 大会三位图灵奖得主站台，高德发布全身基座模型 λ0，国产团队甚至用一张 5090 跑起 34B 实时世界模型，「理解物理世界」正在接棒「参数竞赛」；其三，产品端集体从「能聊」转向「能干活」：Anthropic 的 Claude Duet 能主动接管跨应用任务，讯飞星火 X2.6 走端云一体，声网提出对话 AGI 五级框架。给读者的建议：关注 MOSS-Image 的本地工作流玩法，以及 Claude Duet 这类主动型 Agent 的安全边界设计。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 生成于 2026-10-24</p>
+</div>
+
+</div>
+</body>
+</html>
