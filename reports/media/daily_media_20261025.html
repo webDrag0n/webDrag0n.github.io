@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中文 AI 媒体日报 — 2026-10-25</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .comment {
+    font-size: 13px;
+    color: var(--text);
+    background: #f4f8fb;
+    border-left: 3px solid var(--accent);
+    padding: 8px 12px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 8px;
+  }
+  .card .comment b { color: var(--accent); }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>中文 AI 媒体日报</h1>
+  <div class="date">2026 年 10 月 25 日 · 星期日</div>
+  <div class="subtitle">收录 2026-10-24 发布内容 · 来源：智东西 / 极客公园 / 量子位 / 少数派 / InfoQ / 机器之心 / 新智元 / 36氪 等</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>昨日中文 AI 媒体被两件事刷屏：一是月之暗面发布 3 万亿参数旗舰 Kimi K3.1 Pro，宣布 11 月 4 日前开源权重，以约 1/5 的价格对标 Astra，国产开源模型天花板再度抬升；二是字节 Seedance 2.5 4K 正式发布，AI 视频生成进入「可商用画质」阶段。产业侧同样热闹：DeepSeek 千亿融资逼近收官、传联手宁德时代在内蒙古投建 1GW 国产智算中心；美国大型银行开始限制第三方 AI 代理访问账户，Anthropic 把 Agent Skills 标准捐给社区；国务院发文强调增强 AI 就业的正面效应。Agent 治理与算力基建，正成为模型发布之外的两条新主线。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>头条热点</div>
+
+  <div class="hot-topic">
+    <div class="label">Hot · 3 万亿参数开源在即</div>
+    <div class="card" style="box-shadow:none;border:none;padding:0;background:transparent;">
+      <div class="source">智东西</div>
+      <div class="title"><a href="https://finance.sina.com.cn/roll/2026-10-24/doc-iniwhtfu4922588.shtml">3 万亿级参数！Kimi K3.1 空降国产第一，1/5 价格狙击 Astra</a></div>
+      <div class="summary">月之暗面发布新一代旗舰模型 Kimi K3.1 Pro，参数量级达 3 万亿，宣布将于 11 月 4 日前完成模型开源。实测可跑通 3D 生成等复杂任务，API 定价约为 Astra 的 1/5，多项基准登顶国产模型榜首。</div>
+      <div class="comment"><b>编辑解读：</b>K3.1 Pro 把「3 万亿参数 + 承诺开源 + 五分之一价格」三张牌一起打出，直接改写了开源模型的性价比坐标系。如果权重如期放出，2026 年末开源与闭源的边界将被再次重画。</div>
+      <div class="tags"><span class="tag hot">刷屏</span><span class="tag">Kimi</span><span class="tag">开源</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">极客公园（极客早知道）</div>
+    <div class="title"><a href="http://www.geekpark.net/news/372858">iPhone Duo 正式交付；Kimi K3.1 Pro、Seedance 2.5 4K 正式发布</a></div>
+    <div class="summary">苹果首款折叠屏 iPhone Duo 开启交付、部分订单排到明年 1 月；字节跳动发布 Seedance 2.5 4K，AI 视频生成分辨率与音画同步能力同步升级，瞄准商用级内容生产。</div>
+    <div class="comment"><b>编辑解读：</b>Seedance 2.5 把 AI 视频推上 4K 商用画质线，加上价格竞争，短视频与广告制作的成本结构将在明年被实质性改写——工具链的「电影工业化」开始了。</div>
+    <div class="tags"><span class="tag hot">热门</span><span class="tag">AI视频</span><span class="tag">字节</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪 / InfoQ</div>
+    <div class="title"><a href="https://www.infoq.cn/article/mhdJwMMzYFedMFHKfHWs">DeepSeek 千亿融资逼近收官：结盟产业资本，募资翻倍押注具身智能</a></div>
+    <div class="summary">市场消息称 DeepSeek 新一轮融资约 1000 亿元（约 150 亿美元）接近完成，腾讯、宁德时代为主要出资方；同期传出 DeepSeek 与宁德时代在内蒙古合作建设 1GW 国产智算中心，资金将大幅投向具身智能与算力基建。</div>
+    <div class="comment"><b>编辑解读：</b>一家模型公司同时拿到「电池巨头 + 互联网巨头」的钱并自建 1GW 智算中心，说明国产大模型的竞争已升级为「模型 × 算力 × 能源」的垂直整合竞赛，具身智能则是下一个资金蓄水池。</div>
+    <div class="tags"><span class="tag hot">重磅</span><span class="tag">DeepSeek</span><span class="tag">融资</span><span class="tag">算力</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型与产品</div>
+
+  <div class="card">
+    <div class="source">AI 热点聚合（10/24 主线）</div>
+    <div class="title"><a href="https://ainsight.aiext.co/2026/10/24/ai_hot_xv7ks7">模型密集发布日：DeepSeek V4.1-Flash-1017、MiniMax M3.1 Flash 开源、Gemini 4 Argon 百万 token 输出</a></div>
+    <div class="summary">10 月 24 日前后，多家头部厂商同日更新：DeepSeek 发布 V4.1-Flash-1017 并开放自研搜索 API；MiniMax 发布并开源 M3.1 Flash，速度提升近 3 倍、成本降 70%；Google 推出 Gemini 4 Argon，支持百万 token 输出，主攻长程编程与企业级任务。</div>
+    <div class="comment"><b>编辑解读：</b>同一天里「更快、更便宜、更长上下文、更彻底开源」四个方向同时推进，模型 API 定价与高价闭源订阅将持续承压，开发者是这轮价格战的最大赢家。</div>
+    <div class="tags"><span class="tag">大模型</span><span class="tag">价格战</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">AI 热点聚合</div>
+    <div class="title"><a href="https://ainsight.aiext.co/2026/10/24/ai_hot_xv7ks7">OpenAI 推出个人 AI 智能体 Dot：由 GPT-6 Astra 驱动</a></div>
+    <div class="summary">OpenAI 上线个人智能体 Dot，由 GPT-6 Astra 模型驱动，主打个人事务的持续跟进与主动执行，与 Anthropic 的 Claude Duet 形成正面对位。</div>
+    <div class="comment"><b>编辑解读：</b>OpenAI 与 Anthropic 在「常驻型个人 Agent」上前后脚落子，个人 Agent 已从概念演示进入产品卡位战，记忆、授权与安全边界会成为下一阶段的分水岭。</div>
+    <div class="tags"><span class="tag">OpenAI</span><span class="tag">Agent</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">InfoQ</div>
+    <div class="title"><a href="https://www.infoq.cn/article/6EJRFIef67xr3x6vyCJa">千问蒋冠军：Personal Agent 技术框架，需要模型、记忆与生态协同推进</a></div>
+    <div class="summary">阿里千问技术负责人蒋冠军系统阐述 Personal Agent 的技术框架：单一模型能力不足以支撑真正可用的个人智能体，需要在模型、长期记忆与工具生态三层协同演进。</div>
+    <div class="comment"><b>编辑解读：</b>当各家都在讲 Personal Agent，「记忆 + 生态」的提法点出了真正的工程难点——模型只是入场券，谁能把记忆管理和第三方生态做成基础设施，谁才握有入口。</div>
+    <div class="tags"><span class="tag">千问</span><span class="tag">Personal Agent</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/504879.html">又一国产决策模型发布！蚂蚁数科 LingDT-Decision-1.0 准确率超微软</a></div>
+    <div class="summary">蚂蚁数科发布决策模型 LingDT-Decision-1.0，面向企业高频判断任务，在 23 项开源基准测试中准确率超过微软和 JEV 等决策模型；同期 StartLux 开源决策模型专用推理引擎 Prism，单卡最高提速 5.3 倍。</div>
+    <div class="comment"><b>编辑解读：</b>「决策模型」正从通用大模型的影子中独立成赛道——企业高频、低风险容忍的判断任务需要专用架构与推理引擎，这是 2026 年 To B 模型市场最值得关注的细分切口。</div>
+    <div class="tags"><span class="tag">决策模型</span><span class="tag">蚂蚁</span><span class="tag">To B</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🏛</span>行业与治理</div>
+
+  <div class="card">
+    <div class="source">AI 热点聚合 / IT之家</div>
+    <div class="title"><a href="https://www.ithome.com/1/016/811.htm">美国大型银行限制第三方 AI 代理访问账户；Anthropic 将 Agent Skills 标准捐给社区</a></div>
+    <div class="summary">美国多家大型银行着手修改服务条款，限制第三方 AI 代理访问客户账户；同日 Anthropic 宣布将 Agent Skills 开放标准捐赠给社区，转为社区共治。金融场景对 Agent 的授权与可审计性要求显著抬升。</div>
+    <div class="comment"><b>编辑解读：</b>一边是金融机构收紧 Agent 的账户权限，一边是大厂把 Agent 标准交给社区——Agent 治理正式进入「授权 + 审计 + 标准」三件套时代，合规能力将成为 Agent 产品的核心竞争力。</div>
+    <div class="tags"><span class="tag">Agent治理</span><span class="tag">金融</span><span class="tag">标准</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">IT之家（AI 热点聚合收录）</div>
+    <div class="title"><a href="https://www.ithome.com/1/017/113.htm">国务院办公厅：增强 AI 就业正面效应，减缓就业替代影响</a></div>
+    <div class="summary">国务院办公厅发文提出，积极增强人工智能创造就业机会等正面效应，有效减缓人工智能应用的就业替代影响，将 AI 与就业的关系纳入政策统筹视野。</div>
+    <div class="comment"><b>编辑解读：</b>从「发展 AI」到「管理 AI 的就业冲击」，政策叙事的转向意味着 AI 落地的社会成本已被正式计价，职业培训与人机协作岗位设计会迎来一轮政策红利。</div>
+    <div class="tags"><span class="tag">政策</span><span class="tag">就业</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">InfoQ</div>
+    <div class="title"><a href="https://www.infoq.cn/article/UmD4aAerZEts8sZ5t791">刘铁岩、诺奖与图灵奖得主共话 AI 下一个十年：Transformer 之后，下一张王牌是什么？</a></div>
+    <div class="summary">多位顶级学者与产业科学家同台讨论 AI 的下一个十年：Transformer 一统天下之后，世界模型、神经符号融合与 AI for Science 被视为最有潜力的下一跳方向。</div>
+    <div class="comment"><b>编辑解读：</b>「后 Transformer」话题从学术圈内部讨论变成大会主议题，说明行业已在为下代架构储备叙事——对研究者和创业者而言，现在是布局非 Transformer 路线的窗口期。</div>
+    <div class="tags"><span class="tag">前沿讨论</span><span class="tag">架构</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠</span>工具与开发</div>
+
+  <div class="card">
+    <div class="source">InfoQ</div>
+    <div class="title"><a href="https://www.infoq.cn/article/Q6mgHWCSqV6KeZzee3NT">PostgreSQL 19 发不出来？AI「找茬」太快，人类修 Bug 的速度跟不上了</a></div>
+    <div class="summary">AI 辅助的漏洞挖掘让 PostgreSQL 这类成熟开源项目的缺陷暴露速度远超维护者的修复节奏，版本发布被迫延后，凸显「AI 找漏洞 vs 人类修漏洞」的产能失衡。</div>
+    <div class="comment"><b>编辑解读：</b>这是 AI 改变软件工程的另一面：发现问题的能力被 AI 放大一个量级后，「审阅与修复」成为新瓶颈，维护者工具链和治理流程急需同步升级。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">软件工程</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">InfoQ</div>
+    <div class="title"><a href="https://www.infoq.cn/article/rVqEbaXeaJ91UWlQF4F9">AI 赋能开发，Spotify 月代码变更量翻倍</a></div>
+    <div class="summary">Spotify 披露其 AI 辅助开发实践成效：月代码变更量实现翻倍，工程团队在不扩充编制的情况下显著提升了交付吞吐。</div>
+    <div class="comment"><b>编辑解读：</b>头部工程组织的实测数据开始兑现「AI 提效」的承诺，但变更量翻倍只是上半场——质量门禁与技术债管理能否跟上，才决定这是红利还是透支。</div>
+    <div class="tags"><span class="tag">AI编程</span><span class="tag">工程效率</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">少数派</div>
+    <div class="title"><a href="https://sspai.com/post/116128">在硅谷，遇见个人计算机历史</a></div>
+    <div class="summary">一篇硅谷计算机历史博物馆的走访长文：从大型机到个人计算机的展品脉络中，回望计算普惠化的历史，为理解今天的 AI 浪潮提供历史坐标。</div>
+    <div class="comment"><b>编辑解读：</b>在 AI 新闻高密度轰炸的当下，这篇「慢内容」值得一读——个人计算机的普惠史，正是判断 AI 将如何嵌入日常的最好参照系。</div>
+    <div class="tags"><span class="tag">深度阅读</span><span class="tag">计算史</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>昨日中文 AI 媒体的主题只有一个词：「换代」。模型侧，月之暗面 3 万亿参数的 Kimi K3.1 Pro 承诺 11 月初开源，DeepSeek、MiniMax、Google 同日推新，开源与低价双管齐下，闭源高价订阅的护城河正在被抽干；产业侧，DeepSeek 千亿融资收官在即、联手宁德时代建 1GW 智算中心，模型竞赛已升级为算力与能源的垂直整合；治理侧，美国大行限制 AI 代理访问账户、Anthropic 捐出 Agent Skills 标准、国务院首次把「AI 就业影响」写进政策，规则开始追赶技术。给读者的观察建议：盯住 11 月 4 日 Kimi K3.1 权重是否如约放出——那将是检验「3 万亿开源」成色的第一个硬节点。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 生成于 2026-10-25</p>
+</div>
+
+</div>
+</body>
+</html>

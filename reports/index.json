@@ -1,6 +1,6 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-10-24T00:05:38.902365+00:00",
+  "generated_at": "2026-10-24T17:05:58.060029+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
@@ -520,8 +520,14 @@
     },
     "media": {
       "title": "AI 科技日报",
-      "count": 85,
+      "count": 86,
       "items": [
+        {
+          "date": "2026-10-25",
+          "url": "https://webdrag0n.github.io/reports/media/daily_media_20261025.html",
+          "overview": "昨日中文 AI 媒体被两件事刷屏：一是月之暗面发布 3 万亿参数旗舰 Kimi K3.1 Pro，宣布 11 月 4 日前开源权重，以约 1/5 的价格对标 Astra，国产开源模型天花板再度抬升；二是字节 Seedance 2.5 4K 正式发布，AI 视频生成进入「可商用画质」阶段。产业侧同样热闹：DeepSeek 千亿融资逼近收官、传联手宁德时代在内蒙古投建 1GW 国产智算中心；美国大型银行开始限制第三方 AI 代理访问账户，Anthropic 把 Agent Skills 标准捐给社区；国务院发文强调增强 AI 就业的正面效应。Agent 治理与算力基建，正成为模型发布之外的两条新主线。",
+          "digest": "昨日中文 AI 媒体的主题只有一个词：「换代」。模型侧，月之暗面 3 万亿参数的 Kimi K3.1 Pro 承诺 11 月初开源，DeepSeek、MiniMax、Google 同日推新，开源与低价双管齐下，闭源高价订阅的护城河正在被抽干；产业侧，DeepSeek 千亿融资收官在即、联手宁德时代建 1GW 智算中心，模型竞赛已升级为算力与能源的垂直整合；治理侧，美国大行限制 AI 代理访问账户、Anthropic 捐出 Agent Skills 标准、国务院首次把「AI 就业影响」写进政策，规则开始追赶技术。给读者的观察建议：盯住 11 月 4 日 Kimi K3.1 权重是否如约放出——那将是检验「3 万亿开源」成色的第一个硬节点。"
+        },
         {
           "date": "2026-10-24",
           "url": "https://webdrag0n.github.io/reports/media/daily_media_20261024.html",
