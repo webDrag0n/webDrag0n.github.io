@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 23 Oct 2026 17:09:51 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 00:05:38 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-10-24</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261024.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261024.html</guid>
+      <pubDate>Sat, 24 Oct 2026 08:00:00 +0000</pubDate>
+      <description>本周机器人圈迎来&quot;量产与延期齐飞&quot;的关键节点：特斯拉一边宣布 Optimus 在弗里蒙特启动生产，一边把对外交付推到 2027 年底并坦言灵巧手仍是难题；英伟达在 GTC 柏林连发 Isaac Lab 3.0、开源 Isaac OS 与参考人形机器人，Agility 随即宣布 Digit 5 独家绑定 IGX Thor——算力平台卡位战正式打响。DeepMind 用 Gemini 4 Argon 实现&quot;看视频教 Apollo 新技能&quot;，宇树则亮出能自己读论文写代码的&quot;预演&quot;系统，具身智能的&quot;自我进化&quot;叙事全面升温。学术侧，VLA 运行时监控、触觉开源生态、Softmax 数值 bug 修复等&quot;</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-10-24</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261024.html</link>

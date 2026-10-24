@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-23T17:09:51.836419+00:00",
+  "generated_at": "2026-10-24T00:05:38.906974+00:00",
   "papers": {
-    "date": "2026-10-22",
-    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261022.html",
-    "overview": "今天具身智能赛道格外热闹：英伟达在 GTC 柏林发布 Isaac 全家桶（参考人形机器人 Agile ONE SN、Isaac Lab 3.0、Halos 安全平台），舍弗勒太仓人形机器人灯塔工厂正式开业；智元定档今天 AI WAVE 连发七项成果，下月还要直播 6 台 G2 在便利店连轴转 24 小时。学术侧，HuggingFace 日榜被「Joints, Camera, Action!」（视频+3D 动作联合生成）以 21 票领跑，Agent 训练方向 Self-Credit、HarnessAdapt-RL、Cache Engineering 三连发；开源侧 Cloudflare 的 coding-agent 安全审计 skill 单日狂揽 2000+ star，vLLM、ComfyUI 持续高热。",
-    "digest": "今天最值得记住的画面，是舍弗勒太仓工厂里六台人形机器人在装配——机器人关节。产业开始自举：造机器人的产线雇机器人，英伟达则趁机把 Isaac 全家桶打包成「机器人界的 CUDA」，从参考硬件到仿真到安全认证一站式锁生态。学术圈遥相呼应：UniWALM 把世界模型、动作和语言塞进同一个表征，Self-Credit 和 HarnessAdapt-RL 则回答 Agent 时代两个真问题——长程奖励怎么记账、脚手架能不能一起训练。值得注意的是「上下文经济学」悄然升温：Cache Engineering 论文与 headroom 压缩工具同日走红，说明 Agent 的成本瓶颈正从算力转向显存与 token。最后泼一点冷水：宇树 388 倍市盈率、公司自己发公告提示估值风险——技术曲线很陡，但商业兑现仍是慢变量。看热闹之余，建议重点读 Task Composition 那篇：每个任务单独都会、组合起来就翻车，这对所有 Agent 应用都是一记警钟。"
+    "date": "2026-10-24",
+    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261024.html",
+    "overview": "本周机器人圈迎来\"量产与延期齐飞\"的关键节点：特斯拉一边宣布 Optimus 在弗里蒙特启动生产，一边把对外交付推到 2027 年底并坦言灵巧手仍是难题；英伟达在 GTC 柏林连发 Isaac Lab 3.0、开源 Isaac OS 与参考人形机器人，Agility 随即宣布 Digit 5 独家绑定 IGX Thor——算力平台卡位战正式打响。DeepMind 用 Gemini 4 Argon 实现\"看视频教 Apollo 新技能\"，宇树则亮出能自己读论文写代码的\"预演\"系统，具身智能的\"自我进化\"叙事全面升温。学术侧，VLA 运行时监控、触觉开源生态、Softmax 数值 bug 修复等\"接地气\"工作密集出现；开源社区 Agent Skills 类 awesome 列表继续井喷。",
+    "digest": "今天的信号相当清晰：具身智能正从\"演示视频竞赛\"切换到\"量产、平台、生态\"三线作战。特斯拉的双轨叙事（量产启动 + 交付延期）暴露了灵巧手这个全行业瓶颈，而 OpenTac 这类开源触觉生态恰好踩在了痛点上——硬件短板可能要靠开放协作而非单打独斗来补。英伟达的 Isaac 全家桶 + Agility 的独家算力绑定，预示着机器人领域正在复刻深度学习时代的\"CUDA 锁定\"剧本，整机厂需要警惕基础设施层的议价权流失。研究侧最值得玩味的是\"自我进化\"主题的同周共振：DeepMind 的视频到技能迁移、宇树的预演系统、HF 日榜的递归自我改进论文，三条线索指向同一个判断——物理 AI 的 GPT 时刻赌注，本质是数据闭环与学习闭环谁先跑通。对从业者而言，VLA 运行时监控（P²）和 EpiSEM-Bench 提醒了一个容易被忽视的事实：当 Agent 开始动手动脚，可观测性就是安全性的同义词。"
   },
   "media": {
     "date": "2026-10-24",

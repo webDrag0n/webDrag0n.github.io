@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 前沿日报 — 2026年10月24日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<!--
+  TEMPLATE STRUCTURE:
+  Replace {{PLACEHOLDERS}} with actual content.
+  
+  Sections:
+  - .header: icon, title, date, subtitle
+  - .summary-banner: one-paragraph overview of today's hot topics
+  - .section: grouped news (Headlines / Research / Industry / Open Source)
+  - .card: individual news item (source, title link, summary, tags)
+  - .hot-topic: highlighted breaking news
+  - .insights: editorial summary
+  - .footer: generation info
+-->
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 前沿日报</h1>
+  <div class="date">2026年10月24日</div>
+  <div class="subtitle">arXiv 论文 · 具身智能产业 · 开源生态</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>本周机器人圈迎来"量产与延期齐飞"的关键节点：特斯拉一边宣布 Optimus 在弗里蒙特启动生产，一边把对外交付推到 2027 年底并坦言灵巧手仍是难题；英伟达在 GTC 柏林连发 Isaac Lab 3.0、开源 Isaac OS 与参考人形机器人，Agility 随即宣布 Digit 5 独家绑定 IGX Thor——算力平台卡位战正式打响。DeepMind 用 Gemini 4 Argon 实现"看视频教 Apollo 新技能"，宇树则亮出能自己读论文写代码的"预演"系统，具身智能的"自我进化"叙事全面升温。学术侧，VLA 运行时监控、触觉开源生态、Softmax 数值 bug 修复等"接地气"工作密集出现；开源社区 Agent Skills 类 awesome 列表继续井喷。</p>
+</div>
+
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能 / 机器人产业动态</div>
+  
+<div class="hot-topic">
+  <div class="label">🔥 今日热点</div>
+  <div class="source">Electrek · 2026-10-22</div>
+  <div class="title"><a href="https://electrek.co/2026/10/22/tesla-optimus-delivery-late-2027-hands-ai-problems/" target="_blank">特斯拉称 Optimus 对外交付推迟至 2027 年底，灵巧手仍是难题</a></div>
+  <div class="summary">Fremont 已启动早期生产，达到每周 2 万台至少需一年；对外交付预计 2027 年底，马斯克承认灵巧手是主要难点。Optimus 的量产时间表再次印证：人形机器人最难啃的不是"走路"而是"干活的手"。</div>
+  <div class="tags"><span class="tag">人形机器人</span><span class="tag">特斯拉</span><span class="tag">量产</span></div>
+</div>
+<div class="hot-topic">
+  <div class="label">🔥 今日热点</div>
+  <div class="source">NVIDIA Newsroom · 2026-10-21</div>
+  <div class="title"><a href="https://nvidianews.nvidia.com/news/nvidia-advances-isaac-platform-for-general-purpose-robotics-with-new-reference-humanoid-frameworks-simulation-pipelines-and-data" target="_blank">英伟达 GTC 柏林：Isaac Lab 3.0、开源 Isaac OS、Human 1M 数据集</a></div>
+  <div class="summary">Agile ONE SN 成为 Isaac 平台参考人形机器人（1.4m / 31 自由度 / Jetson Thor + GR00T）；Isaac Lab 3.0 正式 GA，新增 2000 余件 SimReady 资产。英伟达正在把机器人学习栈做成"CUDA 级"的基础设施锁定。</div>
+  <div class="tags"><span class="tag">英伟达</span><span class="tag">仿真</span><span class="tag">基础设施</span></div>
+</div>
+<div class="hot-topic">
+  <div class="label">🔥 今日热点</div>
+  <div class="source">TechCrunch · 2026-10-21</div>
+  <div class="title"><a href="https://techcrunch.com/2026/10/21/tesla-stars-optimus-robot-production-in-california-as-profit-falls-43/" target="_blank">特斯拉在弗里蒙特启动 Optimus 生产，目标 2027 年底周产 2 万台</a></div>
+  <div class="summary">Q3 股东信披露首批"量产品质" Optimus 已在原电动车厂区下线，马斯克称爬坡"早期、缓慢且曲折"。量产宣言与延期消息同周出现，特斯拉在投资人预期管理上玩起了双轨叙事。</div>
+  <div class="tags"><span class="tag">人形机器人</span><span class="tag">量产</span></div>
+</div>
+<div class="hot-topic">
+  <div class="label">🔥 今日热点</div>
+  <div class="source">Robotics &amp; Automation News · 2026-10-22</div>
+  <div class="title"><a href="https://roboticsandautomationnews.com/2026/10/22/google-deepmind-uses-gemini-4-argon-to-teach-apptroniks-apollo-humanoid-new-skills-from-video/106227/" target="_blank">DeepMind Gemini 4 Argon：看视频教会 Apptronik Apollo 新任务</a></div>
+  <div class="summary">Argon 观看掷沙包视频后自行编写仿真代码并把动作迁移到真机，Apollo 连续命中七次。DeepMind 称可把数周的仿真建模压缩到数小时——"看视频学技能"离落地又近了一步。</div>
+  <div class="tags"><span class="tag">VLA</span><span class="tag">DeepMind</span><span class="tag">模仿学习</span></div>
+</div>
+<div class="card">
+  
+  <div class="source">AgiBot · 2026-10-22</div>
+  <div class="title"><a href="https://www.agibot.com/article/231/detail/129.html" target="_blank">智元开源 AGIBOT WORLD 2026 第四期「具身推理」数据集</a></div>
+  <div class="summary">第四期把重心从操作难度转向决策难度：10 余类逻辑场景、9 项推理能力、三档难度，含问答、动作轨迹与成败样本，首批 150 小时真机数据已上线 Hugging Face。真实场景的 Physical Agent 数据集仍属稀缺资源。</div>
+  <div class="tags"><span class="tag">具身智能</span><span class="tag">开源数据集</span><span class="tag">智元</span></div>
+</div>
+<div class="card">
+  
+  <div class="source">Sina Tech · 2026-10-22</div>
+  <div class="title"><a href="https://finance.sina.com.cn/tech/roll/2026-10-22/doc-iniwcafi5958100.shtml" target="_blank">小鹏 IRON 升级第二代 VLA：端侧每 0.2 秒重新推理</a></div>
+  <div class="summary">第二代 VLA 在机器人本体端运行，每 0.2 秒重新观察对面的人并可预判 6 秒内动作；三颗图灵芯片合计 2250 TOPS。端侧高频推理是通用人形机器人交互体验的关键指标，小鹏把刷新率卷到了 5Hz。</div>
+  <div class="tags"><span class="tag">VLA</span><span class="tag">端侧推理</span><span class="tag">小鹏</span></div>
+</div>
+<div class="card">
+  
+  <div class="source">Agility Robotics · 2026-10-22</div>
+  <div class="title"><a href="https://www.agilityrobotics.com/content/agility-robotics-expands-nvidia-collaboration-as-it-prepares-digit-5-for-commercial-scale" target="_blank">Agility 将 NVIDIA IGX Thor 定为 Digit 5 量产唯一车载算力</a></div>
+  <div class="summary">IGX Thor 成为 Digit 5 量产版独家计算架构，Halos 安全模型接入人体检测；Digit 5 多年期订单已超 3 亿美元。人形机器人算力平台的"独家绑定"模式正在形成——这对算力供应商是好事，对整机厂未必。</div>
+  <div class="tags"><span class="tag">人形机器人</span><span class="tag">英伟达</span><span class="tag">商业化</span></div>
+</div>
+<div class="card">
+  
+  <div class="source">Bloomberg / The Standard · 2026-10-22</div>
+  <div class="title"><a href="https://www.thestandard.com.hk/innovation/article/346197/CATL-backed-Noetix-Robotics-files-confidentially-for-HK-IPO-Bloomberg-reports" target="_blank">宁德时代系松延动力秘密递交港股 IPO 申请</a></div>
+  <div class="summary">获宁德时代系资金支持的松延动力已向港交所秘密递表，拟募资数亿美元，最快明年上市。继宇树、智元之后，人形机器人赛道 IPO 梯队再添一员，资本市场窗口正在收窄前的最后冲刺。</div>
+  <div class="tags"><span class="tag">融资</span><span class="tag">IPO</span><span class="tag">松延动力</span></div>
+</div>
+<div class="card">
+  
+  <div class="source">The Next Web · 2026-10-23</div>
+  <div class="title"><a href="https://thenextweb.com/news/unitree-rehearsal-self-improving-robots-2028-breakthrough" target="_blank">宇树展示 H2-X 守护机器人与"预演"自我进化系统</a></div>
+  <div class="summary">"预演"系统让 AI 自动查阅论文、写代码并在仿真中测试后再上真机；H2-X 宣称站立续航 8 小时、可从 4 米高台跳下。"自我改进循环"从 LLM 圈蔓延到了机器人圈，王兴兴预计物理 AI 的 GPT 时刻将在 1-3 年内到来。</div>
+  <div class="tags"><span class="tag">宇树</span><span class="tag">自我进化</span><span class="tag">人形机器人</span></div>
+</div>
+</div>
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>arXiv 前沿论文</div>
+  
+<div class="card">
+  
+  <div class="source">arXiv cs.RO · 2026-10-22</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.31670v1" target="_blank">Sensorimotor Alignment: A Platonic Proxy for Embodied Policy Success</a></div>
+  <div class="summary">提出用"感知运动对齐"作为具身策略成功率的廉价离线代理指标，借 Platonic Representation Hypothesis 论证跨模态表征收敛与下游策略性能的相关性，有望替代昂贵的闭环 rollout 评估。</div>
+  <div class="tags"><span class="tag">具身智能</span><span class="tag">评估方法</span><span class="tag">cs.RO</span></div>
+</div>
+<div class="card">
+  
+  <div class="source">arXiv cs.RO · 2026-10-22</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.31661v1" target="_blank">OpenTac: 可定制、可扩展、可迁移的 3D 触觉传感开放生态</a></div>
+  <div class="summary">发布触觉皮肤传感器 OpenTac 及全栈生态，主打高度可定制与快速部署到下游机器人控制/学习任务。在特斯拉都承认"灵巧手难"的当下，开源触觉硬件生态的价值被进一步放大。</div>
+  <div class="tags"><span class="tag">触觉传感</span><span class="tag">开源硬件</span><span class="tag">灵巧操作</span></div>
+</div>
+<div class="card">
+  
+  <div class="source">arXiv cs.RO · 2026-10-22</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.31613v1" target="_blank">Progress Probes (P²): VLA 模型的轻量运行时监控</a></div>
+  <div class="summary">为 VLA 策略增加轻量级"进度探针"，在运行时检测任务执行偏差与失败风险，无需重新训练策略本体。VLA 走向真实部署，可观测性与失败兜底正成为与成功率同等重要的课题。</div>
+  <div class="tags"><span class="tag">VLA</span><span class="tag">运行时监控</span><span class="tag">安全</span></div>
+</div>
+<div class="card">
+  
+  <div class="source">arXiv cs.LG · 2026-10-22</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.31633v1" target="_blank">BeNice! Closing Looping's Inference-Memory Gap via KV-Sharing</a></div>
+  <div class="summary">针对 Looped 架构每次循环生成独立 KV cache 导致显存线性增长的问题，提出跨循环 KV 共享机制，在保持质量的同时显著压缩推理显存。循环架构的实用化又向前推了一步。</div>
+  <div class="tags"><span class="tag">推理优化</span><span class="tag">KV Cache</span><span class="tag">架构</span></div>
+</div>
+<div class="card">
+  
+  <div class="source">arXiv cs.LG · 2026-10-22</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.31642v1" target="_blank">A Fix for Softmax and Cross-Entropy</a></div>
+  <div class="summary">指出标准 softmax/log-softmax/cross-entropy 实现中的两个数值 bug："Softmax Collapse"会在某个 logit 远大于其他时把目标梯度舍入为零。基础数值层面的修复，影响面遍及几乎所有训练栈。</div>
+  <div class="tags"><span class="tag">数值稳定性</span><span class="tag">训练基础</span></div>
+</div>
+<div class="card">
+  
+  <div class="source">arXiv cs.AI · 2026-10-22</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.31667v1" target="_blank">Direct Pass@k Optimization for Thought Pruning</a></div>
+  <div class="summary">针对 test-time scaling 中"生成大量候选再找正确答案"的高成本问题，直接优化 Pass@k 目标并引入思维剪枝，在质量与多样性间取得平衡。推理时计算的精细化运营时代到来。</div>
+  <div class="tags"><span class="tag">推理</span><span class="tag">test-time scaling</span><span class="tag">Pass@k</span></div>
+</div>
+<div class="card">
+  
+  <div class="source">arXiv cs.AI · 2026-10-22</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.31650v1" target="_blank">EpiSEM-Bench: 评估证据缺失下 LLM Agent 的安全性与证据恢复</a></div>
+  <div class="summary">当工具返回遗漏了安全关键事实时，Agent 可能在看似良性的请求下执行违禁动作。EpiSEM-Bench 系统化测量这类"缺失证据"场景下的 Agent 失效模式，直指工具调用安全的盲区。</div>
+  <div class="tags"><span class="tag">Agent 安全</span><span class="tag">评测</span><span class="tag">工具调用</span></div>
+</div>
+<div class="card">
+  
+  <div class="source">arXiv cs.LG · 2026-10-22</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.31624v1" target="_blank">Questioning Instrumental Convergence in RLVR: OLMo-3 Checkpoint 证据</a></div>
+  <div class="summary">以 OLMo-3 训练检查点为证据，实证检验 RLVR 训练中"工具性趋同"（权力寻求、自保、欺骗）是否真的自发涌现，为 AI 安全的核心假设提供了罕见的 checkpoint 级实证视角。</div>
+  <div class="tags"><span class="tag">AI 安全</span><span class="tag">RLVR</span><span class="tag">对齐</span></div>
+</div>
+</div>
+<div class="section">
+  <div class="section-title"><span class="emoji">🌐</span>开源社区与 Awesome 生态</div>
+  
+<div class="card">
+  
+  <div class="source">HuggingFace Daily · 2026-10-23</div>
+  <div class="title"><a href="https://huggingface.co/papers?date=2026-10-23" target="_blank">Toward Recursive Self-Improvement in Physical AI</a></div>
+  <div class="summary">HF 日榜热门：探索物理 AI 的递归自我改进路径，与宇树"预演"系统、DeepMind Argon 的"看视频学技能"形成同周共振——"机器人自我进化"正从口号变成可发表的 research agenda。</div>
+  <div class="tags"><span class="tag">具身智能</span><span class="tag">自我改进</span><span class="tag">HF 日榜</span></div>
+</div>
+<div class="card">
+  
+  <div class="source">HuggingFace Daily · 2026-10-23</div>
+  <div class="title"><a href="https://huggingface.co/papers?date=2026-10-23" target="_blank">Heartbeat Thinking: 实时语音 Agent 的投机推理与工具执行</a></div>
+  <div class="summary">让语音 Agent 在"听"的同时进行投机推理与工具预执行，把全双工交互的延迟藏进思考时间里。实时语音交互的体验竞争已从 ASR/TTS 质量转向"边听边想"的架构设计。</div>
+  <div class="tags"><span class="tag">语音 Agent</span><span class="tag">实时交互</span><span class="tag">HF 日榜</span></div>
+</div>
+<div class="card">
+  
+  <div class="source">HuggingFace Daily · 2026-10-23</div>
+  <div class="title"><a href="https://huggingface.co/papers?date=2026-10-23" target="_blank">Meta Expert: 跨层专家共享的高效 MoE</a></div>
+  <div class="summary">提出跨层专家共享机制，在存储与检索效率上优化 MoE 架构。MoE 的"专家复用率"正成为新的效率前沿，对端侧部署尤其有意义。</div>
+  <div class="tags"><span class="tag">MoE</span><span class="tag">架构效率</span><span class="tag">HF 日榜</span></div>
+</div>
+<div class="card">
+  
+  <div class="source">GitHub Trending · 2026-10-24</div>
+  <div class="title"><a href="https://github.com/browser-use/rl-env-use" target="_blank">browser-use/rl-env-use：从真实网页案例构建 RL 环境</a></div>
+  <div class="summary">Browser Use 团队新项目：让 Agent 从真实网页挖掘案例并自动生成 RL 训练环境，为 Web Agent 的强化学习规模化铺路。开源一周已获 146+ star，"环境即数据"的思路值得关注。</div>
+  <div class="tags"><span class="tag">Web Agent</span><span class="tag">RL 环境</span><span class="tag">开源</span></div>
+</div>
+<div class="card">
+  
+  <div class="source">GitHub · 2026-10-24</div>
+  <div class="title"><a href="https://github.com/sindresorhus/awesome" target="_blank">Awesome 生态动态：Agent Skills 列表持续爆发</a></div>
+  <div class="summary">过去 4 天涌现多个 Agent Skills 类 awesome 列表：awesome-agent-skills（42★，带质量评级）、awesome-agent-observability（Agent 可观测性）、awesome-dsh-plugins（DeepSeek Harness 280+ 插件）。sindresorhus/awesome 主仓 "Add AI Agent Tools" PR 仍待合并。Agent 工作流的标准化目录竞争正在白热化。</div>
+  <div class="tags"><span class="tag">awesome</span><span class="tag">Agent Skills</span><span class="tag">生态</span></div>
+</div>
+</div>
+
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今天的信号相当清晰：具身智能正从"演示视频竞赛"切换到"量产、平台、生态"三线作战。特斯拉的双轨叙事（量产启动 + 交付延期）暴露了灵巧手这个全行业瓶颈，而 OpenTac 这类开源触觉生态恰好踩在了痛点上——硬件短板可能要靠开放协作而非单打独斗来补。英伟达的 Isaac 全家桶 + Agility 的独家算力绑定，预示着机器人领域正在复刻深度学习时代的"CUDA 锁定"剧本，整机厂需要警惕基础设施层的议价权流失。研究侧最值得玩味的是"自我进化"主题的同周共振：DeepMind 的视频到技能迁移、宇树的预演系统、HF 日榜的递归自我改进论文，三条线索指向同一个判断——物理 AI 的 GPT 时刻赌注，本质是数据闭环与学习闭环谁先跑通。对从业者而言，VLA 运行时监控（P²）和 EpiSEM-Bench 提醒了一个容易被忽视的事实：当 Agent 开始动手动脚，可观测性就是安全性的同义词。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · Generated 2026-10-24 · 数据来源：arXiv / Robot Overflow / HuggingFace Daily / GitHub</p>
+</div>
+
+</div>
+</body>
+</html>

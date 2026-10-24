@@ -1,11 +1,17 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-10-23T17:09:51.834917+00:00",
+  "generated_at": "2026-10-24T00:05:38.902365+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
-      "count": 84,
+      "count": 85,
       "items": [
+        {
+          "date": "2026-10-24",
+          "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261024.html",
+          "overview": "本周机器人圈迎来\"量产与延期齐飞\"的关键节点：特斯拉一边宣布 Optimus 在弗里蒙特启动生产，一边把对外交付推到 2027 年底并坦言灵巧手仍是难题；英伟达在 GTC 柏林连发 Isaac Lab 3.0、开源 Isaac OS 与参考人形机器人，Agility 随即宣布 Digit 5 独家绑定 IGX Thor——算力平台卡位战正式打响。DeepMind 用 Gemini 4 Argon 实现\"看视频教 Apollo 新技能\"，宇树则亮出能自己读论文写代码的\"预演\"系统，具身智能的\"自我进化\"叙事全面升温。学术侧，VLA 运行时监控、触觉开源生态、Softmax 数值 bug 修复等\"接地气\"工作密集出现；开源社区 Agent Skills 类 awesome 列表继续井喷。",
+          "digest": "今天的信号相当清晰：具身智能正从\"演示视频竞赛\"切换到\"量产、平台、生态\"三线作战。特斯拉的双轨叙事（量产启动 + 交付延期）暴露了灵巧手这个全行业瓶颈，而 OpenTac 这类开源触觉生态恰好踩在了痛点上——硬件短板可能要靠开放协作而非单打独斗来补。英伟达的 Isaac 全家桶 + Agility 的独家算力绑定，预示着机器人领域正在复刻深度学习时代的\"CUDA 锁定\"剧本，整机厂需要警惕基础设施层的议价权流失。研究侧最值得玩味的是\"自我进化\"主题的同周共振：DeepMind 的视频到技能迁移、宇树的预演系统、HF 日榜的递归自我改进论文，三条线索指向同一个判断——物理 AI 的 GPT 时刻赌注，本质是数据闭环与学习闭环谁先跑通。对从业者而言，VLA 运行时监控（P²）和 EpiSEM-Bench 提醒了一个容易被忽视的事实：当 Agent 开始动手动脚，可观测性就是安全性的同义词。"
+        },
         {
           "date": "2026-10-22",
           "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261022.html",
