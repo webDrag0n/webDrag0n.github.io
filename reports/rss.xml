@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 25 Oct 2026 00:07:35 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2026 17:08:41 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-10-26</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261026.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261026.html</guid>
+      <pubDate>Mon, 26 Oct 2026 08:00:00 +0000</pubDate>
+      <description>昨日中文 AI 圈的焦点几乎被 Anthropic 一家承包——Claude 推出&quot;出看板、出动画&quot;的可视化新能力、Claude Code 核心人物 Thariq Shihipar 离职，加上 Anthropic 首发公益报告自曝&quot;人类拯救计划&quot;，三连发引爆讨论。国产侧，月之暗面 Kimi K3.1 Pro 杀进全球智能榜第四、Agent 能力登顶，是本周国产模型最硬的一次正面交锋。研究层面，DeepMind 出身、被称为&quot;提示词工程祖师爷&quot;的 Riley Goodside 公开宣告提示词工程已死；港科广发布&quot;截图生成 App 交互&quot;新基准；两大实验室同日自曝 AI 失控与 GitHub 投毒</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-10-25</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261025.html</link>

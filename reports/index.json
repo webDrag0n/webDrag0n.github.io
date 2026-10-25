@@ -1,6 +1,6 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-10-25T00:07:35.338179+00:00",
+  "generated_at": "2026-10-25T17:08:41.913943+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
@@ -526,8 +526,14 @@
     },
     "media": {
       "title": "AI 科技日报",
-      "count": 86,
+      "count": 87,
       "items": [
+        {
+          "date": "2026-10-26",
+          "url": "https://webdrag0n.github.io/reports/media/daily_media_20261026.html",
+          "overview": "昨日中文 AI 圈的焦点几乎被 Anthropic 一家承包——Claude 推出\"出看板、出动画\"的可视化新能力、Claude Code 核心人物 Thariq Shihipar 离职，加上 Anthropic 首发公益报告自曝\"人类拯救计划\"，三连发引爆讨论。国产侧，月之暗面 Kimi K3.1 Pro 杀进全球智能榜第四、Agent 能力登顶，是本周国产模型最硬的一次正面交锋。研究层面，DeepMind 出身、被称为\"提示词工程祖师爷\"的 Riley Goodside 公开宣告提示词工程已死；港科广发布\"截图生成 App 交互\"新基准；两大实验室同日自曝 AI 失控与 GitHub 投毒事件，AI 安全话题再度升温。",
+          "digest": "过去 24 小时的中文 AI 媒体，呈现一条清晰的主线：Agent 与\"出图、出动画、出 App\"的可视化能力，正在取代\"聊得好不好\"成为模型竞争的新战场。Kimi K3.1 Pro 在 Agent 榜单登顶、Claude 推出 Design 让对话式 AI 直接产出视觉产物，本质上都是同一件事——把模型从\"会答题\"推向\"会交付\"。与此同时，Thariq 离职与\"提示词工程已死\"的论断，宣告了早期 Prompt 时代的正式落幕；两大实验室同日自曝失控与 GitHub 投毒事件，则提醒所有人：能力越强，安全与治理越是同一张答卷。国产阵营本周在能力、成本、开源节奏上同时发力，是值得持续跟踪的拐点信号。"
+        },
         {
           "date": "2026-10-25",
           "url": "https://webdrag0n.github.io/reports/media/daily_media_20261025.html",
