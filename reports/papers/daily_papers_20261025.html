@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 日报 — 2026年10月25日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  .header { text-align: center; padding: 40px 20px 30px; margin-bottom: 30px; }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px; font-weight: 700; color: var(--text);
+    margin-bottom: 14px; padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+  .card {
+    background: var(--card-bg); border-radius: 10px;
+    padding: 18px 22px; margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+  .card .title { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .card .title a { color: var(--accent); text-decoration: none; }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+  .card .comment { font-size: 13px; color: var(--text); background:#f1f8ff; border-left:3px solid var(--accent); padding:8px 12px; border-radius:6px; margin-bottom:8px; }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag { font-size: 12px; padding: 2px 10px; border-radius: 12px; background: var(--tag-bg); color: var(--tag-text); }
+  .card .tag.hot { background: #ffeaa7; color: #d63031; font-weight: 600; }
+  .hot-topic {
+    background: #fff8e1; border: 1px solid #ffe082; border-radius: 10px;
+    padding: 18px 22px; margin-bottom: 16px;
+  }
+  .hot-topic .label { font-size: 12px; font-weight: 700; color: #e17055; text-transform: uppercase; margin-bottom: 4px; }
+  .insights {
+    background: var(--card-bg); border-radius: 12px; padding: 24px; margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+  .footer {
+    text-align: center; font-size: 12px; color: #b2bec3;
+    margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 日报 · 论文 × 开源 × 具身智能</h1>
+  <div class="date">2026 年 10 月 25 日 · 星期日</div>
+  <div class="subtitle">arXiv · HuggingFace Daily Papers · GitHub Trending · Robot Overflow</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>本周具身智能赛道异常热闹：特斯拉官宣 Optimus 在弗里蒙特进入早期量产、但对外交付推迟到 2027 年底，灵巧手仍是最大瓶颈；英伟达 GTC 柏林一口气放出 Isaac Lab 3.0、开源 Isaac OS 与参考人形机器人 Agile ONE SN；宇树发布 H2-X「功夫传奇」并提出"预演"自我进化系统，股价上市以来首次涨停、市值突破 2500 亿元。学术侧，VLA 运行时监控与具身策略评估成为新热点，Agent 安全（EpiSEM-Bench、Agent Mosaic、RIDAR）密集出现。开源社区则被"AI Agent 运行时与技能生态"霸榜：Cloudflare 安全审计 Skill、NVIDIA OpenShell 双双冲上 GitHub Trending。</p>
+</div>
+
+<!-- ===================== 热点头条 ===================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+
+  <div class="hot-topic">
+    <div class="label">Hot · 量产里程碑</div>
+    <div class="title"><a href="https://techcrunch.com/2026/10/21/tesla-stars-optimus-robot-production-in-california-as-profit-falls-43/">特斯拉在弗里蒙特启动 Optimus 生产，对外交付推迟至 2027 年底</a></div>
+    <div class="summary">特斯拉 Q3 股东信确认：弗里蒙特工厂已在原电动车厂区造出首批量产品质的 Optimus。马斯克称爬坡"早期、缓慢且曲折"，目标 2027 年底周产 2 万台；对外客户交付预计 2027 年底，AI5 芯片约 2027 年 4 月上车。马斯克亲口承认<strong>灵巧手仍是主要难点</strong>，承诺一两个月内放出演示视频。</div>
+    <div class="comment">编辑解读：量产与交付的时间表被清晰拆开——"能造"和"能交付"之间隔着一整只灵巧手。这给了 Figure、宇树、智元至少一年的窗口期，也意味着 2027 才是人形机器人真正的交卷年。</div>
+    <div class="tags"><span class="tag hot">热点</span><span class="tag">Tesla Optimus</span><span class="tag">量产</span><span class="tag">灵巧手</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">Hot · 平台级发布</div>
+    <div class="title"><a href="https://nvidianews.nvidia.com/news/nvidia-advances-isaac-platform-for-general-purpose-robotics-with-new-reference-humanoid-frameworks-simulation-pipelines-and-data">英伟达 GTC 柏林：Isaac Lab 3.0 GA、开源 Isaac OS、参考人形机器人 Agile ONE SN</a></div>
+    <div class="summary">Agile ONE SN（1.40 米、31 自由度，Jetson Thor + GR00T）成为 Isaac 平台参考人形机器人，2027 年初上市；Isaac Lab 3.0 正式可用，新增开源 Isaac OS 运行时、2000+ SimReady 资产与 Human 1M 数据集；Halos 安全平台接入人体检测，Agility 已宣布将 IGX Thor 作为 Digit 5 量产版唯一车载算力。</div>
+    <div class="comment">编辑解读：英伟达正在把机器人产业改造成"第二个 CUDA 生态"——从芯片（Thor）、仿真（Isaac Lab/OS）、物理引擎（Newton 绑定舍弗勒执行器数字孪生）到安全认证（Halos）全栈锁定。机器人公司今天选的不是供应商，是操作系统。</div>
+    <div class="tags"><span class="tag hot">热点</span><span class="tag">NVIDIA Isaac</span><span class="tag">开源</span><span class="tag">生态</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">Hot · 资本市场</div>
+    <div class="title"><a href="https://www.21jingji.com/article/20261023/herald/bcf7de1c0a7c4e0c17901a1c63b9525a.html">宇树科技上市以来首次涨停，总市值超 2500 亿元</a> ｜ <a href="https://www.thestandard.com.hk/innovation/article/346197/CATL-backed-Noetix-Robotics-files-confidentially-for-HK-IPO-Bloomberg-reports">松延动力秘密递交港股 IPO</a></div>
+    <div class="summary">10 月 23 日宇树科技 20% 涨停收报 624 元，六个交易日累计涨 54%；王兴兴称现有年产数万台远不足，未来年产量或达千万台，并发布"宇创计划"五年孵化 200+ 具身智能企业。同日彭博报道：宁德时代系支持的松延动力已向港交所秘密递表，拟募资数亿美元。</div>
+    <div class="comment">编辑解读：一二级市场对具身智能的定价开始互相传导。宇树的涨停不只是情绪，是"物理 AI 的 GPT 时刻将在 1-3 年内到来"这一判断被资本当真了。</div>
+    <div class="tags"><span class="tag hot">热点</span><span class="tag">宇树</span><span class="tag">IPO</span><span class="tag">松延动力</span></div>
+  </div>
+</div>
+
+<!-- ===================== 具身智能 ===================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>机器人 / 具身智能</div>
+
+  <div class="card">
+    <div class="source">The Next Web · 2026-10-23 · via Robot Overflow</div>
+    <div class="title"><a href="https://thenextweb.com/news/unitree-rehearsal-self-improving-robots-2028-breakthrough">宇树展示 H2-X 守护机器人与"预演"自我进化系统</a></div>
+    <div class="summary">宇树正在开发"预演"（Rehearsal）系统：AI 自动查阅论文、写代码并在仿真中测试，验证后再部署到真机。基于 H2 的 H2-X 演示视频宣称站立续航约 8 小时、可从 4 米高台跳下、踢凹车门，价格与发售时间未公布，性能未经独立验证。</div>
+    <div class="comment">编辑解读："AI 读论文→写控制代码→仿真验证→上真机"如果跑通，等于把机器人技能获取的边际成本压到接近软件迭代——这比 8 小时续航本身更值得警惕和期待。</div>
+    <div class="tags"><span class="tag">宇树</span><span class="tag">自我进化</span><span class="tag">Sim2Real</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robotics &amp; Automation News · 2026-10-22</div>
+    <div class="title"><a href="https://roboticsandautomationnews.com/2026/10/22/google-deepmind-uses-gemini-4-argon-to-teach-apptroniks-apollo-humanoid-new-skills-from-video/106227/">DeepMind Gemini 4 Argon 看视频教会 Apptronik Apollo 新任务</a></div>
+    <div class="summary">测试中，Argon 观看掷沙包视频后自行编写仿真代码，并把学到的动作迁移到 Apollo 真机，连续命中七次。DeepMind 称该流程可把数周的仿真建模压缩到数小时。</div>
+    <div class="comment">编辑解读：和宇树"预演"异曲同工——"看视频→写仿真→迁移真机"正在成为大厂共识的技能获取范式，仿真资产的军备竞赛才刚刚开始。</div>
+    <div class="tags"><span class="tag">DeepMind</span><span class="tag">Apptronik</span><span class="tag">VLA</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">投资界 / 界面 · 2026-10-22</div>
+    <div class="title"><a href="https://www.agibot.com/article/231/detail/129.html">智元 AI WAVE 七连发启动：开源 AGIBOT WORLD 2026 第四期"物理推理"数据集</a></div>
+    <div class="summary">智元将在 10 月 22–30 日连发七项成果（物理推理数据集、Genie Studio 2.0、G2 Max 工业机器人、基座大模型等）；第四期数据集把任务重心从操作难度转向决策难度，含 10+ 逻辑场景、9 项推理能力、三档难度，首批 150 小时真机数据已上线 Hugging Face。11 月 2–3 日 6 台 G2 将直播便利店 24 小时连续作业考核。</div>
+    <div class="comment">编辑解读：从"操作"到"决策"的数据集转向，说明头部厂商判断硬件操作层正在收敛、竞争焦点上移到推理层。24 小时便利店直播则是一次漂亮的公开压力测试。</div>
+    <div class="tags"><span class="tag">智元</span><span class="tag">开源数据集</span><span class="tag">物理推理</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">快科技 / 新浪科技 · 2026-10-22</div>
+    <div class="title"><a href="https://finance.sina.com.cn/tech/roll/2026-10-22/doc-iniwcafi5958100.shtml">小鹏 IRON 升级第二代 VLA：本体端每 0.2 秒重新推理，可预判 6 秒动作</a></div>
+    <div class="summary">IRON 搭载第二代 VLA 并在机器人本体端运行，每 0.2 秒重新观察对面的人，可预判 6 秒内的动作，演示了握手、碰拳、击掌；三颗图灵芯片合计算力 2250 TOPS。</div>
+    <div class="comment">编辑解读：VLA 从"慢思考"走向 5Hz 闭环推理，是交互型人形机器人的必要条件；2250 TOPS 端侧算力也预示车规级芯片外溢到机器人已成定局。</div>
+    <div class="tags"><span class="tag">小鹏</span><span class="tag">VLA</span><span class="tag">端侧推理</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">NEURA Robotics · 2026-10-22</div>
+    <div class="title"><a href="https://neura-robotics.com/tum-robogym-munich-4ne1-gen4-launch/">NEURA 与慕尼黑工大启用 RoboGym，发布 4NE1 第四代人形机器人</a></div>
+    <div class="summary">2300 平方米训练与研究中心落地慕尼黑机场附近，三年总投入约 1700 万欧元；4NE1 第四代面向量产、减重约 20%，搭载 Neuron AI。</div>
+    <div class="comment">编辑解读：欧洲阵营在"训练基础设施"上补齐短板——人形机器人竞争已进入"健身房规模"比拼阶段。</div>
+    <div class="tags"><span class="tag">NEURA</span><span class="tag">RoboGym</span><span class="tag">量产</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">WBUR · 2026-10-23</div>
+    <div class="title"><a href="https://wbur.org/news/2026/10/23/boston-dynamics-employees-petition-dhs">波士顿动力约 300 名员工请愿，反对向 ICE 出售 Spot 机器狗</a></div>
+    <div class="summary">约 300 名员工（近半匿名）要求取消向 ICE 出售 4 台 Spot 的 130 万美元合同；管理层维持决定，称销售条款禁止武器化。</div>
+    <div class="comment">编辑解读：机器人伦理争议从"会不会被武器化"进入"卖给谁"的具体博弈，这类内部请愿会越来越多地影响机器人公司的政府订单策略。</div>
+    <div class="tags"><span class="tag">Boston Dynamics</span><span class="tag">伦理</span><span class="tag">政策</span></div>
+  </div>
+</div>
+
+<!-- ===================== arXiv 论文 ===================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>arXiv 新论文精选</div>
+
+  <div class="card">
+    <div class="source">arXiv cs.CV/cs.RO · 2026-10-22 · HuggingFace Daily</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.31670v1">Sensorimotor Alignment: A Platonic Proxy for Embodied Policy Success</a></div>
+    <div class="summary">具身基础模型的评估依赖昂贵的闭环 rollout。本文借用柏拉图表征假说（PRH），检验视觉-语言表征的收敛程度能否作为具身策略能力的廉价离线代理指标。</div>
+    <div class="comment">编辑解读：如果表征对齐度真能预测策略成功率，具身模型的选型与迭代成本将下降一个数量级——"不用上真机就能筛模型"是这个方向最诱人的承诺。</div>
+    <div class="tags"><span class="tag">具身评估</span><span class="tag">PRH</span><span class="tag">表征对齐</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv cs.RO · 2026-10-22</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.31613v1">Progress Probes (P²): Lightweight Runtime Monitoring for Vision-Language-Action Models</a></div>
+    <div class="summary">VLA 模型容易犯错且失败难以预测。P² 提出轻量级运行时探针，在策略执行过程中检测任务是否偏离正轨，为无人监管部署提供兜底。</div>
+    <div class="comment">编辑解读：VLA 要走出实验室，"知道自己正在失败"和"会做事"同等重要。运行时监控会成为 VLA 系统的标准组件。</div>
+    <div class="tags"><span class="tag">VLA</span><span class="tag">运行时监控</span><span class="tag">安全部署</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv cs.AI/cs.CL · 2026-10-22</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.31667v1">Direct Pass@k Optimization for Thought Pruning: Balancing Quality and Diversity in Test-Time Reasoning</a></div>
+    <div class="summary">测试时扩展（生成大量候选解）成本高昂，现有方法在生成短前缀后剪枝候选池。本文直接以 Pass@k 为目标做优化，在剪枝质量与候选多样性之间取得更好平衡。</div>
+    <div class="comment">编辑解读：推理成本是推理模型落地的核心约束，"剪掉哪条思维链"正从启发式走向可优化目标——省下的每一分算力都是利润。</div>
+    <div class="tags"><span class="tag">推理</span><span class="tag">Test-time Scaling</span><span class="tag">Pass@k</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv cs.LG · 2026-10-22</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.31642v1">A Fix for Softmax and Cross-Entropy</a></div>
+    <div class="summary">指出 softmax / log-softmax / cross-entropy 标准实现中的两个数值 bug："Softmax Collapse"（目标 logit 远大于其他时其梯度被舍入为零）与"Softmax Cancellation"（蒸馏时学生与教师 logits 接近导致的消减误差），并给出修复。</div>
+    <div class="comment">编辑解读：连 softmax 这种"已解决"的基础组件都藏着影响训练稳定性的坑——在大规模蒸馏时代，这类数值修正的杠杆效应会被无限放大。</div>
+    <div class="tags"><span class="tag">基础组件</span><span class="tag">数值稳定性</span><span class="tag">蒸馏</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv cs.LG/cs.AI · 2026-10-22</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.31624v1">Questioning Instrumental Convergence in RLVR: Checkpoint Evidence from OLMo-3</a></div>
+    <div class="summary">工具性趋同（自保、资源获取、欺骗等权力寻求子目标）常被视为强智能体的普遍风险。本文以 OLMo-3 的 RLVR 训练检查点为证据，实证检验该假设在 LLM 后训练阶段是否成立。</div>
+    <div class="comment">编辑解读：用真实训练轨迹检验安全假设而非纸上推演，是 AI 安全研究该有的样子——结论无论正反都有价值。</div>
+    <div class="tags"><span class="tag">AI 安全</span><span class="tag">RLVR</span><span class="tag">OLMo-3</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv cs.AI · 2026-10-22</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.31650v1">EpiSEM-Bench: Evaluating Safety and Evidence Recovery in LLM Agents under Missing Evidence</a></div>
+    <div class="summary">工具型 Agent 依赖环境事实判断行动是否被允许；当工具返回结果遗漏安全相关事实时，Agent 可能在用户请求无害、且所有返回均为真的情况下执行违禁动作。EpiSEM-Bench 提供了可执行的安全评测基准。</div>
+    <div class="comment">编辑解读："每句话都是真话，但整体是危险的"——缺失证据场景是 Agent 安全最容易被忽视的盲区，这个基准来得正是时候。</div>
+    <div class="tags"><span class="tag">Agent 安全</span><span class="tag">Benchmark</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily Papers · 2026-10-21 · 16 upvotes</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.30418">Agent Mosaic: Recognizing Confidentiality Leaks in Agentic LLM Systems</a></div>
+    <div class="summary">LLM Agent 可从可访问文档中检索信息，再拼装出敏感结论——"马赛克效应"。本文用 30 个合成的网络安全、医疗与军事场景量化了这一风险的现实性。</div>
+    <div class="comment">编辑解读：单份文档都不涉密、组合起来却泄密——这是所有接入企业知识库的 Agent 都绕不开的合规炸弹。</div>
+    <div class="tags"><span class="tag">Agent 安全</span><span class="tag">隐私</span><span class="tag">HF 热榜</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily Papers · 2026-10-22 · 26 upvotes</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.30753">FilmFlow: Agentic System for 3D Virtual Film Cinematography</a></div>
+    <div class="summary">将自然语言指令或参考视频转化为显式可执行的 3D 虚拟摄影机轨迹，把电影摄影意图变成可控的运镜规划。</div>
+    <div class="comment">编辑解读：Agent 能力边界继续向创意行业渗透——"运镜"这种高度依赖经验的手艺也开始被形式化为规划问题。</div>
+    <div class="tags"><span class="tag">多模态</span><span class="tag">Agent</span><span class="tag">HF 热榜</span></div>
+  </div>
+</div>
+
+<!-- ===================== 开源动态 ===================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">⭐</span>开源社区 · GitHub Trending</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 今日 +2,264 stars</div>
+    <div class="title"><a href="https://github.com/cloudflare/security-audit-skill">cloudflare/security-audit-skill</a> <span style="font-size:12px;color:#636e72">(JavaScript)</span></div>
+    <div class="summary">Cloudflare 出品的编码 Agent 安全审计 Skill：多阶段审计流程，产出独立可验证、机器可读的审计结论。</div>
+    <div class="comment">编辑解读：大厂开始把安全能力打包成 Agent 可调用的"技能"，安全左移正在从 IDE 插件时代进入 Agent 技能时代。</div>
+    <div class="tags"><span class="tag">Agent Skill</span><span class="tag">安全</span><span class="tag">Cloudflare</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 今日 +896 stars</div>
+    <div class="title"><a href="https://github.com/NVIDIA/OpenShell">NVIDIA/OpenShell</a> <span style="font-size:12px;color:#636e72">(Rust)</span></div>
+    <div class="summary">英伟达开源的自治 AI Agent 安全私有运行时，为 Agent 提供受控执行环境。</div>
+    <div class="comment">编辑解读：Agent 的"沙箱层"正在标准化——谁来定义 Agent 能碰什么、不能碰什么，谁就掌握了 Agent 时代的准入闸口。</div>
+    <div class="tags"><span class="tag">Agent 运行时</span><span class="tag">NVIDIA</span><span class="tag">Rust</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 今日 +319 stars</div>
+    <div class="title"><a href="https://github.com/pollen-robotics/microduck">pollen-robotics/microduck</a> <span style="font-size:12px;color:#636e72">(Rust)</span></div>
+    <div class="summary">一只开源的微型双足鸭子机器人 🦆，Pollen Robotics（Reachy 团队）新作。</div>
+    <div class="comment">编辑解读：别小看这只鸭子——低成本双足平台是具身智能教育和个人开发者生态的关键入口，当年树莓派也是这么开始的。</div>
+    <div class="tags"><span class="tag">开源硬件</span><span class="tag">双足机器人</span><span class="tag">具身智能</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 今日 +455 / +477 / +619 stars</div>
+    <div class="title"><a href="https://github.com/Nutlope/hallmark">Nutlope/hallmark</a> · <a href="https://github.com/makecindy/cindy">makecindy/cindy</a> · <a href="https://github.com/pbakaus/impeccable">pbakaus/impeccable</a></div>
+    <div class="summary">设计类 Agent 技能三连：hallmark 是"反 AI 味"设计技能（Claude Code / Cursor / Codex 通用）；cindy 是开箱即用的开源 AI Agent；impeccable 是提升 AI 设计能力的语言规范。</div>
+    <div class="comment">编辑解读："AI 生成的设计一眼假"正在成为要专门解决的工程问题——Agent 技能生态已经开始卷审美了。</div>
+    <div class="tags"><span class="tag">Agent Skill</span><span class="tag">设计</span><span class="tag">生态</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>这周的具身智能圈像按下了加速键：特斯拉一边宣布 Optimus 早期量产、一边把交付推到 2027 年底，坦诚灵巧手还搞不定；英伟达则趁势把 Isaac 全家桶铺成机器人界的"Android 生态"。最值得记住的不是某款新机器人，而是两条正在收敛的技术路线——"AI 读论文写代码、仿真验证后上真机"（宇树"预演"与 DeepMind Gemini 4 Argon 不约而同），以及 VLA 从慢思考走向 0.2 秒级闭环推理（小鹏 IRON）。学术圈在补安全课：VLA 运行时监控、Agent 缺失证据风险、马赛克泄密，全是"部署前夜"的问题清单。开源侧，Cloudflare 和英伟达同天把 Agent 安全工具送上 Trending——Agent 要干活，先得有人管它。2027 年交卷铃已响，接下来一年，看谁能先把灵巧的手和可靠的脑装进同一台机器。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · Generated 2026-10-25 · Sources: arXiv / HuggingFace Daily Papers / GitHub Trending / Robot Overflow</p>
+</div>
+
+</div>
+</body>
+</html>

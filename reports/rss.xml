@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 24 Oct 2026 17:05:58 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2026 00:07:35 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-10-25</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261025.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261025.html</guid>
+      <pubDate>Sun, 25 Oct 2026 08:00:00 +0000</pubDate>
+      <description>本周具身智能赛道异常热闹：特斯拉官宣 Optimus 在弗里蒙特进入早期量产、但对外交付推迟到 2027 年底，灵巧手仍是最大瓶颈；英伟达 GTC 柏林一口气放出 Isaac Lab 3.0、开源 Isaac OS 与参考人形机器人 Agile ONE SN；宇树发布 H2-X「功夫传奇」并提出&quot;预演&quot;自我进化系统，股价上市以来首次涨停、市值突破 2500 亿元。学术侧，VLA 运行时监控与具身策略评估成为新热点，Agent 安全（EpiSEM-Bench、Agent Mosaic、RIDAR）密集出现。开源社区则被&quot;AI Agent 运行时与技能生态&quot;霸榜：Cloudflare 安全审计 S</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-10-25</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261025.html</link>
