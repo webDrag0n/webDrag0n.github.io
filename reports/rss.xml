@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 25 Oct 2026 17:08:41 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 00:09:11 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-10-26</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261026.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261026.html</guid>
+      <pubDate>Mon, 26 Oct 2026 08:00:00 +0000</pubDate>
+      <description>今天的焦点毫无疑问在具身智能赛道——特斯拉 Optimus 对外交付推迟至 2027 年底（灵巧手成最大瓶颈），英伟达 GTC 柏林一口气放出参考人形机器人、Isaac Lab 3.0 与 Halos 安全平台，Figure 04 完成设计冻结并披露数十亿美元算力投入，宇树股价首次涨停、市值破 2500 亿。学术侧，HuggingFace 日榜被 Agent 与世界模型占据（Deep Search、IQuest-Q1、LaLa-World），arXiv 上 VLA 运行时监控（Progress Probes）、Pass@k 直接优化、RLVR 工具性收敛证伪等推理与智能体安全工作值得关注。</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-10-26</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261026.html</link>

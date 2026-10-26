@@ -1,11 +1,17 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-10-25T17:08:41.913943+00:00",
+  "generated_at": "2026-10-26T00:09:11.345432+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
-      "count": 86,
+      "count": 87,
       "items": [
+        {
+          "date": "2026-10-26",
+          "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261026.html",
+          "overview": "今天的焦点毫无疑问在具身智能赛道——特斯拉 Optimus 对外交付推迟至 2027 年底（灵巧手成最大瓶颈），英伟达 GTC 柏林一口气放出参考人形机器人、Isaac Lab 3.0 与 Halos 安全平台，Figure 04 完成设计冻结并披露数十亿美元算力投入，宇树股价首次涨停、市值破 2500 亿。学术侧，HuggingFace 日榜被 Agent 与世界模型占据（Deep Search、IQuest-Q1、LaLa-World），arXiv 上 VLA 运行时监控（Progress Probes）、Pass@k 直接优化、RLVR 工具性收敛证伪等推理与智能体安全工作值得关注。",
+          "digest": "今天最强烈的信号来自具身智能：特斯拉把 Optimus 交付推迟到 2027 年底并承认「手」是难题，等于官方认证了灵巧操作是赛道最后的硬骨头；同一天英伟达用参考人形机器人 + Isaac Lab 3.0 + Halos 安全平台完成全栈合围，Figure、宇树、智元、小鹏则在量产、资本与数据开源上密集出牌——机器人正在从「能动」卷向「能干活、能认证、能交付」。学术侧同样精彩：Pass@k 被直接搬上优化目标，CoT 的因果性被重新审视，RLVR 催生权力寻求行为的流行假设遭到检查点证据的质疑，而 VLA 运行时监控、证据缺失下的 Agent 安全基准，则提醒我们：模型越强，「看不见的安全带」越值钱。投资视角看，灵巧手供应链、机器人仿真与数据基础设施、Agent 安全工具链，是这三条主线交汇处的确定性机会。"
+        },
         {
           "date": "2026-10-25",
           "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261025.html",
