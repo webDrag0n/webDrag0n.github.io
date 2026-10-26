@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 26 Oct 2026 00:09:11 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 17:11:50 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-10-27</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261027.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261027.html</guid>
+      <pubDate>Tue, 27 Oct 2026 08:00:00 +0000</pubDate>
+      <description>Anthropic 正式递交纳斯达克 IPO 招股书——335 页文件披露上半年营收 163 亿美元、净亏 807 亿美元，堪称&quot;史上最大 IPO、史上最亏 AI 公司&quot;，成为昨日绝对头条；与此同时 Kimi K3.1 Pro 加量降价对标 Opus 5.5、港科与 CMU 联手开源 KV Cache 砍掉 99% 的新模型、ChatGPT 攻克 26 年数学猜想引发学界震荡。国内侧，具身智能国资热潮、宇树物理 AI 生态、深圳黑马&quot;3 个月反超 GPT-6 Astra&quot;也刷屏。资本市场火热与巨额亏损并存，是昨天最值得咀嚼的底色。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-10-26</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261026.html</link>

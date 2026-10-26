@@ -1,6 +1,6 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-10-26T00:09:11.345432+00:00",
+  "generated_at": "2026-10-26T17:11:50.825768+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
@@ -532,8 +532,14 @@
     },
     "media": {
       "title": "AI 科技日报",
-      "count": 87,
+      "count": 88,
       "items": [
+        {
+          "date": "2026-10-27",
+          "url": "https://webdrag0n.github.io/reports/media/daily_media_20261027.html",
+          "overview": "Anthropic 正式递交纳斯达克 IPO 招股书——335 页文件披露上半年营收 163 亿美元、净亏 807 亿美元，堪称\"史上最大 IPO、史上最亏 AI 公司\"，成为昨日绝对头条；与此同时 Kimi K3.1 Pro 加量降价对标 Opus 5.5、港科与 CMU 联手开源 KV Cache 砍掉 99% 的新模型、ChatGPT 攻克 26 年数学猜想引发学界震荡。国内侧，具身智能国资热潮、宇树物理 AI 生态、深圳黑马\"3 个月反超 GPT-6 Astra\"也刷屏。资本市场火热与巨额亏损并存，是昨天最值得咀嚼的底色。",
+          "digest": "昨天最值得记住的是 Anthropic 那份 335 页招股书：上半年营收 163 亿美元、净亏 807 亿，一边冲刺史上最大 IPO，一边把\"AI 可能自主伤人\"写进风险章节——前沿大模型的商业叙事正式进入公开市场的审视期。技术侧同样热闹：港科与 CMU 把 KV Cache 砍掉 99%、吞吐翻 6 倍，Kimi K3.1 Pro 加量降价贴身挑战 Opus 5.5，ChatGPT 攻下 26 年数学猜想却让数学界彻底分裂。国内具身智能持续升温，国资抢项目、宇树晒场景、深圳黑马三个月喊出反超 GPT-6 Astra。资本狂热与技术兑现并行，接下来值得盯两件事：推理成本曲线能否真的压垮服务价格，以及 Agent 支付标准之争谁主沉浮。"
+        },
         {
           "date": "2026-10-26",
           "url": "https://webdrag0n.github.io/reports/media/daily_media_20261026.html",
