@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 每日情报 — 2026 年 10 月 27 日 · 星期二</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<!--
+  TEMPLATE STRUCTURE:
+  Replace {{PLACEHOLDERS}} with actual content.
+  
+  Sections:
+  - .header: icon, title, date, subtitle
+  - .summary-banner: one-paragraph overview of today's hot topics
+  - .section: grouped news (Headlines / Research / Industry / Open Source)
+  - .card: individual news item (source, title link, summary, tags)
+  - .hot-topic: highlighted breaking news
+  - .insights: editorial summary
+  - .footer: generation info
+-->
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 每日情报</h1>
+  <div class="date">2026 年 10 月 27 日 · 星期二</div>
+  <div class="subtitle">arXiv 论文 · HuggingFace Daily · GitHub Trending · Robot Overflow 具身智能动态</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>具身智能赛道进入密集兑现期：Agility 一口气公布 GXO 两处新部署、佐治亚工厂 10 万+ 料箱搬运量与 3 亿美元潜在订单；智元发布安规级重载机器人 G2 Max，同时港股 IPO 因 500 亿估值新融资暂缓；宇树 H2-X 侧翻事故暴露量产工程化痛点，公司市值却已突破 2718 亿、P/E 高达 465 倍。学术侧，HuggingFace Daily 被「视频作为世界接口」（221 ▲）与「统一具身大脑 RynnUnify」（31 ▲）占领，arXiv 上 FLORA 开源机器人数据引擎、FocusVLA 未来意图引导 VLA、DexPort 灵巧手数据采集接口密集出现，共同指向「数据—策略—部署」闭环正在收敛。开源侧 paperclip、omnigent、NVIDIA NeMo Gym 持续高热，Agent 工具链进一步分化。</p>
+</div>
+
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日焦点</div>
+
+  <div class="hot-topic">
+    <div class="label">Hot · 视频即世界接口</div>
+    <div class="source">arXiv 2610.31668 · HuggingFace Daily Papers 221 ▲</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.31668" target="_blank">Reading, Writing, Sharing, and Interacting with the World through Video</a></div>
+    <div class="summary">这篇工作将视频重新定义为统一的世界交互接口——既能读写内容，也能驱动动作与协作。它把视频生成、理解与具身控制放进同一框架，是「世界模型 + 视频生成」路线走向通用具身智能的标志性尝试，221 票的社区热度印证了其关注度。</div>
+    <div class="tags">
+      <span class="tag hot">221 ▲ 今日最热</span>
+      <span class="tag">Video World Model</span>
+      <span class="tag">具身智能</span>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">Hot · 统一具身大脑</div>
+    <div class="source">arXiv 2610.32965 · HuggingFace Daily Papers 31 ▲</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.32965" target="_blank">RynnUnify: Towards Unified Embodied Brain</a></div>
+    <div class="summary">RynnUnify 试图构建跨本体、跨任务的统一具身大脑，将感知、规划与控制收敛到同一策略网络。与「视频即接口」路线互补，它代表了另一条更直接的通用具身智能技术路线——能否真正泛化到非结构化场景，将是决定其命运的关键。</div>
+    <div class="tags">
+      <span class="tag hot">31 ▲ 热门</span>
+      <span class="tag">Embodied Brain</span>
+      <span class="tag">VLA</span>
+      <span class="tag">通用具身</span>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">Hot · 人形机器人商业化里程碑</div>
+    <div class="source">Robot Overflow · Agility Robotics 公告 · imp=3</div>
+    <div class="title"><a href="https://www.manilatimes.net/2026/10/26/tmt-newswire/globenewswire/agility-robotics-highlights-commercial-momentum-and-growing-enterprise-demand-for-digit-humanoid-robot/2454054" target="_blank">Agility: GXO 再增两处 Digit 部署，佐治亚工厂已搬运超 10 万个料箱</a></div>
+    <div class="summary">Agility 在投资者电话会前披露：GXO 将自 2027 年初在另外两处美国工厂部署 Digit；佐治亚工厂已累计搬运超 10 万个料箱；三家未具名制造商进入付费项目，加拿大丰田签署商业协议，30 多家潜在客户洽谈中。3 亿美元以上 Digit 5 订单为潜在价值而非收入——这是人形机器人从 demo 走向可复制商业部署的第一次公开量化。</div>
+    <div class="tags">
+      <span class="tag hot">imp=3 最高重要性</span>
+      <span class="tag">Agility Digit</span>
+      <span class="tag">GXO</span>
+      <span class="tag">商业化部署</span>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">Hot · 国产人形机器人工程化阵痛</div>
+    <div class="source">Robot Overflow · TechNode · imp=2</div>
+    <div class="title"><a href="https://technode.com/2026/10/26/unitrees-newly-launched-h2-x-robot-loses-a-leg-in-public-demonstrati" target="_blank">宇树新发布的 H2-X 在杭州公开演示侧翻时小腿脱落</a></div>
+    <div class="summary">H2-X 于 10 月 21 日发布、定位安防巡逻与救援，在杭州世界物理 AI 大会公开侧翻落地失衡、右小腿在关节处脱落。视频已在网上传播，报道时宇树尚未说明原因。结合宇树市值破 2718 亿、P/E 465 倍的背景，这次事故凸显出人形机器人在「可靠性」与「估值」之间的张力。</div>
+    <div class="tags">
+      <span class="tag">Unitree H2-X</span>
+      <span class="tag">硬件可靠性</span>
+      <span class="tag">量产工程化</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>前沿研究 · Agent / 世界模型 / VLA</div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.31779 · HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.31779" target="_blank">FLORA: An Open Model Suite for Scaling Robotics Data Engines</a></div>
+    <div class="summary">FLORA 开源一套面向机器人数据引擎规模化的模型套件，覆盖从数据采集到策略训练的关键环节。它的意义在于把「数据飞轮」从公司私有基础设施变成社区公共品，有望降低 VLA/具身智能研究的进入门槛。</div>
+    <div class="tags">
+      <span class="tag">Robotics Data</span>
+      <span class="tag">开源套件</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.31423 · HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.31423" target="_blank">FocusVLA: Future-Intent Guided Dynamic View Routing for Vision-Language-Action Models</a></div>
+    <div class="summary">FocusVLA 提出以「未来意图」引导动态视角路由的 VLA 架构，让模型主动选择与下一步动作最相关的视觉区域。相较于「全图注意力」的暴力方案，这种意图驱动的稀疏视觉注意为实时具身控制提供了更高效的推理路径。</div>
+    <div class="tags">
+      <span class="tag">VLA</span>
+      <span class="tag">动态视角路由</span>
+      <span class="tag">具身推理</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.32969 · cs.RO · HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.32969" target="_blank">DexPort: A Hand-Held Skill Interface for Dexterous Hand Data Collection</a></div>
+    <div class="summary">DexPort 提供一个手持式的灵巧手数据采集接口，让研究者可以在真实场景中直接采集手部操作技能。与遥操作或动作捕捉相比，这种「拿着走」的方案大幅降低了灵巧操作数据的获取成本，对训练可泛化的灵巧手策略具有直接价值。</div>
+    <div class="tags">
+      <span class="tag">Dexterous Hand</span>
+      <span class="tag">数据采集</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.32253 · HuggingFace Daily Papers 34 ▲</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.32253" target="_blank">RSIHub: A Composable Framework for Agent-Evolution Methods</a></div>
+    <div class="summary">RSIHub 将各类 Agent 自我演化方法抽象为可组合模块，为「让 Agent 自己改进自己」这一新兴方向提供了统一的工程框架。在自我改进方法快速分化的当下，一个可复用、可对比的实验底座比任何单点创新都更有长期价值。</div>
+    <div class="tags">
+      <span class="tag">34 ▲</span>
+      <span class="tag">Agent Evolution</span>
+      <span class="tag">自我演化</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.30418 · HuggingFace Daily Papers 26 ▲</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.30418" target="_blank">Agent Mosaic: Recognizing Confidentiality Leaks in Agentic LLM Systems</a></div>
+    <div class="summary">Agent Mosaic 关注 Agent 系统中的机密信息泄露识别，首次系统刻画了多工具、多步推理链条下的信息泄露路径。随着 Agent 进入真实工作流，这类「安全前置」的研究将决定 Agent 能否被企业级场景信任。</div>
+    <div class="tags">
+      <span class="tag">26 ▲</span>
+      <span class="tag">Agent Safety</span>
+      <span class="tag">机密泄露</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.32770 · HuggingFace Daily Papers 12 ▲</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.32770" target="_blank">On-Policy Self-Training: Data-Free Self-Improvement in Large Language Models</a></div>
+    <div class="summary">该工作探索不依赖外部数据的 LLM 自我改进路径，通过 on-policy 自训练让模型从自己的输出中学习。在「数据枯竭」焦虑蔓延的背景下，这条路线与 RSIHub 的 Agent 自演化框架形成呼应，共同指向后训练范式的下一次跃迁。</div>
+    <div class="tags">
+      <span class="tag">12 ▲</span>
+      <span class="tag">Self-Training</span>
+      <span class="tag">Data-Free</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能 · 机器人产业动态（Robot Overflow）</div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 投资界 · imp=2</div>
+    <div class="title"><a href="https://news.pedaily.cn/202610/570870.shtml" target="_blank">智元发布安规级重载机器人精灵 G2 Max</a></div>
+    <div class="summary">G2 Max 采用 7 自由度力控双臂（额定 40kg、峰值 50kg，重复精度 ±0.5mm），面向拆码垛与产线供料，已在电商仓储和自家产线运行。与 Figure、Optimus 的「先家庭后工厂」路径不同，智元直接切入工业重载场景，10 月 29 日创新日将公布更多细节。</div>
+    <div class="tags">
+      <span class="tag">AgiBot G2 Max</span>
+      <span class="tag">工业重载</span>
+      <span class="tag">差异化路径</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 21世纪经济报道 · imp=2</div>
+    <div class="title"><a href="https://www.21jingji.com/article/20261026/herald/39758f2e5f18030aec32dfbc75eff38f.html" target="_blank">智元港股 IPO 暂缓：新一轮融资后年内难上市</a></div>
+    <div class="summary">智元新一轮融资（传估值约 500 亿元人民币）若完成，按港交所 18C 规则需再等 120 天，年内无法上市。媒体分析指出，一级市场高估值与二级市场 IPO 节奏之间的张力，正在成为头部具身智能公司的共同问题。</div>
+    <div class="tags">
+      <span class="tag">IPO 暂缓</span>
+      <span class="tag">估值 500 亿</span>
+      <span class="tag">港交所 18C</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 澎湃新闻 · imp=2</div>
+    <div class="title"><a href="https://www.thepaper.cn/newsDetail_forward_34335554" target="_blank">宇树科技发布股价异常波动公告：经营正常，滚动市盈率 465 倍</a></div>
+    <div class="summary">宇树 10 月 26 日收盘价偏离值累计超 30%，公司公告称经营正常、无未披露重大事项，并主动提示滚动市盈率 465 倍（行业 38.5 倍）的估值风险。当日收于 672 元，总市值约 2718 亿元——人形机器人板块的情绪已经明显领先于基本面兑现。</div>
+    <div class="tags">
+      <span class="tag">Unitree</span>
+      <span class="tag">市值 2718 亿</span>
+      <span class="tag">P/E 465x</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 首尔经济日报 · imp=2</div>
+    <div class="title"><a href="https://en.sedaily.com/finance/2026/10/26/robotis-to-supply-actuators-for-duck-robot-that-impressed" target="_blank">ROBOTIS 将为 Pollen 的 Micro Duck 供应约 75 万台 Dynamixel 舵机</a></div>
+    <div class="summary">ROBOTIS 签下约 35 亿韩元合同，向 Hugging Face 旗下 Pollen 供应约 75 万台 Dynamixel 舵机；Micro Duck 当前需求约 5 万台，每台用 15 个舵机，ROBOTIS 产能已满、预计明年二季度起大幅放量。这是具身智能「卖铲人」开始兑现业绩的早期信号。</div>
+    <div class="tags">
+      <span class="tag">ROBOTIS</span>
+      <span class="tag">Pollen / Hugging Face</span>
+      <span class="tag">供应链放量</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 21世纪经济报道 · imp=2</div>
+    <div class="title"><a href="https://www.21jingji.com/article/20261026/herald/b817788408697a85af8f9eab9acbe5b7.html" target="_blank">奥比中光前三季度营收持平，机器人业务收入翻倍</a></div>
+    <div class="summary">奥比中光前三季度营收 7.11 亿元基本持平、净利同比降 31.6%，但机器人视觉方案收入翻倍、服务逾 1000 家机器人客户；10 月起回购 5000 万至 1 亿元。机器人视觉正在从「概念叙事」变成「收入结构」，但利润兑现仍需时间。</div>
+    <div class="tags">
+      <span class="tag">Orbbec</span>
+      <span class="tag">机器人视觉</span>
+      <span class="tag">收入翻倍</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · TECH+ (Mynavi News) · imp=1</div>
+    <div class="title"><a href="https://news.mynavi.jp/techplus/article/20261025-5180513" target="_blank">逐际动力携 Luna、Ori、TRON 2 亮相日本 CEATEC 2026</a></div>
+    <div class="summary">逐际动力在日本 CEATEC 展出 Luna、Ori 和 TRON 2，报道称其已在日本开展销售推广。继欧美市场之后，日本正在成为国产人形机器人出海的下一个落点。</div>
+    <div class="tags">
+      <span class="tag">LimX</span>
+      <span class="tag">CEATEC 2026</span>
+      <span class="tag">出海日本</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">💻</span>开源社区 · GitHub Trending</div>
+
+  <div class="card">
+    <div class="source">GitHub · paperclipai/paperclip · ★107k · pushed today</div>
+    <div class="title"><a href="https://github.com/paperclipai/paperclip" target="_blank">paperclip — The open-source app everyone uses to manage agents at work</a></div>
+    <div class="summary">paperclip 今日推送活跃，已成为管理工作 Agent 的事实标准之一。它把 Agent 的调度、权限与审计整合进一个统一界面，回应了企业「不敢用 Agent」的核心顾虑。</div>
+    <div class="tags">
+      <span class="tag hot">★107k</span>
+      <span class="tag">Agent 管理</span>
+      <span class="tag">企业级</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · omnigent-ai/omnigent · ★11k · pushed today</div>
+    <div class="title"><a href="https://github.com/omnigent-ai/omnigent" target="_blank">Omnigent — open-source AI agent framework and meta-harness</a></div>
+    <div class="summary">Omnigent 将 Claude Code 等主流 Agent 编排进统一 meta-harness，今日持续推送。在 Agent 框架进入「战国时代」的当下，「元编排层」正在成为新的竞争高地。</div>
+    <div class="tags">
+      <span class="tag">★11k</span>
+      <span class="tag">Meta-Harness</span>
+      <span class="tag">Agent 编排</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · NVIDIA-NeMo/Gym · ★1.3k · pushed today</div>
+    <div class="title"><a href="https://github.com/NVIDIA-NeMo/Gym" target="_blank">NVIDIA NeMo Gym — Evaluate and improve models and agents using environments</a></div>
+    <div class="summary">NeMo Gym 今日活跃推送，提供面向模型与 Agent 的环境化评测与改进工具链。NVIDIA 正在把「评测即基础设施」的理念从 LLM 扩展到 Agent 与具身智能，这对整个开源生态的迭代速度至关重要。</div>
+    <div class="tags">
+      <span class="tag">NVIDIA</span>
+      <span class="tag">评测基础设施</span>
+      <span class="tag">Agent</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · Ephemeral-AI-Lab/layerfs · ★2.2k · pushed today</div>
+    <div class="title"><a href="https://github.com/Ephemeral-AI-Lab/layerfs" target="_blank">LayerFS — Ephemeral Workspaces, durable shared history</a></div>
+    <div class="summary">LayerFS 为每个 Agent 提供独立、可回滚的临时工作区，同时保留共享历史。这回应了多 Agent 协作中「环境隔离 vs 信息共享」的核心矛盾，是 Agent 工程化走向成熟的重要基础设施。</div>
+    <div class="tags">
+      <span class="tag">★2.2k</span>
+      <span class="tag">Multi-Agent</span>
+      <span class="tag">Workspace</span>
+    </div>
+  </div>
+</div>
+
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今天最值得记录的是「具身智能的商业化节奏明显快于学术节奏」。Agility 披露的 GXO 部署与付费试点数据，是人形机器人从 demo 走向可复制商业部署的第一次公开量化；智元 G2 Max 直接切入拆码垛与产线供料，与 Figure 04、Optimus 的「先家庭后工厂」路径形成有趣对照。但宇树 H2-X 侧翻断腿事件同样提醒我们，硬件可靠性仍是横在规模化面前的最大变量。学术侧，「视频作为世界接口」与 RynnUnify 的具身大脑思路，加上 DexPort、FLORA、FocusVLA 围绕数据与策略的工程化突破，意味着 VLA 栈正在从单点模型竞争走向全栈基础设施竞争——这或许比任何单一模型发布都更值得关注。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-10-27 08:05</p>
+</div>
+
+</div>
+</body>
+</html>
