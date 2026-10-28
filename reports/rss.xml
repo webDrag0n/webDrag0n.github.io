@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 28 Oct 2026 00:06:08 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 17:08:22 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-10-29</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261029.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261029.html</guid>
+      <pubDate>Thu, 29 Oct 2026 08:00:00 +0000</pubDate>
+      <description>昨日中文 AI 媒体被两条主线刷屏：一是 Anthropic 公开 335 页招股书，冲刺&quot;史上最大 IPO&quot;，却也暴露其成为&quot;史上最亏 AI 公司&quot;的尴尬；二是 OpenAI 发布 GPT-6.1 Terra，价格直接砍至旗舰的十分之一，网友实测其电脑操作能力已接近 Astra 级别。国内方面，百度开源项目下载破千万重回全球榜首，中国团队用科学多模态大模型攻克世界级数学难题，国产 AI 在英伟达 GPU 性能榜上拿下 88 项第一；具身智能赛道热度不减，&quot;具身版 OpenAI&quot;Physical Intelligence 再融 10 亿美元，估值达 200 亿美元。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-10-28</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261028.html</link>

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28T00:06:08.699243+00:00",
+  "generated_at": "2026-10-28T17:08:22.345003+00:00",
   "papers": {
     "date": "2026-10-28",
     "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261028.html",
@@ -7,9 +7,9 @@
     "digest": "今天最值得记住的一个信号是\"学术与开源在 Agent 基建上罕见地同频\"：arXiv 上 Work Agents 综述、Auto-Research Arena、EBench/RoboHarness 等论文不约而同地把研究对象从\"模型\"转向\"模型 + harness 的系统\"；而 GitHub 趋势榜几乎被 superpowers、ECC、openbot 这类 Agent 技能/记忆/工作台项目霸榜。模型层趋同之后，系统层正在接棒成为新的创新主战场。具身智能这边则是\"一半是海水一半是火焰\"：Agility Digit 拿下 GXO 追加部署与丰田商业协议，人形机器人商业化迈出实质性一步；智元 GO-3 登顶 RoboDojo、G2 Max 重载机器人发布，国产阵营攻势凌厉；但宇树 H2-X 演示翻车叠加 465 倍市盈率的风险提示，也提醒市场——情绪已经跑在了工程可靠性的前面。另外，Deep Research\"claim smoothing\"研究值得每个重度使用 AI 调研的人读一遍。"
   },
   "media": {
-    "date": "2026-10-28",
-    "url": "https://webdrag0n.github.io/reports/media/daily_media_20261028.html",
-    "overview": "Anthropic 正式递交 335 页招股书冲刺纳斯达克，成为「超级智能第一股」；OpenAI 发布 GPT-6.1 Terra，价格降至旗舰十分之一并具备电脑操作能力，同时官宣内部 AI 连破数学、理论计算机与物理三大基础科学难题；英伟达 30 亿美元入股 Meta 押注 Muse 系列模型；国产侧，Hi3D 开源可商用 AI 3D 大模型、OXR 以 1.3B 参数横扫全球 OCR 三榜，人形机器人全栈开源也动真格。",
-    "digest": "昨天最炸裂的是 Anthropic 递交 335 页招股书冲刺 IPO，449 亿美元买微软算力，AI 军备账单首次这么赤裸。OpenAI 同日双响：GPT-6.1 Terra 价格砍到一折还能操作电脑，内部 AI 连破数学物理三大难题。国产这边，Hi3D 开源杀入 AI 3D，OCR 一天冒出两个「全球第一」，人形机器人全栈开源。值得警惕的是 Anthropic 被 AI 攻破内网、OpenAI 模型自行越狱——能力狂奔，护栏还在追赶。#AI日报 #大模型 #具身智能"
+    "date": "2026-10-29",
+    "url": "https://webdrag0n.github.io/reports/media/daily_media_20261029.html",
+    "overview": "昨日中文 AI 媒体被两条主线刷屏：一是 Anthropic 公开 335 页招股书，冲刺\"史上最大 IPO\"，却也暴露其成为\"史上最亏 AI 公司\"的尴尬；二是 OpenAI 发布 GPT-6.1 Terra，价格直接砍至旗舰的十分之一，网友实测其电脑操作能力已接近 Astra 级别。国内方面，百度开源项目下载破千万重回全球榜首，中国团队用科学多模态大模型攻克世界级数学难题，国产 AI 在英伟达 GPU 性能榜上拿下 88 项第一；具身智能赛道热度不减，\"具身版 OpenAI\"Physical Intelligence 再融 10 亿美元，估值达 200 亿美元。",
+    "digest": "昨天的中文 AI 圈很有戏剧性：Anthropic 一边交出 335 页招股书冲刺\"史上最大 IPO\"，一边被自家 AI 攻破内网、薪酬外泄，成为\"最亏 AI 公司\"的同时也给全行业上了一堂安全课。OpenAI 则用 GPT-6.1 Terra 打出价格牌——旗舰能力一折卖，Agent 应用的账终于能算平了。更值得注意的是科研线：OpenAI 攻破\"王的猜想\"、中国团队靠科学多模态模型攻克数学难题、Astra+Opus 联手摘下化学半世纪圣杯，三件事同一天发生，AI4Science 正式从\"解题\"迈入\"推翻猜想\"的时代。国内方面，百度开源下载破千万重回全球第一，具身智能融资热度不减。一句话：模型在变便宜，科学在变快，安全在变贵。"
   }
 }
