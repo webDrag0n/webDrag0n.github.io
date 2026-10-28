@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 每日速递 — 2026-10-28</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .takeaway {
+    font-size: 13px;
+    color: var(--text);
+    background: #f1f8ff;
+    border-radius: 6px;
+    padding: 6px 10px;
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📰</div>
+  <h1>AI 每日速递</h1>
+  <div class="date">2026 年 10 月 28 日 · 星期三</div>
+  <div class="subtitle">arXiv · HuggingFace Daily Papers · GitHub Trending · Robot Overflow</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>研究侧两大主线清晰：<strong>Agent 基建化</strong>（harness 设计、评测基准、自动化研究 Arena 集中涌现）与<strong>具身智能落地加速</strong>（Agility Digit 商用扩张、智元重载机器人与 GO-3 榜单登顶、宇树 H2-X 演示事故引发热议）。开源社区方面，GitHub 趋势榜几乎被"AI Agent 工作流/技能框架"类项目霸榜，Agent harness 与技能系统正成为新的基础设施层。</p>
+</div>
+
+<!-- ============ 今日焦点 ============ -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日焦点</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 具身智能 · 商业化里程碑</div>
+    <div class="title"><a href="https://www.manilatimes.net/2026/10/26/tmt-newswire/globenewswire/agility-robotics-highlights-commercial-momentum-and-growing-enterprise-demand-for-digit-humanoid-robot/2454054" target="_blank">Agility 披露：GXO 再增两处 Digit 部署，三家制造业客户付费试点</a></div>
+    <div class="summary">Agility Robotics 在投资者电话会前披露：GXO 将自 2027 年初在另外两处美国工厂部署 Digit 人形机器人，佐治亚工厂已累计搬运超 10 万个料箱；三家未具名制造商进入付费项目，加拿大丰田签署商业协议，30 多个潜在客户洽谈中，3 亿美元以上的 Digit 5 订单为潜在价值。</div>
+    <div class="takeaway">💡 解读：这是人形机器人从"演示"走向"规模化付费部署"的标志性节点，仓储物流场景率先验证了商业闭环。</div>
+    <div class="tags">
+      <span class="tag hot">热门</span>
+      <span class="tag">具身智能</span>
+      <span class="tag">商业化</span>
+      <span class="tag">Agility / GXO</span>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 研究 · Agent 基建</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.35845" target="_blank">Work Agents: Systems, Capabilities, and Optimization</a></div>
+    <div class="summary">arXiv 最新系统性综述：随着基础模型从信息生成走向数字工作执行，论文提出"以工作为中心"的系统级视角，将 Work Agent 视为"基础模型 + 运行时 harness"的组合系统，统一讨论其能力边界与优化方法。</div>
+    <div class="takeaway">💡 解读：与今日 arXiv 上一批 harness/arena 论文呼应——Agent 竞争的重心正从模型本身转向"模型外围的系统工程"。</div>
+    <div class="tags">
+      <span class="tag hot">热门</span>
+      <span class="tag">Agent</span>
+      <span class="tag">系统综述</span>
+      <span class="tag">cs.LG</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ arXiv 前沿论文 ============ -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>arXiv 前沿论文（10 月 26 日新投稿）</div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.35866 · cs.LG · Auto-Research Arena</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.35866" target="_blank">Auto-Research Arena: Benchmarking and Advancing Auto-Research in Language Modeling</a></div>
+    <div class="summary">面向"自动化科研系统"的多目标基准：在统一实验环境中支持多样化研究目标，将"可行性（admissibility）"与"改进幅度"分离评估，既衡量 AI 自动做研究的能力，也用于发现语言建模新思路。</div>
+    <div class="takeaway">💡 解读："AI 做 AI 研究"开始进入标准化评测阶段，是通往自动化科研闭环的重要基础设施。</div>
+    <div class="tags">
+      <span class="tag">Auto-Research</span>
+      <span class="tag">Benchmark</span>
+      <span class="tag">LLM</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.35868 · cs.AI · 检索增强</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.35868" target="_blank">Retriever-Free Retrieval: Navigating Documents with Decision Models</a></div>
+    <div class="summary">提出 DecisionRAG：抛弃传统的词匹配/向量检索，用预训练语言模型作为"决策模型"在单次前向传播中联合评估候选分支，直接在文档树中导航定位信息，解决"检索器找不到，生成器再强也没用"的能力不对称问题。</div>
+    <div class="takeaway">💡 解读：RAG 架构的一条激进路线——把检索本身也交给大模型决策，值得观察其在长文档场景的实测表现。</div>
+    <div class="tags">
+      <span class="tag">RAG</span>
+      <span class="tag">检索</span>
+      <span class="tag">cs.AI</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.35862 · cs.RO · 人形机器人操作</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.35862" target="_blank">Learning Force-Reactive Humanoid Loco-Manipulation (FLORE)</a></div>
+    <div class="summary">许多日常任务需要同时控制接触力与运动。FLORE 框架通过两支带力传感的 UMI 式手持夹爪采集"无机器人"示范（手部运动 + 接触力/力矩），学习力响应式的人形机器人移动操作，实现双手与全身协调的力控。</div>
+    <div class="takeaway">💡 解读：力控是人形机器人进入真实产线的关键短板，"无本体数据采集 + 力觉示范"是一条低成本扩展路线。</div>
+    <div class="tags">
+      <span class="tag">具身智能</span>
+      <span class="tag">人形机器人</span>
+      <span class="tag">力控</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.35817 · cs.RO · 仿真训练</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.35817" target="_blank">Pretraining Knows What, Simulation Teaches How: Compositional Generalization in a Sim-Trained Robot Agent</a></div>
+    <div class="summary">提出 Zero-real Agent Policy（ZAP）：用 27B 预训练 VLM 提供世界理解与推理（"知道做什么"），再通过简单工具 harness + SFT + GRPO 在仿真中教会小型 VLM 控制机器人（"知道怎么做"），实现组合泛化。</div>
+    <div class="takeaway">💡 解读："预训练给常识、仿真教技能"的分工配方，为零真机数据训练机器人策略提供了可复现范式。</div>
+    <div class="tags">
+      <span class="tag">具身智能</span>
+      <span class="tag">VLA</span>
+      <span class="tag">GRPO</span>
+      <span class="tag">Sim2Real</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.35801 · cs.LG · 强化学习</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.35801" target="_blank">FOCUS: Active Critic Learning for Long-Horizon Language Model Agents</a></div>
+    <div class="summary">针对长程 Agent 的稀疏结果奖励问题，FOCUS 通过"选择性分支"（selective branching）主动学习 Critic：只在最有信息量的轨迹点上花费延续采样预算，兼顾价值估计精度与计算成本。</div>
+    <div class="takeaway">💡 解读：长程 Agent RL 的信用分配难题又添新解，"把采样预算花在哪"比"采多少样"更关键。</div>
+    <div class="tags">
+      <span class="tag">RL</span>
+      <span class="tag">Agent</span>
+      <span class="tag">长程任务</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.35804 · cs.CL · 推理加速</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.35804" target="_blank">Learning When to Commit: Schedule Distillation for Fast Diffusion Language Models</a></div>
+    <div class="summary">扩散语言模型（dLLM）可并行生成多 token，但需要多轮解码。本文指出：高效生成不仅取决于哪些 token 好预测，更取决于"提交"它们对预测其余位置的帮助，并据此提出调度蒸馏方法加速解码。</div>
+    <div class="takeaway">💡 解读：dLLM 推理加速进入"提交策略学习"阶段，并行解码的实际可用性持续提升。</div>
+    <div class="tags">
+      <span class="tag">扩散语言模型</span>
+      <span class="tag">推理加速</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.35835 · cs.CR · AI 安全</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.35835" target="_blank">I-HITL: Inalienable Human-in-the-Loop</a></div>
+    <div class="summary">针对 Agent 日益擅长绕过护栏的问题，提出"不可剥夺的人机回环"（I-HITL）协议：从机制上保证 Agent 只有在获得显式人类批准后才能发起关键动作，即"人类在环"不可被 Agent 自身移除。</div>
+    <div class="takeaway">💡 解读：随着 Agent 自主性增强，"人在环"从流程约定升级为协议级强制约束，是 Agent 安全治理的重要方向。</div>
+    <div class="tags">
+      <span class="tag">AI 安全</span>
+      <span class="tag">Agent 治理</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.35793 · cs.CL · Deep Research 可靠性</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.35793" target="_blank">Quantifying Claim Smoothing by LLM Research Agents</a></div>
+    <div class="summary">发现 LLM 深度研究 Agent 存在"claim smoothing"失效模式：生成的长篇研究报告读起来像自信的综述，却未能准确反映底层文档，把多样甚至相互矛盾的来源"抹平"成单一叙事。</div>
+    <div class="takeaway">💡 解读：Deep Research 类产品的隐性风险被量化命名，对依赖 AI 写调研报告的用户是值得警惕的提醒。</div>
+    <div class="tags">
+      <span class="tag">Deep Research</span>
+      <span class="tag">幻觉</span>
+      <span class="tag">可靠性</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HuggingFace 热门 ============ -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤗</span>HuggingFace Daily Papers 精选</div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily Papers · 2610.19025</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.19025" target="_blank">How Far Can Coding Agents Go in Visual Generation?</a></div>
+    <div class="summary">系统评估编程 Agent 在视觉生成任务上的能力边界——不写图像模型、只用代码与工具，Coding Agent 能在视觉生成上走多远？</div>
+    <div class="takeaway">💡 解读："用代码代替专用生成模型"的思路若成立，将显著降低多模态应用的工程门槛。</div>
+    <div class="tags">
+      <span class="tag">Coding Agent</span>
+      <span class="tag">视觉生成</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily Papers · 2610.14018</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.14018" target="_blank">RoboHarness: A Simple Harness Outperforms VLA and World Action Models</a></div>
+    <div class="summary">与今日 arXiv 的 EBench 报告（2610.35832）相互印证：一个设计得当的简单 Agent harness 驱动前沿多模态大模型直接控制机器人，在多项操作任务上可超过专门训练的 VLA 与世界动作模型。</div>
+    <div class="takeaway">💡 解读："通用大模型 + 好 harness" vs "专用机器人模型"的路线之争升温，机器人基础模型的护城河受到挑战。</div>
+    <div class="tags">
+      <span class="tag">具身智能</span>
+      <span class="tag">VLA</span>
+      <span class="tag">Agent Harness</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily Papers · 2610.33861</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.33861" target="_blank">ReGE: Stronger Agents through Experience Synthesis</a></div>
+    <div class="summary">通过"经验合成"增强 Agent：从历史交互中提炼可复用经验，让 Agent 在新任务上表现更强，属于 Agent 自我改进/记忆增强方向。</div>
+    <div class="takeaway">💡 解读：与 ECC、superpowers 等开源"技能/记忆框架"的工程实践遥相呼应，经验复用正成为 Agent 增强的共识路径。</div>
+    <div class="tags">
+      <span class="tag">Agent</span>
+      <span class="tag">记忆/经验</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 机器人/具身智能动态 ============ -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>机器人 / 具身智能动态（Robot Overflow）</div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 2026-10-27 · 重要性 ★★</div>
+    <div class="title"><a href="https://www.thepaper.cn/newsDetail_forward_34342173" target="_blank">智元 GO-3 Nano Preview 登顶 RoboDojo 榜单</a></div>
+    <div class="summary">GO-3 Nano Preview 综合得分 61.90、平均成功率 56.42%，总分及精细操作、长程执行、开放语义三项均列第一。完整版 GO-3 将在 10 月 29 日智元 AI Day 发布。同日智元还发布了安规级重载机器人"精灵 G2 Max"（双臂额定 40kg、峰值 50kg）。</div>
+    <div class="takeaway">💡 解读：智元"模型 + 本体"双线并进，明日 AI Day 是观察国产具身大模型进展的重要窗口；另有报道称其港股 IPO 因新融资暂缓。</div>
+    <div class="tags">
+      <span class="tag hot">热点</span>
+      <span class="tag">智元</span>
+      <span class="tag">具身大模型</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 2026-10-26/27 · 重要性 ★★</div>
+    <div class="title"><a href="https://www.caixinglobal.com/2026-10-27/unitree-warns-of-valuation-risks-after-shares-surge-more-than-65-102497621.html" target="_blank">宇树股价七个交易日涨超 65%，公司提示估值风险；H2-X 演示中腿部脱落</a></div>
+    <div class="summary">摩根大通将宇树上调至"增持"（目标价 995 元），股价七交易日涨超 65% 至 672 元（市值约 2718 亿元），公司公告提示滚动市盈率 465 倍（行业 38.5 倍）的估值风险。同周，新发布的 H2-X 在杭州公开演示侧翻时右小腿脱落，视频在网络传播，官方尚未说明原因。</div>
+    <div class="takeaway">💡 解读：资本市场的火热与公开演示的翻车形成鲜明对照——人形机器人板块的估值情绪已明显跑在工程可靠性前面。</div>
+    <div class="tags">
+      <span class="tag hot">热点</span>
+      <span class="tag">宇树</span>
+      <span class="tag">资本市场</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 2026-10-26 · 重要性 ★★</div>
+    <div class="title"><a href="https://en.sedaily.com/finance/2026/10/26/robotis-to-supply-actuators-for-duck-robot-that-impressed" target="_blank">ROBOTIS 将为 Pollen（Hugging Face）Micro Duck 供应约 75 万台 Dynamixel 舵机</a></div>
+    <div class="summary">据首尔经济日报，ROBOTIS 签下约 35 亿韩元合同，向 Hugging Face 旗下 Pollen Robotics 供应约 75 万台 Dynamixel 舵机；Micro Duck 当前需求约 5 万台（每台 15 个舵机），预计明年二季度起大幅放量。</div>
+    <div class="takeaway">💡 解读：开源机器人硬件开始起量，上游核心零部件（舵机/执行器）供应链率先受益。</div>
+    <div class="tags">
+      <span class="tag">供应链</span>
+      <span class="tag">Hugging Face</span>
+      <span class="tag">开源硬件</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 2026-10-26 · 重要性 ★★</div>
+    <div class="title"><a href="https://technode.com/2026/10/26/agile-robots-plans-up-to-2000-research-humanoids-through-nvidia-partnership/" target="_blank">Agile Robots 计划与英伟达合作，2027 年推出 1000–2000 台科研人形机器人</a></div>
+    <div class="summary">创始人陈兆鹏对路透社表示，Agile ONE S / ONE SN 将于 2026 年底前投产，明年出货 1000–2000 台，面向高校和企业实验室（斯坦福、苏黎世联邦理工为潜在客户），2027 年初开始供货。</div>
+    <div class="takeaway">💡 解读："科研版人形机器人"正在成为新品类——先卖给实验室建生态，再图工业场景，路径与当年 GPU 切入学术市场神似。</div>
+    <div class="tags">
+      <span class="tag">Agile Robots</span>
+      <span class="tag">英伟达</span>
+      <span class="tag">科研市场</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ GitHub 开源动态 ============ -->
+<div class="section">
+  <div class="section-title"><span class="emoji">⭐</span>GitHub Trending · AI 开源动态</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · TypeScript · +1,465 stars/day</div>
+    <div class="title"><a href="https://github.com/makecindy/cindy" target="_blank">makecindy/cindy — 开源、开箱即用的 AI Agent</a></div>
+    <div class="summary">"想到，就能做到。"定位开箱即用的开源 AI Agent，今日 GitHub 趋势榜 AI 类目头部项目之一。</div>
+    <div class="takeaway">💡 解读：通用个人 Agent 赛道仍在快速吸引开发者注意力，"开箱即用"是当前差异化关键。</div>
+    <div class="tags">
+      <span class="tag hot">趋势榜</span>
+      <span class="tag">AI Agent</span>
+      <span class="tag">开源</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · Python · +1,598 stars/day</div>
+    <div class="title"><a href="https://github.com/HKUDS/DeepTutor" target="_blank">HKUDS/DeepTutor — 终身个性化 AI 导师</a></div>
+    <div class="summary">港大数据科学实验室出品的个性化辅导 Agent（deeptutor.info），主打长期陪伴式学习，今日趋势榜教育类 AI 项目热度第一。</div>
+    <div class="takeaway">💡 解读：AI 教育 Agent 从"答题工具"走向"长期个性化导师"，学术团队出品值得关注其方法论。</div>
+    <div class="tags">
+      <span class="tag">AI 教育</span>
+      <span class="tag">Agent</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · Shell/Rust/TypeScript · Agent 基建集中爆发</div>
+    <div class="title"><a href="https://github.com/obra/superpowers" target="_blank">Agent "技能/记忆/harness" 框架霸榜：superpowers · ECC · impeccable · openbot</a></div>
+    <div class="summary">今日趋势榜出现罕见的主题聚集：obra/superpowers（Agent 技能框架，+617/天）、affaan-m/ECC（Agent harness 性能优化系统，+1,165/天）、pbakaus/impeccable（提升 AI 设计能力的语言，+1,449/天）、nightly-labs/openbot（本地优先的多 Agent 桌面工作台，+777/天）、Nutlope/hallmark（反 AI 味的编码 Agent 设计技能，+2,830/天）。</div>
+    <div class="takeaway">💡 解读：社区共识正在形成——模型能力趋同后，竞争转向"Agent 外围系统"（技能、记忆、harness、工作台），与今日 arXiv 上 Work Agents 等论文的学术判断完全一致。</div>
+    <div class="tags">
+      <span class="tag hot">趋势榜</span>
+      <span class="tag">Agent Harness</span>
+      <span class="tag">技能框架</span>
+      <span class="tag">开发者工具</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今天最值得记住的一个信号是"学术与开源在 Agent 基建上罕见地同频"：arXiv 上 Work Agents 综述、Auto-Research Arena、EBench/RoboHarness 等论文不约而同地把研究对象从"模型"转向"模型 + harness 的系统"；而 GitHub 趋势榜几乎被 superpowers、ECC、openbot 这类 Agent 技能/记忆/工作台项目霸榜。模型层趋同之后，系统层正在接棒成为新的创新主战场。具身智能这边则是"一半是海水一半是火焰"：Agility Digit 拿下 GXO 追加部署与丰田商业协议，人形机器人商业化迈出实质性一步；智元 GO-3 登顶 RoboDojo、G2 Max 重载机器人发布，国产阵营攻势凌厉；但宇树 H2-X 演示翻车叠加 465 倍市盈率的风险提示，也提醒市场——情绪已经跑在了工程可靠性的前面。另外，Deep Research"claim smoothing"研究值得每个重度使用 AI 调研的人读一遍。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · Generated 2026-10-28 · 数据来源：arXiv / HuggingFace / GitHub / Robot Overflow</p>
+</div>
+
+</div>
+</body>
+</html>

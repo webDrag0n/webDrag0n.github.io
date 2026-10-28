@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 27 Oct 2026 17:15:29 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 00:06:08 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-10-28</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261028.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261028.html</guid>
+      <pubDate>Wed, 28 Oct 2026 08:00:00 +0000</pubDate>
+      <description>研究侧两大主线清晰：Agent 基建化（harness 设计、评测基准、自动化研究 Arena 集中涌现）与具身智能落地加速（Agility Digit 商用扩张、智元重载机器人与 GO-3 榜单登顶、宇树 H2-X 演示事故引发热议）。开源社区方面，GitHub 趋势榜几乎被&quot;AI Agent 工作流/技能框架&quot;类项目霸榜，Agent harness 与技能系统正成为新的基础设施层。</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-10-28</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261028.html</link>

@@ -1,11 +1,17 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-10-27T17:15:29.379617+00:00",
+  "generated_at": "2026-10-28T00:06:08.694924+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
-      "count": 88,
+      "count": 89,
       "items": [
+        {
+          "date": "2026-10-28",
+          "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261028.html",
+          "overview": "研究侧两大主线清晰：Agent 基建化（harness 设计、评测基准、自动化研究 Arena 集中涌现）与具身智能落地加速（Agility Digit 商用扩张、智元重载机器人与 GO-3 榜单登顶、宇树 H2-X 演示事故引发热议）。开源社区方面，GitHub 趋势榜几乎被\"AI Agent 工作流/技能框架\"类项目霸榜，Agent harness 与技能系统正成为新的基础设施层。",
+          "digest": "今天最值得记住的一个信号是\"学术与开源在 Agent 基建上罕见地同频\"：arXiv 上 Work Agents 综述、Auto-Research Arena、EBench/RoboHarness 等论文不约而同地把研究对象从\"模型\"转向\"模型 + harness 的系统\"；而 GitHub 趋势榜几乎被 superpowers、ECC、openbot 这类 Agent 技能/记忆/工作台项目霸榜。模型层趋同之后，系统层正在接棒成为新的创新主战场。具身智能这边则是\"一半是海水一半是火焰\"：Agility Digit 拿下 GXO 追加部署与丰田商业协议，人形机器人商业化迈出实质性一步；智元 GO-3 登顶 RoboDojo、G2 Max 重载机器人发布，国产阵营攻势凌厉；但宇树 H2-X 演示翻车叠加 465 倍市盈率的风险提示，也提醒市场——情绪已经跑在了工程可靠性的前面。另外，Deep Research\"claim smoothing\"研究值得每个重度使用 AI 调研的人读一遍。"
+        },
         {
           "date": "2026-10-27",
           "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261027.html",

@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-27T17:15:29.381918+00:00",
+  "generated_at": "2026-10-28T00:06:08.699243+00:00",
   "papers": {
-    "date": "2026-10-27",
-    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261027.html",
-    "overview": "具身智能赛道进入密集兑现期：Agility 一口气公布 GXO 两处新部署、佐治亚工厂 10 万+ 料箱搬运量与 3 亿美元潜在订单；智元发布安规级重载机器人 G2 Max，同时港股 IPO 因 500 亿估值新融资暂缓；宇树 H2-X 侧翻事故暴露量产工程化痛点，公司市值却已突破 2718 亿、P/E 高达 465 倍。学术侧，HuggingFace Daily 被「视频作为世界接口」（221 ▲）与「统一具身大脑 RynnUnify」（31 ▲）占领，arXiv 上 FLORA 开源机器人数据引擎、FocusVLA 未来意图引导 VLA、DexPort 灵巧手数据采集接口密集出现，共同指向「数据—策略—部署」闭环正在收敛。开源侧 paperclip、omnigent、NVIDIA NeMo Gym 持续高热，Agent 工具链进一步分化。",
-    "digest": "今天最值得记录的是「具身智能的商业化节奏明显快于学术节奏」。Agility 披露的 GXO 部署与付费试点数据，是人形机器人从 demo 走向可复制商业部署的第一次公开量化；智元 G2 Max 直接切入拆码垛与产线供料，与 Figure 04、Optimus 的「先家庭后工厂」路径形成有趣对照。但宇树 H2-X 侧翻断腿事件同样提醒我们，硬件可靠性仍是横在规模化面前的最大变量。学术侧，「视频作为世界接口」与 RynnUnify 的具身大脑思路，加上 DexPort、FLORA、FocusVLA 围绕数据与策略的工程化突破，意味着 VLA 栈正在从单点模型竞争走向全栈基础设施竞争——这或许比任何单一模型发布都更值得关注。"
+    "date": "2026-10-28",
+    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261028.html",
+    "overview": "研究侧两大主线清晰：Agent 基建化（harness 设计、评测基准、自动化研究 Arena 集中涌现）与具身智能落地加速（Agility Digit 商用扩张、智元重载机器人与 GO-3 榜单登顶、宇树 H2-X 演示事故引发热议）。开源社区方面，GitHub 趋势榜几乎被\"AI Agent 工作流/技能框架\"类项目霸榜，Agent harness 与技能系统正成为新的基础设施层。",
+    "digest": "今天最值得记住的一个信号是\"学术与开源在 Agent 基建上罕见地同频\"：arXiv 上 Work Agents 综述、Auto-Research Arena、EBench/RoboHarness 等论文不约而同地把研究对象从\"模型\"转向\"模型 + harness 的系统\"；而 GitHub 趋势榜几乎被 superpowers、ECC、openbot 这类 Agent 技能/记忆/工作台项目霸榜。模型层趋同之后，系统层正在接棒成为新的创新主战场。具身智能这边则是\"一半是海水一半是火焰\"：Agility Digit 拿下 GXO 追加部署与丰田商业协议，人形机器人商业化迈出实质性一步；智元 GO-3 登顶 RoboDojo、G2 Max 重载机器人发布，国产阵营攻势凌厉；但宇树 H2-X 演示翻车叠加 465 倍市盈率的风险提示，也提醒市场——情绪已经跑在了工程可靠性的前面。另外，Deep Research\"claim smoothing\"研究值得每个重度使用 AI 调研的人读一遍。"
   },
   "media": {
     "date": "2026-10-28",
