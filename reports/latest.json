@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-28T17:10:59.355716+00:00",
+  "generated_at": "2026-10-29T00:08:00.514108+00:00",
   "papers": {
-    "date": "2026-10-28",
-    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261028.html",
-    "overview": "研究侧两大主线清晰：Agent 基建化（harness 设计、评测基准、自动化研究 Arena 集中涌现）与具身智能落地加速（Agility Digit 商用扩张、智元重载机器人与 GO-3 榜单登顶、宇树 H2-X 演示事故引发热议）。开源社区方面，GitHub 趋势榜几乎被\"AI Agent 工作流/技能框架\"类项目霸榜，Agent harness 与技能系统正成为新的基础设施层。",
-    "digest": "今天最值得记住的一个信号是\"学术与开源在 Agent 基建上罕见地同频\"：arXiv 上 Work Agents 综述、Auto-Research Arena、EBench/RoboHarness 等论文不约而同地把研究对象从\"模型\"转向\"模型 + harness 的系统\"；而 GitHub 趋势榜几乎被 superpowers、ECC、openbot 这类 Agent 技能/记忆/工作台项目霸榜。模型层趋同之后，系统层正在接棒成为新的创新主战场。具身智能这边则是\"一半是海水一半是火焰\"：Agility Digit 拿下 GXO 追加部署与丰田商业协议，人形机器人商业化迈出实质性一步；智元 GO-3 登顶 RoboDojo、G2 Max 重载机器人发布，国产阵营攻势凌厉；但宇树 H2-X 演示翻车叠加 465 倍市盈率的风险提示，也提醒市场——情绪已经跑在了工程可靠性的前面。另外，Deep Research\"claim smoothing\"研究值得每个重度使用 AI 调研的人读一遍。"
+    "date": "2026-10-29",
+    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261029.html",
+    "overview": "周四批次放量，Agent 训练成为绝对主线：Multiscale Policy Optimization（372↑）把长程智能体的信用分配对齐到轮次尺度，Trinity（311↑）让多模态智能体沿能力树递归自我进化，Memory Tax（111↑）则冷峻解剖「加记忆到底值不值」。具身智能热度不减：PDRVLA 给 VLA 模型装上轻量物理动力学模块，ThinkWorld 用「世界想象」强化动作推理；产业侧恰逢智元 AI Day（今日发布 GO-3 完整版），波士顿动力 Atlas 被曝 1 万台备货、宇树首份季报营收增 70% 但利润承压。开源榜被「反 AI 味设计技能」刷屏——hallmark 单日 2110 星，Agent 工具链叙事延续。",
+    "digest": "本期最值得关注的信号是 Agent 训练方法论的快速收敛：MPO 将信用分配从 token 尺度上移到轮次尺度，Trinity 以能力树组织递归自我改进，Memory Tax 与 CrossProfile 则分别从成本与群体决策角度质疑记忆的净值——「给智能体加记忆」正从默认选项变为需要论证的工程决策。多模态侧，FVQ 用并行码本逼近「语义无损」的离散视觉 token，若成立将简化统一理解-生成架构。具身赛道学术与产业罕见同频：PDRVLA、ThinkWorld 探索「先想后动」的世界模型路线，而智元 GO-3、Atlas 供应链与宇树财报共同显示人形机器人正从演示转向交付与成本核算阶段。开源社区对「AI 味」的反弹（hallmark/impeccable 走红）提示：生成质量竞争的下一个战场是审美与品味，而非能力边界。"
   },
   "media": {
     "date": "2026-10-29",

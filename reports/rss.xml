@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 28 Oct 2026 17:10:59 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 00:08:00 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-10-29</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261029.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261029.html</guid>
+      <pubDate>Thu, 29 Oct 2026 08:00:00 +0000</pubDate>
+      <description>周四批次放量，Agent 训练成为绝对主线：Multiscale Policy Optimization（372↑）把长程智能体的信用分配对齐到轮次尺度，Trinity（311↑）让多模态智能体沿能力树递归自我进化，Memory Tax（111↑）则冷峻解剖「加记忆到底值不值」。具身智能热度不减：PDRVLA 给 VLA 模型装上轻量物理动力学模块，ThinkWorld 用「世界想象」强化动作推理；产业侧恰逢智元 AI Day（今日发布 GO-3 完整版），波士顿动力 Atlas 被曝 1 万台备货、宇树首份季报营收增 70% 但利润承压。开源榜被「反 AI 味设计技能」刷屏——hallmar</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-10-29</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261029.html</link>
