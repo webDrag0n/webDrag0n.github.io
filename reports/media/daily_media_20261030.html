@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中文AI媒体日报 — 2026年10月29日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>中文AI媒体日报</h1>
+  <div class="date">2026年10月29日（周四）</div>
+  <div class="subtitle">来源：机器之心 · 量子位 · 新智元 · 36氪 · 智东西 · 少数派 等</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>昨日AI圈三条主线齐发——谷歌Gemini 4 Carbon时隔两周火速上线，以59分登顶Artificial Analysis智能指数、全面反超Claude Opus 5.5，并宣称100%免疫提示词注入；智元创新日发布具身基座模型GO-3 Preview，横扫三大权威评测榜首，「全链路Scaling」成为机器人学习新叙事；扩散语言模型Clover-35B杀进Agent主场，速度比Jev快一倍。此外，Physical Intelligence以0营收洽谈10亿美元融资、估值冲200亿美元，OpenAI给Pro/Business用户每月返最高500美元API额度，AI辅助攻克5道27年量子开放问题也引发热议。</p>
+</div>
+
+<div class="hot-topic">
+  <div class="label">🔥 今日最热</div>
+  <div class="card" style="box-shadow:none;border:none;background:transparent;padding:0;margin:0;">
+    <div class="source">量子位 · 机器之心 | 2026-10-29</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/506227.html">Gemini 4 Carbon全面超越Opus 5.5！首发Token半价，100%免疫提示词注入</a></div>
+    <div class="summary">距Argon发布仅两周，谷歌推出新旗舰Gemini 4 Carbon：Artificial Analysis智能指数59分登顶，Terminal-Bench 4.0以65.2%领先Opus 5.5与GPT-6 Astra；输入2美元/百万Token、缓存命中低至0.2美元，仅为Opus 5.5一半。谷歌称其在内部实战编程中可连续数日自主死磕底层Bug。</div>
+    <div class="tags"><span class="tag hot">头条</span><span class="tag">大模型</span><span class="tag">谷歌</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型与技术前沿</div>
+
+  <div class="card">
+    <div class="source">量子位 | 2026-10-29</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/505934.html">扩散模型杀进Agent主场！350亿参数Clover-35B-A3B，速度比Jev快一倍</a></div>
+    <div class="summary">扩散智能发布全新扩散语言模型Clover-35B-A3B-Preview（MoE架构，激活约30亿参数），能写代码、操作网页、调用工具；在网页Agent评测WindTunnel中位执行时间1.52秒、成功率98.6%，用时仅为Jev+Mercury 2.5组合的一半。</div>
+    <div class="tags"><span class="tag">扩散LLM</span><span class="tag">Agent</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">机器之心 | 2026-10-29</div>
+    <div class="title"><a href="https://www.163.com/dy/article/LADBS7BS0511AQHO.html">NeurIPS 2026 Oral｜NV-CoT：用连续坐标重构视觉思维链，让大模型精准「看图」</a></div>
+    <div class="summary">论文提出以连续坐标表达视觉推理过程，取代离散文本式思维链，在多模态「看图推理」任务上显著提升精度，入选NeurIPS 2026口头报告。</div>
+    <div class="tags"><span class="tag">多模态</span><span class="tag">NeurIPS</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 | 2026-10-29</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/506477.html">物理学也要被AI攻陷了？5道20多年量子开放问题被突破</a></div>
+    <div class="summary">神秘公司Physical Superintelligence（PSI）宣布借助自研AI科研系统，在纠缠提纯、量子场论、高维量子通信等5个Open Quantum Problems（1999年建立的27年开放问题目录）上取得成果，论文与Lean形式化证明已在GitHub公开。</div>
+    <div class="tags"><span class="tag">AI4Science</span><span class="tag">量子信息</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 | 2026-10-29</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/505928.html">Personal Agent走向真实任务：蚂蚁百灵开源Ling-3.1-flash-1019</a></div>
+    <div class="summary">蚂蚁百灵开源新版本Ling-3.1-flash-1019及基础模型，智能指数提升3分至44分；面向Personal Agent场景，复杂知识工作AA-Briefcase Elo升至1524，流程自动化AutomationBench得分从62%提升至68%。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">Agent</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>具身智能与机器人</div>
+
+  <div class="card">
+    <div class="source">机器之心 | 2026-10-29</div>
+    <div class="title"><a href="https://www.163.com/dy/article/LAE7SL0G0511AQHO.html">刚刚，机器人学习进入「全链路Scaling」时代：智元GO-3 Preview登顶三大榜单</a></div>
+    <div class="summary">智元在2026创新日发布具身基座模型GO-3 Preview，打通预训练、后训练与部署后的全链路规模化学习，约九成预训练数据来自人类第一视角视频，一举拿下RoboDojo、RoboTwin、RoboColiseum三项权威评测第一。</div>
+    <div class="tags"><span class="tag hot">具身</span><span class="tag">智元</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 | 2026-10-29</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/506042.html">0营收估值200亿美元：Physical Intelligence再融10亿美元，「具身版OpenAI」的资本神话</a></div>
+    <div class="summary">成立两年的美国机器人AI公司PI正洽谈至少10亿美元新一轮融资，投后估值约200亿美元，较去年的56亿美元上涨3.6倍；迄今无商业营收，贝索斯、CapitalG等持续下注其通用机器人「大脑」路线。</div>
+    <div class="tags"><span class="tag">融资</span><span class="tag">具身智能</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 | 2026-10-29</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/505865.html">人形机器人全开源动真格：从机械结构一路拆到运动算法</a></div>
+    <div class="summary">人形机器人公司将技术栈彻底开源，覆盖机械结构设计、硬件方案到运动控制算法的完整链路，降低行业复现门槛，被视作对具身智能「开源生态」的一次实质性推动。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">人形机器人</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">机器之心 | 2026-10-29</div>
+    <div class="title"><a href="https://www.163.com/dy/article/LAE8LGGP0511AQHO.html">NeurIPS 2026 Spotlight｜机器人探索未知世界不能只认一条路：天大提出FAME</a></div>
+    <div class="summary">天津大学与合肥工业大学提出FAME，用条件流匹配同时生成多个探索目标而非押注单一方向，结合路径规划与分层选择提升未知环境三维主动建图效率。本届NeurIPS共录用7900篇，Spotlight仅占3.7%。</div>
+    <div class="tags"><span class="tag">具身</span><span class="tag">NeurIPS</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">机器之心 | 2026-10-29</div>
+    <div class="title"><a href="https://www.163.com/dy/article/LADQ305L0511AQHO.html">拓元智慧开源原生4D世界动作模型E0.5，真机大幅超越π0.5</a></div>
+    <div class="summary">X-Era AI开源E0.5世界动作模型，以「未来几何」推演物理交互；在AgileX Piper双臂与Zerith H1人形机器人上成功率分别达85.0%与88.3%，较π0.5高出13.3/26.7个百分点，代码已开源。</div>
+    <div class="tags"><span class="tag">世界模型</span><span class="tag">开源</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 | 2026-10-29</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/506281.html">文远知行001号员工带队，景烁科技首轮融资数千万美元</a></div>
+    <div class="summary">文远知行子公司景烁科技获嘉御资本、HKSTP等数千万美元pre-A轮投资，定位物理AI数据与模型基础设施，推出数据—模型一体化平台WorldEngine与世界模型GENESIS-Robotics，在手订单已达数十亿元。</div>
+    <div class="tags"><span class="tag">融资</span><span class="tag">数据基础设施</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🏭</span>行业与商业</div>
+
+  <div class="card">
+    <div class="source">机器之心 | 2026-10-29</div>
+    <div class="title"><a href="https://www.163.com/dy/article/LADP1MTP0511AQHO.html">OpenAI发钱了：Pro/Business用户每月最高返500美元API额度</a></div>
+    <div class="summary">OpenAI上线订阅返额度福利：ChatGPT Pro「交多少返多少」，Business按席位累加、每工作区每月封顶500美元；Plus、Go、免费版与Enterprise不在名单内。对重度API开发者而言，Pro订阅近乎「白送」。</div>
+    <div class="tags"><span class="tag">OpenAI</span><span class="tag">商业策略</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 | 2026-10-29</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/505956.html">中国AI刷爆英伟达GPU性能榜：无问芯穹拿下SOL-ExecBench 88项第一</a></div>
+    <div class="summary">在NVIDIA Research的GPU算子性能评测SOL-ExecBench上，无问芯穹登顶L1基础算子、L2融合算子、Quant量化算子与FlashInfer-Bench全部四大赛道，共88项第一，并以Agent参与GPU底层算子优化。</div>
+    <div class="tags"><span class="tag">算力</span><span class="tag">GPU优化</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 | 2026-10-29</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/506478.html">Genspark视频Agent工作台Media Studio上线：接入70+模型，零基础也能拍短剧</a></div>
+    <div class="summary">Genspark Media Studio整合DeepSeek V4.1 Flash、Claude Opus 5.5等「导演」模型与Seedance、Kling、Veo、Nano Banana、ElevenLabs等20多家厂商的70余个模型版本，一站式完成视频规划、生成与配音。</div>
+    <div class="tags"><span class="tag">AI视频</span><span class="tag">产品</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 | 2026-10-29</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/506376.html">敢和英伟达现场PK的国产GPU：推理竞争转向「用好已有算力」</a></div>
+    <div class="summary">国产GPU与第三方全栈算力运营模式的讨论升温：在GPU采购成本与供给约束加剧的背景下，行业竞争正从「买顶级硬件」转向模型框架与硬件之间的深度适配，通过算子与调度优化释放被软件短板禁锢的算力。</div>
+    <div class="tags"><span class="tag">国产芯片</span><span class="tag">算力</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>昨天的AI圈可以用「模型竞速+具身加速」概括。谷歌Gemini 4 Carbon发布距上代仅两周就登顶智能指数、Token定价直接腰斩，旗舰模型的迭代周期已被压缩到令人窒息，价格战与能力战同步开打。更值得留意的是扩散语言模型Clover杀进Agent场景——自回归不再是唯一范式。具身智能这边，智元GO-3把「全链路Scaling」打成了新叙事，而Physical Intelligence零营收估值200亿美元，说明资本仍在为「通用机器人大脑」疯狂定价。我的判断：模型层会越来越卷、越来越便宜，真正的壁垒正在向数据、算力优化和物理世界迁移。开发者们，是时候重新盘点自己的技术栈了。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 生成于 2026-10-30</p>
+</div>
+
+</div>
+</body>
+</html>

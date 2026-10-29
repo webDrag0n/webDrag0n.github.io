@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 29 Oct 2026 00:08:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 17:08:20 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-10-30</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261030.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261030.html</guid>
+      <pubDate>Fri, 30 Oct 2026 08:00:00 +0000</pubDate>
+      <description>昨日AI圈三条主线齐发——谷歌Gemini 4 Carbon时隔两周火速上线，以59分登顶Artificial Analysis智能指数、全面反超Claude Opus 5.5，并宣称100%免疫提示词注入；智元创新日发布具身基座模型GO-3 Preview，横扫三大权威评测榜首，「全链路Scaling」成为机器人学习新叙事；扩散语言模型Clover-35B杀进Agent主场，速度比Jev快一倍。此外，Physical Intelligence以0营收洽谈10亿美元融资、估值冲200亿美元，OpenAI给Pro/Business用户每月返最高500美元API额度，AI辅助攻克5道27年量子开放</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-10-29</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261029.html</link>

@@ -1,6 +1,6 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-10-29T00:08:00.510720+00:00",
+  "generated_at": "2026-10-29T17:08:20.163239+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
@@ -550,8 +550,14 @@
     },
     "media": {
       "title": "AI 科技日报",
-      "count": 90,
+      "count": 91,
       "items": [
+        {
+          "date": "2026-10-30",
+          "url": "https://webdrag0n.github.io/reports/media/daily_media_20261030.html",
+          "overview": "昨日AI圈三条主线齐发——谷歌Gemini 4 Carbon时隔两周火速上线，以59分登顶Artificial Analysis智能指数、全面反超Claude Opus 5.5，并宣称100%免疫提示词注入；智元创新日发布具身基座模型GO-3 Preview，横扫三大权威评测榜首，「全链路Scaling」成为机器人学习新叙事；扩散语言模型Clover-35B杀进Agent主场，速度比Jev快一倍。此外，Physical Intelligence以0营收洽谈10亿美元融资、估值冲200亿美元，OpenAI给Pro/Business用户每月返最高500美元API额度，AI辅助攻克5道27年量子开放问题也引发热议。",
+          "digest": "昨天的AI圈可以用「模型竞速+具身加速」概括。谷歌Gemini 4 Carbon发布距上代仅两周就登顶智能指数、Token定价直接腰斩，旗舰模型的迭代周期已被压缩到令人窒息，价格战与能力战同步开打。更值得留意的是扩散语言模型Clover杀进Agent场景——自回归不再是唯一范式。具身智能这边，智元GO-3把「全链路Scaling」打成了新叙事，而Physical Intelligence零营收估值200亿美元，说明资本仍在为「通用机器人大脑」疯狂定价。我的判断：模型层会越来越卷、越来越便宜，真正的壁垒正在向数据、算力优化和物理世界迁移。开发者们，是时候重新盘点自己的技术栈了。"
+        },
         {
           "date": "2026-10-29",
           "url": "https://webdrag0n.github.io/reports/media/daily_media_20261029.html",
