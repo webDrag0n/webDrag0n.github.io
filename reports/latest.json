@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-30T00:07:58.748342+00:00",
+  "generated_at": "2026-10-30T00:18:09.076992+00:00",
   "papers": {
     "date": "2026-10-30",
     "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261030.html",
-    "overview": "Agent 研究进入「精打细算」阶段：CrossProfile 证明群体讨论压缩进记忆后决策反而更差，GEPA-Curator 指出失败 rollout 里藏着有害学习信号，EnvSched 则把环境调度本身变成 RL 效率杠杆。安全侧 Heads of Security 用可学习的注意力门隔离不可信 token，是提示注入防御的新思路。具身赛道重磅不断：Physical Intelligence 传以约 200 亿美元估值再融资 10 亿美元（年内翻倍），智元创新日发布 Worken 度量与 G2 Max 并计划年底开源 Link-U OS，小鹏 IRON 固态电池小批量下线，宇树首份季报「增收不增利」。开源榜被 Agent 记忆项目 hindsight（+1,454⭐）刷屏，与学界对记忆成本的质疑形成微妙对冲。",
+    "overview": "Agent 研究进入「精打细算」阶段：CrossProfile 证明群体讨论压缩进记忆后决策反而更差，GEPA-Curator 指出失败 rollout 里藏着有害学习信号。安全侧 Heads of Security 用可学习的注意力门隔离不可信 token，是提示注入防御的新思路。具身赛道重磅不断：Physical Intelligence 传以约 200 亿美元估值再融资 10 亿美元（年内翻倍），智元创新日发布 Worken 度量与 G2 Max 并计划年底开源 Link-U OS，小鹏 IRON 固态电池小批量下线，宇树首份季报「增收不增利」。开源榜被 Agent 记忆项目 hindsight（+1,454⭐）刷屏，与学界对记忆成本的质疑形成微妙对冲。",
     "digest": "本期最耐咀嚼的张力在「记忆」：学界两篇论文（CrossProfile、Memory Tax 余波）证明给 Agent 加记忆可能净亏，GitHub 却用 1,454 颗星把 hindsight 顶上热榜——工程直觉与评测结论的裂口，正是明年 Agent 架构最值得盯的演进点。安全侧 Heads of Security 把提示注入防御下沉到注意力头内部，思路比外挂过滤层更有架构感。具身赛道资本信号拉满：Physical Intelligence 传 200 亿美元估值再融资，智元用 Worken 度量+GO-3+开源 OS 建完整叙事，小鹏固态电池小批量下线让「车厂造机器人」的供应链逻辑第一次有了实物注脚。而 DeepMind Genie 4 与同日的潜在世界模型批判性论文同天出现，恰如其分——世界模型越热，越需要有人追问它到底学到了什么。"
   },
   "media": {

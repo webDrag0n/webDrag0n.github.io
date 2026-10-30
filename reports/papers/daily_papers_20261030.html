@@ -167,7 +167,7 @@
 </div>
 
 <div class="summary-banner">
-  <p><strong>📌 今日速览：</strong>Agent 研究进入「精打细算」阶段：CrossProfile 证明群体讨论压缩进记忆后决策反而更差，GEPA-Curator 指出失败 rollout 里藏着有害学习信号，EnvSched 则把环境调度本身变成 RL 效率杠杆。安全侧 Heads of Security 用可学习的注意力门隔离不可信 token，是提示注入防御的新思路。具身赛道重磅不断：Physical Intelligence 传以约 200 亿美元估值再融资 10 亿美元（年内翻倍），智元创新日发布 Worken 度量与 G2 Max 并计划年底开源 Link-U OS，小鹏 IRON 固态电池小批量下线，宇树首份季报「增收不增利」。开源榜被 Agent 记忆项目 hindsight（+1,454⭐）刷屏，与学界对记忆成本的质疑形成微妙对冲。</p>
+  <p><strong>📌 今日速览：</strong>Agent 研究进入「精打细算」阶段：CrossProfile 证明群体讨论压缩进记忆后决策反而更差，GEPA-Curator 指出失败 rollout 里藏着有害学习信号。安全侧 Heads of Security 用可学习的注意力门隔离不可信 token，是提示注入防御的新思路。具身赛道重磅不断：Physical Intelligence 传以约 200 亿美元估值再融资 10 亿美元（年内翻倍），智元创新日发布 Worken 度量与 G2 Max 并计划年底开源 Link-U OS，小鹏 IRON 固态电池小批量下线，宇树首份季报「增收不增利」。开源榜被 Agent 记忆项目 hindsight（+1,454⭐）刷屏，与学界对记忆成本的质疑形成微妙对冲。</p>
 </div>
 
 <div class="section">
@@ -209,18 +209,10 @@
   <div class="summary">反思式提示优化器（如 GEPA）从失败 rollout 学习，但智能体的失败可能来自 harness 缺陷、随机执行或评审噪声而非提示本身——这类失败不提供有用信号，甚至有害。GEPA-Curator 先筛选「值得学」的失败再喂给优化器。为什么重要：自我改进闭环的瓶颈正在从「生成反思」转向「过滤反思」，数据策展逻辑进入 prompt 优化层。</div>
   <div class="tags"><span class="tag">自我改进</span><span class="tag">提示优化</span></div>
 </div>
-<div class="card">
-  <div class="source">arXiv 2610.37609 · cs.LG</div>
-  <div class="title"><a href="https://arxiv.org/abs/2610.37609">EnvSched: Environment-Aware Scheduling for Rollout-Efficient Agent RL</a></div>
-  <div class="summary">随着可执行环境规模扩大，rollout 的生成与验证成本飙升。EnvSched 在环境层面组织、评估并调度任务实例（连同决定工具、状态与转移的环境一起），在固定 rollout 预算下显著提升样本效率。为什么重要：Agent RL 的成本竞争已从模型侧延伸到「环境管理」侧，调度器成为新的效率杠杆。</div>
-  <div class="tags"><span class="tag">Agent RL</span><span class="tag">效率</span></div>
 </div>
-<div class="card">
-  <div class="source">arXiv 2610.37642 · cs.CL</div>
-  <div class="title"><a href="https://arxiv.org/abs/2610.37642">Metacognitive Decoding: Efficient Inference for Diffusion Language Agents</a></div>
-  <div class="summary">扩散语言模型靠并行生成 token 有望成为高效智能体，但需要同时决定「算力花在哪」和「生成多少字」。本文引入元认知控制器，按当前响应需求与交互状态学习何时定稿 token、何时截断生成，整体降低计算量。为什么重要：扩散 LLM 从「快」走向「自适应地快」，是与自回归智能体竞争实时场景的关键一步。</div>
-  <div class="tags"><span class="tag">扩散语言模型</span><span class="tag">高效推理</span></div>
-</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">⚙️</span>架构、优化与基础模型</div>
 <div class="card">
   <div class="source">arXiv 2610.37571 · cs.AI</div>
   <div class="title"><a href="https://arxiv.org/abs/2610.37571">TeamGym: A Gym for Team Decision-Making by AI Agents with Distributed Information</a></div>
@@ -228,7 +220,6 @@
   <div class="tags"><span class="tag">多智能体</span><span class="tag">团队决策</span><span class="tag">基准</span></div>
 </div>
 </div>
-
 <div class="section">
   <div class="section-title"><span class="emoji">⚙️</span>架构、优化与基础模型</div>
 <div class="card">
@@ -238,22 +229,10 @@
   <div class="tags"><span class="tag hot">Muon</span><span class="tag">优化器理论</span><span class="tag">预训练</span></div>
 </div>
 <div class="card">
-  <div class="source">arXiv 2610.37645 · cs.CL</div>
-  <div class="title"><a href="https://arxiv.org/abs/2610.37645">Multi-State Linear Attention with Generalized Second-Order Routing</a></div>
-  <div class="summary">多状态线性注意力（MSLA）把上下文分段压缩进各自记忆状态，但现有方法只用「均值对齐」聚合信息，忽略状态间高阶关系。本文引入广义二阶路由改进聚合。长上下文架构竞赛中，线性注意力支线的精细化仍在推进。</div>
-  <div class="tags"><span class="tag">线性注意力</span><span class="tag">长上下文</span></div>
-</div>
-<div class="card">
   <div class="source">arXiv 2610.37585 · cs.AI</div>
   <div class="title"><a href="https://arxiv.org/abs/2610.37585">Timestral: Time Series Foundation Models for Probabilistic Forecasting</a></div>
   <div class="summary">Mistral 系风格的时序基础模型家族（5M/28M/123M/209M），凭借解耦预测时域（DHF）等三件套在 GIFT-Eval、TIME、fev-bench 全面 SOTA，209M 与 123M 包揽每项指标前二。时序预测赛道「小模型即服务」的可行性进一步增强。</div>
   <div class="tags"><span class="tag">时序基础模型</span><span class="tag">概率预测</span></div>
-</div>
-<div class="card">
-  <div class="source">arXiv 2610.37656 · cs.LG/physics.comp-ph</div>
-  <div class="title"><a href="https://arxiv.org/abs/2610.37656">Attention as Lattice Gauge Theory: Relations Interact Only Through Wilson Loops</a></div>
-  <div class="summary">把组合关系（「外婆=父亲的母亲」）映射到格点规范理论：在纯规范扇区，不共享环的关系完全无法相互作用，唯一规范不变的得分是 Wilson 环。为「注意力如何组合关系」提供了罕见的第一性原理式刻画——理论向的慢研究，但可能解释组合泛化的结构性瓶颈。</div>
-  <div class="tags"><span class="tag">理论</span><span class="tag">组合泛化</span></div>
 </div>
 </div>
 
@@ -264,18 +243,6 @@
   <div class="title"><a href="https://arxiv.org/abs/2610.37613">VideoLVR: Latent Visual Reasoning over Grounded Video Evidence</a></div>
   <div class="summary">语言推理链无法让模型「回看」视频证据，导致视觉遗忘。VideoLVR 在潜在空间中直接对 grounded 视频证据做推理，而非借助文字坐标引用。视频理解正从「看完再答」走向「边看边推理边回查」。</div>
   <div class="tags"><span class="tag">视频理解</span><span class="tag">潜在推理</span></div>
-</div>
-<div class="card">
-  <div class="source">arXiv 2610.37668 · cs.CV/cs.GR</div>
-  <div class="title"><a href="https://arxiv.org/abs/2610.37668">Honeycomb-Surfels: Compact Hexagonal Primitives for Efficient Scene Rendering</a></div>
-  <div class="summary">Hexels：带一阶空间颜色场的平面六边形表面元，用更少更大的基元利用局部平面区域，面积效率优于圆形 splat。3DGS 之后的「基元形态学」探索继续——六边形密铺的几何优势被首次系统性用于场景渲染。</div>
-  <div class="tags"><span class="tag">3D 重建</span><span class="tag">新视角合成</span></div>
-</div>
-<div class="card">
-  <div class="source">HuggingFace 日榜 · arXiv 2610.35684 · 43↑</div>
-  <div class="title"><a href="https://arxiv.org/abs/2610.35684">OmniShowcase: Omnidirectional Subject-Consistent Video Generation from Multi-View Images</a></div>
-  <div class="summary">从少量多视角参考图生成全向主体一致视频：解决相机转到背面时「没见过的表面」如何生成的问题。主体一致性视频生成向电商展示、数字人迁移等真实工作流又进一步。</div>
-  <div class="tags"><span class="tag">视频生成</span><span class="tag">主体一致性</span></div>
 </div>
 </div>
 
@@ -292,12 +259,6 @@
   <div class="title"><a href="https://arxiv.org/abs/2610.34186">HuGe: Scaling Humanoid Generalist VLA Models with Egocentric Experience</a></div>
   <div class="summary">把人类第一视角（egocentric）经验规模化用于人形机器人 VLA：解决全身协调控制所需示教数据昂贵的瓶颈。与本周 ThinkWorld、Ego-CEVR 同属「人类视频 → 人形策略」的密集攻关线，人形数据瓶颈的非遥操作解法正在收敛。</div>
   <div class="tags"><span class="tag">人形机器人</span><span class="tag">VLA</span><span class="tag">第一视角</span></div>
-</div>
-<div class="card">
-  <div class="source">arXiv 2610.37652 · cs.RO</div>
-  <div class="title"><a href="https://arxiv.org/abs/2610.37652">Pushing Dexterity and Safety for In-Hand Object Pose Reaching</a></div>
-  <div class="summary">多指灵巧手的手内位姿调整（把物体转到几乎任意可达位姿）比抓取难得多，且「不掉落」这一安全性指标鲜少被测量。本文同时推进灵巧性与安全度量。灵巧手硬件（特斯拉 Optimus、宇树 Dex5 等）密集迭代的当下，手内操作的评测标准开始补齐。</div>
-  <div class="tags"><span class="tag">灵巧手</span><span class="tag">手内操作</span></div>
 </div>
 <div class="card">
   <div class="source">arXiv 2610.37588 · cs.LG</div>
@@ -334,22 +295,10 @@
   <div class="tags"><span class="tag hot">世界模型</span><span class="tag">DeepMind</span><span class="tag">机器人训练</span></div>
 </div>
 <div class="card">
-  <div class="source">Robot Overflow · Orbbec · imp=2 · 2026-10-29</div>
-  <div class="title"><a href="https://www.orbbec.com/news/orbbec-and-ace-robotics-forge-comprehensive-strategic-partnership-to-advance-scalable-physical-ai-data-collection/">奥比中光 × 大晓机器人：1 万台视觉与数据采集设备订单</a></div>
-  <div class="summary">奥比中光将向大晓机器人及其伙伴供应 1 万台机器人视觉产品和「无机器人」数据采集设备（EGO、UMI、WristCam、Hub），已开始交付。同期大晓开放 ACE-Brain-0.6 具身模型 API。信号：具身数据采集正在商品化——不依赖机器人本体的「人类手持采集」路线成为真机数据缺口的务实补位。</div>
-  <div class="tags"><span class="tag">数据采集</span><span class="tag">供应链</span></div>
-</div>
-<div class="card">
   <div class="source">Robot Overflow · PYMNTS/Reuters · imp=3 · 2026-10-28</div>
   <div class="title"><a href="https://www.pymnts.com/legal/2026/doj-probes-nvidias-hugging-face-deal-over-ai-competition-concerns/">美司法部据报审查英伟达 129 亿美元收购 Hugging Face 案</a></div>
   <div class="summary">PYMNTS 援引路透称，DOJ 正审查该收购是否损害 AI 竞争，属对英伟达更大范围调查的一部分。若交易受阻，开源模型生态的「中立宿主」问题将重新悬置——这也是对「算力巨头垂直整合 AI 栈」趋势的首次实质性反垄断试探。</div>
   <div class="tags"><span class="tag hot">反垄断</span><span class="tag">英伟达</span><span class="tag">Hugging Face</span></div>
-</div>
-<div class="card">
-  <div class="source">Robot Overflow · Robotics & Automation News · imp=2 · 2026-10-28</div>
-  <div class="title"><a href="https://roboticsandautomationnews.com/2026/10/28/neura-robotics-and-tum-open-e17-million-robogym-and-unveil-new-humanoid/106435/">NEURA × 慕尼黑工大：1700 万欧元 RoboGym 开业，发布第四代 4NE1 人形</a></div>
-  <div class="summary">2300 平方米研训中心落地慕尼黑机场附近，NEURA 出资约 1100 万欧元、为期三年；同场展示更轻的 4NE1 Gen 4（运行 Neuron AI），欧美中三地还将增设场地。欧洲「认知机器人」路线用校企共建训练场的方式补数据课，与美中的资本密集型路线形成差异化。</div>
-  <div class="tags"><span class="tag">NEURA</span><span class="tag">欧洲机器人</span><span class="tag">训练设施</span></div>
 </div>
 </div>
 
@@ -360,18 +309,6 @@
   <div class="title"><a href="https://github.com/vectorize-io/hindsight">vectorize-io/hindsight：会学习的 Agent 记忆</a></div>
   <div class="summary">「Agent Memory That Learns」——与学界同日对记忆净值（Memory Tax、CrossProfile）的质疑形成微妙对冲：学术侧在论证「记忆有成本」，工程侧在押注「会学习的记忆值得这个成本」。这场张力大概率定义明年 Agent 架构的演进方向。</div>
   <div class="tags"><span class="tag hot">Agent 记忆</span><span class="tag">开源</span></div>
-</div>
-<div class="card">
-  <div class="source">GitHub Trending · 今日 +1,930⭐</div>
-  <div class="title"><a href="https://github.com/HKUDS/DeepTutor">HKUDS/DeepTutor：终身个性化 AI 家教持续霸榜</a></div>
-  <div class="summary">港大数据智能实验室的个性化辅导系统连续第二天位居趋势榜首梯队（昨日 +2,371⭐），教育 Agent 成为「长期记忆 + 用户画像」技术栈最直观的落地场景。</div>
-  <div class="tags"><span class="tag">教育 Agent</span><span class="tag">开源</span></div>
-</div>
-<div class="card">
-  <div class="source">GitHub Trending · 今日 +443⭐ / +320⭐ / +88⭐</div>
-  <div class="title"><a href="https://github.com/rohitg00/ai-engineering-from-scratch">AI 工程学习资源与工具链：ai-engineering-from-scratch、AiSOC、OpenViking</a></div>
-  <div class="summary">从零学 AI 工程的教程项目（+443⭐）反映入门需求持续旺盛；AiSOC（+320⭐）把 LLM 智能体引入安全运营中心做告警分诊与 MITRE ATT&CK 调查；火山引擎 OpenViking（+88⭐）则要做「自进化的 Agent 上下文数据库」，统一记忆、RAG 与技能。Agent 基础设施分层继续细化。</div>
-  <div class="tags"><span class="tag">Agent 基础设施</span><span class="tag">安全运营</span><span class="tag">教程</span></div>
 </div>
 <div class="card">
   <div class="source">GitHub · Awesome 生态 · 近 30 天新建</div>

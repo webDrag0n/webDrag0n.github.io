@@ -5,13 +5,13 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 30 Oct 2026 00:07:58 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 00:18:09 +0000</lastBuildDate>
     <item>
       <title>AI 论文速递 — 2026-10-30</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261030.html</link>
       <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261030.html</guid>
       <pubDate>Fri, 30 Oct 2026 08:00:00 +0000</pubDate>
-      <description>Agent 研究进入「精打细算」阶段：CrossProfile 证明群体讨论压缩进记忆后决策反而更差，GEPA-Curator 指出失败 rollout 里藏着有害学习信号，EnvSched 则把环境调度本身变成 RL 效率杠杆。安全侧 Heads of Security 用可学习的注意力门隔离不可信 token，是提示注入防御的新思路。具身赛道重磅不断：Physical Intelligence 传以约 200 亿美元估值再融资 10 亿美元（年内翻倍），智元创新日发布 Worken 度量与 G2 Max 并计划年底开源 Link-U OS，小鹏 IRON 固态电池小批量下线，宇树首份季报「</description>
+      <description>Agent 研究进入「精打细算」阶段：CrossProfile 证明群体讨论压缩进记忆后决策反而更差，GEPA-Curator 指出失败 rollout 里藏着有害学习信号。安全侧 Heads of Security 用可学习的注意力门隔离不可信 token，是提示注入防御的新思路。具身赛道重磅不断：Physical Intelligence 传以约 200 亿美元估值再融资 10 亿美元（年内翻倍），智元创新日发布 Worken 度量与 G2 Max 并计划年底开源 Link-U OS，小鹏 IRON 固态电池小批量下线，宇树首份季报「增收不增利」。开源榜被 Agent 记忆项目 hinds</description>
     </item>
     <item>
       <title>AI 科技日报 — 2026-10-30</title>
