@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年10月30日 星期五</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .hot-topic .source { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+  .hot-topic .title { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .hot-topic .title a { color: var(--accent); text-decoration: none; }
+  .hot-topic .title a:hover { text-decoration: underline; }
+  .hot-topic .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+  .hot-topic .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .hot-topic .tag { font-size: 12px; padding: 2px 10px; border-radius: 12px; background: var(--tag-bg); color: var(--tag-text); }
+  .hot-topic .tag.hot { background: #ffeaa7; color: #d63031; font-weight: 600; }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年10月30日 星期五</div>
+  <div class="subtitle">ArXiv + HuggingFace + GitHub + Robot Overflow 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>Agent 研究进入「精打细算」阶段：CrossProfile 证明群体讨论压缩进记忆后决策反而更差，GEPA-Curator 指出失败 rollout 里藏着有害学习信号，EnvSched 则把环境调度本身变成 RL 效率杠杆。安全侧 Heads of Security 用可学习的注意力门隔离不可信 token，是提示注入防御的新思路。具身赛道重磅不断：Physical Intelligence 传以约 200 亿美元估值再融资 10 亿美元（年内翻倍），智元创新日发布 Worken 度量与 G2 Max 并计划年底开源 Link-U OS，小鹏 IRON 固态电池小批量下线，宇树首份季报「增收不增利」。开源榜被 Agent 记忆项目 hindsight（+1,454⭐）刷屏，与学界对记忆成本的质疑形成微妙对冲。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日焦点</div>
+<div class="hot-topic">
+  <div class="label">Robot Overflow · imp=3 · 融资信号</div>
+  <div class="source">The Next Web / Bloomberg · 2026-10-27</div>
+  <div class="title"><a href="https://thenextweb.com/news/physical-intelligence-20bn-valuation-talks-bloomberg">Physical Intelligence 据报洽谈以约 200 亿美元估值融资 10 亿美元以上</a></div>
+  <div class="summary">彭博报道，这家「机器人大脑」公司正洽谈至少 10 亿美元新融资，估值约 200 亿美元——今年早些时候还是 115 亿美元，Avenir 与 Lux 或领投。为什么重要：具身基础模型的估值增速已经开始脱离收入基本面，对标的是「下一个 OpenAI」叙事；资本在为「通用机器人智能」而非单台硬件定价，这会进一步抬高校准、数据采集与模型训练军备竞赛的门槛。</div>
+  <div class="tags"><span class="tag hot">融资</span><span class="tag">机器人大脑</span><span class="tag">估值</span></div>
+</div>
+<div class="hot-topic">
+  <div class="label">HuggingFace 日榜 Top 1 · 149 upvotes</div>
+  <div class="source">arXiv 2610.32749 · cs.SD/eess.AS</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.32749">Efficient Streaming Audio-Visual Target Speaker Extraction for Real-World Acoustic Scenes</a></div>
+  <div class="summary">流式音视频目标说话人分离（AVTSE）是耳机、会议与助听器场景的低延迟刚需。本文指出现有因果系统的两个耦合缺口——基准固定说话人数、因果结构掉帧——并给出高效流式方案在真实声学场景下验证。为什么重要：多模态感知正从离线基准走向「永远在线」的流式形态，这是 AR 眼镜与可穿戴 AI 的关键底层能力之一。</div>
+  <div class="tags"><span class="tag hot">流式多模态</span><span class="tag">音视频分离</span></div>
+</div>
+<div class="hot-topic">
+  <div class="label">arXiv 当日 · 提示注入防御新思路</div>
+  <div class="source">arXiv 2610.37657 · cs.LG/cs.CR</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.37657">Heads of Security: Learned Attention Gates Improve Prompt Injection Robustness</a></div>
+  <div class="summary">HoS 在注意力头级别学习一组「安全门」，让每个头重新分配对可信指令与不可信数据的注意力，使模型可以「读」不可信内容而不「执行」其中注入的指令，在 Llama-3.3-70B 与 GPT-OSS-20B 上对比 SecAlign++、ASIDE 取得更优鲁棒性。为什么重要：提示注入是 Agent 时代的 SQL 注入，把防御下沉到注意力机制内部而非外挂过滤层，可能是更可持续的架构级解法。</div>
+  <div class="tags"><span class="tag hot">提示注入</span><span class="tag">AI 安全</span><span class="tag">注意力机制</span></div>
+</div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>Agent：训练、记忆与协作</div>
+<div class="card">
+  <div class="source">arXiv 2610.37624 · cs.AI/cs.MA</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.37624">Rare, Relevant, and Still Wrong: How Memory Fails LLM Group Decisions (CrossProfile)</a></div>
+  <div class="summary">多智能体讨论被压缩成短记忆交给最终决策者时，「保留最稀有观点」和「保留最相关观点」两种直觉策略在 hidden-profile 任务上都会失败——CrossProfile 基准（60 个模板、自动验证答案）系统展示了信息所有权结构如何让两种启发式同时翻车。与昨日的 Memory Tax 互证：智能体记忆正从「默认正确」变成需要论证净值的设计决策。</div>
+  <div class="tags"><span class="tag hot">Agent 记忆</span><span class="tag">多智能体</span><span class="tag">评测</span></div>
+</div>
+<div class="card">
+  <div class="source">arXiv 2610.37651 · cs.CL</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.37651">GEPA-Curator: Curated Learning for Self Improving Agents</a></div>
+  <div class="summary">反思式提示优化器（如 GEPA）从失败 rollout 学习，但智能体的失败可能来自 harness 缺陷、随机执行或评审噪声而非提示本身——这类失败不提供有用信号，甚至有害。GEPA-Curator 先筛选「值得学」的失败再喂给优化器。为什么重要：自我改进闭环的瓶颈正在从「生成反思」转向「过滤反思」，数据策展逻辑进入 prompt 优化层。</div>
+  <div class="tags"><span class="tag">自我改进</span><span class="tag">提示优化</span></div>
+</div>
+<div class="card">
+  <div class="source">arXiv 2610.37609 · cs.LG</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.37609">EnvSched: Environment-Aware Scheduling for Rollout-Efficient Agent RL</a></div>
+  <div class="summary">随着可执行环境规模扩大，rollout 的生成与验证成本飙升。EnvSched 在环境层面组织、评估并调度任务实例（连同决定工具、状态与转移的环境一起），在固定 rollout 预算下显著提升样本效率。为什么重要：Agent RL 的成本竞争已从模型侧延伸到「环境管理」侧，调度器成为新的效率杠杆。</div>
+  <div class="tags"><span class="tag">Agent RL</span><span class="tag">效率</span></div>
+</div>
+<div class="card">
+  <div class="source">arXiv 2610.37642 · cs.CL</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.37642">Metacognitive Decoding: Efficient Inference for Diffusion Language Agents</a></div>
+  <div class="summary">扩散语言模型靠并行生成 token 有望成为高效智能体，但需要同时决定「算力花在哪」和「生成多少字」。本文引入元认知控制器，按当前响应需求与交互状态学习何时定稿 token、何时截断生成，整体降低计算量。为什么重要：扩散 LLM 从「快」走向「自适应地快」，是与自回归智能体竞争实时场景的关键一步。</div>
+  <div class="tags"><span class="tag">扩散语言模型</span><span class="tag">高效推理</span></div>
+</div>
+<div class="card">
+  <div class="source">arXiv 2610.37571 · cs.AI</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.37571">TeamGym: A Gym for Team Decision-Making by AI Agents with Distributed Information</a></div>
+  <div class="summary">现实中的决策依赖多人分布式信息的整合，而 AI 智能体大多在孤立环境训练评测。TeamGym 基于法律、金融、医疗、软件工程真实语料构建团队决策任务，并要求识别「最小必要事实集」。与 CrossProfile 同日出现，显示「群体智能」正成为 Agent 评测的新战场。</div>
+  <div class="tags"><span class="tag">多智能体</span><span class="tag">团队决策</span><span class="tag">基准</span></div>
+</div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">⚙️</span>架构、优化与基础模型</div>
+<div class="card">
+  <div class="source">arXiv 2610.37647 · cs.LG/math.OC</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.37647">MuonGS: Pretraining LLMs with Relaxed Weight-Norm Control</a></div>
+  <div class="summary">权重衰减为何帮助 Muon 类优化器？作者用「累积有效学习率」C_T = Ση_t/||W_t||_F 全程刻画范数控制，论证只需「放松的」范数约束即可获得大部分收益。为什么重要：Muon 已成为 LLM 预训练的热门 AdamW 替代，这项工作为其超参设置（该衰减多少）给出了首个统一理论标尺。</div>
+  <div class="tags"><span class="tag hot">Muon</span><span class="tag">优化器理论</span><span class="tag">预训练</span></div>
+</div>
+<div class="card">
+  <div class="source">arXiv 2610.37645 · cs.CL</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.37645">Multi-State Linear Attention with Generalized Second-Order Routing</a></div>
+  <div class="summary">多状态线性注意力（MSLA）把上下文分段压缩进各自记忆状态，但现有方法只用「均值对齐」聚合信息，忽略状态间高阶关系。本文引入广义二阶路由改进聚合。长上下文架构竞赛中，线性注意力支线的精细化仍在推进。</div>
+  <div class="tags"><span class="tag">线性注意力</span><span class="tag">长上下文</span></div>
+</div>
+<div class="card">
+  <div class="source">arXiv 2610.37585 · cs.AI</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.37585">Timestral: Time Series Foundation Models for Probabilistic Forecasting</a></div>
+  <div class="summary">Mistral 系风格的时序基础模型家族（5M/28M/123M/209M），凭借解耦预测时域（DHF）等三件套在 GIFT-Eval、TIME、fev-bench 全面 SOTA，209M 与 123M 包揽每项指标前二。时序预测赛道「小模型即服务」的可行性进一步增强。</div>
+  <div class="tags"><span class="tag">时序基础模型</span><span class="tag">概率预测</span></div>
+</div>
+<div class="card">
+  <div class="source">arXiv 2610.37656 · cs.LG/physics.comp-ph</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.37656">Attention as Lattice Gauge Theory: Relations Interact Only Through Wilson Loops</a></div>
+  <div class="summary">把组合关系（「外婆=父亲的母亲」）映射到格点规范理论：在纯规范扇区，不共享环的关系完全无法相互作用，唯一规范不变的得分是 Wilson 环。为「注意力如何组合关系」提供了罕见的第一性原理式刻画——理论向的慢研究，但可能解释组合泛化的结构性瓶颈。</div>
+  <div class="tags"><span class="tag">理论</span><span class="tag">组合泛化</span></div>
+</div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态与视觉</div>
+<div class="card">
+  <div class="source">arXiv 2610.37613 · cs.CV</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.37613">VideoLVR: Latent Visual Reasoning over Grounded Video Evidence</a></div>
+  <div class="summary">语言推理链无法让模型「回看」视频证据，导致视觉遗忘。VideoLVR 在潜在空间中直接对 grounded 视频证据做推理，而非借助文字坐标引用。视频理解正从「看完再答」走向「边看边推理边回查」。</div>
+  <div class="tags"><span class="tag">视频理解</span><span class="tag">潜在推理</span></div>
+</div>
+<div class="card">
+  <div class="source">arXiv 2610.37668 · cs.CV/cs.GR</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.37668">Honeycomb-Surfels: Compact Hexagonal Primitives for Efficient Scene Rendering</a></div>
+  <div class="summary">Hexels：带一阶空间颜色场的平面六边形表面元，用更少更大的基元利用局部平面区域，面积效率优于圆形 splat。3DGS 之后的「基元形态学」探索继续——六边形密铺的几何优势被首次系统性用于场景渲染。</div>
+  <div class="tags"><span class="tag">3D 重建</span><span class="tag">新视角合成</span></div>
+</div>
+<div class="card">
+  <div class="source">HuggingFace 日榜 · arXiv 2610.35684 · 43↑</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.35684">OmniShowcase: Omnidirectional Subject-Consistent Video Generation from Multi-View Images</a></div>
+  <div class="summary">从少量多视角参考图生成全向主体一致视频：解决相机转到背面时「没见过的表面」如何生成的问题。主体一致性视频生成向电商展示、数字人迁移等真实工作流又进一步。</div>
+  <div class="tags"><span class="tag">视频生成</span><span class="tag">主体一致性</span></div>
+</div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>具身智能研究</div>
+<div class="card">
+  <div class="source">HuggingFace 日榜 · arXiv 2610.31670 · 20↑</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.31670">Sensorimotor Alignment: A Platonic Proxy for Embodied Policy Success</a></div>
+  <div class="summary">机器人基础模型的评测依赖昂贵的闭环 rollout。本文借「柏拉图表征假说」提出离线代理指标：表征对齐度越高，策略成功率越高。若成立，具身模型的选型成本将大幅降低——「不跑真机也能估算策略好坏」是行业刚需。</div>
+  <div class="tags"><span class="tag hot">具身评测</span><span class="tag">表征对齐</span></div>
+</div>
+<div class="card">
+  <div class="source">HuggingFace 日榜 · arXiv 2610.34186</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.34186">HuGe: Scaling Humanoid Generalist VLA Models with Egocentric Experience</a></div>
+  <div class="summary">把人类第一视角（egocentric）经验规模化用于人形机器人 VLA：解决全身协调控制所需示教数据昂贵的瓶颈。与本周 ThinkWorld、Ego-CEVR 同属「人类视频 → 人形策略」的密集攻关线，人形数据瓶颈的非遥操作解法正在收敛。</div>
+  <div class="tags"><span class="tag">人形机器人</span><span class="tag">VLA</span><span class="tag">第一视角</span></div>
+</div>
+<div class="card">
+  <div class="source">arXiv 2610.37652 · cs.RO</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.37652">Pushing Dexterity and Safety for In-Hand Object Pose Reaching</a></div>
+  <div class="summary">多指灵巧手的手内位姿调整（把物体转到几乎任意可达位姿）比抓取难得多，且「不掉落」这一安全性指标鲜少被测量。本文同时推进灵巧性与安全度量。灵巧手硬件（特斯拉 Optimus、宇树 Dex5 等）密集迭代的当下，手内操作的评测标准开始补齐。</div>
+  <div class="tags"><span class="tag">灵巧手</span><span class="tag">手内操作</span></div>
+</div>
+<div class="card">
+  <div class="source">arXiv 2610.37588 · cs.LG</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.37588">Understanding the Limits of Latent World Models</a></div>
+  <div class="summary">潜在世界模型是长程智能体推理的核心组件，但现行评测只看任务表现。作者提出「忠实潜在世界模型」概念——环境转移映射与学到的潜在动力学之间的等变性条件，并检验现有模型是否真正学到环境的结构。恰逢 DeepMind 发布 Genie 4 世界模型，理论侧的冷静审视来得正是时候。</div>
+  <div class="tags"><span class="tag">世界模型</span><span class="tag">理论分析</span></div>
+</div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🏭</span>机器人产业动态（Robot Overflow）</div>
+<div class="card">
+  <div class="source">Robot Overflow · PR Newswire · imp=2 · 2026-10-29</div>
+  <div class="title"><a href="https://www.prnewswire.com/news-releases/agibot-introduces-worken-to-measure-productive-robot-work-at-agibot-innovation-day-2026-302923486.html">智元创新日：Worken 有效工时度量 + GO-3 Preview + G2 Max 重载双臂</a></div>
+  <div class="summary">智元在上海活动上提出用「Worken」衡量机器人有效工时（从「能不能做」转向「值不值得做」的经济性指标），展示 GO-3 Preview 模型与双臂 40kg 的 G2 Max；Link-U OS 1.0 已在合作方试用，计划年底开源。同日配套消息：GO-3 Nano Preview 以 61.90 分登顶 RoboDojo 榜单。从模型、本体到操作系统再到度量标准，智元在建一套完整的具身叙事闭环。</div>
+  <div class="tags"><span class="tag hot">智元</span><span class="tag">GO-3</span><span class="tag">开源 OS</span></div>
+</div>
+<div class="card">
+  <div class="source">Robot Overflow · EnergyTrend/CnEVPost · imp=2 · 2026-10-28/29</div>
+  <div class="title"><a href="https://www.energytrend.com/news/20261029-52408.html">小鹏 IRON 专用固态电池小批量下线：减重 30%、容量增 30%</a></div>
+  <div class="summary">副总裁顾捷称 IRON 专用固态电池已完成小批量下线，相比液态锂电重量约减 30%、容量约增 30%；整机仍处 SOP 前，量产目标 2026 年底、2027 年部署。为什么重要：人形机器人续航是商业化隐性瓶颈，固态电池若兑现参数，将是「整机能效竞赛」的第一个实质性筹码——车厂造机器人的供应链复利开始显现。</div>
+  <div class="tags"><span class="tag hot">小鹏 IRON</span><span class="tag">固态电池</span><span class="tag">供应链</span></div>
+</div>
+<div class="card">
+  <div class="source">Robot Overflow · Reuters · imp=2 · 2026-10-28</div>
+  <div class="title"><a href="https://wincountry.com/2026/10/28/unitrees-q3-profit-down-17-4-on-year-in-test-for-chinas-robotics-sector/">宇树首份季报：Q3 营收增 70%、净利降 17%，研发投入增 250%</a></div>
+  <div class="summary">Q3 营收 6.65 亿元，归母净利 1.127 亿元（不足分析师预期一半），研发费用飙升至 1.27 亿元；前三季度营收 18.2 亿元。摩根大通上调至增持后股价七日涨超 65%，公司自己提示估值风险。解读：人形机器人第一股的财报范式——用利润换技术迭代速度，市场目前愿意为此买单，但「增收不增利」能撑多久取决于 2027 年消费级与工业订单的真实放量。</div>
+  <div class="tags"><span class="tag">宇树</span><span class="tag">财报</span><span class="tag">估值</span></div>
+</div>
+<div class="card">
+  <div class="source">Robot Overflow · Google DeepMind · imp=2 · 2026-10-27</div>
+  <div class="title"><a href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">DeepMind 预览 Genie 4 世界模型：为机器人训练造「可编辑的仿真世界」</a></div>
+  <div class="summary">Genie 4 实时生成带原生音频的交互式模拟世界，支持文字实时调整运行中的场景，并演示了结合 Gemini Robotics 的人形下棋。定位明确：为机器人与智能体构建训练和测试环境。与同日 arXiv 上《Understanding the Limits of Latent World Models》的理论审视形成有趣对照——产业界all-in世界模型，学界在追问它到底学到了什么。</div>
+  <div class="tags"><span class="tag hot">世界模型</span><span class="tag">DeepMind</span><span class="tag">机器人训练</span></div>
+</div>
+<div class="card">
+  <div class="source">Robot Overflow · Orbbec · imp=2 · 2026-10-29</div>
+  <div class="title"><a href="https://www.orbbec.com/news/orbbec-and-ace-robotics-forge-comprehensive-strategic-partnership-to-advance-scalable-physical-ai-data-collection/">奥比中光 × 大晓机器人：1 万台视觉与数据采集设备订单</a></div>
+  <div class="summary">奥比中光将向大晓机器人及其伙伴供应 1 万台机器人视觉产品和「无机器人」数据采集设备（EGO、UMI、WristCam、Hub），已开始交付。同期大晓开放 ACE-Brain-0.6 具身模型 API。信号：具身数据采集正在商品化——不依赖机器人本体的「人类手持采集」路线成为真机数据缺口的务实补位。</div>
+  <div class="tags"><span class="tag">数据采集</span><span class="tag">供应链</span></div>
+</div>
+<div class="card">
+  <div class="source">Robot Overflow · PYMNTS/Reuters · imp=3 · 2026-10-28</div>
+  <div class="title"><a href="https://www.pymnts.com/legal/2026/doj-probes-nvidias-hugging-face-deal-over-ai-competition-concerns/">美司法部据报审查英伟达 129 亿美元收购 Hugging Face 案</a></div>
+  <div class="summary">PYMNTS 援引路透称，DOJ 正审查该收购是否损害 AI 竞争，属对英伟达更大范围调查的一部分。若交易受阻，开源模型生态的「中立宿主」问题将重新悬置——这也是对「算力巨头垂直整合 AI 栈」趋势的首次实质性反垄断试探。</div>
+  <div class="tags"><span class="tag hot">反垄断</span><span class="tag">英伟达</span><span class="tag">Hugging Face</span></div>
+</div>
+<div class="card">
+  <div class="source">Robot Overflow · Robotics & Automation News · imp=2 · 2026-10-28</div>
+  <div class="title"><a href="https://roboticsandautomationnews.com/2026/10/28/neura-robotics-and-tum-open-e17-million-robogym-and-unveil-new-humanoid/106435/">NEURA × 慕尼黑工大：1700 万欧元 RoboGym 开业，发布第四代 4NE1 人形</a></div>
+  <div class="summary">2300 平方米研训中心落地慕尼黑机场附近，NEURA 出资约 1100 万欧元、为期三年；同场展示更轻的 4NE1 Gen 4（运行 Neuron AI），欧美中三地还将增设场地。欧洲「认知机器人」路线用校企共建训练场的方式补数据课，与美中的资本密集型路线形成差异化。</div>
+  <div class="tags"><span class="tag">NEURA</span><span class="tag">欧洲机器人</span><span class="tag">训练设施</span></div>
+</div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源与 Awesome 生态</div>
+<div class="card">
+  <div class="source">GitHub Trending · 今日 +1,454⭐</div>
+  <div class="title"><a href="https://github.com/vectorize-io/hindsight">vectorize-io/hindsight：会学习的 Agent 记忆</a></div>
+  <div class="summary">「Agent Memory That Learns」——与学界同日对记忆净值（Memory Tax、CrossProfile）的质疑形成微妙对冲：学术侧在论证「记忆有成本」，工程侧在押注「会学习的记忆值得这个成本」。这场张力大概率定义明年 Agent 架构的演进方向。</div>
+  <div class="tags"><span class="tag hot">Agent 记忆</span><span class="tag">开源</span></div>
+</div>
+<div class="card">
+  <div class="source">GitHub Trending · 今日 +1,930⭐</div>
+  <div class="title"><a href="https://github.com/HKUDS/DeepTutor">HKUDS/DeepTutor：终身个性化 AI 家教持续霸榜</a></div>
+  <div class="summary">港大数据智能实验室的个性化辅导系统连续第二天位居趋势榜首梯队（昨日 +2,371⭐），教育 Agent 成为「长期记忆 + 用户画像」技术栈最直观的落地场景。</div>
+  <div class="tags"><span class="tag">教育 Agent</span><span class="tag">开源</span></div>
+</div>
+<div class="card">
+  <div class="source">GitHub Trending · 今日 +443⭐ / +320⭐ / +88⭐</div>
+  <div class="title"><a href="https://github.com/rohitg00/ai-engineering-from-scratch">AI 工程学习资源与工具链：ai-engineering-from-scratch、AiSOC、OpenViking</a></div>
+  <div class="summary">从零学 AI 工程的教程项目（+443⭐）反映入门需求持续旺盛；AiSOC（+320⭐）把 LLM 智能体引入安全运营中心做告警分诊与 MITRE ATT&CK 调查；火山引擎 OpenViking（+88⭐）则要做「自进化的 Agent 上下文数据库」，统一记忆、RAG 与技能。Agent 基础设施分层继续细化。</div>
+  <div class="tags"><span class="tag">Agent 基础设施</span><span class="tag">安全运营</span><span class="tag">教程</span></div>
+</div>
+<div class="card">
+  <div class="source">GitHub · Awesome 生态 · 近 30 天新建</div>
+  <div class="title"><a href="https://github.com/UnderleveledBuilder/awesome-short-drama-skills">awesome-short-drama-skills（1,267⭐）等中文技能合集崛起</a></div>
+  <div class="summary">近月新建 awesome 列表的亮点集中在「Agent 技能包」垂类：AI 短剧/漫剧技能精选（1,267⭐，剧本到分镜到 Seedance/可灵提示词）、awesome-claude-video-skills（1,222⭐，180 个视频技能仓库并按安全性分级）、awesome-ai-motion（468⭐，动效与创意视频源码+提示词）。awesome 生态正从「工具名录」变成「可执行的 Agent 技能货架」，中文社区在内容生产类技能上尤其活跃。</div>
+  <div class="tags"><span class="tag">Awesome 动态</span><span class="tag">Agent 技能</span><span class="tag">视频生成</span></div>
+</div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>本期最耐咀嚼的张力在「记忆」：学界两篇论文（CrossProfile、Memory Tax 余波）证明给 Agent 加记忆可能净亏，GitHub 却用 1,454 颗星把 hindsight 顶上热榜——工程直觉与评测结论的裂口，正是明年 Agent 架构最值得盯的演进点。安全侧 Heads of Security 把提示注入防御下沉到注意力头内部，思路比外挂过滤层更有架构感。具身赛道资本信号拉满：Physical Intelligence 传 200 亿美元估值再融资，智元用 Worken 度量+GO-3+开源 OS 建完整叙事，小鹏固态电池小批量下线让「车厂造机器人」的供应链逻辑第一次有了实物注脚。而 DeepMind Genie 4 与同日的潜在世界模型批判性论文同天出现，恰如其分——世界模型越热，越需要有人追问它到底学到了什么。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 生成于 2026-10-30 08:15 CST</p>
+</div>
+
+</div>
+</body>
+</html>
