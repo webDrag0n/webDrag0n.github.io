@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 媒体日报 — 2026年10月31日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 媒体日报</h1>
+  <div class="date">2026年10月31日（周六）</div>
+  <div class="subtitle">来源：量子位 · 极客公园 · 36氪 · 少数派 等 | 覆盖 2026-10-30 发布内容</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>昨日AI圈热度集中在四条线——国产开源模型OXR登顶OCR全球榜、智元双模型横扫多榜；DeepSeek V5模型代码意外现身引发泄露猜测；AI Coding进入「个人助理」下半场，TRAE上线跨项目开发助理；AI影视独角兽Utopai估值破10亿美元。此外，Claude新模型Fable/新Opus曝光、百度App四大AI升级、英伟达基于MiniMax H3开源4K视频增强方案也值得关注。</p>
+</div>
+
+<div class="hot-topic">
+  <div class="label">🔥 今日最热</div>
+  <div class="card" style="box-shadow:none;border:none;background:transparent;padding:0;margin:0;">
+    <div class="source">极客公园 | 2026-10-30</div>
+    <div class="title"><a href="http://www.geekpark.net/news/373085">苹果发触屏笔记本最高11万元；DeepSeek V5模型代码现身；宇树首发财报净利增270%</a></div>
+    <div class="summary">多条重磅消息同日引爆：苹果触屏MacBook正式亮相、顶配近11万元；DeepSeek下一代V5模型代码意外现身，社区对能力跃升期待值拉满；宇树科技首次披露财报，净利润同比增长270%，人形机器人商业化进入兑现期。</div>
+    <div class="tags"><span class="tag hot">头条</span><span class="tag">DeepSeek</span><span class="tag">行业</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型与前沿研究</div>
+
+  <div class="card">
+    <div class="source">量子位 | 2026-10-30</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/506686.html">RSI立大功！国产开源登顶全球第一，1.3B OXR重塑OCR</a></div>
+    <div class="summary">仅1.3B参数的国产开源OCR模型OXR登顶全球OCR榜单，借助递归自我改进（RSI）思路刷新多项基准——小模型+自我进化范式正在成为文档智能的新解法。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">OCR</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 | 2026-10-30</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/506674.html">Claude新模型曝光：新Fable，新Opus…</a></div>
+    <div class="summary">Anthropic下一代模型线索流出：代号Fable的新模型与新版Opus陆续曝光，叠加此前「Anthropic或下月上市」传闻，头部闭源阵营的产品与资本节奏明显提速。</div>
+    <div class="tags"><span class="tag">Claude</span><span class="tag">Anthropic</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 | 2026-10-30</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/506743.html">英伟达团队基于MiniMax H3开源视频增强方案，最高支持4K重生成</a></div>
+    <div class="summary">英伟达与MIT团队在Hugging Face发布Open-H3-Regenerate-2K模型权重，基于国产MiniMax H3做视频增强、最高支持4K重生成——国产基座模型开始被国际大厂用作开源底座。</div>
+    <div class="tags"><span class="tag">视频生成</span><span class="tag">开源</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 | 2026-10-30</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/506785.html">AI零帧起手写算子，反超DeepSeek人类手写巅峰：快了9.8%！</a></div>
+    <div class="summary">面壁智能ForgeKernel让AI从零生成GPU算子，性能反超DeepSeek团队人类手写巅峰版本9.8%，此前还连登昇腾三榜第一——「AI优化AI基础设施」的自动化闭环正在形成。</div>
+    <div class="tags"><span class="tag">算子优化</span><span class="tag">AI4Infra</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>具身智能与机器人</div>
+
+  <div class="card">
+    <div class="source">量子位 | 2026-10-30</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/506819.html">榜一，拿来吧你！智元这波双模型杀穿多榜榜单</a></div>
+    <div class="summary">智元机器人交互大模型与具身基座模型双双登顶多项权威榜单，继GO-3 Preview之后持续巩固其在具身智能评测体系的领跑位置。</div>
+    <div class="tags"><span class="tag hot">具身</span><span class="tag">智元</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 | 2026-10-30</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/506662.html">从学习人类到学习机器人同伴，清华联合无问芯穹、智元提出具身规模化落地新路径</a></div>
+    <div class="summary">让机器人互为老师：清华、无问芯穹与智元提出机器人之间相互学习的新范式，试图绕开人类示教数据瓶颈，为具身智能规模化落地提供新思路。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">研究</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪 | 2026-10-30</div>
+    <div class="title"><a href="https://36kr.com/p/4048092462070017">72道工序、灵巧手进厂打螺丝：临界点数采手套发布，补上触觉数据缺口</a></div>
+    <div class="summary">具身智能的数据战争打到「触觉」：临界点发布数采手套，以72道工序采集真实产线操作数据，直指灵巧操作训练中最稀缺的触觉反馈数据缺口。</div>
+    <div class="tags"><span class="tag">数据</span><span class="tag">灵巧手</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>产品与工具</div>
+
+  <div class="card">
+    <div class="source">极客公园 | 2026-10-30</div>
+    <div class="title"><a href="http://www.geekpark.net/news/373190">TRAE开发者个人助理，打响AI Coding的下半场</a></div>
+    <div class="summary">TRAE将TraeCode与TraeWork合并后上线开发者个人助理，可跨项目理解历史上下文、并行统筹多任务——AI Coding的竞争焦点正从「生成代码」转向「任务调度与上下文管理」的开发基建。</div>
+    <div class="tags"><span class="tag">AI Coding</span><span class="tag">Agent</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 | 2026-10-30</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/506771.html">百度APP发布四大AI升级，搜索已实现递归自我进化</a></div>
+    <div class="summary">百度App一口气放出四大AI升级，官方称搜索系统已具备「递归自我进化」能力——传统搜索入口的AI化改造进入深水区。</div>
+    <div class="tags"><span class="tag">搜索</span><span class="tag">产品</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 | 2026-10-30</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/506779.html">「超能模式」登场：联想天禧AI 4.5全端升级，三大场景打造职场超能搭档</a></div>
+    <div class="summary">联想天禧AI 4.5在AIPC端正式发布，新增「超能模式」，围绕办公三大高频场景做全端能力整合——端侧AI助理正在从演示走向默认配置。</div>
+    <div class="tags"><span class="tag">AIPC</span><span class="tag">端侧AI</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">少数派 | 2026-10-30</div>
+    <div class="title"><a href="https://sspai.com/post/117827">派早报：全球首款Android XR有线眼镜XREAL AURA发售等</a></div>
+    <div class="summary">全球首款Android XR有线眼镜XREAL AURA正式发售，腾讯与Visa签署合作备忘录——XR硬件与支付基础设施同日传来新进展。</div>
+    <div class="tags"><span class="tag">XR</span><span class="tag">硬件</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🏭</span>行业与商业</div>
+
+  <div class="card">
+    <div class="source">量子位 | 2026-10-30</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/10/506747.html">好莱坞最缺的答案，被这家10亿美元估值的AI影视独角兽写进了片单</a></div>
+    <div class="summary">创立4年的AI影视公司Utopai Studios估值站上10亿美元——资本市场定价的不是单部电影，而是一套可复用的AI内容生产基础设施。</div>
+    <div class="tags"><span class="tag">AI影视</span><span class="tag">融资</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪 | 2026-10-30</div>
+    <div class="title"><a href="https://36kr.com/p/4048078906800642">AI初创企业的下半场：钱往哪里去？</a></div>
+    <div class="summary">一级市场AI投资逻辑正在切换：从「投模型能力」转向「投现金流与落地场景」，36氪梳理了下半场资金的流向与估值锚点。</div>
+    <div class="tags"><span class="tag">投融资</span><span class="tag">趋势</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪 | 2026-10-30</div>
+    <div class="title"><a href="https://36kr.com/p/4047734928259592">前华为VP创业做AI原生电力资产运营，获宁德时代旗下基金数千万美元A轮</a></div>
+    <div class="summary">AI+能源赛道再落一子：前华为VP带队做AI原生电力资产运营，获宁德时代旗下基金数千万美元A轮融资——「AI for 能源基础设施」正在吸引产业资本密集下注。</div>
+    <div class="tags"><span class="tag">AI+能源</span><span class="tag">融资</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">极客公园 | 2026-10-30</div>
+    <div class="title"><a href="http://www.geekpark.net/news/373066">当即梦把剧本、导演和剪辑放进同一个工作室，我们看到了视频生成的下一步</a></div>
+    <div class="summary">即梦将剧本、导演、剪辑整合进同一AI工作室——视频生成的竞争正从单点生成质量转向「全流程创作管线」的完整度。</div>
+    <div class="tags"><span class="tag">AI视频</span><span class="tag">产品</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>昨日最耐人寻味的信号，是「自我进化」开始批量出现在官方话术里：百度称搜索已递归自我进化，国产1.3B小模型靠RSI登顶OCR榜，AI写的算子反超人类手写巅峰9.8%——AI优化AI的闭环正在从论文走进产品。另一条暗线是具身智能的数据战升级：智元双模型霸榜之外，数采手套开始补触觉数据缺口，机器人互相学习的新范式也在绕开人类示教瓶颈。而DeepSeek V5代码现身、Claude新模型曝光，则预示年底旗舰模型的又一轮对撞。宇树净利增270%、AI影视独角兽估值破10亿，说明资本已开始为「兑现期」定价。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-10-31 生成</p>
+</div>
+
+</div>
+</body>
+</html>

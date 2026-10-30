@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 30 Oct 2026 00:18:09 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 17:05:31 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-10-31</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261031.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261031.html</guid>
+      <pubDate>Sat, 31 Oct 2026 08:00:00 +0000</pubDate>
+      <description>昨日AI圈热度集中在四条线——国产开源模型OXR登顶OCR全球榜、智元双模型横扫多榜；DeepSeek V5模型代码意外现身引发泄露猜测；AI Coding进入「个人助理」下半场，TRAE上线跨项目开发助理；AI影视独角兽Utopai估值破10亿美元。此外，Claude新模型Fable/新Opus曝光、百度App四大AI升级、英伟达基于MiniMax H3开源4K视频增强方案也值得关注。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-10-30</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261030.html</link>

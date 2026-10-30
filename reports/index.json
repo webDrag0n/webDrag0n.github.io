@@ -1,6 +1,6 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-10-30T00:18:09.075011+00:00",
+  "generated_at": "2026-10-30T17:05:31.948015+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
@@ -556,8 +556,14 @@
     },
     "media": {
       "title": "AI 科技日报",
-      "count": 91,
+      "count": 92,
       "items": [
+        {
+          "date": "2026-10-31",
+          "url": "https://webdrag0n.github.io/reports/media/daily_media_20261031.html",
+          "overview": "昨日AI圈热度集中在四条线——国产开源模型OXR登顶OCR全球榜、智元双模型横扫多榜；DeepSeek V5模型代码意外现身引发泄露猜测；AI Coding进入「个人助理」下半场，TRAE上线跨项目开发助理；AI影视独角兽Utopai估值破10亿美元。此外，Claude新模型Fable/新Opus曝光、百度App四大AI升级、英伟达基于MiniMax H3开源4K视频增强方案也值得关注。",
+          "digest": "昨日最耐人寻味的信号，是「自我进化」开始批量出现在官方话术里：百度称搜索已递归自我进化，国产1.3B小模型靠RSI登顶OCR榜，AI写的算子反超人类手写巅峰9.8%——AI优化AI的闭环正在从论文走进产品。另一条暗线是具身智能的数据战升级：智元双模型霸榜之外，数采手套开始补触觉数据缺口，机器人互相学习的新范式也在绕开人类示教瓶颈。而DeepSeek V5代码现身、Claude新模型曝光，则预示年底旗舰模型的又一轮对撞。宇树净利增270%、AI影视独角兽估值破10亿，说明资本已开始为「兑现期」定价。"
+        },
         {
           "date": "2026-10-30",
           "url": "https://webdrag0n.github.io/reports/media/daily_media_20261030.html",
