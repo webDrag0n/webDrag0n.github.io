@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 30 Oct 2026 17:05:31 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 00:08:47 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-10-31</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261031.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261031.html</guid>
+      <pubDate>Sat, 31 Oct 2026 08:00:00 +0000</pubDate>
+      <description>具身智能赛道持续升温：Physical Intelligence 被曝以约 200 亿美元估值洽谈新一轮超 10 亿美元融资；波士顿动力被曝为 Atlas 选定韩系供应链并要求备货 1 万台；谷歌 Gemini Robotics ER 2 开放公开预览、DeepMind 发布面向机器人训练的 Genie 4 世界模型；智元 AI Day 连发 GO-3 模型与 G2 Max，并提出「Worken」机器人有效工时度量。学术方面，arXiv 今日亮点包括用单一似然算法统一基础模型训练全流程、Multi-View MoE 多路由器专家选择、PIVOT 解决 RLVR 稀疏奖励、以及激活探针提前识别「</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-10-31</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261031.html</link>

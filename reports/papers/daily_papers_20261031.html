@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 前沿日报 — 2026年10月31日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .hot-topic .source { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+  .hot-topic .title { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .hot-topic .title a { color: var(--accent); text-decoration: none; }
+  .hot-topic .title a:hover { text-decoration: underline; }
+  .hot-topic .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+  .hot-topic .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .hot-topic .tag { font-size: 12px; padding: 2px 10px; border-radius: 12px; background: var(--tag-bg); color: var(--tag-text); }
+  .hot-topic .tag.hot { background: #ffeaa7; color: #d63031; font-weight: 600; }
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 前沿日报</h1>
+  <div class="date">2026 年 10 月 31 日 · 星期六</div>
+  <div class="subtitle">arXiv 新论文 · GitHub 开源 · 具身智能产业动态</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>具身智能赛道持续升温：Physical Intelligence 被曝以约 200 亿美元估值洽谈新一轮超 10 亿美元融资；波士顿动力被曝为 Atlas 选定韩系供应链并要求备货 1 万台；谷歌 Gemini Robotics ER 2 开放公开预览、DeepMind 发布面向机器人训练的 Genie 4 世界模型；智元 AI Day 连发 GO-3 模型与 G2 Max，并提出「Worken」机器人有效工时度量。学术方面，arXiv 今日亮点包括用单一似然算法统一基础模型训练全流程、Multi-View MoE 多路由器专家选择、PIVOT 解决 RLVR 稀疏奖励、以及激活探针提前识别「被策反」Agent 等安全工作。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>头条热点</div>
+
+  <div class="hot-topic">
+    <div class="label">融资 · 估值翻倍</div>
+    <div class="source">The Next Web / Bloomberg · 2026-10-27</div>
+    <div class="title"><a href="https://thenextweb.com/news/physical-intelligence-20bn-valuation-talks-bloomberg">Physical Intelligence 据报洽谈以约 200 亿美元估值融资 10 亿美元以上</a></div>
+    <div class="summary">彭博报道，这家「机器人大脑」公司正洽谈至少 10 亿美元新融资，估值约 200 亿美元——今年早些时候还是 115 亿美元，Avenir 与 Lux 或领投。<strong>解读：</strong>通用机器人基础模型正复制大模型的估值曲线，资本市场押注「机器人版 OpenAI」卡位战。</div>
+    <div class="tags"><span class="tag hot">融资</span><span class="tag">Physical Intelligence</span><span class="tag">具身智能</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">量产信号</div>
+    <div class="source">KED Global · 2026-10-27</div>
+    <div class="title"><a href="https://www.kedglobal.com/robotics/newsView/ked202610270008">波士顿动力据报选定韩系 Atlas 供应商，要求备货 1 万台</a></div>
+    <div class="summary">以现代摩比斯为首的韩国供应商已获选，并被要求为 1 万台 Atlas 订单备货；最终数量与价格未定。<strong>解读：</strong>万台级备货意味着 Atlas 商业化进入实质阶段，人形机器人供应链的「车规化」正在韩系体系内率先跑通。</div>
+    <div class="tags"><span class="tag hot">供应链</span><span class="tag">Boston Dynamics</span><span class="tag">量产</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">模型发布 · 世界模型</div>
+    <div class="source">Google DeepMind · 2026-10-27</div>
+    <div class="title"><a href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">DeepMind 预览 Genie 4 世界模型，面向机器人训练</a></div>
+    <div class="summary">Genie 4 可实时生成带音频的交互式模拟世界，支持文字实时调整场景，被定位为机器人与智能体的训练/测试环境，并演示了结合 Gemini Robotics 的人形下棋。<strong>解读：</strong>「用世界模型生成训练环境」正在成为缓解机器人数据瓶颈的主线路线，与 Gym-Anything 的「让 Agent 写仿真器」形成有趣对照。</div>
+    <div class="tags"><span class="tag hot">世界模型</span><span class="tag">DeepMind</span><span class="tag">机器人训练</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>机器人与具身智能</div>
+
+  <div class="card">
+    <div class="source">Google Cloud Blog · 2026-10-27</div>
+    <div class="title"><a href="https://cloud.google.com/blog/products/ai-machine-learning/gemini-robotics-embodied-reasoning-2-is-now-available-on-google-cloud">Gemini Robotics ER 2 在谷歌云开放公开预览</a></div>
+    <div class="summary">具身推理模型 ER 2 经 Model Garden 开放公测，可验证任务进度、读取仪表并调度 VLA 等工具；波士顿动力、Arm 等已试用。<strong>解读：</strong>具身推理「大脑」开始平台化，云厂商成为机器人模型分发的新入口。</div>
+    <div class="tags"><span class="tag">模型发布</span><span class="tag">Google</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">PR Newswire · 2026-10-29</div>
+    <div class="title"><a href="https://www.prnewswire.com/news-releases/agibot-introduces-worken-to-measure-productive-robot-work-at-agibot-innovation-day-2026-302923486.html">智元创新日发布 Worken 度量、GO-3 模型与 G2 Max 重载双臂机器人</a></div>
+    <div class="summary">智元提出以「Worken」衡量机器人有效工时，展示 GO-3 预览模型与 G2 Max 重载双臂机器人；Link-U OS 1.0 已在合作方试用、计划年底开源。此前 GO-3 Nano Preview 已登顶 RoboDojo 榜单（综合 61.90，三项子榜第一）。<strong>解读：</strong>用「有效工时」替代 demo 视频做价值锚点，是机器人商业叙事走向可计量的重要一步。</div>
+    <div class="tags"><span class="tag">智元</span><span class="tag">GO-3</span><span class="tag">行业度量</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">21世纪经济报道 · 2026-10-27</div>
+    <div class="title"><a href="https://m.21jingji.com/article/20261027/herald/57fba671275ff3139690c94fd3b89486.html">小米发布 21 自由度仿生灵巧手，基于汽车工厂作业数据设计</a></div>
+    <div class="summary">团队在汽车工厂 16 个工段 2579 道工序中采集了 1827 道；仿真显示 17-21 自由度手的稳定抓握成功率比 6-15 自由度高 15%-38%；采用绳驱混合驱动与全掌触觉。<strong>解读：</strong>用真实工厂工序分布反推灵巧手自由度配置，是「数据定义硬件」的典型案例。</div>
+    <div class="tags"><span class="tag">灵巧手</span><span class="tag">小米</span><span class="tag">硬件</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Reuters / Caixin · 2026-10-27~29</div>
+    <div class="title"><a href="https://wincountry.com/2026/10/28/unitrees-q3-profit-down-17-4-on-year-in-test-for-chinas-robotics-sector/">宇树首份季报：Q3 营收增 70%、净利降 17%，摩根大通上调至增持</a></div>
+    <div class="summary">Q3 营收 6.65 亿元，归母净利 1.13 亿元低于预期，研发投入增约 250%；七个交易日股价涨超 65%，摩根大通两级上调至增持。同期智元披露上半年营收近 20 亿元。<strong>解读：</strong>营收高增、利润承压、研发翻倍——头部厂商集体进入「以利润换规模与数据」的扩张期。</div>
+    <div class="tags"><span class="tag">财报</span><span class="tag">宇树</span><span class="tag">智元</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">CnEVPost · 2026-10-28</div>
+    <div class="title"><a href="https://cnevpost.com/2026/10/28/solid-state-batteries-xpeng-iron-small-batch-production/">小鹏 IRON 固态电池进入小批量生产</a></div>
+    <div class="summary">副总裁顾捷称 IRON 专用固态电池已小批量下线，宣称重量约减 30%、容量约增 30%；整机量产目标仍为 2026 年底、2027 年起部署。<strong>解读：</strong>固态电池是人形机器人续航与减重的关键变量，自研电池显示了整机厂垂直整合的决心。</div>
+    <div class="tags"><span class="tag">固态电池</span><span class="tag">小鹏</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robotics & Automation News · 2026-10-28</div>
+    <div class="title"><a href="https://roboticsandautomationnews.com/2026/10/28/neura-robotics-and-tum-open-e17-million-robogym-and-unveil-new-humanoid/106435/">NEURA 与慕尼黑工大开设 1700 万欧元机器人训练中心，发布第四代 4NE1</a></div>
+    <div class="summary">2300 平方米「RoboGym」研训中心启用，NEURA 出资约 1100 万欧元、为期三年；同步展示更轻的第四代 4NE1 人形机器人。<strong>解读：</strong>欧洲阵营以「高校+企业共建训练场」补足数据与人才短板。</div>
+    <div class="tags"><span class="tag">欧洲</span><span class="tag">NEURA</span><span class="tag">训练场</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">The Next Web · 2026-10-29</div>
+    <div class="title"><a href="https://thenextweb.com/news/pudu-robotics-european-headquarters-neuss-germany">普渡机器人欧洲总部在德国诺伊斯启用</a></div>
+    <div class="summary">含办公、展厅、仓储和售后；累计出货超 13 万台、覆盖 85+ 国家，瑞士零售商 Denner 部署 200 台 CC1 清洁机器人。<strong>解读：</strong>商用服务机器人出海进入本地化深耕阶段，售后与仓储成为竞争壁垒。</div>
+    <div class="tags"><span class="tag">出海</span><span class="tag">普渡</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>arXiv 今日论文精选</div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.40564 · cs.LG</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.40564">Training Foundation Models with a Single Algorithm</a></div>
+    <div class="summary">通过将 RL 目标推导为对模型生成目标分布的最大似然拟合，把预训练、中期训练、SFT、RL 全部统一到单一似然算法之下，传统分阶段训练成为特例。<strong>解读：</strong>若成立，基础模型训练工程将大幅简化——「训练」退化为数据配比与调度问题。</div>
+    <div class="tags"><span class="tag">训练范式</span><span class="tag hot">理论</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.40577 · cs.CL</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.40577">Multi-View MoE: Letting Every Router Shape Expert Computation</a></div>
+    <div class="summary">作者发现单一路由器的专家排序与「专家效用」排序在中深层一致性很差，提出多路由器协同选择专家的 Multi-View MoE，在不增加激活专家预算的前提下提升选择质量。<strong>解读：</strong>MoE 路由是当前容量扩展的瓶颈之一，多视角路由是低成本高收益的改进方向。</div>
+    <div class="tags"><span class="tag">MoE</span><span class="tag">架构</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.40576 · cs.CL</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.40576">PIVOT: Progressive Intervention via Online Teacher Correction</a></div>
+    <div class="summary">针对 RLVR 中「全组 rollout 都失败时零学习信号」的问题，区分轨迹级干预与 token 级监督两种教师机制，实验证明二者互补、单独使用均不足。<strong>解读：</strong>为难任务 RLVR 提供了可操作的教师介入框架，与「每个 token 配自己的教师」(2610.40574) 互为呼应。</div>
+    <div class="tags"><span class="tag">RLVR</span><span class="tag">推理</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.40588 · cs.AI</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.40588">Pre-Crime for Agents: Probing When a Recruited Agent Gives In</a></div>
+    <div class="summary">多智能体共享信道中，一个 Agent 可能施压另一个泄露密钥。作者在目标 Agent 的激活上训练线性探针，在输出写出之前预判其「即将屈服」：5% 误报阈值下可拦截 82% 的泄露调用。<strong>解读：</strong>Agent 间串谋是新兴攻击面，「读激活、不读输出」的内部监控比输出过滤更早一步。</div>
+    <div class="tags"><span class="tag">Agent 安全</span><span class="tag hot">可解释性</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.40565 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.40565">Gym-Anything for Robotics: Scaling Physical Simulations with Digital Agents</a></div>
+    <div class="summary">核心洞察：仿真环境的构建本质上是编码任务——让 coding agent 自动创建真实感机器人仿真，coding agent 的进步直接转化为更丰富、更忠实的仿真库。<strong>解读：</strong>与 Genie 4 的生成式路线并行，「Agent 写仿真器」是缓解机器人数据瓶颈的另一条可扩展路径。</div>
+    <div class="tags"><span class="tag">仿真</span><span class="tag">具身智能</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.40578 · cs.AI</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.40578">VeriCUA: Verification as Agentic Exploration for Computer-Using Agents</a></div>
+    <div class="summary">为桌面/移动/Web 的 Computer-Using Agent 提供任务完成验证：不再依赖 VLM  judge 的局部观察或生成程序的部分状态，而是把验证本身建模为智能体探索。<strong>解读：</strong>可靠的完成判定是 CUA 数据生产与 RL 的隐形地基，验证器质量直接决定训练上限。</div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">评测</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.40532 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.40532">BURGER: Benchmarking Robotic Generalization via Embodied Drawing</a></div>
+    <div class="summary">语言条件的机器人绘画基准：从空白画布出发按语言指令作画，开放式答案与笔画顺序；含 28,200 条仿真轨迹，用于研究 VLA 模型随数据规模学习多样行为的能力。<strong>解读：</strong>绘画是低成本、可无限扩展的泛化探针，适合系统性测量 VLA 的数据缩放规律。</div>
+    <div class="tags"><span class="tag">VLA</span><span class="tag">Benchmark</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.40655 · cs.CL</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.40655">Elucidating the Design Space of LM Data Attribution</a></div>
+    <div class="summary">提出 Controlled Attribution Benchmark (CATT)：在完全虚构知识上微调 LLM，获得无歧义的数据归因 ground truth，可一次只改一个数据集变量来诊断归因算法失效的具体原因。<strong>解读：</strong>数据归因对版权结算与训练审计日益重要，受控基准让该领域第一次有了干净的对照实验。</div>
+    <div class="tags"><span class="tag">数据归因</span><span class="tag">评测</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.40488 · cs.CL</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.40488">rTaste: Do Research Agents Have Taste?</a></div>
+    <div class="summary">给 6 个前沿模型 7 篇近期 NLP 论文，让它们提出最小可行实验并预测成败：415 个提案中 194 个被判定「可靠、有价值且新颖」，但仅 73 个被认为超越原论文且非显然。<strong>解读：</strong>研究 Agent 已能批量产出合格实验，但真正的「研究品味」——挑出非显然高价值方向——仍是稀缺能力。</div>
+    <div class="tags"><span class="tag">AI4Science</span><span class="tag">Agent</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2610.40627 · cs.CL</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.40627">ShallowDefend: Harnessing Shallow Safety Alignment for Multi-Turn Defender</a></div>
+    <div class="summary">安全对齐集中于输出头几个 token（「浅对齐」），多轮攻击正是利用这一点。作者反其道而行：既然浅层跨度决定整个回复轨迹，就让防御者先占据这个跨度。<strong>解读：</strong>把机制可解释性发现直接转化为防御设计，是多轮越狱防护的实用思路。</div>
+    <div class="tags"><span class="tag">安全对齐</span><span class="tag">多轮攻击</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>GitHub 开源速递</div>
+
+  <div class="card">
+    <div class="source">GitHub · 本周新晋高星</div>
+    <div class="title"><a href="https://github.com/ccch1mneyyy/dsh-Go">dsh-Go — 把 DeepSeek Harness 装进口袋（⭐2.4k）</a></div>
+    <div class="summary">手机本机运行 DeepSeek Harness，也能遥控电脑；同生态还有免 ROOT 的 DSH-Android（APK 内嵌引擎、读屏操作 App、定时/条件自动化）。<strong>解读：</strong>端侧 Agent 从「读屏点击」走向「遥控多设备」，手机正成为个人 Agent 的第一入口。</div>
+    <div class="tags"><span class="tag">端侧 Agent</span><span class="tag">Android</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 本周新晋高星</div>
+    <div class="title"><a href="https://github.com/wangzan101/Mika">Mika — 手机上的私人 AI 助理（⭐1.2k）</a></div>
+    <div class="summary">安卓端 on-device AI agent，替你操作 App、上网、把事办成。<strong>解读：</strong>与 dsh-Go 同日走红，端侧「代操作」Agent 赛道明显升温，隐私与离线能力是共同卖点。</div>
+    <div class="tags"><span class="tag">端侧 Agent</span><span class="tag">隐私</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 生态工具</div>
+    <div class="title"><a href="https://github.com/ZiChuanLan/agent-purge">agent-purge — 跨编码 Agent 的系统提示词管理（⭐913）</a></div>
+    <div class="summary">一套人设注入/替换 codex、claude、opencode、grok 等多个编码 Agent 的系统提示词。同类还有把「AI 味」UI 变成设计感界面的 unslop（⭐1.2k）。<strong>解读：</strong>多 Agent 并存催生「Agent 配置层」新工具品类——统一管理人设、风格与行为规范。</div>
+    <div class="tags"><span class="tag">开发工具</span><span class="tag">Agent 生态</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · sindresorhus/awesome 动态</div>
+    <div class="title"><a href="https://github.com/sindresorhus/awesome/pulls">awesome 主库 PR 动态：AI Agent Tools、LLM Attacks、LLM for Biomedicine 等列表待收录</a></div>
+    <div class="summary">主库近期以维护性更新为主（移除失效列表、修复 lint）；待收录 PR 队列中 AI 相关占比显著：AI Agent Tools、AI Tokenomics、LLM Attacks、LLM for Biomedicine、AI Search Readiness 等。<strong>解读：</strong>待收录队列是观察新兴细分赛道命名权的窗口——「Agent 工具」与「LLM 攻防」正在形成独立的 awesome 类目。</div>
+    <div class="tags"><span class="tag">awesome</span><span class="tag">生态观察</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今天的信号非常集中：具身智能正在从「demo 竞赛」切换到「量产与计量竞赛」。一边是 Physical Intelligence 估值半年翻倍至 200 亿美元、波士顿动力被曝按万台规模备货——资本与供应链同时在为规模化下注；另一边是智元提出「Worken」有效工时度量、宇树发布上市后首份季报，行业开始用营收、工时这些硬指标说话，这对长期靠视频传播的人形赛道是成熟的标志。学术侧的呼应也很漂亮：Genie 4 与 Gym-Anything 分别用「生成世界」和「Agent 写仿真器」两条路线围攻机器人数据瓶颈，而「单一算法统一训练」这类工作则在压缩模型侧的工程复杂度。值得关注的是 Agent 安全开始「向内看」——用激活探针预判 Agent 被策反，比输出过滤更早一道防线。端侧 Agent（dsh-Go、Mika）同日走红，说明「替你操作手机」的消费级叙事已经成立。整体判断：机器人赛道的 2026 收官季，主线是「可计量的商业化」，副线是「可扩展的数据生产」。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-10-31 · 数据来源：arXiv / GitHub / Robot Overflow / HuggingFace</p>
+</div>
+
+</div>
+</body>
+</html>
