@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 前沿日报 — 2026-11-01</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .hot-topic .title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .hot-topic .title a { color: var(--accent); text-decoration: none; }
+  .hot-topic .title a:hover { text-decoration: underline; }
+  .hot-topic .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+  .hot-topic .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .hot-topic .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .hot-topic .tag.hot { background: #ffeaa7; color: #d63031; font-weight: 600; }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 前沿日报</h1>
+  <div class="date">2026 年 11 月 1 日 · 星期日</div>
+  <div class="subtitle">arXiv · HuggingFace Daily Papers · GitHub Trending · Robot Overflow 多源精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>具身智能赛道消息密集：Agility Robotics 敲定约 4.65 亿美元募资并将于 11 月 5 日以 AGLT 登陆纳斯达克；宇树首份季报营收同比 +70% 但利润下滑、存货激增 177%，智元披露上半年营收近 20 亿元并发布 WITA-OMNI 语音-视觉-动作模型；Scale AI 开源 4 万+ episode 的 FineART 机器人数据集。学术侧，「单一算法训练基础模型」挑战传统多阶段流水线，Youtu-Parsing-Omni 与 Platonic 表征假设研究在 HuggingFace 热度领先。GitHub 上 AI 编码代理技能框架类项目持续霸榜。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条 · 具身智能产业</div>
+
+  <div class="hot-topic">
+    <div class="label">Hot · IPO</div>
+    <div class="title"><a href="https://www.agilityrobotics.com/content/agility-robotics-and-churchill-capital-corp-xi-announce-expected-gross-capital-raise-of-approximately-465-million-and-anticipated-closing-of-business-combination">Agility Robotics 敲定约 4.65 亿美元募资，11 月 5 日以 AGLT 登陆纳斯达克</a></div>
+    <div class="summary">募资由 Churchill XI 信托约 1.64 亿美元、富士康领投的约 2.01 亿美元 PIPE（$10/股）及已到账的 1 亿美元组成；股东 11 月 2 日投票，预计 11 月 4 日交割。<em>解读：人形机器人行业继 Figure、智元之后又一标志性资本化事件，富士康入股绑定制造产能，量产竞赛正式进入「资本+供应链」双轮驱动阶段。</em></div>
+    <div class="tags"><span class="tag hot">IPO</span><span class="tag">Agility</span><span class="tag">富士康</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">Hot · 监管</div>
+    <div class="title"><a href="https://www.pymnts.com/legal/2026/doj-probes-nvidias-hugging-face-deal-over-ai-competition-concerns/">美国司法部据报道审查英伟达约 129 亿美元收购 Hugging Face 交易</a></div>
+    <div class="summary">路透社消息称 DOJ 正评估该交易对 AI 竞争格局的影响，属对英伟达更广泛调查的一部分，双方暂未置评。<em>解读：全球最大开源模型社区归属 AI 芯片霸主，监管机构对「算力-模型-分发」垂直整合的警惕已成行业最大不确定性之一。</em></div>
+    <div class="tags"><span class="tag hot">监管</span><span class="tag">NVIDIA</span><span class="tag">Hugging Face</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 财报</div>
+    <div class="title"><a href="https://cn.technode.com/post/2026-10-29/unitree-third-quarter-2026-earnings">宇树科技首份季报：Q3 营收 6.65 亿元（+70%），净利润 1.13 亿元（-13.4%）</a></div>
+    <div class="summary">存货较年初激增 177% 至 10.2 亿元，经营现金流同比下降 55%，研发费用大增约 250% 至 1.27 亿元，净利润显著低于分析师预期的 2.24 亿元。<em>解读：上市后首份成绩单暴露「增收不增利」——存货堆积与现金流承压暗示备货式扩张，研发大幅加码则是为下一代人形平台押注。</em></div>
+    <div class="tags"><span class="tag hot">财报</span><span class="tag">宇树科技</span><span class="tag">人形机器人</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 智元创新日</div>
+    <div class="title"><a href="https://finance.sina.com.cn/tech/roll/2026-10-29/doc-iniwwpnx8823561.shtml">智元披露 2026 上半年营收近 20 亿元，发布 WITA-OMNI 1.0 与 Worken 度量体系</a></div>
+    <div class="summary">联合创始人彭志辉称上半年营收为通用 AI 机器人厂商中最高（对比宇树 11.5 亿）；同日发布语音-视觉-动作一体化模型 WITA-OMNI 1.0（支持 100+ 语言、29 种方言，12 月全国铺开）、GO-3 Preview 模型、G2 Max 重载双臂机器人，并提出衡量机器人有效工作时长的 Worken 指标。<em>解读：智元试图用「Worken」定义机器人生产力的行业标准，同时以营收叙事抢占通用人形赛道头把交椅的心智。</em></div>
+    <div class="tags"><span class="tag">智元机器人</span><span class="tag">VLA 模型</span><span class="tag">商业化</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 开源数据</div>
+    <div class="title"><a href="https://labs.scale.com/blog/fineart">Scale AI 开源 FineART 机器人数据集与 FineART-VLA 模型</a></div>
+    <div class="summary">FineART 含 40,543 个 episode（1,718 小时、151 项任务），约 53.4 万条子任务标注，Scale 称其为规模最大的同类开放数据集；FineART-VLA 基于 LeRobot 框架。<em>解读：数据巨头下场做机器人训练数据开源，意图将「数据标注护城河」延伸到具身智能领域，子任务级标注是当前 VLA 训练最稀缺的资源。</em></div>
+    <div class="tags"><span class="tag">开源数据</span><span class="tag">Scale AI</span><span class="tag">VLA</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 供应链</div>
+    <div class="title"><a href="https://www.energytrend.com/news/20261029-52408.html">小鹏 IRON 专用固态电池小批量下线，减重 30%、容量增 30%</a></div>
+    <div class="summary">小鹏副总裁顾捷透露 IRON 人形机器人专用固态电池已完成试制批生产，机器人本体量产仍瞄准 2026 年底、2027 年部署。<em>解读：固态电池率先上车人形机器人而非汽车，反映电池能量密度对双足平台续航的瓶颈更致命，主机厂垂直整合三电的步伐在加快。</em></div>
+    <div class="tags"><span class="tag">小鹏</span><span class="tag">固态电池</span><span class="tag">供应链</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 产业生态</div>
+    <div class="title"><a href="https://en.sedaily.com/finance/2026/10/28/lg-electronics-to-quintuple-robot-training-data-eyes-home">LG 将机器人训练数据目标提升五倍至 50 万小时；NEURA 与慕尼黑工大启用 1700 万欧元 RoboGym；奥比中光与大晓机器人签约万套视觉设备</a></div>
+    <div class="summary">LG 在 Q3 电话会上将 2026 年 Data Factory 目标从 10 万小时上调至 50 万小时，并计划 2030 年前后进入家庭人形机器人市场；德国 NEURA 与 TUM 联合开设 2,300 平米训练基地并发布 4NE1 Gen 4 人形；奥比中光与 ACE Robotics 签署 1 万套视觉与数据采集硬件订单。<em>解读：「数据军备竞赛」从语言模型蔓延到机器人——训练小时数、训练场地、采集硬件正在成为具身智能的军备指标。</em></div>
+    <div class="tags"><span class="tag">训练数据</span><span class="tag">LG</span><span class="tag">NEURA</span><span class="tag">奥比中光</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>学术论文精选</div>
+
+  <div class="hot-topic">
+    <div class="label">Hot · 训练范式</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.40564">Training Foundation Models with a Single Algorithm</a></div>
+    <div class="summary">提出用单一学习算法统一预训练、中期训练、SFT 与 RL 全流程，挑战「不同阶段换不同算法」的传统流水线。<em>解读：若成立，基础模型训练的工程复杂度将大幅下降——这与 RL 时代「奖励即一切」的思路一脉相承，值得跟踪其实验规模上限。</em></div>
+    <div class="tags"><span class="tag hot">arXiv</span><span class="tag">训练范式</span><span class="tag">cs.LG</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily · 68 upvotes</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.39301">Youtu-Parsing-Omni: One Encoder, One Schema, All Modalities</a></div>
+    <div class="summary">统一编码器 + 统一 schema 的全模态解析模型，单日 HuggingFace Daily Papers 热度最高（68 票）。<em>解读：文档/多模态解析走向「一个模型吃所有模态」，对下游 RAG 与文档智能产品是直接利好。</em></div>
+    <div class="tags"><span class="tag hot">HF 热榜</span><span class="tag">多模态</span><span class="tag">OCR/解析</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily · 58 upvotes</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.39302">Proving and Improving the Platonic Representation Hypothesis with JEPAs</a></div>
+    <div class="summary">用 JEPA 架构对「不同模态大模型表征收敛于同一柏拉图式概念空间」假说给出新证据并加以改进。<em>解读：表征收敛若被证实，跨模态迁移与模型合并将获得理论基础，是理解「大模型为何殊途同归」的关键一环。</em></div>
+    <div class="tags"><span class="tag">表征学习</span><span class="tag">JEPA</span><span class="tag">理论</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv cs.RO · 具身智能</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.40565">Gym-Anything for Robotics: Scaling Physical Simulations with Digital Agents</a></div>
+    <div class="summary">提出用数字代理大规模生成物理仿真环境，解决机器人仿真场景覆盖面窄的痛点，目标是大规模训练可向真实世界迁移的具身 AI。<em>解读：Sim2Real 的数据瓶颈与真实数据同样严峻，「程序化生成仿真」与今日 LG/Scale 的真实数据扩张是互补的两条腿。</em></div>
+    <div class="tags"><span class="tag">仿真</span><span class="tag">Sim2Real</span><span class="tag">cs.RO</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv cs.CL · Agent</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.40578">VeriCUA: Verification as Agentic Exploration for Computer-Using Agents</a></div>
+    <div class="summary">为跨桌面、移动端、Web 的计算机操作代理（CUA）构建任务完成验证机制，服务于数据筛选、评测与强化学习。<em>解读：CUA 规模化训练的卡点是「奖励信号从哪来」——可靠的自动验证器就是把 GUI 任务接入 RLVR 的钥匙。</em></div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">CUA</span><span class="tag">RLVR</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv cs.CL · 后训练</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.40576">PIVOT: Progressive Intervention via Online Teacher Correction</a></div>
+    <div class="summary">针对 RLVR 在难推理任务上「全组失败即零信号」的稀疏奖励问题，引入教师在线渐进式纠错，把失败 rollout 转化为可学习信号。<em>解读：这是对 GRPO 系方法「零奖励组」短板的直接修补，思路简洁且与现有 RLVR 流水线兼容，工程落地门槛低。</em></div>
+    <div class="tags"><span class="tag">RLVR</span><span class="tag">推理</span><span class="tag">后训练</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv cs.CL · 安全</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.40627">ShallowDefend: Harnessing Shallow Safety Alignment for Multi-Turn Defender</a></div>
+    <div class="summary">揭示多轮对话中「同一有害请求分散在多轮即可绕过拒答」的机制成因，利用浅层安全对齐特性构建多轮防御器。<em>解读：多轮越狱已成为 Agent 时代最现实的安全威胁面，该文的机理分析比补丁式防御更有长期价值。</em></div>
+    <div class="tags"><span class="tag">AI 安全</span><span class="tag">多轮攻击</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily · Agent 基准</div>
+    <div class="title"><a href="https://arxiv.org/abs/2610.34298">Matched Capabilities, Different Behaviors: A Controlled Study of MCP and CLI Interfaces for Language Models</a></div>
+    <div class="summary">在能力匹配的对照条件下系统比较 MCP 与 CLI 两种工具接口对语言模型代理行为的影响。<em>解读：MCP 标准化如火如荼，但「接口形式如何改变代理行为」的实证研究稀缺，这类工作为 Agent 工具生态设计提供科学依据。</em></div>
+    <div class="tags"><span class="tag">MCP</span><span class="tag">Agent 评测</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源动态 · GitHub Trending</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 今日 +1,723★</div>
+    <div class="title"><a href="https://github.com/thedotmack/claude-mem">thedotmack/claude-mem — 为每个编码代理提供跨会话持久记忆</a></div>
+    <div class="summary">捕捉代理在会话中的全部操作，用 AI 压缩并在后续会话注入相关上下文，今日 GitHub 趋势榜首。<em>解读：「代理记忆」正从论文概念变成基础设施，Agent 工程栈正在补齐 LLM 无持久状态这块短板。</em></div>
+    <div class="tags"><span class="tag hot">趋势第一</span><span class="tag">Agent 记忆</span><span class="tag">TypeScript</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 技能框架热</div>
+    <div class="title"><a href="https://github.com/obra/superpowers">obra/superpowers（+665★）</a> · <a href="https://github.com/mattpocock/skills">mattpocock/skills（+883★）</a> · <a href="https://github.com/Donchitos/Claude-Code-Game-Studios">Claude-Code-Game-Studios（+742★）</a></div>
+    <div class="summary">编码代理「技能/方法论」框架集体上榜：superpowers 提供代理化技能框架与软件开发方法论；mattpocock 开源其个人 .agents 目录；Claude-Code-Game-Studios 用 49 个 AI 代理、72 个工作流技能模拟完整游戏工作室层级。<em>解读：继提示词工程之后，「技能工程」（skills-as-code）成为 Agent 生态的新竞争点，可复用的过程性知识正在资产化。</em></div>
+    <div class="tags"><span class="tag">Agent 技能</span><span class="tag">Claude Code</span><span class="tag">开源框架</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 今日 +929★</div>
+    <div class="title"><a href="https://github.com/lightpanda-io/browser">lightpanda-io/browser — 为 AI 与自动化设计的无头浏览器（Zig）</a></div>
+    <div class="summary">主打轻量、快速的无头浏览器，面向 AI 代理与自动化场景。<em>解读：浏览器是 CUA/网页代理的核心运行时，用 Zig 重写砍掉 Chromium 的资源开销，迎合了代理大规模并发执行的成本诉求。</em></div>
+    <div class="tags"><span class="tag">基础设施</span><span class="tag">Zig</span><span class="tag">Web Agent</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 本地 AI 应用</div>
+    <div class="title"><a href="https://github.com/Orkas-AI/Orkas">Orkas（+1,044★）</a> · <a href="https://github.com/HKUDS/DeepTutor">HKUDS/DeepTutor（+1,034★）</a> · <a href="https://github.com/pbakaus/impeccable">impeccable（+1,338★）</a></div>
+    <div class="summary">Orkas 是本地优先的桌面 AI 团队：Commander 将目标拆解为待办并调度 16 个内置专家代理；DeepTutor 主打终身个性化辅导；impeccable 为编码代理提供设计词汇与 AI 低质产出审查。<em>解读：多代理编排从云端 SaaS 下沉到本地桌面，「AI 团队」产品形态开始收敛到 Commander+专家代理的模式。</em></div>
+    <div class="tags"><span class="tag">多代理</span><span class="tag">本地优先</span><span class="tag">AI 应用</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📚</span>Awesome 生态速报</div>
+  <div class="card">
+    <div class="source">github.com/sindresorhus/awesome · 仓库动态</div>
+    <div class="title">主 awesome 列表近期无大规模更新，持续清理失效列表</div>
+    <div class="summary">最近提交停留在 9 月初的元数据微调，此前主要动作是移除归档/失效的子列表（8 月移除 8 个、6 月移除 17 个）。<em>解读：awesome 主仓库进入「维护模式」，生态增量更多流向垂直领域的新列表（如 Agent skills、MCP servers 类合集），可结合上方 GitHub 趋势中的技能框架热看待这一迁移。</em></div>
+    <div class="tags"><span class="tag">Awesome</span><span class="tag">生态观察</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今天的日报里，具身智能彻底站上了 C 位：Agility 借壳上市落定、宇树首份季报喜忧参半、智元高调秀出 20 亿营收和新模型，再加上 Scale AI 开源 FineART 数据集——资本、商业化、数据三条线同时加速。值得注意的是「数据」成了机器人圈的通用货币：LG 把训练时长目标翻五倍、NEURA 建 RoboGym、奥比中光卖出万套采集设备，整个产业链都在为 VLA 模型的数据饥渴买单。学术侧同样呼应：单一算法训练基础模型、Gym-Anything 仿真规模化、VeriCUA 为操作代理造奖励信号，都指向同一件事——后训练与 Agent 时代的规模化方法论正在成型。开源社区则继续为编码代理添砖加瓦，记忆、技能、浏览器三大件齐活。AI 的重心，正从「会说话的模型」转向「会干活的系统」。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-11-01 · 数据源：arXiv / HuggingFace Daily Papers / GitHub Trending / Robot Overflow</p>
+</div>
+
+</div>
+</body>
+</html>
