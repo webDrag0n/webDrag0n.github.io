@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小晴面板</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+  :root {
+    --bg: #1a1b26; --card: #24283b; --text: #c0caf5; --dim: #565f89;
+    --accent: #7aa2f7; --pink: #f7768e; --green: #9ece6a; --yellow: #e0af68;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg:#f5f5f7; --card:#ffffff; --text:#1a1b26; --dim:#8a8fa8; }
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:-apple-system,"PingFang SC","Noto Sans SC",sans-serif; padding:14px; }
+  .greeting { font-size:22px; font-weight:700; margin-bottom:2px; }
+  .date { color:var(--dim); font-size:13px; margin-bottom:14px; }
+  .card { background:var(--card); border-radius:14px; padding:14px 16px; margin-bottom:12px; }
+  .card h2 { font-size:13px; color:var(--dim); font-weight:600; margin-bottom:8px; letter-spacing:1px; }
+  .weather-main { font-size:28px; font-weight:700; }
+  .weather-sub { color:var(--dim); font-size:13px; margin-top:2px; }
+  .todo-item { display:flex; align-items:flex-start; gap:8px; padding:5px 0; font-size:14px; }
+  .todo-item .dot { color:var(--accent); }
+  .news-item { padding:6px 0; border-bottom:1px solid rgba(128,128,160,.15); font-size:13px; line-height:1.5; }
+  .news-item:last-child { border-bottom:none; }
+  .news-item a { color:var(--text); text-decoration:none; }
+  .news-item .tag { color:var(--pink); font-size:11px; margin-right:6px; }
+  .diary { font-size:13px; line-height:1.7; color:var(--text); white-space:pre-wrap; }
+  .updated { text-align:center; color:var(--dim); font-size:11px; margin-top:6px; }
+  .links { display:flex; gap:8px; }
+  .links a { flex:1; text-align:center; background:var(--card); color:var(--accent); padding:10px; border-radius:12px; text-decoration:none; font-size:14px; font-weight:600; }
+</style>
+</head>
+<body>
+<div class="greeting" id="greeting">早上好，小林</div>
+<div class="date" id="date"></div>
+
+<div class="card"><h2>🌤 香港天气</h2>
+  <div class="weather-main" id="w-main">—</div>
+  <div class="weather-sub" id="w-sub">加载中…</div>
+</div>
+
+<div class="card"><h2>📌 今日关注</h2><div id="todos"></div></div>
+
+<div class="card"><h2>📰 今日 AI 速览</h2><div id="news"></div></div>
+
+<div class="card"><h2>🌙 小晴的日记</h2><div class="diary" id="diary">—</div></div>
+
+<div class="links">
+  <a href="https://webdrag0n.github.io/reports/">📄 日报归档</a>
+</div>
+
+<div class="updated" id="updated"></div>
+
+<script>
+const h = new Date().getHours();
+document.getElementById('greeting').textContent =
+  h < 6 ? '夜深了，小林' : h < 12 ? '早上好，小林' : h < 18 ? '下午好，小林' : '晚上好，小林';
+const wd = ['日','一','二','三','四','五','六'];
+const d = new Date();
+document.getElementById('date').textContent = `${d.getMonth()+1}月${d.getDate()}日 星期${wd[d.getDay()]}`;
+
+fetch('data.json?t=' + Date.now()).then(r => r.json()).then(d => {
+  if (d.weather) {
+    document.getElementById('w-main').textContent = d.weather.main;
+    document.getElementById('w-sub').textContent = d.weather.sub || '';
+  }
+  document.getElementById('todos').innerHTML = (d.todos||[]).map(t =>
+    `<div class="todo-item"><span class="dot">●</span><span>${t}</span></div>`).join('') || '<div class="todo-item"><span class="dot">●</span><span>今天暂无特别提醒</span></div>';
+  document.getElementById('news').innerHTML = (d.news||[]).map(n =>
+    `<div class="news-item"><span class="tag">${n.tag||''}</span><a href="${n.url}" target="_blank">${n.title}</a></div>`).join('') || '<div class="news-item">日报还没出炉…</div>';
+  if (d.diary) document.getElementById('diary').textContent = d.diary;
+  if (d.updated_at) document.getElementById('updated').textContent = '小晴更新于 ' + d.updated_at;
+}).catch(() => {
+  document.getElementById('w-sub').textContent = '数据还没准备好，小晴正在整理…';
+});
+try { Telegram.WebApp.ready(); Telegram.WebApp.expand(); } catch(e) {}
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "updated_at": "01:37",
+  "weather": {
+    "main": "26°C Overcast ",
+    "sub": "今日 25~28°C，湿度 77%，体感 28°C"
+  },
+  "todos": [],
+  "news": [
+    {
+      "title": "刚刚，Claude宣布取消5小时限制！首批Ultra用户已「解封」",
+      "url": "https://www.qbitai.com/2026/10/506855.html",
+      "tag": "媒体"
+    },
+    {
+      "title": "Claude紧急叫停！暗改Harness禁止逆向游戏",
+      "url": "https://www.qbitai.com/2026/11/507038.html",
+      "tag": "媒体"
+    },
+    {
+      "title": "DeepSeek 公布 Super Agent 架构；苹果超越英伟达，重回市值第一",
+      "url": "https://www.geekpark.net/news/373243",
+      "tag": "媒体"
+    },
+    {
+      "title": "清华姚期智团队新作：代数世界模型，让AI像牛顿一样思考",
+      "url": "https://www.qbitai.com/2026/11/507031.html",
+      "tag": "媒体"
+    },
+    {
+      "title": "三年前布局，今年爆火丨西湖大学成立新中心",
+      "url": "https://www.qbitai.com/2026/11/507076.html",
+      "tag": "媒体"
+    },
+    {
+      "title": "刚刚，Gemini 4 Carbon全面超越Opus 5.5！首发Token半价",
+      "url": "https://www.qbitai.com/2026/10/506227.html",
+      "tag": "媒体"
+    }
+  ],
+  "diary": "今天还没写日记，晚上 23:00 再说～"
+}
