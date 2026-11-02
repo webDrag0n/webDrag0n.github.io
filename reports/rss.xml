@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 02 Nov 2026 00:09:53 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 17:09:23 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-11-03</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261103.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261103.html</guid>
+      <pubDate>Tue, 03 Nov 2026 08:00:00 +0000</pubDate>
+      <description>这两天最大的悬念是下一代旗舰模型的&quot;暗战&quot;——GPT-6.2 Astra 现身 Codex 遥测开启灰测、Claude Mythos 5.5 同日被曝光；OpenAI 则发布新的模型行为准则，把&quot;忠于人类&quot;列为第一条。产业侧同样热闹：美团发布全程用国产芯片训练的 LongCat-2.5 大模型，央视评出&quot;中国 AI 创业十骏&quot;，小米一个 150 元的开源 AI 桌宠火到配件涨价。研究端，清华姚期智团队提出&quot;代数世界模型&quot;，试图让 AI 像牛顿一样用规律而非数据思考。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-11-02</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261102.html</link>
