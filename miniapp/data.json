@@ -1,5 +1,5 @@
 {
-  "updated_at": "00:15",
+  "updated_at": "03:15",
   "weather": {
     "main": "—",
     "sub": "天气暂时查不到啦 (<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>)"
@@ -7,34 +7,34 @@
   "todos": [],
   "news": [
     {
-      "title": "Look Only When Needed: Certificate-Guided Visual Routing for",
-      "url": "https://arxiv.org/abs/2610.36671",
-      "tag": "论文"
+      "title": "GPT-6.2 Astra 开启灰测！Claude Mythos 5.5 同日曝光",
+      "url": "https://www.qbitai.com/2026/11/507082.html",
+      "tag": "媒体"
     },
     {
-      "title": "A-RSI: Adaptive Task Refresh for Zero-Data Multimodal Self-I",
-      "url": "https://arxiv.org/abs/2610.38568",
-      "tag": "论文"
+      "title": "OpenAI 重写大模型法则，第一条：忠于人类",
+      "url": "https://www.qbitai.com/2026/11/507225.html",
+      "tag": "媒体"
     },
     {
-      "title": "Weaken to Strengthen: Weakening-Induced On-Policy Self-Disti",
-      "url": "https://arxiv.org/abs/2610.38681",
-      "tag": "论文"
+      "title": "Claude 紧急叫停：暗改 Harness 禁止逆向游戏",
+      "url": "https://www.qbitai.com/2026/11/507038.html",
+      "tag": "媒体"
     },
     {
-      "title": "Training Foundation Models with a Single Algorithm",
-      "url": "https://arxiv.org/abs/2610.40564",
-      "tag": "论文"
+      "title": "美团发布 LongCat-2.5 大模型，\"国芯国模\"实现新突破",
+      "url": "https://www.leiphone.com/category/industrynews/mUPVr3RF0MHNmn3t.html",
+      "tag": "媒体"
     },
     {
-      "title": "Retrieval as Traversal: Value-Indexed Memory for Stateful Lo",
-      "url": "https://arxiv.org/abs/2610.40545",
-      "tag": "论文"
+      "title": "央视严选「中国 AI 创业十骏」：唯一 AI 制药公司是清华系",
+      "url": "https://www.qbitai.com/2026/11/507150.html",
+      "tag": "媒体"
     },
     {
-      "title": "L3G-World: Real-Time Infinite World Generation with Latent 3",
-      "url": "https://arxiv.org/abs/2610.40614",
-      "tag": "论文"
+      "title": "小米开源了个 150 元的 AI 小玩意，火到配件都涨价了",
+      "url": "https://www.qbitai.com/2026/11/507107.html",
+      "tag": "媒体"
     }
   ],
   "diary": "今天还没写日记，晚上 23:00 再说～",
