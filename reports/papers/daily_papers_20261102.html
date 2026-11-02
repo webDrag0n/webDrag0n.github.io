@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年11月2日 星期一</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+
+  .hot-topic .source { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+  .hot-topic .title { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .hot-topic .title a { color: var(--accent); text-decoration: none; }
+  .hot-topic .title a:hover { text-decoration: underline; }
+  .hot-topic .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+  .hot-topic .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .hot-topic .tag { font-size: 12px; padding: 2px 10px; border-radius: 12px; background: var(--tag-bg); color: var(--tag-text); }
+  .hot-topic .tag.hot { background: #ffeaa7; color: #d63031; font-weight: 600; }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年11月2日 星期一</div>
+  <div class="subtitle">ArXiv + HuggingFace + GitHub + Robot Overflow 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>周一早上好。arXiv 周末空窗结束，10月29日批次放量补位——「自我改进」成为最清晰的主线：A-RSI 用自适应任务刷新做零数据多模态自进化（71↑）、WISD 用「弱化自我对比」做无教师自蒸馏、统一训练框架把预训练到 RL 合并成单一算法。推理侧，LOWN 给扩散 VLM 加了「按需看图」的证书路由（101↑），MTP 梯度分解被重新审视。具身智能这边产业新闻浓度更高：Agility 借壳上市 11月5日以 AGLT 登陆纳斯达克，Meta 被曝与傅利叶合作造人形机器人原型，智元上半年营收近 20 亿、发布 WITA-OMNI 全模态交互模型。开源侧 claude-mem（+1,526⭐/天）把「会话间持久记忆」做成了 Claude Code 基础设施。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日焦点</div>
+<div class="hot-topic">
+  <div class="label">HuggingFace 日榜 · 101 upvotes</div>
+  <div class="source">arXiv 2610.36671 · cs.CV · 高效推理</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.36671">Look Only When Needed: Certificate-Guided Visual Routing for Efficient Diffusion VLMs</a></div>
+  <div class="summary">扩散视觉语言模型（DVLM）在每个去噪步都重复处理全部视觉 token，而后者占输入的 89–97%。作者逐步对比有/无图像输入的预测差异，发现绝大多数去噪步根本不需要看图。据此提出「证书引导的视觉路由」：每步先算一个廉价证书，只有证书表明图像信息会改变输出时才真正注入视觉 token。为什么重要：这把「视觉 token 剪枝」从静态压缩升级为动态路由，为端侧多模态推理省下了数量级的算力。</div>
+  <div class="tags"><span class="tag hot">HF 101↑</span><span class="tag">扩散VLM</span><span class="tag">推理加速</span><span class="tag">端侧部署</span></div>
+</div>
+<div class="hot-topic">
+  <div class="label">HuggingFace 日榜 · 71 upvotes</div>
+  <div class="source">arXiv 2610.38568 · cs.LG · 自我改进</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.38568">A-RSI: Adaptive Task Refresh for Zero-Data Multimodal Self-Improvement</a></div>
+  <div class="summary">递归自我改进不仅要解决「生成什么经验」，还要解决「何时引入新经验」。A-RSI 把这两个问题解耦：用训练动态（loss 曲线）判断当前经验何时失效，同时把新任务的监督信号与模型自身的不确定预测解耦，避免多数投票带来的自证循环。为什么重要：这是「RSI 从概念走向训练算法」的又一块拼图——模型开始自己决定何时该换新题。</div>
+  <div class="tags"><span class="tag hot">HF 71↑</span><span class="tag">递归自我改进</span><span class="tag">多模态</span><span class="tag">零数据</span></div>
+</div>
+</div>
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型训练与 Agent</div>
+<div class="card">
+  <div class="source">arXiv 2610.38681 · cs.CL · HF 日榜</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.38681">Weaken to Strengthen: Weakening-Induced On-Policy Self-Distillation for Large Reasoning Models</a></div>
+  <div class="summary">自蒸馏通常需要特权信息构造更强的「自我教师」。WISD 反其道而行：构造原模型的弱化版（低比特量化或幅度缩放），用强弱对比作为训练信号，无需任何外部教师或标注。为什么重要：为无标注场景下的大模型自改进提供了一条极简路径。</div>
+  <div class="tags"><span class="tag">自蒸馏</span><span class="tag">RLVR</span><span class="tag">推理模型</span></div>
+</div>
+<div class="card">
+  <div class="source">arXiv 2610.40564 · cs.LG · HF 8↑</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.40564">Training Foundation Models with a Single Algorithm</a></div>
+  <div class="summary">基础模型训练通常分预训练、中训练、SFT、RL 四个阶段，算法各不相同。本文推导出：把 RL 目标写成对模型生成目标分布的最大似然拟合，就能用一个统一的似然算法覆盖全部阶段。为什么重要：「训哪个阶段」的问题被还原为「在何时、以何比例用哪些数据」——训练流程的工程复杂度大幅降低。</div>
+  <div class="tags"><span class="tag">训练框架</span><span class="tag">统一算法</span><span class="tag">基础模型</span></div>
+</div>
+<div class="card">
+  <div class="source">arXiv 2610.40545 · cs.AI · 长上下文记忆</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.40545">Retrieval as Traversal: Value-Indexed Memory for Stateful Long-Context Agents</a></div>
+  <div class="summary">长上下文模型反复求解相似的检索问题，但注意力或全局检索每次前向都要重新搜索。本文提出「检索即遍历」：用值索引的记忆结构把检索变成沿已建索引的局部游走，避免全量重扫。为什么重要：为有状态长程 Agent 提供了一种计算上可持续的记忆访问模式。</div>
+  <div class="tags"><span class="tag">Agent记忆</span><span class="tag">长上下文</span><span class="tag">检索</span></div>
+</div>
+<div class="card">
+  <div class="source">arXiv 2610.40589 · cs.AI · 量子实验</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.40589">Collaborative AI agents for autonomous experimental research with solid-state quantum spins</a></div>
+  <div class="summary">一组协作 AI 智能体在固态量子自旋实验平台上完成了从问题形成到实验执行的自主研究闭环。为什么重要：这是「AI 科学家」叙事在物理实验科学中的最新落地，与此前 PRAXIST 等自主科研系统互为印证。</div>
+  <div class="tags"><span class="tag">AI4Science</span><span class="tag">多智能体</span><span class="tag">自主实验</span></div>
+</div>
+</div>
+<div class="section">
+  <div class="section-title"><span class="emoji">👁️</span>多模态与世界生成</div>
+<div class="card">
+  <div class="source">arXiv 2610.40614 · cs.CV · HF 40↑</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.40614">L3G-World: Real-Time Infinite World Generation with Latent 3D Gaussian Memory</a></div>
+  <div class="summary">交互式世界模型要在用户操作下实时生成视觉内容并保持长程空间一致性。L3G-World 用潜在 3D 高斯作为记忆载体，实现了可无限探索的实时世界生成。为什么重要：3D 高斯作为「世界记忆」的表示形式正在成为世界模型的一个收敛方向。</div>
+  <div class="tags"><span class="tag hot">HF 40↑</span><span class="tag">世界模型</span><span class="tag">3DGS</span><span class="tag">实时生成</span></div>
+</div>
+<div class="card">
+  <div class="source">arXiv 2610.40647 · cs.CV · HF 24↑</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.40647">Read, Allocate, Route: Role-Coupled Tokenization for Pixel-Space Generative Transformers</a></div>
+  <div class="summary">像素空间生成 Transformer 每 patch 一个 token，捕捉细节就得堆 token、全局注意力随之变贵。本文观察到「更细的细节不等于更多 token」，提出按角色耦合的 token 化方案，在保持细节的同时控制序列长度。为什么重要：直指像素级生成的核心瓶颈，为高清图像/视频生成的效率优化提供了新思路。</div>
+  <div class="tags"><span class="tag hot">HF 24↑</span><span class="tag">生成模型</span><span class="tag">Token化</span><span class="tag">效率</span></div>
+</div>
+<div class="card">
+  <div class="source">arXiv 2610.38331 · cs.CL · HF 17↑</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.38331">Multi-Token Prediction Done Right</a></div>
+  <div class="summary">多 token 预测（MTP）是预训练常用技巧，但作者发现其梯度中存在一个随规模恶化的残余分量，会同时干扰 next-token 与 multi-token 学习。通过精确分解 MTP 交叉熵梯度为「KL 自蒸馏项 + 有害残余项」，给出修正方案。为什么重要：对 MTP 这一已被广泛采用的训练技巧做了机制级的「打假与修复」。</div>
+  <div class="tags"><span class="tag">预训练</span><span class="tag">MTP</span><span class="tag">机制分析</span></div>
+</div>
+<div class="card">
+  <div class="source">arXiv 2610.39633 · cs.CV · HF 19↑</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.39633">Intrinsic Distribution Matching</a></div>
+  <div class="summary">少步文生图要求在有限去噪步内精确渲染 prompt 细节。本文把 reverse-KL 场分解为高斯矩分量与非高斯残余，探讨显式矩约束是否能改进学到的分数监督。为什么重要：为 DMD 系列蒸馏方法提供了更本质的理论视角，直接关联一步/少步生成质量。</div>
+  <div class="tags"><span class="tag">扩散蒸馏</span><span class="tag">少步生成</span><span class="tag">文生图</span></div>
+</div>
+</div>
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>具身智能研究</div>
+<div class="card">
+  <div class="source">arXiv 2610.40646 · cs.RO · 机器人操作</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.40646">SwapBot: Tool-Centric Robot Manipulation via Interchangeable End-Effectors and Tactile Sensing</a></div>
+  <div class="summary">日常家务操作大量依赖工具使用（如煎豆腐需要用力切、轻柔刷、精准放）。SwapBot 通过可更换末端执行器与触觉传感实现工具中心的操作。为什么重要：把「换工具」这一人类本能显式建模为机器人操作的一等公民，是走向通用家务机器人的务实一步。</div>
+  <div class="tags"><span class="tag">工具使用</span><span class="tag">触觉</span><span class="tag">家务机器人</span></div>
+</div>
+<div class="card">
+  <div class="source">arXiv 2610.39287 · cs.RO · HF 6↑</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.39287">OpenFlyV2: An onboard vision-language-action model for aerial perception and navigation</a></div>
+  <div class="summary">面向空中机器人的机载 VLA 模型，用共享视觉语言表示同时支持语义理解、空间推理与闭环导航，可在资源受限平台上离线运行。为什么重要：VLA 从地面机械臂走向无人机，端侧闭环是硬门槛。</div>
+  <div class="tags"><span class="tag">VLA</span><span class="tag">无人机</span><span class="tag">端侧</span></div>
+</div>
+</div>
+<div class="section">
+  <div class="section-title"><span class="emoji">🏭</span>机器人产业动态</div>
+<div class="card">
+  <div class="source">Robot Overflow · Agility · 2026-10-30 · 重要性 ★★★</div>
+  <div class="title"><a href="https://www.agilityrobotics.com/content/agility-robotics-and-churchill-capital-corp-xi-announce-expected-gross-capital-raise-of-approximately-465-million-and-anticipated-closing-of-business-combination">Agility 借壳 Churchill XI 融资约 4.65 亿美元，11月5日起以 AGLT 登陆纳斯达克</a></div>
+  <div class="summary">资金来自 Churchill XI 信托约 1.64 亿美元、富士康领投的 2.01 亿美元 PIPE（每股 10 美元）及已到账的 1 亿美元。股东 11月2日表决，预计 11月4日交割。为什么重要：人形机器人赛道迎来首家 SPAC 上市公司，「物流场景先行」的商业模式将接受公开市场检验。</div>
+  <div class="tags"><span class="tag hot">头条</span><span class="tag">IPO</span><span class="tag">人形机器人</span><span class="tag">富士康</span></div>
+</div>
+<div class="card">
+  <div class="source">Robot Overflow · The Information · 2026-10-31 · 重要性 ★★</div>
+  <div class="title"><a href="https://kfgo.com/2026/10/31/meta-builds-humanoid-robot-with-chinese-startup-fourier-the-information-says/">据报道 Meta 与傅利叶合作打造人形机器人原型</a></div>
+  <div class="summary">The Information 报道 Meta 已与傅利叶合作造出人形机器人原型，并已在开发第二版；路透称暂无法独立证实。为什么重要：若属实，这是 Meta 在 Llama 之外切入具身智能的最直接信号，且选择了与中国整机厂合作的路线。</div>
+  <div class="tags"><span class="tag hot">热点</span><span class="tag">Meta</span><span class="tag">傅利叶</span><span class="tag">人形机器人</span></div>
+</div>
+<div class="card">
+  <div class="source">Robot Overflow · 新浪科技 · 2026-10-29 · 重要性 ★★</div>
+  <div class="title"><a href="https://finance.sina.com.cn/tech/roll/2026-10-29/doc-iniwwpnx8823561.shtml">智元披露 2026 上半年营收近 20 亿元，发布 WITA-OMNI 全模态交互模型</a></div>
+  <div class="summary">彭志辉称智元上半年营收近 20 亿元，为通用 AI 机器人企业中最高（对比宇树 11.5 亿、优必选 12.7 亿）。同日智元发布 WITA-OMNI 1.0 全模态交互大模型，单网络处理语音/视觉/文本输入与语音/表情/动作输出，支持 100+ 语言与 29 种方言，12 月完成国内部署。为什么重要：营收数据首次让中国具身智能「御三家」可以横向比较。</div>
+  <div class="tags"><span class="tag">智元</span><span class="tag">营收</span><span class="tag">全模态交互</span></div>
+</div>
+<div class="card">
+  <div class="source">Robot Overflow · Scale AI · 2026-10-29 · 重要性 ★★</div>
+  <div class="title"><a href="https://labs.scale.com/blog/fineart">Scale AI 发布首个开源机器人数据集 FineART，并推出 LeRobot 系 FineART-VLA 模型</a></div>
+  <div class="summary">FineART 含 40,543 个片段（1,718 小时、151 项任务）与约 53.4 万条子任务标注，Scale 称其为同类最大开源数据集；FineART-VLA 是 LeRobot 生态首个开源 System 1/2 VLA。为什么重要：数据标注巨头正式下场具身智能数据基础设施，开源数据集的规模竞赛开始。</div>
+  <div class="tags"><span class="tag hot">开源</span><span class="tag">数据集</span><span class="tag">VLA</span><span class="tag">Scale AI</span></div>
+</div>
+<div class="card">
+  <div class="source">Robot Overflow · 动点科技 · 2026-10-29 · 重要性 ★★</div>
+  <div class="title"><a href="https://cn.technode.com/post/2026-10-29/unitree-third-quarter-2026-earnings">宇树三季报：营收 +69.9%，存货较年初增 177%</a></div>
+  <div class="summary">三季度营收 6.65 亿元（+69.93%），但归母净利 1.13 亿元（-13.37%）；存货 10.19 亿元，经营现金流降至 1.94 亿元。H1、H2 已在汽车与 3C 产线试点。为什么重要：高增长与存货/现金流压力并存，折射出人形机器人从「演示」到「规模交付」转换期的典型财务特征。</div>
+  <div class="tags"><span class="tag">宇树</span><span class="tag">财报</span><span class="tag">量产</span></div>
+</div>
+</div>
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源与 Awesome 生态</div>
+<div class="card">
+  <div class="source">GitHub Trending · TypeScript · 今日 +1,526⭐</div>
+  <div class="title"><a href="https://github.com/thedotmack/claude-mem">thedotmack/claude-mem</a></div>
+  <div class="summary">为 Claude Code 等编码智能体提供跨会话持久记忆：自动捕获会话中的一切操作，用 AI 压缩后注入未来会话。为什么重要：「会话间记忆」从研究论文变成了开箱即用的编码 Agent 基础设施，日增 1.5k 星说明痛点真实。</div>
+  <div class="tags"><span class="tag hot">Trending</span><span class="tag">Agent记忆</span><span class="tag">Claude Code</span></div>
+</div>
+<div class="card">
+  <div class="source">GitHub Trending · Zig · 今日 +825⭐</div>
+  <div class="title"><a href="https://github.com/lightpanda-io/browser">lightpanda-io/browser</a></div>
+  <div class="summary">为 AI 与自动化场景设计的无头浏览器，Zig 编写，主打比 Chrome 更轻更快。为什么重要：Computer-Use Agent 的「眼睛和手」正在出现专用基础设施层。</div>
+  <div class="tags"><span class="tag">浏览器</span><span class="tag">Agent基建</span><span class="tag">Zig</span></div>
+</div>
+<div class="card">
+  <div class="source">GitHub Trending · Python · 今日 +630⭐</div>
+  <div class="title"><a href="https://github.com/shiyu-coder/Kronos">shiyu-coder/Kronos</a></div>
+  <div class="summary">面向金融市场语言的 foundation model。金融时序基础模型赛道持续升温。</div>
+  <div class="tags"><span class="tag">金融</span><span class="tag">基础模型</span><span class="tag">时序</span></div>
+</div>
+<div class="card">
+  <div class="source">GitHub Trending · Shell · 今日 +967⭐</div>
+  <div class="title"><a href="https://github.com/Donchitos/Claude-Code-Game-Studios">Donchitos/Claude-Code-Game-Studios</a></div>
+  <div class="summary">把 Claude Code 变成一个完整游戏工作室：49 个 AI 智能体、72 个工作流技能、镜像真实工作室层级的协作系统。为什么重要：「Agent 技能货架化」趋势的极端展示——技能被组织成有层级的虚拟组织。</div>
+  <div class="tags"><span class="tag hot">有趣</span><span class="tag">多智能体</span><span class="tag">游戏开发</span></div>
+</div>
+<div class="card">
+  <div class="source">Awesome 生态追踪 · sindresorhus/awesome</div>
+  <div class="title"><a href="https://github.com/sindresorhus/pulls?q=is%3Apr+is%3Aopen">主仓库维护模式持续，AI 清单增量流向垂直 skills 生态</a></div>
+  <div class="summary">主仓库最新提交仍停留在 2026-09-02 的 Meta tweaks，近月以剪枝失效列表为主，无新增 AI list 合并。待审积压中仍有 awesome-ai-agent-tools（#4396，633 条目带机器可读 catalog.json）等 AI 清单排队。与此对照，GitHub Trending 上 claude-mem、Claude-Code-Game-Studios 这类「可执行技能包」持续霸榜——知识清单生态位正从「链接合集」迁移到「agent 可直接调用的技能」。</div>
+  <div class="tags"><span class="tag">awesome</span><span class="tag">生态观察</span><span class="tag">Agent技能</span></div>
+</div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>本期值得注意的三条结构性信号。其一，「递归自我改进」正从口号落到训练循环的具体设计上：A-RSI 把「何时引入新任务」与「如何构造监督信号」解耦，WISD 则以弱化模型对比替代特权信息教师，两条路线共同降低自蒸馏对外部强教师的依赖。其二，效率研究开始深入扩散式 VLM 的解码动力学——LOWN 用逐步证书证明绝大多数去噪步根本不需要视觉输入，这为端侧多模态部署提供了新的理论抓手。其三，具身智能赛道的资本事件与数据开源同步提速：Agility 成为首家 SPAC 上市的人形机器人公司，Scale AI 开源 FineART 数据集与 LeRobot VLA 模型，产业数据壁垒正在向公共基础设施转移。三条线索共同指向一个方向：AI 系统正在获得「自己决定何时学、学什么」的元能力。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 生成于 2026-11-02 08:30 CST</p>
+</div>
+
+</div>
+</body>
+</html>
