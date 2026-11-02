@@ -1,40 +1,40 @@
 {
-  "updated_at": "06:16",
+  "updated_at": "09:15",
   "weather": {
-    "main": "25°C Overcast ",
-    "sub": "今日 25~28°C，湿度 86%，体感 28°C"
+    "main": "26°C Cloudy ",
+    "sub": "今日 25~28°C，湿度 83%，体感 29°C"
   },
   "todos": [],
   "news": [
     {
-      "title": "刚刚，Claude宣布取消5小时限制！首批Ultra用户已「解封」",
-      "url": "https://www.qbitai.com/2026/10/506855.html",
-      "tag": "媒体"
+      "title": "Look Only When Needed: Certificate-Guided Visual Routing for",
+      "url": "https://arxiv.org/abs/2610.36671",
+      "tag": "论文"
     },
     {
-      "title": "Claude紧急叫停！暗改Harness禁止逆向游戏",
-      "url": "https://www.qbitai.com/2026/11/507038.html",
-      "tag": "媒体"
+      "title": "A-RSI: Adaptive Task Refresh for Zero-Data Multimodal Self-I",
+      "url": "https://arxiv.org/abs/2610.38568",
+      "tag": "论文"
     },
     {
-      "title": "DeepSeek 公布 Super Agent 架构；苹果超越英伟达，重回市值第一",
-      "url": "https://www.geekpark.net/news/373243",
-      "tag": "媒体"
+      "title": "Weaken to Strengthen: Weakening-Induced On-Policy Self-Disti",
+      "url": "https://arxiv.org/abs/2610.38681",
+      "tag": "论文"
     },
     {
-      "title": "清华姚期智团队新作：代数世界模型，让AI像牛顿一样思考",
-      "url": "https://www.qbitai.com/2026/11/507031.html",
-      "tag": "媒体"
+      "title": "Training Foundation Models with a Single Algorithm",
+      "url": "https://arxiv.org/abs/2610.40564",
+      "tag": "论文"
     },
     {
-      "title": "三年前布局，今年爆火丨西湖大学成立新中心",
-      "url": "https://www.qbitai.com/2026/11/507076.html",
-      "tag": "媒体"
+      "title": "Retrieval as Traversal: Value-Indexed Memory for Stateful Lo",
+      "url": "https://arxiv.org/abs/2610.40545",
+      "tag": "论文"
     },
     {
-      "title": "刚刚，Gemini 4 Carbon全面超越Opus 5.5！首发Token半价",
-      "url": "https://www.qbitai.com/2026/10/506227.html",
-      "tag": "媒体"
+      "title": "L3G-World: Real-Time Infinite World Generation with Latent 3",
+      "url": "https://arxiv.org/abs/2610.40614",
+      "tag": "论文"
     }
   ],
   "diary": "今天还没写日记，晚上 23:00 再说～"
