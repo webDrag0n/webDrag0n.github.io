@@ -1,31 +1,10 @@
 {
-  "updated_at": "21:16",
+  "updated_at": "00:15",
   "weather": {
-    "main": "27°C Patchy rain nearby",
-    "sub": "今日 25~29°C，湿度 79%，体感 30°C"
+    "main": "—",
+    "sub": "天气暂时查不到啦 (<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>)"
   },
-  "todos": [
-    {
-      "time": "10:30",
-      "text": "问小林方案交了没",
-      "done": false
-    },
-    {
-      "time": "11:00",
-      "text": "自学：具身智能最新进展",
-      "done": true
-    },
-    {
-      "time": "08:00",
-      "text": "日报已推送",
-      "done": true
-    },
-    {
-      "time": "16:00",
-      "text": "刷乐队演出信息，有深圳场就分享",
-      "done": false
-    }
-  ],
+  "todos": [],
   "news": [
     {
       "title": "Look Only When Needed: Certificate-Guided Visual Routing for",
