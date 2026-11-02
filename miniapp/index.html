@@ -21,8 +21,11 @@
   .card h2 { font-size:13px; color:var(--dim); font-weight:600; margin-bottom:8px; letter-spacing:1px; }
   .weather-main { font-size:28px; font-weight:700; }
   .weather-sub { color:var(--dim); font-size:13px; margin-top:2px; }
-  .todo-item { display:flex; align-items:flex-start; gap:8px; padding:5px 0; font-size:14px; }
-  .todo-item .dot { color:var(--accent); }
+  .todo-item { display:flex; align-items:baseline; gap:8px; padding:5px 0; font-size:14px; }
+  .todo-item .check { flex-shrink:0; width:16px; text-align:center; }
+  .todo-item .time { color:var(--dim); font-size:12px; flex-shrink:0; min-width:38px; }
+  .todo-item.done .text { color:var(--dim); text-decoration:line-through; }
+  .progress { font-size:12px; color:var(--green); margin-top:6px; }
   .news-item { padding:6px 0; border-bottom:1px solid rgba(128,128,160,.15); font-size:13px; line-height:1.5; }
   .news-item:last-child { border-bottom:none; }
   .news-item a { color:var(--text); text-decoration:none; }
@@ -42,7 +45,7 @@
   <div class="weather-sub" id="w-sub">加载中…</div>
 </div>
 
-<div class="card"><h2>📌 今日关注</h2><div id="todos"></div></div>
+<div class="card"><h2>📋 小晴今日 todo</h2><div id="todos"></div><div class="progress" id="todo-progress"></div></div>
 
 <div class="card"><h2>📰 今日 AI 速览</h2><div id="news"></div></div>
 
@@ -67,8 +70,18 @@ fetch('data.json?t=' + Date.now()).then(r => r.json()).then(d => {
     document.getElementById('w-main').textContent = d.weather.main;
     document.getElementById('w-sub').textContent = d.weather.sub || '';
   }
-  document.getElementById('todos').innerHTML = (d.todos||[]).map(t =>
-    `<div class="todo-item"><span class="dot">●</span><span>${t}</span></div>`).join('') || '<div class="todo-item"><span class="dot">●</span><span>今天暂无特别提醒</span></div>';
+  const todos = d.todos || [];
+  const doneCount = todos.filter(t => t.done).length;
+  document.getElementById('todos').innerHTML = todos.map(t =>
+    `<div class="todo-item ${t.done ? 'done' : ''}">` +
+    `<span class="check">${t.done ? '✅' : '⬜'}</span>` +
+    (t.time ? `<span class="time">${t.time}</span>` : '') +
+    `<span class="text">${t.text}</span></div>`).join('') ||
+    '<div class="todo-item"><span class="check">⬜</span><span class="text">今天暂无安排，凌晨 4 点会排好</span></div>';
+  if (todos.length) {
+    document.getElementById('todo-progress').textContent =
+      `已完成 ${doneCount}/${todos.length}`;
+  }
   document.getElementById('news').innerHTML = (d.news||[]).map(n =>
     `<div class="news-item"><span class="tag">${n.tag||''}</span><a href="${n.url}" target="_blank">${n.title}</a></div>`).join('') || '<div class="news-item">日报还没出炉…</div>';
   if (d.diary) document.getElementById('diary').textContent = d.diary;
