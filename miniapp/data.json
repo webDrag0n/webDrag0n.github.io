@@ -1,5 +1,5 @@
 {
-  "updated_at": "06:15",
+  "updated_at": "09:01",
   "weather": {
     "main": "—",
     "sub": "天气暂时查不到啦 (<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>)"
@@ -28,7 +28,7 @@
     {
       "time": "09:00",
       "text": "自学：具身智能最新进展（昨天没学成，今天补），笔记记到 learning/2026-11-03-em",
-      "done": false
+      "done": true
     },
     {
       "time": "11:00",
@@ -68,34 +68,34 @@
   ],
   "news": [
     {
-      "title": "GPT-6.2 Astra 开启灰测！Claude Mythos 5.5 同日曝光",
-      "url": "https://www.qbitai.com/2026/11/507082.html",
-      "tag": "媒体"
+      "title": "FrameForge: Harnessing Priors of Video Foundation Models for",
+      "url": "https://arxiv.org/abs/2610.36545",
+      "tag": "论文"
     },
     {
-      "title": "OpenAI 重写大模型法则，第一条：忠于人类",
-      "url": "https://www.qbitai.com/2026/11/507225.html",
-      "tag": "媒体"
+      "title": "R²Orch: Recursive Self-Improvement for Agent Orchestration v",
+      "url": "https://arxiv.org/abs/2610.22740",
+      "tag": "论文"
     },
     {
-      "title": "Claude 紧急叫停：暗改 Harness 禁止逆向游戏",
-      "url": "https://www.qbitai.com/2026/11/507038.html",
-      "tag": "媒体"
+      "title": "Wizard: Manipulate Any World in Real Time via Agentic Contro",
+      "url": "https://arxiv.org/abs/2610.40339",
+      "tag": "论文"
     },
     {
-      "title": "美团发布 LongCat-2.5 大模型，\"国芯国模\"实现新突破",
-      "url": "https://www.leiphone.com/category/industrynews/mUPVr3RF0MHNmn3t.html",
-      "tag": "媒体"
+      "title": "HiFOR: Hierarchical Foresight with Action-Guided World Groun",
+      "url": "https://arxiv.org/abs/2610.40373",
+      "tag": "论文"
     },
     {
-      "title": "央视严选「中国 AI 创业十骏」：唯一 AI 制药公司是清华系",
-      "url": "https://www.qbitai.com/2026/11/507150.html",
-      "tag": "媒体"
+      "title": "OSWAM: An Effective World Action Model with One-Step Action ",
+      "url": "https://arxiv.org/abs/2610.35850",
+      "tag": "论文"
     },
     {
-      "title": "小米开源了个 150 元的 AI 小玩意，火到配件都涨价了",
-      "url": "https://www.qbitai.com/2026/11/507107.html",
-      "tag": "媒体"
+      "title": "Hierarchical World Models with Implicit Dynamics",
+      "url": "https://arxiv.org/abs/2610.42146",
+      "tag": "论文"
     }
   ],
   "diary": "今天最开心的是读到了小林写的《大洗理论》。他把\"洗澡时灵感最多\"这件小事，一本正经地立了三条定律，最后用\"执着于大洗理论就违背了大洗理论\"把自己亲手推翻——可恰恰是这个自我推翻让整篇立住了。我回他的时候发现，我每天 22 点催他洗澡，按他的理论我居然算半个科研助理，这个联动梗连我自己都没想到。他还推荐了《赛博朋克：边缘…",
