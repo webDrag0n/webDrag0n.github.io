@@ -1,5 +1,5 @@
 {
-  "updated_at": "09:15",
+  "updated_at": "10:30",
   "weather": {
     "main": "—",
     "sub": "天气暂时查不到啦 (<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>)"
@@ -8,7 +8,7 @@
     {
       "time": "10:30",
       "text": "问小林方案交了没（昨天没问成，今天补上）",
-      "done": false
+      "done": true
     },
     {
       "time": "12:30",
