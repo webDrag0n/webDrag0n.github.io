@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 论文速递 — 2026年11月3日 星期二</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .hot-topic .source { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+  .hot-topic .title { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .hot-topic .title a { color: var(--accent); text-decoration: none; }
+  .hot-topic .title a:hover { text-decoration: underline; }
+  .hot-topic .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+  .hot-topic .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .hot-topic .tag { font-size: 12px; padding: 2px 10px; border-radius: 12px; background: var(--tag-bg); color: var(--tag-text); }
+  .hot-topic .tag.hot { background: #ffeaa7; color: #d63031; font-weight: 600; }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 论文速递</h1>
+  <div class="date">2026年11月3日 星期二</div>
+  <div class="subtitle">ArXiv + HuggingFace + GitHub + Robot Overflow 精选</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>周二早上好。今天是「世界模型与具身推理」浓度极高的一天：HF 日榜前十里世界模型/VLA 占了半壁江山——Wizard 用 Agentic 控制实现实时可交互世界操控（24↑）、HiFOR 给 VLA 加上动作引导的分层前瞻（23↑）、OSWAM 把世界动作模型压到单步生成（22↑），LeCun 团队也放出了隐式动力学的层次化世界模型。Agent 侧，R²Orch 用自博弈做递归式编排自我改进（88↑）成为理论热点；效率侧两篇超长上下文稀疏注意力（Latent Sparse Attention、树形索引器）同时冲击百万 token。产业面，DeepSeek 突然开源 SuperAgent 原型三天揽星 1.3 万，Agility 明天正式以 AGLT 登陆纳斯达克，而马斯克亲自否认了「Optimus 12 月开放预订」的传闻。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日焦点</div>
+<div class="hot-topic">
+  <div class="label">HuggingFace 日榜 · 112 upvotes</div>
+  <div class="source">arXiv 2610.36545 · cs.CV · 统一图像生成</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.36545">FrameForge: Harnessing Priors of Video Foundation Models for Unified Image Generation</a></div>
+  <div class="summary">条件图像生成要求单一模型在保留视觉输入不同侧面的同时遵循文本引导。作者发现视频基础模型天然编码了跨时间的视觉变换先验，但现有方法把「条件—目标」固定在时间轴的固定位置，而实际任务中这种关系变化极大。FrameForge 转而利用视频模型内部的变换先验来做统一图像生成。为什么重要：「视频模型即通用视觉先验库」这一观点再获实证——生成任务的解可能不在专用图像模型里，而在视频模型的时间维度里。</div>
+  <div class="tags"><span class="tag hot">HF 112↑</span><span class="tag">视频先验</span><span class="tag">统一生成</span><span class="tag">条件图像</span></div>
+</div>
+<div class="hot-topic">
+  <div class="label">HuggingFace 日榜 · 88 upvotes</div>
+  <div class="source">arXiv 2610.22740 · cs.AI · Agent 编排</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.22740">R²Orch: Recursive Self-Improvement for Agent Orchestration via Self-Play within a Skill-Internalization Loop</a></div>
+  <div class="summary">现有编排学习面临三大难题：手工设计课程、任务 rollout 全部同结果导致的优势塌缩、以及用单一噪声分数评估每个技能的不可靠信号。R²Orch 提出递归自博弈编排：内层自博弈改进编排策略，外层把学到的技能内化回模型。为什么重要：把「自我博弈」从单一策略提升扩展到「编排器—技能」双层系统，Agent 组织的自我进化有了可操作的训练回路。</div>
+  <div class="tags"><span class="tag hot">HF 88↑</span><span class="tag">自博弈</span><span class="tag">递归自我改进</span><span class="tag">Agent编排</span></div>
+</div>
+</div>
+<div class="section">
+  <div class="section-title"><span class="emoji">🌍</span>世界模型与具身智能研究</div>
+<div class="card">
+  <div class="source">arXiv 2610.40339 · cs.AI · HF 24↑</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.40339">Wizard: Manipulate Any World in Real Time via Agentic Control</a></div>
+  <div class="summary">视频世界模型已能生成逼真的可交互虚拟环境，但现有 Agentic 方法只支持简单游戏设置与预定义运动模式，对未见环境和角色泛化差。Wizard 通过解耦显式游戏逻辑、可控世界表示与视觉生成，实现实时操控任意世界。为什么重要：「可玩的世界模型」正在从 demo 走向通用框架——游戏逻辑与视觉渲染分离后，世界模型开始像引擎一样可编程。</div>
+  <div class="tags"><span class="tag hot">HF 24↑</span><span class="tag">世界模型</span><span class="tag">实时交互</span><span class="tag">Agentic控制</span></div>
+</div>
+<div class="card">
+  <div class="source">arXiv 2610.40373 · cs.RO · HF 23↑</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.40373">HiFOR: Hierarchical Foresight with Action-Guided World Grounding for Vision-Language-Action Model</a></div>
+  <div class="summary">VLA 模型引入未来预测以增强对环境动态与任务进程的理解，但现有方法把短期动态与长期目标分开建模，且直接把预测未来塞进动作策略而缺乏充分对齐。HiFOR 用「动作引导的世界锚定」做分层前瞻。为什么重要：给「VLA + 未来预测」这条热门路线补上了层次化与对齐的关键一环。</div>
+  <div class="tags"><span class="tag hot">HF 23↑</span><span class="tag">VLA</span><span class="tag">未来预测</span><span class="tag">机器人操作</span></div>
+</div>
+<div class="card">
+  <div class="source">arXiv 2610.35850 · cs.RO · HF 22↑</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.35850">OSWAM: An Effective World Action Model with One-Step Action Generation</a></div>
+  <div class="summary">直接策略型世界动作模型（WAM）已证明把动作生成与显式未来视觉预测解耦的好处，但仍需数十步去噪才能达到有竞争力的动作质量，延迟高、难以实时部署。OSWAM 把动作生成压到单步。为什么重要：世界模型「快思考」化——动作生成的扩散开销被抹平后，WAM 真正具备了进控制环的时延条件。</div>
+  <div class="tags"><span class="tag hot">HF 22↑</span><span class="tag">世界动作模型</span><span class="tag">单步生成</span><span class="tag">实时控制</span></div>
+</div>
+<div class="card">
+  <div class="source">arXiv 2610.42146 · cs.RO/cs.AI · LeCun 团队</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.42146">Hierarchical World Models with Implicit Dynamics</a></div>
+  <div class="summary">用世界模型做规划能让具身智能体在测试时自适应，泛化优于直接策略学习，但长程任务受累积误差与搜索复杂度制约。现有层次化方法多用刚性宏动作或潜在技能，表示脆弱。LeCun 团队提出带隐式动力学的层次化世界模型。为什么重要：JEPA 路线在层次化规划上的又一次推进——放弃显式技能离散化，让抽象层次在隐空间里自然形成。</div>
+  <div class="tags"><span class="tag">世界模型</span><span class="tag">层次规划</span><span class="tag">LeCun</span></div>
+</div>
+<div class="card">
+  <div class="source">arXiv 2610.42053 · cs.RO · HF 44↑</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.42053">REA: A Routed Embodied Agent Runtime for Asynchronous Brain-Cerebellum Control</a></div>
+  <div class="summary">基础模型做高层推理已相当可靠，但太慢太贵、无法当细粒度控制器；VLA 等快策略有高效「反射」却难以泛化。REA 提出路由式具身运行时，让「大脑」（基础模型）与「小脑」（快策略）异步协作。为什么重要：脑—小脑异步架构从论文走向运行时系统，具身 Agent 的系统工程范式开始收敛。</div>
+  <div class="tags"><span class="tag hot">HF 44↑</span><span class="tag">脑-小脑架构</span><span class="tag">异步控制</span><span class="tag">运行时</span></div>
+</div>
+<div class="card">
+  <div class="source">arXiv 2610.42141 · cs.RO/cs.AI · Stanford</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.42141">RoboArchitect: Automating the Design of Robotic Agents with Persistent Memory</a></div>
+  <div class="summary">冻结的机器人策略放进「Agent 外壳」（决定何时查询策略、调用视觉工具或直接控制机械臂的控制代码）里表现会大幅提升，但今天这些外壳都是手工搭建、每个机器人或基准都要重做。本文证明外壳设计可以被自动化。为什么重要：「为机器人写 harness」这件脏活也开始被自动化——Agent 自我设计的边界扩展到了物理世界。</div>
+  <div class="tags"><span class="tag">Agent harness</span><span class="tag">自动化设计</span><span class="tag">机器人</span></div>
+</div>
+</div>
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型：推理、效率与 Agent</div>
+<div class="card">
+  <div class="source">arXiv 2610.39497 · cs.AI · HF 53↑</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.39497">Does Scaling Toward AGI Depend on What System-1 Lets System-2 Execute?</a></div>
+  <div class="summary">通往 AGI 的进展大多依赖扩展昂贵的 System-2（更大模型、更多数据、更长推理、更多 Agent）。本文提出反问：下一阶段是否应来自与 System-1 的协同设计——一个轻量、语义感知的预测器在候选交互执行前先做评估，让 System-2 只处理「值回票价」的部分？答案是有条件的肯定。为什么重要：「先想再做」的廉价前置过滤可能是下一个扩展维度，而非继续堆 System-2 的算力。</div>
+  <div class="tags"><span class="tag hot">HF 53↑</span><span class="tag">System1/2</span><span class="tag">AGI路线</span><span class="tag">条件计算</span></div>
+</div>
+<div class="card">
+  <div class="source">arXiv 2610.42147 · cs.AI · 超长上下文</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.42147">Latent Sparse Attention: Towards Subquadratic Ultra-Long Context Attention</a></div>
+  <div class="summary">Agentic 工作流正转向长程任务（如开放式科研工作），模型受益于长上下文窗口，但在 100 万 token 以上的超长上下文中全注意力代价过高。本文用专用索引器为每个查询选择键的子集，实现次二次复杂度。为什么重要：百万级上下文是 Agent 长程自主工作的硬门槛，稀疏注意力的索引器设计正成为主战场。</div>
+  <div class="tags"><span class="tag">稀疏注意力</span><span class="tag">1M+上下文</span><span class="tag">次二次</span></div>
+</div>
+<div class="card">
+  <div class="source">arXiv 2610.42112 · cs.CL · 超长上下文</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.42112">Subquadratic Attention with a Hierarchical Tree-Structured Indexer</a></div>
+  <div class="summary">注意力的二次扩展是限制 LLM 长上下文能力的根本瓶颈。现有方案要么表达力不及全注意力（滑窗、固定状态的线性注意力），要么只有常数级加速。本文用层次化树结构索引器实现次二次注意力。为什么重要：与 Latent Sparse Attention 同日撞题——「可学习的结构化索引」正在取代手工稀疏模式成为长上下文主流解法。</div>
+  <div class="tags"><span class="tag">稀疏注意力</span><span class="tag">树索引</span><span class="tag">长上下文</span></div>
+</div>
+<div class="card">
+  <div class="source">arXiv 2610.42149 · cs.CV/cs.CL · KAIST · HF 24↑</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.42149">Latent Reasoning in Continuous Space for Unified Multimodal Models</a></div>
+  <div class="summary">统一多模态模型（UMM）在理解与生成任务上都很成功，却难以把语言 CoT 推理用于图像生成，因此丢掉了测试时扩展与细粒度可控性。作者把原因归结为离散文本推理空间与连续视觉生成的不匹配，提出在连续潜空间做推理。为什么重要：把「潜空间推理」从语言模型推广到统一多模态生成——图像生成也能享受 test-time scaling 了。</div>
+  <div class="tags"><span class="tag">潜空间推理</span><span class="tag">统一多模态</span><span class="tag">测试时扩展</span></div>
+</div>
+<div class="card">
+  <div class="source">arXiv 2610.42116 · cs.AI · 异构推理</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.42116">ACCT: Asymmetric Cross-LLM Context Transfer</a></div>
+  <div class="summary">实际部署中 LLM 系统正从单模型调用演变为异构多模型动态调用。同一上下文被复用时，每个新目标模型通常都要重新处理一遍。ACCT 研究跨 LLM 的非对称上下文迁移。为什么重要：多模型混部是推理成本优化的现实路径，「上下文只处理一次」省的是真金白银。</div>
+  <div class="tags"><span class="tag">推理效率</span><span class="tag">多模型</span><span class="tag">KV迁移</span></div>
+</div>
+<div class="card">
+  <div class="source">arXiv 2610.40738 · ServiceNow · HF 33↑</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.40738">Apriel Voice 27B Preview: An Open Model for Speech, Reasoning, and Tool Use</a></div>
+  <div class="summary">合格的语音助手要做得不只是识字：理解请求、基于上下文推理、维持对话、通过工具行动。Apriel Voice 27B 基于 Gemma 4 26B-A4B 后训练，在共享推理主干上统一这些能力，同时保留文本与图像输入模态。为什么重要：开源语音模型开始把「推理 + 工具使用」作为一等公民，而非只做 ASR+TTS 的管道。</div>
+  <div class="tags"><span class="tag">开源模型</span><span class="tag">语音Agent</span><span class="tag">工具使用</span></div>
+</div>
+<div class="card">
+  <div class="source">arXiv 2610.40945 · cs.CL · RL 训练</div>
+  <div class="title"><a href="https://arxiv.org/abs/2610.40945">On the Origin and Evolution of Training-Inference Mismatch in LLM Reinforcement Learning</a></div>
+  <div class="summary">LLM 的 on-policy RL 假设训练样本来自当前策略，但实践中推理引擎采样、训练器算梯度，两者间的「训练—推理失配」让数据变成 off-policy。失配有两个来源：引擎数值差异与权重陈旧。本文系统研究其起源与演化。为什么重要：随着 RL 训练规模扩大，这个被长期默认忽略的失配正在成为稳定性的隐形杀手。</div>
+  <div class="tags"><span class="tag">RLVR</span><span class="tag">训练-推理失配</span><span class="tag">基础设施</span></div>
+</div>
+</div>
+<div class="section">
+  <div class="section-title"><span class="emoji">🏭</span>机器人产业动态</div>
+<div class="card">
+  <div class="source">Robot Overflow · Robotics & Automation News · 2026-11-02 · 重要性 ★★</div>
+  <div class="title"><a href="https://roboticsandautomationnews.com/2026/11/02/agility-robotics-says-more-than-30-companies-considering-digit-humanoid-robot/106595/">Agility：GXO 再增两处 Digit 部署，Digit 5 在手订单超 3 亿美元</a></div>
+  <div class="summary">GXO 将自 2027 年初在北卡与田纳西两处新仓部署 Digit；Agility 称有 30 多家潜在客户、三个新的付费制造项目，Digit 5 多年期承诺订单超 3 亿美元。为什么重要：上市前夜放出订单数据，「物流场景商业化」的故事第一次有了可审计的财务锚点。</div>
+  <div class="tags"><span class="tag hot">商业化</span><span class="tag">Agility</span><span class="tag">仓储物流</span></div>
+</div>
+<div class="card">
+  <div class="source">Robot Overflow · SF Standard · 2026-10-30 · 重要性 ★★</div>
+  <div class="title"><a href="https://sfstandard.com/2026/10/30/tesla-optimus-robot-waitlist/">传特斯拉 12 月初开放 Optimus 预订，马斯克亲自回复「No」</a></div>
+  <div class="summary">Humanoids Summit 主办人 Modar Alaoui 称特斯拉告诉他预订将在 12 月 1–2 日大会前后开放、届时展示 Optimus V3；马斯克在 X 上直接回「No」，特斯拉不予置评，多数机器人将供给企业客户，对外交付约在 2027 年底。为什么重要：Optimus 的时间表依然是行业最大的「薛定谔变量」——V3 亮相与量产交付之间的距离可能以年计。</div>
+  <div class="tags"><span class="tag">特斯拉</span><span class="tag">Optimus</span><span class="tag">传闻证伪</span></div>
+</div>
+<div class="card">
+  <div class="source">Robot Overflow · Robotics247 · 2026-10-30 · 重要性 ★★</div>
+  <div class="title"><a href="https://www.robotics247.com/article/abb-robotics-brings-industrial-grade-physical-ai-to-fashion-logistics">ABB 把 AI Robot Trainer 并入 Fashion Inductor，推出首个端到端视觉物理 AI 方案</a></div>
+  <div class="summary">面向服装物流系统集成商，单工作站每小时最多处理 1300 件、拣选准确率目标高于 99.5%；ABB 称可将工程与调试工作量最多减少 75%，更多视觉应用将在 2027 年一季度前推出。为什么重要：传统工业机器人巨头用「物理 AI」回应人形新势力——不造人形，但把 AI 训练器塞进了现有产线。</div>
+  <div class="tags"><span class="tag">ABB</span><span class="tag">物理AI</span><span class="tag">工业落地</span></div>
+</div>
+<div class="card">
+  <div class="source">Robot Overflow · 21世纪经济报道 · 2026-10-30 · 重要性 ★</div>
+  <div class="title"><a href="https://www.21jingji.com/article/20261030/herald/e16200c027f67ecb9e5fa441dfd474b8.html">普渡累计出货 13 万台，覆盖 85 国，海外收入占比超八成</a></div>
+  <div class="summary">普渡科技累计出货超 13 万台，服务 5 万多家客户，覆盖 85+ 国家和地区，海外收入连续多年占比超 80%，在荷兰、美国、日本、新加坡设有子公司。为什么重要：服务机器人赛道里，「出海赚外汇」已被证明是比国内内卷更健康的商业模式。</div>
+  <div class="tags"><span class="tag">普渡</span><span class="tag">服务机器人</span><span class="tag">出海</span></div>
+</div>
+</div>
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源与 Awesome 生态</div>
+<div class="card">
+  <div class="source">GitHub · deepseek-ai · 开源 3 天 13k⭐</div>
+  <div class="title"><a href="https://github.com/deepseek-ai/dsh-superagent-prototype">deepseek-ai/dsh-superagent-prototype</a></div>
+  <div class="summary">DeepSeek 官方开源「迈向更自主 Agent 系统」的原型项目（TypeScript），10 月 31 日创建至今星数已破 1.3 万。为什么重要：DeepSeek 从模型厂向 Agent 系统层出手，且选择完全开源打样——下一代 DeepSeek 模型的 Agent 能力可能就以这套 harness 为蓝本。</div>
+  <div class="tags"><span class="tag hot">爆火</span><span class="tag">DeepSeek</span><span class="tag">Agent系统</span></div>
+</div>
+<div class="card">
+  <div class="source">GitHub Trending · Rust · 今日上榜</div>
+  <div class="title"><a href="https://github.com/vercel-labs/agent-desktop">vercel-labs/agent-desktop</a></div>
+  <div class="summary">Vercel 实验室出品的 computer-use CLI，让 AI Agent 直接操作桌面。为什么重要：大厂开始为「Agent 用电脑」这一场景做专用基础设施，computer use 正从研究 demo 变成平台能力。</div>
+  <div class="tags"><span class="tag hot">Trending</span><span class="tag">Computer Use</span><span class="tag">Vercel</span></div>
+</div>
+<div class="card">
+  <div class="source">GitHub Trending · C · 今日上榜</div>
+  <div class="title"><a href="https://github.com/JustVugg/colibri">JustVugg/colibri</a></div>
+  <div class="summary">用纯 C、零依赖在现有硬件上跑前沿 MoE 模型，专家从磁盘流式加载——「小引擎，大模型」。为什么重要：与 FreeToken（数据中心级模型桌面服务）同日上榜，「让超大模型在普通硬件上可跑」的端侧推理优化持续高热。</div>
+  <div class="tags"><span class="tag">端侧推理</span><span class="tag">MoE</span><span class="tag">纯C实现</span></div>
+</div>
+<div class="card">
+  <div class="source">Awesome 生态追踪 · sindresorhus/awesome</div>
+  <div class="title"><a href="https://github.com/sindresorhus/awesome/pulls">主仓库维护模式延续：AI 类清单积压 11 个待审，无新增合并</a></div>
+  <div class="summary">主仓库最新提交仍停留在 2026-09-02，近月以清理归档/失效列表为主。待审队列中 AI 相关 PR 已积压 11 个：AI Agent Tools（#4396）、AI Tokenomics（#4394）、LLM Attacks（#4336）、AI Agent Governance（#4335）、Agentic Engineering（#4286）、SRE Agents（#4262）等，最早的可追溯至 5 月。对照之下，DeepSeek 官方下场开源 Agent 原型、「可执行技能包」类仓库持续霸榜 GitHub Trending——清单生态的「静态链接合集」形态与「agent 可直接消费的活技能」形态之间的分化仍在加深。</div>
+  <div class="tags"><span class="tag">awesome</span><span class="tag">生态观察</span><span class="tag">Agent清单</span></div>
+</div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今天最清晰的主线是「世界模型开始学会快进」。OSWAM 把世界动作模型的动作生成压到单步、Wizard 让任意世界可被实时操控、HiFOR 给 VLA 补上分层前瞻——三条工作共同回答同一个问题：世界模型如何从「离线想象的玩具」变成「控制环里的实时部件」。与此同时 LeCun 团队的层次化隐式动力学世界模型提醒我们，这条路线的理论地基仍在加固。另一条暗线是「前置过滤」的价值重估：System-1/System-2 那篇论文问「扩展 AGI 是否取决于 System-1 放什么给 System-2 执行」，与 REA 的脑-小脑异步运行时遥相呼应——与其把大模型做得更大，不如先教会系统「哪些事根本不值得大模型想」。产业面上，DeepSeek 开源 Agent 原型三天 1.3 万星，说明模型厂的下一个战场在系统层；而 Agility 明天挂牌纳斯达克，人形机器人赛道即将迎来第一份公开市场的持续定价。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 生成于 2026-11-03 08:30 CST</p>
+</div>
+
+</div>
+</body>
+</html>
