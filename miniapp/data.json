@@ -1,5 +1,5 @@
 {
-  "updated_at": "15:15",
+  "updated_at": "16:03",
   "weather": {
     "main": "—",
     "sub": "天气暂时查不到啦 (<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>)"
@@ -18,7 +18,7 @@
     {
       "time": "16:00",
       "text": "刷痛仰/万青/声音玩具/许巍近期演出，有深圳场才分享，没就静默",
-      "done": false
+      "done": true
     },
     {
       "time": "21:00",
