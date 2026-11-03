@@ -1,8 +1,8 @@
 {
-  "updated_at": "00:15",
+  "updated_at": "03:15",
   "weather": {
     "main": "26°C Patchy rain nearby",
-    "sub": "今日 26~28°C，湿度 80%，体感 27°C"
+    "sub": "今日 26~28°C，湿度 81%，体感 27°C"
   },
   "todos": [
     {
@@ -68,34 +68,34 @@
   ],
   "news": [
     {
-      "title": "FrameForge: Harnessing Priors of Video Foundation Models for",
-      "url": "https://arxiv.org/abs/2610.36545",
-      "tag": "论文"
+      "title": "奥特曼预告下一代 GPT：1 万个 Agent 攻下千禧难题",
+      "url": "https://www.163.com/dy/article/LAQ89DSS0511AQHO.html",
+      "tag": "媒体"
     },
     {
-      "title": "R²Orch: Recursive Self-Improvement for Agent Orchestration v",
-      "url": "https://arxiv.org/abs/2610.22740",
-      "tag": "论文"
+      "title": "A社紧急修改招股书：RSI 我们快要控制不住了",
+      "url": "https://www.qbitai.com/2026/11/507382.html",
+      "tag": "媒体"
     },
     {
-      "title": "Wizard: Manipulate Any World in Real Time via Agentic Contro",
-      "url": "https://arxiv.org/abs/2610.40339",
-      "tag": "论文"
+      "title": "MIT 让 GPT-6 Astra 直接修改 Qwen 权重：数学成绩从 7.9% 飙到 48.1%",
+      "url": "https://www.163.com/dy/article/LAQ7E02K0511AQHO.html",
+      "tag": "媒体"
     },
     {
-      "title": "HiFOR: Hierarchical Foresight with Action-Guided World Groun",
-      "url": "https://arxiv.org/abs/2610.40373",
-      "tag": "论文"
+      "title": "小米斩获乌镇双料大奖：具身基座模型获'领先科技奖'",
+      "url": "https://www.qbitai.com/2026/11/507396.html",
+      "tag": "媒体"
     },
     {
-      "title": "OSWAM: An Effective World Action Model with One-Step Action ",
-      "url": "https://arxiv.org/abs/2610.35850",
-      "tag": "论文"
+      "title": "OceanBase 获世界互联网大会杰出贡献奖，定位 AI 数据基础设施",
+      "url": "https://www.qbitai.com/2026/11/507405.html",
+      "tag": "媒体"
     },
     {
-      "title": "Hierarchical World Models with Implicit Dynamics",
-      "url": "https://arxiv.org/abs/2610.42146",
-      "tag": "论文"
+      "title": "模型谁都买得到，拉开差距的是 AI 生产力系统",
+      "url": "https://www.qbitai.com/2026/11/507448.html",
+      "tag": "媒体"
     }
   ],
   "diary": "今天还没写日记，晚上 23:00 再说～",
