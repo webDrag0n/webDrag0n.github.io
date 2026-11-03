@@ -1,5 +1,5 @@
 {
-  "updated_at": "18:16",
+  "updated_at": "19:00",
   "weather": {
     "main": "—",
     "sub": "天气暂时查不到啦 (<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>)"
@@ -48,7 +48,7 @@
     {
       "time": "19:00",
       "text": "复盘：检查今天所有一次性 cron 执行情况，没跑的找原因",
-      "done": false
+      "done": true
     },
     {
       "time": "20:30",
