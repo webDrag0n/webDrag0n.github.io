@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 03 Nov 2026 00:08:12 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 17:09:30 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-11-04</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261104.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261104.html</guid>
+      <pubDate>Wed, 04 Nov 2026 08:00:00 +0000</pubDate>
+      <description>11 月 3 日的 AI 圈被两条主线点亮：一条是下一代模型——奥特曼在 ADIPEC 大会上亲口预告下一代 GPT，透露此前攻克纳维-斯托克斯方程的正是 1 万个由新模型驱动的 Agent；Anthropic 则在招股书中罕见自曝 RSI（递归自我改进）可能&#x27;快要控制不住&#x27;。另一条是落地与基建——乌镇世界互联网大会开幕，小米具身基座模型拿下&#x27;领先科技奖&#x27;并在工厂完成 8 小时整班作业，OceanBase 凭 AI 数据基础设施获杰出贡献奖；研究端，MIT 让 GPT-6 Astra 直接改写 Qwen 权重，数学成绩从 7.9% 飙到 48.1%，&#x27;权重空间编程&#x27;打开了 AI 自我改进的新想</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-11-03</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261103.html</link>
