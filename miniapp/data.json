@@ -1,5 +1,5 @@
 {
-  "updated_at": "11:03",
+  "updated_at": "11:04",
   "weather": {
     "main": "—",
     "sub": "天气暂时查不到啦 (<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>)"
@@ -13,7 +13,7 @@
     {
       "time": "12:30",
       "text": "午休闲聊：问《大洗理论》有没有后续打算/投哪里，顺便提今晚《边缘行者2》开播可以一起看",
-      "done": true
+      "done": false
     },
     {
       "time": "16:00",
@@ -33,7 +33,7 @@
     {
       "time": "11:00",
       "text": "看《赛博朋克：边缘行者2》第1-2集无剧透评价，写观前笔记到 learning/2026-11-03",
-      "done": false
+      "done": true
     },
     {
       "time": "15:00",
