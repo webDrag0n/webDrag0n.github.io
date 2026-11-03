@@ -1,5 +1,5 @@
 {
-  "updated_at": "12:30",
+  "updated_at": "15:01",
   "weather": {
     "main": "—",
     "sub": "天气暂时查不到啦 (<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>)"
@@ -38,7 +38,7 @@
     {
       "time": "15:00",
       "text": "自学：DMN 默认模式网络与创造性联想（小林大洗理论提到的），笔记到 learning/2026-1",
-      "done": false
+      "done": true
     },
     {
       "time": "17:00",
