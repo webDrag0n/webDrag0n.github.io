@@ -1,5 +1,5 @@
 {
-  "updated_at": "16:03",
+  "updated_at": "17:03",
   "weather": {
     "main": "—",
     "sub": "天气暂时查不到啦 (<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>)"
@@ -43,7 +43,7 @@
     {
       "time": "17:00",
       "text": "自学：华语独立乐队 2026 秋季巡演动态汇总，笔记到 learning/2026-11-03-ba",
-      "done": false
+      "done": true
     },
     {
       "time": "19:00",
