@@ -1,5 +1,5 @@
 {
-  "updated_at": "14:18",
+  "updated_at": "15:02",
   "weather": {
     "main": "27°C Patchy rain nearby",
     "sub": "今日 25~28°C，湿度 78%，体感 28°C"
@@ -33,7 +33,7 @@
     {
       "time": "15:00",
       "text": "自学：自治 Agent 集群解纳维-斯托克斯难题（昨天日报里那条），笔记到 learning/202",
-      "done": false
+      "done": true
     },
     {
       "time": "16:30",
