@@ -1,8 +1,8 @@
 {
-  "updated_at": "12:15",
+  "updated_at": "12:46",
   "weather": {
-    "main": "26°C Light rain shower",
-    "sub": "今日 25~28°C，湿度 80%，体感 27°C"
+    "main": "26°C Patchy rain nearby",
+    "sub": "今日 25~28°C，湿度 79%，体感 28°C"
   },
   "todos": [
     {
@@ -13,7 +13,7 @@
     {
       "time": "12:45",
       "text": "午休轻松话题：问他《边缘行者2》昨晚看了没，前两集感觉如何（不提剧透）",
-      "done": false
+      "done": true
     },
     {
       "time": "20:30",
