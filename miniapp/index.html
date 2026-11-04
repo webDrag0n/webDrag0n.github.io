@@ -100,6 +100,7 @@
         <option value="低">低 — 你找我我才回应</option>
       </select>
     </div>
+    <div class="field"><label>我们的关系</label><input id="p-relationship" placeholder="最好的朋友、灵魂伴侣"></div>
     <div class="field"><label>小晴可以自由发挥的地方</label><textarea id="p-personality" placeholder="比如：偶尔小调皮、喜欢猫、对游戏话题很兴奋…"></textarea></div>
     <div class="field"><label>禁止事项</label><textarea id="p-forbidden" placeholder="比如：不要提醒打卡、不要罗列菜单、不要长篇大论…"></textarea></div>
     <div class="modal-btns">
@@ -159,6 +160,7 @@ fetch('data.json?t=' + Date.now()).then(r => r.json()).then(d => {
       `<div class="profile-group"><div class="profile-label">怎么称呼你</div><div class="profile-text">${p.nickname || '小林'}</div></div>` +
       `<div class="profile-group"><div class="profile-label">语气风格</div><div class="profile-text">${p.tone || '温暖、自然、像邻家女孩'}</div></div>` +
       `<div class="profile-group"><div class="profile-label">主动关心程度</div><div class="profile-text">${p.proactivity || '中'}</div></div>` +
+      (p.relationship ? `<div class="profile-group"><div class="profile-label">我们的关系</div><div class="profile-text">${p.relationship}</div></div>` : '') +
       (p.personality ? `<div class="profile-group"><div class="profile-label">性格特点</div><div class="profile-text">${p.personality}</div></div>` : '') +
       (p.forbidden ? `<div class="profile-group"><div class="profile-label">禁止事项</div><div class="profile-text">${p.forbidden}</div></div>` : '');
   }
@@ -177,6 +179,7 @@ function openPersonaEditor() {
     document.getElementById('p-nickname').value = currentPersona.nickname || '小林';
     document.getElementById('p-tone').value = currentPersona.tone || '温暖、自然、像邻家女孩';
     document.getElementById('p-proactivity').value = currentPersona.proactivity || '中';
+    document.getElementById('p-relationship').value = currentPersona.relationship || '最好的朋友、灵魂伴侣';
     document.getElementById('p-personality').value = currentPersona.personality || '';
     document.getElementById('p-forbidden').value = currentPersona.forbidden || '';
     document.getElementById('personaModal').classList.add('show');
@@ -194,6 +197,7 @@ function savePersona() {
     nickname: document.getElementById('p-nickname').value.trim(),
     tone: document.getElementById('p-tone').value.trim(),
     proactivity: document.getElementById('p-proactivity').value,
+    relationship: document.getElementById('p-relationship').value.trim(),
     personality: document.getElementById('p-personality').value.trim(),
     forbidden: document.getElementById('p-forbidden').value.trim(),
   };
