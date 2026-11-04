@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 04 Nov 2026 00:05:47 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 17:05:32 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-11-05</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261105.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261105.html</guid>
+      <pubDate>Thu, 05 Nov 2026 08:00:00 +0000</pubDate>
+      <description>11月4日，AI 行业呈现&quot;模型迭代加速、算力竞争白热化、治理框架收紧&quot;三线并进的格局。OpenAI 与 Anthropic 的下一代旗舰几乎同时曝光，Kimi K3.1 Pro 开源全部权重成为国产大模型的标志性事件；DeepSeek V5 拟基于昇腾芯片预训练，&quot;国芯训国模&quot;进入实质阶段。行业层面，Anthropic 披露近 9000 亿美元算力承诺，中国拟推覆盖全生命周期的 AI 安全标准；研究层面，斯坦福警告 44% 高引用 LLM 结论已失效，MIT 的&quot;权重空间编程&quot;开辟模型编辑新范式。AI 正从拼参数走向拼落地、拼成本、拼合规。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-11-04</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261104.html</link>
