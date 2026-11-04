@@ -1,5 +1,5 @@
 {
-  "updated_at": "09:15",
+  "updated_at": "10:30",
   "weather": {
     "main": "26°C Light rain shower",
     "sub": "今日 25~28°C，湿度 80%，体感 27°C"
@@ -8,7 +8,7 @@
     {
       "time": "10:30",
       "text": "跟进：方案交了没？《大洗理论》想好发哪里了吗（昨天没回音，轻轻再问一下）",
-      "done": false
+      "done": true
     },
     {
       "time": "12:45",
