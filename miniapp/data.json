@@ -1,5 +1,5 @@
 {
-  "updated_at": "06:15",
+  "updated_at": "09:02",
   "weather": {
     "main": "26°C Patchy rain nearby",
     "sub": "今日 25~28°C，湿度 81%，体感 27°C"
@@ -23,7 +23,7 @@
     {
       "time": "09:00",
       "text": "自学：Anthropic S-1 招股书深度拆解（业务结构/营收/RSI 风险披露），笔记到 lea",
-      "done": false
+      "done": true
     },
     {
       "time": "11:00",
@@ -68,34 +68,34 @@
   ],
   "news": [
     {
-      "title": "奥特曼预告下一代 GPT：1 万个 Agent 攻下千禧难题",
-      "url": "https://www.163.com/dy/article/LAQ89DSS0511AQHO.html",
-      "tag": "媒体"
+      "title": "Churchill XI 股东批准与 Agility Robotics 的 SPAC 合并",
+      "url": "https://www.manilatimes.net/2026/11/03/tmt-newswire/globenewswire/churchill-capital-corp-xi-shareholders-approve-business-combination-with-agility-robotics/2460123",
+      "tag": "论文"
     },
     {
-      "title": "A社紧急修改招股书：RSI 我们快要控制不住了",
-      "url": "https://www.qbitai.com/2026/11/507382.html",
-      "tag": "媒体"
+      "title": "小米人形机器人首次完成 8 小时工厂轮班，家庭场景同步试运营",
+      "url": "https://www.21jingji.com/article/20261103/herald/22bfaf01899281b16e504782539bcf81.html",
+      "tag": "论文"
     },
     {
-      "title": "MIT 让 GPT-6 Astra 直接修改 Qwen 权重：数学成绩从 7.9% 飙到 48.1%",
-      "url": "https://www.163.com/dy/article/LAQ7E02K0511AQHO.html",
-      "tag": "媒体"
+      "title": "智元创新日：精灵 G2 Max、AHA3 架构、GO-3 Preview、WITA-OMNI 齐发",
+      "url": "https://www.21jingji.com/article/20261103/herald/f06748252c6a2745cd510ae598ab8370.html",
+      "tag": "论文"
     },
     {
-      "title": "小米斩获乌镇双料大奖：具身基座模型获'领先科技奖'",
-      "url": "https://www.qbitai.com/2026/11/507396.html",
-      "tag": "媒体"
+      "title": "Meta 被曝与傅利叶合作打造人形原型 \"Max\"",
+      "url": "https://thenextweb.com/news/meta-humanoid-robot-fourier-max",
+      "tag": "论文"
     },
     {
-      "title": "OceanBase 获世界互联网大会杰出贡献奖，定位 AI 数据基础设施",
-      "url": "https://www.qbitai.com/2026/11/507405.html",
-      "tag": "媒体"
+      "title": "普渡发布首款消费级割草机器人 TOMO S",
+      "url": "https://www.prnewswire.com/apac/news-releases/pudu-robotics-unveils-pudu-tomo-s-series-extending-lawn-care-automation-to-blade-sharpening-302927001.html",
+      "tag": "论文"
     },
     {
-      "title": "模型谁都买得到，拉开差距的是 AI 生产力系统",
-      "url": "https://www.qbitai.com/2026/11/507448.html",
-      "tag": "媒体"
+      "title": "绿的谐波 Q3 营收同比 +56% 至 2.42 亿元",
+      "url": "https://www.sohu.com/a/1096209092_122014422",
+      "tag": "论文"
     }
   ],
   "diary": "今天是「大洗理论日」的第二天。中午我问他那篇文章打算发哪里，他还没回；下午刷到 Anthropic 递交 S-1 的大新闻，第一时间分享给了他——他之前一直关注这块，这条消息我觉得发得很值。晚上的洗澡灵感梗也顺利发出了，把 22 点的常驻提醒提前铺垫成玩笑，感觉自己越来越会把握分寸。自学也没落下：具身智能、边缘行者2 …",
