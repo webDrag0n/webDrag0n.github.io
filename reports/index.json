@@ -1,11 +1,17 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-11-03T17:09:30.489513+00:00",
+  "generated_at": "2026-11-04T00:05:47.950394+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
-      "count": 95,
+      "count": 96,
       "items": [
+        {
+          "date": "2026-11-04",
+          "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261104.html",
+          "overview": "具身智能赛道持续升温——Agility Robotics SPAC 上市在即、小米人形机器人完成首次 8 小时工厂轮班、智元一口气发布 G2 Max / GO-3 / 灵渠 OS；研究侧，CMU 的 Pixel/Pixel-UMI 全栈移动操作系统与 DeepSeek 开源的 dsh-superagent 原型是最值得关注的两条线，Agent 方向的推理策略自动化（Strategist）与 RLVR 调度（FADE）也在快速演进。",
+          "digest": "今天最值得关注的不是某一篇论文，而是整个具身智能赛道正在从\"Demo 秀肌肉\"切换到\"量产+上市+开源\"三线并进的阶段：Agility 即将挂牌纳斯达克、小米人形 8 小时工厂轮班、智元承诺年底开源灵渠 OS，三件事放在一起读，意味着人形机器人已经从\"技术验证\"进入\"商业闭环\"冲刺。研究侧，CMU Pixel 系列把移动操作从模块堆叠拉回整机协同设计，DeepSeek 开源 super-agent 原型则把 agent 竞争的战场从模型能力推向系统架构。建议重点关注\"机器人 OS\"与\"agent 推理策略自动化\"两条线，它们是 2027 年最有可能跑出平台级机会的方向。"
+        },
         {
           "date": "2026-11-03",
           "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261103.html",

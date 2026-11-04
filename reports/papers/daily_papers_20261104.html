@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 研究日报 — 2026-11-04</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .comment {
+    font-size: 13px;
+    color: var(--text);
+    background: #f1f2f6;
+    border-left: 3px solid var(--accent);
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .hot-topic .title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .hot-topic .title a { color: var(--accent); text-decoration: none; }
+  .hot-topic .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+  .hot-topic .comment {
+    font-size: 13px;
+    background: #fff3d6;
+    border-left: 3px solid #e17055;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  .hot-topic .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .hot-topic .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 研究日报</h1>
+  <div class="date">2026 年 11 月 4 日 · 星期三</div>
+  <div class="subtitle">arXiv · HuggingFace Daily Papers · GitHub · Robot Overflow</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>具身智能赛道持续升温——Agility Robotics SPAC 上市在即、小米人形机器人完成首次 8 小时工厂轮班、智元一口气发布 G2 Max / GO-3 / 灵渠 OS；研究侧，CMU 的 Pixel/Pixel-UMI 全栈移动操作系统与 DeepSeek 开源的 dsh-superagent 原型是最值得关注的两条线，Agent 方向的推理策略自动化（Strategist）与 RLVR 调度（FADE）也在快速演进。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>头条 · 具身智能与机器人产业</div>
+
+  <div class="hot-topic">
+    <div class="label">热点 · imp=3</div>
+    <div class="title"><a href="https://www.manilatimes.net/2026/11/03/tmt-newswire/globenewswire/churchill-capital-corp-xi-shareholders-approve-business-combination-with-agility-robotics/2460123">Churchill XI 股东批准与 Agility Robotics 的 SPAC 合并</a></div>
+    <div class="summary">11 月 2 日股东会上超 84% 赞成票通过，预计 11 月 4 日交割、11 月 5 日以 AGLT 在纳斯达克挂牌，总收益约 4.65 亿美元，含富士康牵头的约 2.01 亿美元 PIPE。</div>
+    <div class="comment">解读：人形机器人赛道迎来第一家纯标的上市公司，Digit 5 已锁定 3 亿美元多年期订单，富士康加持意味着量产供应链基本打通——资本市场对"干活的人形"开始用真金白银投票。</div>
+    <div class="tags"><span class="tag hot">IPO</span><span class="tag hot">Agility</span><span class="tag">供应链</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 2026-11-03 · 上证报（21财经）</div>
+    <div class="title"><a href="https://www.21jingji.com/article/20261103/herald/22bfaf01899281b16e504782539bcf81.html">小米人形机器人首次完成 8 小时工厂轮班，家庭场景同步试运营</a></div>
+    <div class="summary">乌镇峰会上小米披露其自研人形已在整车总装车间连续作业 8 小时（3 月时仅 3 小时），分拣侧围零部件；具身基座模型进入小米青年公寓做 30 分钟+ 连续家务试运营，覆盖 50+ 任务。</div>
+    <div class="comment">解读：从 3 小时到 8 小时，半年提升近 3 倍，说明数据闭环和整机可靠性正在收敛；车厂+公寓双场景并进，是消费级人形最现实的路径。</div>
+    <div class="tags"><span class="tag hot">小米</span><span class="tag">人形机器人</span><span class="tag">部署</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 2026-11-03 · 北京商报</div>
+    <div class="title"><a href="https://www.21jingji.com/article/20261103/herald/f06748252c6a2745cd510ae598ab8370.html">智元创新日：精灵 G2 Max、AHA3 架构、GO-3 Preview、WITA-OMNI 齐发</a></div>
+    <div class="summary">智元机器人发布 AHA3 人形架构、重载精灵 G2 Max、操作模型 GO-3 Preview 与交互模型 WITA-OMNI；G2 已进入消费电子与汽车零部件产线，灵渠 OS 1.0 承诺 2026 年底开源。</div>
+    <div class="comment">解读：一口气发四件套说明智元从"造机器人"转向"造机器人操作系统"，灵渠 OS 开源若兑现，可能成为具身智能时代的 ROS 级基础设施。</div>
+    <div class="tags"><span class="tag hot">智元</span><span class="tag">开源</span><span class="tag">机器人OS</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 2026-11-01 · The Next Web</div>
+    <div class="title"><a href="https://thenextweb.com/news/meta-humanoid-robot-fourier-max">Meta 被曝与傅利叶合作打造人形原型 "Max"</a></div>
+    <div class="summary">The Information 披露 Meta 与傅利叶用约三个月造出 1.5 米、48 公斤人形原型 Max，搭载 NVIDIA Jetson Thor；Max 2 已于 9 月立项，Meta 称其为内部研究项目。</div>
+    <div class="comment">解读：Meta 亲自下场做人形，验证了"机器人大脑 + 中国供应链"的组合路线；傅利叶若坐实合作，估值与国际影响力都将再上台阶。</div>
+    <div class="tags"><span class="tag">Meta</span><span class="tag">傅利叶</span><span class="tag">传闻</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 2026-11-03 · PR Newswire</div>
+    <div class="title"><a href="https://www.prnewswire.com/apac/news-releases/pudu-robotics-unveils-pudu-tomo-s-series-extending-lawn-care-automation-to-blade-sharpening-302927001.html">普渡发布首款消费级割草机器人 TOMO S</a></div>
+    <div class="summary">TOMO S 搭载自动磨刀、激光雷达 + AI 视觉 + 网络 RTK 导航，覆盖 1500–5000 ㎡ 草坪，预计 2027 年春季上市，是普渡首个家用产品线。</div>
+    <div class="comment">解读：商用服务机器人公司集体向 C 端要增长，割草是欧美市场最成熟的家用机器人品类，普渡用 B 端供应链优势切入，值得关注定价策略。</div>
+    <div class="tags"><span class="tag">普渡</span><span class="tag">消费机器人</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 2026-11-02 · Sohu（新浪财经）</div>
+    <div class="title"><a href="https://www.sohu.com/a/1096209092_122014422">绿的谐波 Q3 营收同比 +56% 至 2.42 亿元</a></div>
+    <div class="summary">绿的谐波 Q3 营收 2.42 亿元（+56.1%）、净利 5200 万元（+29.1%），前三季营收 5.91 亿元；增长主要来自工业机器人与具身智能业务，但经营现金流转负。</div>
+    <div class="comment">解读：谐波减速器是人形机器人价值量最高的部件之一，绿的业绩放量是赛道景气的先行指标；现金流转负提示扩产投入加大，需持续跟踪。</div>
+    <div class="tags"><span class="tag">绿的谐波</span><span class="tag">零部件</span><span class="tag">财报</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>前沿研究 · 机器人学习与操作</div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.03648 · 2026-11-02 · CMU</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.03648">Pixel: A Co-Designed Full-Stack Robot System for Learning General-Purpose Mobile Manipulation</a></div>
+    <div class="summary">Tony Tao、Deepak Pathak 等提出硬件-数据-控制-策略全栈协同设计的移动操作系统 Pixel，解决传统组件各自为政导致的系统能力天花板。</div>
+    <div class="comment">解读：Pathak 组继 UMI 之后的又一系统级工作，强调"协同设计"而非单点优化——移动操作正在从"堆模块"走向"造整机"。</div>
+    <div class="tags"><span class="tag">移动操作</span><span class="tag">全栈系统</span><span class="tag">CMU</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.03647 · 2026-11-02 · CMU</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.03647">Pixel-UMI: Learning Environment-Aware Whole-Body Manipulation from Sensorized Human Demonstrations</a></div>
+    <div class="summary">配套论文提出 Environment-Aware Retargeting（EAR），从带传感的人类示范中学习环境感知全身操作策略，缓解人机形态差异带来的迁移难题。</div>
+    <div class="comment">解读：UMI 路线的关键升级——让人类示范直接"感知环境"，大幅降低机器人数据采集成本，为家庭场景规模化训练铺路。</div>
+    <div class="tags"><span class="tag">UMI</span><span class="tag">模仿学习</span><span class="tag">数据采集</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.03622 · 2026-11-02</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.03622">D&amp;A: Decoupling Description and Assessment Enables VLMs as Zero-Shot Robotic Reward Models</a></div>
+    <div class="summary">通过把"描述"与"评估"解耦，让 VLM 零样本充当机器人任务进度奖励模型，缓解以往框架在失败轨迹上产生确认偏误、幻觉进度的问题。</div>
+    <div class="comment">解读：奖励模型是 RL 机器人训练的瓶颈之一，用 VLM 零样本生成可验证的进度信号，为"无人工标注"的机器人 RL 打开新思路。</div>
+    <div class="tags"><span class="tag">VLM</span><span class="tag">奖励模型</span><span class="tag">零样本</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>前沿研究 · LLM 与 Agent</div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily Papers · 34 upvotes · arXiv 2611.02074</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.02074">SWE-Trail: History-Guided Trajectory Collection for Coding Agent Training</a></div>
+    <div class="summary">针对代码 agent 后训练数据采集，提出基于历史引导的轨迹采样策略，避免传统均匀采样导致的低质量探索数据稀释策略学习信号。</div>
+    <div class="comment">解读：SWE-agent 类工作正在从"提示工程"走向"数据工程"，轨迹质量比数量更重要——这是 coding agent 训练的下一个主战场。</div>
+    <div class="tags"><span class="tag hot">代码Agent</span><span class="tag">后训练</span><span class="tag">轨迹采集</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.03618 · 2026-11-02</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.03618">Strategist: Evolving Reasoning with Agents</a></div>
+    <div class="summary">把 agent 系统的"另一半"——推理策略本身——从手写变成可进化的元 agent 自动搜索，让构建策略的经验可以跨任务迁移。</div>
+    <div class="comment">解读：相当于给 agent 的"思考方式"做 NAS/进化搜索，是 agent 自动化的关键一步，未来 agent 框架可能自带"策略优化器"。</div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">元推理</span><span class="tag">自动设计</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.03625 · 2026-11-02</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.03625">FADE: Factored Ability–Difficulty Filtering for Online RLVR Scheduling</a></div>
+    <div class="summary">RLVR 只对"组内有分歧"的 prompt 有梯度，全对/全错都会浪费生成预算；FADE 通过能力-难度分解的在线调度，把 rollout 引导到信息量最大的样本。</div>
+    <div class="comment">解读：GRPO 类方法的训练效率优化是近期热点，FADE 的思路可以无缝嫁接到现有 RLVR pipeline，工程价值高。</div>
+    <div class="tags"><span class="tag">RLVR</span><span class="tag">GRPO</span><span class="tag">训练效率</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.03633 · 2026-11-02</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.03633">Pretraining Data Scale Reverses the Muon–AdamW Fine-Tuning Gap</a></div>
+    <div class="summary">系统研究 Muon 与 AdamW 在微调阶段的差异，发现预训练数据规模会逆转二者在下游任务上的相对优劣。</div>
+    <div class="comment">解读：Muon 火了一年，这篇给了一个冷静的提醒——优化器选择不是免费的午餐，数据量不同结论会反转，值得每个训模团队读一遍。</div>
+    <div class="tags"><span class="tag">Muon</span><span class="tag">优化器</span><span class="tag">Scaling</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily Papers · 25 upvotes · arXiv 2611.03424</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.03424">IdeaTaste: Do LLMs Share the Research Taste of Human Researchers?</a></div>
+    <div class="summary">提出 IdeaTaste 基准，衡量 LLM 在"读什么、做什么、用什么方法"上的科研品味是否与人类研究者一致——比"能否执行研究"更接近科研智能的本质。</div>
+    <div class="comment">解读：AI Scientist 叙事下的清醒剂，品味而非执行力才是科研的护城河；这个基准可能成为评估"AI 研究员"的新标准。</div>
+    <div class="tags"><span class="tag">AI Scientist</span><span class="tag">评测基准</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily Papers · 108 upvotes · arXiv 2611.01860</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.01860">Advances in Agentic Computer Graphics</a></div>
+    <div class="summary">系统梳理 LLM agent 在图形学代码生成与迭代优化上的进展，认为"agentic graphics"可能成为图形学的新范式。</div>
+    <div class="comment">解读：本周 HF 日榜最高票，图形学社区对 LLM agent 的接受度超出预期——渲染管线、shader、几何处理都可能被 agent 化。</div>
+    <div class="tags"><span class="tag hot">图形学</span><span class="tag">Agent</span><span class="tag">综述</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源动态</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 创建 2026-10-31 · ⭐16.7k</div>
+    <div class="title"><a href="https://github.com/deepseek-ai/dsh-superagent-prototype">deepseek-ai/dsh-superagent-prototype</a></div>
+    <div class="summary">DeepSeek 官方开源的"更自主 Agent 系统"原型，四天斩获 1.6 万星，目标是探索通用 super-agent 的系统架构。</div>
+    <div class="comment">解读：DeepSeek 罕见地在 agent 系统层面开源原型而非模型权重，信号意义大于代码本身——头部实验室开始把 agent 架构当作核心竞争力开放出来。</div>
+    <div class="tags"><span class="tag hot">DeepSeek</span><span class="tag hot">Agent</span><span class="tag">开源</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 更新 2026-11-03 · ⭐151</div>
+    <div class="title"><a href="https://github.com/chonghanqin/Awesome-Agentic-Robots">Awesome-Agentic-Robots</a></div>
+    <div class="summary">"Towards Agentic Robots: Model, Data, Environment, and Harness" 官方仓库，系统整理 agentic robot 方向的模型、数据、环境与评测资源。</div>
+    <div class="comment">解读：具身智能 + agent 的交叉领域终于有了自己的 awesome list，适合作为入门与文献调研的起点。</div>
+    <div class="tags"><span class="tag">Awesome</span><span class="tag">Agentic Robot</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 更新 2026-11-03 · ⭐37</div>
+    <div class="title"><a href="https://github.com/vergilshawn/Awesome-Humanoid-Robot-Learning">Awesome-Humanoid-Robot-Learning</a></div>
+    <div class="summary">专注人形机器人学习方向的论文聚合列表，目标是替代每日手动刷 arXiv，高效发现高度相关的 learning 工作。</div>
+    <div class="comment">解读：人形 learning 子领域的垂直 awesome，更新勤快，做相关方向的同学可以直接订阅。</div>
+    <div class="tags"><span class="tag">Awesome</span><span class="tag">人形机器人</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今天最值得关注的不是某一篇论文，而是整个具身智能赛道正在从"Demo 秀肌肉"切换到"量产+上市+开源"三线并进的阶段：Agility 即将挂牌纳斯达克、小米人形 8 小时工厂轮班、智元承诺年底开源灵渠 OS，三件事放在一起读，意味着人形机器人已经从"技术验证"进入"商业闭环"冲刺。研究侧，CMU Pixel 系列把移动操作从模块堆叠拉回整机协同设计，DeepSeek 开源 super-agent 原型则把 agent 竞争的战场从模型能力推向系统架构。建议重点关注"机器人 OS"与"agent 推理策略自动化"两条线，它们是 2027 年最有可能跑出平台级机会的方向。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-11-04 · Generated by Hermes Agent</p>
+</div>
+
+</div>
+</body>
+</html>

@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 03 Nov 2026 17:09:30 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 00:05:47 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-11-04</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261104.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261104.html</guid>
+      <pubDate>Wed, 04 Nov 2026 08:00:00 +0000</pubDate>
+      <description>具身智能赛道持续升温——Agility Robotics SPAC 上市在即、小米人形机器人完成首次 8 小时工厂轮班、智元一口气发布 G2 Max / GO-3 / 灵渠 OS；研究侧，CMU 的 Pixel/Pixel-UMI 全栈移动操作系统与 DeepSeek 开源的 dsh-superagent 原型是最值得关注的两条线，Agent 方向的推理策略自动化（Strategist）与 RLVR 调度（FADE）也在快速演进。</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-11-04</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261104.html</link>
