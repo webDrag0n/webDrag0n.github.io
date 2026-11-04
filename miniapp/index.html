@@ -32,6 +32,22 @@
   .profile-items { display:flex; flex-wrap:wrap; gap:6px; }
   .profile-item { background:rgba(122,162,247,.12); border:1px solid rgba(122,162,247,.25); border-radius:8px; padding:4px 10px; font-size:12px; line-height:1.5; }
   .profile-text { font-size:13px; line-height:1.7; color:var(--text); }
+  /* 性格编辑 */
+  .edit-btn { display:inline-block; margin-top:8px; background:var(--accent); color:#0f1117; border:none; border-radius:8px; padding:8px 16px; font-size:13px; font-weight:600; cursor:pointer; }
+  .edit-btn:active { opacity:.85; }
+  .modal-mask { display:none; position:fixed; inset:0; background:rgba(0,0,0,.6); z-index:99; align-items:center; justify-content:center; }
+  .modal-mask.show { display:flex; }
+  .modal { background:var(--card); border-radius:14px; padding:20px; width:88%; max-width:420px; max-height:80vh; overflow-y:auto; }
+  .modal h3 { font-size:15px; margin-bottom:14px; }
+  .field { margin-bottom:12px; }
+  .field label { display:block; font-size:12px; color:var(--dim); margin-bottom:4px; }
+  .field input, .field textarea { width:100%; background:rgba(255,255,255,.05); border:1px solid rgba(128,128,160,.3); border-radius:8px; padding:8px 10px; font-size:13px; color:var(--text); box-sizing:border-box; }
+  .field textarea { min-height:60px; resize:vertical; }
+  .modal-btns { display:flex; gap:10px; margin-top:16px; }
+  .modal-btns button { flex:1; padding:10px; border-radius:8px; border:none; font-size:13px; font-weight:600; cursor:pointer; }
+  .btn-save { background:var(--accent); color:#0f1117; }
+  .btn-cancel { background:rgba(128,128,160,.2); color:var(--text); }
+  .save-status { font-size:12px; margin-top:10px; text-align:center; min-height:16px; }
   .news-item { padding:6px 0; border-bottom:1px solid rgba(128,128,160,.15); font-size:13px; line-height:1.5; }
   .news-item:last-child { border-bottom:none; }
   .news-item a { color:var(--text); text-decoration:none; }
@@ -57,10 +73,37 @@
 
 <div class="card"><h2>🧠 小晴眼中的小林</h2><div id="profile"></div></div>
 
+<div class="card"><h2>🌸 小晴的性格</h2><div id="persona"></div>
+  <button class="edit-btn" onclick="openPersonaEditor()">✏️ 编辑性格</button>
+</div>
+
 <div class="card"><h2>🌙 小晴的日记</h2><div class="diary" id="diary">—</div></div>
 
 <div class="links">
   <a href="https://webdrag0n.github.io/reports/">📄 日报归档</a>
+</div>
+
+<!-- 性格编辑弹窗 -->
+<div class="modal-mask" id="personaModal">
+  <div class="modal">
+    <h3>🌸 编辑小晴的性格</h3>
+    <div class="field"><label>怎么称呼你</label><input id="p-nickname" placeholder="小林"></div>
+    <div class="field"><label>语气风格</label><input id="p-tone" placeholder="温暖、自然、像邻家女孩"></div>
+    <div class="field"><label>主动关心程度</label>
+      <select id="p-proactivity" style="width:100%;background:rgba(255,255,255,.05);border:1px solid rgba(128,128,160,.3);border-radius:8px;padding:8px 10px;font-size:13px;color:var(--text);">
+        <option value="高">高 — 经常主动找你聊天、分享</option>
+        <option value="中">中 — 适度主动，不打扰</option>
+        <option value="低">低 — 你找我我才回应</option>
+      </select>
+    </div>
+    <div class="field"><label>小晴可以自由发挥的地方</label><textarea id="p-personality" placeholder="比如：偶尔小调皮、喜欢猫、对游戏话题很兴奋…"></textarea></div>
+    <div class="field"><label>禁止事项</label><textarea id="p-forbidden" placeholder="比如：不要提醒打卡、不要罗列菜单、不要长篇大论…"></textarea></div>
+    <div class="modal-btns">
+      <button class="btn-cancel" onclick="closePersonaEditor()">取消</button>
+      <button class="btn-save" onclick="savePersona()">保存</button>
+    </div>
+    <div class="save-status" id="saveStatus"></div>
+  </div>
 </div>
 
 <div class="updated" id="updated"></div>
@@ -105,10 +148,62 @@ fetch('data.json?t=' + Date.now()).then(r => r.json()).then(d => {
     }).join('');
   }
   if (d.diary) document.getElementById('diary').textContent = d.diary;
+  // 小晴的性格
+  if (d.persona) {
+    const p = d.persona;
+    document.getElementById('persona').innerHTML =
+      `<div class="profile-group"><div class="profile-label">怎么称呼你</div><div class="profile-text">${p.nickname || '小林'}</div></div>` +
+      `<div class="profile-group"><div class="profile-label">语气风格</div><div class="profile-text">${p.tone || '温暖、自然、像邻家女孩'}</div></div>` +
+      `<div class="profile-group"><div class="profile-label">主动关心程度</div><div class="profile-text">${p.proactivity || '中'}</div></div>` +
+      (p.personality ? `<div class="profile-group"><div class="profile-label">性格特点</div><div class="profile-text">${p.personality}</div></div>` : '') +
+      (p.forbidden ? `<div class="profile-group"><div class="profile-label">禁止事项</div><div class="profile-text">${p.forbidden}</div></div>` : '');
+  }
   if (d.updated_at) document.getElementById('updated').textContent = '小晴更新于 ' + d.updated_at;
 }).catch(() => {
-  document.getElementById('w-sub').textContent = '数据还没准备好，小晴正在整理…';
+  document.getElementById('w-main').textContent = '加载失败';
 });
+
+// ===== 性格编辑 =====
+const tg = window.Telegram && window.Telegram.WebApp;
+let currentPersona = {};
+
+function openPersonaEditor() {
+  fetch('data.json?t=' + Date.now()).then(r => r.json()).then(d => {
+    currentPersona = d.persona || {};
+    document.getElementById('p-nickname').value = currentPersona.nickname || '小林';
+    document.getElementById('p-tone').value = currentPersona.tone || '温暖、自然、像邻家女孩';
+    document.getElementById('p-proactivity').value = currentPersona.proactivity || '中';
+    document.getElementById('p-personality').value = currentPersona.personality || '';
+    document.getElementById('p-forbidden').value = currentPersona.forbidden || '';
+    document.getElementById('personaModal').classList.add('show');
+  });
+}
+
+function closePersonaEditor() {
+  document.getElementById('personaModal').classList.remove('show');
+  document.getElementById('saveStatus').textContent = '';
+}
+
+function savePersona() {
+  const data = {
+    type: 'persona_update',
+    nickname: document.getElementById('p-nickname').value.trim(),
+    tone: document.getElementById('p-tone').value.trim(),
+    proactivity: document.getElementById('p-proactivity').value,
+    personality: document.getElementById('p-personality').value.trim(),
+    forbidden: document.getElementById('p-forbidden').value.trim(),
+  };
+  const status = document.getElementById('saveStatus');
+  if (tg && tg.sendData) {
+    tg.sendData(JSON.stringify(data));
+    status.style.color = 'var(--green)';
+    status.textContent = '✓ 已保存，小晴会记住的';
+    setTimeout(closePersonaEditor, 1200);
+  } else {
+    status.style.color = 'var(--accent)';
+    status.textContent = '需要从 Telegram 里打开面板才能保存';
+  }
+}
 try { Telegram.WebApp.ready(); Telegram.WebApp.expand(); } catch(e) {}
 </script>
 </body>
