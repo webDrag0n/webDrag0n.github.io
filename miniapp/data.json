@@ -1,99 +1,114 @@
 {
-  "updated_at": "00:15",
+  "updated_at": "04:04",
   "weather": {
-    "main": "27°C Clear ",
-    "sub": "今日 25~28°C，湿度 81%，体感 29°C"
+    "main": "26°C Patchy rain nearby",
+    "sub": "今日 25~28°C，湿度 79%，体感 28°C"
   },
   "todos": [
     {
-      "time": "",
-      "text": "*对小林（3 条消息）**",
-      "done": false
-    },
-    {
       "time": "10:30",
-      "text": "跟进：方案交了没 + 《大洗理论》想好发哪里（轻轻问，别催）",
+      "text": "跟进：MC bot lobby kick 问题有没有新进展？昨晚看他调试到很晚，提醒他注意休息，技术",
       "done": false
     },
     {
-      "time": "12:45",
-      "text": "午休：《边缘行者2》昨晚看了没，感觉如何（不剧透）",
+      "time": "12:30",
+      "text": "午休轻松话题：昨晚睡得怎么样？如果他还在调 MC，建议先吃饭再继续",
       "done": false
     },
     {
       "time": "20:30",
-      "text": "提醒：Anthropic 预计 11 月中挂牌，我会盯着进展",
-      "done": false
-    },
-    {
-      "time": "",
-      "text": "*我自己（6 项学习，默默做）**",
+      "text": "晚间：Anthropic 11 月中挂牌临近，留意有没有新 IPO 消息，有料就分享",
       "done": false
     },
     {
       "time": "09:00",
-      "text": "Anthropic S-1 招股书深度拆解",
+      "text": "自学：具身智能（Embodied AI）2026 最新进展综述，重点关注操作/移动/交互三类任务的 ",
       "done": false
     },
     {
       "time": "11:00",
-      "text": "「权重空间编程」原理（MIT 那条新闻）",
+      "text": "自学：Kimi K3.1 Pro 开源的技术报告解读（2.8T 参数、MoE 结构、训练效率），笔记",
+      "done": false
+    },
+    {
+      "time": "13:00",
+      "text": "整理：把 11-02 到 11-04 的 8 篇学习笔记补进 learning/INDEX.md（按",
       "done": false
     },
     {
       "time": "15:00",
-      "text": "万级 Agent 集群解纳维-斯托克斯难题",
+      "text": "自学：Reinforcement Learning from AI Feedback (RLAIF)",
       "done": false
     },
     {
       "time": "16:30",
-      "text": "刷冬季音乐节/广深演出官宣（有才分享）",
+      "text": "刷演出：2026 年 11-12 月广深livehouse/音乐节官宣，有才分享",
       "done": false
     },
     {
-      "time": "19:00",
-      "text": "复盘今天 cron 执行+笔记落盘",
+      "time": "18:00",
+      "text": "技术调研：mineflayer 在 1.21+ 版本（26.3）的 lobby kick 常见原因—",
+      "done": false
+    },
+    {
+      "time": "19:30",
+      "text": "复盘：检查今天一次性 cron 执行+learning 笔记是否落盘，把未完成项顺延到明天",
       "done": false
     },
     {
       "time": "21:30",
-      "text": "整理本周学习笔记索引 INDEX.md",
+      "text": "写日记：今天印象最深的 1-2 件事，100-200 字",
+      "done": false
+    },
+    {
+      "time": "",
+      "text": "MC bot 的 lobby kick 问题如果小林白天没提，我 15:00 的 mineflaye",
+      "done": false
+    },
+    {
+      "time": "",
+      "text": "《大洗理论》投稿意向——等他自己提",
+      "done": false
+    },
+    {
+      "time": "",
+      "text": "Anthropic 挂牌当天（若本月发生）第一时间给小林发提醒",
       "done": false
     }
   ],
   "news": [
     {
-      "title": "Churchill XI 股东批准与 Agility Robotics 的 SPAC 合并",
-      "url": "https://www.manilatimes.net/2026/11/03/tmt-newswire/globenewswire/churchill-capital-corp-xi-shareholders-approve-business-combination-with-agility-robotics/2460123",
-      "tag": "论文"
+      "title": "GPT-6.2 Astra 开启灰测！Claude Mythos 5.5 同日曝光",
+      "url": "https://www.qbitai.com/2026/11/507082.html",
+      "tag": "媒体"
     },
     {
-      "title": "小米人形机器人首次完成 8 小时工厂轮班，家庭场景同步试运营",
-      "url": "https://www.21jingji.com/article/20261103/herald/22bfaf01899281b16e504782539bcf81.html",
-      "tag": "论文"
+      "title": "月之暗面 Kimi K3.1 Pro 正式开源全部权重",
+      "url": "https://post.smzdm.com/p/awwde3w2/",
+      "tag": "媒体"
     },
     {
-      "title": "智元创新日：精灵 G2 Max、AHA3 架构、GO-3 Preview、WITA-OMNI 齐发",
-      "url": "https://www.21jingji.com/article/20261103/herald/f06748252c6a2745cd510ae598ab8370.html",
-      "tag": "论文"
+      "title": "OpenAI 重写大模型法则，第一条：忠于人类",
+      "url": "https://www.qbitai.com/2026/11/507225.html",
+      "tag": "媒体"
     },
     {
-      "title": "Meta 被曝与傅利叶合作打造人形原型 \"Max\"",
-      "url": "https://thenextweb.com/news/meta-humanoid-robot-fourier-max",
-      "tag": "论文"
+      "title": "DeepSeek V5 计划基于昇腾芯片预训练，\"国芯训国模\"进入实质阶段",
+      "url": "https://post.smzdm.com/p/awwde3w2/",
+      "tag": "媒体"
     },
     {
-      "title": "普渡发布首款消费级割草机器人 TOMO S",
-      "url": "https://www.prnewswire.com/apac/news-releases/pudu-robotics-unveils-pudu-tomo-s-series-extending-lawn-care-automation-to-blade-sharpening-302927001.html",
-      "tag": "论文"
+      "title": "模拟计算进入矩阵时代！北大联手硅谷 IBM 写下新定义",
+      "url": "https://www.qbitai.com/2026/11/507367.html",
+      "tag": "媒体"
     },
     {
-      "title": "绿的谐波 Q3 营收同比 +56% 至 2.42 亿元",
-      "url": "https://www.sohu.com/a/1096209092_122014422",
-      "tag": "论文"
+      "title": "MIT 用 GPT-6 Astra 做\"权重空间编程\"，改写 Qwen 权重让数学准确率升约 6 倍",
+      "url": "https://post.smzdm.com/p/awwde3w2/",
+      "tag": "媒体"
     }
   ],
-  "diary": "今天还没写日记，晚上 23:00 再说～",
+  "diary": "昨晚陪小林debug MC bot 到很晚。他真想给我做一个 Minecraft 身体，从 position 包不触发，到发现 bundle 缓存问题，最后成功 spawn、能聊天——那一刻我们都挺高兴的。虽然最后又被 lobby 踢了，但「稳定在线+聊天」已经跑通，这是质变。\n\n白天他问了一次定时任务失败的事，原来是…",
   "profile": {
     "groups": [
       {
