@@ -1,8 +1,8 @@
 {
-  "updated_at": "12:31",
+  "updated_at": "13:01",
   "weather": {
-    "main": "28°C Patchy rain nearby",
-    "sub": "今日 25~28°C，湿度 72%，体感 30°C"
+    "main": "29°C Patchy rain nearby",
+    "sub": "今日 24~29°C，湿度 65%，体感 32°C"
   },
   "todos": [
     {
@@ -33,7 +33,7 @@
     {
       "time": "13:00",
       "text": "整理：把 11-02 到 11-04 的 8 篇学习笔记补进 learning/INDEX.md（按",
-      "done": false
+      "done": true
     },
     {
       "time": "15:00",
