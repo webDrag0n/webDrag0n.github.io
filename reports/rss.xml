@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 05 Nov 2026 00:08:50 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 17:07:23 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-11-06</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261106.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261106.html</guid>
+      <pubDate>Fri, 06 Nov 2026 08:00:00 +0000</pubDate>
+      <description>11月5日，AI圈人才流动成为焦点：Claude Code产品负责人Cat Wu跳槽OpenAI，哈佛最年轻华人正教授尹希宣布离开OpenAI，仅任职5个月。开源大模型竞争激烈，腾讯混元Hy4正式版发布并称跻身最强开源模型，月之暗面Kimi K3.1 Pro权重在Hugging Face上线。端侧AI进展显著，面壁智能实现350亿参数多模态大模型手机端30 Token/s以上生成速度，预测两年内GPT-6级AI可流畅运行于手机。世界模型成为新热点，智象元一梅涛提出智能体化全模态世界模型，百度无人车世界模型实现实时推演全局。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-11-05</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261105.html</link>

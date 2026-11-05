@@ -1,6 +1,6 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-11-05T00:08:50.513569+00:00",
+  "generated_at": "2026-11-05T17:07:23.011024+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
@@ -592,8 +592,14 @@
     },
     "media": {
       "title": "AI 科技日报",
-      "count": 97,
+      "count": 98,
       "items": [
+        {
+          "date": "2026-11-06",
+          "url": "https://webdrag0n.github.io/reports/media/daily_media_20261106.html",
+          "overview": "11月5日，AI圈人才流动成为焦点：Claude Code产品负责人Cat Wu跳槽OpenAI，哈佛最年轻华人正教授尹希宣布离开OpenAI，仅任职5个月。开源大模型竞争激烈，腾讯混元Hy4正式版发布并称跻身最强开源模型，月之暗面Kimi K3.1 Pro权重在Hugging Face上线。端侧AI进展显著，面壁智能实现350亿参数多模态大模型手机端30 Token/s以上生成速度，预测两年内GPT-6级AI可流畅运行于手机。世界模型成为新热点，智象元一梅涛提出智能体化全模态世界模型，百度无人车世界模型实现实时推演全局。",
+          "digest": "今天AI圈最值得关注的现象是顶级人才的\"双向流动\"：Claude Code产品负责人Cat Wu转投OpenAI，而哈佛最年轻华人正教授尹希却仅5个月就离开OpenAI，反映出AI人才竞争的激烈与复杂。开源大模型赛道愈发白热化，腾讯混元Hy4正式版以59分超越Claude Opus 5.5，月之暗面Kimi K3.1 Pro权重也正式上线，国产开源模型正加速追赶国际顶尖水平。端侧AI迎来重要里程碑，面壁智能实现350亿参数模型在手机端30 Token/s以上运行，预示GPT-6级能力两年内或将普及至移动终端。世界模型成为新焦点，无论是智象元一的智能体化全模态世界模型，还是百度无人车的实时推演系统，都表明行业正在从\"感知智能\"向\"世界理解\"跃迁。AI基础设施投资持续升温，瑞典斯堪斯卡2242亿元订单积压印证数据中心建设仍处高峰期。"
+        },
         {
           "date": "2026-11-05",
           "url": "https://webdrag0n.github.io/reports/media/daily_media_20261105.html",
