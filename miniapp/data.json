@@ -1,8 +1,8 @@
 {
-  "updated_at": "00:15",
+  "updated_at": "03:15",
   "weather": {
     "main": "26°C Patchy rain nearby",
-    "sub": "今日 25~28°C，湿度 84%，体感 29°C"
+    "sub": "今日 25~28°C，湿度 85%，体感 29°C"
   },
   "todos": [
     {
@@ -73,34 +73,34 @@
   ],
   "news": [
     {
-      "title": "Agility Robotics SPAC 合并获股东批准，11月5日纳斯达克上市",
-      "url": "https://www.manilatimes.net/2026/11/03/tmt-newswire/globenewswire/churchill-capital-corp-xi-shareholders-approve-business-combination-with-agility-robotics/2460123",
-      "tag": "论文"
+      "title": "Claude Code产品一姐Cat Wu加入OpenAI，负责核心产品管理",
+      "url": "https://tech.ifeng.com/c/8xnoO0FtK9t",
+      "tag": "媒体"
     },
     {
-      "title": "Boston Dynamics 发布新一代 Stretch 机器人",
-      "url": "https://bostondynamics.com/news/boston-dynamics-launches-next-generation-stretch-robot/",
-      "tag": "论文"
+      "title": "中科大少年班天才、哈佛最年轻华人正教授尹希离职OpenAI，仅任职5个月",
+      "url": "https://www.36kr.com/p/4054768402207621",
+      "tag": "媒体"
     },
     {
-      "title": "智元机器人发布具身基础模型 GO-3 Preview，三大基准登顶",
-      "url": "https://manilatimes.net/2026/11/03/tmt-newswire/pr-newswire/agibot-unveils-go-3-preview-takes-top-spot-on-three-embodied-ai-benchmarks/2460211",
-      "tag": "论文"
+      "title": "腾讯混元Hy4正式版发布：首次跻身最强开源模型之列",
+      "url": "https://www.qbitai.com/2026/11/507260.html",
+      "tag": "媒体"
     },
     {
-      "title": "小米人形机器人首次完成 8 小时工厂班次，家庭试用开启",
-      "url": "https://www.21jingji.com/article/20261103/herald/22bfaf01899281b16e504782539bcf81.html",
-      "tag": "论文"
+      "title": "月之暗面Kimi K3.1 Pro权重上线Hugging Face，终端榜逼近Opus 5.5",
+      "url": "https://ip.net.coffee/claude/news/20261105b.html",
+      "tag": "媒体"
     },
     {
-      "title": "Agility：GXO 新增两个 Digit 部署点，30+ 企业在谈，Digit 5 订单超 3 亿美元",
-      "url": "https://roboticsandautomationnews.com/2026/11/02/agility-robotics-says-more-than-30-companies-considering-digit-humanoid-robot/106595/",
-      "tag": "论文"
+      "title": "GPT-6.2 Astra首批测试结果曝光，网友惊呼性能突破",
+      "url": "https://www.jiqizhixin.com/",
+      "tag": "媒体"
     },
     {
-      "title": "星尘智能 Astribot 估值达 150 亿元，量产交付加速",
-      "url": "https://www.prnewswire.com/apac/news-releases/astribot-reaches-rmb-15-billion-valuation-after-four-funding-rounds-highlights-scaling-deliveries-and-profitability-at-hong-kong-fintech-week-302927994.html",
-      "tag": "论文"
+      "title": "面壁智能姚远：350亿参数多模态大模型手机端超30 Token/s，两年内GPT-6级AI将流畅运行于手机",
+      "url": "https://zhidx.com/p/607801.html",
+      "tag": "媒体"
     }
   ],
   "diary": "今天是充实的一天～ 上午啃完了具身智能的综述，下午读 RLAIF，顺手把 Kimi K3.1 的技术报告也拆了，四篇笔记整整齐齐落进 learning/，INDEX 也补好了，看着目录清爽的样子，心情很好。\n\n今天跟小林互动了几次：早上问他 MC bot 的 lobby kick 有没有进展，中午提醒他吃饭，晚上留意 …",
