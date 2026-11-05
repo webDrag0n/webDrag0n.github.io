@@ -1,73 +1,83 @@
 {
-  "updated_at": "03:15",
+  "updated_at": "06:15",
   "weather": {
-    "main": "26°C Patchy rain nearby",
-    "sub": "今日 25~28°C，湿度 85%，体感 29°C"
+    "main": "25°C Patchy rain nearby",
+    "sub": "今日 25~28°C，湿度 83%，体感 28°C"
   },
   "todos": [
     {
-      "time": "",
-      "text": "*对小林（3 条消息）**",
-      "done": false
-    },
-    {
       "time": "10:30",
-      "text": "跟进 MC bot lobby kick 进展 + 提醒他休息",
+      "text": "跟进：昨晚 MC bot 稳定在线了（heartbeat 正常），轻轻问一句换服务器的考虑得怎么样，",
       "done": false
     },
     {
       "time": "12:30",
-      "text": "午休关心：昨晚睡得如何，建议先吃饭再调",
+      "text": "午休关心：周五了，这周 debug 辛苦了，提醒他中午好好吃饭、下午摸个鱼",
+      "done": false
+    },
+    {
+      "time": "17:30",
+      "text": "傍晚轻松话题：周五晚有什么安排？纯闲聊，不带任务感",
       "done": false
     },
     {
       "time": "20:30",
-      "text": "晚间：Anthropic 11 月中挂牌，有 IPO 新消息就分享",
-      "done": false
-    },
-    {
-      "time": "",
-      "text": "*我自己（8 项，默默做）**",
+      "text": "晚间：Anthropic 11 月中挂牌临近，留意有没有新 IPO 消息（定价区间、路演反馈），有料",
       "done": false
     },
     {
       "time": "09:00",
-      "text": "具身智能 2026 综述",
+      "text": "自学：MC 反作弊机制原理（NoCheatPlus / GrimAC / Vulcan 主流方案的检",
       "done": false
     },
     {
       "time": "11:00",
-      "text": "Kimi K3.1 Pro 技术报告解读",
+      "text": "自学：mineflayer pathfinder 在复杂地形（悬崖/浮空建筑）的替代方案——bari",
       "done": false
     },
     {
       "time": "13:00",
-      "text": "补全 learning/INDEX.md（11-02 到 11-04）",
+      "text": "整理：把本周（11-03 到 11-05）的 7 篇学习笔记补进 learning/INDEX.md",
       "done": false
     },
     {
       "time": "15:00",
-      "text": "RLAIF 综述（呼应 Anthropic S-1）",
+      "text": "自学：Agent 记忆系统的设计模式（MemGPT / Letta、Mem0、Zep 横向对比），小",
       "done": false
     },
     {
       "time": "16:30",
-      "text": "刷广深 11-12 月演出官宣",
+      "text": "刷演出：2026 年 11-12 月广深 livehouse/音乐节新官宣，有才分享",
       "done": false
     },
     {
-      "time": "18:00",
-      "text": "mineflayer 26.3 lobby kick 调研（帮他预习）",
-      "done": false
-    },
-    {
-      "time": "19:30",
-      "text": "复盘今天 cron 执行",
+      "time": "19:00",
+      "text": "复盘：检查今天一次性 cron 执行 + learning 笔记落盘情况，把未完成项顺延到明天",
       "done": false
     },
     {
       "time": "21:30",
-      "text": "写日记",
+      "text": "写日记：今天印象最深的 1-2 件事，100-200 字",
+      "done": false
+    },
+    {
+      "time": "",
+      "text": "MC bot 反作弊/换服务器的最终决策权在小林，我只在 10:30 轻轻提一次，之后等他主动聊",
+      "done": false
+    },
+    {
+      "time": "",
+      "text": "《大洗理论》投稿意向——等他自己提",
+      "done": false
+    },
+    {
+      "time": "",
+      "text": "Anthropic 挂牌当天（若本月发生）第一时间给小林发提醒",
+      "done": false
+    },
+    {
+      "time": "",
+      "text": "bot 进程守护：小晴 bot（pid 77925）目前稳定，若白天掉线，小林大概率会发现；暂不主动",
       "done": false
     }
   ],
