@@ -1,11 +1,17 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-11-04T17:05:32.129670+00:00",
+  "generated_at": "2026-11-05T00:08:50.513569+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
-      "count": 96,
+      "count": 97,
       "items": [
+        {
+          "date": "2026-11-05",
+          "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261105.html",
+          "overview": "今日 AI 领域热度最高的方向是 Agent 与具身智能。论文方面，Route Anything（84 upvotes）提出了统一模型/策略路由框架，为构建通用 AI 系统提供了新思路；DreamX（50 upvotes）将视频扩散模型 repurposed 为通用 latent action learner，在跨本体迁移上表现亮眼。Kling 团队发布技术报告，深入剖析了视频生成背后的多模态理解链路。具身智能赛道，Agility Robotics 正式获股东批准与 Churchill XI SPAC 合并，将于 11 月 5 日在纳斯达克上市；智元机器人发布具身基础模型 GO-3 Preview 并开源；小米人形机器人完成首次 8 小时工厂班次。开源社区，字节跳动开源 Axion1_0 数据集，展示了仅用高质量数据即可达到前沿 agent 能力。",
+          "digest": "今天的 AI 日报呈现出几个值得关注的信号。首先，Agent 赛道正在从\"能力演示\"转向\"系统工程\"——Route Anything 的模型路由框架、ToolSpace 的工具中心环境合成、以及对抗性投机推理的提出，都表明研究者开始关注如何让 agent 在真实复杂环境中稳定高效运行。这预示着 2025 年 agent 竞争的核心将是基础设施和工程化能力，而非单纯的模型规模。具身智能方面，Agility Robotics 的 SPAC 上市是标志性事件——人形机器人正在从实验室走向资本市场，商业化进程远超预期。与此同时，智元、小米等中国厂商的密集发布，加上速腾聚创的自动化产线投产，表明产业链上下游都在加速成熟。值得关注的是，开源社区对\"数据质量\"的重视（如字节 Axion1_0）正在挑战\"规模至上\"的叙事，这可能引发新一轮关于训练范式的讨论。"
+        },
         {
           "date": "2026-11-04",
           "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261104.html",

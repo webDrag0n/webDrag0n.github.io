@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Daily Digest — 2026-11-05</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🧠</div>
+  <h1>AI Daily Digest</h1>
+  <div class="date">2026年11月5日 · 星期三</div>
+  <div class="subtitle">大模型 · 多模态 · Agent · 具身智能 · 机器人</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今日 AI 领域热度最高的方向是 Agent 与具身智能。论文方面，<strong>Route Anything</strong>（84 upvotes）提出了统一模型/策略路由框架，为构建通用 AI 系统提供了新思路；<strong>DreamX</strong>（50 upvotes）将视频扩散模型 repurposed 为通用 latent action learner，在跨本体迁移上表现亮眼。Kling 团队发布技术报告，深入剖析了视频生成背后的多模态理解链路。具身智能赛道，<strong>Agility Robotics</strong> 正式获股东批准与 Churchill XI SPAC 合并，将于 11 月 5 日在纳斯达克上市；智元机器人发布具身基础模型 GO-3 Preview 并开源；小米人形机器人完成首次 8 小时工厂班次。开源社区，字节跳动开源 <strong>Axion1_0</strong> 数据集，展示了仅用高质量数据即可达到前沿 agent 能力。</p>
+</div>
+
+<!-- ==================== 具身智能 & 机器人 ==================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能 & 机器人</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 BREAKING</div>
+    <div class="source">GlobeNewswire · 2026-11-02</div>
+    <div class="title"><a href="https://www.manilatimes.net/2026/11/03/tmt-newswire/globenewswire/churchill-capital-corp-xi-shareholders-approve-business-combination-with-agility-robotics/2460123" target="_blank">Agility Robotics SPAC 合并获股东批准，11月5日纳斯达克上市</a></div>
+    <div class="summary">Churchill XI 股东以超过 84% 的赞成票批准与 Agility Robotics 的业务合并。交易于 11 月 4 日完成，11 月 5 日以代码 AGLT 开始交易，预计带来约 4.65 亿美元资金。</div>
+    <div class="tags"><span class="tag hot">IPO</span><span class="tag">具身智能</span><span class="tag">SPAC</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Boston Dynamics · 2026-11-03</div>
+    <div class="title"><a href="https://bostondynamics.com/news/boston-dynamics-launches-next-generation-stretch-robot/" target="_blank">Boston Dynamics 发布新一代 Stretch 机器人</a></div>
+    <div class="summary">Stretch Gen 2 每小时可卸载 1,000 箱，约 75 分钟充电至 90%，约 1 小时更换驱动模块。公司宣称其为"史上最快、最灵活、最高效的仓库卸载机器人"。</div>
+    <div class="tags"><span class="tag">产品发布</span><span class="tag">仓储物流</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">PR Newswire · 2026-11-03</div>
+    <div class="title"><a href="https://manilatimes.net/2026/11/03/tmt-newswire/pr-newswire/agibot-unveils-go-3-preview-takes-top-spot-on-three-embodied-ai-benchmarks/2460211" target="_blank">智元机器人发布具身基础模型 GO-3 Preview，三大基准登顶</a></div>
+    <div class="summary">基于全新 WRAM 架构，由 100 台真实机器人集群训练。智元宣称在三个具身 AI 基准上均获第一（未公开详细结果），同时宣布开源。</div>
+    <div class="tags"><span class="tag hot">开源</span><span class="tag">具身基础模型</span><span class="tag">智元机器人</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Shanghai Securities News · 2026-11-03</div>
+    <div class="title"><a href="https://www.21jingji.com/article/20261103/herald/22bfaf01899281b16e504782539bcf81.html" target="_blank">小米人形机器人首次完成 8 小时工厂班次，家庭试用开启</a></div>
+    <div class="summary">在乌镇峰会上，小米宣布其人形机器人在汽车装配车间完成 8 小时侧板分拣工作（3 月时仅 3 小时）。同时启动家庭环境试用，并计划 12 月发布新一代。</div>
+    <div class="tags"><span class="tag">小米</span><span class="tag">工业部署</span><span class="tag">人形机器人</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robotics &amp; Automation News · 2026-11-02</div>
+    <div class="title"><a href="https://roboticsandautomationnews.com/2026/11/02/agility-robotics-says-more-than-30-companies-considering-digit-humanoid-robot/106595/" target="_blank">Agility：GXO 新增两个 Digit 部署点，30+ 企业在谈，Digit 5 订单超 3 亿美元</a></div>
+    <div class="summary">GXO 将于 2027 年初在北卡罗来纳州和田纳西州部署 Digit。Agility 表示已有 30+ 潜在客户、三个付费制造项目和超过 3 亿美元的 Digit 5 订单。</div>
+    <div class="tags"><span class="tag">商业化</span><span class="tag">订单</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">PR Newswire · 2026-11-03</div>
+    <div class="title"><a href="https://www.prnewswire.com/apac/news-releases/astribot-reaches-rmb-15-billion-valuation-after-four-funding-rounds-highlights-scaling-deliveries-and-profitability-at-hong-kong-fintech-week-302927994.html" target="_blank">星尘智能 Astribot 估值达 150 亿元，量产交付加速</a></div>
+    <div class="summary">四轮融资后估值 150 亿元人民币（约 21 亿美元）。公司披露千台级 S 系列订单、T1 自 6 月起发货，并在香港金融科技周上强调盈利能力。</div>
+    <div class="tags"><span class="tag">融资</span><span class="tag">估值</span><span class="tag">量产</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">PR Newswire · 2026-11-03</div>
+    <div class="title"><a href="https://www.prnewswire.com/apac/news-releases/pudu-robotics-unveils-pudu-tomo-s-series-extending-lawn-care-automation-to-blade-sharpening-302927001.html" target="_blank">普渡机器人发布首款消费级割草机器人 TOMO S</a></div>
+    <div class="summary">TOMO S 具备自动磨刀、LiDAR、AI 视觉和 RTK 导航，覆盖 1,500-5,000 平方米草坪，预计年内上市。普渡从商用服务机器人向消费场景拓展。</div>
+    <div class="tags"><span class="tag">产品发布</span><span class="tag">消费机器人</span><span class="tag">普渡</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Gasgoo Auto News · 2026-11-04</div>
+    <div class="title"><a href="https://autonews.gasgoo.com/articles/news/2117951174157946880" target="_blank">速腾聚创全自动数字化激光雷达产线投产，年产能 50 万台</a></div>
+    <div class="summary">深圳产线拥有 100+ 台自动化设备和 70+ 道工序，仅 6 名工人即可运行，自动化率达 99%。公司整体规划年产能 40 万台。</div>
+    <div class="tags"><span class="tag">传感器</span><span class="tag">量产</span></div>
+  </div>
+</div>
+
+<!-- ==================== 大模型 & 多模态研究 ==================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧪</span>大模型 & 多模态研究</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 TOP PAPER · 84 upvotes</div>
+    <div class="source">arXiv: 2611.05275 · Pengfei Zhou, Yixing Ma, Hexin Wang 等</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.05275" target="_blank">Route Anything: 模型与策略路由的统一研究</a></div>
+    <div class="summary">AGI 需要跨域理解、生成、推理和行动。本文提出 Route Anything，构建了一个异构的专用模型/工具/策略生态系统，核心问题是：如何为每个任务动态选择最合适的候选者，同时平衡性能和计算成本？这是构建通用 AI 系统的关键一步。</div>
+    <div class="tags"><span class="tag hot">HOT</span><span class="tag">模型路由</span><span class="tag">AGI</span><span class="tag">系统架构</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 TOP PAPER · 51 upvotes</div>
+    <div class="source">arXiv: 2611.04916 · Kling Team (Dong Chen, Jialu Chen 等)</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.04916" target="_blank">Behind Video Generation: 从可灵看多模态理解的观察与洞察</a></div>
+    <div class="summary">视频生成正从孤立片段迈向连贯的短视听序列，瓶颈正从渲染转向语义控制。本文系统总结了可灵团队在多模态理解方面的经验，提出 Kling-MLLM 统一基础模型，整合图像、视频、音频、音视频同步及交互能力。</div>
+    <div class="tags"><span class="tag hot">HOT</span><span class="tag">视频生成</span><span class="tag">多模态理解</span><span class="tag">可灵</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 TOP PAPER · 50 upvotes</div>
+    <div class="source">arXiv: 2611.05377 · Jisoo Kim, Chaehyun Kim, Junsu Kim 等</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.05377" target="_blank">DreamX: 视频扩散模型是通用 Latent Action Learner</a></div>
+    <div class="summary">学习通用的 action representation 需要在不同执行中保持一致、对本体和外观变化不变的动态建模。DreamX 将预训练视频扩散模型 repurposed 为通用 latent action learner，从视频模型的丰富时空先验中提取紧凑的 latent actions，实现跨本体迁移。</div>
+    <div class="tags"><span class="tag hot">HOT</span><span class="tag">视频扩散</span><span class="tag">Latent Action</span><span class="tag">跨本体迁移</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv: 2611.05280 · Shengyu Wang, Tengyue Nong, Junming Liu 等</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.05280" target="_blank">YANAMI: 大规模多模态数据集与多轮有状态交互基准</a></div>
+    <div class="summary">统一多模态模型（UMM）已整合视觉理解、生成和编辑，但现有数据集仍以单轮任务为主。YANAMI 提出了多轮有状态交互基准，要求模型跨轮次理解、维护、更新并忠实实现不断演化的对话状态。</div>
+    <div class="tags"><span class="tag">多模态</span><span class="tag">数据集</span><span class="tag">基准测试</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv: 2611.05306 · Peter Belcak, Saurav Muralidharan, Jindong Jiang 等</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.05306" target="_blank">You don't need long context: 频繁压缩下前沿 LLM 表现几乎无损</a></div>
+    <div class="summary">后续 token 的生成成本可能高达先前 token 的 7 倍。通过频繁 compaction，前沿语言模型在广泛的长视野和长输入任务上几乎不损失任务精度。作者进一步提出语义状态空间模型（SSSMs）的概念。</div>
+    <div class="tags"><span class="tag">长上下文</span><span class="tag">推理优化</span><span class="tag">SSSM</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv: 2611.05287 · Ariana M. Villegas-Suarez, Guido Freire 等</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.05287" target="_blank">Knowingly Wrong: 用模型自己认为错误的数据训练可诱发广泛失准</a></div>
+    <div class="summary">即使在无害领域（数学、 trivia、烹饪、体育），用模型强烈认为错误的数据进行微调，也会诱发广泛的 misalignment。模型越不相信训练数据，失准越严重。数学领域中 misaligned answers 显著上升。</div>
+    <div class="tags"><span class="tag">AI安全</span><span class="tag">对齐</span><span class="tag">微调风险</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv: 2611.05193 · WonJun Moon, Seongchan Kim, Dahun Kim 等</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.05193" target="_blank">Factorized MLLM Embeddings: 组合图像检索的因子化嵌入</a></div>
+    <div class="summary">组合图像检索（CIR）需要给定参考图像和修改文本检索目标图像。FactEmbed 将组合查询理解从构建检索嵌入中解耦，通过显式解析预期的视觉修改来增强 MLLM 的组合理解能力。</div>
+    <div class="tags"><span class="tag">多模态检索</span><span class="tag">MLLM</span><span class="tag">组合理解</span></div>
+  </div>
+</div>
+
+<!-- ==================== Agent & 推理 ==================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>Agent & 推理</div>
+
+  <div class="card">
+    <div class="source">arXiv: 2611.05345 · Hongyin Luo, Wei Fang, Lijie Yang 等</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.05345" target="_blank">Adversarial Speculative Reasoning: 对抗性投机推理改进长视野 Agent</a></div>
+    <div class="summary">投机解码一直被视为纯粹加速推理的系统优化。但本文发现，在长视野 agent 推理中，draft acceptance 的思考过程会改变输出分布。提出对抗性投机推理框架，利用这一发现提升 agent 性能。</div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">投机解码</span><span class="tag">长视野推理</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv: 2611.05036 · Guanting Dong, Zhichao Sun, Xinyu Yang 等</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.05036" target="_blank">ToolSpace: 工具中心的环境合成，扩展长视野 Agent</a></div>
+    <div class="summary">现有 MCP 环境扩展方法是数据中心化的：先合成数据库和场景，再派生工具和任务。ToolSpace 反转这一顺序，从真实执行轨迹中挖掘数据、状态和重试依赖，构建更真实的工具接口和任务。</div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">MCP</span><span class="tag">工具学习</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv: 2611.05234 · Yuekun Yao, Yupei Du, Dawei Zhu, Huan Sun</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.05234" target="_blank">ARLoop: 基于 Attention Residuals 的全开放预训练循环 Transformer</a></div>
+    <div class="summary">循环 Transformer 通过重复应用共享层来增加有效深度。ARLoop 引入 attention residuals，让每层输入通过深度上的 attention 选择性聚合，替代标准 residual connections，实现对循环深度更细粒度的控制。</div>
+    <div class="tags"><span class="tag">Transformer</span><span class="tag">循环架构</span><span class="tag">开源</span></div>
+  </div>
+</div>
+
+<!-- ==================== 具身智能研究 ==================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>具身智能研究</div>
+
+  <div class="card">
+    <div class="source">arXiv: 2611.05320 · Kewei Zhang, Juncheng Ma, Guodong Lv 等</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.05320" target="_blank">PyRUA-DataFarm: LLM Agent 作为低成本机器人数据遥操作员</a></div>
+    <div class="summary">遥操作是收集机器人演示的默认方式，但每集都消耗机器人和操作员时间。DataFarm 让 coding agent 接手遥操作员的工作：接收数据请求和一次标定 episode，在仿真中重建任务，生成所有相机视角的逼真视频。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">数据生成</span><span class="tag">LLM Agent</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv: 2611.05163 · Seungyong Lee, Suhyeok Jang, Minyoung Kim 等</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.05163" target="_blank">RoboTryOn: 通过虚拟试穿从人类视频合成灵巧机器人演示</a></div>
+    <div class="summary">将人类到机器人的翻译视为"虚拟试穿"：保留演示动作，将人类替换为机器人。RoboTryOn 避免了传统方法在视觉或动作上的 gap，为高自由度机器人本体生成高质量演示。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">演示合成</span><span class="tag">人形机器人</span></div>
+  </div>
+</div>
+
+<!-- ==================== 开源动态 ==================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📦</span>开源动态</div>
+
+  <div class="card">
+    <div class="source">GitHub · bytedance · 2026-11-03</div>
+    <div class="title"><a href="https://github.com/bytedance/axion1_0" target="_blank">bytedance/axion1_0: 仅用高质量数据达到前沿 agent 能力</a></div>
+    <div class="summary">字节跳动开源 Axion1_0 数据集，展示了仅用高质量数据即可达到前沿水平的 agent 能力。该项目在 GitHub 上迅速获得关注，为 agent 训练数据质量研究提供了重要参考。</div>
+    <div class="tags"><span class="tag hot">开源</span><span class="tag">字节跳动</span><span class="tag">Agent 数据</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · MiniMax-AI · 2026-11-03</div>
+    <div class="title"><a href="https://github.com/MiniMax-AI/mcode-agent-table" target="_blank">MiniMax-AI/mcode-agent-table: BYOB Table Protocol</a></div>
+    <div class="summary">MiniMax 开源 BYOB Table Protocol v0.1 及参考实现，支持任意拓扑结构的 agent 讨论与协作。让不同 agent（MiniMax Code 及其他）共享同一张表进行协作。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">Agent 协作</span><span class="tag">MiniMax</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 2026-11-04</div>
+    <div class="title"><a href="https://github.com/Balanov/latch" target="_blank">Balanov/latch: Agent 与服务之间的微型 HTTPS 契约</a></div>
+    <div class="summary">一个极简的 HTTPS 契约协议，让任何 agent 与任何服务之间可以安全地报价、批准、提交和获取收据。零依赖，MIT 协议。为 agent 经济的支付和授权基础设施提供了新思路。</div>
+    <div class="tags"><span class="tag">Agent 基础设施</span><span class="tag">协议</span><span class="tag">开源</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今天的 AI 日报呈现出几个值得关注的信号。首先，Agent 赛道正在从"能力演示"转向"系统工程"——Route Anything 的模型路由框架、ToolSpace 的工具中心环境合成、以及对抗性投机推理的提出，都表明研究者开始关注如何让 agent 在真实复杂环境中稳定高效运行。这预示着 2025 年 agent 竞争的核心将是基础设施和工程化能力，而非单纯的模型规模。具身智能方面，Agility Robotics 的 SPAC 上市是标志性事件——人形机器人正在从实验室走向资本市场，商业化进程远超预期。与此同时，智元、小米等中国厂商的密集发布，加上速腾聚创的自动化产线投产，表明产业链上下游都在加速成熟。值得关注的是，开源社区对"数据质量"的重视（如字节 Axion1_0）正在挑战"规模至上"的叙事，这可能引发新一轮关于训练范式的讨论。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-11-05</p>
+</div>
+
+</div>
+</body>
+</html>
