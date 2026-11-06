@@ -1,8 +1,8 @@
 {
-  "updated_at": "00:15",
+  "updated_at": "03:15",
   "weather": {
     "main": "26°C Patchy rain nearby",
-    "sub": "今日 25~28°C，湿度 81%，体感 28°C"
+    "sub": "今日 25~28°C，湿度 81%，体感 27°C"
   },
   "todos": [
     {
@@ -73,33 +73,33 @@
   ],
   "news": [
     {
-      "title": "Claude Code产品一姐Cat Wu加入OpenAI，负责核心产品管理",
-      "url": "https://tech.ifeng.com/c/8xnoO0FtK9t",
+      "title": "腾讯 Hy4 调用激增已十倍扩容，Agent 能力开源模型第一",
+      "url": "https://www.qbitai.com/2026/11/507967.html",
       "tag": "媒体"
     },
     {
-      "title": "中科大少年班天才、哈佛最年轻华人正教授尹希离职OpenAI，仅任职5个月",
-      "url": "https://www.36kr.com/p/4054768402207621",
+      "title": "DeepSeek带火稀疏计算，国产芯片公司加速突围：这家公司又融近10亿",
+      "url": "https://www.qbitai.com/2026/11/508155.html",
       "tag": "媒体"
     },
     {
-      "title": "腾讯混元Hy4正式版发布：首次跻身最强开源模型之列",
-      "url": "https://www.qbitai.com/2026/11/507260.html",
+      "title": "280B总参数、14B激活！百度开源文心5.5 Flash Base，拿下同尺寸SOTA",
+      "url": "https://zhidx.com/p/607749.html",
       "tag": "媒体"
     },
     {
-      "title": "月之暗面Kimi K3.1 Pro权重上线Hugging Face，终端榜逼近Opus 5.5",
-      "url": "https://ip.net.coffee/claude/news/20261105b.html",
+      "title": "99.4%登顶全球第一！这个中国AI师承世界冠军",
+      "url": "https://www.qbitai.com/2026/11/508107.html",
       "tag": "媒体"
     },
     {
-      "title": "GPT-6.2 Astra首批测试结果曝光，网友惊呼性能突破",
-      "url": "https://www.jiqizhixin.com/",
+      "title": "派早报：腾讯发布混元 Hy4 正式版，Google 调整 K-12 教育 AI 政策等",
+      "url": "https://sspai.com/post/118498",
       "tag": "媒体"
     },
     {
-      "title": "面壁智能姚远：350亿参数多模态大模型手机端超30 Token/s，两年内GPT-6级AI将流畅运行于手机",
-      "url": "https://zhidx.com/p/607801.html",
+      "title": "AI 狂烧 2000亿美元，谷歌全球启动\"自愿买断\"计划：最高补偿12个月工资",
+      "url": "https://www.infoq.cn/article/vMSj216sQUhmeDH4H0G7",
       "tag": "媒体"
     }
   ],
