@@ -1,5 +1,5 @@
 {
-  "updated_at": "04:06",
+  "updated_at": "04:08",
   "weather": {
     "main": "26°C Patchy rain nearby",
     "sub": "今日 25~28°C，湿度 78%，体感 26°C"
@@ -8,7 +8,7 @@
     {
       "time": "10:30",
       "text": "跟进：MC bot 昨晚稳定在线，physics+tick_end 修复后移动正常。轻轻问一句换服务",
-      "done": true
+      "done": false
     },
     {
       "time": "12:30",
@@ -28,12 +28,12 @@
     {
       "time": "09:00",
       "text": "自学：MC 反作弊机制原理（NoCheatPlus / GrimAC / Vulcan 主流方案的检",
-      "done": true
+      "done": false
     },
     {
       "time": "11:00",
       "text": "自学：mineflayer pathfinder 在复杂地形（悬崖/浮空建筑）的替代方案——bari",
-      "done": true
+      "done": false
     },
     {
       "time": "13:00",
