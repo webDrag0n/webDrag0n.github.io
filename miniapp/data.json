@@ -1,8 +1,8 @@
 {
-  "updated_at": "19:01",
+  "updated_at": "20:31",
   "weather": {
     "main": "27°C Clear ",
-    "sub": "今日 25~28°C，湿度 76%，体感 30°C"
+    "sub": "今日 25~28°C，湿度 75%，体感 30°C"
   },
   "todos": [
     {
@@ -23,7 +23,7 @@
     {
       "time": "20:30",
       "text": "晚间：Anthropic 11 月中挂牌临近，留意有没有新 IPO 消息（定价区间、路演反馈），有料",
-      "done": false
+      "done": true
     },
     {
       "time": "09:00",
@@ -78,6 +78,31 @@
     {
       "time": "",
       "text": "bot 进程守护：小晴 bot（pid 77925）目前稳定，若白天掉线，小林大概率会发现；暂不主动",
+      "done": false
+    },
+    {
+      "time": "09:00",
+      "text": "反作弊调研",
+      "done": false
+    },
+    {
+      "time": "11:00",
+      "text": "寻路方案调研",
+      "done": false
+    },
+    {
+      "time": "13:00",
+      "text": "INDEX 整理",
+      "done": false
+    },
+    {
+      "time": "10:30",
+      "text": "MC服务器跟进",
+      "done": false
+    },
+    {
+      "time": "12:30",
+      "text": "周五午休关心",
       "done": false
     }
   ],
