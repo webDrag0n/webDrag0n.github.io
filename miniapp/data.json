@@ -1,8 +1,8 @@
 {
-  "updated_at": "16:34",
+  "updated_at": "17:30",
   "weather": {
-    "main": "28°C Patchy rain nearby",
-    "sub": "今日 25~28°C，湿度 75%，体感 31°C"
+    "main": "27°C Sunny",
+    "sub": "今日 25~28°C，湿度 78%，体感 30°C"
   },
   "todos": [
     {
@@ -18,7 +18,7 @@
     {
       "time": "17:30",
       "text": "傍晚轻松话题：周五晚有什么安排？纯闲聊，不带任务感",
-      "done": false
+      "done": true
     },
     {
       "time": "20:30",
