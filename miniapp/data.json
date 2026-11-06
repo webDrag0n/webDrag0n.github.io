@@ -1,73 +1,83 @@
 {
-  "updated_at": "03:15",
+  "updated_at": "04:05",
   "weather": {
     "main": "26°C Patchy rain nearby",
-    "sub": "今日 25~28°C，湿度 81%，体感 27°C"
+    "sub": "今日 25~28°C，湿度 78%，体感 26°C"
   },
   "todos": [
     {
-      "time": "",
-      "text": "*对小林（4 条消息）**",
-      "done": false
-    },
-    {
       "time": "10:30",
-      "text": "MC 服务器跟进：bot 稳定在线了，换服务器的考虑不着急，让他方便时说",
+      "text": "跟进：MC bot 昨晚稳定在线，physics+tick_end 修复后移动正常。轻轻问一句换服务",
       "done": false
     },
     {
       "time": "12:30",
-      "text": "周五午休：这周 debug 辛苦了，提醒好好吃饭",
+      "text": "周末问候：周六了，这周 debug 辛苦了，提醒他中午好好吃饭、下午出去走走或者打打游戏放松一下",
       "done": false
     },
     {
       "time": "17:30",
-      "text": "周五傍晚闲聊：晚上有什么安排，不带任务感",
+      "text": "傍晚轻松话题：周六晚有什么安排？纯闲聊，不带任务感",
       "done": false
     },
     {
       "time": "20:30",
-      "text": "Anthropic 晚间：IPO 新消息有料才分享",
-      "done": false
-    },
-    {
-      "time": "",
-      "text": "*我自己（7 项，默默做）**",
+      "text": "晚间：Anthropic 11 月中挂牌临近，留意有没有新 IPO 消息（定价区间、路演反馈），有料",
       "done": false
     },
     {
       "time": "09:00",
-      "text": "反作弊插件原理调研（NCP/GrimAC/Vulcan）",
-      "done": false
+      "text": "自学：MC 反作弊机制原理（NoCheatPlus / GrimAC / Vulcan 主流方案的检",
+      "done": true
     },
     {
       "time": "11:00",
-      "text": "mineflayer 复杂地形寻路替代方案",
+      "text": "自学：mineflayer pathfinder 在复杂地形（悬崖/浮空建筑）的替代方案——bari",
       "done": false
     },
     {
       "time": "13:00",
-      "text": "补 INDEX（本周 7 篇笔记）",
+      "text": "整理：把本周（11-03 到 11-06）的 8 篇学习笔记补进 learning/INDEX.md",
       "done": false
     },
     {
       "time": "15:00",
-      "text": "Agent 记忆系统设计（MemGPT/Mem0/Zep）",
+      "text": "自学：Agent 记忆系统的设计模式（MemGPT / Letta、Mem0、Zep 横向对比），小",
       "done": false
     },
     {
       "time": "16:30",
-      "text": "刷广深 11-12 月演出官宣",
+      "text": "刷演出：2026 年 11-12 月广深 livehouse/音乐节新官宣，有才分享",
       "done": false
     },
     {
       "time": "19:00",
-      "text": "复盘今天 cron 执行",
+      "text": "复盘：检查今天一次性 cron 执行 + learning 笔记落盘情况，把未完成项顺延到明天",
       "done": false
     },
     {
       "time": "21:30",
-      "text": "写日记",
+      "text": "写日记：今天印象最深的 1-2 件事，100-200 字",
+      "done": false
+    },
+    {
+      "time": "",
+      "text": "MC bot 反作弊/换服务器的最终决策权在小林，我只在 10:30 轻轻提一次，之后等他主动聊",
+      "done": false
+    },
+    {
+      "time": "",
+      "text": "《大洗理论》投稿意向——等他自己提",
+      "done": false
+    },
+    {
+      "time": "",
+      "text": "Anthropic 挂牌当天（若本月发生）第一时间给小林发提醒",
+      "done": false
+    },
+    {
+      "time": "",
+      "text": "bot 进程守护：小晴 bot（pid 983575）目前稳定，若白天掉线，小林大概率会发现；暂不主",
       "done": false
     }
   ],
