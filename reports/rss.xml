@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 05 Nov 2026 17:07:23 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 17:08:35 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-11-07</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261107.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261107.html</guid>
+      <pubDate>Sat, 07 Nov 2026 08:00:00 +0000</pubDate>
+      <description>腾讯混元 Hy4 正式版发布并开源，首次引入视觉理解与电脑操作能力；OpenAI 推出网络安全模型 GPT-6 Cyber，漏洞召回率较前代提升 8.3%；Thinking Machines Lab 发布 Inkling 2 Small，594B MoE 架构即将开放权重；Meta 收购 AI 编程初创 Conductor，加码多智能体编排赛道；DeepSeek 稀疏计算带火国产芯片，相关公司再融近 10 亿；AI 短剧进入工作流时代，即梦短剧工作室备战双 11。</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-11-06</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261106.html</link>

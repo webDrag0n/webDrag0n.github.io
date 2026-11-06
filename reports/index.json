@@ -1,6 +1,6 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-11-05T17:07:23.011024+00:00",
+  "generated_at": "2026-11-06T17:08:35.381147+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
@@ -592,8 +592,14 @@
     },
     "media": {
       "title": "AI 科技日报",
-      "count": 98,
+      "count": 99,
       "items": [
+        {
+          "date": "2026-11-07",
+          "url": "https://webdrag0n.github.io/reports/media/daily_media_20261107.html",
+          "overview": "腾讯混元 Hy4 正式版发布并开源，首次引入视觉理解与电脑操作能力；OpenAI 推出网络安全模型 GPT-6 Cyber，漏洞召回率较前代提升 8.3%；Thinking Machines Lab 发布 Inkling 2 Small，594B MoE 架构即将开放权重；Meta 收购 AI 编程初创 Conductor，加码多智能体编排赛道；DeepSeek 稀疏计算带火国产芯片，相关公司再融近 10 亿；AI 短剧进入工作流时代，即梦短剧工作室备战双 11。",
+          "digest": "今天的 AI 行业呈现出鲜明的\"落地冲刺\"特征。腾讯混元 Hy4 正式版的发布与开源，标志着国产大模型在视觉理解和 Agent 能力上的重要突破，十倍扩容的调用量也反映出市场对新能力的强烈需求。OpenAI 推出 GPT-6 Cyber 进军网络安全， Thinking Machines Lab 发布 Inkling 2 Small，头部公司仍在加速模型迭代与垂直场景渗透。行业层面，谷歌 2000 亿美元 AI 投入下的\"自愿买断\"计划，以及 Meta 收购 Conductor 加码智能体编程，都指向一个共识：AI 竞争已进入算力、人才、场景三线并重的深水区。值得关注的是，AI 短剧等应用正在借助双 11 节点加速商业化，从工具演示走向真实营收，这或许预示着 2026 年底 AI 应用层将迎来一轮变现验证潮。"
+        },
         {
           "date": "2026-11-06",
           "url": "https://webdrag0n.github.io/reports/media/daily_media_20261106.html",
