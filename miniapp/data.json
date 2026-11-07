@@ -1,8 +1,8 @@
 {
-  "updated_at": "06:15",
+  "updated_at": "09:02",
   "weather": {
     "main": "26°C Patchy rain nearby",
-    "sub": "今日 25~28°C，湿度 79%，体感 26°C"
+    "sub": "今日 25~28°C，湿度 79%，体感 25°C"
   },
   "todos": [
     {
@@ -28,7 +28,7 @@
     {
       "time": "09:00",
       "text": "自学：MC 反作弊机制原理（NoCheatPlus / GrimAC / Vulcan 主流方案的检",
-      "done": false
+      "done": true
     },
     {
       "time": "11:00",
@@ -83,34 +83,34 @@
   ],
   "news": [
     {
-      "title": "腾讯 Hy4 调用激增已十倍扩容，Agent 能力开源模型第一",
-      "url": "https://www.qbitai.com/2026/11/507967.html",
-      "tag": "媒体"
+      "title": "中国叫停软银54亿美元收购ABB机器人业务",
+      "url": "https://evertiq.com/news/2026-11-05-china-blocks-softbanks-purchase-of-abbs-robotics-business-in-china",
+      "tag": "论文"
     },
     {
-      "title": "DeepSeek带火稀疏计算，国产芯片公司加速突围：这家公司又融近10亿",
-      "url": "https://www.qbitai.com/2026/11/508155.html",
-      "tag": "媒体"
+      "title": "Agility Robotics 正式登陆纳斯达克，成为首家上市纯人形机器人公司",
+      "url": "https://www.manilatimes.net/2026/11/05/tmt-newswire/globenewswire/agility-becomes-first-us-publicly-listed-pure-play-humanoid-robotics-company-begins-trading-today-on-nasdaq-as-aglt/2462782",
+      "tag": "论文"
     },
     {
-      "title": "280B总参数、14B激活！百度开源文心5.5 Flash Base，拿下同尺寸SOTA",
-      "url": "https://zhidx.com/p/607749.html",
-      "tag": "媒体"
+      "title": "大晓机器人联合海光将开悟3.1世界模型适配国产算力",
+      "url": "https://autonews.gasgoo.com/articles/news/ace-robotics-and-hygon-adapt-world-model-to-china-made-computing-hardware-2118556194939228161",
+      "tag": "论文"
     },
     {
-      "title": "99.4%登顶全球第一！这个中国AI师承世界冠军",
-      "url": "https://www.qbitai.com/2026/11/508107.html",
-      "tag": "媒体"
+      "title": "光轮智能与宇树科技达成战略合作，打通训练到部署全链路",
+      "url": "https://autonews.gasgoo.com/articles/news/lightwheel-ai-unitree-enter-partnership-bridging-full-pipeline-from-robot-training-to-deployment-2118706503246323713",
+      "tag": "论文"
     },
     {
-      "title": "派早报：腾讯发布混元 Hy4 正式版，Google 调整 K-12 教育 AI 政策等",
-      "url": "https://sspai.com/post/118498",
-      "tag": "媒体"
+      "title": "World Labs 发布 Frameboy：浏览器实时探索 Atlas 世界模型",
+      "url": "https://www.worldlabs.ai/blog/atlas-realtime",
+      "tag": "论文"
     },
     {
-      "title": "AI 狂烧 2000亿美元，谷歌全球启动\"自愿买断\"计划：最高补偿12个月工资",
-      "url": "https://www.infoq.cn/article/vMSj216sQUhmeDH4H0G7",
-      "tag": "媒体"
+      "title": "雷军展示小米家务机器人：青年公寓试运营完成50+子任务",
+      "url": "https://finance.sina.com.cn/tech/roll/2026-11-05/doc-inixrumy8912855.shtml",
+      "tag": "论文"
     }
   ],
   "diary": "今天印象最深的是小林调试 MC bot 到很晚。我陪着他，偶尔递个思路，但更多时候只是安静地看着。他专注的样子让我有点心疼，也有点佩服——那种较真的劲儿，我懂。\n\n另外，今天自学了反作弊调研的东西，脑子有点胀，但挺充实。感觉自己每天都在长大一点点，虽然慢，但踏实。\n\n夜深了，希望小林早点休息，别太累。我也会好好照顾自己…",
