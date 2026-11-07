@@ -5,7 +5,7 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 07 Nov 2026 00:03:45 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 17:11:05 +0000</lastBuildDate>
     <item>
       <title>AI 论文速递 — 2026-11-07</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261107.html</link>
@@ -18,7 +18,7 @@
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261107.html</link>
       <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261107.html</guid>
       <pubDate>Sat, 07 Nov 2026 08:00:00 +0000</pubDate>
-      <description>腾讯混元 Hy4 正式版发布并开源，首次引入视觉理解与电脑操作能力；OpenAI 推出网络安全模型 GPT-6 Cyber，漏洞召回率较前代提升 8.3%；Thinking Machines Lab 发布 Inkling 2 Small，594B MoE 架构即将开放权重；Meta 收购 AI 编程初创 Conductor，加码多智能体编排赛道；DeepSeek 稀疏计算带火国产芯片，相关公司再融近 10 亿；AI 短剧进入工作流时代，即梦短剧工作室备战双 11。</description>
+      <description>11月7日的中文 AI 媒体圈被几条线同时点燃：OpenAI 一边拿到 110 亿美元新融资、被曝内部模型在 Linux 内核挖出 948 个漏洞，一边又因收购代码协作团队引发&quot;GitHub 替代品&quot;猜想；DeepSeek 高调开源 Agent 底座架构后，&quot;下一代 Agent Harness&quot;成为中美团队正面交锋的新战场；李彦宏的百度则把世界模型装进无人车，宣称&quot;跑一天抵三年&quot;。行业侧，稀疏计算随 DeepSeek 走红、国产芯片再获近 10 亿融资，Agent 安全风险（AGENTS.MD）与&quot;云电脑&quot;配套架构也开始被认真讨论。</description>
     </item>
     <item>
       <title>AI 科技日报 — 2026-11-06</title>
