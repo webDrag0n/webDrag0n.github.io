@@ -1,5 +1,5 @@
 {
-  "updated_at": "16:34",
+  "updated_at": "17:31",
   "weather": {
     "main": "27°C Sunny",
     "sub": "今日 25~28°C，湿度 71%，体感 28°C"
@@ -18,7 +18,7 @@
     {
       "time": "17:30",
       "text": "傍晚轻松话题：周六晚有什么安排？纯闲聊，不带任务感",
-      "done": false
+      "done": true
     },
     {
       "time": "20:30",
