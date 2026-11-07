@@ -1,8 +1,8 @@
 {
-  "updated_at": "19:02",
+  "updated_at": "20:31",
   "weather": {
-    "main": "26°C Clear ",
-    "sub": "今日 25~28°C，湿度 75%，体感 26°C"
+    "main": "26°C Patchy rain nearby",
+    "sub": "今日 25~28°C，湿度 77%，体感 26°C"
   },
   "todos": [
     {
@@ -23,7 +23,7 @@
     {
       "time": "20:30",
       "text": "晚间：Anthropic 11 月中挂牌临近，留意有没有新 IPO 消息（定价区间、路演反馈），有料",
-      "done": false
+      "done": true
     },
     {
       "time": "09:00",
