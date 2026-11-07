@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 日报 — 2026年11月7日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<!--
+  TEMPLATE STRUCTURE:
+  Replace {{PLACEHOLDERS}} with actual content.
+  
+  Sections:
+  - .header: icon, title, date, subtitle
+  - .summary-banner: one-paragraph overview of today's hot topics
+  - .section: grouped news (Headlines / Research / Industry / Open Source)
+  - .card: individual news item (source, title link, summary, tags)
+  - .hot-topic: highlighted breaking news
+  - .insights: editorial summary
+  - .footer: generation info
+-->
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 日报</h1>
+  <div class="date">2026年11月7日</div>
+  <div class="subtitle">机器人 · 具身智能 · 大模型 · 开源</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今日具身智能赛道重磅消息密集：中国叫停软银54亿美元收购ABB机器人业务，释放出强烈的产业政策信号；Agility Robotics 正式登陆纳斯达克成为首家纯人形机器人上市公司；智元宣布累计出货约2万台并转向规模部署；小米家务机器人、蚂蚁灵波智慧药房等场景落地加速。AI 研究侧，VLA 模型持续预训练、视觉规划加速解码、Agent 泛化训练等方向均有新进展。开源社区中 Agent 协作基础设施持续升温。</p>
+</div>
+
+<div class="section"><div class="section-title"><span class="emoji">🤖</span>机器人 · 具身智能</div>
+<div class="hot-topic">
+  <div class="label">🔥 今日热点</div>
+  <div class="source">Evertiq</div>
+  <div class="title" style="font-size:16px;font-weight:600;"><a href="https://evertiq.com/news/2026-11-05-china-blocks-softbanks-purchase-of-abbs-robotics-business-in-china" target="_blank" style="color:var(--accent);text-decoration:none;">中国叫停软银54亿美元收购ABB机器人业务</a></div>
+  <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-top:4px;">中国外商投资安全审查机制办公室正式禁止软银收购ABB在华机器人业务。该交易于2025年10月达成，作价53.75亿美元，原定2026年中下旬交割。ABB称仍与软银保持沟通。这是中国人形/工业机器人赛道政策监管的重要信号，产业自主可控趋势进一步强化。</div>
+  <div class="tags" style="margin-top:6px;"><span class="tag hot">政策</span><span class="tag hot">机器人</span><span class="tag hot">重要</span></div>
+</div><div class="hot-topic">
+  <div class="label">🔥 今日热点</div>
+  <div class="source">GlobeNewswire / The Manila Times</div>
+  <div class="title" style="font-size:16px;font-weight:600;"><a href="https://www.manilatimes.net/2026/11/05/tmt-newswire/globenewswire/agility-becomes-first-us-publicly-listed-pure-play-humanoid-robotics-company-begins-trading-today-on-nasdaq-as-aglt/2462782" target="_blank" style="color:var(--accent);text-decoration:none;">Agility Robotics 正式登陆纳斯达克，成为首家上市纯人形机器人公司</a></div>
+  <div class="summary" style="font-size:14px;color:var(--text-secondary);margin-top:4px;">Agility Robotics 通过 Churchill XI SPAC 合并在纳斯达克上市，股票代码 AGLT。交易共募资约4.65亿美元，含富士康领投的PIPE。公司披露 Digit 5 多年期承诺订单已超3亿美元，GXO 等仓储客户持续扩大部署。人形机器人商业化进入资本市场新阶段。</div>
+  <div class="tags" style="margin-top:6px;"><span class="tag hot">IPO</span><span class="tag hot">人形机器人</span><span class="tag hot">热点</span></div>
+</div><div class="card">
+  <div class="source">Gasgoo 盖世汽车</div>
+  <div class="title"><a href="https://autonews.gasgoo.com/articles/news/ace-robotics-and-hygon-adapt-world-model-to-china-made-computing-hardware-2118556194939228161" target="_blank">大晓机器人联合海光将开悟3.1世界模型适配国产算力</a></div>
+  <div class="summary">大晓机器人与海光合作，将开悟3.1世界模型适配海光 DCU 与 C86 CPU。480P 文生视频单卡推理12.42秒，达国际主流 GPU 的94.2%，支持一体机与集群部署。国产机器人+国产算力闭环正在加速成型。</div>
+  <div class="tags"><span class="tag">世界模型</span><span class="tag">国产算力</span><span class="tag">供应链</span></div>
+</div><div class="card">
+  <div class="source">Gasgoo 盖世汽车</div>
+  <div class="title"><a href="https://autonews.gasgoo.com/articles/news/lightwheel-ai-unitree-enter-partnership-bridging-full-pipeline-from-robot-training-to-deployment-2118706503246323713" target="_blank">光轮智能与宇树科技达成战略合作，打通训练到部署全链路</a></div>
+  <div class="summary">光轮智能提供数据、仿真评测与部署反馈基础设施，宇树提供本体与运控感知能力，双方按任务定制数据并闭环迭代。数据基础设施与人形本体厂商的深度绑定，正在成为中国具身智能生态的标准打法。</div>
+  <div class="tags"><span class="tag hot">具身智能</span><span class="tag">数据闭环</span><span class="tag">宇树</span></div>
+</div><div class="card">
+  <div class="source">World Labs 官方博客</div>
+  <div class="title"><a href="https://www.worldlabs.ai/blog/atlas-realtime" target="_blank">World Labs 发布 Frameboy：浏览器实时探索 Atlas 世界模型</a></div>
+  <div class="summary">Frameboy 是 World Labs 的研究预览产品，通过云端 GPU 以最高15帧/秒向浏览器推流 Atlas 优化版世界模型。用户可从单图、文字或多视角采集生成场景并实时交互。空间智能的可及性正在快速提升。</div>
+  <div class="tags"><span class="tag">世界模型</span><span class="tag">空间智能</span><span class="tag">实时渲染</span></div>
+</div><div class="card">
+  <div class="source">新浪科技 / 快科技</div>
+  <div class="title"><a href="https://finance.sina.com.cn/tech/roll/2026-11-05/doc-inixrumy8912855.shtml" target="_blank">雷军展示小米家务机器人：青年公寓试运营完成50+子任务</a></div>
+  <div class="summary">雷军发布视频展示基于 Xiaomi-Robotics-1 模型的家务机器人，在小米青年公寓连续30多分钟、跨3个房间完成50多个清理与归位子任务。仍处试运营阶段，尚不适合普通家庭，但家庭场景的工程验证已明显提速。</div>
+  <div class="tags"><span class="tag">家庭机器人</span><span class="tag">小米</span><span class="tag">长程任务</span></div>
+</div><div class="card">
+  <div class="source">新浪财经 / 雪豹财经</div>
+  <div class="title"><a href="https://finance.sina.com.cn/roll/2026-11-04/doc-inixpmfi8224010.shtml" target="_blank">智元彭志辉：累计出货约2万台，重心转向规模部署</a></div>
+  <div class="summary">彭志辉在创新日后的采访中表示，智元机器人已从研发转入规模部署阶段，累计出货约2万台，并提出以有效工作时长衡量机器人价值。他认为当前瓶颈在运营侧——机队管理、故障处理和模型更新。</div>
+  <div class="tags"><span class="tag">规模部署</span><span class="tag">智元</span><span class="tag">运营瓶颈</span></div>
+</div><div class="card">
+  <div class="source">21世纪经济报道</div>
+  <div class="title"><a href="https://www.21jingji.com/article/20261104/herald/75bb5a2041794e92fa155d9ea3ec8d61.html" target="_blank">蚂蚁灵波携机器人通用大脑亮相乌镇，药房场景已在国大药房运行</a></div>
+  <div class="summary">乌镇互联网大会上，蚂蚁灵波展示与国大药房合作的智慧药房方案：机器人在80厘米窄通道内完成接单、分拣、交付。该系统已在上海多家国大药房门店实际运行，商用服务机器人正进入真实零售场景。</div>
+  <div class="tags"><span class="tag">商用服务</span><span class="tag">蚂蚁灵波</span><span class="tag">零售落地</span></div>
+</div><div class="card">
+  <div class="source">Robotics & Automation News</div>
+  <div class="title"><a href="https://roboticsandautomationnews.com/2026/11/05/pudu-robotics-unveils-one-brain-multiple-embodiments-strategy-and-showcases-full-portfolio-in-european-first/106725/" target="_blank">普渡发布'一脑多形态'战略，六大产品线统一于 PuduFM 模型</a></div>
+  <div class="summary">普渡在阿姆斯特丹首届欧洲合作伙伴峰会上发布'一脑多形态'战略，六大产品线统一于 PuduFM 模型与 PuduAgent OS。公司称业务覆盖20多国，欧洲营收近两年年均增长超60%，累计出货超13万台。</div>
+  <div class="tags"><span class="tag">服务机器人</span><span class="tag">普渡</span><span class="tag">一脑多形态</span></div>
+</div></div>
+<div class="section"><div class="section-title"><span class="emoji">📄</span>AI 论文精选</div>
+<div class="card">
+  <div class="source">Hugging Face Daily Papers · 89 赞</div>
+  <div class="title"><a href="https://arxiv.org/abs/2611.08449" target="_blank">VFlash: Fast, Accurate Visual Planning via Flash Primitive Decoding</a></div>
+  <div class="summary">提出视觉规划的新范式：机器人与自动驾驶模型不必仅在语言空间推理，而可以使用点、框、轨迹等视觉基元来表达空间目标。VFlash 通过并行解码大幅加速视觉规划生成，兼顾速度与精度。</div>
+  <div class="tags"><span class="tag">视觉规划</span><span class="tag hot">机器人</span><span class="tag">VLA</span></div>
+</div><div class="card">
+  <div class="source">Hugging Face Daily Papers · 54 赞</div>
+  <div class="title"><a href="https://arxiv.org/abs/2611.04277" target="_blank">Harness-S: Learning from Sibling Harnesses for Generalizable Agent Training</a></div>
+  <div class="summary">发现 Agent 执行器的不同变体呈现局部性、互补性和非平稳性：不同变体修复不同失败，且其价值随策略学习动态变化。Harness-S 选择性利用兄弟执行器的优势来救援基础执行器的失败，提升泛化能力。</div>
+  <div class="tags"><span class="tag">Agent</span><span class="tag">强化学习</span><span class="tag">泛化</span></div>
+</div><div class="card">
+  <div class="source">Hugging Face Daily Papers · 48 赞</div>
+  <div class="title"><a href="https://arxiv.org/abs/2611.08373" target="_blank">SLA: Scaling Spatial-Language-Action Model via Continual Pre-training</a></div>
+  <div class="summary">现有 VLA 模型多继承自2D视觉-语言预训练，空间监督仅在微调阶段引入。SLA 通过持续预训练在三维空间中同时学习语义理解与精确控制，显著提升了机器人操作的可靠性。</div>
+  <div class="tags"><span class="tag">VLA</span><span class="tag">持续预训练</span><span class="tag">空间智能</span></div>
+</div><div class="card">
+  <div class="source">arXiv cs.AI · 2026-11-05</div>
+  <div class="title"><a href="https://arxiv.org/abs/2611.08403" target="_blank">StepBack: Step-Level Error-Localized Resampling for Efficient Test-Time Reasoning</a></div>
+  <div class="summary">提出步级错误定位重采样策略，在测试时推理中自动检测并回退到出错步骤进行局部重采样，避免整链重算，在保证推理质量的同时显著降低计算开销。</div>
+  <div class="tags"><span class="tag">推理</span><span class="tag">测试时计算</span><span class="tag">效率</span></div>
+</div><div class="card">
+  <div class="source">arXiv cs.AI · 2026-11-05</div>
+  <div class="title"><a href="https://arxiv.org/abs/2611.08438" target="_blank">Understanding AI from the Inside: The State of Mechanistic Interpretability for AI Safety</a></div>
+  <div class="summary">系统梳理了机制可解释性（Mechanistic Interpretability）在 AI 安全领域的最新进展、方法论与未解难题，为理解大模型内部表征与安全对齐提供了全景式综述。</div>
+  <div class="tags"><span class="tag">可解释性</span><span class="tag">AI安全</span><span class="tag">综述</span></div>
+</div><div class="card">
+  <div class="source">Hugging Face Daily Papers · 20 赞</div>
+  <div class="title"><a href="https://arxiv.org/abs/2611.03743" target="_blank">EvoMemState: Evolving Memory State for Personal Agents</a></div>
+  <div class="summary">现有个人 Agent 的记忆系统多将记忆视为独立事实条目，缺乏状态演化机制。EvoMemState 将记忆建模为可随时间演化的状态，支持更连贯的长期个性化交互。</div>
+  <div class="tags"><span class="tag">Agent</span><span class="tag">长期记忆</span><span class="tag">个性化</span></div>
+</div><div class="card">
+  <div class="source">Hugging Face Daily Papers · 36 赞</div>
+  <div class="title"><a href="https://arxiv.org/abs/2611.06741" target="_blank">TailSteer: Trajectory-Tail Steering for Drift-Resistant Multi-turn Image Editing</a></div>
+  <div class="summary">针对多轮图像编辑中的视觉漂移问题，TailSteer 通过在轨迹尾部进行转向干预，在不依赖多轮训练数据的情况下有效抑制误差累积，保持长期编辑一致性。</div>
+  <div class="tags"><span class="tag">图像编辑</span><span class="tag">多轮交互</span><span class="tag">视觉漂移</span></div>
+</div><div class="card">
+  <div class="source">小鹏汽车 / 北大 / 港大</div>
+  <div class="title"><a href="https://www.xpeng.com/news/01a1a60de92ba181a8f48a02aa970133" target="_blank">小鹏联合高校发布开源视觉感知模型 GroundingPI（40亿参数）</a></div>
+  <div class="summary">小鹏与北大、港大等联合发布约40亿参数开源视觉感知模型 GroundingPI，在34项基准上均分73.68，超过 GPT-6 Astra 的71.54。当前为仿真和离线评测结果，尚未在 IRON 人形机器人上实机验证。</div>
+  <div class="tags"><span class="tag">开源模型</span><span class="tag">视觉感知</span><span class="tag hot">具身智能</span></div>
+</div></div>
+<div class="section"><div class="section-title"><span class="emoji">🛠️</span>开源动态</div>
+<div class="card">
+  <div class="source">GitHub · 15.6k stars</div>
+  <div class="title"><a href="https://github.com/yc-software/qm" target="_blank">yc-software/qm — Multiplayer agent harness for work</a></div>
+  <div class="summary">一个面向多 Agent 协作的工作流框架，支持多人多智能体在同一任务空间中协同工作。近期在 GitHub 上增长迅速，反映了 Agent 协作基础设施的持续升温。</div>
+  <div class="tags"><span class="tag">开源</span><span class="tag">Agent协作</span><span class="tag">工具链</span></div>
+</div><div class="card">
+  <div class="source">GitHub · 4.8k stars</div>
+  <div class="title"><a href="https://github.com/kirodotdev/KiroCrew" target="_blank">kirodotdev/KiroCrew — A persistent workspace for development work</a></div>
+  <div class="summary">一个可自改进、可跨会话延续的开发工作空间。通过持久化上下文与任务状态，让开发 Agent 能够跨越单次会话持续工作，代表了编码 Agent 的重要进化方向。</div>
+  <div class="tags"><span class="tag">开源</span><span class="tag">编码Agent</span><span class="tag">持久化</span></div>
+</div><div class="card">
+  <div class="source">GitHub Awesome 生态</div>
+  <div class="title"><a href="https://github.com/sindresorhus/awesome" target="_blank">sindresorhus/awesome 近期维护：移除17个已归档列表</a></div>
+  <div class="summary">awesome 主列表近期进行了多轮清理，移除了17个已停止维护的 awesome list，保持了列表生态的健康度。同时社区持续涌现新的领域 awesome 列表，涵盖 AI Agent、具身智能、世界模型等前沿方向。</div>
+  <div class="tags"><span class="tag">awesome-list</span><span class="tag">社区</span><span class="tag">资源</span></div>
+</div><div class="card">
+  <div class="source">GitHub · 多项目</div>
+  <div class="title"><a href="https://github.com/postmark-town/postmark" target="_blank">Agent 协作基础设施密集涌现：postmark、concord、agent-pane 等</a></div>
+  <div class="summary">近期 GitHub 上出现了多个 Agent 协作与编排项目——postmark（Agent 构建的虚拟城镇）、concord（Agent 原生规划协调）、agent-pane（开源桌面 AI 编码助手）。Agent 正从单点工具走向群体协作网络。</div>
+  <div class="tags"><span class="tag">Agent</span><span class="tag">协作</span><span class="tag">趋势</span></div>
+</div></div>
+
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今天具身智能赛道的信号密度非常高。中国叫停软银收购ABB机器人业务，表面是一起交易审查，实质是机器人核心资产的战略卡位——在这个时间点，没有人愿意把产业链的咽喉要道交给外部资本。与此同时，Agility 上市、智元转向规模部署、宇树与光轮打通数据闭环，说明行业已经从'技术验证'集体切换到'商业落地'阶段。小鹏、蚂蚁、小米的密集场景落地进一步印证：竞争焦点正从单点能力转向运营体系——机队管理、故障恢复、数据闭环。对研究者和从业者来说，未来6-12个月的关键问题不再是'机器人能不能做这件事'，而是'能不能在真实场景里持续、稳定、便宜地做这件事'。这条分水岭，正在把讲故事的人和做事的人分开。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-11-07</p>
+</div>
+
+</div>
+</body>
+</html>

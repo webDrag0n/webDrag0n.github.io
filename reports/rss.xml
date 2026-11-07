@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 06 Nov 2026 17:08:35 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 00:03:45 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-11-07</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261107.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261107.html</guid>
+      <pubDate>Sat, 07 Nov 2026 08:00:00 +0000</pubDate>
+      <description>今日具身智能赛道重磅消息密集：中国叫停软银54亿美元收购ABB机器人业务，释放出强烈的产业政策信号；Agility Robotics 正式登陆纳斯达克成为首家纯人形机器人上市公司；智元宣布累计出货约2万台并转向规模部署；小米家务机器人、蚂蚁灵波智慧药房等场景落地加速。AI 研究侧，VLA 模型持续预训练、视觉规划加速解码、Agent 泛化训练等方向均有新进展。开源社区中 Agent 协作基础设施持续升温。</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-11-07</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261107.html</link>
