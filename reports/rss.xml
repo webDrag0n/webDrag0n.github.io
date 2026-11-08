@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 08 Nov 2026 00:09:05 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 17:08:44 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-11-09</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261109.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261109.html</guid>
+      <pubDate>Mon, 09 Nov 2026 08:00:00 +0000</pubDate>
+      <description>昨日 AI 圈热点密集。OpenAI 融资缩水至 110 亿美元引发行业关注，AI 编程基础设施成为新战场，GitHub 不堪重负，OpenAI、Anthropic、马斯克纷纷布局替代品。Agent Harness 概念持续升温，硅谷华人团队 CREAO 抢跑 DeepSeek 推出下一代方案。安全领域警钟长鸣，AGENTS.MD 被曝存在新型病毒风险。浙大 00 后博士生基于华为昇腾构建多物理要素世界模型，展现国产算力 AI for Science 潜力。Jeff Dean 与李飞飞对谈 RSI（递归自我改进），观点充满非共识。腾讯 Hy4 调用量激增十倍扩容，Agent 能力登顶开源模型第</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-11-08</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261108.html</link>

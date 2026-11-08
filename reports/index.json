@@ -1,6 +1,6 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-11-08T00:09:05.974570+00:00",
+  "generated_at": "2026-11-08T17:08:44.012584+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
@@ -604,8 +604,14 @@
     },
     "media": {
       "title": "AI 科技日报",
-      "count": 99,
+      "count": 100,
       "items": [
+        {
+          "date": "2026-11-09",
+          "url": "https://webdrag0n.github.io/reports/media/daily_media_20261109.html",
+          "overview": "昨日 AI 圈热点密集。OpenAI 融资缩水至 110 亿美元引发行业关注，AI 编程基础设施成为新战场，GitHub 不堪重负，OpenAI、Anthropic、马斯克纷纷布局替代品。Agent Harness 概念持续升温，硅谷华人团队 CREAO 抢跑 DeepSeek 推出下一代方案。安全领域警钟长鸣，AGENTS.MD 被曝存在新型病毒风险。浙大 00 后博士生基于华为昇腾构建多物理要素世界模型，展现国产算力 AI for Science 潜力。Jeff Dean 与李飞飞对谈 RSI（递归自我改进），观点充满非共识。腾讯 Hy4 调用量激增十倍扩容，Agent 能力登顶开源模型第一。",
+          "digest": "昨日 AI 圈呈现\"基础设施热、模型层卷、安全焦虑显\"的三重特征。GitHub 被曝不堪重负，OpenAI、Anthropic、马斯克集体转向自研或收购替代品，标志 AI 编程工具链进入重构期——代码生成速度已超越传统托管平台的承载极限。Agent Harness 作为新兴工程范式，正从概念走向产品化，硅谷华人团队 CREAO 的抢跑彰显华人工程师在前沿工程领域的话语权。与此同时，AGENTS.MD 安全风险敲响警钟：Agent 能力越强，其指令层的攻击面越大，安全护栏必须同步升级。国产力量多点开花：浙大基于华为昇腾的世界模型、腾讯 Hy4 的开源领先、稀疏计算芯片的融资热潮，共同勾勒出\"国产算力+国产模型\"双轮驱动的生态轮廓。值得关注的是，Jeff Dean 与李飞飞对 RSI 的\"非共识\"对谈，为狂热的 AGI 叙事注入了一剂冷静剂——技术奇点或许存在，但物理极限同样真实。"
+        },
         {
           "date": "2026-11-07",
           "url": "https://webdrag0n.github.io/reports/media/daily_media_20261107.html",
