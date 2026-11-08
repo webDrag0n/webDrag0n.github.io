@@ -1,8 +1,8 @@
 {
-  "updated_at": "15:15",
+  "updated_at": "16:34",
   "weather": {
-    "main": "28°C Sunny",
-    "sub": "今日 25~28°C，湿度 62%，体感 30°C"
+    "main": "27°C Sunny",
+    "sub": "今日 25~28°C，湿度 73%，体感 29°C"
   },
   "todos": [
     {
@@ -53,7 +53,7 @@
     {
       "time": "16:30",
       "text": "刷演出：2026 年 11-12 月广深 livehouse/音乐节新官宣，有才分享",
-      "done": false
+      "done": true
     },
     {
       "time": "19:00",
