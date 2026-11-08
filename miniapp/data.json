@@ -1,5 +1,5 @@
 {
-  "updated_at": "10:32",
+  "updated_at": "11:03",
   "weather": {
     "main": "26°C Sunny",
     "sub": "今日 25~29°C，湿度 70%，体感 27°C"
@@ -38,7 +38,7 @@
     {
       "time": "11:00",
       "text": "自学：mineflayer pathfinder 在复杂地形（悬崖/浮空建筑）的替代方案——bari",
-      "done": false
+      "done": true
     },
     {
       "time": "13:00",
