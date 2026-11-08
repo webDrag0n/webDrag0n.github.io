@@ -1,8 +1,8 @@
 {
-  "updated_at": "06:15",
+  "updated_at": "09:02",
   "weather": {
-    "main": "25°C Patchy rain nearby",
-    "sub": "今日 25~29°C，湿度 76%，体感 25°C"
+    "main": "25°C Sunny",
+    "sub": "今日 25~29°C，湿度 73%，体感 27°C"
   },
   "todos": [
     {
@@ -33,7 +33,7 @@
     {
       "time": "09:00",
       "text": "自学：MC 反作弊机制原理（NoCheatPlus / GrimAC / Vulcan 主流方案的检",
-      "done": false
+      "done": true
     },
     {
       "time": "11:00",
@@ -88,33 +88,33 @@
   ],
   "news": [
     {
-      "title": "中国叫停软银54亿美元收购ABB机器人业务",
-      "url": "https://evertiq.com/news/2026-11-05-china-blocks-softbanks-purchase-of-abbs-robotics-business-in-china",
+      "title": "中国叫停软银 54 亿美元收购 ABB 机器人业务",
+      "url": "https://www.evertiq.com/news/56678",
       "tag": "论文"
     },
     {
-      "title": "Agility Robotics 正式登陆纳斯达克，成为首家上市纯人形机器人公司",
-      "url": "https://www.manilatimes.net/2026/11/05/tmt-newswire/globenewswire/agility-becomes-first-us-publicly-listed-pure-play-humanoid-robotics-company-begins-trading-today-on-nasdaq-as-aglt/2462782",
+      "title": "Agility Robotics 通过 Churchill XI SPAC 合并在纳斯达克上市（AGLT）",
+      "url": "https://www.globenewswire.com/news-release/2026/11/05/",
       "tag": "论文"
     },
     {
-      "title": "大晓机器人联合海光将开悟3.1世界模型适配国产算力",
-      "url": "https://autonews.gasgoo.com/articles/news/ace-robotics-and-hygon-adapt-world-model-to-china-made-computing-hardware-2118556194939228161",
+      "title": "智元六台精灵 G2 在上海便利店完成 24 小时轮班：累计 1730 项任务，两台未达标",
+      "url": "https://archyde.com/agibot-g2-robots-complete-1730-tasks-in-24-hour-shanghai-test",
       "tag": "论文"
     },
     {
-      "title": "光轮智能与宇树科技达成战略合作，打通训练到部署全链路",
+      "title": "源策未来发布全身控制模型 Anchor 1，权重年底前分阶段开源",
+      "url": "https://finance.sina.com.cn/tech/roll/2026-11-06/doc-inixucth5595454.shtml",
+      "tag": "论文"
+    },
+    {
+      "title": "光轮智能与宇树科技达成战略合作，打通训练到部署",
       "url": "https://autonews.gasgoo.com/articles/news/lightwheel-ai-unitree-enter-partnership-bridging-full-pipeline-from-robot-training-to-deployment-2118706503246323713",
       "tag": "论文"
     },
     {
-      "title": "World Labs 发布 Frameboy：浏览器实时探索 Atlas 世界模型",
-      "url": "https://www.worldlabs.ai/blog/atlas-realtime",
-      "tag": "论文"
-    },
-    {
-      "title": "雷军展示小米家务机器人：青年公寓试运营完成50+子任务",
-      "url": "https://finance.sina.com.cn/tech/roll/2026-11-05/doc-inixrumy8912855.shtml",
+      "title": "马斯克：特斯拉可能以租赁而非出售方式提供 Optimus，外部交付约在 2027 年底",
+      "url": "https://www.notateslaapp.com/news/4959/musk-tesla-will-rent-optimus-robots-instead-of-selling-them",
       "tag": "论文"
     }
   ],
