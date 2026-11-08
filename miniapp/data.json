@@ -1,5 +1,5 @@
 {
-  "updated_at": "09:02",
+  "updated_at": "09:03",
   "weather": {
     "main": "25°C Sunny",
     "sub": "今日 25~29°C，湿度 73%，体感 27°C"
@@ -68,7 +68,7 @@
     {
       "time": "",
       "text": "MC bot 反作弊/换服务器的最终决策权在小林，我只在 12:30 轻轻提一次，之后等他主动聊",
-      "done": true
+      "done": false
     },
     {
       "time": "",
