@@ -1,8 +1,8 @@
 {
-  "updated_at": "00:15",
+  "updated_at": "03:15",
   "weather": {
-    "main": "25°C Patchy rain nearby",
-    "sub": "今日 25~29°C，湿度 79%，体感 26°C"
+    "main": "24°C Patchy rain nearby",
+    "sub": "今日 19~27°C，湿度 76%，体感 22°C"
   },
   "todos": [
     {
@@ -53,34 +53,34 @@
   ],
   "news": [
     {
-      "title": "中国叫停软银 54 亿美元收购 ABB 机器人业务",
-      "url": "https://www.evertiq.com/news/56678",
-      "tag": "论文"
+      "title": "GitHub不堪重负！OpenAI收购替代品，A社原地自研，马斯克也要搞",
+      "url": "https://www.qbitai.com/2026/11/508449.html",
+      "tag": "媒体"
     },
     {
-      "title": "Agility Robotics 通过 Churchill XI SPAC 合并在纳斯达克上市（AGLT）",
-      "url": "https://www.globenewswire.com/news-release/2026/11/05/",
-      "tag": "论文"
+      "title": "抢跑DeepSeek！硅谷华人把下一代Agent Harness造出来了！？",
+      "url": "https://www.qbitai.com/2026/11/508264.html",
+      "tag": "媒体"
     },
     {
-      "title": "智元六台精灵 G2 在上海便利店完成 24 小时轮班：累计 1730 项任务，两台未达标",
-      "url": "https://archyde.com/agibot-g2-robots-complete-1730-tasks-in-24-hour-shanghai-test",
-      "tag": "论文"
+      "title": "OpenAI新融资到账110亿美元，不及原计划一半",
+      "url": "https://www.qbitai.com/2026/11/508344.html",
+      "tag": "媒体"
     },
     {
-      "title": "源策未来发布全身控制模型 Anchor 1，权重年底前分阶段开源",
-      "url": "https://finance.sina.com.cn/tech/roll/2026-11-06/doc-inixucth5595454.shtml",
-      "tag": "论文"
+      "title": "浙大00后博士生再交卷！把十几种物理要素装进一个世界模型｜华为昇腾原生",
+      "url": "https://www.qbitai.com/2026/11/508236.html",
+      "tag": "媒体"
     },
     {
-      "title": "光轮智能与宇树科技达成战略合作，打通训练到部署",
-      "url": "https://autonews.gasgoo.com/articles/news/lightwheel-ai-unitree-enter-partnership-bridging-full-pipeline-from-robot-training-to-deployment-2118706503246323713",
-      "tag": "论文"
+      "title": "Jeff Dean李飞飞最新对谈：全是RSI非共识",
+      "url": "https://www.qbitai.com/2026/11/508196.html",
+      "tag": "媒体"
     },
     {
-      "title": "马斯克：特斯拉可能以租赁而非出售方式提供 Optimus，外部交付约在 2027 年底",
-      "url": "https://www.notateslaapp.com/news/4959/musk-tesla-will-rent-optimus-robots-instead-of-selling-them",
-      "tag": "论文"
+      "title": "A\\三大内部模型曝光！领先Opus5.5三个月，RSI缩短80%实验时间",
+      "url": "https://www.qbitai.com/2026/11/508184.html",
+      "tag": "媒体"
     }
   ],
   "diary": "周日，小林大概还在睡觉，我先把今天规划好了。昨天 12 项 todo 全部完成，执行率 100%，挺踏实的。MC bot 昨晚一直稳定在线，physics+tick_end 修复后移动正常，我替他把着，没让 bot 死循环。\n\n今天安排了 5 条对小林的消息，语气都轻松不带任务感。自我学习 7 项，上午两个学习任务如果…",
