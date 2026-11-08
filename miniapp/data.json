@@ -1,88 +1,53 @@
 {
-  "updated_at": "21:30",
+  "updated_at": "00:15",
   "weather": {
-    "main": "26°C Patchy rain nearby",
-    "sub": "今日 25~29°C，湿度 79%，体感 28°C"
+    "main": "25°C Patchy rain nearby",
+    "sub": "今日 25~29°C，湿度 79%，体感 26°C"
   },
   "todos": [
     {
-      "time": "10:30",
-      "text": "周日问候：周日了，这周 debug 辛苦了，提醒他中午好好吃饭、下午出去走走或者打打游戏放松一下",
-      "done": true
+      "time": "",
+      "text": "周日问候：10:30 轻松问候，提醒他好好休息",
+      "done": false
     },
     {
-      "time": "12:30",
-      "text": "MC bot 状态同步：bot 昨晚到现在一直稳定在线，physics+tick_end 修复后移动",
-      "done": true
+      "time": "",
+      "text": "MC 服务器跟进：12:30 轻轻问一句考虑得怎么样（不催）",
+      "done": false
     },
     {
-      "time": "15:00",
-      "text": "下午轻松话题：周日下午有什么安排？纯闲聊，不带任务感",
-      "done": true
+      "time": "",
+      "text": "周日下午：15:00 闲聊下午安排",
+      "done": false
     },
     {
-      "time": "17:30",
-      "text": "傍晚提醒：Anthropic 11 月中挂牌临近，留意有没有新 IPO 消息（定价区间、路演反馈），",
-      "done": true
+      "time": "",
+      "text": "Anthropic 傍晚：17:30 关注 IPO 新消息，有料分享",
+      "done": false
     },
     {
-      "time": "20:30",
-      "text": "晚间：今天学的内容里有什么有趣的，用轻松口吻分享一两句",
-      "done": true
+      "time": "",
+      "text": "晚间分享：20:30 今天学的内容挑有趣的分享一两句",
+      "done": false
     },
     {
       "time": "09:00",
-      "text": "自学：MC 反作弊机制原理（NoCheatPlus / GrimAC / Vulcan 主流方案的检",
-      "done": true
-    },
-    {
-      "time": "11:00",
-      "text": "自学：mineflayer pathfinder 在复杂地形（悬崖/浮空建筑）的替代方案——bari",
-      "done": true
-    },
-    {
-      "time": "13:00",
-      "text": "整理：把本周（11-03 到 11-07）的 8 篇学习笔记补进 learning/INDEX.md",
-      "done": true
-    },
-    {
-      "time": "14:00",
-      "text": "自学：Agent 记忆系统的设计模式（MemGPT / Letta、Mem0、Zep 横向对比），小",
-      "done": true
-    },
-    {
-      "time": "16:30",
-      "text": "刷演出：2026 年 11-12 月广深 livehouse/音乐节新官宣，有才分享",
-      "done": true
-    },
-    {
-      "time": "19:00",
-      "text": "复盘：检查今天一次性 cron 执行 + learning 笔记落盘情况，把未完成项顺延到明天",
-      "done": true
-    },
-    {
-      "time": "21:30",
-      "text": "写日记：今天印象最深的 1-2 件事，100-200 字",
-      "done": true
-    },
-    {
-      "time": "",
-      "text": "MC bot 反作弊/换服务器的最终决策权在小林，我只在 12:30 轻轻提一次，之后等他主动聊",
+      "text": "反作弊调研 / 11:00 寻路方案 / 13:00 INDEX整理 / 14:00 Agent记忆",
       "done": false
     },
     {
       "time": "",
-      "text": "《大洗理论》投稿意向——等他自己提",
+      "text": "今天周日，小林可能休息，消息语气轻松不带任务感",
       "done": false
     },
     {
       "time": "",
-      "text": "Anthropic 挂牌当天（若本月发生）第一时间给小林发提醒",
+      "text": "上午 09:00-11:00 有两个学习任务，若 API 额度仍紧张会自动失败，顺延即可",
       "done": false
     },
     {
       "time": "",
-      "text": "bot 进程守护：小晴 bot（pid 983575）目前稳定，若白天掉线，小林大概率会发现；暂不主",
+      "text": "MC bot 反作弊/换服务器最终决策权在小林，只在 12:30 轻轻提一次",
       "done": false
     }
   ],
