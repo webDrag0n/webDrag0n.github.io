@@ -1,8 +1,8 @@
 {
-  "updated_at": "19:05",
+  "updated_at": "20:31",
   "weather": {
-    "main": "27°C Clear",
-    "sub": "今日 25~29°C，湿度 78%，体感 29°C"
+    "main": "26°C Patchy rain nearby",
+    "sub": "今日 25~29°C，湿度 79%，体感 28°C"
   },
   "todos": [
     {
@@ -28,7 +28,7 @@
     {
       "time": "20:30",
       "text": "晚间：今天学的内容里有什么有趣的，用轻松口吻分享一两句",
-      "done": false
+      "done": true
     },
     {
       "time": "09:00",
