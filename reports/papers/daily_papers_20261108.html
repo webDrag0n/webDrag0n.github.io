@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 日报 — 2026年11月8日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .comment {
+    font-size: 13px;
+    color: #555;
+    background: #f1f6fb;
+    border-left: 3px solid var(--accent);
+    padding: 8px 12px;
+    border-radius: 0 6px 6px 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .hot-topic .title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .hot-topic .title a { color: var(--accent); text-decoration: none; }
+  .hot-topic .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+  .hot-topic .comment {
+    font-size: 13px;
+    color: #555;
+    background: #fff3cd;
+    border-left: 3px solid #e17055;
+    padding: 8px 12px;
+    border-radius: 0 6px 6px 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 日报 · 学术与产业动态</h1>
+  <div class="date">2026年11月8日 星期日</div>
+  <div class="subtitle">覆盖 arXiv 最新论文 · 开源项目 · 机器人/具身智能产业动态</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今日机器人赛道动作密集：中国监管叫停软银 54 亿美元收购 ABB 机器人业务，Agility 通过 SPAC 在纳斯达克上市（代码 AGLT），智元六台精灵 G2 在上海便利店完成 24 小时轮班实测。学术侧，AI Scientist 概念持续升温（Scientist World、Terminal-Bench 2），扩散语言模型推理加速（SpecCTMC、Measured Coupling），On-Policy Distillation 训练效率研究两篇齐发。开源方面，Ai2 发布开源机器人学习仿真环境 ToyBlocks，源策未来 Anchor 1 全身控制模型宣布年底前分阶段开源。</p>
+</div>
+
+<!-- ===== 机器人 / 具身智能 ===== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>机器人 / 具身智能</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 重磅 · 监管</div>
+    <div class="title"><a href="https://www.evertiq.com/news/56678" target="_blank">中国叫停软银 54 亿美元收购 ABB 机器人业务</a></div>
+    <div class="summary">中国外商投资安全审查机制办公室禁止软银收购 ABB 在华机器人业务。该交易 2025 年 10 月达成，作价 53.75 亿美元，原定 2026 年中下旬交割。ABB 称仍与软银保持沟通。</div>
+    <div class="comment">具身智能赛道首例重大跨境交易被监管否决，释放出机器人资产已被纳入国家安全审查范围的强烈信号，后续海外并购或将普遍面临更严审查。</div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 重磅 · 上市</div>
+    <div class="title"><a href="https://www.globenewswire.com/news-release/2026/11/05/" target="_blank">Agility Robotics 通过 Churchill XI SPAC 合并在纳斯达克上市（AGLT）</a></div>
+    <div class="summary">Agility 股票与认股权证（AGLT、AGLTW）11 月 5 日在纳斯达克开始交易，交易共募资约 4.65 亿美元，含富士康领投的 PIPE。公司称 Digit 5 多年期承诺订单超 3 亿美元。</div>
+    <div class="comment">继 Figure、1X 之后，又一家人形机器人整机厂登陆二级市场；富士康入局产线协同意味浓厚，人形机器人商业化叙事正式进入"订单验证"阶段。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">来源：Archyde · 2026-11-06</div>
+    <div class="title"><a href="https://archyde.com/agibot-g2-robots-complete-1730-tasks-in-24-hour-shanghai-test" target="_blank">智元六台精灵 G2 在上海便利店完成 24 小时轮班：累计 1730 项任务，两台未达标</a></div>
+    <div class="summary">11 月 2 日 10 时至 3 日 10 时，六台机器人完成迎宾 683 次、取货 369 次、咖啡 147 杯、热食 126 份等共 1730 项任务；清洁和理货两台未达标，且无经审计的人工干预记录。</div>
+    <div class="comment">单场景 24 小时实测透明度值得肯定——公开未达标项比"全程成功"更有说服力。真实商用落地仍卡在长尾任务稳定性上。</div>
+    <div class="tags"><span class="tag hot">实测</span><span class="tag">智元</span><span class="tag">商用落地</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">来源：Sina Finance / 机器之心 · 2026-11-06</div>
+    <div class="title"><a href="https://finance.sina.com.cn/tech/roll/2026-11-06/doc-inixucth5595454.shtml" target="_blank">源策未来发布全身控制模型 Anchor 1，权重年底前分阶段开源</a></div>
+    <div class="summary">Anchor 1 是全身控制的底层"S0"模型，只需骨盆、双腕、双踝五个锚点，用约 1081 小时动作数据训练。在宇树 G1 上拳击演示成功率从 37.5% 升至 98%。权重与代码计划年底前分阶段开源。</div>
+    <div class="comment">低维锚点表示+全身控制是 2026 年机器人运动学的主流方向之一；开源承诺若兑现，国内生态将多一个可复用的底座模型。</div>
+    <div class="tags"><span class="tag hot">开源预告</span><span class="tag">全身控制</span><span class="tag">宇树 G1</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">来源：Gasgoo 盖世汽车 · 2026-11-06</div>
+    <div class="title"><a href="https://autonews.gasgoo.com/articles/news/lightwheel-ai-unitree-enter-partnership-bridging-full-pipeline-from-robot-training-to-deployment-2118706503246323713" target="_blank">光轮智能与宇树科技达成战略合作，打通训练到部署</a></div>
+    <div class="summary">光轮提供数据、仿真评测与部署反馈基础设施，宇树提供本体与运控感知，双方按任务定制数据并闭环迭代。</div>
+    <div class="comment">数据基础设施商与本体厂商深度绑定，"数据闭环"正从口号变成行业标准合作范式；但无量化披露，实际效果有待观察。</div>
+    <div class="tags"><span class="tag">合作</span><span class="tag">数据闭环</span><span class="tag">宇树</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">来源：Not a Tesla App · 2026-11-06</div>
+    <div class="title"><a href="https://www.notateslaapp.com/news/4959/musk-tesla-will-rent-optimus-robots-instead-of-selling-them" target="_blank">马斯克：特斯拉可能以租赁而非出售方式提供 Optimus，外部交付约在 2027 年底</a></div>
+    <div class="summary">马斯克在巴伦投资大会上称 Optimus 很可能以租赁方式提供，首批对外交付约在 2027 年底。特斯拉先在自家工厂使用；搭载 AI5 的版本预计 2027 年 4 月前后，满产至少还需一年。</div>
+    <div class="comment">RaaS（Robot-as-a-Service）模式被头部玩家明确表态，短期收入确认会更平滑，但也侧面反映整机销售的价格接受度仍未验证。</div>
+    <div class="tags"><span class="tag">特斯拉</span><span class="tag">Optimus</span><span class="tag">RaaS</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">来源：Hugging Face Blog (Ai2) · 2026-11-06</div>
+    <div class="title"><a href="https://huggingface.co/blog/allenai/toyblocks" target="_blank">Ai2 发布开源机器人学习仿真环境 ToyBlocks</a></div>
+    <div class="summary">ToyBlocks 是 Allen Institute for AI 在 Hugging Face 上发布的开源机器人学习仿真环境，聚焦操作任务的可复现训练与评测。</div>
+    <div class="comment">仿真环境仍是具身智能最大的"隐形基础设施"瓶颈；Ai2 的开源传统+HF 分发渠道组合，有望让它成为社区基准之一。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">仿真</span><span class="tag">Ai2</span></div>
+  </div>
+</div>
+
+<!-- ===== 学术前沿 ===== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>学术前沿 · arXiv 精选</div>
+
+  <div class="card">
+    <div class="source">arXiv:2611.08478 · 2026-11-05</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.08478" target="_blank">Scientist World: Grow a Research World for AI-Scientists</a></div>
+    <div class="summary">论文指出 AI-Scientist 已经出现，但供其成长的"科学世界"——数百年积累的开放问题与共享思想——尚未被系统化构建。作者提出 Scientist World 框架，让 AI 科学家在其中持续探索、沉淀与协作。</div>
+    <div class="comment">把 AI Scientist 从"单次跑分"升级为"长期科研生态"，是 AI4Science 走向 Agent 化的关键一步，可与同日发布的 Terminal-Bench 2 对照阅读。</div>
+    <div class="tags"><span class="tag hot">AI4Science</span><span class="tag">Agent</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2611.08417 · 2026-11-05</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.08417" target="_blank">Benchmarks as Software: Terminal-Bench and the Case for Continuous Benchmarks</a></div>
+    <div class="summary">作者主张基准应当作"持续演化的软件"而非一次性论文附属品，以 Terminal-Bench 为案例阐述持续集成式基准的工程实践与方法论。</div>
+    <div class="comment">基准腐化是 Agent 评测的最大隐忧，"基准即服务"的提法可能会被后续评测基础设施广泛引用。</div>
+    <div class="tags"><span class="tag">评测</span><span class="tag">Agent</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2611.08453 · 2026-11-05</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.08453" target="_blank">Unpacking the Compute Efficiency of Strong-to-Weak OPD against GRPO</a></div>
+    <div class="summary">系统对比 On-Policy Distillation（OPD）与 GRPO 的训练 FLOPs 效率：OPD 让学生在自身 rollout 上接受冻结教师的逐 token 监督，这种稠密信号可能显著降低达到同等能力所需的算力。</div>
+    <div class="comment">同日 2611.08016《Learning Dynamics of On-Policy Distillation》互为镜像——蒸馏复兴是 2026 后训练的主线之一，值得关注两条线的结论差异。</div>
+    <div class="tags"><span class="tag hot">训练效率</span><span class="tag">蒸馏</span><span class="tag">GRPO</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2611.08403 · 2026-11-05</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.08403" target="_blank">StepBack: Step-Level Error-Localized Resampling for Efficient Test-Time Reasoning</a></div>
+    <div class="summary">针对 Self-Consistency 需要采样大量完整推理链的浪费问题，StepBack 将重采样粒度从"整条链"细化到"出错的那一步"，在保持推理质量的同时显著减少采样预算。</div>
+    <div class="comment">Test-time compute 优化正在从"多采样"走向"精准采样"，与推理模型的高价 API 趋势高度相关，工程落地价值直接。</div>
+    <div class="tags"><span class="tag">推理</span><span class="tag">Test-time Compute</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2611.08362 · 2026-11-05</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.08362" target="_blank">SpecCTMC: Exact Speculative Simulation of Diffusion Language Model Continuous-Time Markov Chains</a></div>
+    <div class="summary">掩码扩散语言模型支持并行生成，但独立采样多 token 会破坏依赖关系、改变输出分布。SpecCTMC 提出对扩散语言模型 CTMC 的精确投机模拟方法，解决并行解码的分布保真问题。</div>
+    <div class="comment">扩散 LLM 要真正威胁自回归架构，"并行但不失真"是必须迈过的坎；本文给出了理论严格的一条路径。</div>
+    <div class="tags"><span class="tag hot">扩散语言模型</span><span class="tag">推理加速</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2611.08219 · 2026-11-05</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.08219" target="_blank">Agent-R²: Scaling Agents for Realistic Productivity Work via Real-Source Data Synthesis</a></div>
+    <div class="summary">通过真实来源数据合成来扩展 Agent 在真实生产力工作场景中的能力，解决当前 Agent 训练数据与真实办公任务分布错位的问题。</div>
+    <div class="comment">Agent 数据合成从"模拟任务"转向"真实源复现"，是缩小 demo 与产品差距的关键路径，工业界会非常关注。</div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">数据合成</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2611.08281 · 2026-11-05</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.08281" target="_blank">Multimodal-SEA: Benchmarking AI Agent Security under Multimodal Social Engineering Attacks</a></div>
+    <div class="summary">针对个人 AI Agent 面临的多模态社会工程攻击（伪造图片、语音、视频等），构建系统性安全基准，弥补现有评测只覆盖文本对话的空白。</div>
+    <div class="comment">Agent 权限越来越大，多模态钓鱼将是 2027 年最现实的攻击面之一；安全评测的滞后性值得警惕。</div>
+    <div class="tags"><span class="tag">安全</span><span class="tag">多模态</span><span class="tag">Agent</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2611.08376 · 2026-11-05</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.08376" target="_blank">Muir: Linear Attention with Sensitivity-Allocated Gating and Matched-Filter Readout</a></div>
+    <div class="summary">提出带敏感度分配门控与匹配滤波读出的线性注意力机制，在保持线性复杂度的同时改善长序列任务表现。</div>
+    <div class="comment">线性注意力尚未退场，"门控+读出"组合是近期多篇工作的共同思路，长期上下文刚需仍在推动这条线前进。</div>
+    <div class="tags"><span class="tag">架构</span><span class="tag">长上下文</span></div>
+  </div>
+</div>
+
+<!-- ===== 开源生态 ===== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源生态 · GitHub / Awesome</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 2026-11</div>
+    <div class="title"><a href="https://github.com/THU-MAIC/OpenMAIC" target="_blank">THU-MAIC/OpenMAIC — 清华多模态 Agent 基础设施（42K+ stars）</a></div>
+    <div class="summary">清华系开源的多模态 Agent 基础设施项目，11 月初登上 GitHub Trending 榜首，Fork 数超 6K，被视为国内 Agent 基础设施的代表性项目。</div>
+    <div class="comment">学界背景+完整工具链的组合在 Agent 赛道持续受到追捧，反映出社区对"可编程 Agent 底座"的强烈需求。</div>
+    <div class="tags"><span class="tag hot">Trending</span><span class="tag">Agent 基础设施</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 2026-11</div>
+    <div class="title"><a href="https://github.com/Orkas-AI/Orkas" target="_blank">Orkas-AI/Orkas — 本地优先 AI 团队（7K+ stars）</a></div>
+    <div class="summary">本地优先（local-first）的 AI 协作团队框架，单日新增 stars 破千，主打数据不出本机的多 Agent 协作。</div>
+    <div class="comment">"本地优先"成为 Agent 应用的新卖点，与同期多模态社工攻击研究形成有趣呼应——隐私与安全正在重塑 Agent 产品形态。</div>
+    <div class="tags"><span class="tag">Trending</span><span class="tag">本地优先</span><span class="tag">Multi-Agent</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Awesome 生态 · 2026-11</div>
+    <div class="title"><a href="https://github.com/Zijian-Ni/awesome-ai-agents-2026" target="_blank">awesome-ai-agents-2026 — 2026 年度 Agent 全景清单持续更新</a></div>
+    <div class="summary">覆盖基础模型、多模态 AI、Agent 协议（MCP/A2A）、Coding Agent、Computer Use、生成式 AI 等领域的精选列表，近期持续收录新项目。</div>
+    <div class="comment">2026 年版 awesome 列表持续升温，标志着 Agent 生态从"框架混战"进入"分层协议+基础设施"的整合期。</div>
+    <div class="tags"><span class="tag">Awesome</span><span class="tag">MCP</span><span class="tag">A2A</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 2026-10 至 11</div>
+    <div class="title"><a href="https://github.com/Shubhamsaboo/awesome-llm-apps" target="_blank">awesome-llm-apps — 100+ 可运行的 LLM 应用模板（140K+ stars）</a></div>
+    <div class="summary">包含 100+ 可直接 clone 运行的 LLM 应用项目，近期新增 Agent Skills 板块，覆盖 RAG、Agent 与工作流自动化场景。</div>
+    <div class="comment">从"awesome 列表"升级为"可直接运行模板集"是 2026 年开源 AI 项目的共同进化方向，降低上手门槛比收录数量更重要。</div>
+    <div class="tags"><span class="tag">Awesome</span><span class="tag">LLM 应用</span><span class="tag">模板</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今天的两条重磅都来自产业侧：中国叫停软银收购 ABB 机器人业务，意味着机器人核心资产正式进入国家安全视野，跨境并购窗口正在收窄；Agility 登陆纳斯达克则标志着人形机器人开始接受二级市场的严格审视——3 亿美元订单承诺是未来两年最大的兑现压力。学术侧值得关注的暗线是"蒸馏复兴"：两篇 OPD 论文同日出现，配合 StepBack 对 test-time compute 的精细化，后训练与推理两端都在向"更少算力、更精准信号"演进，这对算力受限的玩家是明确利好。扩散语言模型在并行解码上的理论突破（SpecCTMC）则是长期变量，若开源生态跟进，2027 年架构格局可能重新洗牌。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-11-08 · Sources: arXiv, Robot Overflow, GitHub Trending, HuggingFace</p>
+</div>
+
+</div>
+</body>
+</html>

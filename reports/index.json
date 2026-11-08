@@ -1,11 +1,17 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-11-07T17:11:05.650158+00:00",
+  "generated_at": "2026-11-08T00:09:05.974570+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
-      "count": 98,
+      "count": 99,
       "items": [
+        {
+          "date": "2026-11-08",
+          "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261108.html",
+          "overview": "今日机器人赛道动作密集：中国监管叫停软银 54 亿美元收购 ABB 机器人业务，Agility 通过 SPAC 在纳斯达克上市（代码 AGLT），智元六台精灵 G2 在上海便利店完成 24 小时轮班实测。学术侧，AI Scientist 概念持续升温（Scientist World、Terminal-Bench 2），扩散语言模型推理加速（SpecCTMC、Measured Coupling），On-Policy Distillation 训练效率研究两篇齐发。开源方面，Ai2 发布开源机器人学习仿真环境 ToyBlocks，源策未来 Anchor 1 全身控制模型宣布年底前分阶段开源。",
+          "digest": "今天的两条重磅都来自产业侧：中国叫停软银收购 ABB 机器人业务，意味着机器人核心资产正式进入国家安全视野，跨境并购窗口正在收窄；Agility 登陆纳斯达克则标志着人形机器人开始接受二级市场的严格审视——3 亿美元订单承诺是未来两年最大的兑现压力。学术侧值得关注的暗线是\"蒸馏复兴\"：两篇 OPD 论文同日出现，配合 StepBack 对 test-time compute 的精细化，后训练与推理两端都在向\"更少算力、更精准信号\"演进，这对算力受限的玩家是明确利好。扩散语言模型在并行解码上的理论突破（SpecCTMC）则是长期变量，若开源生态跟进，2027 年架构格局可能重新洗牌。"
+        },
         {
           "date": "2026-11-07",
           "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261107.html",
