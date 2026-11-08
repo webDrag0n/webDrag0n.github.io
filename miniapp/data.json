@@ -1,8 +1,8 @@
 {
-  "updated_at": "18:15",
+  "updated_at": "19:05",
   "weather": {
-    "main": "28°C Patchy rain nearby",
-    "sub": "今日 25~29°C，湿度 69%，体感 30°C"
+    "main": "27°C Clear",
+    "sub": "今日 25~29°C，湿度 78%，体感 29°C"
   },
   "todos": [
     {
@@ -58,7 +58,7 @@
     {
       "time": "19:00",
       "text": "复盘：检查今天一次性 cron 执行 + learning 笔记落盘情况，把未完成项顺延到明天",
-      "done": false
+      "done": true
     },
     {
       "time": "21:30",
