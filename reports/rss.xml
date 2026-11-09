@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 09 Nov 2026 00:05:44 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 17:07:53 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-11-10</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261110.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261110.html</guid>
+      <pubDate>Tue, 10 Nov 2026 08:00:00 +0000</pubDate>
+      <description>昨日 AI 圈最大的新闻来自英伟达——CEO 黄仁勋被曝婚外情，且涉及中国间谍指控，英伟达董事会启动独立调查，引发全球科技圈震动。进博会 AI 展区亮点纷呈，通用电气医疗展出全身 AI 超声诊断系统，光轮智能展示机器人持续学习系统。产业层面，英伟达中国市场份额暴跌至 8%，国产算力芯片加速突围；DeepSeek 带火稀疏计算，相关芯片公司再获近 10 亿融资。模型层面，OpenAI 发布 GPT-6 Cyber 网络安全专用模型，Kimi K3.1 Pro 因营销争议引发讨论，腾讯 Hy4 调用量激增十倍扩容。具身智能赛道热度不减，但 2.2 万台出货、不足 10 天开机的数据引发泡沫质疑。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-11-09</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261109.html</link>

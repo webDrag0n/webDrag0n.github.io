@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技媒体日报 — 2026年11月10日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 科技媒体日报</h1>
+  <div class="date">2026年11月10日 · 星期一</div>
+  <div class="subtitle">收录 2026年11月9日（昨日）中文 AI/科技媒体精华文章</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>昨日 AI 圈最大的新闻来自英伟达——CEO 黄仁勋被曝婚外情，且涉及中国间谍指控，英伟达董事会启动独立调查，引发全球科技圈震动。进博会 AI 展区亮点纷呈，通用电气医疗展出全身 AI 超声诊断系统，光轮智能展示机器人持续学习系统。产业层面，英伟达中国市场份额暴跌至 8%，国产算力芯片加速突围；DeepSeek 带火稀疏计算，相关芯片公司再获近 10 亿融资。模型层面，OpenAI 发布 GPT-6 Cyber 网络安全专用模型，Kimi K3.1 Pro 因营销争议引发讨论，腾讯 Hy4 调用量激增十倍扩容。具身智能赛道热度不减，但 2.2 万台出货、不足 10 天开机的数据引发泡沫质疑。</p>
+</div>
+
+<!-- 头条热点 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+  
+  <div class="hot-topic">
+    <div class="label">HOT TOPIC</div>
+    <div class="card" style="border:none; box-shadow:none; padding:0; margin:0; background:transparent;">
+      <div class="source">纽约时报中文网 · 2026年11月9日</div>
+      <div class="title"><a href="https://cn.nytimes.com/technology/20261109/nvidia-investigation-jensen-huang-china/" target="_blank">黄仁勋与中国间谍发生婚外情，英伟达展开调查</a></div>
+      <div class="summary">英伟达 CEO 黄仁勋被曝与中国情报人员发生婚外情，11月8日发表全员信承认出轨并道歉。英伟达董事会宣布启动独立调查，称"没有理由认为国家安全或商业机密受损"，但将审查所有可获得信息。此事恰逢美国国会要求黄仁勋出席简报会之际，引发全球关注。</div>
+      <div class="tags">
+        <span class="tag hot">重大新闻</span>
+        <span class="tag">英伟达</span>
+        <span class="tag">黄仁勋</span>
+        <span class="tag">地缘科技</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">HOT TOPIC</div>
+    <div class="card" style="border:none; box-shadow:none; padding:0; margin:0; background:transparent;">
+      <div class="source">央视网 · 2026年11月9日</div>
+      <div class="title"><a href="https://news.cctv.com/2026/11/09/ARTIVhiAAR0Xlj0sNqJTKQWB261109.shtml" target="_blank">在进博会上感受 AI 产业新脉动</a></div>
+      <div class="summary">第九届进博会 AI 展区亮点密集：通用电气医疗展出全身 AI 超声诊断系统，内置多种 AI 辅诊工具，可覆盖超 60% 常规临床应用；光轮智能首次参展，展示为机器人搭建的持续学习系统；超过 480 件代表性展品创历年新高。</div>
+      <div class="tags">
+        <span class="tag hot">进博会</span>
+        <span class="tag">AI医疗</span>
+        <span class="tag">具身智能</span>
+        <span class="tag">产业落地</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 大模型与产品 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型与产品</div>
+  
+  <div class="card">
+    <div class="source">量子位 · 2026年11月9日</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/508155.html" target="_blank">DeepSeek 带火稀疏计算，国产芯片公司加速突围：这家公司又融近 10 亿</a></div>
+    <div class="summary">DeepSeek 带火稀疏计算架构，国产 AI 芯片公司加速突围。墨芯人工智能完成近 10 亿元 C+ 轮融资，Q3 营收实现数倍增长。稀疏计算成为国产芯片弯道超车的重要技术路线。</div>
+    <div class="tags">
+      <span class="tag">DeepSeek</span>
+      <span class="tag">稀疏计算</span>
+      <span class="tag">国产芯片</span>
+      <span class="tag">融资</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026年11月7日</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/507967.html" target="_blank">腾讯 Hy4 调用激增已十倍扩容，Agent 能力开源模型第一</a></div>
+    <div class="summary">腾讯宣布因 Hy4 模型调用量激增，WorkBuddy 已进行十倍扩容。Hy4 在 Agent 能力评测中位居开源模型第一，展现国产开源模型的竞争力。</div>
+    <div class="tags">
+      <span class="tag">腾讯</span>
+      <span class="tag">开源模型</span>
+      <span class="tag">Agent</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">VONNG · 2026年11月9日</div>
+    <div class="title"><a href="https://vonng.com/misc/kimi-marketing/" target="_blank">Kimi 宣发翻车：别拿买广告的钱去透支信任</a></div>
+    <div class="summary">月之暗面发布 Kimi K3.1 Pro，纸面实力不俗——Arena 综合智力指数从 44 分升至 55 分，紧咬 Claude Opus 5.5。但宣发策略引发争议，作者批评其营销手法透支用户信任，反映国产大模型在产品力与品牌力之间的失衡。</div>
+    <div class="tags">
+      <span class="tag">Kimi</span>
+      <span class="tag">月之暗面</span>
+      <span class="tag">品牌营销</span>
+      <span class="tag">行业观察</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">gihyo.jp · 2026年11月9日</div>
+    <div class="title"><a href="https://gihyo.jp/article/2026/11/gpt-6-cyber" target="_blank">OpenAI 发布 GPT-6 Cyber：网络安全专用前沿模型</a></div>
+    <div class="summary">OpenAI 于 11月5日发布 GPT-6 Cyber，专注网络安全领域。该模型可自主执行漏洞检测、验证与修复，构建安全代理（Security Agent），已在 OpenAI Codex 等平台提供。</div>
+    <div class="tags">
+      <span class="tag">OpenAI</span>
+      <span class="tag">GPT-6</span>
+      <span class="tag">网络安全</span>
+      <span class="tag">垂直模型</span>
+    </div>
+  </div>
+</div>
+
+<!-- AI 安全与治理 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔒</span>AI 安全与治理</div>
+  
+  <div class="card">
+    <div class="source">量子位 · 2026年11月8日</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/508244.html" target="_blank">AGENTS.MD，危险危险危险！！！</a></div>
+    <div class="summary">AGENTS.MD 文件被曝存在新型安全风险，可能演变为针对 AI Agent 的电脑病毒。随着 Agent 能力增强，其配置和指令文件的安全问题亟待重视。</div>
+    <div class="tags">
+      <span class="tag hot">安全警示</span>
+      <span class="tag">Agent安全</span>
+      <span class="tag">风险</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026年11月6日</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/508107.html" target="_blank">99.4% 登顶全球第一！这个中国 AI 师承世界冠军</a></div>
+    <div class="summary">中国 AI 安全系统以 99.4% 的准确率刷新「AI安全世界杯」CyberGym 世界纪录，登顶全球第一。师承世界冠军的技术路线展现中国在 AI 安全领域的硬实力。</div>
+    <div class="tags">
+      <span class="tag">AI安全</span>
+      <span class="tag">世界纪录</span>
+      <span class="tag">中国AI</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪 · 2026年11月9日</div>
+    <div class="title"><a href="https://www.36kr.com/p/3678814524338697" target="_blank">全球人工智能立法动态与治理趋势：2026年政策全景扫描</a></div>
+    <div class="summary">欧盟《人工智能法案》延期提案与美英等国放松监管导向形成张力，全球 AI 治理呈现三组矛盾统一的发展趋势。文章梳理 2026 年主要法域的 AI 立法动态与合规要点。</div>
+    <div class="tags">
+      <span class="tag">AI治理</span>
+      <span class="tag">欧盟AI法案</span>
+      <span class="tag">政策趋势</span>
+    </div>
+  </div>
+</div>
+
+<!-- 行业与产业 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📱</span>行业与产业</div>
+  
+  <div class="card">
+    <div class="source">电子发烧友网 · 2026年11月9日</div>
+    <div class="title"><a href="https://m.elecfans.com/article/7903032.html" target="_blank">市场份额清零、业务停摆！英伟达退场与国产算力突围</a></div>
+    <div class="summary">伯恩斯坦预测英伟达在中国 AI GPU 市场份额将暴跌至 2026 年的 8%。在英伟达退潮的同时，AMD Instinct MI308 获批补位，国产算力芯片迎来替代窗口期。</div>
+    <div class="tags">
+      <span class="tag hot">国产替代</span>
+      <span class="tag">英伟达</span>
+      <span class="tag">算力芯片</span>
+      <span class="tag">地缘政治</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">DoNews · 2026年11月9日</div>
+    <div class="title"><a href="https://www.donews.com/article/detail/8080/108995.html" target="_blank">2.2 万台出货，不足 10 天开机：具身智能的泡沫成色</a></div>
+    <div class="summary">人形机器人出货量与真实使用率之间的巨大鸿沟引发行业反思：2.2 万台出货但用户平均开机不足 10 天。文章指出造机器人的不懂大模型、做模型的不懂机械，"对齐"难题亟待解决。</div>
+    <div class="tags">
+      <span class="tag">具身智能</span>
+      <span class="tag">人形机器人</span>
+      <span class="tag">行业反思</span>
+      <span class="tag">泡沫</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026年11月7日</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/508165.html" target="_blank">阿里巴巴发布《2026 AI 向善行动报告》</a></div>
+    <div class="summary">阿里巴巴发布《2026 AI 向善行动报告》，将 AI 数据中心可持续发展列为年度亮点，展现大厂在 AI 伦理与环保责任方面的布局。</div>
+    <div class="tags">
+      <span class="tag">阿里巴巴</span>
+      <span class="tag">AI治理</span>
+      <span class="tag">可持续发展</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026年11月7日</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/508170.html" target="_blank">阶跃终端 STEPX Neo 智能体手机亮相进博会高通展台</a></div>
+    <div class="summary">阶跃终端旗下 STEPX Neo 智能体手机首次亮相进博会高通展台，主打软硬模一体化设计，探索 AI Agent 与移动终端深度融合的新形态。</div>
+    <div class="tags">
+      <span class="tag">智能硬件</span>
+      <span class="tag">AI手机</span>
+      <span class="tag">进博会</span>
+    </div>
+  </div>
+</div>
+
+<!-- 研究与学术前沿 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔬</span>研究与学术前沿</div>
+  
+  <div class="card">
+    <div class="source">量子位 · 2026年11月8日</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/508236.html" target="_blank">浙大 00 后博士生再交卷！把十几种物理要素装进一个世界模型｜华为昇腾原生</a></div>
+    <div class="summary">浙江大学团队基于华为昇腾平台构建多物理要素融合的世界模型，将流体、固体、热传导等十几种物理要素统一建模，属 AI for Science 前沿成果，展现国产算力潜力。</div>
+    <div class="tags">
+      <span class="tag">世界模型</span>
+      <span class="tag">华为昇腾</span>
+      <span class="tag">AI4S</span>
+      <span class="tag">国产算力</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026年11月8日</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/508196.html" target="_blank">Jeff Dean 李飞飞最新对谈：全是 RSI 非共识</a></div>
+    <div class="summary">Google 首席科学家 Jeff Dean 与斯坦福教授李飞飞就 RSI（递归自我改进）展开深度对谈，双方观点充满非共识：RSI 不可能无限快，AI 发展存在物理极限。</div>
+    <div class="tags">
+      <span class="tag">RSI</span>
+      <span class="tag">AGI</span>
+      <span class="tag">学术对谈</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026年11月8日</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/508184.html" target="_blank">A 社三大内部模型曝光！领先 Opus 5.5 三个月，RSI 缩短 80% 实验时间</a></div>
+    <div class="summary">Anthropic 三大内部模型曝光，性能领先 Claude Opus 5.5 三个月，RSI 能力缩短 80% 实验时间。Dario Amodei 刚呼吁 AI 减速，内部研发却未停步。</div>
+    <div class="tags">
+      <span class="tag">Anthropic</span>
+      <span class="tag">模型曝光</span>
+      <span class="tag">RSI</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>昨日 AI 圈被英伟达黄仁勋事件强势刷屏——这不仅是科技巨头的 CEO 个人危机，更因牵扯"中国间谍"指控而升级为地缘政治事件。无论调查结果如何，英伟达在华业务已然雪上加霜：市场份额预测跌至 8%、芯片出口受限、国产替代加速，多重压力叠加。值得注意的是，国产算力并未因此停滞，反而在进博会密集亮剑：浙大基于华为昇腾的世界模型、腾讯 Hy4 的开源领先、稀疏计算芯片的融资热潮，勾勒出"国产算力+国产模型"双轮驱动的生态轮廓。具身智能赛道则迎来理性时刻——2.2 万台出货却不足 10 天开机，泡沫质疑声起，行业亟需从"炫技"转向"实用"。OpenAI 发布 GPT-6 Cyber 标志垂直领域模型专业化趋势，而 Kimi K3.1 Pro 的宣发争议提醒国产大模型：产品力的提升，不能以透支用户信任为代价。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026年11月10日</p>
+</div>
+
+</div>
+</body>
+</html>
