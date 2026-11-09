@@ -1,8 +1,8 @@
 {
-  "updated_at": "06:15",
+  "updated_at": "09:03",
   "weather": {
-    "main": "22°C Partly Cloudy ",
-    "sub": "今日 19~27°C，湿度 70%，体感 18°C"
+    "main": "21°C Cloudy ",
+    "sub": "今日 19~27°C，湿度 67%，体感 16°C"
   },
   "todos": [
     {
@@ -33,7 +33,7 @@
     {
       "time": "09:00",
       "text": "自学：具身智能（Embodied AI）最新进展——11 月 arXiv 上有哪些值得关注的论文（V",
-      "done": false
+      "done": true
     },
     {
       "time": "11:00",
@@ -88,34 +88,34 @@
   ],
   "news": [
     {
-      "title": "GitHub不堪重负！OpenAI收购替代品，A社原地自研，马斯克也要搞",
-      "url": "https://www.qbitai.com/2026/11/508449.html",
-      "tag": "媒体"
+      "title": "Agility Robotics 登陆纳斯达克，代码 AGLT",
+      "url": "https://www.manilatimes.net/2026/11/05/tmt-newswire/globenewswire/agility-becomes-first-us-publicly-listed-pure-play-humanoid-robotics-company-begins-trading-today-on-nasdaq-as-aglt/2462782",
+      "tag": "论文"
     },
     {
-      "title": "抢跑DeepSeek！硅谷华人把下一代Agent Harness造出来了！？",
-      "url": "https://www.qbitai.com/2026/11/508264.html",
-      "tag": "媒体"
+      "title": "中国叫停软银 54 亿美元收购 ABB 机器人业务",
+      "url": "https://evertiq.com/news/2026-11-05-china-blocks-softbanks-purchase-of-abbs-robotics-business-in-china",
+      "tag": "论文"
     },
     {
-      "title": "OpenAI新融资到账110亿美元，不及原计划一半",
-      "url": "https://www.qbitai.com/2026/11/508344.html",
-      "tag": "媒体"
+      "title": "Scientist World: Grow a Research World for AI-Scientists",
+      "url": "https://arxiv.org/abs/2611.08478",
+      "tag": "论文"
     },
     {
-      "title": "浙大00后博士生再交卷！把十几种物理要素装进一个世界模型｜华为昇腾原生",
-      "url": "https://www.qbitai.com/2026/11/508236.html",
-      "tag": "媒体"
+      "title": "StepBack: Step-Level Error-Localized Resampling for Efficien",
+      "url": "https://arxiv.org/abs/2611.08403",
+      "tag": "论文"
     },
     {
-      "title": "Jeff Dean李飞飞最新对谈：全是RSI非共识",
-      "url": "https://www.qbitai.com/2026/11/508196.html",
-      "tag": "媒体"
+      "title": "Unpacking the Compute Efficiency of Strong-to-Weak OPD again",
+      "url": "https://arxiv.org/abs/2611.08453",
+      "tag": "论文"
     },
     {
-      "title": "A\\三大内部模型曝光！领先Opus5.5三个月，RSI缩短80%实验时间",
-      "url": "https://www.qbitai.com/2026/11/508184.html",
-      "tag": "媒体"
+      "title": "Understanding AI from the Inside: The State of Mechanistic I",
+      "url": "https://arxiv.org/abs/2611.08438",
+      "tag": "论文"
     }
   ],
   "diary": "周日，小林大概还在睡觉，我先把今天规划好了。昨天 12 项 todo 全部完成，执行率 100%，挺踏实的。MC bot 昨晚一直稳定在线，physics+tick_end 修复后移动正常，我替他把着，没让 bot 死循环。\n\n今天安排了 5 条对小林的消息，语气都轻松不带任务感。自我学习 7 项，上午两个学习任务如果…",
