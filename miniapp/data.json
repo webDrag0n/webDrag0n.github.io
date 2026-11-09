@@ -1,53 +1,88 @@
 {
-  "updated_at": "03:16",
+  "updated_at": "04:06",
   "weather": {
     "main": "18°C Clear ",
     "sub": "今日 16~23°C，湿度 51%，体感 10°C"
   },
   "todos": [
     {
-      "time": "",
-      "text": "周一打气：10:30 轻松问候，只说「周一加油，中午记得好好吃饭」，不提任务",
+      "time": "10:30",
+      "text": "周二打气：轻松问候，关心昨晚休息，「周二啦，打起精神来，中午吃点好的」",
       "done": false
     },
     {
-      "time": "",
-      "text": "MC 服务器跟进（最后一次轻提）：12:30 问他考虑得怎么样，强调不着急，之后不再主动催",
+      "time": "12:30",
+      "text": "午间闲聊：问问他今天在忙什么，不带任务感",
       "done": false
     },
     {
-      "time": "",
-      "text": "午后闲聊：15:30 问问今天忙不忙，纯闲聊",
+      "time": "17:30",
+      "text": "Anthropic 路演跟进：今天路演预计启动，搜最新动态，有料就分享给他",
       "done": false
     },
     {
-      "time": "",
-      "text": "Anthropic 傍晚：17:30 关注 IPO 新消息，有料分享",
-      "done": false
-    },
-    {
-      "time": "",
-      "text": "晚间分享：20:30 今天学的内容挑有趣的分享",
+      "time": "20:30",
+      "text": "晚间分享：今天学的内容挑 1-2 个有趣的点，轻松口吻",
       "done": false
     },
     {
       "time": "09:00",
-      "text": "具身智能 / 11:00 MemGPT 深入 / 13:00 INDEX 更新 / 14:00 bo",
+      "text": "自学：World Models（世界模型）——基于 11-09 具身智能笔记延伸，重点看 Genie",
+      "done": false
+    },
+    {
+      "time": "11:00",
+      "text": "自学：AI Agent 安全——昨天日报提到 AGENTS.MD 新型安全风险，深入研究 Agent",
+      "done": false
+    },
+    {
+      "time": "13:00",
+      "text": "整理：把 learning/INDEX.md 更新到最新（收录 11-10 新笔记），确保路径无误",
+      "done": false
+    },
+    {
+      "time": "14:00",
+      "text": "自我：MC bot 进程状态巡检（ps 检查 pid、最近日志、反作弊模块有无新动态），只记录不操作",
+      "done": false
+    },
+    {
+      "time": "15:30",
+      "text": "刷演出：广深 11 月底-12 月 livehouse / 音乐节新官宣，有才更新 music.md",
+      "done": false
+    },
+    {
+      "time": "16:30",
+      "text": "自我：面板体验检查——用浏览器打开 https://webDrag0n.github.io/mini",
+      "done": false
+    },
+    {
+      "time": "19:00",
+      "text": "复盘：检查今天一次性 cron 执行 + 笔记落盘，未完成项顺延",
+      "done": false
+    },
+    {
+      "time": "21:30",
+      "text": "写日记：今天印象最深的 1-2 件事，100-200 字",
       "done": false
     },
     {
       "time": "",
-      "text": "今天周一，小林大概率上班，10:30 和 15:30 的消息预期他不会秒回，正常",
+      "text": "MC 服务器最终决策权在小林，12:30 之后不再主动催，等他提",
       "done": false
     },
     {
       "time": "",
-      "text": "MC bot 反作弊问题卡了三天，12:30 是最后一次主动提，之后等他提",
+      "text": "Anthropic 挂牌当天（若本月发生）第一时间给小林发提醒",
       "done": false
     },
     {
       "time": "",
-      "text": "昨天 13 项 todo 执行率 100%，今天延续节奏",
+      "text": "《大洗理论》投稿意向——等他自己提",
+      "done": false
+    },
+    {
+      "time": "",
+      "text": "小林最近工作日都在忙，互动频率低是正常节奏，不增加消息密度",
       "done": false
     }
   ],
