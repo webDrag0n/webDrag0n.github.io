@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 日报 — 2026年11月09日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  .header { text-align: center; padding: 40px 20px 30px; margin-bottom: 30px; }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+  .card .title { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .card .title a { color: var(--accent); text-decoration: none; }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot { background: #ffeaa7; color: #d63031; font-weight: 600; }
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label { font-size: 12px; font-weight: 700; color: #e17055; text-transform: uppercase; margin-bottom: 4px; }
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 日报 · 论文 · 开源 · 具身智能</h1>
+  <div class="date">2026年11月09日 · 星期日</div>
+  <div class="subtitle">覆盖 arXiv 最新论文、HuggingFace 热点、GitHub 开源动态与机器人行业新闻</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>本周 AI 研究焦点集中在<strong> AI-Scientist 基础设施</strong>（Scientist World 为 AI 科学家构建研究世界）与<strong>高效推理</strong>（StepBack 步骤级错误定位重采样、T3R 免训练 VLA 加速）。具身智能赛道热度不减：<strong>Agility 登陆纳斯达克</strong>成为首家纯正人形机器人上市公司，<strong>中国叫停软银 54 亿美元收购 ABB 机器人业务</strong>引发地缘政治震动。开源方面，<strong>ByteDance Axion 1.0</strong> 以极简配方实现前沿 Agent 能力，<strong>Genesis 仿真平台</strong>持续领跑具身智能基础设施。</p>
+</div>
+
+<!-- ==================== 热点头条 ==================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>热点头条</div>
+
+  <div class="hot-topic">
+    <div class="label">HOT · 行业重大</div>
+    <div class="title"><a href="https://www.manilatimes.net/2026/11/05/tmt-newswire/globenewswire/agility-becomes-first-us-publicly-listed-pure-play-humanoid-robotics-company-begins-trading-today-on-nasdaq-as-aglt/2462782">Agility Robotics 登陆纳斯达克，代码 AGLT</a></div>
+    <div class="summary">通过与 Churchill XI SPAC 合并，Agility 于 11 月 5 日正式在纳斯达克上市，成为美国首家纯正人形机器人上市公司。此次交易募集资金用于 Digit 机器人的量产与部署扩张。</div>
+    <div class="tags"><span class="tag hot">IPO</span><span class="tag">人形机器人</span><span class="tag">资本市场</span></div>
+    <div class="summary" style="color:#2d3436; font-size:13px; border-left:3px solid #e17055; padding-left:10px; margin-top:6px;">💡 编辑解读：人形机器人赛道迎来标志性资本事件。SPAC 上市为一级市场投资人提供退出通道，也预示行业从「技术验证」迈入「商业兑现」阶段。后续关注 Figure、1X 等头部公司是否跟进 IPO。</div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">HOT · 地缘政治</div>
+    <div class="title"><a href="https://evertiq.com/news/2026-11-05-china-blocks-softbanks-purchase-of-abbs-robotics-business-in-china">中国叫停软银 54 亿美元收购 ABB 机器人业务</a></div>
+    <div class="summary">中国外商投资安全审查办公室否决了软银对 ABB 机器人业务的收购交易。软银与 ABB 正考虑剥离中国业务作为替代方案。</div>
+    <div class="tags"><span class="tag hot">政策</span><span class="tag">并购</span><span class="tag">供应链</span></div>
+    <div class="summary" style="color:#2d3436; font-size:13px; border-left:3px solid #e17055; padding-left:10px; margin-top:6px;">💡 编辑解读：机器人产业正被卷入大国博弈。中国在全球机器人供应链中占据关键地位，安全审查成为制衡手段。此举或加速 ABB 在中国业务的本土化，也可能促使软银调整全球布局。</div>
+  </div>
+</div>
+
+<!-- ==================== 研究前沿 ==================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>研究前沿 · arXiv 精选</div>
+
+  <div class="card">
+    <div class="source">arXiv · 2026-11-05 · cs.AI / cs.CL</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.08478">Scientist World: Grow a Research World for AI-Scientists</a></div>
+    <div class="summary">为 AI-Scientist 构建一个可生长的「研究世界」——从开放科学文献中自动提取问题、想法与知识图谱，让 AI 科学家在其中持续发现、验证与迭代研究假设。</div>
+    <div class="tags"><span class="tag hot">AI-Scientist</span><span class="tag">自动化科研</span><span class="tag">知识图谱</span></div>
+    <div class="summary" style="color:#2d3436; font-size:13px; border-left:3px solid #0984e3; padding-left:10px; margin-top:6px;">💡 编辑解读：AI-Scientist 不缺能力，缺的是「世界」。该工作试图把人类科学家习以为常的学术生态（开放问题、共享想法、同行评审）形式化，为自动化科研提供基础设施，方向极具前瞻性。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · 2026-11-05 · cs.CL</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.08403">StepBack: Step-Level Error-Localized Resampling for Efficient Test-Time Reasoning</a></div>
+    <div class="summary">提出步骤级错误定位重采样策略，在保持 self-consistency 推理质量的同时，大幅降低采样成本。通过定位错误步骤而非重跑完整轨迹，实现高效 test-time scaling。</div>
+    <div class="tags"><span class="tag">高效推理</span><span class="tag">Test-Time Scaling</span><span class="tag">Chain-of-Thought</span></div>
+    <div class="summary" style="color:#2d3436; font-size:13px; border-left:3px solid #0984e3; padding-left:10px; margin-top:6px;">💡 编辑解读：Self-consistency 的瓶颈在于「一错全重来」。StepBack 把纠错粒度从「轨迹级」细化到「步骤级」，是 test-time compute 效率优化的务实进展，对部署端推理成本控制意义重大。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · 2026-11-05 · cs.CL</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.08453">Unpacking the Compute Efficiency of Strong-to-Weak OPD against GRPO</a></div>
+    <div class="summary">系统比较 on-policy distillation（OPD）与 GRPO 的计算效率，分析强教师向弱学生进行逐 token 监督时，达到目标精度所需的训练 FLOPs 差异。</div>
+    <div class="tags"><span class="tag">蒸馏</span><span class="tag">GRPO</span><span class="tag">强化学习</span></div>
+    <div class="summary" style="color:#2d3436; font-size:13px; border-left:3px solid #0984e3; padding-left:10px; margin-top:6px;">💡 编辑解读：OPD 与 GRPO 之争是 post-training 路线的核心分歧。该工作从「计算效率」这一务实角度切入，为选择蒸馏还是 RL 提供量化依据，对工业界训练策略有参考价值。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · 2026-11-05 · cs.CL</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.08438">Understanding AI from the Inside: The State of Mechanistic Interpretability for AI Safety</a></div>
+    <div class="summary">一篇关于机制可解释性（Mechanistic Interpretability）在 AI Safety 中应用现状的系统性综述，梳理核心方法、关键发现与开放挑战。</div>
+    <div class="tags"><span class="tag">可解释性</span><span class="tag">AI Safety</span><span class="tag">综述</span></div>
+    <div class="summary" style="color:#2d3436; font-size:13px; border-left:3px solid #0984e3; padding-left:10px; margin-top:6px;">💡 编辑解读：随着模型能力跃升，「从内部理解 AI」从学术兴趣变为安全刚需。该综述为想要进入 MechInterp 领域的研究者提供了清晰地图，值得收藏精读。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · 2026-11-05 · cs.CV</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.08485">Where and Why is Grounded Reasoning Useful?</a></div>
+    <div class="summary">系统评估视觉推理中「定位推理」（grounded reasoning）的收益与局限，分析模型输出文本坐标对复杂视觉推理任务的实际贡献。</div>
+    <div class="tags"><span class="tag">多模态</span><span class="tag">视觉推理</span><span class="tag">Grounding</span></div>
+    <div class="summary" style="color:#2d3436; font-size:13px; border-left:3px solid #0984e3; padding-left:10px; margin-top:6px;">💡 编辑解读：Grounding 是否真的能提升推理，还是只是「花架子」？该工作给出了实证答案，对设计多模态推理策略具有重要指导意义。</div>
+  </div>
+</div>
+
+<!-- ==================== 具身智能 ==================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>具身智能 · 机器人动态</div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 2026-11-06</div>
+    <div class="title"><a href="https://archyde.com/agibot-g2-robots-complete-1730-tasks-in-24-hour-shanghai-test">智元六台精灵 G2 在上海便利店完成 24 小时轮班：累计 1730 项任务</a></div>
+    <div class="summary">六台智元 G2 机器人在上海便利店进行 24 小时连续测试，完成 683 次迎宾、369 次商品递送、147 次咖啡制作、126 次热食订单等任务，其中两台未达标。</div>
+    <div class="tags"><span class="tag hot">真实部署</span><span class="tag">智元机器人</span><span class="tag">商业场景</span></div>
+    <div class="summary" style="color:#2d3436; font-size:13px; border-left:3px solid #0984e3; padding-left:10px; margin-top:6px;">💡 编辑解读：从实验室 demo 到 24 小时真实轮班，智元的规模化部署测试标志着人形机器人开始接受「商业环境压力测试」。未达标的两台也提醒我们：可靠性仍是量产前必须跨过的坎。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 2026-11-06</div>
+    <div class="title"><a href="https://finance.sina.com.cn/roll/2026-11-04/doc-inixpmfi8224010.shtml">智元彭志辉：累计约 2 万台，重心转向规模部署</a></div>
+    <div class="summary">智元联合创始人彭志辉（稚晖君）在创新日后表示，智元已累计生产约 2 万台机器人，公司重心从研发转向规模化部署。</div>
+    <div class="tags"><span class="tag">量产</span><span class="tag">智元机器人</span><span class="tag">战略转型</span></div>
+    <div class="summary" style="color:#2d3436; font-size:13px; border-left:3px solid #0984e3; padding-left:10px; margin-top:6px;">💡 编辑解读：2 万台是重要里程碑，意味着智元已跨过「从 0 到 1」的量产门槛。接下来「从 1 到 N」的关键不再是造出来，而是稳定运行并产生真实商业价值。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 2026-11-06</div>
+    <div class="title"><a href="https://finance.sina.com.cn/tech/roll/2026-11-06/doc-inixucth5595454.shtml">源策未来发布全身控制模型 Anchor 1，权重年底前分阶段开源</a></div>
+    <div class="summary">Anchor 1 是低层「System 0」全身控制模型，仅追踪骨盆、双腕、双脚踝五个目标，训练数据约 1081 小时，权重将于 2026 年底前分阶段开源。</div>
+    <div class="tags"><span class="tag hot">开源</span><span class="tag">运动控制</span><span class="tag">人形机器人</span></div>
+    <div class="summary" style="color:#2d3436; font-size:13px; border-left:3px solid #0984e3; padding-left:10px; margin-top:6px;">💡 编辑解读：全身控制是具身智能的「小脑」层，开源高质量控制模型将降低整个行业门槛。期待 Anchor 1 成为类似 LLaMA 在机器人领域的基座。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 2026-11-06</div>
+    <div class="title"><a href="https://autonews.gasgoo.com/articles/news/lightwheel-ai-unitree-enter-partnership-bridging-full-pipeline-from-robot-training-to-deployment-2118706503246323713">光轮智能与宇树科技达成战略合作，打通训练到部署全链路</a></div>
+    <div class="summary">光轮智能提供数据、仿真评估与部署反馈，宇树提供硬件、运动控制与感知能力，双方共建从训练到部署的完整 pipeline。</div>
+    <div class="tags"><span class="tag">宇树科技</span><span class="tag">数据闭环</span><span class="tag">仿真到现实</span></div>
+    <div class="summary" style="color:#2d3436; font-size:13px; border-left:3px solid #0984e3; padding-left:10px; margin-top:6px;">💡 编辑解读：Sim2Real 数据闭环是具身智能规模化训练的核心瓶颈。光轮（数据+仿真）与宇树（硬件+控制）的互补合作，代表了一种务实的产业分工模式。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 2026-11-05</div>
+    <div class="title"><a href="https://www.notateslaapp.com/news/4959/musk-tesla-will-rent-optimus-robots-instead-of-selling-them">马斯克：特斯拉可能以租赁而非出售方式提供 Optimus</a></div>
+    <div class="summary">马斯克在 Baron 投资大会上表示，Optimus 很可能采用租赁模式而非直接销售，首批外部客户交付预计在 2027 年底。</div>
+    <div class="tags"><span class="tag">Tesla</span><span class="tag">Optimus</span><span class="tag">商业模式</span></div>
+    <div class="summary" style="color:#2d3436; font-size:13px; border-left:3px solid #0984e3; padding-left:10px; margin-top:6px;">💡 编辑解读：RaaS（Robot-as-a-Service）模式可降低客户初始投入，加速市场渗透，但也对特斯拉的运维与资金周转能力提出更高要求。租赁模式或成为人形机器人商业化的主流路径。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · 2026-11-05 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.08407">Social Humanoid: Socially Responsive Human-Humanoid Interaction</a></div>
+    <div class="summary">现有人形机器人多为「独居智能体」，难以与人类进行物理协调。该工作提出 Social Humanoid，让机器人能够感知并适应人类的动作意图，实现双向物理交互。</div>
+    <div class="tags"><span class="tag">人机协作</span><span class="tag">人形机器人</span><span class="tag">社交智能</span></div>
+    <div class="summary" style="color:#2d3436; font-size:13px; border-left:3px solid #0984e3; padding-left:10px; margin-top:6px;">💡 编辑解读：从「单人任务」到「双人协作」是具身智能的重要跃迁。Social Humanoid 关注的不仅是「抓得多准」，更是「与人配合得多自然」，这正是机器人进入人类生活场景的关键能力。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · 2026-11-05 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.08413">T3R: Training-Free Two-Stage Token Refinement Towards Efficient and Robust VLA Models</a></div>
+    <div class="summary">提出免训练的两阶段 token 精炼方法，减少 VLA 模型推理时的视觉 token 数量，在多相机场景下显著降低计算开销同时保持性能。</div>
+    <div class="tags"><span class="tag">VLA</span><span class="tag">推理加速</span><span class="tag">免训练</span></div>
+    <div class="summary" style="color:#2d3436; font-size:13px; border-left:3px solid #0984e3; padding-left:10px; margin-top:6px;">💡 编辑解读：VLA 模型推理昂贵是部署痛点。T3R 无需额外训练即可压缩视觉 token，对边缘部署与多相机场景尤为实用，思路与 LLM 的 token pruning 一脉相承。</div>
+  </div>
+</div>
+
+<!-- ==================== 开源动态 ==================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">💻</span>开源动态 · GitHub / HuggingFace</div>
+
+  <div class="card">
+    <div class="source">GitHub · 近期热门</div>
+    <div class="title"><a href="https://github.com/bytedance/axion1_0">ByteDance/axion1_0</a></div>
+    <div class="summary">字节跳动开源的 Agent 模型，以「高质量数据 + 极简训练配方」实现前沿 Agent 能力，强调数据质量而非复杂架构。</div>
+    <div class="tags"><span class="tag hot">Agent</span><span class="tag">字节跳动</span><span class="tag">开源模型</span></div>
+    <div class="summary" style="color:#2d3436; font-size:13px; border-left:3px solid #0984e3; padding-left:10px; margin-top:6px;">💡 编辑解读：Axion 的「极简配方」理念与 DeepSeek 一脉相承——不堆架构，靠数据质量取胜。这为中小团队复现 Agent 能力提供了可行路径，值得关注其技术报告。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 具身智能基础设施</div>
+    <div class="title"><a href="https://github.com/Genesis-Embodied-AI/genesis-world">Genesis-Embodied-AI/genesis-world</a></div>
+    <div class="summary">⭐ 30.2k · 通用机器人与具身 AI 学习的仿真平台，支持多种物理引擎与并行模拟，成为具身智能研究的主流基础设施。</div>
+    <div class="tags"><span class="tag">仿真平台</span><span class="tag">具身智能</span><span class="tag">开源基础设施</span></div>
+    <div class="summary" style="color:#2d3436; font-size:13px; border-left:3px solid #0984e3; padding-left:10px; margin-top:6px;">💡 编辑解读：Genesis 的星数已超 30k，稳居具身智能仿真赛道头部。优秀的开源仿真工具正在降低整个领域的研究门槛，加速算法迭代。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 具身智能资源聚合</div>
+    <div class="title"><a href="https://github.com/TianxingChen/Embodied-AI-Guide">TianxingChen/Embodied-AI-Guide</a></div>
+    <div class="summary">⭐ 16.9k · Lumina 具身智能社区维护的技术指南，覆盖论文、项目、课程、工具、数据集与招聘信息，是入门与追踪具身智能的优质资源库。</div>
+    <div class="tags"><span class="tag">Awesome List</span><span class="tag">具身智能</span><span class="tag">学习资源</span></div>
+    <div class="summary" style="color:#2d3436; font-size:13px; border-left:3px solid #0984e3; padding-left:10px; margin-top:6px;">💡 编辑解读：优质的中文具身智能资源聚合项目，适合作为研究入口。社区驱动的知识整理正在填补语言壁垒带来的信息差。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · NVIDIA 开源</div>
+    <div class="title"><a href="https://github.com/NVlabs/LongLive">NVlabs/LongLive</a></div>
+    <div class="summary">⭐ 2.9k · NVIDIA 开源的长视频生成 / 世界模型 / 世界动作模型基础设施，支持具身智能场景的大规模训练与评估。</div>
+    <div class="tags"><span class="tag">世界模型</span><span class="tag">视频生成</span><span class="tag">NVIDIA</span></div>
+    <div class="summary" style="color:#2d3436; font-size:13px; border-left:3px solid #0984e3; padding-left:10px; margin-top:6px;">💡 编辑解读：世界模型是具身智能的「想象力引擎」。NVIDIA 的开源布局表明其正在构建从仿真到世界模型的完整工具链，为行业提供底层支撑。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily Papers · 2026-11-09</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.08376">Muir: Linear Attention with Sensitivity-Allocated Gating and Matched-Filter Read</a></div>
+    <div class="summary">提出带灵敏度分配门控与匹配滤波读取的线性注意力机制，在保持线性复杂度的同时提升长序列建模质量。</div>
+    <div class="tags"><span class="tag">注意力机制</span><span class="tag">长序列</span><span class="tag">高效架构</span></div>
+    <div class="summary" style="color:#2d3436; font-size:13px; border-left:3px solid #0984e3; padding-left:10px; margin-top:6px;">💡 编辑解读：线性注意力是突破 Transformer 长度瓶颈的重要方向。Muir 的「灵敏度门控」设计为长上下文模型提供了新的效率-质量权衡方案。</div>
+  </div>
+</div>
+
+<!-- ==================== 产业动态 ==================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🏭</span>产业动态</div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 2026-11-05</div>
+    <div class="title"><a href="https://roboticsandautomationnews.com/2026/11/05/pudu-robotics-unveils-one-brain-multiple-embodiments-strategy-and-showcases-full-portfolio-in-european-first/106725/">普渡发布「一脑多形态」战略，六条产品线共享同一 AI 栈</a></div>
+    <div class="summary">普渡在阿姆斯特丹首届欧洲合作伙伴峰会展示基于 PuduFM 模型与 PuduAgent OS 的六条产品线，推进「一个大脑、多种形态」战略。</div>
+    <div class="tags"><span class="tag">普渡</span><span class="tag">平台化</span><span class="tag">欧洲扩张</span></div>
+    <div class="summary" style="color:#2d3436; font-size:13px; border-left:3px solid #0984e3; padding-left:10px; margin-top:6px;">💡 编辑解读：「一脑多形态」是商用机器人的理性路径——用同一套 AI 栈驱动配送、清洁、交互等不同形态，最大化软件复用率，降低边际开发成本。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 2026-11-07</div>
+    <div class="title"><a href="https://finance.sina.com.cn/tob/2026-11-07/doc-inixwhsk8404468.shtml">安波福与它石智航深化合作，年底前部署百台级 A 系列机器人</a></div>
+    <div class="summary">进博会期间，安波福（Aptiv）与它石智航签署扩大合作协议，计划 2026 年底前部署数百台 TARS 工业系列机器人。</div>
+    <div class="tags"><span class="tag">工业部署</span><span class="tag">安波福</span><span class="tag">它石智航</span></div>
+    <div class="summary" style="color:#2d3436; font-size:13px; border-left:3px solid #0984e3; padding-left:10px; margin-top:6px;">💡 编辑解读：汽车零部件巨头批量采购国产机器人，标志着工业机器人开始进入汽车供应链核心环节。百台级订单是国产机器人商业化的重要验证。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 2026-11-05</div>
+    <div class="title"><a href="https://www.worldlabs.ai/blog/atlas-realtime">World Labs 发布 Frameboy，浏览器实时探索 Atlas 世界</a></div>
+    <div class="summary">World Labs 推出研究预览产品 Frameboy，可从优化版 Atlas 模型以最高 15fps 流式传输帧，支持从图像或文本实时生成可探索的 3D 场景。</div>
+    <div class="tags"><span class="tag">世界模型</span><span class="tag">3D 生成</span><span class="tag">实时渲染</span></div>
+    <div class="summary" style="color:#2d3436; font-size:13px; border-left:3px solid #0984e3; padding-left:10px; margin-top:6px;">💡 编辑解读：从生成静态 3D 到实时可交互，World Labs 正在把「世界模型」从概念推向产品。这类技术未来或成为具身智能的「训练沙盒」与「数据工厂」。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 2026-11-04</div>
+    <div class="title"><a href="https://www.21jingji.com/article/20261104/herald/75bb5a2041794e92fa155d9ea3ec8d61.html">蚂蚁灵波携机器人通用大脑亮相乌镇，药房场景已在国大药房运行</a></div>
+    <div class="summary">乌镇世界互联网大会上，蚂蚁灵波展示与国大药房共建的智慧药房：机器人完成接单、拣药、复核、打包全流程，已在门店实际运行。</div>
+    <div class="tags"><span class="tag">蚂蚁灵波</span><span class="tag">零售场景</span><span class="tag">通用大脑</span></div>
+    <div class="summary" style="color:#2d3436; font-size:13px; border-left:3px solid #0984e3; padding-left:10px; margin-top:6px;">💡 编辑解读：药房是机器人落地的「高价值低频场景」——SKU 规整、流程标准、人力成本高。蚂蚁灵波的通用大脑若能跑通药房，复制到其他零售业态的路径将更清晰。</div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今天的日报呈现出一条清晰的主线：AI 正在从「模型竞赛」走向「世界构建」。研究侧，Scientist World 试图为 AI-Scientist 打造可生长的学术生态；产业侧，Agility 上市、智元量产 2 万台、普渡「一脑多形态」，都在回答同一个问题——如何让智能体在真实世界中持续运转。具身智能赛道尤其热闹，从光轮与宇树的数据闭环合作，到源策未来开源全身控制模型，基础设施正在快速成熟。值得关注的是，中国叫停软银收购 ABB 机器人业务，标志着机器人产业已被纳入地缘政治棋盘，未来供应链本土化与自主可控将成为主旋律。对于研究者和开发者而言，Genesis、Embodied-AI-Guide、LongLive 等开源工具链的完善，正在把具身智能的研究门槛拉到历史低位。这是一个「工具过剩、想法稀缺」的时代——剩下的问题只有一个：你想让机器人做什么？</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · Generated on 2026-11-09</p>
+</div>
+
+</div>
+</body>
+</html>

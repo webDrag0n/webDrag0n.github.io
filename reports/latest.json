@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-08T17:08:44.014813+00:00",
+  "generated_at": "2026-11-09T00:05:44.125518+00:00",
   "papers": {
-    "date": "2026-11-08",
-    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261108.html",
-    "overview": "今日机器人赛道动作密集：中国监管叫停软银 54 亿美元收购 ABB 机器人业务，Agility 通过 SPAC 在纳斯达克上市（代码 AGLT），智元六台精灵 G2 在上海便利店完成 24 小时轮班实测。学术侧，AI Scientist 概念持续升温（Scientist World、Terminal-Bench 2），扩散语言模型推理加速（SpecCTMC、Measured Coupling），On-Policy Distillation 训练效率研究两篇齐发。开源方面，Ai2 发布开源机器人学习仿真环境 ToyBlocks，源策未来 Anchor 1 全身控制模型宣布年底前分阶段开源。",
-    "digest": "今天的两条重磅都来自产业侧：中国叫停软银收购 ABB 机器人业务，意味着机器人核心资产正式进入国家安全视野，跨境并购窗口正在收窄；Agility 登陆纳斯达克则标志着人形机器人开始接受二级市场的严格审视——3 亿美元订单承诺是未来两年最大的兑现压力。学术侧值得关注的暗线是\"蒸馏复兴\"：两篇 OPD 论文同日出现，配合 StepBack 对 test-time compute 的精细化，后训练与推理两端都在向\"更少算力、更精准信号\"演进，这对算力受限的玩家是明确利好。扩散语言模型在并行解码上的理论突破（SpecCTMC）则是长期变量，若开源生态跟进，2027 年架构格局可能重新洗牌。"
+    "date": "2026-11-09",
+    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261109.html",
+    "overview": "本周 AI 研究焦点集中在 AI-Scientist 基础设施（Scientist World 为 AI 科学家构建研究世界）与高效推理（StepBack 步骤级错误定位重采样、T3R 免训练 VLA 加速）。具身智能赛道热度不减：Agility 登陆纳斯达克成为首家纯正人形机器人上市公司，中国叫停软银 54 亿美元收购 ABB 机器人业务引发地缘政治震动。开源方面，ByteDance Axion 1.0 以极简配方实现前沿 Agent 能力，Genesis 仿真平台持续领跑具身智能基础设施。",
+    "digest": "今天的日报呈现出一条清晰的主线：AI 正在从「模型竞赛」走向「世界构建」。研究侧，Scientist World 试图为 AI-Scientist 打造可生长的学术生态；产业侧，Agility 上市、智元量产 2 万台、普渡「一脑多形态」，都在回答同一个问题——如何让智能体在真实世界中持续运转。具身智能赛道尤其热闹，从光轮与宇树的数据闭环合作，到源策未来开源全身控制模型，基础设施正在快速成熟。值得关注的是，中国叫停软银收购 ABB 机器人业务，标志着机器人产业已被纳入地缘政治棋盘，未来供应链本土化与自主可控将成为主旋律。对于研究者和开发者而言，Genesis、Embodied-AI-Guide、LongLive 等开源工具链的完善，正在把具身智能的研究门槛拉到历史低位。这是一个「工具过剩、想法稀缺」的时代——剩下的问题只有一个：你想让机器人做什么？"
   },
   "media": {
     "date": "2026-11-09",
