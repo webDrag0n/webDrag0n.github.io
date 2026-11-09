@@ -1,5 +1,5 @@
 {
-  "updated_at": "12:15",
+  "updated_at": "12:30",
   "weather": {
     "main": "23°C Partly Cloudy ",
     "sub": "今日 19~27°C，湿度 58%，体感 17°C"
@@ -13,7 +13,7 @@
     {
       "time": "12:30",
       "text": "MC 服务器跟进（最后一次轻提）：bot 因反作弊砍树卡了三天了，问他周末考虑得怎么样，强调「不着急",
-      "done": false
+      "done": true
     },
     {
       "time": "15:30",
