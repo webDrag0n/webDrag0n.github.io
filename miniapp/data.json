@@ -1,5 +1,5 @@
 {
-  "updated_at": "12:30",
+  "updated_at": "13:01",
   "weather": {
     "main": "23°C Partly Cloudy ",
     "sub": "今日 19~27°C，湿度 58%，体感 17°C"
@@ -43,7 +43,7 @@
     {
       "time": "13:00",
       "text": "整理：把 learning/INDEX.md 更新到最新（收录 11-09 新笔记），确保目录路径无",
-      "done": false
+      "done": true
     },
     {
       "time": "14:00",
