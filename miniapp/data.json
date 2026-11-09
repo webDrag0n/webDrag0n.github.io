@@ -1,5 +1,5 @@
 {
-  "updated_at": "16:34",
+  "updated_at": "17:32",
   "weather": {
     "main": "25°C Sunny",
     "sub": "今日 19~27°C，湿度 53%，体感 21°C"
@@ -23,7 +23,7 @@
     {
       "time": "17:30",
       "text": "傍晚提醒：Anthropic 挂牌临近，留意 IPO 定价/路演最新消息，有料就分享",
-      "done": false
+      "done": true
     },
     {
       "time": "20:30",
