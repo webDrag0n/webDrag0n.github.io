@@ -1,8 +1,8 @@
 {
-  "updated_at": "13:01",
+  "updated_at": "14:01",
   "weather": {
-    "main": "23°C Partly Cloudy ",
-    "sub": "今日 19~27°C，湿度 58%，体感 17°C"
+    "main": "25°C Sunny",
+    "sub": "今日 19~27°C，湿度 53%，体感 18°C"
   },
   "todos": [
     {
@@ -48,7 +48,7 @@
     {
       "time": "14:00",
       "text": "自我：MC bot 进程状态巡检（ps 检查 pid 是否存活、最近日志有没有异常），只记录不操作",
-      "done": false
+      "done": true
     },
     {
       "time": "16:30",
