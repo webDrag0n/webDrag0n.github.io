@@ -1,8 +1,8 @@
 {
-  "updated_at": "15:30",
+  "updated_at": "16:34",
   "weather": {
     "main": "25°C Sunny",
-    "sub": "今日 19~27°C，湿度 51%，体感 19°C"
+    "sub": "今日 19~27°C，湿度 53%，体感 21°C"
   },
   "todos": [
     {
@@ -53,7 +53,7 @@
     {
       "time": "16:30",
       "text": "刷演出：广深 11 月底-12 月 livehouse 新官宣，有才更新 music.md",
-      "done": false
+      "done": true
     },
     {
       "time": "19:00",
