@@ -1,5 +1,5 @@
 {
-  "updated_at": "09:15",
+  "updated_at": "10:30",
   "weather": {
     "main": "16°C Partly Cloudy ",
     "sub": "今日 16~23°C，湿度 50%，体感 9°C"
@@ -8,7 +8,7 @@
     {
       "time": "10:30",
       "text": "周二打气：轻松问候，关心昨晚休息，「周二啦，打起精神来，中午吃点好的」",
-      "done": false
+      "done": true
     },
     {
       "time": "12:30",
