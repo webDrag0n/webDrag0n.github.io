@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-09T17:07:53.305700+00:00",
+  "generated_at": "2026-11-10T00:05:48.238491+00:00",
   "papers": {
-    "date": "2026-11-09",
-    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261109.html",
-    "overview": "本周 AI 研究焦点集中在 AI-Scientist 基础设施（Scientist World 为 AI 科学家构建研究世界）与高效推理（StepBack 步骤级错误定位重采样、T3R 免训练 VLA 加速）。具身智能赛道热度不减：Agility 登陆纳斯达克成为首家纯正人形机器人上市公司，中国叫停软银 54 亿美元收购 ABB 机器人业务引发地缘政治震动。开源方面，ByteDance Axion 1.0 以极简配方实现前沿 Agent 能力，Genesis 仿真平台持续领跑具身智能基础设施。",
-    "digest": "今天的日报呈现出一条清晰的主线：AI 正在从「模型竞赛」走向「世界构建」。研究侧，Scientist World 试图为 AI-Scientist 打造可生长的学术生态；产业侧，Agility 上市、智元量产 2 万台、普渡「一脑多形态」，都在回答同一个问题——如何让智能体在真实世界中持续运转。具身智能赛道尤其热闹，从光轮与宇树的数据闭环合作，到源策未来开源全身控制模型，基础设施正在快速成熟。值得关注的是，中国叫停软银收购 ABB 机器人业务，标志着机器人产业已被纳入地缘政治棋盘，未来供应链本土化与自主可控将成为主旋律。对于研究者和开发者而言，Genesis、Embodied-AI-Guide、LongLive 等开源工具链的完善，正在把具身智能的研究门槛拉到历史低位。这是一个「工具过剩、想法稀缺」的时代——剩下的问题只有一个：你想让机器人做什么？"
+    "date": "2026-11-10",
+    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261110.html",
+    "overview": "今日 AI 圈的核心关键词是「Agent 落地」与「推理成本」。NVIDIA 提出 CPU-ARC 把 LLM 推理痕迹编译成 CPU 可执行的「推理缓存」，调用成本较源模型降低 16-291 倍；LowRAM 通过键值非对称压缩把 KV cache 压缩率推到 26.9×。具身智能侧，两篇 arXiv 论文同时主张「通用模型 + 软件接口」是机器人泛化的正解，而智元 G2、Apptronik Apollo、Figure 03 的密集落地信号，加上软银/ABB 在华业务的政策变数，让赛道进入「量产与地缘」双重拐点。",
+    "digest": "今天最值得关注的是一个悄悄形成的共识：让 Agent 真正干活的瓶颈正在从「模型能力」转向「执行成本与接口」。CPU-ARC 和 LowRAM 一个从推理复用、一个从 KV cache 结构入手，指向同一个方向——未来的 Agent 系统里，昂贵的大模型只该出现在「非解不可」的时刻，其余交给缓存、压缩和小模型。这对商业化意义很大，意味着 Agent 产品的推理成本曲线还有数量级下降空间。\n  机器人方向今天信号密度极高。两篇论文（Agentic Manipulation Policies、Computer-Use Agents as Embodied Generalists）不约而同地质疑 VLA/WAM 这条 specialist 路线，主张回到「通用模型 + 数字软件接口」的 embodied 范式，这和当前 Figure、Apptronik、智元用真实场景数据堆量产能力的做法形成有趣对照——学术界在反思架构，工业界在堆数据，短期内后者似乎更占上风。此外软银/ABB 因中国审查考虑剥离中国业务，标志地缘政治正式成为机器人产业的核心变量，值得持续跟踪。建议读者把「数据规模 × 部署密度」作为下一阶段评估具身智能公司的核心指标。"
   },
   "media": {
     "date": "2026-11-10",

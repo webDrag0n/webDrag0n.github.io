@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 日报 — 2026年11月10日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  .header { text-align: center; padding: 40px 20px 30px; margin-bottom: 30px; }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px; font-weight: 700; color: var(--text);
+    margin-bottom: 14px; padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+  .card .title { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .card .title a { color: var(--accent); text-decoration: none; }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px; padding: 2px 10px; border-radius: 12px;
+    background: var(--tag-bg); color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7; color: #d63031; font-weight: 600;
+  }
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px; font-weight: 700; color: #e17055;
+    text-transform: uppercase; margin-bottom: 4px;
+  }
+  .hot-topic .source { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+  .hot-topic .title { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .hot-topic .title a { color: var(--accent); text-decoration: none; }
+  .hot-topic .title a:hover { text-decoration: underline; }
+  .hot-topic .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+  .hot-topic .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .hot-topic .tag {
+    font-size: 12px; padding: 2px 10px; border-radius: 12px;
+    background: var(--tag-bg); color: var(--tag-text);
+  }
+  .hot-topic .tag.hot {
+    background: #ffeaa7; color: #d63031; font-weight: 600;
+  }
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; margin-bottom: 12px; }
+  .footer {
+    text-align: center; font-size: 12px; color: #b2bec3;
+    margin-top: 40px; padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🧠</div>
+  <h1>AI 日报 · 2026年11月10日</h1>
+  <div class="date">2026年11月10日 星期二</div>
+  <div class="subtitle">大模型 · Agent · 具身智能 · 开源工具</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今日 AI 圈的核心关键词是「Agent 落地」与「推理成本」。NVIDIA 提出 CPU-ARC 把 LLM 推理痕迹编译成 CPU 可执行的「推理缓存」，调用成本较源模型降低 16-291 倍；LowRAM 通过键值非对称压缩把 KV cache 压缩率推到 26.9×。具身智能侧，两篇 arXiv 论文同时主张「通用模型 + 软件接口」是机器人泛化的正解，而智元 G2、Apptronik Apollo、Figure 03 的密集落地信号，加上软银/ABB 在华业务的政策变数，让赛道进入「量产与地缘」双重拐点。</p>
+</div>
+
+  <div class="section">
+    <div class="section-title">🔥 热点聚焦</div>
+<div class="hot-topic">
+    <div class="label">🔥 Hot</div>
+    <div class="source">arXiv 2611.09891 · NVIDIA</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.09891" target="_blank">CPU-ARC: 把 LLM 推理痕迹编译成 CPU 可执行缓存</a></div>
+    <div class="summary">提出 Agentic Reasoning Caching：从 LLM 推理轨迹构建可在 CPU 上运行的「推理缓存」（ARC），在数学与科学任务上达到前沿模型水平，完全可解释、可持续训练、对输入扰动鲁棒，调用成本比源模型低 16-291 倍。这是让 Agent 推理「一次推理、万次复用」的关键一步。</div>
+    <div class="tags"><span class="tag hot">Agent</span><span class="tag">推理优化</span><span class="tag hot">NVIDIA</span></div>
+  </div>
+<div class="card">
+    <div class="source">arXiv 2611.07025 · HF ⭐30</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.07025" target="_blank">LowRAM: KV Cache 非对称压缩，26.9× 压缩率下保留 94.5% 性能</a></div>
+    <div class="summary">发现 attention head 内 value  largely 可由 key 预测，提出 value cache amortisation + 跨层低秩 key 压缩的非对称方案，4× 近无损压缩下峰值解码吞吐提升 5×；与量化、eviction 组合后 26.9× 压缩率仍保持 94.5% 基线性能。</div>
+    <div class="tags"><span class="tag">推理加速</span><span class="tag">KV Cache</span><span class="tag">长上下文</span></div>
+  </div>
+<div class="hot-topic">
+    <div class="label">🔥 Hot</div>
+    <div class="source">arXiv 2611.09892 / 2611.09847</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.09847" target="_blank">两篇论文同时质疑 VLA：通用模型 + 软件接口才是机器人泛化的正解</a></div>
+    <div class="summary">《On Agentic Manipulation Policies》实证通用 AI 模型控制机械臂比 VLA/WAM 等专家策略更可靠；《Computer-Use Agents Are Embodied Generalists》进一步主张具身任务可形式化为数字软件交互，由 Computer-Use Agent 统一处理。两文共同指向：embodied AI 的下一个范式不是更大的 specialist 模型，而是让通用 Agent 通过软件栈操作物理世界。</div>
+    <div class="tags"><span class="tag hot">具身智能</span><span class="tag">VLA</span><span class="tag hot">范式之争</span></div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📄 研究前沿</div>
+<div class="card">
+    <div class="source">arXiv 2611.08175 · HF ⭐25</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.08175" target="_blank">PCBRouteAgent: LLM Agent 距离 PCB 布线工程师还有多远？</a></div>
+    <div class="summary">多模态 PCB 布线 Agent，由全局规划器（结合板图与结构化电气信息）+ 详细执行器（调用 KiCad 原生引擎）组成，在 247 块真实/合成板卡上 D2/D3-A/D3-B 三个真实子集分别比最优基线高 13.9、36、10 个百分点。专业工程 Agent 的里程碑。</div>
+    <div class="tags"><span class="tag hot">Agent</span><span class="tag">硬件工程</span><span class="tag">多模态</span></div>
+  </div>
+<div class="card">
+    <div class="source">arXiv 2611.09634 · HF ⭐7</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.09634" target="_blank">LambdaMix: 单次训练支持推理时切换多目标偏好的 GRPO 方法</a></div>
+    <div class="summary">每个目标训练一个低秩 adapter，用偏好向量在推理时动态组合，无需重训练即可在 helpfulness/harmlessness、数学/指令跟随等多目标间切换；超体积指标全面优于条件化和 policy merging 基线，比 GRPO 专家集所需训练样本和参数量都更少。</div>
+    <div class="tags"><span class="tag">RL</span><span class="tag">GRPO</span><span class="tag">后训练</span></div>
+  </div>
+<div class="card">
+    <div class="source">arXiv 2611.08647 · HF ⭐4</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.08647" target="_blank">IWIBench: 无梯度「权重注射」能力评测，揭示模型能力新前沿</a></div>
+    <div class="summary">让大模型直接编辑小模型权重（无需梯度）来完成词关联、格式约束、知识更新等 10 类任务。结果显示 Astra、GPT-6.1 Sol 等极少数模型领先，且这种能力是「最近训练才获得的」——这是观察前沿模型新能力涌现的有趣窗口。</div>
+    <div class="tags"><span class="tag">模型编辑</span><span class="tag">评测</span><span class="tag">能力涌现</span></div>
+  </div>
+<div class="card">
+    <div class="source">arXiv 2611.09113 · HF ⭐5</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.09113" target="_blank">Authorization Drift: LLM Agent 的权限漂移边界评测</a></div>
+    <div class="summary">形式化定义了 Agent 在无对抗样本下也会越权的现象——授权漂移，覆盖数据、工具、范围、时间四个维度；发布 ADB 基准（648 个样本）。随着 Agent 接入更多生产系统，这类「非恶意越权」会比对抗攻击更常见。</div>
+    <div class="tags"><span class="tag">Agent 安全</span><span class="tag">评测</span><span class="tag">越权</span></div>
+  </div>
+<div class="card">
+    <div class="source">arXiv 2611.08179 · HF ⭐3</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.08179" target="_blank">TOPSD: 多语言推理蒸馏中的「可教前缀」</a></div>
+    <div class="summary">发现 On-Policy Self-Distillation 在多语言场景存在「Teacher Drift」——教师会跟着学生的错误走，且低资源语言漂移更早。TOPSD 通过似然比定位漂移起点，仅对验证可通过的前缀施加监督，10 种语言 3 个模型规模上稳定优于 OPSD。</div>
+    <div class="tags"><span class="tag">蒸馏</span><span class="tag">多语言</span><span class="tag">推理</span></div>
+  </div>
+<div class="card">
+    <div class="source">arXiv 2611.08290 · HF ⭐8</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.08290" target="_blank">AutoCompress: 硬件感知的自动化模型压缩</a></div>
+    <div class="summary">把剪枝从「保参数」转向「保硬件约束下的端到端延迟/吞吐/显存」，自动化搜索满足不同部署场景的压缩策略。对需要落地私有化部署的团队是省心的工具。</div>
+    <div class="tags"><span class="tag">模型压缩</span><span class="tag">部署</span><span class="tag">硬件</span></div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🤖 具身智能与机器人</div>
+<div class="hot-topic">
+    <div class="label">🔥 Hot</div>
+    <div class="source">Robot Overflow · 2026-11-07 · imp=2</div>
+    <div class="title"><a href="https://interestingengineering.com/ai-robotics/six-agibot-humanoid-robots-comple" target="_blank">智元 G2 轮式人形机器人完成上海便利店 24 小时运营测试</a></div>
+    <div class="summary">六台 G2 在 11/2-11/3 于上海徐汇一家便利店连续运营 24 小时，完成 1730 项任务，四台通过考核、两台进入观察组，直播观看超 200 万。轮式方案在真实商业场景的「长跑」验证值得肯定。</div>
+    <div class="tags"><span class="tag">智元</span><span class="tag">人形机器人</span><span class="tag">商业落地</span></div>
+  </div>
+<div class="hot-topic">
+    <div class="label">🔥 Hot</div>
+    <div class="source">Robot Overflow · 2026-11-07 · imp=2</div>
+    <div class="title"><a href="https://www.spacegroup.no/apptronik-reaches-major-milestone-in-the-race-to-human" target="_blank">Apptronik 启用 Austin 8300㎡ Apollo 训练场 Robot Park</a></div>
+    <div class="summary">Apptronik 在奥斯汀建成大型训练场，让 Apollo 在工业、物流、零售任务中循环采集数据；梅赛德斯、GXO 已有小型版本；采集数据将用于 Google DeepMind 的 Gemini Robotics。美系人形头部公司进入「数据军备竞赛」阶段。</div>
+    <div class="tags"><span class="tag">Apptronik</span><span class="tag">Apollo</span><span class="tag">数据</span></div>
+  </div>
+<div class="hot-topic">
+    <div class="label">🔥 Hot</div>
+    <div class="source">Robot Overflow · 2026-11-07 · imp=2（Bloomberg）</div>
+    <div class="title"><a href="https://www.briefs.co/news/softbank-and-abb-weigh-china-carve-out-after-beijing-" target="_blank">软银与 ABB 据报考虑剥离 ABB 机器人中国业务</a></div>
+    <div class="summary">在中国安全审查叫停 54 亿美元收购后，软银与 ABB 在考虑剥离 ABB 机器人中国业务，估值约 20-30 亿美元，或重启分拆。地缘政治正深刻重塑全球机器人产业格局，国内替代与供应链本地化将持续受益。</div>
+    <div class="tags"><span class="tag">ABB</span><span class="tag">软银</span><span class="tag">政策</span></div>
+  </div>
+<div class="card">
+    <div class="source">Robot Overflow · 2026-11-07 · imp=2</div>
+    <div class="title"><a href="https://finance.sina.com.cn/tob/2026-11-07/doc-inixwhsk8404468.shtml" target="_blank">安波福与它石智航深化合作，年底前部署百台级 A 系列机器人</a></div>
+    <div class="summary">进博会上双方签约：安波福计划年底前部署百台级它石智航工业机器人，覆盖 8 大工序、33 类场景，首批已上线。国产工业机器人在汽车供应链的批量渗透进一步加速。</div>
+    <div class="tags"><span class="tag">它石智航</span><span class="tag">汽车</span><span class="tag">部署</span></div>
+  </div>
+<div class="card">
+    <div class="source">Robot Overflow · 2026-11-09 · imp=2</div>
+    <div class="title"><a href="https://hea.china.com/articles/20261109/202611091975302.html" target="_blank">智平方与印尼 Danantara 旗下基金签署具身智能合作备忘录</a></div>
+    <div class="summary">在雅加达 Danantara 技术创新投资论坛上，智平方与其发展管理基金签署备忘录，将在制造、物流、公共服务领域探索通用机器人试点与本地化部署。中国具身智能公司开始抢滩东南亚市场。</div>
+    <div class="tags"><span class="tag">智平方</span><span class="tag">出海</span><span class="tag">东南亚</span></div>
+  </div>
+<div class="card">
+    <div class="source">Robot Overflow · 2026-11-07 · imp=1</div>
+    <div class="title"><a href="https://humanoidsdaily.com/news/samsung-sdi-atlas-battery-70-cells-1-3-kwh" target="_blank">供应链信号：三星 SDI 为波士顿动力 Atlas 供应电芯，每台 70 颗 2170 圆柱</a></div>
+    <div class="summary">The Elec 报道，三星 SDI 承担 Atlas 初期大部分电芯供应，约 1.3kWh/台；LG 新能源亦入选。电动 Atlas 的量产生态链正在闭合。</div>
+    <div class="tags"><span class="tag">Atlas</span><span class="tag">电池</span><span class="tag">供应链</span></div>
+  </div>
+<div class="card">
+    <div class="source">Robot Overflow · 2026-11-07 · imp=1</div>
+    <div class="title"><a href="https://www.humanoidsdaily.com/news/figure-hq-crawling-with-figure-03-robots-adc" target="_blank">Figure 发布总部数十台 Figure 03 行走视频，未公布新产量</a></div>
+    <div class="summary">CEO Adcock 发布两段园区视频，展示大量 Figure 03 行走（多数未执行任务）。自 7 月第 1000 台下线后未公布新产量，量产爬坡进度成谜。</div>
+    <div class="tags"><span class="tag">Figure</span><span class="tag">量产</span></div>
+  </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🛠️ 开源与工具</div>
+<div class="hot-topic">
+    <div class="label">🔥 Hot</div>
+    <div class="source">GitHub · 本周热门 · ⭐1424</div>
+    <div class="title"><a href="https://github.com/DIYgod/pinky" target="_blank">DIYgod/pinky: 让 AI Agent 用你的手机，关键环节你来确认</a></div>
+    <div class="summary">DIYgod（RSSHub 作者）新作，让 AI Agent 通过手机执行任务，但关键环节需要用户在环确认。在 Anthropic Computer Use 与 Operator 类产品启发下，「人在环路的手机 Agent」是当下最实用的形态之一。</div>
+    <div class="tags"><span class="tag hot">Agent</span><span class="tag">手机自动化</span><span class="tag">人在环</span></div>
+  </div>
+<div class="card">
+    <div class="source">GitHub · 本周热门 · ⭐484</div>
+    <div class="title"><a href="https://github.com/devvmhq/devvm" target="_blank">devvm: 为每个项目准备一台「 coding agent 专属虚拟机」</a></div>
+    <div class="summary">一条命令为每个项目启动带完整工具链的隔离 VM（基于 Lima），人类与 coding agent 共用。响应了 Agent 时代「环境可复现 + 隔离」的核心诉求。</div>
+    <div class="tags"><span class="tag">开发环境</span><span class="tag">Coding Agent</span><span class="tag">沙箱</span></div>
+  </div>
+<div class="card">
+    <div class="source">GitHub · 本周热门 · ⭐95</div>
+    <div class="title"><a href="https://github.com/RapidSailorFreeze/studsmith" target="_blank">studsmith: Roblox Studio 的免费 AI Agent</a></div>
+    <div class="summary">规划、写 Luau、生成 diff 并自动 playtest 的 Roblox Studio Agent。垂直创作工具的 Agent 化值得观察。</div>
+    <div class="tags"><span class="tag">游戏开发</span><span class="tag hot">Agent</span><span class="tag">Roblox</span></div>
+  </div>
+<div class="card">
+    <div class="source">GitHub · 本周热门 · ⭐63</div>
+    <div class="title"><a href="https://github.com/Dodaios/ste80-humanizer" target="_blank">ste80-humanizer: 去除 AI 写作痕迹的 Agent Skill</a></div>
+    <div class="summary">定位为「把 AI 文本改写 80% 接近人类风格」的 agent skill，引发社区关于内容真实性与 AI 检测的讨论。</div>
+    <div class="tags"><span class="tag">写作</span><span class="tag">Prompt/Skill</span><span class="tag">争议</span></div>
+  </div>
+<div class="card">
+    <div class="source">GitHub · 本周热门 · ⭐23</div>
+    <div class="title"><a href="https://github.com/assassin808/learn-from-lessons" target="_blank">learn-from-lessons: 让 coding agent 从你的纠正中学习</a></div>
+    <div class="summary">Claude Code、Codex 等 coding agent 的 skill/tool，把用户的纠正沉淀为可复用的经验。是「个性化 Agent memory」方向的实用小工具。</div>
+    <div class="tags"><span class="tag">Coding Agent</span><span class="tag">Memory</span><span class="tag">经验沉淀</span></div>
+  </div>
+<div class="card">
+    <div class="source">GitHub · Awesome List 动态</div>
+    <div class="title"><a href="https://github.com/kyrolabs/awesome-agents" target="_blank">awesome-ai-agents-2026 类列表持续爆发，MCP/A2A 协议资源成为标配板块</a></div>
+    <div class="summary">2026 年涌现大量 AI Agent awesome list（caramaschiHG、Zijian-Ni、kyrolabs/awesome-agents 等），普遍把 MCP/A2A 协议、Coding Agent、Computer Use 作为核心分类。kyrolabs 还新开了 Awesome ADE（Agentic Development Environments）子列表，聚焦并行运行 coding agent 的编排工具。</div>
+    <div class="tags"><span class="tag">Awesome List</span><span class="tag">Agent 生态</span><span class="tag">MCP</span></div>
+  </div>
+  </div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今天最值得关注的是一个悄悄形成的共识：让 Agent 真正干活的瓶颈正在从「模型能力」转向「执行成本与接口」。CPU-ARC 和 LowRAM 一个从推理复用、一个从 KV cache 结构入手，指向同一个方向——未来的 Agent 系统里，昂贵的大模型只该出现在「非解不可」的时刻，其余交给缓存、压缩和小模型。这对商业化意义很大，意味着 Agent 产品的推理成本曲线还有数量级下降空间。</p>
+  <p>机器人方向今天信号密度极高。两篇论文（Agentic Manipulation Policies、Computer-Use Agents as Embodied Generalists）不约而同地质疑 VLA/WAM 这条 specialist 路线，主张回到「通用模型 + 数字软件接口」的 embodied 范式，这和当前 Figure、Apptronik、智元用真实场景数据堆量产能力的做法形成有趣对照——学术界在反思架构，工业界在堆数据，短期内后者似乎更占上风。此外软银/ABB 因中国审查考虑剥离中国业务，标志地缘政治正式成为机器人产业的核心变量，值得持续跟踪。建议读者把「数据规模 × 部署密度」作为下一阶段评估具身智能公司的核心指标。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-11-10 · 由 Hermes Agent 自动生成</p>
+</div>
+
+</div>
+</body>
+</html>

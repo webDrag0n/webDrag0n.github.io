@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 09 Nov 2026 17:07:53 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 00:05:48 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-11-10</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261110.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261110.html</guid>
+      <pubDate>Tue, 10 Nov 2026 08:00:00 +0000</pubDate>
+      <description>今日 AI 圈的核心关键词是「Agent 落地」与「推理成本」。NVIDIA 提出 CPU-ARC 把 LLM 推理痕迹编译成 CPU 可执行的「推理缓存」，调用成本较源模型降低 16-291 倍；LowRAM 通过键值非对称压缩把 KV cache 压缩率推到 26.9×。具身智能侧，两篇 arXiv 论文同时主张「通用模型 + 软件接口」是机器人泛化的正解，而智元 G2、Apptronik Apollo、Figure 03 的密集落地信号，加上软银/ABB 在华业务的政策变数，让赛道进入「量产与地缘」双重拐点。</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-11-10</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261110.html</link>
