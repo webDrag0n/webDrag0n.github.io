@@ -1,6 +1,6 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-11-10T00:05:48.232643+00:00",
+  "generated_at": "2026-11-10T17:11:38.064792+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
@@ -616,8 +616,14 @@
     },
     "media": {
       "title": "AI 科技日报",
-      "count": 101,
+      "count": 102,
       "items": [
+        {
+          "date": "2026-11-11",
+          "url": "https://webdrag0n.github.io/reports/media/daily_media_20261111.html",
+          "overview": "Anthropic 正式启动 IPO 路演，最高估值约 1.4 万亿美元，成为 AI 资本化的里程碑事件；阿里平头哥确认递表港交所，国产算力上市潮加速。模型侧，Anthropic 新模型 Fable 5.2 实测口碑爆发，字节 Seedream 5.5 以「100 轮连续编辑不崩」刷新图像生成稳定性上限。具身智能迎来「触觉时刻」——蚂蚁灵波开源触觉基础模型 LingBot-Touch，Touch-R1 入选 NeurIPS 2026。安全议题升温：Claude Code 被曝泄露邮箱漏洞，AI 辅助挖洞让 Linux 内核「千疮百孔」。",
+          "digest": "今天的 AI 圈有两条主线。资本端，Anthropic 启动 IPO 路演、平头哥递表港交所，大模型和国产算力同一天走向公开市场，行业从「讲故事融资」进入「拿财报说话」的硬阶段。技术端则明显在「补课」：Fable 5.2 和 Seedream 5.5 都在解决老问题——成本、速度、多轮一致性；具身智能集体转向触觉，说明视觉语言的红利吃得差不多了。最该警惕的是安全：AI 挖 Linux 零日只要 2.5 小时，Claude Code 却连邮箱都守不住，攻防天平倾斜的速度，比模型迭代还快。"
+        },
         {
           "date": "2026-11-10",
           "url": "https://webdrag0n.github.io/reports/media/daily_media_20261110.html",

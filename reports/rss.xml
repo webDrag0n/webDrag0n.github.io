@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 10 Nov 2026 00:05:48 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 17:11:38 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-11-11</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261111.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261111.html</guid>
+      <pubDate>Wed, 11 Nov 2026 08:00:00 +0000</pubDate>
+      <description>Anthropic 正式启动 IPO 路演，最高估值约 1.4 万亿美元，成为 AI 资本化的里程碑事件；阿里平头哥确认递表港交所，国产算力上市潮加速。模型侧，Anthropic 新模型 Fable 5.2 实测口碑爆发，字节 Seedream 5.5 以「100 轮连续编辑不崩」刷新图像生成稳定性上限。具身智能迎来「触觉时刻」——蚂蚁灵波开源触觉基础模型 LingBot-Touch，Touch-R1 入选 NeurIPS 2026。安全议题升温：Claude Code 被曝泄露邮箱漏洞，AI 辅助挖洞让 Linux 内核「千疮百孔」。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-11-10</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261110.html</link>
