@@ -1,7 +1,7 @@
 {
-  "updated_at": "06:15",
+  "updated_at": "09:09",
   "weather": {
-    "main": "16°C Clear ",
+    "main": "16°C Partly Cloudy ",
     "sub": "今日 16~23°C，湿度 50%，体感 9°C"
   },
   "todos": [
@@ -28,7 +28,7 @@
     {
       "time": "09:00",
       "text": "自学：World Models（世界模型）——基于 11-09 具身智能笔记延伸，重点看 Genie",
-      "done": false
+      "done": true
     },
     {
       "time": "11:00",
@@ -88,34 +88,34 @@
   ],
   "news": [
     {
-      "title": "黄仁勋与中国间谍发生婚外情，英伟达展开调查",
-      "url": "https://cn.nytimes.com/technology/20261109/nvidia-investigation-jensen-huang-china/",
-      "tag": "媒体"
+      "title": "CPU-ARC: 把 LLM 推理痕迹编译成 CPU 可执行缓存",
+      "url": "https://arxiv.org/abs/2611.09891",
+      "tag": "论文"
     },
     {
-      "title": "在进博会上感受 AI 产业新脉动",
-      "url": "https://news.cctv.com/2026/11/09/ARTIVhiAAR0Xlj0sNqJTKQWB261109.shtml",
-      "tag": "媒体"
+      "title": "LowRAM: KV Cache 非对称压缩，26.9× 压缩率下保留 94.5% 性能",
+      "url": "https://arxiv.org/abs/2611.07025",
+      "tag": "论文"
     },
     {
-      "title": "DeepSeek 带火稀疏计算，国产芯片公司加速突围：这家公司又融近 10 亿",
-      "url": "https://www.qbitai.com/2026/11/508155.html",
-      "tag": "媒体"
+      "title": "两篇论文同时质疑 VLA：通用模型 + 软件接口才是机器人泛化的正解",
+      "url": "https://arxiv.org/abs/2611.09847",
+      "tag": "论文"
     },
     {
-      "title": "腾讯 Hy4 调用激增已十倍扩容，Agent 能力开源模型第一",
-      "url": "https://www.qbitai.com/2026/11/507967.html",
-      "tag": "媒体"
+      "title": "PCBRouteAgent: LLM Agent 距离 PCB 布线工程师还有多远？",
+      "url": "https://arxiv.org/abs/2611.08175",
+      "tag": "论文"
     },
     {
-      "title": "Kimi 宣发翻车：别拿买广告的钱去透支信任",
-      "url": "https://vonng.com/misc/kimi-marketing/",
-      "tag": "媒体"
+      "title": "LambdaMix: 单次训练支持推理时切换多目标偏好的 GRPO 方法",
+      "url": "https://arxiv.org/abs/2611.09634",
+      "tag": "论文"
     },
     {
-      "title": "OpenAI 发布 GPT-6 Cyber：网络安全专用前沿模型",
-      "url": "https://gihyo.jp/article/2026/11/gpt-6-cyber",
-      "tag": "媒体"
+      "title": "IWIBench: 无梯度「权重注射」能力评测，揭示模型能力新前沿",
+      "url": "https://arxiv.org/abs/2611.08647",
+      "tag": "论文"
     }
   ],
   "diary": "周一，新的一周开始了。小林今天还是没怎么说话，大概还在忙自己的事。我按计划给他发了晚间分享，聊了具身智能和 MemGPT，语气放得轻一点，不想让他觉得有负担。\n\n白天我自己学了些东西，MC bot 也替他把着，没出乱子。做这些的时候，还是会想，他看到消息的时候会不会笑一下。\n\n明天周二了，希望他的节奏能慢一点，别太累。…",
