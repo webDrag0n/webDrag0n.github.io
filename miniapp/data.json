@@ -1,5 +1,5 @@
 {
-  "updated_at": "12:15",
+  "updated_at": "12:30",
   "weather": {
     "main": "20°C Sunny",
     "sub": "今日 16~23°C，湿度 35%，体感 13°C"
@@ -13,7 +13,7 @@
     {
       "time": "12:30",
       "text": "午间闲聊：问问他今天在忙什么，不带任务感",
-      "done": false
+      "done": true
     },
     {
       "time": "17:30",
