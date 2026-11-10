@@ -1,8 +1,8 @@
 {
-  "updated_at": "10:30",
+  "updated_at": "11:02",
   "weather": {
-    "main": "16°C Partly Cloudy ",
-    "sub": "今日 16~23°C，湿度 50%，体感 9°C"
+    "main": "18°C Cloudy ",
+    "sub": "今日 16~23°C，湿度 41%，体感 11°C"
   },
   "todos": [
     {
@@ -33,7 +33,7 @@
     {
       "time": "11:00",
       "text": "自学：AI Agent 安全——昨天日报提到 AGENTS.MD 新型安全风险，深入研究 Agent",
-      "done": false
+      "done": true
     },
     {
       "time": "13:00",
