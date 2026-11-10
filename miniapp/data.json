@@ -1,8 +1,8 @@
 {
-  "updated_at": "00:15",
+  "updated_at": "03:15",
   "weather": {
-    "main": "19°C Cloudy ",
-    "sub": "今日 16~23°C，湿度 40%，体感 14°C"
+    "main": "17°C Overcast ",
+    "sub": "今日 16~24°C，湿度 43%，体感 13°C"
   },
   "todos": [
     {
@@ -48,34 +48,34 @@
   ],
   "news": [
     {
-      "title": "CPU-ARC: 把 LLM 推理痕迹编译成 CPU 可执行缓存",
-      "url": "https://arxiv.org/abs/2611.09891",
-      "tag": "论文"
+      "title": "Anthropic 正式启动 IPO 路演：发行价上限 78 美元，最高估值 1.4 万亿美元",
+      "url": "https://finance.eastmoney.com/a/202611103927650814.html",
+      "tag": "媒体"
     },
     {
-      "title": "LowRAM: KV Cache 非对称压缩，26.9× 压缩率下保留 94.5% 性能",
-      "url": "https://arxiv.org/abs/2611.07025",
-      "tag": "论文"
+      "title": "阿里确认！平头哥冲刺港股 IPO，已递表",
+      "url": "https://zhidx.com/p/608982.html",
+      "tag": "媒体"
     },
     {
-      "title": "两篇论文同时质疑 VLA：通用模型 + 软件接口才是机器人泛化的正解",
-      "url": "https://arxiv.org/abs/2611.09847",
-      "tag": "论文"
+      "title": "Fable 5.2 首批实测来了！网友：Opus 突然不香了",
+      "url": "https://www.qbitai.com/2026/11/508912.html",
+      "tag": "媒体"
     },
     {
-      "title": "PCBRouteAgent: LLM Agent 距离 PCB 布线工程师还有多远？",
-      "url": "https://arxiv.org/abs/2611.08175",
-      "tag": "论文"
+      "title": "100 轮图像编辑这道「毙刷题」，新出的 Seedream 5.5 稳上来了",
+      "url": "https://www.qbitai.com/2026/11/508828.html",
+      "tag": "媒体"
     },
     {
-      "title": "LambdaMix: 单次训练支持推理时切换多目标偏好的 GRPO 方法",
-      "url": "https://arxiv.org/abs/2611.09634",
-      "tag": "论文"
+      "title": "OpenAI 破译数论百年悬案，揭开 P≠NP 重大线索",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE83WmNaTl84T191LWtQTmxMaDJJTUp5LS1iZFIwNnF6RFR6N1pwSmdxSkZMcnBUc0ZGYVRFc0RXSVNKVTNjVTJhcQ?oc=5",
+      "tag": "媒体"
     },
     {
-      "title": "IWIBench: 无梯度「权重注射」能力评测，揭示模型能力新前沿",
-      "url": "https://arxiv.org/abs/2611.08647",
-      "tag": "论文"
+      "title": "千问办公 2.0 卷向 Team Agent，我们用它跑了一遍编辑部日常",
+      "url": "https://www.qbitai.com/2026/11/508798.html",
+      "tag": "媒体"
     }
   ],
   "diary": "今天还没写日记，晚上 23:00 再说～",
