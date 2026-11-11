@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-10T17:11:38.075500+00:00",
+  "generated_at": "2026-11-11T00:05:34.832394+00:00",
   "papers": {
-    "date": "2026-11-10",
-    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261110.html",
-    "overview": "今日 AI 圈的核心关键词是「Agent 落地」与「推理成本」。NVIDIA 提出 CPU-ARC 把 LLM 推理痕迹编译成 CPU 可执行的「推理缓存」，调用成本较源模型降低 16-291 倍；LowRAM 通过键值非对称压缩把 KV cache 压缩率推到 26.9×。具身智能侧，两篇 arXiv 论文同时主张「通用模型 + 软件接口」是机器人泛化的正解，而智元 G2、Apptronik Apollo、Figure 03 的密集落地信号，加上软银/ABB 在华业务的政策变数，让赛道进入「量产与地缘」双重拐点。",
-    "digest": "今天最值得关注的是一个悄悄形成的共识：让 Agent 真正干活的瓶颈正在从「模型能力」转向「执行成本与接口」。CPU-ARC 和 LowRAM 一个从推理复用、一个从 KV cache 结构入手，指向同一个方向——未来的 Agent 系统里，昂贵的大模型只该出现在「非解不可」的时刻，其余交给缓存、压缩和小模型。这对商业化意义很大，意味着 Agent 产品的推理成本曲线还有数量级下降空间。\n  机器人方向今天信号密度极高。两篇论文（Agentic Manipulation Policies、Computer-Use Agents as Embodied Generalists）不约而同地质疑 VLA/WAM 这条 specialist 路线，主张回到「通用模型 + 数字软件接口」的 embodied 范式，这和当前 Figure、Apptronik、智元用真实场景数据堆量产能力的做法形成有趣对照——学术界在反思架构，工业界在堆数据，短期内后者似乎更占上风。此外软银/ABB 因中国审查考虑剥离中国业务，标志地缘政治正式成为机器人产业的核心变量，值得持续跟踪。建议读者把「数据规模 × 部署密度」作为下一阶段评估具身智能公司的核心指标。"
+    "date": "2026-11-11",
+    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261111.html",
+    "overview": "本周是具身智能的密集爆发期：DeepMind 推出 Gemini Robotics 2.5，Apptronik Apollo 2 在奔驰工厂装配套件验证成功率达 96%；英伟达在 CoRL 发布世界动作模型 GR00T 2，并开源 GPU 物理求解器 Steel（性能超 PhysX 3.8 倍）；Anthropic 新一代 Claude Fable 5.2 在仿真机器人操控得分几乎翻倍。学术侧，HiVe-Mem 提出多模态 Agent 记忆架构，VFlash 和 SLA 分别探索视觉规划与原生长上下文 VLA 模型。开源动态方面，蚂蚁灵波开源触觉基础模型 LingBot-Touch，禾赛机器人动力模组三季度出货环比翻倍。",
+    "digest": "今天的 AI 日报有一条清晰的主线：具身智能正在从「演示」走向「生产」。DeepMind 的 Gemini Robotics 2.5 在奔驰工厂拿下 96% 的套件成功率，英伟达 GR00T 2 在富士康和西门子产线上实测，小鹏 IRON 走下自动化产线——这些都不是实验室里的 demo，而是真实制造环境中的验证。与此同时，触觉基础模型 LingBot-Touch、GPU 物理求解器 Steel 等开源基础设施的密集发布，正在把具身智能的「技术栈」从模型层延伸到仿真层、传感层。学术侧，HiVe-Mem、VFlash、SLA 等工作分别从记忆架构、视觉规划、VLA 规模化三个方向推进了 Agent 和机器人的能力边界。开源社区方面，headroom 的爆火反映出 Agent 开发者对上下文管理的强烈需求。整体而言，AI 的竞争正在从「模型能力」转向「系统能力」——谁能把模型、仿真、传感、量产串成闭环，谁就能在下一阶段的物理 AI 竞争中占据先机。"
   },
   "media": {
     "date": "2026-11-11",

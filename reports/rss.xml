@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 10 Nov 2026 17:11:38 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 00:05:34 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-11-11</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261111.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261111.html</guid>
+      <pubDate>Wed, 11 Nov 2026 08:00:00 +0000</pubDate>
+      <description>本周是具身智能的密集爆发期：DeepMind 推出 Gemini Robotics 2.5，Apptronik Apollo 2 在奔驰工厂装配套件验证成功率达 96%；英伟达在 CoRL 发布世界动作模型 GR00T 2，并开源 GPU 物理求解器 Steel（性能超 PhysX 3.8 倍）；Anthropic 新一代 Claude Fable 5.2 在仿真机器人操控得分几乎翻倍。学术侧，HiVe-Mem 提出多模态 Agent 记忆架构，VFlash 和 SLA 分别探索视觉规划与原生长上下文 VLA 模型。开源动态方面，蚂蚁灵波开源触觉基础模型 LingBot-Touch，禾赛机器人</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-11-11</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261111.html</link>

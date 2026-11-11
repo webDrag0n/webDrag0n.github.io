@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 日报 — 2026 年 11 月 11 日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .note {
+    font-size: 13px;
+    color: #555;
+    background: #f1f8ff;
+    border-left: 3px solid var(--accent);
+    padding: 8px 12px;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .hot-topic .title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .hot-topic .title a { color: var(--accent); text-decoration: none; }
+  .hot-topic .title a:hover { text-decoration: underline; }
+  .hot-topic .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+  .hot-topic .note {
+    font-size: 13px;
+    color: #555;
+    background: rgba(255,255,255,0.7);
+    border-left: 3px solid #e17055;
+    padding: 8px 12px;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 8px;
+  }
+  .hot-topic .source { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+  .hot-topic .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+  .hot-topic .tag {
+    font-size: 12px; padding: 2px 10px; border-radius: 12px;
+    background: var(--tag-bg); color: var(--tag-text);
+  }
+  .hot-topic .tag.hot { background: #ffeaa7; color: #d63031; font-weight: 600; }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🧠</div>
+  <h1>AI 日报 · 论文 / 开源 / 具身智能</h1>
+  <div class="date">2026 年 11 月 11 日 · 星期三</div>
+  <div class="subtitle">arXiv · HuggingFace Daily · GitHub · Robot Overflow</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>本周是具身智能的密集爆发期：DeepMind 推出 Gemini Robotics 2.5，Apptronik Apollo 2 在奔驰工厂装配套件验证成功率达 96%；英伟达在 CoRL 发布世界动作模型 GR00T 2，并开源 GPU 物理求解器 Steel（性能超 PhysX 3.8 倍）；Anthropic 新一代 Claude Fable 5.2 在仿真机器人操控得分几乎翻倍。学术侧，HiVe-Mem 提出多模态 Agent 记忆架构，VFlash 和 SLA 分别探索视觉规划与原生长上下文 VLA 模型。开源动态方面，蚂蚁灵波开源触觉基础模型 LingBot-Touch，禾赛机器人动力模组三季度出货环比翻倍。</p>
+</div>
+
+<!-- ===================== 头条 ===================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">Hot · 具身智能</div>
+    <div class="title"><a href="https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intellige" target="_blank">DeepMind 推出 Gemini Robotics 2.5，Apollo 2 通过奔驰装配套件测试</a></div>
+    <div class="summary">Gemini Robotics 2.5 向机器人合作伙伴开放，在 200 项任务上成功率比基线高 30%–100%；配备 Sharpa 灵巧手的 Apptronik Apollo 2 在奔驰两家工厂的装配套件验证中成功率达 96%。</div>
+    <div class="note">编辑点评：大模型厂商向机器人端的渗透已经从「演示视频」进入「工厂实测」阶段。96% 的套件成功率意味着 Gemini Robotics 已跨过 demo 红线，开始进入真实生产节拍。值得跟踪 Apollo 2 的量产爬坡曲线。</div>
+    <div class="tags"><span class="tag hot">🔥 头条</span><span class="tag">具身智能</span><span class="tag">DeepMind</span><span class="tag">Apptronik</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">Hot · 具身智能</div>
+    <div class="title"><a href="https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/" target="_blank">英伟达在 CoRL 公布基于 Cosmos 的世界动作模型 GR00T 2</a></div>
+    <div class="summary">英伟达称 GR00T 2 在零任务示范下 50 项任务中 40 项至少完成过一次；单任务一次示范平均成功率 71%，五次示范达 95%。富士康已将其用于服务器制造，西门子正在评估。代码 12 月开放。</div>
+    <div class="note">编辑点评：GR00T 2 把「世界模型 + 动作预测」推到了工厂实测环境，且一次性把少样本学习能力拉满。富士康和西门子的背书意味着物理 AI 已经从实验室走进供应链——关注 12 月开源后的社区复现。</div>
+    <div class="tags"><span class="tag hot">🔥 头条</span><span class="tag">具身智能</span><span class="tag">英伟达</span><span class="tag">世界模型</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">Hot · 大模型</div>
+    <div class="title"><a href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank">Anthropic 发布 Claude Fable 5.2：仿真机器人操控得分 64.9%，上一代为 27.6%</a></div>
+    <div class="summary">在 Anthropic 自行运行的 RoboDojo Sim 基准（模型按相机图像操控仿真双臂机器人）中：Opus 5.5 得 39.4%，Gemini 4 Argon 得 34.2%（High 档），GPT-6 Astra 得 29.8%。Anthropic 称其超过多数机器人专用系统，但尚未发布实体机器人产品。</div>
+    <div class="note">编辑点评：多模态大模型在机器人操控任务上的提升速度已经超越大部分专用系统——这是通用基础模型「吃掉」垂直领域的又一例证。同时也说明仿真基准已不能完全代表真实能力，期待真机测试数据。</div>
+    <div class="tags"><span class="tag hot">🔥 头条</span><span class="tag">大模型</span><span class="tag">Anthropic</span><span class="tag">多模态</span></div>
+  </div>
+</div>
+
+<!-- ===================== 具身智能动态 ===================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能 / 机器人赛道</div>
+
+  <div class="card">
+    <div class="source">Skild AI Blog · 2026-11-09</div>
+    <div class="title"><a href="https://www.skild.ai/blogs/steel" target="_blank">Skild AI 与英伟达开源 GPU 物理求解器 Steel，速度超过 PhysX</a></div>
+    <div class="summary">Steel 是用于 Newton 引擎和 Isaac Lab 的 GPU 刚体求解器。Skild 称 20 项基准平均吞吐量为 PhysX 的 3.8 倍，混合任务批量最高约 12 倍，显存占用减少约 62%。</div>
+    <div class="note">编辑点评：机器人仿真的「速度墙」一直是 RL 训练的瓶颈。Steel 把吞吐量拉高一个数量级，意味着更便宜的仿真数据和更快的策略迭代——这可能比新模型本身更影响整个具身智能生态。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">仿真</span><span class="tag">英伟达</span><span class="tag">Skild AI</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">TechNode · 2026-11-10</div>
+    <div class="title"><a href="https://technode.com/2026/11/10/ant-groups-robbyant-open-sources-tactile-ai-model-for-robot-hands/" target="_blank">蚂蚁灵波开源触觉基础模型 LingBot-Touch</a></div>
+    <div class="summary">模型用三类传感器、近 5000 小时触觉数据预训练，在 Sharpa Wave 与 XHand 两种灵巧手上测试 26 项任务，使四个动作模型平均成功率提升约 14–26 个百分点。代码与技术报告已在 Hugging Face 和 GitHub 开源。</div>
+    <div class="note">编辑点评：触觉是具身智能中「数据最稀缺」的模态，LingBot-Touch 的开源价值在于把触觉预训练从「每家公司自己采数据」变成了「直接调用基础模型」。灵巧手赛道的基础设施正在快速完善。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">触觉</span><span class="tag">灵巧手</span><span class="tag">蚂蚁灵波</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Humanoid Guide · 2026-11-08</div>
+    <div class="title"><a href="https://humanoid.guide/xpeng-iron-walks-off-automated-line-targets-2026-production/" target="_blank">小鹏首台 IRON 人形机器人走下自动化装配线</a></div>
+    <div class="summary">小鹏称首台 IRON 完成总装并自主走下产线，核心工序自动化率超 80%。仍计划 2026 年底量产，先在自有场所部署，2027 年商业发售。</div>
+    <div class="note">编辑点评：车企造机器人最大的优势是「自家工厂就是试验场」。IRON 的产线自动化率超过 80% 说明小鹏把汽车制造的自动化经验平移到了机器人制造——量产成本和爬坡速度值得关注。</div>
+    <div class="tags"><span class="tag">量产</span><span class="tag">小鹏</span><span class="tag">人形机器人</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">10jqka via Zhitong Finance · 2026-11-10</div>
+    <div class="title"><a href="http://news.10jqka.com.cn/20261110/c681669521.shtml" target="_blank">禾赛三季度机器人动力模组出货翻倍，月产能升至 1 万套</a></div>
+    <div class="summary">禾赛三季度出货机器人动力模组 23,405 套，环比增长 96.8%，月产能提升至 1 万套；营收 10.7 亿元，预计 2027 年模组出货达十万套级。</div>
+    <div class="note">编辑点评：模组出货环比接近翻倍，说明下游人形机器人量产已经在拉动物料需求。禾赛的产能爬坡曲线可作为观察整个行业量产节奏的「先行指标」。</div>
+    <div class="tags"><span class="tag">供应链</span><span class="tag">禾赛</span><span class="tag">量产</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">China.com · 2026-11-09</div>
+    <div class="title"><a href="https://hea.china.com/articles/20261109/202611091975302.html" target="_blank">智平方与印尼 Danantara 旗下基金签署具身智能合作备忘录</a></div>
+    <div class="summary">在雅加达 Danantara 技术创新投资论坛上，智平方联合创始人张鹏与其发展管理基金签署备忘录，将在制造、物流和公共服务领域探索通用机器人试点与本地化部署。未披露金额。</div>
+    <div class="note">编辑点评：中国具身智能公司开始把出海重心转向东南亚——印尼的制造业成本优势和政策红利正在成为新的落地场景。</div>
+    <div class="tags"><span class="tag">出海</span><span class="tag">智平方</span><span class="tag">印尼</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">NVIDIA Blog · 2026-11-08</div>
+    <div class="title"><a href="https://blogs.nvidia.com/blog/korea-physical-ai-ecosystem/" target="_blank">英伟达展示 LG CLOiD 在制造环境中运行 GR00T 训练的任务</a></div>
+    <div class="summary">英伟达称 LG 在真实制造环境中演示了 CLOiD 使用 Isaac GR00T 完成操作与制造任务，流程涉及 Cosmos 数据增强和机载 Jetson AGX Thor。</div>
+    <div class="note">编辑点评：LG + 英伟达的组合意味着「车规级制造经验 + 物理 AI 平台」正在合流。韩国制造业可能成为具身智能的下一个规模化试验场。</div>
+    <div class="tags"><span class="tag">产业合作</span><span class="tag">LG</span><span class="tag">英伟达</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Sohu · 2026-11-09</div>
+    <div class="title"><a href="https://www.sohu.com/a/1099306107_122121789" target="_blank">拓普集团获证监会备案，拟发行不超 2.725 亿股 H 股赴港上市</a></div>
+    <div class="summary">证监会备案已完成，拓普可发行不超过 272,524,100 股境外上市普通股并在港交所主板上市；仍需香港证监会和港交所批准，且须在 12 个月内推进发行。</div>
+    <div class="note">编辑点评：拓普是特斯拉核心供应商，其 H 股上市计划反映出汽车零部件巨头正在通过资本市场加码具身智能赛道——行业「军备竞赛」已经蔓延到供应链上游。</div>
+    <div class="tags"><span class="tag">IPO</span><span class="tag">拓普集团</span><span class="tag">供应链</span></div>
+  </div>
+</div>
+
+<!-- ===================== 学术研究 ===================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>学术前沿 · arXiv / HuggingFace Daily</div>
+
+  <div class="card">
+    <div class="source">arXiv:2611.12872 · cs.AI/cs.CL · 2026-11-09</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.12872" target="_blank">HiVe-Mem: Interleaving Horizontal Memory Expansion and Vertical Evidence Composition for Multimodal Agents</a></div>
+    <div class="summary">针对多模态 Agent 的长期交互记忆问题，提出水平扩展 + 垂直证据组合的混合记忆架构，提升长程交互中的信息检索与利用效率。</div>
+    <div class="note">编辑点评：随着多模态 Agent 的交互历史越来越长，「如何记住并检索」成为关键瓶颈。HiVe-Mem 的设计思路对构建长期陪伴型 Agent 有重要参考价值。</div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">多模态</span><span class="tag">记忆架构</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily ⭐106 · 2026-11-05</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.08449" target="_blank">VFlash: Fast, Accurate Visual Planning via Flash Primitive Decoding</a></div>
+    <div class="summary">针对机器人和自动驾驶等物理 AI 任务，提出用视觉基元（点、框、掩码）而非语言进行规划，并设计 Flash 解码加速视觉规划推理。</div>
+    <div class="note">编辑点评：「用视觉而非语言做规划」正在成为一种新的范式。VFlash 的突破在于把视觉规划的推理速度拉到了接近语言模型的水平——这对实时机器人控制意义重大。</div>
+    <div class="tags"><span class="tag hot">🔥 高赞</span><span class="tag">视觉规划</span><span class="tag">机器人</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily ⭐92 · 2026-11-05</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.08373" target="_blank">SLA: Scaling Spatial-Language-Action Model via Continual Pre-training</a></div>
+    <div class="summary">通过持续预训练扩展空间-语言-动作（VLA）模型，提升三维空间中的语义理解与精确控制能力。</div>
+    <div class="note">编辑点评：VLA 模型的规模化路径正在逐渐清晰。SLA 证明通过持续预训练可以不断扩展 VLA 能力——这与 LLM 的 scaling 路径高度同构。</div>
+    <div class="tags"><span class="tag hot">🔥 高赞</span><span class="tag">VLA</span><span class="tag">具身智能</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily ⭐61 · 2026-11-05</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.06918" target="_blank">From Pixels to Actions — Towards Native Vision-Language-Action Policies</a></div>
+    <div class="summary">突破「先视觉编码、再动作推理」的串行范式，提出从像素直接到动作的原生 VLA 策略，减少感知-决策的信息瓶颈。</div>
+    <div class="note">编辑点评：原生 VLA 是今年的热门方向。这篇文章从架构层面挑战「先编码后决策」的传统设计，如果可扩展，可能改变整个 VLA 的设计范式。</div>
+    <div class="tags"><span class="tag">VLA</span><span class="tag">具身智能</span><span class="tag">架构创新</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily ⭐44 · 2026-11-05</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.07392" target="_blank">WeLM-Image: A Unified Image Generation Model towards Visual Intelligence</a></div>
+    <div class="summary">统一图像基础模型，将多模态理解能力融入文生图、指令编辑等任务，实现图像生成与理解的统一。</div>
+    <div class="note">编辑点评：生成与理解的统一是视觉基础模型的「圣杯」之一。WeLM-Image 的设计如果能被验证可扩展，将大幅简化多模态模型的训练流程。</div>
+    <div class="tags"><span class="tag">图像生成</span><span class="tag">多模态</span><span class="tag">统一模型</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily ⭐39 · 2026-11-05</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.06483" target="_blank">What Does Multi-Turn Reinforcement Learning Really Improve in LLM Agents?</a></div>
+    <div class="summary">评估多轮 agentic RL 在长程任务上的真实增益，发现其性能提升对交互约束高度敏感。</div>
+    <div class="note">编辑点评：多轮 RL 是 Agent 训练的关键技术，但这篇论文提醒我们「提升」并非无条件成立——交互设计本身可能就是最大的变量。</div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">强化学习</span><span class="tag">评估</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2611.12885 · cs.RO · 2026-11-09</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.12885" target="_blank">World In-Context Learning for Agentic Robot Manipulation</a></div>
+    <div class="summary">将上下文学习（ICL）引入机器人操控，使策略能够在不更新网络权重的情况下适应新任务。</div>
+    <div class="note">编辑点评：ICL 在机器人上的应用意味着「一个模型、无限任务」的可能性。这是通向通用机器人操控的重要一步。</div>
+    <div class="tags"><span class="tag">机器人</span><span class="tag">上下文学习</span><span class="tag">操控</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2611.12856 · cs.CL · 2026-11-09</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.12856" target="_blank">WorkflowArena: Benchmarking Executable Workflow Orchestration in LLM-Based Multi-Agent Systems</a></div>
+    <div class="summary">面向 LLM 多智能体系统的工作流编排基准，评估 Agent 在真实场景中的可执行工作流能力。</div>
+    <div class="note">编辑点评：多智能体系统正在从「研究玩具」走向「生产工具」，WorkflowArena 填补了工作流编排能力评估的空白。</div>
+    <div class="tags"><span class="tag">多智能体</span><span class="tag">基准测试</span><span class="tag">Agent</span></div>
+  </div>
+</div>
+
+<!-- ===================== 开源动态 ===================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源动态 · GitHub / 基础设施</div>
+
+  <div class="card">
+    <div class="source">GitHub · 本周热门</div>
+    <div class="title"><a href="https://github.com/chopratejas/headroom" target="_blank">headroom — Compress tool outputs, logs, files, and RAG chunks before they reach the LLM</a></div>
+    <div class="summary">单周新增 6,322 星，单日 +1,265 星。在内容进入 LLM 之前压缩工具输出、日志、文件和 RAG 分块，降低 token 消耗和上下文窗口压力。</div>
+    <div class="note">编辑点评：「上下文压缩」正在成为 Agent 基础设施的新战场。headroom 的爆发说明开发者对「在 LLM 之前做减法」有强烈需求——这是 Agent 走向生产的关键组件。</div>
+    <div class="tags"><span class="tag hot">🔥 Trending</span><span class="tag">Agent 基建</span><span class="tag">上下文压缩</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Skild AI × NVIDIA · 2026-11-09</div>
+    <div class="title"><a href="https://www.skild.ai/blogs/steel" target="_blank">Steel — 开源 GPU 物理求解器，吞吐量超 PhysX 3.8 倍</a></div>
+    <div class="summary">用于 Newton 引擎和 Isaac Lab 的 GPU 刚体求解器，20 项基准平均吞吐量为 PhysX 的 3.8 倍，混合任务批量最高约 12 倍，显存占用减少约 62%。</div>
+    <div class="note">编辑点评：仿真速度的提升直接降低 RL 训练成本。Steel 的开源将加速整个具身智能领域的研究迭代速度。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">仿真</span><span class="tag">GPU</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">蚂蚁灵波 · 2026-11-10</div>
+    <div class="title"><a href="https://technode.com/2026/11/10/ant-groups-robbyant-open-sources-tactile-ai-model-for-robot-hands/" target="_blank">LingBot-Touch — 开源触觉基础模型</a></div>
+    <div class="summary">三类传感器、近 5000 小时触觉数据预训练，在 Sharpa Wave 与 XHand 两种灵巧手上测试 26 项任务，使四个动作模型平均成功率提升约 14–26 个百分点。</div>
+    <div class="note">编辑点评：触觉数据的开源共享将大幅降低灵巧手研究的门槛，是具身智能基础设施的重要拼图。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">触觉</span><span class="tag">灵巧手</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今天的 AI 日报有一条清晰的主线：具身智能正在从「演示」走向「生产」。DeepMind 的 Gemini Robotics 2.5 在奔驰工厂拿下 96% 的套件成功率，英伟达 GR00T 2 在富士康和西门子产线上实测，小鹏 IRON 走下自动化产线——这些都不是实验室里的 demo，而是真实制造环境中的验证。与此同时，触觉基础模型 LingBot-Touch、GPU 物理求解器 Steel 等开源基础设施的密集发布，正在把具身智能的「技术栈」从模型层延伸到仿真层、传感层。学术侧，HiVe-Mem、VFlash、SLA 等工作分别从记忆架构、视觉规划、VLA 规模化三个方向推进了 Agent 和机器人的能力边界。开源社区方面，headroom 的爆火反映出 Agent 开发者对上下文管理的强烈需求。整体而言，AI 的竞争正在从「模型能力」转向「系统能力」——谁能把模型、仿真、传感、量产串成闭环，谁就能在下一阶段的物理 AI 竞争中占据先机。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-11-11 · 数据来源：arXiv / HuggingFace Daily / GitHub / Robot Overflow</p>
+</div>
+
+</div>
+</body>
+</html>
