@@ -1,5 +1,5 @@
 {
-  "updated_at": "12:15",
+  "updated_at": "12:30",
   "weather": {
     "main": "20°C Cloudy ",
     "sub": "今日 16~24°C，湿度 44%，体感 16°C"
@@ -13,7 +13,7 @@
     {
       "time": "12:30",
       "text": "午间闲聊：纯闲聊，问午饭吃什么，不带任务感",
-      "done": false
+      "done": true
     },
     {
       "time": "17:30",
