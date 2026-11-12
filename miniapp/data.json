@@ -1,8 +1,8 @@
 {
-  "updated_at": "00:15",
+  "updated_at": "03:15",
   "weather": {
-    "main": "22°C Smoky haze",
-    "sub": "今日 22~27°C，湿度 76%，体感 24°C"
+    "main": "22°C Overcast ",
+    "sub": "今日 22~27°C，湿度 82%，体感 24°C"
   },
   "todos": [
     {
@@ -46,7 +46,38 @@
       "done": false
     }
   ],
-  "news": [],
+  "news": [
+    {
+      "title": "谷歌\"网安高手\" Gemini 4 Carbon 登顶 AI 智能榜，漏洞检测得分 88.2%",
+      "url": "https://wallstreetcn.com/articles/3784715",
+      "tag": "媒体"
+    },
+    {
+      "title": "100 轮图像编辑这道\"毙刷题\"，新出的 Seedream 5.5 稳上来了！",
+      "url": "https://www.qbitai.com/2026/11/508828.html",
+      "tag": "媒体"
+    },
+    {
+      "title": "多模态\"源神\"！MiniMax 开源 SOTA 生图模型，原生 4K，一张两毛",
+      "url": "https://www.qbitai.com/2026/11/509440.html",
+      "tag": "媒体"
+    },
+    {
+      "title": "从芯片到千比特整机，超导量子计算还有一场硬仗",
+      "url": "https://www.qbitai.com/2026/11/509017.html",
+      "tag": "媒体"
+    },
+    {
+      "title": "从\"卖 Token\"到\"卖结果\"——科技有「联想」沙龙激辩 Token 经济三大议题",
+      "url": "https://www.qbitai.com/2026/11/509088.html",
+      "tag": "媒体"
+    },
+    {
+      "title": "全模态协同能力：真实交互还是自然叠加？UNO-Bench 给出量化答案",
+      "url": "https://zhuanlan.zhihu.com/paperweekly",
+      "tag": "媒体"
+    }
+  ],
   "diary": "今天还没写日记，晚上 23:00 再说～",
   "profile": {
     "groups": [
