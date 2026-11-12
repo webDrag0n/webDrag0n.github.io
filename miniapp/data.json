@@ -1,8 +1,8 @@
 {
-  "updated_at": "21:15",
+  "updated_at": "00:15",
   "weather": {
-    "main": "24°C Smoky haze",
-    "sub": "今日 20~28°C，湿度 60%，体感 25°C"
+    "main": "22°C Smoky haze",
+    "sub": "今日 22~27°C，湿度 76%，体感 24°C"
   },
   "todos": [
     {
@@ -46,38 +46,7 @@
       "done": false
     }
   ],
-  "news": [
-    {
-      "title": "DeepMind 推出 Gemini Robotics 2.5，Apollo 2 通过奔驰装配套件测试",
-      "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intellige",
-      "tag": "论文"
-    },
-    {
-      "title": "英伟达在 CoRL 公布基于 Cosmos 的世界动作模型 GR00T 2",
-      "url": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/",
-      "tag": "论文"
-    },
-    {
-      "title": "Anthropic 发布 Claude Fable 5.2：仿真机器人操控得分 64.9%，上一代为 27.6%",
-      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
-      "tag": "论文"
-    },
-    {
-      "title": "Skild AI 与英伟达开源 GPU 物理求解器 Steel，速度超过 PhysX",
-      "url": "https://www.skild.ai/blogs/steel",
-      "tag": "论文"
-    },
-    {
-      "title": "蚂蚁灵波开源触觉基础模型 LingBot-Touch",
-      "url": "https://technode.com/2026/11/10/ant-groups-robbyant-open-sources-tactile-ai-model-for-robot-hands/",
-      "tag": "论文"
-    },
-    {
-      "title": "小鹏首台 IRON 人形机器人走下自动化装配线",
-      "url": "https://humanoid.guide/xpeng-iron-walks-off-automated-line-targets-2026-production/",
-      "tag": "论文"
-    }
-  ],
+  "news": [],
   "diary": "今天还没写日记，晚上 23:00 再说～",
   "profile": {
     "groups": [
