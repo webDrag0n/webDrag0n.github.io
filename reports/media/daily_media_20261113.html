@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中文 AI / 科技媒体日报 — 2026年11月13日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .comment {
+    font-size: 13px;
+    color: var(--text);
+    background: #f1f6fb;
+    border-left: 3px solid var(--accent);
+    padding: 8px 12px;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🗞️</div>
+  <h1>中文 AI / 科技媒体日报</h1>
+  <div class="date">2026年11月13日 · 星期五</div>
+  <div class="subtitle">覆盖机器之心 · 量子位 · 新智元 · 36氪 · 少数派 · 极客公园 · AI科技评论等</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>昨日至今，中文 AI 媒体的核心议题集中在三条主线：其一，谷歌发布网络安全专用模型 <strong>Gemini 4 Carbon</strong>，在多项网安基准上登顶，"AI 攻防线"成为大厂竞逐的新战场；其二，字节 <strong>Seedream 5.5</strong> 凭借"100 轮连续编辑不崩"的工程能力刷屏，图像模型从"出一张好图"转向"陪你改一百次图"的生产力逻辑；其三，英伟达机器人开源 + 蚂蚁灵波触觉基础模型 + 双十一物流仓机器人，具身智能从 demo 正式走向规模化交付。与此同时，Anthropic 启动 IPO 但估值缩水、MiniMax 开源原生 4K 生图模型，资本市场与开源生态都在加速洗牌。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>热点聚焦</div>
+
+  <div class="hot-topic">
+    <div class="label">HOT TOPIC</div>
+    <div class="card" style="box-shadow:none;border:none;padding:0;">
+      <div class="source">机器之心 / 华尔街见闻 · 2026-11-12</div>
+      <div class="title"><a href="https://wallstreetcn.com/articles/3784715">谷歌"网安高手" Gemini 4 Carbon 登顶 AI 智能榜，漏洞检测得分 88.2%</a></div>
+      <div class="summary">谷歌发布网络安全专用前沿模型 Gemini 4 Carbon，在 SEC-bench Pro 等基准上以 88.2% 的漏洞检测得分登顶，生成安全代码成功率超 Gemini 4 Argon 两倍，标准价与 Argon 持平。</div>
+      <div class="comment">解读：当模型能力逐渐饱和，"安全"成为下一个差异化战场。Carbon 的意义不止于分数——它标志着网安从人工审计走向模型自动化攻防，企业安全团队的工具链将被重构。</div>
+      <div class="tags"><span class="tag hot">热榜</span><span class="tag">大模型</span><span class="tag">网络安全</span></div>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">HOT TOPIC</div>
+    <div class="card" style="box-shadow:none;border:none;padding:0;">
+      <div class="source">量子位 / 夕小瑶科技说 · 2026-11-12</div>
+      <div class="title"><a href="https://www.qbitai.com/2026/11/508828.html">100 轮图像编辑这道"毙刷题"，新出的 Seedream 5.5 稳上来了！</a></div>
+      <div class="summary">字节 Seedream 5.5 在多轮连续编辑场景下表现稳定，未修改区域可保持像素级不变，同时支持透明素材直出与文字保真，被实测者称为"100 轮改图不崩"。</div>
+      <div class="comment">解读：图像模型竞争的锚点正在从"首图惊艳"转向"过程可控"。对于电商、设计等需要反复迭代的场景，多轮编辑稳定性比单图质量更决定生产力。</div>
+      <div class="tags"><span class="tag hot">热榜</span><span class="tag">图像生成</span><span class="tag">字节</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 · 研究</div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-13</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/509440.html">多模态"源神"！MiniMax 开源 SOTA 生图模型，原生 4K，一张两毛</a></div>
+    <div class="summary">MiniMax 开源其多模态生图模型，支持原生 4K 分辨率，单张生成成本约 0.2 元，性能对标闭源 SOTA。</div>
+    <div class="comment">解读：开源 + 极低推理成本，直接把 4K 生图的价格打到"白菜价"。设计、印刷等对分辨率敏感的行业将最先受益。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">多模态</span><span class="tag">MiniMax</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-12</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/509017.html">从芯片到千比特整机，超导量子计算还有一场硬仗</a></div>
+    <div class="summary">文章梳理了超导量子计算从芯片突破走向千比特整机集成所面临的技术瓶颈，包括纠错、互联与测控系统扩展。</div>
+    <div class="comment">解读：量子计算的关注点正从"比特数竞赛"转向"工程可用性"。对 AI 行业而言，量子算力短期不是替代，而是远期变量。</div>
+    <div class="tags"><span class="tag">量子计算</span><span class="tag">研究</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-12</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/509088.html">从"卖 Token"到"卖结果"——科技有「联想」沙龙激辩 Token 经济三大议题</a></div>
+    <div class="summary">联想沙龙讨论了大模型商业模式的演进：从按 Token 计费走向按任务/结果计费，探讨 Agent 时代下的定价逻辑重构。</div>
+    <div class="comment">解读：当 Agent 能完成端到端任务时，按调用量收费就失效了。"卖结果"的定价模式将倒逼模型厂商展示可量化的业务价值。</div>
+    <div class="tags"><span class="tag">商业模式</span><span class="tag">Token 经济</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">PaperWeekly / 知乎专栏 · 2026-11-12</div>
+    <div class="title"><a href="https://zhuanlan.zhihu.com/paperweekly">全模态协同能力：真实交互还是自然叠加？UNO-Bench 给出量化答案</a></div>
+    <div class="summary">UNO-Bench 首次将"多模态协同是否真实存在能力交互"这一长期争论转化为可量化检验的基准测试。</div>
+    <div class="comment">解读：多模态模型评测长期缺乏统一标尺，UNO-Bench 的出现在方法学上有价值——先把问题定义清楚，再谈模型强弱。</div>
+    <div class="tags"><span class="tag">多模态</span><span class="tag">评测基准</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🏭</span>具身智能 · 机器人</div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-12</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/509032.html">英伟达机器人开源撞上 Fable 5.2 发布！Jim Fan：不是寒冬是夏天</a></div>
+    <div class="summary">英伟达在机器人学习方向持续开源，Jim Fan 公开表示机器人领域正处于"夏天"而非寒冬， Sim2Real 与数据引擎成为焦点。</div>
+    <div class="comment">解读：英伟达把机器人视为下一个 GPU 级市场。开源数据与仿真工具链，本质是在为硬件生态铺路。</div>
+    <div class="tags"><span class="tag hot">热门</span><span class="tag">具身智能</span><span class="tag">英伟达</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-12</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/508996.html">从"一脑多机"到"一脑多手"，蚂蚁灵波开源 LingBot-Touch 触觉基础模型</a></div>
+    <div class="summary">蚂蚁灵波发布 LingBot-Touch 触觉基础模型并开源，让同一机器人大脑控制多种手部硬件，推进具身智能的泛化能力。</div>
+    <div class="comment">解读：触觉是具身智能长期以来被忽视的模态。开源触觉基础模型，有助于降低灵巧操作的研究门槛。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">触觉</span><span class="tag">具身智能</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-12</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/509281.html">"双十一"机器人在物流仓"埋头苦干"：昆腾动力开启具身智能规模化获客与交付</a></div>
+    <div class="summary">双十一期间，昆腾动力的机器人在物流仓储场景规模化落地，完成从试点到批量交付的跨越。</div>
+    <div class="comment">解读：大促是机器人最好的"压力测试"。能在双十一这种极端场景跑顺，说明具身智能开始具备真实的 ROI。</div>
+    <div class="tags"><span class="tag">物流</span><span class="tag">商业化</span><span class="tag">具身智能</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-12</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/509052.html">无人拖拉机真正下地了！新疆大田深翻 30+ 厘米，丘沃智能开物™系统首次完整曝光</a></div>
+    <div class="summary">丘沃智能在新疆实测无人拖拉机系统，完成 30 厘米以上深翻作业，农业具身智能进入真实田间验证阶段。</div>
+    <div class="comment">解读：农业是具身智能最被低估的场景——环境结构化、人力缺口大、ROI 清晰。新疆大田实测比任何实验室演示都有说服力。</div>
+    <div class="tags"><span class="tag">农业</span><span class="tag">无人农机</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">💼</span>行业 · 商业</div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-13</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/509381.html">Anthropic 启动 IPO 路演，估值已缩水 6000 亿美元</a></div>
+    <div class="summary">Anthropic 正式启动 IPO 路演进程，但最新估值较此前高点缩水约 6000 亿美元，引发市场对 AI 泡沫的讨论。</div>
+    <div class="comment">解读：估值缩水不等于基本面恶化，更可能是二级市场在给"AI 溢价"重新定价。2027 年或成头部 AI 公司上市密集期。</div>
+    <div class="tags"><span class="tag hot">热榜</span><span class="tag">资本市场</span><span class="tag">Anthropic</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">AI 科技评论 / 雷峰网 · 2026-11-12</div>
+    <div class="title"><a href="https://m.leiphone.com/category/ai/vJ3Ax1O8gwdXYcd1.html">潞晨科技尤洋：300 亿市值的野心之上，我在做哪些选择？</a></div>
+    <div class="summary">潞晨科技创始人尤洋接受专访，谈及公司 200-300 亿市值目标与上市计划，以及 AI Infra 赛道的竞争策略。</div>
+    <div class="comment">解读：AI 基础设施公司正在从"技术叙事"转向"资本叙事"。尤洋的野心背后，是中国 AI Infra 层开始批量冲刺 IPO。</div>
+    <div class="tags"><span class="tag">AI Infra</span><span class="tag">创业</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-12</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/509085.html">卷起来了！11 月 11 日，大模型厂商在天猫打 5 折</a></div>
+    <div class="summary">双十一期间，多家大模型厂商在天猫旗舰店推出 5 折优惠，AI 产品首次大规模参与电商大促。</div>
+    <div class="comment">解读：大模型开始像快消品一样打折促销，说明 C 端 AI 产品已经供过于求。"价格战"时代，差异化场景比通用能力更重要。</div>
+    <div class="tags"><span class="tag">大促</span><span class="tag">C端产品</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-12</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/509214.html">上海造、香港连，中国 AI 加速走向全球</a></div>
+    <div class="summary">报道聚焦中国 AI 企业借助沪港两地的资本与地缘优势加速出海，形成"上海研发 + 香港融资 + 全球交付"的路径。</div>
+    <div class="comment">解读：地缘限制倒逼中国 AI 寻找新出口。香港作为融资与合规跳板的价值，正在被重新发现。</div>
+    <div class="tags"><span class="tag">出海</span><span class="tag">行业</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔧</span>工具 · 开发者</div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-12</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/509146.html">双 11 直播间爆改 AI 秀场，罗永浩上手 TRAE，秒变 AI Coding 的大众嘴替</a></div>
+    <div class="summary">罗永浩在双十一直播间演示字节 TRAE 的 AI Coding 能力，让编程工具首次以"大众综艺"形式出圈。</div>
+    <div class="comment">解读：AI Coding 的营销战已经打到直播间。开发者工具 C 端化，意味着"全民编程"叙事正在变成现实的产品逻辑。</div>
+    <div class="tags"><span class="tag">AI Coding</span><span class="tag">TRAE</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-12</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/509224.html">纯代码造《后室》，116 秒切 20 种画风！文心新模型玩嗨了</a></div>
+    <div class="summary">百度文心新模型展示纯代码生成视频/游戏场景的能力，116 秒内切换 20 种视觉风格，代码即内容的边界被进一步拓展。</div>
+    <div class="comment">解读："代码生成内容"正在模糊程序员与创作者的边界。对于独立开发者而言，一个人做一款风格化小游戏的时代或许真的来了。</div>
+    <div class="tags"><span class="tag">AIGC</span><span class="tag">文心</span><span class="tag">代码生成</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">少数派 · 2026-11-08</div>
+    <div class="title"><a href="https://sspai.com/post/118717">Python 潮流周刊 #174：CPython 实验性 JIT 将被移除，PyScript 进入维护模式</a></div>
+    <div class="summary">本期周刊梳理 Python 生态重大变动：CPython 实验性 JIT 编译器将正式移除、PyScript 转入维护模式，同时涵盖无 GIL Python 3.14 性能实测与 AI 编码工具链动态。</div>
+    <div class="comment">解读：Python 的"去 JIT 化"提醒我们：性能优化不是简单的功能叠加。对 AI 开发者而言，关注底层运行时变化，比追逐新框架更有长期价值。</div>
+    <div class="tags"><span class="tag">Python</span><span class="tag">开发者</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>过去 24 小时的中文 AI 媒体呈现出一个清晰的信号：行业正从"比谁的模型更大"，转向"比谁的模型更能打"。谷歌 Gemini 4 Carbon 把战场拉到网络安全，字节 Seedream 5.5 用"100 轮编辑不崩"定义图像模型的新标准，MiniMax 则把 4K 生图成本打到两毛钱一张——垂直化、工程化、白菜化，成了这轮竞争的三个关键词。具身智能也在悄悄过拐点：英伟达持续开源、蚂蚁开源触觉模型、双十一物流仓机器人批量交付、无人拖拉机开进新疆大田，这些不再是要 PPT 的 demo，而是有明确 ROI 的交付。资本端同样微妙，Anthropic 启动 IPO 但估值缩水 6000 亿美元，提示二级市场对 AI 溢价正在重估。对从业者和观察者而言，2026 年末的启示很直接：通用叙事的窗口在收窄，能在具体场景里稳定创造价值的能力，才是真正的护城河。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-11-13</p>
+</div>
+
+</div>
+</body>
+</html>

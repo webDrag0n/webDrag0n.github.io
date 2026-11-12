@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 11 Nov 2026 00:05:34 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 17:04:28 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-11-13</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261113.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261113.html</guid>
+      <pubDate>Fri, 13 Nov 2026 08:00:00 +0000</pubDate>
+      <description>昨日至今，中文 AI 媒体的核心议题集中在三条主线：其一，谷歌发布网络安全专用模型 Gemini 4 Carbon，在多项网安基准上登顶，&quot;AI 攻防线&quot;成为大厂竞逐的新战场；其二，字节 Seedream 5.5 凭借&quot;100 轮连续编辑不崩&quot;的工程能力刷屏，图像模型从&quot;出一张好图&quot;转向&quot;陪你改一百次图&quot;的生产力逻辑；其三，英伟达机器人开源 + 蚂蚁灵波触觉基础模型 + 双十一物流仓机器人，具身智能从 demo 正式走向规模化交付。与此同时，Anthropic 启动 IPO 但估值缩水、MiniMax 开源原生 4K 生图模型，资本市场与开源生态都在加速洗牌。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-11-11</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261111.html</link>
