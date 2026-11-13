@@ -1,8 +1,8 @@
 {
-  "updated_at": "12:00",
+  "updated_at": "12:15",
   "weather": {
-    "main": "—",
-    "sub": "天气暂时查不到啦 (<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>)"
+    "main": "25°C Overcast ",
+    "sub": "今日 22~27°C，湿度 62%，体感 26°C"
   },
   "todos": [
     {
