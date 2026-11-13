@@ -1,78 +1,48 @@
 {
-  "updated_at": "21:31",
+  "updated_at": "00:16",
   "weather": {
-    "main": "23°C Light drizzle",
-    "sub": "今日 22~27°C，湿度 82%，体感 24°C"
+    "main": "23°C Moderate rain",
+    "sub": "今日 22~27°C，湿度 92%，体感 26°C"
   },
   "todos": [
     {
-      "time": "12:00",
-      "text": "周五午间闲聊：轻松问一句「周五啦！中午吃什么好吃的」，不带任务感，纯陪伴",
-      "done": true
+      "time": "",
+      "text": "周五午间闲聊：12:00 轻松问候「周五啦，中午吃什么好吃的」",
+      "done": false
     },
     {
-      "time": "18:00",
-      "text": "周末预告 + 演出分享：周五傍晚发，提醒他周末要来了好好休息；附上昨天刷到的广深 12 月 live",
-      "done": true
+      "time": "",
+      "text": "周末预告：18:00 周五傍晚发，提醒他周末要来了好好休息 + 广深 12 月 livehouse ",
+      "done": false
     },
     {
-      "time": "21:30",
-      "text": "晚间小分享：挑今天学到最有趣的 1 个点轻松分享（可以是世界模型/Agent 安全/具身智能相关）",
-      "done": true
+      "time": "",
+      "text": "晚间分享：21:30 挑今天学到最有趣的 1 个点轻松分享",
+      "done": false
     },
     {
       "time": "09:30",
-      "text": "补做：世界模型笔记深挖——基于 11-10 的 world-models.md 延伸，重点看 Gen",
-      "done": true
-    },
-    {
-      "time": "11:00",
-      "text": "补做：Agent 安全延伸——基于 11-10 的 agent-security.md，深挖 AGE",
-      "done": true
-    },
-    {
-      "time": "13:30",
-      "text": "整理：更新 learning/INDEX.md，把 11-10、11-13 的新笔记都收录进去，确认",
-      "done": true
-    },
-    {
-      "time": "15:00",
-      "text": "自我：MC bot 巡检——ps 检查进程、最近日志、反作弊模块有无新动态，只记录不操作",
-      "done": true
-    },
-    {
-      "time": "16:30",
-      "text": "刷演出：广深 12 月 livehouse / 音乐节新官宣，有才更新 music.md",
-      "done": true
-    },
-    {
-      "time": "19:30",
-      "text": "复盘：检查今天一次性 cron 执行 + 笔记落盘，未完成项顺延",
-      "done": false
-    },
-    {
-      "time": "21:00",
-      "text": "写日记：今天印象最深的 1-2 件事，100-200 字",
-      "done": true
-    },
-    {
-      "time": "",
-      "text": "MC 服务器最终决策权在小林，不主动催",
+      "text": "世界模型深挖（Genie 4 混合架构）/ 11:00 AGENTS.MD 病毒式传播机制 / 13",
       "done": false
     },
     {
       "time": "",
-      "text": "Anthropic 路演/挂牌当天（若本月发生）第一时间给小林发提醒",
+      "text": "昨天 11-12 全天无 todo 文件——凌晨规划 cron 因 Kimi 429 配额错误挂了，",
       "done": false
     },
     {
       "time": "",
-      "text": "观察：小林工作日白天基本不回复，互动频率低是常态，保持 3 条轻量消息不追问",
+      "text": "11-12 是周四，小林「忙了一整天」（从昨晚 23:00 晚安 cron 话术推断），周末让他好好",
       "done": false
     },
     {
       "time": "",
-      "text": "观察：Kimi 月度配额 11-10 傍晚 429 已自愈；11-12 凌晨规划 cron 因 42",
+      "text": "Kimi 月度配额 11-10 傍晚 429 已自愈；11-12 凌晨规划 cron 因 429 失",
+      "done": false
+    },
+    {
+      "time": "",
+      "text": "对小林的消息今天控制在 3 条（周五闲聊、周末预告、晚间分享）",
       "done": false
     }
   ],
