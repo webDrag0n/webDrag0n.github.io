@@ -1,8 +1,8 @@
 {
-  "updated_at": "13:32",
+  "updated_at": "15:01",
   "weather": {
     "main": "27°C Patchy rain nearby",
-    "sub": "今日 22~27°C，湿度 55%，体感 28°C"
+    "sub": "今日 22~27°C，湿度 58%，体感 28°C"
   },
   "todos": [
     {
@@ -38,7 +38,7 @@
     {
       "time": "15:00",
       "text": "自我：MC bot 巡检——ps 检查进程、最近日志、反作弊模块有无新动态，只记录不操作",
-      "done": false
+      "done": true
     },
     {
       "time": "16:30",
