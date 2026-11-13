@@ -1,14 +1,14 @@
 {
-  "updated_at": "11:05",
+  "updated_at": "12:00",
   "weather": {
-    "main": "25°C Overcast ",
-    "sub": "今日 22~27°C，湿度 62%，体感 26°C"
+    "main": "—",
+    "sub": "天气暂时查不到啦 (<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)>)"
   },
   "todos": [
     {
       "time": "12:00",
       "text": "周五午间闲聊：轻松问一句「周五啦！中午吃什么好吃的」，不带任务感，纯陪伴",
-      "done": false
+      "done": true
     },
     {
       "time": "18:00",
