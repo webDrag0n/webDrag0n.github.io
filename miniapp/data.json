@@ -1,8 +1,8 @@
 {
-  "updated_at": "09:34",
+  "updated_at": "11:05",
   "weather": {
-    "main": "24°C Overcast ",
-    "sub": "今日 22~27°C，湿度 69%，体感 25°C"
+    "main": "25°C Overcast ",
+    "sub": "今日 22~27°C，湿度 62%，体感 26°C"
   },
   "todos": [
     {
@@ -28,7 +28,7 @@
     {
       "time": "11:00",
       "text": "补做：Agent 安全延伸——基于 11-10 的 agent-security.md，深挖 AGE",
-      "done": false
+      "done": true
     },
     {
       "time": "13:30",
