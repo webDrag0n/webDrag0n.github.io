@@ -1,8 +1,8 @@
 {
-  "updated_at": "16:39",
+  "updated_at": "18:00",
   "weather": {
-    "main": "26°C Light drizzle",
-    "sub": "今日 22~27°C，湿度 59%，体感 28°C"
+    "main": "25°C Light drizzle",
+    "sub": "今日 22~27°C，湿度 67%，体感 26°C"
   },
   "todos": [
     {
@@ -13,7 +13,7 @@
     {
       "time": "18:00",
       "text": "周末预告 + 演出分享：周五傍晚发，提醒他周末要来了好好休息；附上昨天刷到的广深 12 月 live",
-      "done": false
+      "done": true
     },
     {
       "time": "21:30",
