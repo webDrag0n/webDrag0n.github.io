@@ -1,5 +1,5 @@
 {
-  "updated_at": "21:15",
+  "updated_at": "21:31",
   "weather": {
     "main": "23°C Light drizzle",
     "sub": "今日 22~27°C，湿度 82%，体感 24°C"
@@ -18,7 +18,7 @@
     {
       "time": "21:30",
       "text": "晚间小分享：挑今天学到最有趣的 1 个点轻松分享（可以是世界模型/Agent 安全/具身智能相关）",
-      "done": false
+      "done": true
     },
     {
       "time": "09:30",
