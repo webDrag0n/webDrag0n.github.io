@@ -1,8 +1,8 @@
 {
-  "updated_at": "12:15",
+  "updated_at": "13:32",
   "weather": {
-    "main": "25°C Overcast ",
-    "sub": "今日 22~27°C，湿度 62%，体感 26°C"
+    "main": "27°C Patchy rain nearby",
+    "sub": "今日 22~27°C，湿度 55%，体感 28°C"
   },
   "todos": [
     {
@@ -33,7 +33,7 @@
     {
       "time": "13:30",
       "text": "整理：更新 learning/INDEX.md，把 11-10、11-13 的新笔记都收录进去，确认",
-      "done": false
+      "done": true
     },
     {
       "time": "15:00",
