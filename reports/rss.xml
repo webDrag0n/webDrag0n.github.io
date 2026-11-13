@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 12 Nov 2026 17:04:28 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 00:06:29 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-11-13</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261113.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261113.html</guid>
+      <pubDate>Fri, 13 Nov 2026 08:00:00 +0000</pubDate>
+      <description>具身智能赛道今日重磅频出：DeepMind 推出 Gemini Robotics 2.5，在 200 项任务上成功率较基线提升 30%-100%；思灵机器人获软银领投 5 亿美元融资，估值达 85 亿美元。Agent 记忆机制研究备受关注——多篇论文指出记忆增强可能引入时间捷径与退化风险。开源社区方面，qwen-code、OpenBot、agent-skills 等 Agent 基础设施项目持续走热，meta/astryx 以 Agent 友好的设计系统斩获 1800+ 星。视频生成领域，Few-Step Streaming Video Generation 以 88 个 upvote 领跑 </description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-11-13</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261113.html</link>

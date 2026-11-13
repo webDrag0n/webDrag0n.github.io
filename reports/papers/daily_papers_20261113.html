@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 日报 — 2026-11-13</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 日报</h1>
+  <div class="date">2026 年 11 月 13 日 · 星期五</div>
+  <div class="subtitle">arXiv · HuggingFace · GitHub Trending · Robot Overflow</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>具身智能赛道今日重磅频出：DeepMind 推出 Gemini Robotics 2.5，在 200 项任务上成功率较基线提升 30%-100%；思灵机器人获软银领投 5 亿美元融资，估值达 85 亿美元。Agent 记忆机制研究备受关注——多篇论文指出记忆增强可能引入时间捷径与退化风险。开源社区方面，qwen-code、OpenBot、agent-skills 等 Agent 基础设施项目持续走热，meta/astryx 以 Agent 友好的设计系统斩获 1800+ 星。视频生成领域，Few-Step Streaming Video Generation 以 88 个 upvote 领跑 HuggingFace 热榜。</p>
+</div>
+
+<!-- ==================== 具身智能 / 机器人 ==================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>具身智能 / 机器人</div>
+  
+  <div class="hot-topic">
+    <div class="label">🔥 热点 · 模型发布</div>
+    <div class="title"><a href="https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/" target="_blank">DeepMind 推出 Gemini Robotics 2.5，Apollo 2 通过奔驰装配套件测试</a></div>
+    <div class="summary">Gemini Robotics 2.5 向机器人合作伙伴开放，在 200 项任务上成功率比基线高 30% 至 100%。装有 Sharpa 灵巧手的 Apptronik Apollo 2 在奔驰两家工厂的装配套件验证中成功率达 96%。</div>
+    <div class="tags">
+      <span class="tag hot">重要性 ★★★</span>
+      <span class="tag">模型发布</span>
+      <span class="tag">工业部署</span>
+      <span class="tag">DeepMind</span>
+      <span class="tag">Apptronik</span>
+      <span class="tag">Mercedes</span>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 热点 · 巨额融资</div>
+    <div class="title"><a href="https://thenextweb.com/news/agile-robots-softbank-500m-humanoid" target="_blank">思灵机器人获软银领投 5 亿美元融资，估值 85 亿美元</a></div>
+    <div class="summary">软银领投，英伟达、日立、T.Capital 跟投。资金用于拓展美国市场和扩大产能（含德国）。公司预计 2026 年产约 2000 台人形机器人，2027 年或翻倍至三倍，并为日后上市留有余地。</div>
+    <div class="tags">
+      <span class="tag hot">重要性 ★★★</span>
+      <span class="tag">融资</span>
+      <span class="tag">软银</span>
+      <span class="tag">英伟达</span>
+      <span class="tag">量产</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">GXO via GlobeNewswire · 2026-11-12</div>
+    <div class="title"><a href="https://www.manilatimes.net/2026/11/12/tmt-newswire/globenewswire/gxo-and-apptronik-expand-partnership-to-scale-humanoid-deployment/2468422" target="_blank">GXO 与 Apptronik 签意向书，拟四年内最多部署 1000 台 Apollo</a></div>
+    <div class="summary">自 2027 年起，双方在 GXO 实际仓库试用 Apollo，涵盖拣选、周转箱和货箱搬运、打包、分拣，并按约定指标考核。若达标，拟以机器人即服务（RaaS）模式在四年内全球部署最多 1000 台。</div>
+    <div class="tags">
+      <span class="tag hot">重要性 ★★</span>
+      <span class="tag">仓储部署</span>
+      <span class="tag">RaaS</span>
+      <span class="tag">Apptronik</span>
+      <span class="tag">GXO</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">快科技 · 2026-11-10</div>
+    <div class="title"><a href="https://news.mydrivers.com/1/1164/1164716.htm" target="_blank">智元发布 WITA-Omni 具身全模态端到端交互大模型</a></div>
+    <div class="summary">智元称该模型为全双工架构，除音视频外还接收触觉与本体状态，输出动作和表情；响应最快约 400 毫秒、平均约 600 毫秒，免唤醒，支持百余种语言。</div>
+    <div class="tags">
+      <span class="tag hot">重要性 ★★</span>
+      <span class="tag">大模型</span>
+      <span class="tag">端到端</span>
+      <span class="tag">智元</span>
+      <span class="tag">多模态交互</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">TechNode · 2026-11-10</div>
+    <div class="title"><a href="https://technode.com/2026/11/10/ant-groups-robbyant-open-sources-tactile-ai-model-for-robot-hands/" target="_blank">蚂蚁灵波开源触觉基础模型 LingBot-Touch</a></div>
+    <div class="summary">模型用三类传感器近 5000 小时触觉数据预训练，在 Sharpa Wave 与 XHand 两种灵巧手上测试 26 项任务，使四个动作模型平均成功率提升约 14-26 个百分点。代码与技术报告已在 HuggingFace 和 GitHub 开源。</div>
+    <div class="tags">
+      <span class="tag hot">重要性 ★★</span>
+      <span class="tag">开源</span>
+      <span class="tag">触觉模型</span>
+      <span class="tag">蚂蚁灵波</span>
+      <span class="tag">灵巧手</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">10jqka / 智通财经 · 2026-11-10</div>
+    <div class="title"><a href="http://news.10jqka.com.cn/20261110/c681669521.shtml" target="_blank">禾赛三季度机器人动力模组出货翻倍，月产能升至 1 万套</a></div>
+    <div class="summary">禾赛三季度出货机器人动力模组 23,405 套，环比增 96.8%，月产能提至 1 万套；营收 10.7 亿元，预计 2027 年模组出货达十万套级。</div>
+    <div class="tags">
+      <span class="tag hot">重要性 ★★</span>
+      <span class="tag">传感器</span>
+      <span class="tag">量产</span>
+      <span class="tag">禾赛</span>
+      <span class="tag">供应链</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">Caijing · 2026-11-10</div>
+    <div class="title"><a href="https://tech.caijing.com.cn/20261110/5192922.shtml" target="_blank">大晓机器人双脑协同架构首次落地酒店洗衣场景</a></div>
+    <div class="summary">大晓把 Mundo 世界模型、通用模型与自我迭代结合，完成酒店取衣、洗烘、送回全流程。165 轮真机约 57 小时，牛仔裤滞留烘干机比例均值由 48% 降至 32%。</div>
+    <div class="tags">
+      <span class="tag hot">重要性 ★★</span>
+      <span class="tag">世界模型</span>
+      <span class="tag">商用落地</span>
+      <span class="tag">服务机器人</span>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 学术研究 ==================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>学术研究 · arXiv / HuggingFace</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 热点 · 视频生成</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.14033" target="_blank">Few-Step Streaming Video Generation via Condition Shifting</a></div>
+    <div class="summary">通过条件平移（Condition Shifting）实现少步采样流式视频生成，大幅降低 Distribution Matching Distillation（DMD）的训练内存与计算开销，同时追踪生成器的演化。HuggingFace 热榜 88 upvote。</div>
+    <div class="tags">
+      <span class="tag hot">HF 88 ⭐</span>
+      <span class="tag">视频生成</span>
+      <span class="tag">流式生成</span>
+      <span class="tag">DMD</span>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 热点 · Agent 记忆</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.14320" target="_blank">Don't Just Trust Your Memory: Evidence-Linked Memory Reduces Memory-Induced Degradation</a></div>
+    <div class="summary">外部记忆使 LLM Agent 能从经验中学习，但也会引入"记忆诱导退化"——Agent 在本来能独立解决的任务上反而失败。本文提出证据链接记忆（Evidence-Linked Memory），通过将记忆与具体证据绑定来减少退化。HuggingFace 65 upvote。</div>
+    <div class="tags">
+      <span class="tag hot">HF 65 ⭐</span>
+      <span class="tag">Agent</span>
+      <span class="tag">记忆机制</span>
+      <span class="tag">退化风险</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2611.14210 · 2026-11-10</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.14210" target="_blank">Tree-Ising: Repairing Language Models with Bit-Level Ising Edits</a></div>
+    <div class="summary">受 MIT 近期 weight-space programming 启发，Tree-Ising 让前沿 LLM Agent 直接读取网络权重并写入修复，无需梯度即可修正小模型的推理环路。该方向将模型修复从"重训练"转向"外科手术式编辑"。HuggingFace 62 upvote。</div>
+    <div class="tags">
+      <span class="tag">模型修复</span>
+      <span class="tag">Weight-space</span>
+      <span class="tag">免梯度</span>
+      <span class="tag">HF 62 ⭐</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2611.06817 · 2026-11-10</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.06817" target="_blank">Open-HumanWAM: An Open Recipe for Scaling Human and Robot Experience for Embodied Intelligence</a></div>
+    <div class="summary">第一人称人类视频为机器人学习提供了可扩展的操作先验来源，但将原始数据规模转化为可泛化的机器人策略需要严格的数据筛选和训练配方。本文提出 Open-HumanWAM，提供完整的开放配方。HuggingFace 36 upvote。</div>
+    <div class="tags">
+      <span class="tag">具身智能</span>
+      <span class="tag">世界模型</span>
+      <span class="tag">人类视频</span>
+      <span class="tag">HF 36 ⭐</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2611.13410 · 2026-11-10</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.13410" target="_blank">SteerDistill: Quantizing LLM Agents via Closed-Loop Teacher Steering</a></div>
+    <div class="summary">低比特量化降低 LLM Agent 推理成本，但可能损害任务成功率。本文发现量化 Agent 会忽略任务需求或环境条件，通过闭环教师引导（Teacher Steering）在量化过程中纠正行为，实现低成本高成功率。HuggingFace 31 upvote。</div>
+    <div class="tags">
+      <span class="tag">量化</span>
+      <span class="tag">Agent</span>
+      <span class="tag">蒸馏</span>
+      <span class="tag">HF 31 ⭐</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2611.11166 · 2026-11-10</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.11166" target="_blank">DexForesight: Grounding Dexterous Policies with Implicit Spatial Foresight</a></div>
+    <div class="summary">灵巧操作需要对场景和机器人手部的丰富空间预见。DexForesight 通过隐式空间预见来增强策略，无需显式未来预测即可获得预测性知识，在多项灵巧操作任务上取得提升。HuggingFace 25 upvote。</div>
+    <div class="tags">
+      <span class="tag">灵巧操作</span>
+      <span class="tag">空间预见</span>
+      <span class="tag">机器人策略</span>
+      <span class="tag">HF 25 ⭐</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2611.14488 · 2026-11-10</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.14488" target="_blank">Is Your Robot's Memory Just a Clock? Temporal Shortcuts in Memory-Augmented VLA Policies</a></div>
+    <div class="summary">记忆增强的 VLA 策略本应记住"发生了什么"，但许多方法按时间均匀采样帧并打上时间戳——时间流逝并不等于事件进展。本文揭示这种"时间捷径"问题，并探讨如何让机器人记忆真正承载因果信息。</div>
+    <div class="tags">
+      <span class="tag">VLA</span>
+      <span class="tag">记忆机制</span>
+      <span class="tag">时间捷径</span>
+      <span class="tag">机器人学习</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2611.14432 · 2026-11-10</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.14432" target="_blank">One Policy for 100 Household Tasks: Our Solution for the 2026 BEHAVIOR Challenge</a></div>
+    <div class="summary">在 OmniGibson 模拟器中完成 100 个长时程家庭任务，以单一视觉-语言-动作策略获得排行榜第 9 名，是前十中唯一独立团队。展示了通用家庭机器人策略的可行性。</div>
+    <div class="tags">
+      <span class="tag">BEHAVIOR</span>
+      <span class="tag">家庭机器人</span>
+      <span class="tag">通用策略</span>
+      <span class="tag">仿真</span>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 开源动态 ==================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源动态 · GitHub Trending</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · ⭐1,830</div>
+    <div class="title"><a href="https://github.com/meta/astryx" target="_blank">meta/astryx — Agent 友好的开源设计系统</a></div>
+    <div class="summary">Meta 开源的完全可定制设计系统，原生为 AI Agent 设计，支持 Agent 直接调用设计组件与规范。</div>
+    <div class="tags">
+      <span class="tag">设计系统</span>
+      <span class="tag">Meta</span>
+      <span class="tag">Agent 基础设施</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · ⭐816</div>
+    <div class="title"><a href="https://github.com/addyosmani/agent-skills" target="_blank">addyosmani/agent-skills — AI 编码 Agent 的生产级工程技能库</a></div>
+    <div class="summary">Addy Osmani 整理的面向 AI 编码 Agent 的生产级工程技能集，帮助 Agent 遵循最佳工程实践。</div>
+    <div class="tags">
+      <span class="tag">Agent 技能</span>
+      <span class="tag">工程实践</span>
+      <span class="tag">开源</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · ⭐643</div>
+    <div class="title"><a href="https://github.com/openai/codex-security" target="_blank">openai/codex-security — OpenAI Codex 安全 CLI 与 TypeScript SDK</a></div>
+    <div class="summary">OpenAI 发布的 Codex 安全工具，用于发现、验证和修复代码中的安全漏洞，以 CLI 和 TypeScript SDK 形式提供。</div>
+    <div class="tags">
+      <span class="tag">安全</span>
+      <span class="tag">OpenAI</span>
+      <span class="tag">CLI</span>
+      <span class="tag">SDK</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · ⭐298</div>
+    <div class="title"><a href="https://github.com/CopilotKit/OpenBot" target="_blank">CopilotKit/OpenBot — 开源 AI 协作机器人，每个 Agent 一台电脑</a></div>
+    <div class="summary">开源 AI 同事框架，每个 Agent 拥有独立的浏览器、文件系统和工具，所有动作事前决定、事后记录。支持接入任何 AG-UI Agent。</div>
+    <div class="tags">
+      <span class="tag">多 Agent</span>
+      <span class="tag">协作</span>
+      <span class="tag">开源</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · ⭐151</div>
+    <div class="title"><a href="https://github.com/QwenLM/qwen-code" target="_blank">QwenLM/qwen-code — 开源 AI 编码 Agent，终端原生</a></div>
+    <div class="summary">通义千问团队开源的终端 AI 编码 Agent，与 Codex CLI 类似，支持自然语言编程和代码生成。</div>
+    <div class="tags">
+      <span class="tag">编码 Agent</span>
+      <span class="tag">Qwen</span>
+      <span class="tag">终端工具</span>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== Awesome 列表 ==================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📚</span>Awesome 列表动态</div>
+  <div class="card">
+    <div class="source">sindresorhus/awesome · 最近提交</div>
+    <div class="title">主列表近期维护：移除 25+ 已归档列表，优化元数据</div>
+    <div class="summary">近期提交包括：Meta tweaks（9 月）、修复无效空格字符、移除 8 个已归档 awesome 列表（8 月）、移除 17 个已归档 awesome 列表（6 月）。主列表持续清理不再维护的子列表，保持索引质量。</div>
+    <div class="tags">
+      <span class="tag">Awesome</span>
+      <span class="tag">列表维护</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今天的 AI 日报呈现出鲜明的"落地加速"信号。具身智能赛道，DeepMind 的 Gemini Robotics 2.5 与奔驰工厂 96% 的装配套件成功率，标志着 VLA 模型正在跨越实验室到产线的最后一公里；思灵机器人 85 亿美元估值与软银 5 亿美元注资，说明资本仍在重注人形机器人量产。蚂蚁灵波开源的 LingBot-Touch 触觉基础模型与智元的 WITA-Omni 全模态交互模型，则让"感知-决策-执行"闭环更加完整。学术研究层面，Agent 记忆成为焦点——多篇论文警示记忆增强可能引入退化风险与时间捷径，提示我们在追求更长上下文的同时，也要警惕"记了反而错"的悖论。开源社区，Agent 基础设施持续走热，从 Meta 的 astryx 设计系统到 OpenAI 的 codex-security，工具链正在围绕 Agent 重新构建。整体来看，2026 年末的 AI 行业正从"能力展示"进入"可靠性验证"的新阶段。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-11-13</p>
+</div>
+
+</div>
+</body>
+</html>
