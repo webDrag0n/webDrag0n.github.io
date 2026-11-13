@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 13 Nov 2026 00:06:29 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 17:08:53 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-11-14</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261114.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261114.html</guid>
+      <pubDate>Sat, 14 Nov 2026 08:00:00 +0000</pubDate>
+      <description>黄仁勋辞任英伟达 CEO 成为今日最大新闻，这家市值 3 万亿美元的 AI 芯片巨头迎来 33 年来首次换帅；百度世界 2026 上李彦宏提出「智能组织」概念，宣称 AI 的下一幕是企业组织形态的重构；开源领域，无界前沿发布生命科学大模型 Fx-Bio-1031 并在高难盲测中超越 GPT-6-Astra；清华伯克利联合开源统一具身 Agent Harness，将 Qwen 控制机器人的得分从 1.9 提升至 31.4。AI 行业正经历从技术竞赛到组织变革的深层转型。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-11-13</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261113.html</link>
