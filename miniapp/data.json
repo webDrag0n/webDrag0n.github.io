@@ -1,8 +1,8 @@
 {
-  "updated_at": "09:15",
+  "updated_at": "09:34",
   "weather": {
-    "main": "23°C Overcast ",
-    "sub": "今日 22~27°C，湿度 78%，体感 24°C"
+    "main": "24°C Overcast ",
+    "sub": "今日 22~27°C，湿度 69%，体感 25°C"
   },
   "todos": [
     {
@@ -23,7 +23,7 @@
     {
       "time": "09:30",
       "text": "补做：世界模型笔记深挖——基于 11-10 的 world-models.md 延伸，重点看 Gen",
-      "done": false
+      "done": true
     },
     {
       "time": "11:00",
