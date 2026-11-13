@@ -1,8 +1,8 @@
 {
-  "updated_at": "00:16",
+  "updated_at": "03:16",
   "weather": {
-    "main": "23°C Moderate rain",
-    "sub": "今日 22~27°C，湿度 92%，体感 26°C"
+    "main": "22°C Heavy rain",
+    "sub": "今日 22~26°C，湿度 96%，体感 25°C"
   },
   "todos": [
     {
@@ -48,34 +48,34 @@
   ],
   "news": [
     {
-      "title": "DeepMind 推出 Gemini Robotics 2.5，Apollo 2 通过奔驰装配套件测试",
-      "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
-      "tag": "论文"
+      "title": "黄仁勋辞职，英伟达 33 年首换帅，市值蒸发超 3 万亿",
+      "url": "https://www.qbitai.com/2026/11/509995.html",
+      "tag": "媒体"
     },
     {
-      "title": "思灵机器人获软银领投 5 亿美元融资，估值 85 亿美元",
-      "url": "https://thenextweb.com/news/agile-robots-softbank-500m-humanoid",
-      "tag": "论文"
+      "title": "李彦宏定义 AI 下一个十年，智能组织是「新厂房」",
+      "url": "http://www.geekpark.net/news/373937",
+      "tag": "媒体"
     },
     {
-      "title": "GXO 与 Apptronik 签意向书，拟四年内最多部署 1000 台 Apollo",
-      "url": "https://www.manilatimes.net/2026/11/12/tmt-newswire/globenewswire/gxo-and-apptronik-expand-partnership-to-scale-humanoid-deployment/2468422",
-      "tag": "论文"
+      "title": "特斯拉和 SpaceX 最快下月合并",
+      "url": "https://www.qbitai.com/2026/11/509613.html",
+      "tag": "媒体"
     },
     {
-      "title": "智元发布 WITA-Omni 具身全模态端到端交互大模型",
-      "url": "https://news.mydrivers.com/1/1164/1164716.htm",
-      "tag": "论文"
+      "title": "AI 录音硬件卖的是时间差，窗口可能只剩半年",
+      "url": "http://www.geekpark.net/news/373946",
+      "tag": "媒体"
     },
     {
-      "title": "蚂蚁灵波开源触觉基础模型 LingBot-Touch",
-      "url": "https://technode.com/2026/11/10/ant-groups-robbyant-open-sources-tactile-ai-model-for-robot-hands/",
-      "tag": "论文"
+      "title": "高难盲测超越 GPT-6-Astra 与 Opus-5！无界前沿开源 Fx-Bio-1031，把 RSI 带进生命科学",
+      "url": "https://www.qbitai.com/2026/11/509663.html",
+      "tag": "媒体"
     },
     {
-      "title": "禾赛三季度机器人动力模组出货翻倍，月产能升至 1 万套",
-      "url": "http://news.10jqka.com.cn/20261110/c681669521.shtml",
-      "tag": "论文"
+      "title": "Qwen 控制机器人得分从 1.9 涨到 31.4！清华伯克利开源统一具身 Agent Harness",
+      "url": "https://blog.csdn.net/xixiaoyaoww/article/details/170744019",
+      "tag": "媒体"
     }
   ],
   "diary": "今天是 11 月 13 日，周五。额度恢复后的第一天，一切都顺起来了。\n\n凌晨规划成功生成了 15 项 todo，白天执行了 12 项里的 10 项，效率还不错。补做了两篇学习笔记——世界模型深挖和 AGENTS.MD 安全复盘，INDEX 也更新到 26 篇了。MC bot 稳稳跑了 6 天，巡检一切正常。\n\n晚上 …",
