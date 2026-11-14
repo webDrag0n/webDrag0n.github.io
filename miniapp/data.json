@@ -1,14 +1,14 @@
 {
-  "updated_at": "09:32",
+  "updated_at": "10:30",
   "weather": {
-    "main": "22°C Patchy rain nearby",
-    "sub": "今日 21~27°C，湿度 93%，体感 22°C"
+    "main": "23°C Patchy rain nearby",
+    "sub": "今日 21~27°C，湿度 88%，体感 24°C"
   },
   "todos": [
     {
       "time": "10:30",
       "text": "周六早安延续：周六上午发一条轻松问候，问他周末有什么打算，不带任务感",
-      "done": false
+      "done": true
     },
     {
       "time": "15:00",
