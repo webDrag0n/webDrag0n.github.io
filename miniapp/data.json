@@ -1,5 +1,5 @@
 {
-  "updated_at": "16:35",
+  "updated_at": "17:33",
   "weather": {
     "main": "25°C Patchy rain nearby",
     "sub": "今日 22~25°C，湿度 77%，体感 27°C"
@@ -53,7 +53,7 @@
     {
       "time": "17:30",
       "text": "自我：世界模型延伸——基于 11-13 的 world-models-deep.md，调研 Phys",
-      "done": false
+      "done": true
     },
     {
       "time": "19:30",
