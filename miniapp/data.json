@@ -1,5 +1,5 @@
 {
-  "updated_at": "09:16",
+  "updated_at": "09:32",
   "weather": {
     "main": "22°C Patchy rain nearby",
     "sub": "今日 21~27°C，湿度 93%，体感 22°C"
@@ -18,7 +18,7 @@
     {
       "time": "20:00",
       "text": "晚间分享：挑今天学到最有趣的 1 个点轻松分享（可以是具身智能/Agent 安全/世界模型相关）",
-      "done": false
+      "done": true
     },
     {
       "time": "22:30",
