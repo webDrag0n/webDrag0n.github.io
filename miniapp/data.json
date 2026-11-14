@@ -1,5 +1,5 @@
 {
-  "updated_at": "15:15",
+  "updated_at": "15:32",
   "weather": {
     "main": "25°C Overcast ",
     "sub": "今日 22~25°C，湿度 73%，体感 27°C"
@@ -43,7 +43,7 @@
     {
       "time": "15:30",
       "text": "自我：MC bot 巡检——ps 检查进程、最近日志、反作弊模块有无新动态，只记录不操作",
-      "done": false
+      "done": true
     },
     {
       "time": "16:30",
