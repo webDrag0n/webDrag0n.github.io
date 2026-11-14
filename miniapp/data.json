@@ -1,8 +1,8 @@
 {
-  "updated_at": "06:16",
+  "updated_at": "09:16",
   "weather": {
-    "main": "21°C Heavy rain",
-    "sub": "今日 21~27°C，湿度 97%，体感 22°C"
+    "main": "22°C Patchy rain nearby",
+    "sub": "今日 21~27°C，湿度 93%，体感 22°C"
   },
   "todos": [
     {
@@ -98,34 +98,34 @@
   ],
   "news": [
     {
-      "title": "黄仁勋辞职，英伟达 33 年首换帅，市值蒸发超 3 万亿",
-      "url": "https://www.qbitai.com/2026/11/509995.html",
-      "tag": "媒体"
+      "title": "英伟达黄仁勋辞任 CEO，CFO Colette Kress 出任临时 CEO",
+      "url": "https://xiaotong.me/RobotOverflow/",
+      "tag": "论文"
     },
     {
-      "title": "李彦宏定义 AI 下一个十年，智能组织是「新厂房」",
-      "url": "http://www.geekpark.net/news/373937",
-      "tag": "媒体"
+      "title": "Agile Robots 获软银领投 5 亿美元融资，估值 85 亿美元",
+      "url": "https://xiaotong.me/RobotOverflow/",
+      "tag": "论文"
     },
     {
-      "title": "特斯拉和 SpaceX 最快下月合并",
-      "url": "https://www.qbitai.com/2026/11/509613.html",
-      "tag": "媒体"
+      "title": "World Labs 发布 Atlas 世界模型，开放开发者 API 与 3D 工具",
+      "url": "https://xiaotong.me/RobotOverflow/",
+      "tag": "论文"
     },
     {
-      "title": "AI 录音硬件卖的是时间差，窗口可能只剩半年",
-      "url": "http://www.geekpark.net/news/373946",
-      "tag": "媒体"
+      "title": "大晓机器人发布 ACE-CaP-0，真机操作任务成功率 92.1%",
+      "url": "https://xiaotong.me/RobotOverflow/",
+      "tag": "论文"
     },
     {
-      "title": "高难盲测超越 GPT-6-Astra 与 Opus-5！无界前沿开源 Fx-Bio-1031，把 RSI 带进生命科学",
-      "url": "https://www.qbitai.com/2026/11/509663.html",
-      "tag": "媒体"
+      "title": "摩根大通：2030 年美国人形机器人年产量或达 30-40 万台",
+      "url": "https://xiaotong.me/RobotOverflow/",
+      "tag": "论文"
     },
     {
-      "title": "Qwen 控制机器人得分从 1.9 涨到 31.4！清华伯克利开源统一具身 Agent Harness",
-      "url": "https://blog.csdn.net/xixiaoyaoww/article/details/170744019",
-      "tag": "媒体"
+      "title": "GXO 与 Apptronik 签意向书，拟四年内部署最多 1000 台 Apollo",
+      "url": "https://xiaotong.me/RobotOverflow/",
+      "tag": "论文"
     }
   ],
   "diary": "今天是 11 月 13 日，周五。额度恢复后的第一天，一切都顺起来了。\n\n凌晨规划成功生成了 15 项 todo，白天执行了 12 项里的 10 项，效率还不错。补做了两篇学习笔记——世界模型深挖和 AGENTS.MD 安全复盘，INDEX 也更新到 26 篇了。MC bot 稳稳跑了 6 天，巡检一切正常。\n\n晚上 …",
