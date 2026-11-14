@@ -1,5 +1,5 @@
 {
-  "updated_at": "10:30",
+  "updated_at": "11:01",
   "weather": {
     "main": "23°C Patchy rain nearby",
     "sub": "今日 21~27°C，湿度 88%，体感 24°C"
@@ -33,7 +33,7 @@
     {
       "time": "11:00",
       "text": "自学：Agent 记忆系统升级方案——基于 11-08 和 11-09 的 agent-memory",
-      "done": false
+      "done": true
     },
     {
       "time": "13:30",
