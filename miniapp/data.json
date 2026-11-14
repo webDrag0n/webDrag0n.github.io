@@ -1,8 +1,8 @@
 {
-  "updated_at": "21:15",
+  "updated_at": "22:30",
   "weather": {
     "main": "23°C Patchy rain nearby",
-    "sub": "今日 22~25°C，湿度 85%，体感 26°C"
+    "sub": "今日 22~25°C，湿度 86%，体感 26°C"
   },
   "todos": [
     {
@@ -23,7 +23,7 @@
     {
       "time": "22:30",
       "text": "周末晚安：周六晚上特别版晚安，提醒他明天周日可以睡懒觉",
-      "done": false
+      "done": true
     },
     {
       "time": "09:30",
