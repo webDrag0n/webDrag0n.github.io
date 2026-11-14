@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 13 Nov 2026 17:08:53 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 00:04:28 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-11-14</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261114.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261114.html</guid>
+      <pubDate>Sat, 14 Nov 2026 08:00:00 +0000</pubDate>
+      <description>今日 arXiv 最热论文聚焦 Agent 决策模型与视频生成物理一致性；HuggingFace 榜首被 PhysLoop 占据。具身智能赛道爆发：英伟达黄仁勋突然辞任 CEO、Agile Robots 获软银 5 亿美元融资估值 85 亿、World Labs 发布 Atlas 世界模型开放 API。机器人产业化加速，宝马订购 1700 台 ABB 机器人，人形机器人量产节奏超预期。</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-11-14</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261114.html</link>
