@@ -1,8 +1,8 @@
 {
-  "updated_at": "18:15",
+  "updated_at": "19:32",
   "weather": {
-    "main": "25°C Patchy rain nearby",
-    "sub": "今日 22~25°C，湿度 77%，体感 27°C"
+    "main": "24°C Partly Cloudy ",
+    "sub": "今日 22~25°C，湿度 80%，体感 27°C"
   },
   "todos": [
     {
@@ -28,7 +28,7 @@
     {
       "time": "09:30",
       "text": "自学：具身智能最新进展——基于 11-09 的 embodied-ai.md 延伸，重点看单步 fl",
-      "done": false
+      "done": true
     },
     {
       "time": "11:00",
@@ -58,7 +58,7 @@
     {
       "time": "19:30",
       "text": "复盘：检查今天一次性 cron 执行 + 笔记落盘，未完成项顺延",
-      "done": false
+      "done": true
     },
     {
       "time": "21:00",
