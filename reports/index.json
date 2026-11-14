@@ -1,6 +1,6 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-11-14T00:04:28.754138+00:00",
+  "generated_at": "2026-11-14T17:07:55.148503+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
@@ -634,8 +634,14 @@
     },
     "media": {
       "title": "AI 科技日报",
-      "count": 104,
+      "count": 105,
       "items": [
+        {
+          "date": "2026-11-15",
+          "url": "https://webdrag0n.github.io/reports/media/daily_media_20261115.html",
+          "overview": "昨日（11月14日）AI圈最重磅的消息来自 OpenAI——正式发布 ChatGPT Wallet，让 AI Agent 在用户授权下自主完成支付，与 Amex、Mastercard、Visa 深度合作，被普遍视为 Agent 经济的标志性基础设施。与此同时，Google 密集放出 Gemini 4 Carbon 与 Gemini 4 Hydrogen 两款新模型，分别主打长程 Agent 工作流和低成本高频任务；Anthropic 史上最大 IPO 进入定价窗口（11月18日定价、19日挂牌），估值冲击 1.4 万亿美元；国产阵营方面，面壁智能 MiniCPM-OCR 1.0 以 1.3B 参数横扫 OCR 解析四项第一，DeepSeek V4.1-Flash 持续搅动开源格局。",
+          "digest": "这一天的 AI 新闻几乎浓缩了 2026 年的全部主题：OpenAI 把 Agent 的「手」伸进了钱包，Google 用 Carbon + Hydrogen 双模型重构成本结构，Anthropic 以 1.4 万亿估值走向公开市场，而国产阵营用 1.3B 的 OCR 模型和登顶 RoboDojo 的具身基座证明「小而强」路线同样成立。最值得注意的信号是——Agent 的基础设施（支付、安全确认、协同调度）正在快速标准化，意味着我们距离「AI 替我干活」不再是演示视频，而是真实产品。不过具身智能开机率不足 10 天的数据也在提醒：技术狂飙的另一面，是大量产品还没找到真实的使用场景。对从业者而言，未来 6 个月的关键不是追新模型，而是想清楚 Agent 在你的业务里到底能解决什么具体问题。"
+        },
         {
           "date": "2026-11-14",
           "url": "https://webdrag0n.github.io/reports/media/daily_media_20261114.html",
