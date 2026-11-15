@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 日报 — 2026-11-15</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🧠</div>
+  <h1>AI 日报</h1>
+  <div class="date">2026 年 11 月 15 日 · 星期日</div>
+  <div class="subtitle">大模型 · 多模态 · Agent · 具身智能 · 机器人</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今日 arXiv 最热论文聚焦视觉编码解耦与视频生成像素空间重建；HuggingFace 榜首被 SO-Arena 系统决策模型基准占据。具身智能赛道持续火热：OpenAI 拆分独立机器人团队并入研究与应用部门、Agile Robots 软银 5 亿美元融资余波未平、World Labs Atlas 世界模型开放 API 引发开发者关注。开源社区方面，supermimic 人形机器人全身运动跟踪、agentes-chat 多 Agent 协作平台等新项目崭露头角，AI Agent 基础设施正在快速演进。</p>
+</div>
+
+<!-- ========== 具身智能 / 机器人 ========== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能与机器人</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 Breaking</div>
+    <div class="source">Robot Overflow · 2026-11-13 · 重要性 ★★</div>
+    <div class="title"><a href="https://xiaotong.me/RobotOverflow/" target="_blank">报道称 OpenAI 拆分独立机器人团队，并入研究与应用部门</a></div>
+    <div class="summary">据 AI Weekly 报道，OpenAI 已将其独立的机器人团队拆分，分别并入核心研究部门与应用部门。这一组织调整引发外界对 OpenAI 机器人战略走向的猜测——是收缩战线还是整合资源加速落地，值得持续关注。</div>
+    <div class="tags"><span class="tag hot">Breaking</span><span class="tag">OpenAI</span><span class="tag">组织调整</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 融资速递</div>
+    <div class="source">Robot Overflow · 2026-11-12 · 重要性 ★★★</div>
+    <div class="title"><a href="https://xiaotong.me/RobotOverflow/" target="_blank">Agile Robots 获软银领投 5 亿美元融资，估值 85 亿美元</a></div>
+    <div class="summary">思灵机器人（Agile Robots）宣布完成 5 亿美元新一轮融资，由软银愿景基金领投，估值飙升至 85 亿美元。资金将用于加速人形机器人量产与全球市场扩张，软银在机器人赛道的押注持续加码。</div>
+    <div class="tags"><span class="tag hot">大额融资</span><span class="tag">软银</span><span class="tag">Agile Robots</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 2026-11-12 · 重要性 ★★</div>
+    <div class="title"><a href="https://xiaotong.me/RobotOverflow/" target="_blank">World Labs 发布 Atlas 世界模型，开放开发者 API 与 3D 工具</a></div>
+    <div class="summary">李飞飞创立的 World Labs 正式发布 Atlas 世界模型平台，提供开发者 API 和 3D 内容生成工具。世界模型被视为具身智能的核心基础设施，开放 API 有望降低机器人仿真与空间智能开发门槛。</div>
+    <div class="tags"><span class="tag">世界模型</span><span class="tag">World Labs</span><span class="tag">空间智能</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 2026-11-13 · 重要性 ★★</div>
+    <div class="title"><a href="https://xiaotong.me/RobotOverflow/" target="_blank">大晓机器人发布 ACE-CaP-0，真机操作任务成功率 92.1%</a></div>
+    <div class="summary">ACE Robotics 发布新一代操控模型 ACE-CaP-0，在 8 项精细操作任务上实现 92.1% 的真机成功率。该成绩标志着视觉-语言-动作（VLA）模型在精细操控场景上的又一次突破。</div>
+    <div class="tags"><span class="tag">VLA</span><span class="tag">精细操控</span><span class="tag">真机验证</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 2026-11-12 · 重要性 ★★</div>
+    <div class="title"><a href="https://xiaotong.me/RobotOverflow/" target="_blank">摩根大通：2030 年美国人形机器人年产量或达 30-40 万台</a></div>
+    <div class="summary">JPMorgan 发布人形机器人产业研报，预测到 2030 年美国人形机器人年产量将达到 30-40 万台。报告认为制造业与物流将成为首批规模化落地场景。</div>
+    <div class="tags"><span class="tag">市场预测</span><span class="tag">人形机器人</span><span class="tag">JPMorgan</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 2026-11-12 · 重要性 ★★</div>
+    <div class="title"><a href="https://xiaotong.me/RobotOverflow/" target="_blank">GXO 与 Apptronik 签意向书，拟四年内部署最多 1000 台 Apollo</a></div>
+    <div class="summary">全球物流巨头 GXO 与 Apptronik 签署意向书，计划在未来四年内部署最多 1000 台 Apollo 人形机器人。物流仓储正成为人形机器人商业化验证的核心战场。</div>
+    <div class="tags"><span class="tag">商业化落地</span><span class="tag">物流</span><span class="tag">Apptronik</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 2026-11-11 · 重要性 ★★</div>
+    <div class="title"><a href="https://xiaotong.me/RobotOverflow/" target="_blank">宝马向 ABB 订购逾 1700 台机器人用于新世代车型生产</a></div>
+    <div class="summary">宝马集团宣布向 ABB 订购超过 1700 台工业机器人，用于 Neue Klasse 新世代车型的自动化生产线。传统工业机器人与人形机器人正在形成互补格局。</div>
+    <div class="tags"><span class="tag">工业自动化</span><span class="tag">ABB</span><span class="tag">宝马</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 2026-11-11 · 重要性 ★★</div>
+    <div class="title"><a href="https://xiaotong.me/RobotOverflow/" target="_blank">优必选与永达汽车签约，首批 400 台 U1 Pro 人形机器人</a></div>
+    <div class="summary">优必选（UBTECH）与永达汽车达成合作，将首批交付 400 台 U1 Pro 人形机器人用于汽车展厅与售后服务场景。中国人形机器人厂商正在加速商业闭环验证。</div>
+    <div class="tags"><span class="tag">商业订单</span><span class="tag">优必选</span><span class="tag">汽车场景</span></div>
+  </div>
+</div>
+
+<!-- ========== 论文研究 ========== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>论文研究 · arXiv / HuggingFace</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 HuggingFace 热榜</div>
+    <div class="source">HuggingFace Daily Papers · 2026-11-15 · 135 upvotes</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.15777" target="_blank">SO-Arena: 系统决策模型的能力谱系与可靠性基准</a></div>
+    <div class="summary">SO-Arena 是首个全面评估 System One 模型（快速决策模型）的基准，覆盖从简单分类到复杂推理的多种任务类型。研究发现当前系统决策模型在需要多步推理的任务上可靠性显著下降，为下一代决策模型设计提供了关键参考。</div>
+    <div class="tags"><span class="tag hot">HuggingFace 榜首</span><span class="tag">System One</span><span class="tag">决策模型</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 高关注论文</div>
+    <div class="source">HuggingFace Daily Papers · 2026-11-15 · 46 upvotes</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.16748" target="_blank">PhysLoop: 利用 LLM 物理感知实现视频生成模型自我改进</a></div>
+    <div class="summary">PhysLoop 提出一种闭环框架，让视频生成模型通过 LLM 的物理常识反馈自动检测并修正物理不合理片段，实现自我迭代优化。该方法无需人工标注，在物理一致性指标上取得显著提升。</div>
+    <div class="tags"><span class="tag hot">高关注</span><span class="tag">视频生成</span><span class="tag">物理一致性</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily Papers · 2026-11-15 · 33 upvotes</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.17167" target="_blank">Actor, Judge, or Teacher? 理解长周期 Agent 中的决策模型</a></div>
+    <div class="summary">本文系统研究 Agent 架构中决策模型的三种角色：执行者（Actor）、评判者（Judge）和教导者（Teacher）。通过对比实验发现，不同角色对模型能力要求差异巨大，混合架构在长周期任务中表现最优。</div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">决策架构</span><span class="tag">长周期任务</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily Papers · 2026-11-15 · 34 upvotes</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.15844" target="_blank">Open Vision Banana: 生成式视觉感知的完全开放方案</a></div>
+    <div class="summary">本文开源了 Vision Banana 的完整实现，包括数据、权重、代码和训练细节。该方案将视觉任务转化为条件图像编辑，利用预训练图像生成器的内在理解能力，在多项视觉基准上实现零样本 SOTA。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">视觉感知</span><span class="tag">生成模型</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily Papers · 2026-11-15 · 26 upvotes</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.17060" target="_blank">Ropedia Xperience 2: 扩展 Physical AI 环境与行为的标准</a></div>
+    <div class="summary">Ropedia 团队发布 Xperience 2 标准，旨在统一 Physical AI（具身智能）环境的行为定义与数据格式。该标准涵盖 100+ 机器人平台，为跨平台数据共享与模型训练提供基础设施。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">数据标准</span><span class="tag">Physical AI</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv cs.CL / cs.AI · 2026-11-12</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.17320" target="_blank">Learning When Diffusion Language Models Should Regenerate</a></div>
+    <div class="summary">扩散语言模型（DLM）的 remasking 机制允许模型回溯修正已生成文本，但关键是判断"何时该改"。本文通过对 Sudoku 任务诊断发现隐状态包含错误信息但未被有效利用，提出自适应再生策略显著提升推理准确性。</div>
+    <div class="tags"><span class="tag">扩散语言模型</span><span class="tag">自纠错</span><span class="tag">推理</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv cs.AI / cs.LG · 2026-11-12</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.17309" target="_blank">Classical Energies Learn to Reason 1000x Faster than Looped Models</a></div>
+    <div class="summary">循环模型（Looped Models）在 Sudoku、迷宫等推理任务上表现出色，但训练不稳定且参数量大。本文提出经典能量模型方法，在保持同等推理精度的同时将速度提升 1000 倍，为高效推理开辟新路径。</div>
+    <div class="tags"><span class="tag">推理加速</span><span class="tag">能量模型</span><span class="tag">循环架构</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv cs.CL / cs.AI · 2026-11-12</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.17316" target="_blank">CoReMem: 面向连续编码任务的成本内化记忆机制</a></div>
+    <div class="summary">Coding Agent 在连续任务中需要决定将哪些信息写入记忆以供未来使用。CoReMem 提出前瞻性估值机制，让 Agent 在写入记忆时内化存储成本与预期收益，在 SWE-bench 连续任务上取得显著改进。</div>
+    <div class="tags"><span class="tag">Coding Agent</span><span class="tag">记忆机制</span><span class="tag">成本优化</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily Papers · 2026-11-15 · 12 upvotes</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.16905" target="_blank">Factored One-sided Adam-Moment for Practical and Scalable SOAP</a></div>
+    <div class="summary">SOAP 是一种高效的二阶优化器，但内存开销大。本文提出分解单边 Adam 矩方法，在保持 SOAP 收敛速度的同时大幅降低内存占用，使二阶优化在更大模型上的实际部署成为可能。</div>
+    <div class="tags"><span class="tag">优化器</span><span class="tag">训练效率</span><span class="tag">SOAP</span></div>
+  </div>
+</div>
+
+<!-- ========== 开源动态 ========== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源动态 · GitHub</div>
+
+  <div class="card">
+    <div class="source">GitHub · 本周新星</div>
+    <div class="title"><a href="https://github.com/HybridRobotics/supermimic" target="_blank">supermimic · 1498 ⭐</a></div>
+    <div class="summary">UC Berkeley Hybrid Robotics 开源的人形机器人全身运动跟踪项目，基于可微分世界模型实现。该项目将仿真与真实世界训练结合，为人形机器人运动控制提供了新的技术路线，与当前具身智能热潮高度契合。</div>
+    <div class="tags"><span class="tag">人形机器人</span><span class="tag">运动控制</span><span class="tag">UC Berkeley</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 本周新星</div>
+    <div class="title"><a href="https://github.com/agentes-chat/agentes-chat" target="_blank">agentes-chat · 1400 ⭐</a></div>
+    <div class="summary">开源自托管的 Slack 替代方案，支持团队与 AI Agent 在频道和私聊中协作。Agent 可运行 Claude、ChatGPT、Gemini 或 Grok，配备 MCP 工具和独立计算环境，代表了多 Agent 协作平台的新方向。</div>
+    <div class="tags"><span class="tag">多Agent协作</span><span class="tag">开源替代</span><span class="tag">MCP</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 本周新星</div>
+    <div class="title"><a href="https://github.com/FrigadeHQ/yogurt" target="_blank">yogurt · 1482 ⭐</a></div>
+    <div class="summary">完全本地运行的 AI 会议记录工具，是 Granola 的开源替代品。所有数据留在用户电脑上，支持 Mac、Windows 和 Linux，体现了 AI 应用"隐私优先"设计趋势的兴起。</div>
+    <div class="tags"><span class="tag hot">隐私优先</span><span class="tag">本地AI</span><span class="tag">开源替代</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 本周新星</div>
+    <div class="title"><a href="https://github.com/alexeyw/lot-map" target="_blank">lot-map · 830 ⭐</a></div>
+    <div class="summary">一个实时可视化 Claude Code 工作过程的本地工具——工具调用、模型步骤、hooks、skills 和 subagents 都会实时点亮。为 AI 编程 Agent 的调试与教学提供了直观的可视化界面。</div>
+    <div class="tags"><span class="tag">AI可视化</span><span class="tag">Claude Code</span><span class="tag">开发工具</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 本周新星</div>
+    <div class="title"><a href="https://github.com/deepseek-ai/chat-demo" target="_blank">chat-demo · 1737 ⭐</a></div>
+    <div class="summary">DeepSeek 官方发布的聊天演示项目，展示了其最新模型的交互能力。作为国产大模型的代表，DeepSeek 持续在开源社区保持活跃，该项目为开发者提供了快速体验最新模型的入口。</div>
+    <div class="tags"><span class="tag">DeepSeek</span><span class="tag">国产大模型</span><span class="tag">演示项目</span></div>
+  </div>
+</div>
+
+<!-- ========== 编辑点评 ========== -->
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>周日的 AI 圈依然热闹。最耐人寻味的是 OpenAI 把独立机器人团队拆分并入研究与应用两大部门——表面上像"退"，实际上更像把具身智能从"项目制"升级为"全公司战略"，值得玩味。论文侧最值得关注的是 SO-Arena 冲上 HuggingFace 榜首，135 个 upvote 说明社区对"决策快模型"这个新品类极度好奇，Agent 赛道正在从"会说话的 LLM"分化为执行者、评判者、教导者等多角色协同。具身智能这边，软银 5 亿美元砸向思灵机器人、World Labs 把 Atlas 世界模型 API 开放出来，资本和基础设施同步加码；而 Berkeley 开源的 supermimic 一周拿下 1500 star，也说明学界和开源社区并没有被商业资本甩开。开源自托管的 agentes-chat、本地优先的 yogurt 这类项目走红，则提示我们：AI 应用的下一波卖点可能不是更强的模型，而是数据主权和隐私。整体看，AI 正在完成从"能力展示"到"组织重构"的过渡——无论是公司组织架构、Agent 角色架构，还是机器人的产业链分层，都在快速重组中。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · Generated on 2026-11-15</p>
+</div>
+
+</div>
+</body>
+</html>

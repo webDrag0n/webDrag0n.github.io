@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 14 Nov 2026 17:07:55 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Nov 2026 00:05:45 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-11-15</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261115.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261115.html</guid>
+      <pubDate>Sun, 15 Nov 2026 08:00:00 +0000</pubDate>
+      <description>今日 arXiv 最热论文聚焦视觉编码解耦与视频生成像素空间重建；HuggingFace 榜首被 SO-Arena 系统决策模型基准占据。具身智能赛道持续火热：OpenAI 拆分独立机器人团队并入研究与应用部门、Agile Robots 软银 5 亿美元融资余波未平、World Labs Atlas 世界模型开放 API 引发开发者关注。开源社区方面，supermimic 人形机器人全身运动跟踪、agentes-chat 多 Agent 协作平台等新项目崭露头角，AI Agent 基础设施正在快速演进。</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-11-15</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261115.html</link>

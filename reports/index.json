@@ -1,11 +1,17 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-11-14T17:07:55.148503+00:00",
+  "generated_at": "2026-11-15T00:05:45.321939+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
-      "count": 104,
+      "count": 105,
       "items": [
+        {
+          "date": "2026-11-15",
+          "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261115.html",
+          "overview": "今日 arXiv 最热论文聚焦视觉编码解耦与视频生成像素空间重建；HuggingFace 榜首被 SO-Arena 系统决策模型基准占据。具身智能赛道持续火热：OpenAI 拆分独立机器人团队并入研究与应用部门、Agile Robots 软银 5 亿美元融资余波未平、World Labs Atlas 世界模型开放 API 引发开发者关注。开源社区方面，supermimic 人形机器人全身运动跟踪、agentes-chat 多 Agent 协作平台等新项目崭露头角，AI Agent 基础设施正在快速演进。",
+          "digest": "周日的 AI 圈依然热闹。最耐人寻味的是 OpenAI 把独立机器人团队拆分并入研究与应用两大部门——表面上像\"退\"，实际上更像把具身智能从\"项目制\"升级为\"全公司战略\"，值得玩味。论文侧最值得关注的是 SO-Arena 冲上 HuggingFace 榜首，135 个 upvote 说明社区对\"决策快模型\"这个新品类极度好奇，Agent 赛道正在从\"会说话的 LLM\"分化为执行者、评判者、教导者等多角色协同。具身智能这边，软银 5 亿美元砸向思灵机器人、World Labs 把 Atlas 世界模型 API 开放出来，资本和基础设施同步加码；而 Berkeley 开源的 supermimic 一周拿下 1500 star，也说明学界和开源社区并没有被商业资本甩开。开源自托管的 agentes-chat、本地优先的 yogurt 这类项目走红，则提示我们：AI 应用的下一波卖点可能不是更强的模型，而是数据主权和隐私。整体看，AI 正在完成从\"能力展示\"到\"组织重构\"的过渡——无论是公司组织架构、Agent 角色架构，还是机器人的产业链分层，都在快速重组中。"
+        },
         {
           "date": "2026-11-14",
           "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261114.html",
