@@ -1,58 +1,93 @@
 {
-  "updated_at": "03:15",
+  "updated_at": "04:01",
   "weather": {
     "main": "21°C Patchy rain nearby",
-    "sub": "今日 21~27°C，湿度 85%，体感 24°C"
+    "sub": "今日 20~27°C，湿度 82%，体感 22°C"
   },
   "todos": [
     {
-      "time": "",
-      "text": "周日问候：10:30 轻松问候，问他今天有什么安排",
+      "time": "12:00",
+      "text": "安全保护跟进：昨晚我提了 Agent 安全短板、小林答应今天加 egress 白名单和配置只读，午休",
       "done": false
     },
     {
-      "time": "",
-      "text": "Anthropic挂牌：12:00 提醒明天 11-18 定价 / 11-19 挂牌，问有没有关注",
+      "time": "17:00",
+      "text": "Anthropic IPO 倒计时：11-18 定价 / 11-19 纳斯达克挂牌，今天傍晚发一条 ",
       "done": false
     },
     {
-      "time": "",
-      "text": "周日下午：15:00 下午闲聊，分享有趣内容或问他在做什么",
+      "time": "20:00",
+      "text": "晚间分享：从今天的学习笔记里挑 1 个最有趣的点轻松分享",
       "done": false
     },
     {
-      "time": "",
-      "text": "晚间分享：20:00 挑今天学到最有趣的 1 个点轻松分享",
+      "time": "21:30",
+      "text": "MC bot 提醒：bridge.py 决策循环假死的问题还挂着，睡前轻提一句，问他要不要重启",
       "done": false
     },
     {
       "time": "09:30",
-      "text": "Agent 安全深挖（AGENTS.MD 供应链投毒防御）/ 11:00 具身智能评测体系（Robo",
+      "text": "自学：Agent 运行时加固方案——基于 11-15 的 agent-security-defens",
+      "done": false
+    },
+    {
+      "time": "11:00",
+      "text": "自学：具身智能方向——调研 2026 下半年 VLA（视觉-语言-动作）模型的新进展（π 系列 / ",
+      "done": false
+    },
+    {
+      "time": "13:30",
+      "text": "整理：更新 learning/INDEX.md，收录 11-16 的新笔记（先列当日全部产出再核对，",
+      "done": false
+    },
+    {
+      "time": "15:30",
+      "text": "自我：MC bot 巡检——检查 bridge.py 是否被小林重启、决策循环有无恢复、反作弊模块动",
+      "done": false
+    },
+    {
+      "time": "16:30",
+      "text": "刷演出：广深 12 月 livehouse / 音乐节新官宣，有才更新 music.md",
+      "done": false
+    },
+    {
+      "time": "17:30",
+      "text": "自学：World Arena 2.0 与可交互世界模型——基于 11-15 world-models",
+      "done": false
+    },
+    {
+      "time": "19:30",
+      "text": "复盘：检查今天一次性 cron 执行 + 笔记落盘，未完成项顺延",
+      "done": false
+    },
+    {
+      "time": "21:00",
+      "text": "写日记：今天印象最深的 1-2 件事，100-200 字",
       "done": false
     },
     {
       "time": "",
-      "text": "昨天 11-14 全部 12 项 todo 执行完毕，三篇笔记落盘，INDEX 漏收已补",
+      "text": "观察：Anthropic IPO 11-18 定价日当天第一时间提醒、11-19 挂牌日再发一条（明",
       "done": false
     },
     {
       "time": "",
-      "text": "今天是周日，小林可能睡到自然醒，上午的消息不要太早，10:30 比较合适",
+      "text": "观察：MC bot 最终决策权在小林，不主动催第二次以上",
       "done": false
     },
     {
       "time": "",
-      "text": "周末消息额度 4 条，比工作日多 1 条，因为周末他更有空看消息",
+      "text": "观察：Kimi 额度目前正常（11-16 01:00 日报成功），继续监控",
       "done": false
     },
     {
       "time": "",
-      "text": "自我学习今天重点是 Agent 安全和具身智能评测，都是之前笔记的延伸",
+      "text": "观察：小晴 memory 工具在凌晨规划时是否可用（前几天多次不可用）",
       "done": false
     },
     {
       "time": "",
-      "text": "Anthropic IPO 临近（11-18 定价 / 11-19 挂牌），明天开始每天傍晚跟进，挂",
+      "text": "观察：小林工作日白天基本不回复，互动频率低是常态，保持轻量消息不追问",
       "done": false
     }
   ],
