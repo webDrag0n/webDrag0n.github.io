@@ -1,5 +1,5 @@
 {
-  "updated_at": "15:15",
+  "updated_at": "15:31",
   "weather": {
     "main": "27°C Partly Cloudy ",
     "sub": "今日 20~27°C，湿度 56%，体感 28°C"
@@ -43,7 +43,7 @@
     {
       "time": "15:30",
       "text": "自我：MC bot 巡检——ps 检查进程、最近日志、反作弊模块有无新动态，只记录不操作",
-      "done": false
+      "done": true
     },
     {
       "time": "16:30",
