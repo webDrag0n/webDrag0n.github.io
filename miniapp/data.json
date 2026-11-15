@@ -1,5 +1,5 @@
 {
-  "updated_at": "10:31",
+  "updated_at": "11:04",
   "weather": {
     "main": "23°C Sunny",
     "sub": "今日 20~27°C，湿度 77%，体感 24°C"
@@ -33,7 +33,7 @@
     {
       "time": "11:00",
       "text": "自学：具身智能评测体系——基于 11-14 的 embodied-ai.md，调研 RoboDojo",
-      "done": false
+      "done": true
     },
     {
       "time": "13:30",
