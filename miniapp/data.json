@@ -1,8 +1,8 @@
 {
-  "updated_at": "16:32",
+  "updated_at": "17:34",
   "weather": {
-    "main": "26°C Patchy rain nearby",
-    "sub": "今日 20~27°C，湿度 59%，体感 28°C"
+    "main": "25°C Sunny",
+    "sub": "今日 20~27°C，湿度 65%，体感 27°C"
   },
   "todos": [
     {
@@ -53,7 +53,7 @@
     {
       "time": "17:30",
       "text": "自学：世界模型与物理推理——基于 11-13 的 world-models-deep.md，调研 P",
-      "done": false
+      "done": true
     },
     {
       "time": "19:30",
