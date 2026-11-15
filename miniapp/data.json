@@ -1,8 +1,8 @@
 {
-  "updated_at": "13:31",
+  "updated_at": "15:00",
   "weather": {
-    "main": "26°C Sunny",
-    "sub": "今日 20~27°C，湿度 61%，体感 28°C"
+    "main": "27°C Partly Cloudy ",
+    "sub": "今日 20~27°C，湿度 56%，体感 28°C"
   },
   "todos": [
     {
@@ -18,7 +18,7 @@
     {
       "time": "15:00",
       "text": "下午闲聊：周日下午发一条轻松消息，可以分享今天刷到的有趣内容或问他在做什么",
-      "done": false
+      "done": true
     },
     {
       "time": "20:00",
