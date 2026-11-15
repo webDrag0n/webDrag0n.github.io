@@ -1,8 +1,8 @@
 {
-  "updated_at": "11:04",
+  "updated_at": "12:00",
   "weather": {
-    "main": "23°C Sunny",
-    "sub": "今日 20~27°C，湿度 77%，体感 24°C"
+    "main": "25°C Sunny",
+    "sub": "今日 20~27°C，湿度 65%，体感 27°C"
   },
   "todos": [
     {
@@ -13,7 +13,7 @@
     {
       "time": "12:00",
       "text": "午休提醒 + Anthropic IPO：周日午休时间发，提醒他明天 11-18 Anthropic",
-      "done": false
+      "done": true
     },
     {
       "time": "15:00",
