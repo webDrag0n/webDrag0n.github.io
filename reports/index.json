@@ -1,6 +1,6 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-11-15T00:05:45.321939+00:00",
+  "generated_at": "2026-11-15T17:04:24.272925+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
@@ -640,8 +640,14 @@
     },
     "media": {
       "title": "AI 科技日报",
-      "count": 105,
+      "count": 106,
       "items": [
+        {
+          "date": "2026-11-16",
+          "url": "https://webdrag0n.github.io/reports/media/daily_media_20261116.html",
+          "overview": "本周末 AI 圈最大的新闻是英伟达黄仁勋辞职事件持续发酵——员工集体请愿\"让老黄回家\"，公司 33 年来首次换帅，市值蒸发超 3 万亿；与此同时 DeepSeek 突放\"全家桶\"应用 API，覆盖联网搜索、文件解析、ASR/TTS 等完整 App 能力，开发者可 1:1 复刻 DeepSeek App。模型侧，MiniMax 开源 H3-Image 原生 4K 生图模型、腾讯混元开源 Hy4 跻身最强开源模型、无界前沿开源 Fx-Bio-1031 在生物盲测中超越 GPT-6-Astra 与 Opus-5。Anthropic 启动 IPO 路演但估值缩水 6000 亿美元，马斯克裁掉整个多模态团队，AI 行业格局正在剧烈重组。",
+          "digest": "这个周末的 AI 圈充满戏剧张力：英伟达 33 年首次换帅、员工请愿\"让老黄回家\"，成为行业年度最大的人事地震；而 DeepSeek 反手开放\"全家桶\"应用 API，等于把自家 App 的全部能力打包送给开发者，直接把应用层竞争的火药桶点着了。模型侧也热闹——MiniMax 开源原生 4K 生图、腾讯混元 Hy4 冲榜、Fx-Bio-1031 在生物盲测里反超 GPT-6-Astra，国产开源的力量密度肉眼可见。值得玩味的是 Anthropic 估值缩水 6000 亿美元仍坚持 IPO，叠加 xAI 裁掉整个多模态团队，资本与组织层面都在传递同一个信号：纯模型讲故事的时代结束了，能交付、能赚钱、能自我迭代的生态才是下一站的入场券。"
+        },
         {
           "date": "2026-11-15",
           "url": "https://webdrag0n.github.io/reports/media/daily_media_20261115.html",

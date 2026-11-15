@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 15 Nov 2026 00:05:45 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Nov 2026 17:04:24 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-11-16</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261116.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261116.html</guid>
+      <pubDate>Mon, 16 Nov 2026 08:00:00 +0000</pubDate>
+      <description>本周末 AI 圈最大的新闻是英伟达黄仁勋辞职事件持续发酵——员工集体请愿&quot;让老黄回家&quot;，公司 33 年来首次换帅，市值蒸发超 3 万亿；与此同时 DeepSeek 突放&quot;全家桶&quot;应用 API，覆盖联网搜索、文件解析、ASR/TTS 等完整 App 能力，开发者可 1:1 复刻 DeepSeek App。模型侧，MiniMax 开源 H3-Image 原生 4K 生图模型、腾讯混元开源 Hy4 跻身最强开源模型、无界前沿开源 Fx-Bio-1031 在生物盲测中超越 GPT-6-Astra 与 Opus-5。Anthropic 启动 IPO 路演但估值缩水 6000 亿美元，马斯克裁掉整个多模态</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-11-15</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261115.html</link>
