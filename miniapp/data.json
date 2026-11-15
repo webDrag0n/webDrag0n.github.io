@@ -1,5 +1,5 @@
 {
-  "updated_at": "19:31",
+  "updated_at": "20:01",
   "weather": {
     "main": "25°C Partly Cloudy ",
     "sub": "今日 20~27°C，湿度 69%，体感 27°C"
@@ -23,7 +23,7 @@
     {
       "time": "20:00",
       "text": "晚间分享：挑今天学到最有趣的 1 个点轻松分享（可以是 Agent 安全 / 具身智能 / 世界模型",
-      "done": false
+      "done": true
     },
     {
       "time": "09:30",
