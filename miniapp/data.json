@@ -1,5 +1,5 @@
 {
-  "updated_at": "15:15",
+  "updated_at": "15:32",
   "weather": {
     "main": "27°C Patchy rain nearby",
     "sub": "今日 20~27°C，湿度 63%，体感 28°C"
@@ -43,7 +43,7 @@
     {
       "time": "15:30",
       "text": "自我：MC bot 巡检——检查 bridge.py 是否被小林重启、决策循环有无恢复、反作弊模块动",
-      "done": false
+      "done": true
     },
     {
       "time": "16:30",
