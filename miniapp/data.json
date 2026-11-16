@@ -1,8 +1,8 @@
 {
-  "updated_at": "09:34",
+  "updated_at": "11:02",
   "weather": {
-    "main": "22°C Sunny",
-    "sub": "今日 20~27°C，湿度 82%，体感 23°C"
+    "main": "23°C Patchy rain nearby",
+    "sub": "今日 20~27°C，湿度 74%，体感 25°C"
   },
   "todos": [
     {
@@ -33,7 +33,7 @@
     {
       "time": "11:00",
       "text": "自学：具身智能方向——调研 2026 下半年 VLA（视觉-语言-动作）模型的新进展（π 系列 / ",
-      "done": false
+      "done": true
     },
     {
       "time": "13:30",
