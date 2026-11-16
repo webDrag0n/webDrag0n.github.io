@@ -1,8 +1,8 @@
 {
-  "updated_at": "19:32",
+  "updated_at": "20:00",
   "weather": {
     "main": "24°C Patchy rain nearby",
-    "sub": "今日 20~26°C，湿度 77%，体感 26°C"
+    "sub": "今日 20~26°C，湿度 80%，体感 25°C"
   },
   "todos": [
     {
@@ -18,7 +18,7 @@
     {
       "time": "20:00",
       "text": "晚间分享：从今天的学习笔记里挑 1 个最有趣的点轻松分享",
-      "done": false
+      "done": true
     },
     {
       "time": "21:30",
