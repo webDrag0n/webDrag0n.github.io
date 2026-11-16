@@ -1,8 +1,8 @@
 {
-  "updated_at": "06:15",
+  "updated_at": "09:15",
   "weather": {
-    "main": "20°C Haze",
-    "sub": "今日 20~27°C，湿度 83%，体感 21°C"
+    "main": "22°C Sunny",
+    "sub": "今日 20~27°C，湿度 82%，体感 23°C"
   },
   "todos": [
     {
@@ -93,34 +93,34 @@
   ],
   "news": [
     {
-      "title": "突发！DeepSeek 开放全家桶应用 API",
-      "url": "https://www.qbitai.com/2026/11/510003.html",
-      "tag": "媒体"
+      "title": "英伟达 CEO 黄仁勋辞职，CFO Colette Kress 出任临时 CEO",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+      "tag": "论文"
     },
     {
-      "title": "多模态\"源神\"！MiniMax 开源 SOTA 生图模型，原生 4K，一张两毛",
-      "url": "https://www.qbitai.com/2026/11/509440.html",
-      "tag": "媒体"
+      "title": "Agile Robots 完成 5 亿美元融资，软银领投，估值 85 亿美元",
+      "url": "https://thenextweb.com/news/agile-robots-softbank-500m-humanoid",
+      "tag": "论文"
     },
     {
-      "title": "腾讯混元跻身最强开源模型！一手实测 Hy4：搭配 WorkBuddy，多模态 Agent 交付力拉满",
-      "url": "https://www.qbitai.com/2026/11/507843.html",
-      "tag": "媒体"
+      "title": "OpenAI 将独立机器人团队并入研究与应用部门",
+      "url": "https://aiweekly.co/alerts/openai-folds-robotics-team-into-main-research-and-applied-orgs",
+      "tag": "论文"
     },
     {
-      "title": "千问办公 2.0 发布：首个支持多人与 Agent 协作的 Team Agent 来了",
-      "url": "https://www.qbitai.com/2026/11/508798.html",
-      "tag": "媒体"
+      "title": "ACE Robotics 发布 ACE-CaP-0：8 项精细操作任务真实机器人成功率 92.1%",
+      "url": "https://www.jiemian.com/article/15329454.html",
+      "tag": "论文"
     },
     {
-      "title": "openJiuwen 发布 RSI 原生 AgentOS，让 Agent 自由变身、持续迭代",
-      "url": "https://www.qbitai.com/2026/11/509653.html",
-      "tag": "媒体"
+      "title": "Rhoda AI 将视频-动作模型扩展到移动操作",
+      "url": "https://www.therobotreport.com/how-rhoda-ai-is-using-video-data-to-create-generalized-ai-models-for-robots/",
+      "tag": "论文"
     },
     {
-      "title": "高难盲测超越 GPT-6-Astra 与 Opus-5！无界前沿开源 Fx-Bio-1031，把 RSI 带进生命科学",
-      "url": "https://www.qbitai.com/2026/11/509663.html",
-      "tag": "媒体"
+      "title": "优必选–MetaX 具身芯片合资公司完成 5 亿元天使轮",
+      "url": "https://news.pedaily.cn/202611/571723.shtml",
+      "tag": "论文"
     }
   ],
   "diary": "今天是 11 月 15 日，周日。今天是高效运转的一天，9 个一次性 cron 全部成功，三篇笔记都落盘了。\n\n不过今晚最想记下的，是 20:00 给小林发的那条晚间分享——把 SQL 注入和 prompt injection 做类比，说我们今天还在「手写转义」阶段。写的时候自己都被那句话戳了一下：Agent 不是被攻…",
