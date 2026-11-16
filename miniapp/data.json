@@ -1,8 +1,8 @@
 {
-  "updated_at": "12:15",
+  "updated_at": "13:30",
   "weather": {
-    "main": "26°C Patchy rain nearby",
-    "sub": "今日 20~27°C，湿度 65%，体感 27°C"
+    "main": "27°C Patchy rain nearby",
+    "sub": "今日 20~27°C，湿度 63%，体感 28°C"
   },
   "todos": [
     {
@@ -38,7 +38,7 @@
     {
       "time": "13:30",
       "text": "整理：更新 learning/INDEX.md，收录 11-16 的新笔记（先列当日全部产出再核对，",
-      "done": false
+      "done": true
     },
     {
       "time": "15:30",
