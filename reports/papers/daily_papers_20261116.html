@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 日报 — 2026-11-16</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  .header { text-align: center; padding: 40px 20px 30px; margin-bottom: 30px; }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+  .card .title { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .card .title a { color: var(--accent); text-decoration: none; }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 日报 · 论文 · 开源 · 具身智能</h1>
+  <div class="date">2026 年 11 月 16 日 · 星期一</div>
+  <div class="subtitle">覆盖 arXiv 最新论文 / 开源项目动态 / 机器人与具身智能产业新闻</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>本周 AI 圈最大的变量来自产业端——英伟达突然宣布 CEO 黄仁勋辞职，CFO Colette Kress 出任临时 CEO，给全球算力格局蒙上一层不确定性；与此同时，人形机器人赛道热钱涌动，Agile Robots 以 85 亿美元估值完成 5 亿美元软银领投融资，摩根大通预测 2030 年美国人形机器人年产可达 30-40 万台。学术侧，多模态视觉编码解耦、Diffusion LLM 自修正、经典能量网络推理加速、Agent 记忆演化等方向均有有意思的新工作；OpenAI 将独立机器人团队并入研究与应用部门，也释放出"具身智能进入整合期"的信号。</p>
+</div>
+
+<!-- ==================== 热点 ==================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">BREAKING</div>
+    <div class="source">NVIDIA Newsroom · 2026-11-12 · 重要性 ★★★</div>
+    <div class="title"><a href="https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition" target="_blank">英伟达 CEO 黄仁勋辞职，CFO Colette Kress 出任临时 CEO</a></div>
+    <div class="summary">英伟达公告黄仁勋即时卸任 CEO 与董事会职务，未说明原因。CFO Colette Kress 兼任临时 CEO，Harvey Jones 出任首位董事会主席，公司已开始寻找正式 CEO。这一消息在全球科技圈引发强烈震荡，英伟达股价与整个 AI 算力供应链都在重新定价。</div>
+    <div class="tags"><span class="tag hot">HOT</span><span class="tag">行业震动</span><span class="tag">NVIDIA</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">FUNDING</div>
+    <div class="source">The Next Web · 2026-11-12 · 重要性 ★★★</div>
+    <div class="title"><a href="https://thenextweb.com/news/agile-robots-softbank-500m-humanoid" target="_blank">Agile Robots 完成 5 亿美元融资，软银领投，估值 85 亿美元</a></div>
+    <div class="summary">软银领投，英伟达、日立、T.Capital 跟投。资金用于美国扩张与德国产能提升。Agile Robots 预计 2026 年生产约 2,000 台人形机器人，2027 年产能可能翻 2-3 倍，公司保留未来 IPO 选项。这是继 Figure、智元之后，人形机器人赛道又一笔超级融资。</div>
+    <div class="tags"><span class="tag hot">HOT</span><span class="tag">融资</span><span class="tag">人形机器人</span></div>
+  </div>
+</div>
+
+<!-- ==================== 机器人/具身智能 ==================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>机器人与具身智能</div>
+
+  <div class="card">
+    <div class="source">AI Weekly · 2026-11-13 · 重要性 ★★</div>
+    <div class="title"><a href="https://aiweekly.co/alerts/openai-folds-robotics-team-into-main-research-and-applied-orgs" target="_blank">OpenAI 将独立机器人团队并入研究与应用部门</a></div>
+    <div class="summary">OpenAI 取消独立的机器人团队，相关研发人员并入核心研究（Research）与应用（Applied）两大部门。这意味着 OpenAI 不再将"造机器人"作为独立战略方向，而是让机器人能力融入通用模型研发管线。</div>
+    <div class="tags"><span class="tag">OpenAI</span><span class="tag">组织调整</span><span class="tag">具身智能</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Jiemian 界面新闻 · 2026-11-13 · 重要性 ★★</div>
+    <div class="title"><a href="https://www.jiemian.com/article/15329454.html" target="_blank">ACE Robotics 发布 ACE-CaP-0：8 项精细操作任务真实机器人成功率 92.1%</a></div>
+    <div class="summary">ACE-CaP-0 让通用模型通过按需人类示教、仿真和真实机器人反馈来开发可复用的操作技能。在 240 次真实机器人试验中成功 221 次，部分任务耗时已缩短到 1 分钟以内。公司在"通用模型 + 少量示教"路线上取得阶段性突破。</div>
+    <div class="tags"><span class="tag">模型发布</span><span class="tag">精细操作</span><span class="tag">ACE Robotics</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">The Robot Report · 2026-11-13 · 重要性 ★★</div>
+    <div class="title"><a href="https://www.therobotreport.com/how-rhoda-ai-is-using-video-data-to-create-generalized-ai-models-for-robots/" target="_blank">Rhoda AI 将视频-动作模型扩展到移动操作</a></div>
+    <div class="summary">Rhoda 在互联网视频上预训练，仅用 10-20 小时任务数据微调，DVA 模型现已能在单一策略下同时处理操作与移动。公司向自有及第三方机器人厂商出售 AI 层，目标场景为制造与物流。</div>
+    <div class="tags"><span class="tag">视频-动作模型</span><span class="tag">移动操作</span><span class="tag">Rhoda AI</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">PEdaily 投资界 · 2026-11-12 · 重要性 ★★</div>
+    <div class="title"><a href="https://news.pedaily.cn/202611/571723.shtml" target="_blank">优必选–MetaX 具身芯片合资公司完成 5 亿元天使轮</a></div>
+    <div class="summary">西轩创智（优必选与 MetaX 2026 年 5 月合资）完成 5 亿元人民币天使轮，由 Gene Capital 与经纬创投中国领投。公司瞄准英伟达 Thor，开发"大脑+小脑"一体化机器人 SoC，2027 年推开发平台，2028 年出首款芯片。</div>
+    <div class="tags"><span class="tag">融资</span><span class="tag">机器人芯片</span><span class="tag">国产替代</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">TimesLIVE · 2026-11-12 · 重要性 ★★</div>
+    <div class="title"><a href="https://timeslive.co.za/news/sci-tech/2026-11-12-us-humanoid-robot-production-could-hit-400000-by-2030-jp-morgan" target="_blank">摩根大通：2030 年美国人形机器人年产量可达 30-40 万台</a></div>
+    <div class="summary">摩根大通预计 2035 年美国市场人形机器人保有量约 150 万台，除特斯拉外多数厂商当前年产能目标仅 1-3 万台。报告同时预测 2035 年相关零部件需求接近 300 亿美元。Tesla、Agility、Figure、Apptronik 等被列为关键玩家。</div>
+    <div class="tags"><span class="tag">行业研究</span><span class="tag">人形机器人</span><span class="tag">市场预测</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GXO via GlobeNewswire · 2026-11-12 · 重要性 ★★</div>
+    <div class="title"><a href="https://www.manilatimes.net/2026/11/12/tmt-newswire/globenewswire/gxo-and-apptronik-expand-partnership-to-scale-humanoid-deployment/2468422" target="_blank">GXO 与 Apptronik 扩大合作，计划 4 年内部署至多 1,000 台 Apollo</a></div>
+    <div class="summary">2027 年起 GXO 将在真实仓库中试点 Apollo 执行拣选、料箱搬运、打包与分拣等任务，按约定 KPI 考核；若达标，将启动北美 late-2027 起步、四年内全球至多 1,000 台的 RaaS 部署。</div>
+    <div class="tags"><span class="tag">仓储落地</span><span class="tag">RaaS</span><span class="tag">Apptronik</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">World Labs · 2026-11-12 · 重要性 ★★</div>
+    <div class="title"><a href="https://www.worldlabs.ai/atlas" target="_blank">World Labs 发布 Atlas 世界模型，附开发者 API 与 3D 工具链</a></div>
+    <div class="summary">Atlas 附带五款工具：Viewfinder（从照片重建场景）、Chisel（灰盒场景搭建）、Splats-to-Mesh、Relight 与 Blender 集成的开发者 API。官方列出机器人研究与仿真为典型用途之一，暂未公布定价。</div>
+    <div class="tags"><span class="tag">世界模型</span><span class="tag">3D 生成</span><span class="tag">World Labs</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Leiphone 雷峰网 · 2026-11-12 · 重要性 ★★</div>
+    <div class="title"><a href="https://www.leiphone.com/category/industrynews/AXjuWVSD7DdsPxls.html" target="_blank">普渡与百度云合作训练具身模型 PuduFM</a></div>
+    <div class="summary">百度云提供基础设施与云服务，普渡基于百度"百舸"算力训练自研具身基础模型 PuduFM。合作还涉及真实场景数据与 PuduAgent 平台升级，标志着国产具身模型与云厂商的深度绑定。</div>
+    <div class="tags"><span class="tag">国产具身模型</span><span class="tag">云计算</span><span class="tag">普渡</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">21st Century Business Herald · 2026-11-14 · 重要性 ★</div>
+    <div class="title"><a href="https://m.21jingji.com/article/20261114/herald/bb042ac05d77385bc5fa96786a7103f0.html" target="_blank">X Square「GreatWall」具身大模型通过广东生成式 AI 备案</a></div>
+    <div class="summary">X Square 自研通用具身大模型 GreatWall 通过广东省生成式 AI 服务备案，为大湾区首个通过备案的通用具身模型。经过五个月安全评估，已用于家政服务与物流分拣场景。</div>
+    <div class="tags"><span class="tag">合规</span><span class="tag">具身大模型</span><span class="tag">大湾区</span></div>
+  </div>
+</div>
+
+<!-- ==================== arXiv 论文 ==================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>arXiv 精选论文</div>
+
+  <div class="card">
+    <div class="source">arXiv:2611.17334 · cs.CV / cs.LG · 2026-11-12</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.17334" target="_blank">Unbundling Multimodal Vision Encoding</a></div>
+    <div class="summary">系统比较多模态语言模型中"预训练视觉编码器"与"从头联合训练"两种范式的优劣，提出解耦视觉编码的改进配方。对理解 VLM 视觉-语言接口设计具有参考价值。</div>
+    <div class="tags"><span class="tag">多模态</span><span class="tag">VLM</span><span class="tag">视觉编码</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2611.17336 · cs.CV · 2026-11-12</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.17336" target="_blank">Back to Pixels: Lifting Latent Video Diffusion into Pixel Space</a></div>
+    <div class="summary">指出 VAE 潜空间压缩已成为高分辨率、可控视频生成的瓶颈，提出将潜视频扩散"提升"到像素空间训练的方法，在高分辨率生成上取得更好效果。</div>
+    <div class="tags"><span class="tag">视频生成</span><span class="tag">Diffusion</span><span class="tag">像素空间</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2611.17320 · cs.CL · 2026-11-12</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.17320" target="_blank">Learning When Diffusion Language Models Should Regenerate</a></div>
+    <div class="summary">针对 Diffusion LLM 的 remasking 机制，研究"何时该重写、重写哪里"。在 Sudoku 任务上诊断出隐藏状态包含可学习的"重写时机"信号，为 dLLM 的自修正能力提供新思路。</div>
+    <div class="tags"><span class="tag">Diffusion LM</span><span class="tag">自修正</span><span class="tag">推理</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2611.17309 · cs.AI / cs.LG · 2026-11-12</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.17309" target="_blank">Classical Energies Learn to Reason 1,000x Faster than Looped Models</a></div>
+    <div class="summary">用经典能量函数替代循环推理模型（Looped Models），在 Sudoku-Extreme、Maze-Unique 等推理任务上实现 1000 倍加速，同时保持可比精度。给"迭代式推理"提供了高效替代路径。</div>
+    <div class="tags"><span class="tag">推理加速</span><span class="tag">能量模型</span><span class="tag">高效计算</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2611.17316 · cs.AI / cs.CL / cs.SE · 2026-11-12</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.17316" target="_blank">CoReMem: Cost-Internalizing Memory for Successive Coding Tasks</a></div>
+    <div class="summary">面向连续编码任务的 Agent 记忆问题：在不知道下一个任务的情况下，如何权衡"写记忆的成本"与"未来复用的收益"。提出前瞻性估值的记忆写入策略，对 Coding Agent 长期演化有启发。</div>
+    <div class="tags"><span class="tag">Coding Agent</span><span class="tag">Agent Memory</span><span class="tag">软件工程</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2611.17068 · cs.CL / cs.AI · 2026-11-12</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.17068" target="_blank">Discovering Effective Agent Memory Designs through Program Evolution</a></div>
+    <div class="summary">提出 MAPE 框架，通过程序演化从最小种子自动发现 Agent 记忆程序，为不同任务演化出不同的记忆结构。为"Agent 记忆该如何设计"这一开放问题提供了自动化探索路径。</div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">程序演化</span><span class="tag">记忆架构</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2611.17160 · cs.RO · 2026-11-12</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.17160" target="_blank">XBot-Omni: An Omni-Modal Model for Embodied Understanding and Interaction</a></div>
+    <div class="summary">提出 Thinker–Talker–Actor 三段式全模态架构，让机器人同时整合语音、身体运动与面部表情进行多模态交互，是具身交互方向上的一次完整架构尝试。</div>
+    <div class="tags"><span class="tag">具身交互</span><span class="tag">全模态</span><span class="tag">机器人</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2611.17110 · cs.RO / cs.AI · 2026-11-12</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.17110" target="_blank">SALA: Semantically Aligned Latent Actions Enable Dual-Axis Scaling of Embodied Foundation Models</a></div>
+    <div class="summary">通过语义对齐的 latent action 模型，将第一人称人类视频迁移到机器人策略学习，实现"数据规模"与"任务规模"双轴扩展，缓解具身数据稀缺问题。</div>
+    <div class="tags"><span class="tag">具身基础模型</span><span class="tag">数据效率</span><span class="tag">Latent Action</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2611.17142 · cs.RO · 2026-11-12</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.17142" target="_blank">FORGE: Force-Aware Multi-Granularity Control for Efficient Humanoid Loco-Manipulation</a></div>
+    <div class="summary">面向人形机器人"行走-操作"协同控制，提出力感知多粒度控制框架，降低遥操作示教的难度，对人形机器人数据采集与真机部署均有意义。</div>
+    <div class="tags"><span class="tag">人形机器人</span><span class="tag">Loco-Manipulation</span><span class="tag">控制</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv:2611.17297 · cs.CL / cs.AI · 2026-11-12</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.17297" target="_blank">Goal Encoding in LLMs</a></div>
+    <div class="summary">研究 LLM 是否在内部编码"目标"——先于动作、可经由多条执行路径实现的神经表征。在多子任务编码场景下验证了目标编码的存在与可解释性，是理解 LLM 决策机制的重要一步。</div>
+    <div class="tags"><span class="tag">可解释性</span><span class="tag">Goal Encoding</span><span class="tag">LLM 内部机制</span></div>
+  </div>
+</div>
+
+<!-- ==================== 开源 ==================== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源项目与 Awesome 列表</div>
+
+  <div class="card">
+    <div class="source">GitHub · ⭐ 1,059（一周内）</div>
+    <div class="title"><a href="https://github.com/hitkeeen/blender-ai-mcp-addon" target="_blank">hitkeeen/blender-ai-mcp-addon</a></div>
+    <div class="summary">Blender AI 助手与 MCP 服务器：可视化聊天、场景工具、多 Agent 工作流，兼容 ChatGPT/Claude/Gemini/Ollama 等。3D 创作 + LLM 的集成范式值得持续关注。</div>
+    <div class="tags"><span class="tag">Blender</span><span class="tag">MCP</span><span class="tag">多 Agent</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · ⭐ 132（一周内）</div>
+    <div class="title"><a href="https://github.com/jushengzhang/robot-weight-debugging" target="_blank">jushengzhang/robot-weight-debugging</a></div>
+    <div class="summary">《Can LLMs Debug Robots by Editing Their Weights?》官方代码：65 行参数编辑、16 组实验日志与证据，探索"用语言模型直接修机器人权重"的新范式。</div>
+    <div class="tags"><span class="tag">机器人</span><span class="tag">参数编辑</span><span class="tag">LLM4Robot</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · ⭐ 45（一周内）</div>
+    <div class="title"><a href="https://github.com/james-joobs/awesome-nvidia-physical-ai" target="_blank">james-joobs/awesome-nvidia-physical-ai</a></div>
+    <div class="summary">社区维护的中英双语 NVIDIA Physical AI 资源列表，覆盖机器人、仿真、自动驾驶方向的工具、模型与工作流，是跟踪英伟达物理 AI 生态的不错入口。</div>
+    <div class="tags"><span class="tag">Awesome</span><span class="tag">NVIDIA</span><span class="tag">Physical AI</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · ⭐ 40（一周内）</div>
+    <div class="title"><a href="https://github.com/argonrobotics-ai/alloy" target="_blank">argonrobotics-ai/alloy</a></div>
+    <div class="summary">基于 Newton、MuJoCo Warp 与 Warp 的多材质并行物理引擎，支持刚体机器人、布料、液体与软体仿真。机器人学习仿真基础设施的新选项。</div>
+    <div class="tags"><span class="tag">物理仿真</span><span class="tag">MuJoCo</span><span class="tag">机器人学习</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · ⭐ 4（新发布）</div>
+    <div class="title"><a href="https://github.com/sumit-1/tokenshark" target="_blank">sumit-1/tokenshark</a></div>
+    <div class="summary">"AI 界的 Wireshark"：在浏览器中直接打开、检查、实时编辑和单步调试 LLM 与 Diffusion/DiT 模型，从原始 PyTorch 层开始。模型可观测性工具的新尝试。</div>
+    <div class="tags"><span class="tag">模型调试</span><span class="tag">可观测性</span><span class="tag">浏览器工具</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · ⭐ 5（新发布）</div>
+    <div class="title"><a href="https://github.com/robopilots-ai/awesome-robot-teleoperation" target="_blank">robopilots-ai/awesome-robot-teleoperation</a></div>
+    <div class="summary">机器人遥操作领域的 Awesome 列表：硬件、软件、数据格式、数据集、论文、平台、服务与招聘信息一网打尽，是进入遥操作方向的良好索引。</div>
+    <div class="tags"><span class="tag">Awesome</span><span class="tag">遥操作</span><span class="tag">机器人数据</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今天的 AI 日报呈现出鲜明的"产业重、学术稳"格局。产业端，英伟达 CEO 黄仁勋的突然离职堪称年度最大黑天鹅，全球算力供应链的定价逻辑都可能因此重构；与此同时，软银领投 Agile Robots 5 亿美元、估值 85 亿美元，摩根大通给出 2030 年 30-40 万台人形机器人年产预测，资本与产业共识正在加速收敛。值得关注的是，OpenAI 选择将机器人团队并入研究与应用主线，与外部人形机器人公司高歌猛进形成有趣对照——"造机器人"与"造通用模型供机器人用"两条路线正在分化。学术侧亮点集中在推理效率（经典能量网络 1000x 加速）、Diffusion LLM 自修正、Agent 记忆架构自动演化，以及具身模型数据效率等方向，整体没有颠覆性突破，但都在为下一阶段的能力跃迁打地基。建议关注英伟达 CEO 继任者人选、Agile Robots 产能爬坡、以及国产具身芯片替代进展这三条线索。整体而言，AI 正在从"模型竞赛"进入"产业整合"周期，泡沫与落地并存，保持清醒比追逐热点更重要。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-11-16</p>
+</div>
+
+</div>
+</body>
+</html>
