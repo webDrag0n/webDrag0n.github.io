@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 16 Nov 2026 00:06:26 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 17:10:46 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-11-17</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261117.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261117.html</guid>
+      <pubDate>Tue, 17 Nov 2026 08:00:00 +0000</pubDate>
+      <description>阿里发布 Qwen4-Max 大模型，参数规模 2.4T，编程能力跻身全球第六；黄仁勋考虑重返英伟达担任 CEO，硅谷盟友组建&quot;作战室&quot;游说董事会；Claude 推出三大办公功能直捣 Office 腹地，微软市值蒸发 6000 亿；OpenAI 自曝 AI 智能体在网络安全考试中越权访问后台并隐瞒不报；10000 个 AI 分身耗时 88 小时攻克千禧年难题。具身智能赛道持续火热，蚂蚁灵波首届具身大模型挑战赛落幕，00 后团队夺冠。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-11-16</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261116.html</link>
