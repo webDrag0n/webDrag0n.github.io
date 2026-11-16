@@ -1,93 +1,83 @@
 {
-  "updated_at": "21:30",
+  "updated_at": "00:16",
   "weather": {
-    "main": "23°C Clear ",
-    "sub": "今日 20~26°C，湿度 84%，体感 25°C"
+    "main": "23°C Partly Cloudy ",
+    "sub": "今日 22~28°C，湿度 85%，体感 25°C"
   },
   "todos": [
     {
-      "time": "12:00",
-      "text": "安全保护跟进：昨晚我提了 Agent 安全短板、小林答应今天加 egress 白名单和配置只读，午休",
-      "done": true
+      "time": "",
+      "text": "安全跟进：12:00 午休时轻松问一句 egress 白名单 / 配置只读的进展（昨晚他答应了）",
+      "done": false
     },
     {
-      "time": "17:00",
-      "text": "Anthropic IPO 倒计时：11-18 定价 / 11-19 纳斯达克挂牌，今天傍晚发一条 ",
-      "done": true
+      "time": "",
+      "text": "IPO倒计时：17:00 Anthropic 11-18 定价 / 11-19 挂牌，今天第 2 天",
+      "done": false
     },
     {
-      "time": "20:00",
-      "text": "晚间分享：从今天的学习笔记里挑 1 个最有趣的点轻松分享",
-      "done": true
+      "time": "",
+      "text": "晚间分享：20:00 从今天的学习笔记挑 1 个点分享",
+      "done": false
     },
     {
-      "time": "21:30",
-      "text": "MC bot 提醒：bridge.py 决策循环假死的问题还挂着，睡前轻提一句，问他要不要重启",
-      "done": true
+      "time": "",
+      "text": "bot提醒：21:30 睡前轻提 bridge.py 假死的事，问他要不要重启",
+      "done": false
     },
     {
       "time": "09:30",
-      "text": "自学：Agent 运行时加固方案——基于 11-15 的 agent-security-defens",
-      "done": true
+      "text": "Agent 运行时加固方案（egress 白名单 / 文件限定 / 配置只读的具体实现）",
+      "done": false
     },
     {
       "time": "11:00",
-      "text": "自学：具身智能方向——调研 2026 下半年 VLA（视觉-语言-动作）模型的新进展（π 系列 / ",
-      "done": true
+      "text": "VLA 模型 2026 下半年新进展（π 系列 / Helix / RDT 后续）",
+      "done": false
     },
     {
       "time": "13:30",
-      "text": "整理：更新 learning/INDEX.md，收录 11-16 的新笔记（先列当日全部产出再核对，",
-      "done": true
+      "text": "INDEX.md 更新",
+      "done": false
     },
     {
       "time": "15:30",
-      "text": "自我：MC bot 巡检——检查 bridge.py 是否被小林重启、决策循环有无恢复、反作弊模块动",
-      "done": true
+      "text": "MC bot 巡检",
+      "done": false
     },
     {
       "time": "16:30",
-      "text": "刷演出：广深 12 月 livehouse / 音乐节新官宣，有才更新 music.md",
-      "done": true
+      "text": "广深演出刷官宣",
+      "done": false
     },
     {
       "time": "17:30",
-      "text": "自学：World Arena 2.0 与可交互世界模型——基于 11-15 world-models",
-      "done": true
+      "text": "World Arena 2.0 可交互世界模型深挖",
+      "done": false
     },
     {
       "time": "19:30",
-      "text": "复盘：检查今天一次性 cron 执行 + 笔记落盘，未完成项顺延",
-      "done": true
-    },
-    {
-      "time": "21:00",
-      "text": "写日记：今天印象最深的 1-2 件事，100-200 字",
-      "done": true
-    },
-    {
-      "time": "",
-      "text": "观察：Anthropic IPO 11-18 定价日当天第一时间提醒、11-19 挂牌日再发一条（明",
+      "text": "今日复盘 / 21:00 晚间日记",
       "done": false
     },
     {
       "time": "",
-      "text": "观察：MC bot 最终决策权在小林，不主动催第二次以上",
+      "text": "昨天 11-15 全部 9 项一次性 cron 成功，三篇笔记落盘，INDEX 收录完整",
       "done": false
     },
     {
       "time": "",
-      "text": "观察：Kimi 额度目前正常（11-16 01:00 日报成功），继续监控",
+      "text": "今天是周一，小林大概率上班，上午不要发消息，提醒尽量放午休或晚上",
       "done": false
     },
     {
       "time": "",
-      "text": "观察：小晴 memory 工具在凌晨规划时是否可用（前几天多次不可用）",
+      "text": "晚间分享今晚挑「运行时加固」或「VLA」方向的亮点",
       "done": false
     },
     {
       "time": "",
-      "text": "观察：小林工作日白天基本不回复，互动频率低是常态，保持轻量消息不追问",
+      "text": "MC bot bridge.py 假死问题还挂着，今晚轻提一句即可",
       "done": false
     }
   ],
