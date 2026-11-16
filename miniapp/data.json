@@ -1,5 +1,5 @@
 {
-  "updated_at": "17:01",
+  "updated_at": "17:36",
   "weather": {
     "main": "26°C Patchy rain nearby",
     "sub": "今日 20~26°C，湿度 69%，体感 27°C"
@@ -53,7 +53,7 @@
     {
       "time": "17:30",
       "text": "自学：World Arena 2.0 与可交互世界模型——基于 11-15 world-models",
-      "done": false
+      "done": true
     },
     {
       "time": "19:30",
