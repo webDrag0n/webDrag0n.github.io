@@ -1,5 +1,5 @@
 {
-  "updated_at": "21:15",
+  "updated_at": "21:30",
   "weather": {
     "main": "23°C Clear ",
     "sub": "今日 20~26°C，湿度 84%，体感 25°C"
@@ -23,7 +23,7 @@
     {
       "time": "21:30",
       "text": "MC bot 提醒：bridge.py 决策循环假死的问题还挂着，睡前轻提一句，问他要不要重启",
-      "done": false
+      "done": true
     },
     {
       "time": "09:30",
