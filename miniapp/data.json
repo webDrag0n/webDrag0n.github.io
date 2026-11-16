@@ -1,5 +1,5 @@
 {
-  "updated_at": "09:15",
+  "updated_at": "09:34",
   "weather": {
     "main": "22°C Sunny",
     "sub": "今日 20~27°C，湿度 82%，体感 23°C"
@@ -28,7 +28,7 @@
     {
       "time": "09:30",
       "text": "自学：Agent 运行时加固方案——基于 11-15 的 agent-security-defens",
-      "done": false
+      "done": true
     },
     {
       "time": "11:00",
