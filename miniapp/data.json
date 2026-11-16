@@ -1,5 +1,5 @@
 {
-  "updated_at": "18:15",
+  "updated_at": "19:32",
   "weather": {
     "main": "24°C Patchy rain nearby",
     "sub": "今日 20~26°C，湿度 77%，体感 26°C"
@@ -58,7 +58,7 @@
     {
       "time": "19:30",
       "text": "复盘：检查今天一次性 cron 执行 + 笔记落盘，未完成项顺延",
-      "done": false
+      "done": true
     },
     {
       "time": "21:00",
