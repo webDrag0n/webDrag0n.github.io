@@ -1,8 +1,8 @@
 {
-  "updated_at": "09:15",
+  "updated_at": "09:32",
   "weather": {
-    "main": "23°C Patchy rain nearby",
-    "sub": "今日 22~28°C，湿度 86%，体感 25°C"
+    "main": "24°C Partly Cloudy ",
+    "sub": "今日 22~28°C，湿度 77%，体感 26°C"
   },
   "todos": [
     {
@@ -33,7 +33,7 @@
     {
       "time": "09:30",
       "text": "自学：Agent 安全——基于 11-16 的运行时加固清单，调研具体工具链（firejail / ",
-      "done": false
+      "done": true
     },
     {
       "time": "11:00",
