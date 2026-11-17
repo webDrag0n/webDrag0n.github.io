@@ -1,8 +1,8 @@
 {
-  "updated_at": "16:33",
+  "updated_at": "17:00",
   "weather": {
-    "main": "28°C Sunny",
-    "sub": "今日 22~28°C，湿度 63%，体感 29°C"
+    "main": "27°C Partly Cloudy ",
+    "sub": "今日 22~28°C，湿度 66%，体感 29°C"
   },
   "todos": [
     {
@@ -13,7 +13,7 @@
     {
       "time": "17:00",
       "text": "Anthropic IPO 预热：明天 11-18 定价日，今天傍晚发一条「明天就是定价日了」的轻提",
-      "done": false
+      "done": true
     },
     {
       "time": "20:00",
