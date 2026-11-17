@@ -1,8 +1,8 @@
 {
-  "updated_at": "18:15",
+  "updated_at": "20:00",
   "weather": {
-    "main": "27°C Partly Cloudy ",
-    "sub": "今日 22~28°C，湿度 66%，体感 29°C"
+    "main": "25°C Clear ",
+    "sub": "今日 22~28°C，湿度 77%，体感 27°C"
   },
   "todos": [
     {
@@ -18,7 +18,7 @@
     {
       "time": "20:00",
       "text": "晚间分享：从今天的学习笔记里挑 1 个最有趣的点轻松分享",
-      "done": false
+      "done": true
     },
     {
       "time": "21:30",
