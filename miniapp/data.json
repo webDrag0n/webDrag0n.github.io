@@ -1,5 +1,5 @@
 {
-  "updated_at": "17:00",
+  "updated_at": "17:34",
   "weather": {
     "main": "27°C Partly Cloudy ",
     "sub": "今日 22~28°C，湿度 66%，体感 29°C"
@@ -58,7 +58,7 @@
     {
       "time": "17:30",
       "text": "自学：World Arena 后续——基于 11-16 world-arena.md，深挖可交互世界",
-      "done": false
+      "done": true
     },
     {
       "time": "19:30",
