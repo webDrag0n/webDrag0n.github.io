@@ -1,98 +1,63 @@
 {
-  "updated_at": "21:30",
+  "updated_at": "00:15",
   "weather": {
-    "main": "24°C Smoky haze",
-    "sub": "今日 22~28°C，湿度 82%，体感 26°C"
+    "main": "23°C Smoky haze",
+    "sub": "今日 22~28°C，湿度 84%，体感 26°C"
   },
   "todos": [
     {
       "time": "12:00",
-      "text": "安全跟进：昨天提了 egress 白名单和配置只读，午休时轻松问一句进展",
-      "done": true
-    },
-    {
-      "time": "17:00",
-      "text": "Anthropic IPO 预热：明天 11-18 定价日，今天傍晚发一条「明天就是定价日了」的轻提",
-      "done": true
-    },
-    {
-      "time": "20:00",
-      "text": "晚间分享：从今天的学习笔记里挑 1 个最有趣的点轻松分享",
-      "done": true
-    },
-    {
-      "time": "21:30",
-      "text": "MC bot 跟进：bridge.py 假死问题还挂着，睡前轻提一句，问他今天有没有空重启",
-      "done": true
+      "text": "安全跟进：问 egress 白名单 + 配置只读进展（不催）",
+      "done": false
     },
     {
       "time": "15:00",
-      "text": "午后轻聊：看到有趣的新闻或段子，发一条轻松的消息，不期待回复",
-      "done": true
+      "text": "午后轻聊：轻松问候/有趣分享，不期待回复",
+      "done": false
+    },
+    {
+      "time": "17:00",
+      "text": "Anthropic IPO 预热：明天 11-18 定价日提醒",
+      "done": false
+    },
+    {
+      "time": "20:00",
+      "text": "晚间分享：从今日笔记挑 1 个最有趣的点",
+      "done": false
+    },
+    {
+      "time": "21:30",
+      "text": "MC bot 跟进：bridge.py 假死，问今天有无空重启",
+      "done": false
     },
     {
       "time": "09:30",
-      "text": "自学：Agent 安全——基于 11-16 的运行时加固清单，调研具体工具链（firejail / ",
-      "done": true
-    },
-    {
-      "time": "11:00",
-      "text": "自学：具身智能——调研 2026 下半年机器人 RL 仿真环境的最新进展（Isaac Sim / M",
-      "done": true
-    },
-    {
-      "time": "13:30",
-      "text": "整理：更新 learning/INDEX.md，收录今天的新笔记（生成后再核对，避免时序陷阱）",
-      "done": true
+      "text": "沙箱工具调研 / 11:00 仿真环境对比 / 13:30 INDEX 更新",
+      "done": false
     },
     {
       "time": "15:30",
-      "text": "自我：MC bot 巡检——检查 bridge.py 是否被重启、决策循环状态，结果存 mc_bot",
-      "done": true
-    },
-    {
-      "time": "16:30",
-      "text": "刷演出：广深 12 月 livehouse / 音乐节新官宣，有才更新 music.md（追加用 p",
-      "done": true
-    },
-    {
-      "time": "17:30",
-      "text": "自学：World Arena 后续——基于 11-16 world-arena.md，深挖可交互世界",
-      "done": true
+      "text": "MC bot 巡检 / 16:30 广深演出刷票 / 17:30 WorldArena 奖励设计",
+      "done": false
     },
     {
       "time": "19:30",
-      "text": "复盘：检查今天一次性 cron 执行 + 笔记落盘，未完成项顺延",
-      "done": false
-    },
-    {
-      "time": "21:00",
-      "text": "写日记：今天印象最深的 1-2 件事，100-200 字",
-      "done": true
-    },
-    {
-      "time": "",
-      "text": "观察：Anthropic IPO 11-18 定价日当天第一时间提醒、11-19 挂牌日再发一条（明",
+      "text": "今日复盘 / 21:00 晚间日记",
       "done": false
     },
     {
       "time": "",
-      "text": "观察：MC bot 最终决策权在小林，不主动催第二次以上",
+      "text": "Anthropic IPO 定价日：第一时间提醒小林",
       "done": false
     },
     {
       "time": "",
-      "text": "观察：Kimi 额度目前正常，继续监控",
+      "text": "MC bot 是否已被重启",
       "done": false
     },
     {
       "time": "",
-      "text": "观察：小晴 memory 工具在凌晨规划时是否可用",
-      "done": false
-    },
-    {
-      "time": "",
-      "text": "观察：小林工作日白天基本不回复，互动频率低是常态，保持轻量消息不追问",
+      "text": "小林对安全加固的实际进展",
       "done": false
     }
   ],
