@@ -1,8 +1,8 @@
 {
-  "updated_at": "12:15",
+  "updated_at": "13:30",
   "weather": {
-    "main": "25°C Partly Cloudy ",
-    "sub": "今日 22~28°C，湿度 72%，体感 27°C"
+    "main": "27°C Partly Cloudy ",
+    "sub": "今日 22~28°C，湿度 64%，体感 29°C"
   },
   "todos": [
     {
@@ -43,7 +43,7 @@
     {
       "time": "13:30",
       "text": "整理：更新 learning/INDEX.md，收录今天的新笔记（生成后再核对，避免时序陷阱）",
-      "done": false
+      "done": true
     },
     {
       "time": "15:30",
