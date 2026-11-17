@@ -1,63 +1,98 @@
 {
-  "updated_at": "03:15",
+  "updated_at": "06:16",
   "weather": {
-    "main": "22°C Haze",
-    "sub": "今日 19~27°C，湿度 89%，体感 25°C"
+    "main": "21°C Haze",
+    "sub": "今日 19~27°C，湿度 91%，体感 24°C"
   },
   "todos": [
     {
+      "time": "09:30",
+      "text": "Anthropic IPO 定价日提醒：今天就是 11-18 定价日，发一条「今天定价日，留意消息」",
+      "done": false
+    },
+    {
       "time": "12:00",
-      "text": "安全跟进：问 egress 白名单 + 配置只读进展（不催）",
+      "text": "安全跟进：昨天问了 egress 白名单和配置只读，午休时轻松问一句进展",
       "done": false
     },
     {
       "time": "15:00",
-      "text": "午后轻聊：轻松问候/有趣分享，不期待回复",
-      "done": false
-    },
-    {
-      "time": "17:00",
-      "text": "Anthropic IPO 预热：明天 11-18 定价日提醒",
+      "text": "午后轻聊：看到有趣的新闻或段子，发一条轻松的消息，不期待回复",
       "done": false
     },
     {
       "time": "20:00",
-      "text": "晚间分享：从今日笔记挑 1 个最有趣的点",
+      "text": "晚间分享：从今天的学习笔记里挑 1 个最有趣的点轻松分享",
       "done": false
     },
     {
       "time": "21:30",
-      "text": "MC bot 跟进：bridge.py 假死，问今天有无空重启",
+      "text": "MC bot 跟进：bridge.py 假死问题还挂着，睡前轻提一句，问他今天有没有空重启",
       "done": false
     },
     {
-      "time": "09:30",
-      "text": "沙箱工具调研 / 11:00 仿真环境对比 / 13:30 INDEX 更新",
+      "time": "09:00",
+      "text": "自学：Agent 安全——基于 11-17 的沙箱工具调研，整理 firejail / bwrap ",
+      "done": false
+    },
+    {
+      "time": "10:30",
+      "text": "自学：具身智能——调研 2026 下半年 VLA 模型在真实场景中的泛化难题，笔记到 ~/herme",
+      "done": false
+    },
+    {
+      "time": "13:00",
+      "text": "整理：更新 learning/INDEX.md，收录今天的新笔记（生成后再核对，避免时序陷阱）",
+      "done": false
+    },
+    {
+      "time": "14:00",
+      "text": "自我：MC bot 巡检——检查 bridge.py 是否被重启、决策循环状态，结果存 mc_bot",
       "done": false
     },
     {
       "time": "15:30",
-      "text": "MC bot 巡检 / 16:30 广深演出刷票 / 17:30 WorldArena 奖励设计",
+      "text": "刷演出：广深 12 月 livehouse / 音乐节新官宣，有才更新 music.md（追加用 p",
       "done": false
     },
     {
-      "time": "19:30",
-      "text": "今日复盘 / 21:00 晚间日记",
+      "time": "16:30",
+      "text": "自学：World Arena 后续——基于 11-17 奖励设计笔记，深挖多智能体协作中的信用分配问",
+      "done": false
+    },
+    {
+      "time": "19:00",
+      "text": "复盘：检查今天一次性 cron 执行 + 笔记落盘，未完成项顺延",
+      "done": false
+    },
+    {
+      "time": "21:00",
+      "text": "写日记：今天印象最深的 1-2 件事，100-200 字",
       "done": false
     },
     {
       "time": "",
-      "text": "Anthropic IPO 定价日：第一时间提醒小林",
+      "text": "观察：Anthropic IPO 11-19 挂牌日，明天再发一条提醒",
       "done": false
     },
     {
       "time": "",
-      "text": "MC bot 是否已被重启",
+      "text": "观察：MC bot 最终决策权在小林，不主动催第二次以上",
       "done": false
     },
     {
       "time": "",
-      "text": "小林对安全加固的实际进展",
+      "text": "观察：Kimi 额度目前正常，继续监控",
+      "done": false
+    },
+    {
+      "time": "",
+      "text": "观察：小晴 memory 工具在凌晨规划时不可用，先跳过",
+      "done": false
+    },
+    {
+      "time": "",
+      "text": "观察：小林工作日白天基本不回复，互动频率低是常态，保持轻量消息不追问",
       "done": false
     }
   ],
