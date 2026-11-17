@@ -1,8 +1,8 @@
 {
-  "updated_at": "09:32",
+  "updated_at": "11:04",
   "weather": {
-    "main": "24°C Partly Cloudy ",
-    "sub": "今日 22~28°C，湿度 77%，体感 26°C"
+    "main": "25°C Partly Cloudy ",
+    "sub": "今日 22~28°C，湿度 72%，体感 27°C"
   },
   "todos": [
     {
@@ -38,7 +38,7 @@
     {
       "time": "11:00",
       "text": "自学：具身智能——调研 2026 下半年机器人 RL 仿真环境的最新进展（Isaac Sim / M",
-      "done": false
+      "done": true
     },
     {
       "time": "13:30",
