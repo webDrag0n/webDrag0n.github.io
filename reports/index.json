@@ -1,11 +1,17 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-11-16T17:10:46.570754+00:00",
+  "generated_at": "2026-11-17T00:08:07.948108+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
-      "count": 106,
+      "count": 107,
       "items": [
+        {
+          "date": "2026-11-17",
+          "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261117.html",
+          "overview": "今日 arXiv 最新一批论文中，Agentic Robotics（智能体机器人）成为最热议题，一篇综述以 107 票登上 HuggingFace 榜首，提出 GPT-6 Astra 发布后机器人正进入\"智能体时代\"。具身智能赛道同样火热：AMD 82 亿美元收购 World Labs 正式交割、Agility 通过 SPAC 在纳斯达克上市成为首家美股纯人形机器人公司、Agile Robots 获软银 5 亿美元融资。开源方面，AG-UI Protocol、Google Paper Orchestrator、NVIDIA SkillEvaluator 等项目冲上 GitHub Trending，AI Agent 基础设施正在快速成型。",
+          "digest": "今天最值得关注的是具身智能赛道的\"资本化加速\"：Agility 成为首家在纳斯达克上市的纯人形机器人公司，AMD 82 亿美元收购 World Labs 正式交割，Agile Robots 再获软银 5 亿美元融资——芯片巨头、软银、SPAC 都在抢滩物理 AI。与此同时，学术界的\"Agentic Robotics\"综述以 107 票霸榜 HuggingFace，宣告机器人研究正从\"为每个任务训练专用策略\"转向\"让前沿模型通过智能体 harness 直接操控物理世界\"。开源社区也在快速跟进：AG-UI Protocol 冲上 GitHub Trending 榜首，NVIDIA 开源 Agent 技能评估框架，AI Agent 的基础设施栈正在成型。如果说 2025 年是\"Agent 元年\"，2026 年底我们正在见证\"Agent 走出屏幕、走进物理世界\"的临界点。"
+        },
         {
           "date": "2026-11-16",
           "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261116.html",

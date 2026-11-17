@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 16 Nov 2026 17:10:46 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 00:08:07 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-11-17</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261117.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261117.html</guid>
+      <pubDate>Tue, 17 Nov 2026 08:00:00 +0000</pubDate>
+      <description>今日 arXiv 最新一批论文中，Agentic Robotics（智能体机器人）成为最热议题，一篇综述以 107 票登上 HuggingFace 榜首，提出 GPT-6 Astra 发布后机器人正进入&quot;智能体时代&quot;。具身智能赛道同样火热：AMD 82 亿美元收购 World Labs 正式交割、Agility 通过 SPAC 在纳斯达克上市成为首家美股纯人形机器人公司、Agile Robots 获软银 5 亿美元融资。开源方面，AG-UI Protocol、Google Paper Orchestrator、NVIDIA SkillEvaluator 等项目冲上 GitHub Trendin</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-11-17</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261117.html</link>
