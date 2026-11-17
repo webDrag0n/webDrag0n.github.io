@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 17 Nov 2026 00:08:07 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 17:08:25 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-11-18</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261118.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261118.html</guid>
+      <pubDate>Wed, 18 Nov 2026 08:00:00 +0000</pubDate>
+      <description>昨天中文 AI 圈的头条被两件事占据：阿里千问发布 2.4 万亿参数的旗舰模型 Qwen4-Max，以 71B 激活参数和百万 Token 上下文把旗舰能力打到&quot;过日子&quot;价位；与此同时腾讯 Hy4 flash 实测显示国产模型正把竞争焦点从跑分转向成本与体验。具身智能迎来高热一天——蚂蚁灵波具身大模型挑战赛 48 小时真机总决赛收官，00 后团队从零手搓数据夺冠。海外方面，李飞飞正式率队加入 AMD、OpenAI 与 Meta 分别打通 Agent&quot;进门&quot;与&quot;付钱&quot;的协议，Agent 商业化进入落地深水区。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-11-17</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261117.html</link>
