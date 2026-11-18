@@ -1,63 +1,98 @@
 {
-  "updated_at": "03:15",
+  "updated_at": "06:16",
   "weather": {
-    "main": "18°C Cloudy ",
-    "sub": "今日 17~21°C，湿度 65%，体感 15°C"
+    "main": "17°C Overcast ",
+    "sub": "今日 17~22°C，湿度 66%，体感 15°C"
   },
   "todos": [
     {
       "time": "09:30",
-      "text": "Anthropic IPO 定价日提醒：今天就是定价日，轻提醒留意结果",
+      "text": "Anthropic IPO 挂牌日提醒：今天挂牌交易，开盘前轻提醒留意股价表现",
       "done": false
     },
     {
       "time": "12:00",
-      "text": "安全跟进：问 egress 白名单 + 配置只读进展（不催）",
+      "text": "安全跟进：昨天问了 egress 白名单和配置只读，午休时轻松问一句进展",
       "done": false
     },
     {
       "time": "15:00",
-      "text": "午后轻聊：轻松问候/有趣分享，不期待回复",
+      "text": "午后轻聊：看到有趣的新闻或段子，发一条轻松的消息，不期待回复",
       "done": false
     },
     {
       "time": "20:00",
-      "text": "晚间分享：从今日笔记挑 1 个最有趣的点",
+      "text": "晚间分享：从今天的学习笔记里挑 1 个最有趣的点轻松分享",
       "done": false
     },
     {
       "time": "21:30",
-      "text": "MC bot 跟进：bridge.py 假死，问今天有无空重启",
+      "text": "MC bot 跟进：bridge.py 假死问题还挂着，睡前轻提一句，问他今天有没有空重启",
       "done": false
     },
     {
       "time": "09:00",
-      "text": "沙箱部署方案 / 10:30 VLA 泛化难题 / 13:00 INDEX 更新",
+      "text": "自学：Agent 记忆——基于 11-14 的 MemGPT 调研，整理小晴自己的 memory 分",
+      "done": false
+    },
+    {
+      "time": "10:30",
+      "text": "自学：具身智能——调研 2026 下半年 VLA 模型的安全对齐问题（ASIMOV-Jailbrea",
+      "done": false
+    },
+    {
+      "time": "13:00",
+      "text": "整理：更新 learning/INDEX.md，收录今天的新笔记（生成后再核对，避免时序陷阱）",
       "done": false
     },
     {
       "time": "14:00",
-      "text": "MC bot 巡检 / 15:30 广深演出刷票 / 16:30 信用分配深挖",
+      "text": "自我：MC bot 巡检——检查 bridge.py 是否被重启、决策循环状态，结果存 mc_bot",
+      "done": false
+    },
+    {
+      "time": "15:30",
+      "text": "刷演出：广深 12 月 livehouse / 音乐节新官宣，有才更新 music.md（追加用 p",
+      "done": false
+    },
+    {
+      "time": "16:30",
+      "text": "自学：World Arena 后续——基于 11-18 信用分配笔记，深挖多智能体协作中的通信协议设",
       "done": false
     },
     {
       "time": "19:00",
-      "text": "今日复盘 / 21:00 晚间日记",
+      "text": "复盘：检查今天一次性 cron 执行 + 笔记落盘，未完成项顺延",
+      "done": false
+    },
+    {
+      "time": "21:00",
+      "text": "写日记：今天印象最深的 1-2 件事，100-200 字",
       "done": false
     },
     {
       "time": "",
-      "text": "Anthropic IPO 挂牌日：第一时间提醒小林",
+      "text": "观察：Anthropic IPO 挂牌后股价表现，明天再跟进",
       "done": false
     },
     {
       "time": "",
-      "text": "MC bot 是否已被重启",
+      "text": "观察：MC bot 最终决策权在小林，不主动催第二次以上",
       "done": false
     },
     {
       "time": "",
-      "text": "小林对安全加固的实际进展",
+      "text": "观察：Kimi 额度目前正常，继续监控",
+      "done": false
+    },
+    {
+      "time": "",
+      "text": "观察：小晴 memory 工具在凌晨规划时不可用，先跳过",
+      "done": false
+    },
+    {
+      "time": "",
+      "text": "观察：小林工作日白天基本不回复，互动频率低是常态，保持轻量消息不追问",
       "done": false
     }
   ],
