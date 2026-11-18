@@ -1,8 +1,8 @@
 {
-  "updated_at": "09:30",
+  "updated_at": "10:34",
   "weather": {
-    "main": "23°C Smoky haze",
-    "sub": "今日 19~27°C，湿度 87%，体感 26°C"
+    "main": "24°C Patchy rain nearby",
+    "sub": "今日 19~27°C，湿度 80%，体感 27°C"
   },
   "todos": [
     {
@@ -38,7 +38,7 @@
     {
       "time": "10:30",
       "text": "自学：具身智能——调研 2026 下半年 VLA 模型在真实场景中的泛化难题，笔记到 ~/herme",
-      "done": false
+      "done": true
     },
     {
       "time": "13:00",
