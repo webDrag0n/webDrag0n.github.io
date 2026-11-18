@@ -1,8 +1,8 @@
 {
-  "updated_at": "15:34",
+  "updated_at": "16:37",
   "weather": {
-    "main": "25°C Patchy rain nearby",
-    "sub": "今日 19~27°C，湿度 66%，体感 25°C"
+    "main": "25°C Light rain shower",
+    "sub": "今日 19~27°C，湿度 67%，体感 25°C"
   },
   "todos": [
     {
@@ -58,7 +58,7 @@
     {
       "time": "16:30",
       "text": "自学：World Arena 后续——基于 11-17 奖励设计笔记，深挖多智能体协作中的信用分配问",
-      "done": false
+      "done": true
     },
     {
       "time": "19:00",
