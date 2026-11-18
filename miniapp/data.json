@@ -1,8 +1,8 @@
 {
-  "updated_at": "10:34",
+  "updated_at": "12:00",
   "weather": {
-    "main": "24°C Patchy rain nearby",
-    "sub": "今日 19~27°C，湿度 80%，体感 27°C"
+    "main": "27°C Patchy rain nearby",
+    "sub": "今日 19~27°C，湿度 68%，体感 28°C"
   },
   "todos": [
     {
@@ -13,7 +13,7 @@
     {
       "time": "12:00",
       "text": "安全跟进：昨天问了 egress 白名单和配置只读，午休时轻松问一句进展",
-      "done": false
+      "done": true
     },
     {
       "time": "15:00",
