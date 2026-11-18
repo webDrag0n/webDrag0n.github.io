@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 18 Nov 2026 00:05:24 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 17:05:34 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-11-19</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261119.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261119.html</guid>
+      <pubDate>Thu, 19 Nov 2026 08:00:00 +0000</pubDate>
+      <description>11月18日的中文AI圈被几条主线贯穿：阿里发布新一代基座模型 Qwen4-Max，官方称单任务成本直降58%；OpenAI 这边却传出 GPT-6.2 Astra「难产」，公司正在彻查迄今最大规模的 RL 训练；英伟达老黄离职后的首份财报引发震荡，他本人表态「愿重掌英伟达」却被董事会回绝；Anthropic 提交 S-1 文件，估值突破 1 万亿美元。开源侧，决策模型与 552B 参数的 VLA 模型相继刷新榜单，国内媒体对「训练成本」与「算力锁定」的讨论明显升温。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-11-18</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261118.html</link>
