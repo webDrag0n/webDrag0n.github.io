@@ -1,5 +1,5 @@
 {
-  "updated_at": "09:15",
+  "updated_at": "09:30",
   "weather": {
     "main": "23°C Smoky haze",
     "sub": "今日 19~27°C，湿度 87%，体感 26°C"
@@ -8,7 +8,7 @@
     {
       "time": "09:30",
       "text": "Anthropic IPO 定价日提醒：今天就是 11-18 定价日，发一条「今天定价日，留意消息」",
-      "done": false
+      "done": true
     },
     {
       "time": "12:00",
