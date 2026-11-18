@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 日报 — 2026-11-18</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  .header { text-align: center; padding: 40px 20px 30px; margin-bottom: 30px; }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+  .summary-banner {
+    background: var(--card-bg); border-radius: 12px; padding: 20px 24px; margin-bottom: 24px;
+    border-left: 4px solid var(--accent); box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 14px;
+    padding-bottom: 8px; border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+  .card {
+    background: var(--card-bg); border-radius: 10px; padding: 18px 22px; margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+  .card .title { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .card .title a { color: var(--accent); text-decoration: none; }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag { font-size: 12px; padding: 2px 10px; border-radius: 12px; background: var(--tag-bg); color: var(--tag-text); }
+  .card .tag.hot { background: #ffeaa7; color: #d63031; font-weight: 600; }
+  .hot-topic {
+    background: #fff8e1; border: 1px solid #ffe082; border-radius: 10px;
+    padding: 18px 22px; margin-bottom: 16px;
+  }
+  .hot-topic .label { font-size: 12px; font-weight: 700; color: #e17055; text-transform: uppercase; margin-bottom: 4px; }
+  .insights {
+    background: var(--card-bg); border-radius: 12px; padding: 24px; margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+  .footer { text-align: center; font-size: 12px; color: #b2bec3; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🧠</div>
+  <h1>AI 日报</h1>
+  <div class="date">2026年11月18日 · 星期三</div>
+  <div class="subtitle">每日论文 · 开源动态 · 具身智能前沿</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今日 AI 圈热度集中在三条线：开源大模型继续狂飙，K2-Horizon 一口气放出从 0.9B 到 375B-A23B 的六款全开源模型，对标前沿推理与 Agent 能力；具身智能赛道资本持续加注，Genesis AI 以 35 亿美元估值完成 5 亿美元 A 轮，波士顿动力 Atlas 拿下首个非汽车行业客户；Agent 安全与评测成为新焦点，SPILLWAY 提出分离式防线抵御提示注入，SWE-CoWork 把编程 Agent 当「数字员工」来考核。同时，552B 参数的 ScaleVLA 将视觉-语言-动作模型推向新规模，机器人操作模型的「大模型化」趋势愈发清晰。</p>
+</div>
+
+<!-- ===== 热点头条 ===== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+
+  <div class="hot-topic">
+    <div class="label">HOT · 具身智能 · 融资</div>
+    <div class="title"><a href="https://techcrunch.com/2026/11/17/genesis-ai-raises-500-million-to-deploy-electric-glove-wearing-robots" target="_blank">Genesis AI 完成 5 亿美元 A 轮融资，估值 35 亿美元</a></div>
+    <div class="summary">Khosla、Premji Invest 与 Eclipse 联合领投，英伟达、AMD Ventures、三星 Next 等参投。Genesis 已造出 30–40 台 Eno 人形机器人，正与少数客户试点，并选定美国代工厂准备明年量产。</div>
+    <div class="tags"><span class="tag hot">🔥 重磅融资</span><span class="tag">人形机器人</span><span class="tag">量产在即</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">HOT · 开源大模型</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.21003" target="_blank">K2-Horizon：全开源前沿语言模型舰队（0.9B → 375B-A23B）</a></div>
+    <div class="summary">一口气发布六款完全开源模型，覆盖通用推理、数学与科学、软件工程、深度研究、办公自动化等场景，直接把「前沿级开源」的门槛再往上抬了一档。</div>
+    <div class="tags"><span class="tag hot">🔥 开源旗舰</span><span class="tag">MoE</span><span class="tag">Agentic</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">HOT · 具身智能 · 产业落地</div>
+    <div class="title"><a href="https://www.therobotreport.com/boston-dynamics-atlas-humanoid-lands-first-non-automotive-trial/" target="_blank">波士顿动力 Atlas 迎来首个非汽车行业试用方：GlobalFoundries</a></div>
+    <div class="summary">GlobalFoundries 加入 Atlas 早期采用者计划，成为现代汽车集团之外首个公开客户，现场测试将于 2027 年初启动。同时 Spot 四足机器人将扩展至其纽约、佛蒙特、德累斯顿和新加坡工厂。</div>
+    <div class="tags"><span class="tag hot">🔥 产业信号</span><span class="tag">Atlas</span><span class="tag">半导体制造</span></div>
+  </div>
+</div>
+
+<!-- ===== 机器人 / 具身智能 ===== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>机器人与具身智能</div>
+
+  <div class="card">
+    <div class="source">arXiv · 2026-11-16</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.21607" target="_blank">ScaleVLA：将视觉-语言-动作模型扩展至 5520 亿参数</a></div>
+    <div class="summary">研究表明前沿 VLM（如 GPT-6 Astra）的通用预训练知识对机器人控制极具价值。ScaleVLA 将 VLA 策略直接推向 552B 规模，验证了「通用预训练 + 动作对齐」路线的可扩展性。</div>
+    <div class="tags"><span class="tag">VLA</span><span class="tag">大规模模型</span><span class="tag">具身基础模型</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · 2026-11-16</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.17110" target="_blank">SALA：语义对齐的潜在动作实现具身基础模型双轴扩展</a></div>
+    <div class="summary">第一人称人类视频是机器人交互数据的重要补充，但现有潜在动作模型（LAM）存在语义不对齐问题。SALA 提出语义对齐的潜在动作表示，让模型能同时利用人类视频和机器人数据双向扩展。</div>
+    <div class="tags"><span class="tag">潜在动作</span><span class="tag">人类视频学习</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · 2026-11-16</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.13685" target="_blank">Ego Guidance：利用无动作标注的人类第一人称视频增强机器人策略学习</a></div>
+    <div class="summary">基于预训练 VLM，提出 SPAR 架构（MoT），通过共享动作与表征预测，从无动作标签的人类第一人称视频中提取对未来状态的预测信号，指导机器人策略训练。</div>
+    <div class="tags"><span class="tag">机器人策略</span><span class="tag">第一人称视频</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 2026-11-16</div>
+    <div class="title"><a href="https://www.fool.com/earnings/call-transcripts/2026/11/16/xpeng-xpev-q3-2026-earnings-call-transcript/" target="_blank">小鹏 Q3 电话会：IRON 人形机器人明年 1 月 1 日量产</a></div>
+    <div class="summary">何小鹏确认 IRON 硬件将于 2026 年 1 月 1 日起量产，首批 2027 年一季度在门店试点，二季度对外商业发布。产线自 9 月起已投入运行。</div>
+    <div class="tags"><span class="tag hot">量产节点</span><span class="tag">小鹏 IRON</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 2026-11-16</div>
+    <div class="title"><a href="https://3dprinting.com/news/siemens-demonstrates-agentic-ai-workflow-for-prompt-based-engineering-of-3d-printed-robotic-grippers/" target="_blank">西门子 × 智元：提示词直接生成 3D 打印机器人夹爪</a></div>
+    <div class="summary">西门子与智元机器人联合打造智能体 AI 工作流，通过 MCP 协议连接 Designcenter，输入文字描述即可为智元人形机器人设计夹爪并完成 3D 打印准备，将在 Formnext 2026 展出。</div>
+    <div class="tags"><span class="tag">Agentic 设计</span><span class="tag">西门子</span><span class="tag">智元机器人</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 2026-11-16</div>
+    <div class="title"><a href="https://finance.sina.cn/tech/2026-11-16/detail-iniyxiqz1185437.d.html" target="_blank">智平方 7 台人形机器人进驻 APEC 新闻中心</a></div>
+    <div class="summary">7 台人形机器人在 APEC 新闻中心为超 5000 名记者提供饮品服务，部署前约 2000 名志愿者参与测试。公司称已与近半数 APEC 经济体建立商务接触。</div>
+    <div class="tags"><span class="tag">大型活动部署</span><span class="tag">智平方</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 2026-11-17</div>
+    <div class="title"><a href="https://github.com/lucidrains/supermimic-pytorch" target="_blank">lucidrains/supermimic-pytorch</a></div>
+    <div class="summary">Supermimic 的非官方 PyTorch 实现——「用一个可微分世界模型扩展人形机器人全身控制」。Lucidrains 出品，将人形控制与世界模型学习结合，值得关注其后续社区反响。</div>
+    <div class="tags"><span class="tag">开源实现</span><span class="tag">人形控制</span><span class="tag">世界模型</span></div>
+  </div>
+</div>
+
+<!-- ===== 大模型 / 推理 ===== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型与推理</div>
+
+  <div class="card">
+    <div class="source">arXiv / HuggingFace Daily · 2026-11-17</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.21072" target="_blank">Sage S2.1 Flash 技术报告：320B MoE 科学推理与交互模型</a></div>
+    <div class="summary">320B 参数的通用 MoE 模型，专为科学证据推理与交互环境行动设计。配备分子图与生物图像专用编码器，试图打通科学感知与语言推理的界限。</div>
+    <div class="tags"><span class="tag">科学 AI</span><span class="tag">MoE</span><span class="tag">多模态</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · 2026-11-16</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.20404" target="_blank">Latent Feedback 是算力与数据的放大器</a></div>
+    <div class="summary">高质量数据耗尽后，常规做法是训多几个 epoch，但边际收益递减。本文提出将每个 token 的顶层状态反馈给下一个 token 的输入作为「潜在反馈」，为突破数据瓶颈提供了新思路。</div>
+    <div class="tags"><span class="tag">训练效率</span><span class="tag">数据瓶颈</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · 2026-11-16</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.17610" target="_blank">更多 Agent、更多样本还是更多思考？解开多 Agent 系统的三大混淆因素</a></div>
+    <div class="summary">系统梳理了多 Agent 语言模型评估中的混杂变量——协调机制、样本多样性与测试时算力往往被混为一谈。综合九项实证评估，为后续多 Agent 研究提供了更清晰的实验设计框架。</div>
+    <div class="tags"><span class="tag">多 Agent 系统</span><span class="tag">评估方法</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · 2026-11-16</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.08977" target="_blank">基于能量的推理器：你的循环推理器应该是能量模型</a></div>
+    <div class="summary">将循环推理（recurrent reasoning）重铸为能量模型框架，让模型通过能量下降迭代逼近答案，为「思考即优化」提供了一条理论更清晰的路径。</div>
+    <div class="tags"><span class="tag">推理模型</span><span class="tag">能量模型</span></div>
+  </div>
+</div>
+
+<!-- ===== Agent 安全与评测 ===== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🛡️</span>Agent 安全与评测</div>
+
+  <div class="card">
+    <div class="source">arXiv / HuggingFace Daily · 2026-11-17</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.07222" target="_blank">SPILLWAY：分离目标准入与净化，为工具调用 Agent 抵御提示注入</a></div>
+    <div class="summary">工具调用 Agent 面临致命威胁：一封邮件、一个网页里藏一句恶意指令，就可能让 Agent 把数据或钱发给攻击者。SPILLWAY 将「目标准入」与「内容净化」拆成独立防线，避免单一 LM 判断被绕过的风险。</div>
+    <div class="tags"><span class="tag hot">Agent 安全</span><span class="tag">提示注入防御</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · 2026-11-17</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.20218" target="_blank">SWE-CoWork：把编程 Agent 当「数字员工」来考核</a></div>
+    <div class="summary">101 个真实仓库的 101 个开发任务，不再只看「代码对不对」，而是评估 Agent 在组织内的协作、沟通与交付能力——编程 Agent 的评价范式正在从「解题」转向「上岗」。</div>
+    <div class="tags"><span class="tag">Agent 评测</span><span class="tag">编程 Agent</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · 2026-11-16</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.14960" target="_blank">终止滞后：编程 Agent 早已解出答案，却迟迟不停手</a></div>
+    <div class="summary">跨 5 个模型、2 个 Agent 框架、3 个 SWE-bench 数据集的研究发现：编程 Agent 常常在很早的时候就得到了正确补丁，却要继续跑很多步才停止。这为 Agent 效率优化指出了一个被忽视的浪费点。</div>
+    <div class="tags"><span class="tag">Agent 效率</span><span class="tag">SWE-bench</span></div>
+  </div>
+</div>
+
+<!-- ===== 开源动态 ===== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📦</span>开源与工程动态</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 2026-11-17</div>
+    <div class="title"><a href="https://github.com/Tencent/LoopForge" target="_blank">Tencent/LoopForge：自托管的编码 Agent 交付工作流</a></div>
+    <div class="summary">腾讯开源的编码 Agent 编排框架，用脚本和流水线把 CodeBuddy、Codex、Claude Code 等 Agent 组织成可复用的交付流程，登今日 GitHub Trending。</div>
+    <div class="tags"><span class="tag hot">今日热门</span><span class="tag">Agent 编排</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 2026-11-17</div>
+    <div class="title"><a href="https://github.com/google-research/paper-orchestra" target="_blank">google-research/paper-orchestra：多智能体自动化学术论文写作框架</a></div>
+    <div class="summary">Google Research 开源的多 Agent 论文写作编排系统，自动化完成从文献调研到成稿的流程，进入今日 GitHub Trending。</div>
+    <div class="tags"><span class="tag">多 Agent</span><span class="tag">AI4Research</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 2026-11-17</div>
+    <div class="title"><a href="https://github.com/alibaba/open-code-review" target="_blank">alibaba/open-code-review：阿里开源的代码审查工具</a></div>
+    <div class="summary">阿里巴巴开源的代码评审工具，主打安全、快速与高效，采用混合架构（确定性检查 + 模型评审），已在阿里内部大规模验证。登今日 GitHub Trending。</div>
+    <div class="tags"><span class="tag">代码评审</span><span class="tag">阿里开源</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 2026-11-17</div>
+    <div class="title"><a href="https://github.com/ag-ui-protocol/ag-ui" target="_blank">ag-ui-protocol/ag-ui：Agent-用户交互协议</a></div>
+    <div class="summary">一个开放的协议规范，让 Agent 与前端应用之间的交互标准化——流式输出、状态同步、人机协作中断等场景都有明确定义，持续在 Trending 榜上有热度。</div>
+    <div class="tags"><span class="tag">Agent 协议</span><span class="tag">前端集成</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 2026-11-17</div>
+    <div class="title"><a href="https://github.com/jingyaogong/minimind" target="_blank">jingyaogong/minimind：2 小时从零训练 64M 参数大模型</a></div>
+    <div class="summary">极客向项目：完全从零开始，只用 2 小时、单张消费级显卡就能训练一个 64M 参数的小 LLM。适合想深入理解 LLM 训练全流程的开发者。</div>
+    <div class="tags"><span class="tag">LLM 训练</span><span class="tag">教学项目</span></div>
+  </div>
+</div>
+
+<!-- ===== Awesome 列表动态 ===== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📋</span>Awesome 列表与资源</div>
+
+  <div class="card">
+    <div class="source">GitHub</div>
+    <div class="title"><a href="https://github.com/sindresorhus/awesome" target="_blank">sindresorhus/awesome：主列表持续收录高质量子列表</a></div>
+    <div class="summary">作为 awesome 生态的枢纽，主列表近期收录方向持续向 AI 倾斜：Agent 框架、AI 代码评审、具身智能数据集等子列表增长明显。建议关注 awesome-robotics 与 awesome-llm-agents 两条线的更新。</div>
+    <div class="tags"><span class="tag">Awesome 生态</span><span class="tag">资源导航</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今天的 AI 日报里，最强烈的信号是「开源」与「具身」两股力量正在合流。K2-Horizon 六款全开源模型直接把前沿能力的价格打了下来，而 ScaleVLA 和 SALA 这类工作则表明，机器人领域也在复刻大模型的Scaling Law——更大的基座、更通用的预训练、更少的任务特定微调。资本端，Genesis AI 35 亿美元估值和波士顿动力 Atlas 进入半导体工厂，说明具身智能已经从「演示视频」走向「商业合同」。Agent 安全方向今天也格外活跃，SPILLWAY 和 SWE-CoWork 分别从「防御攻击」和「评估上岗」两个角度，把 Agent 从实验室玩具推向生产工具的必经关卡补上。值得关注的是「终止滞后」这类发现——Agent 的效率瓶颈可能不在模型能力，而在决策循环的设计。接下来值得持续追踪：开源模型对闭源前沿的差距是否进一步收窄，以及 VLA 大模型化后真实机器人任务上的泛化表现。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-11-18</p>
+</div>
+
+</div>
+</body>
+</html>

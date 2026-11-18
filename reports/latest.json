@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-17T17:08:25.703737+00:00",
+  "generated_at": "2026-11-18T00:05:24.553192+00:00",
   "papers": {
-    "date": "2026-11-17",
-    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261117.html",
-    "overview": "今日 arXiv 最新一批论文中，Agentic Robotics（智能体机器人）成为最热议题，一篇综述以 107 票登上 HuggingFace 榜首，提出 GPT-6 Astra 发布后机器人正进入\"智能体时代\"。具身智能赛道同样火热：AMD 82 亿美元收购 World Labs 正式交割、Agility 通过 SPAC 在纳斯达克上市成为首家美股纯人形机器人公司、Agile Robots 获软银 5 亿美元融资。开源方面，AG-UI Protocol、Google Paper Orchestrator、NVIDIA SkillEvaluator 等项目冲上 GitHub Trending，AI Agent 基础设施正在快速成型。",
-    "digest": "今天最值得关注的是具身智能赛道的\"资本化加速\"：Agility 成为首家在纳斯达克上市的纯人形机器人公司，AMD 82 亿美元收购 World Labs 正式交割，Agile Robots 再获软银 5 亿美元融资——芯片巨头、软银、SPAC 都在抢滩物理 AI。与此同时，学术界的\"Agentic Robotics\"综述以 107 票霸榜 HuggingFace，宣告机器人研究正从\"为每个任务训练专用策略\"转向\"让前沿模型通过智能体 harness 直接操控物理世界\"。开源社区也在快速跟进：AG-UI Protocol 冲上 GitHub Trending 榜首，NVIDIA 开源 Agent 技能评估框架，AI Agent 的基础设施栈正在成型。如果说 2025 年是\"Agent 元年\"，2026 年底我们正在见证\"Agent 走出屏幕、走进物理世界\"的临界点。"
+    "date": "2026-11-18",
+    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261118.html",
+    "overview": "今日 AI 圈热度集中在三条线：开源大模型继续狂飙，K2-Horizon 一口气放出从 0.9B 到 375B-A23B 的六款全开源模型，对标前沿推理与 Agent 能力；具身智能赛道资本持续加注，Genesis AI 以 35 亿美元估值完成 5 亿美元 A 轮，波士顿动力 Atlas 拿下首个非汽车行业客户；Agent 安全与评测成为新焦点，SPILLWAY 提出分离式防线抵御提示注入，SWE-CoWork 把编程 Agent 当「数字员工」来考核。同时，552B 参数的 ScaleVLA 将视觉-语言-动作模型推向新规模，机器人操作模型的「大模型化」趋势愈发清晰。",
+    "digest": "今天的 AI 日报里，最强烈的信号是「开源」与「具身」两股力量正在合流。K2-Horizon 六款全开源模型直接把前沿能力的价格打了下来，而 ScaleVLA 和 SALA 这类工作则表明，机器人领域也在复刻大模型的Scaling Law——更大的基座、更通用的预训练、更少的任务特定微调。资本端，Genesis AI 35 亿美元估值和波士顿动力 Atlas 进入半导体工厂，说明具身智能已经从「演示视频」走向「商业合同」。Agent 安全方向今天也格外活跃，SPILLWAY 和 SWE-CoWork 分别从「防御攻击」和「评估上岗」两个角度，把 Agent 从实验室玩具推向生产工具的必经关卡补上。值得关注的是「终止滞后」这类发现——Agent 的效率瓶颈可能不在模型能力，而在决策循环的设计。接下来值得持续追踪：开源模型对闭源前沿的差距是否进一步收窄，以及 VLA 大模型化后真实机器人任务上的泛化表现。"
   },
   "media": {
     "date": "2026-11-18",

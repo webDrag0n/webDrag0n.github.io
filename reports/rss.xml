@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 17 Nov 2026 17:08:25 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 00:05:24 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-11-18</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261118.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261118.html</guid>
+      <pubDate>Wed, 18 Nov 2026 08:00:00 +0000</pubDate>
+      <description>今日 AI 圈热度集中在三条线：开源大模型继续狂飙，K2-Horizon 一口气放出从 0.9B 到 375B-A23B 的六款全开源模型，对标前沿推理与 Agent 能力；具身智能赛道资本持续加注，Genesis AI 以 35 亿美元估值完成 5 亿美元 A 轮，波士顿动力 Atlas 拿下首个非汽车行业客户；Agent 安全与评测成为新焦点，SPILLWAY 提出分离式防线抵御提示注入，SWE-CoWork 把编程 Agent 当「数字员工」来考核。同时，552B 参数的 ScaleVLA 将视觉-语言-动作模型推向新规模，机器人操作模型的「大模型化」趋势愈发清晰。</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-11-18</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261118.html</link>
