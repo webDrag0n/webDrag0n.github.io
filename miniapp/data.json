@@ -1,8 +1,8 @@
 {
-  "updated_at": "14:01",
+  "updated_at": "15:01",
   "weather": {
-    "main": "26°C Patchy rain nearby",
-    "sub": "今日 19~27°C，湿度 67%，体感 28°C"
+    "main": "25°C Patchy rain nearby",
+    "sub": "今日 19~27°C，湿度 66%，体感 25°C"
   },
   "todos": [
     {
@@ -18,7 +18,7 @@
     {
       "time": "15:00",
       "text": "午后轻聊：看到有趣的新闻或段子，发一条轻松的消息，不期待回复",
-      "done": false
+      "done": true
     },
     {
       "time": "20:00",
