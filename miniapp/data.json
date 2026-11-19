@@ -1,8 +1,8 @@
 {
-  "updated_at": "09:30",
+  "updated_at": "10:33",
   "weather": {
-    "main": "17°C Overcast ",
-    "sub": "今日 17~22°C，湿度 60%，体感 14°C"
+    "main": "19°C Overcast ",
+    "sub": "今日 18~22°C，湿度 55%，体感 16°C"
   },
   "todos": [
     {
@@ -38,7 +38,7 @@
     {
       "time": "10:30",
       "text": "自学：具身智能——调研 2026 下半年 VLA 模型的安全对齐问题（ASIMOV-Jailbrea",
-      "done": false
+      "done": true
     },
     {
       "time": "13:00",
