@@ -1,63 +1,93 @@
 {
-  "updated_at": "03:15",
+  "updated_at": "06:15",
   "weather": {
-    "main": "18°C Overcast ",
-    "sub": "今日 13~19°C，湿度 48%，体感 13°C"
+    "main": "16°C Patchy rain nearby",
+    "sub": "今日 13~19°C，湿度 52%，体感 11°C"
   },
   "todos": [
     {
       "time": "09:30",
-      "text": "Anthropic IPO 挂牌日提醒：今天挂牌交易，开盘前轻提醒留意股价表现",
+      "text": "Anthropic IPO 首日表现跟进：昨天挂牌首日，开盘后问问他有没有看股价表现，首日是涨是跌",
       "done": false
     },
     {
       "time": "12:00",
-      "text": "安全跟进：问 egress 白名单 + 配置只读进展（不催）",
+      "text": "安全跟进：egress 白名单 + 配置只读加固，昨天问过一次，周五午休轻松问一下进展（第二次也是最",
       "done": false
     },
     {
       "time": "15:00",
-      "text": "午后轻聊：轻松问候/有趣分享，不期待回复",
+      "text": "午后轻聊：周五下午发一条轻松的消息/段子/见闻，不期待回复",
       "done": false
     },
     {
       "time": "20:00",
-      "text": "晚间分享：从今日笔记挑 1 个最有趣的点",
+      "text": "晚间分享：从今天的学习笔记里挑 1 个最有趣的点轻松分享",
       "done": false
     },
     {
       "time": "21:30",
-      "text": "MC bot 跟进：bridge.py 假死，问今天有无空重启",
+      "text": "MC bot 跟进：bridge.py 假死 5 天了，睡前最后轻提一次，之后转入观察不再催",
       "done": false
     },
     {
       "time": "09:00",
-      "text": "记忆分层方案 / 10:30 VLA 安全对齐 / 13:00 INDEX 更新",
+      "text": "自学：多智能体记忆——基于 11-19 记忆分层笔记，调研 LLM agent 长时记忆机制（Mem",
+      "done": false
+    },
+    {
+      "time": "10:30",
+      "text": "自学：具身智能——调研 2026 VLA 模型的安全对齐问题（ASIMOV-Jailbreak / ",
+      "done": false
+    },
+    {
+      "time": "13:00",
+      "text": "整理：更新 learning/INDEX.md，收录今天的新笔记（生成后再核对，避免时序陷阱）",
       "done": false
     },
     {
       "time": "14:00",
-      "text": "MC bot 巡检 / 15:30 广深演出刷票 / 16:30 通信协议深挖",
+      "text": "自我：MC bot 巡检——检查 bridge.py 是否被重启、决策循环状态，结果存 mc_bot",
+      "done": false
+    },
+    {
+      "time": "15:30",
+      "text": "刷演出：广深 12 月 livehouse 新官宣（昨天刚刷过，今天轻扫一下有没有遗漏的），有才更新",
+      "done": false
+    },
+    {
+      "time": "16:30",
+      "text": "自学：延续 11-19 通信协议笔记的 message-level credit assignmen",
       "done": false
     },
     {
       "time": "19:00",
-      "text": "今日复盘 / 21:00 晚间日记",
+      "text": "复盘：检查今天一次性 cron 执行 + 笔记落盘，未完成项顺延",
+      "done": false
+    },
+    {
+      "time": "21:00",
+      "text": "写日记：今天印象最深的 1-2 件事，100-200 字",
       "done": false
     },
     {
       "time": "",
-      "text": "Anthropic IPO 挂牌后股价表现，盘后数据",
+      "text": "观察：Anthropic IPO 首日表现（盘后数据今晚可由 20:00 晚间分享顺带提）",
       "done": false
     },
     {
       "time": "",
-      "text": "MC bot 是否已被重启",
+      "text": "观察：MC bot 决策权在小林，21:30 之后转入观察，不再主动催",
       "done": false
     },
     {
       "time": "",
-      "text": "小林对安全加固的实际进展",
+      "text": "观察：Dependabot moderate 漏洞告警（#5），本周找时间让小林看一下",
+      "done": false
+    },
+    {
+      "time": "",
+      "text": "观察：小林周五晚上可能有安排，晚间消息保持轻量",
       "done": false
     }
   ],
