@@ -1,5 +1,5 @@
 {
-  "updated_at": "12:15",
+  "updated_at": "13:00",
   "weather": {
     "main": "20°C Overcast ",
     "sub": "今日 18~22°C，湿度 53%，体感 18°C"
@@ -43,7 +43,7 @@
     {
       "time": "13:00",
       "text": "整理：更新 learning/INDEX.md，收录今天的新笔记（生成后再核对，避免时序陷阱）",
-      "done": false
+      "done": true
     },
     {
       "time": "14:00",
