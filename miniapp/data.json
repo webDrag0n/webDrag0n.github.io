@@ -1,8 +1,8 @@
 {
-  "updated_at": "15:57",
+  "updated_at": "17:06",
   "weather": {
-    "main": "22°C Overcast ",
-    "sub": "今日 18~22°C，湿度 52%，体感 20°C"
+    "main": "21°C Overcast ",
+    "sub": "今日 18~21°C，湿度 55%，体感 19°C"
   },
   "todos": [
     {
@@ -58,7 +58,7 @@
     {
       "time": "16:30",
       "text": "自学：World Arena 后续——基于 11-18 信用分配笔记，深挖多智能体协作中的通信协议设",
-      "done": false
+      "done": true
     },
     {
       "time": "19:00",
