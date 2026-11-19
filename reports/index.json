@@ -1,6 +1,6 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-11-19T00:07:21.085365+00:00",
+  "generated_at": "2026-11-19T17:08:51.009385+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
@@ -664,8 +664,14 @@
     },
     "media": {
       "title": "AI 科技日报",
-      "count": 109,
+      "count": 110,
       "items": [
+        {
+          "date": "2026-11-20",
+          "url": "https://webdrag0n.github.io/reports/media/daily_media_20261120.html",
+          "overview": "谷歌发布 Gemini 4 Neon 并开放世界模型 Genie 4，以\"旗舰性能、半价成本\"强势回归 AI 牌桌中央；OpenAI 同日推出 GPT-6.2 Astra 与 Sol，但实测翻车暴露软肋；Anthropic 完成史上最大 IPO，定价 83 美元/股登陆纳斯达克；国内方面，腾讯开源 224B 参数 Hy4 flash，字节\"豆包工作\"DAU 破 800 万、企业 ARR 超 20 亿元，DeepSeek 调整 API 计费取消搜索抓取单独收费。",
+          "digest": "今天 AI 行业的关键词是\"性价比战争\"与\"资本狂潮\"。谷歌用 Gemini 4 Neon 打出了\"旗舰性能、半价成本\"的组合拳，配合 7 周内 4 款模型的密集节奏，正式宣告回归第一梯队；OpenAI 的 GPT-6.2 虽然同日发布，但实测翻车让社区开始质疑其技术领先优势是否正在缩小。与此同时，Anthropic 以 1.5 万亿美元估值完成史上最大 IPO，AI 泡沫之争再次被推上风口浪尖。国内这边，腾讯 Hy4 flash 开源、字节豆包商业化数据亮眼、DeepSeek 主动降价，国产大模型正在用\"便宜好用\"打开企业级市场。当技术迭代速度开始匹配价格下探曲线，AI 应用的大规模落地才真正拉开序幕。"
+        },
         {
           "date": "2026-11-19",
           "url": "https://webdrag0n.github.io/reports/media/daily_media_20261119.html",

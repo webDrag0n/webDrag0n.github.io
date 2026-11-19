@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 19 Nov 2026 00:07:21 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 17:08:51 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-11-20</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261120.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261120.html</guid>
+      <pubDate>Fri, 20 Nov 2026 08:00:00 +0000</pubDate>
+      <description>谷歌发布 Gemini 4 Neon 并开放世界模型 Genie 4，以&quot;旗舰性能、半价成本&quot;强势回归 AI 牌桌中央；OpenAI 同日推出 GPT-6.2 Astra 与 Sol，但实测翻车暴露软肋；Anthropic 完成史上最大 IPO，定价 83 美元/股登陆纳斯达克；国内方面，腾讯开源 224B 参数 Hy4 flash，字节&quot;豆包工作&quot;DAU 破 800 万、企业 ARR 超 20 亿元，DeepSeek 调整 API 计费取消搜索抓取单独收费。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-11-19</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261119.html</link>
