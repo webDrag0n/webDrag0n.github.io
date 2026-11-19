@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 日报 — 2026年11月19日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .hot-topic .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .hot-topic .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .hot-topic .title a:hover { text-decoration: underline; }
+  .hot-topic .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .hot-topic .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .hot-topic .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .hot-topic .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .hot-topic .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 日报</h1>
+  <div class="date">2026年11月19日</div>
+  <div class="subtitle">每日精选论文 · 行业动态 · 开源热点</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今日 AI 圈的核心关键词是「规模」与「落地」。具身智能赛道融资持续升温，Genesis AI 以 35 亿美元估值拿下 5 亿美元 A 轮；现代集团全资收购波士顿动力，计划部署 2.5 万台 Atlas；小鹏 IRON 官宣明年 1 月量产。研究侧，ScaleVLA 把视觉-语言-动作模型推到 552B 参数，TCP4D 与 Heave-Ho 分别在机器人操作和多机协作上取得突破；视频生成模型 FastFrames 首次实现交互式延迟。开源社区则涌现出本地推理优化、Agent 营销技能包等实用项目。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>机器人与具身智能</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 热点</div>
+    <div class="title"><a href="https://techcrunch.com/2026/11/17/genesis-ai-raises-500-million-to-deploy-electric-glove-wearing-robots" target="_blank">Genesis AI 完成 5 亿美元 A 轮融资，估值 35 亿美元</a></div>
+    <div class="source">Robot Overflow / TechCrunch</div>
+    <div class="summary">Khosla、Premji Invest 与 Eclipse 共同领投，Nvidia、AMD Ventures、Samsung Next 跟投。Genesis 已制造 30-40 台 Eno 机器人，正在少数客户处试点，并选定美国代工厂明年量产。本轮融资是具身智能赛道近期最大单笔之一。</div>
+    <div class="tags"><span class="tag hot">融资</span><span class="tag">人形机器人</span><span class="tag">量产</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 热点</div>
+    <div class="title"><a href="https://www.just-auto.com/news/hyundai-acquires-full-ownership-of-boston-dynamics/" target="_blank">现代集团全资收购波士顿动力，计划部署 2.5 万台 Atlas</a></div>
+    <div class="source">Robot Overflow / Just Auto</div>
+    <div class="summary">现代集团收购软银所持最后 10% 股权，实现 100% 控股；Hyundai Glovis 追加 3500 万美元后持股 12.5%。据报道现代计划未来几年在其工厂部署 25,000 台 Atlas 人形机器人。</div>
+    <div class="tags"><span class="tag hot">收购</span><span class="tag">波士顿动力</span><span class="tag">量产部署</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 热点</div>
+    <div class="title"><a href="https://www.cnbc.com/2026/11/17/nvidia-nvda-earnings-report-q3-2027.html" target="_blank">英伟达确认收购 Hugging Face 交易仍按计划推进</a></div>
+    <div class="source">Robot Overflow / CNBC</div>
+    <div class="summary">在 Q3 财报电话会上，临时 CEO Colette Kress 表示英伟达仍将收购 Hugging Face——该交易于 9 月达成，金额近 130 亿美元，尚未交割。电话会在黄仁勋辞职数日后举行，引发市场对英伟达战略连续性的关注。</div>
+    <div class="tags"><span class="tag hot">收购</span><span class="tag">英伟达</span><span class="tag">HuggingFace</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow / Google Developers Blog</div>
+    <div class="title"><a href="https://developers.googleblog.com/gemini-hydrogen-for-robotics/" target="_blank">谷歌为 Antigravity 推出机器人插件与 Gemini 4 Hydrogen</a></div>
+    <div class="summary">插件涵盖机器人接入、MuJoCo 仿真与控制。Gemini 4 Hydrogen 在 Artificial Analysis Robotics 0.1 基准上得分 58（真实 6 轴机械臂、8 个桌面任务），性能接近更大的 Argon 但成本更低。该功能需要付费 AI Pro 或 Ultra 计划。</div>
+    <div class="tags"><span class="tag">谷歌</span><span class="tag">机器人开发工具</span><span class="tag">Gemini</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow / Motley Fool</div>
+    <div class="title"><a href="https://www.fool.com/earnings/call-transcripts/2026/11/16/xpeng-xpev-q3-2026-earnings-call-transcript/" target="_blank">小鹏 IRON 明年 1 月 1 日量产，2027 年 Q1 门店试点</a></div>
+    <div class="summary">何小鹏在 Q3 电话会上宣布 IRON 硬件明年 1 月 1 日起量产，首批 2027 年一季度在部分门店试点，二季度对外商业发布。产线自 9 月已开始运转。</div>
+    <div class="tags"><span class="tag">小鹏</span><span class="tag hot">量产</span><span class="tag">人形机器人</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow / PR Newswire</div>
+    <div class="title"><a href="https://www.prnewswire.com/news-releases/robotera-expands-humanoid-robot-deployment-across-china-posts-guangdong-network-reaching-eight-cities-province-wide-302941865.html" target="_blank">星动纪元人形机器人进驻广东邮政 8 市 11 个枢纽</a></div>
+    <div class="summary">由 3 月广州试点扩展至 8 市 11 个邮政枢纽，平均每小时分拣超 1500 件包裹（公司数据）。这是中国邮政体系内最大规模的人形机器人部署案例之一。</div>
+    <div class="tags"><span class="tag">邮政物流</span><span class="tag">部署</span><span class="tag">星动纪元</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow / The Robot Report</div>
+    <div class="title"><a href="https://www.therobotreport.com/boston-dynamics-atlas-humanoid-lands-first-non-automotive-trial/" target="_blank">GlobalFoundries 成为波士顿动力 Atlas 首个非汽车行业试用方</a></div>
+    <div class="summary">GlobalFoundries 加入 Atlas 早期采用者计划，现场测试将于 2027 年初开始。同时 Spot 已扩展至其纽约、佛蒙特、德累斯顿和新加坡的工厂，两台 Spot 累计行驶约 900 公里。</div>
+    <div class="tags"><span class="tag">半导体制造</span><span class="tag">Atlas</span><span class="tag">部署</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow / 3DPrinting.com</div>
+    <div class="title"><a href="https://3dprinting.com/news/siemens-demonstrates-agentic-ai-workflow-for-prompt-based-engineering-of-3d-printed-robotic-grippers/" target="_blank">西门子与智元演示「提示词生成 3D 打印夹爪」工作流</a></div>
+    <div class="summary">西门子与智元打造智能体 AI 工作流，通过 MCP 连接 Designcenter，按文字描述为智元人形机器人设计夹爪并准备 3D 打印，计划在 Formnext 2026 展出。这是工业软件与具身智能结合的典型样本。</div>
+    <div class="tags"><span class="tag">西门子</span><span class="tag">智元</span><span class="tag">Agentic AI</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow / 同花顺</div>
+    <div class="title"><a href="http://stock.10jqka.com.cn/20261116/c681877889.shtml" target="_blank">逐际动力开源 FluxVLA Engine，称累计订单数千台</a></div>
+    <div class="summary">逐际动力深圳体验中心将向 APEC 工商界代表展示 Oli、Luna 和 Tron 2；公司称累计订单数千台、过半来自海外，并开源了 FluxVLA Engine。国产 VLA 引擎开源是具身智能基础设施的重要补充。</div>
+    <div class="tags"><span class="tag hot">开源</span><span class="tag">VLA</span><span class="tag">逐际动力</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>AI 研究前沿</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 热点</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.23226" target="_blank">FastFrames：交互式延迟的视频生成模型</a></div>
+    <div class="source">arXiv / HuggingFace Daily Papers</div>
+    <div class="summary">自回归视频扩散模型天然适合交互式视觉体验，但现有模型的速度比流畅交互所需慢几个数量级。FastFrames 通过渐进蒸馏与因果稀疏注意力，把每帧生成延迟压到毫秒级，同时保持画质不衰减。在游戏直播、虚拟客服、实时创意工具等「边看边生成」的场景里，这一步是关键的基础设施。</div>
+    <div class="tags"><span class="tag">视频生成</span><span class="tag">实时交互</span><span class="tag">扩散模型</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 热点</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.23143" target="_blank">TCP4D：机器人操作的统一工具中心点追踪与生成模型</a></div>
+    <div class="source">arXiv / HuggingFace Daily Papers</div>
+    <div class="summary">从 RGB 视频中恢复机器人动作与夹爪状态一直是具身智能的痛点。TCP4D 用与具体机器人形态无关的工具中心点（TCP）位姿作为统一动作空间，共享的 4D 场景表征既能追踪已观测到的 TCP 运动，也能生成未来轨迹——为跨本体迁移和仿真到现实（sim2real）提供了新的桥梁。</div>
+    <div class="tags"><span class="tag hot">具身智能</span><span class="tag">机器人操作</span><span class="tag">4D场景</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 热点</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.21607" target="_blank">ScaleVLA：把视觉-语言-动作模型扩展到 5520 亿参数</a></div>
+    <div class="source">arXiv / HuggingFace Daily Papers</div>
+    <div class="summary">前沿 VLM（如 GPT-6 Astra）已展现出机器人控制能力，但主流 VLA 策略仍停留在小骨干网络上。ScaleVLA 系统探索了把 VLA 扩展到 552B 参数后会发生什么：更大的预训练表征确实能迁移到物理动作上，在多项灵巧操作基准上刷新了成功率。这一结果可能重塑机器人基础模型的规模定律认知。</div>
+    <div class="tags"><span class="tag hot">VLA</span><span class="tag">机器人基础模型</span><span class="tag">规模化</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv / HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.22275" target="_blank">Heave-Ho：去中心化长时程多人形机器人协作</a></div>
+    <div class="summary">多人形机器人协作需要全身协调、长时程规划与精确同步。Heave-Ho 提出完全去中心化的框架，底层用多智能体全身控制，高层用共享规划器协调，机器人间只通过观察彼此动作来配合。这项工作把「多机协作」从短程搬箱子推进到长时程、高协同的复杂任务。</div>
+    <div class="tags"><span class="tag">人形机器人</span><span class="tag">多智能体协作</span><span class="tag">去中心化</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv / HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.23144" target="_blank">π⁴：4D 场景几何与运动的基础模型</a></div>
+    <div class="summary">π⁴ 能从单张图片、无序图像集合或视频序列中，直接恢复稠密几何、相机位姿、度量尺度，并输出 2D/3D 点轨迹和运动物体掩码。它把几何分支与几何条件化的运动分支耦合在一起，是 4D 感知方向的一次系统性整合，对 AR/VR、自动驾驶和具身智能都有直接价值。</div>
+    <div class="tags"><span class="tag">4D感知</span><span class="tag">几何基础模型</span><span class="tag">多模态</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv / HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.22115" target="_blank">星兴 4（Xing 4）：国产芯片与框架上的前沿 Agentic 模型</a></div>
+    <div class="summary">中电信AI研究院发布星兴 4 系列模型，在昇腾（Ascend）软硬件栈上完成了从大规模预训练到推理与智能体后训练的全链路优化。论文系统阐述了稀疏激活、注意力变体、MoE 路由等在大规模国产算力上的工程实践，是国产芯片训练前沿模型的一份完整技术报告。</div>
+    <div class="tags"><span class="tag">国产算力</span><span class="tag">智能体</span><span class="tag">大模型训练</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv / HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.22055" target="_blank">权空间编程不需要 Transformer</a></div>
+    <div class="summary">在「权重空间编程」范式里，LLM 直接写出目标网络的权重，不再依赖梯度训练——那么 Transformer 还是最优架构吗？作者给模型 10 个标注样本和一个沙盒，让它自由设计小型网络。实验表明，非 Transformer 架构在 LLM 手工设计权重时往往表现更好，这对「模型即代码」的元学习范式有启发意义。</div>
+    <div class="tags"><span class="tag">元学习</span><span class="tag">权重编程</span><span class="tag">架构探索</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv / HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.23219" target="_blank">Do LLM Agents Still Need to Be Told How to Self-Improve?</a></div>
+    <div class="summary">随着模型能力增强，一个根本问题浮现：它们还需要人类告诉它们如何自我改进吗？本文研究了一种完全自主的范式——只给基本原语、资源和目标，让模型自己决定如何优化自己。结果显示，自主 self-improve 在某些任务上已接近甚至超过人工设计的改进流程，但在复杂推理上仍有明显差距。</div>
+    <div class="tags"><span class="tag">智能体</span><span class="tag">自我改进</span><span class="tag">自动优化</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv / HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.22666" target="_blank">VSpark：自回归视觉-语言-动作模型的投机解码</a></div>
+    <div class="summary">VLA 模型逐 token 生成机器人动作，延迟高成为部署瓶颈。VSpark 把投机解码引入 VLA：轻量草稿模型一次提议多个 token，VLA 单次前向验证，只接受与自身预测一致的 token，从而在不损失精度的前提下显著加速。这项工作对把 VLA 从实验室推向实时控制至关重要。</div>
+    <div class="tags"><span class="tag">VLA</span><span class="tag">推理加速</span><span class="tag">投机解码</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">💻</span>开源项目</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending / 本周新建</div>
+    <div class="title"><a href="https://github.com/sybil-solutions/inference-optimisation-skill" target="_blank">inference-optimisation-skill：本地 LLM 推理加速技能包</a></div>
+    <div class="summary">一个面向 Agent 的技能模块，用于在本地 LLM 服务上「爬山式」优化推理速度——覆盖解码、投机解码、预填充、KV Cache、启动时间、TTFT 等全链路。两天内获得 1100+ stars，反映出社区对推理成本优化的强烈需求。</div>
+    <div class="tags"><span class="tag hot">开源</span><span class="tag">推理优化</span><span class="tag">Agent Skill</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending / 本周新建</div>
+    <div class="title"><a href="https://github.com/boringmarketer/boring-marketing-skills" target="_blank">boring-marketing-skills：32 个 Agent 营销技能集</a></div>
+    <div class="summary">一套完整的营销 Agent 技能包，涵盖市场调研、定位、文案、落地页、SEO、AI 搜索、广告投放、邮件和内容营销。虽然名字「boring」，但实用性很强，适合给通用 Agent 快速装配营销能力。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">Agent</span><span class="tag">营销</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending / 本周新建</div>
+    <div class="title"><a href="https://github.com/vaibhav-space/my-ai-coding-workflow" target="_blank">my-ai-coding-workflow：生产级 AI 编码工作流</a></div>
+    <div class="summary">一套生产级的 AI 编码指令与技能集，包含 Planning → Critical Review → Diff 的三阶段评审管线。作者把日常使用 AI 辅助编码的最佳实践整理成可复用的工作流模板，对团队协作有参考价值。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">AI编码</span><span class="tag">工作流</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今天最值得关注的不是单篇论文，而是具身智能的「产业化拐点」信号。Genesis AI 的 5 亿美元融资、现代的 2.5 万台 Atlas 部署计划、小鹏 IRON 的量产时间表，三件事指向同一个判断：人形机器人正在从 demo 阶段走向真实产线和工厂。研究侧，ScaleVLA 的 552B 参数实验和 TCP4D 的跨本体动作空间，都在为「机器人基础模型」铺路。视频生成这边，FastFrames 把延迟压到毫秒级，意味着实时交互式视频应用的基础设施已经就位。对开发者来说，现在正是关注 VLA 模型、4D 感知和推理优化工具链的最佳窗口期。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026年11月19日 · 自动生成</p>
+</div>
+
+</div>
+</body>
+</html>

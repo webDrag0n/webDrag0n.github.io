@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 18 Nov 2026 17:05:34 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 00:07:21 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-11-19</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261119.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261119.html</guid>
+      <pubDate>Thu, 19 Nov 2026 08:00:00 +0000</pubDate>
+      <description>今日 AI 圈的核心关键词是「规模」与「落地」。具身智能赛道融资持续升温，Genesis AI 以 35 亿美元估值拿下 5 亿美元 A 轮；现代集团全资收购波士顿动力，计划部署 2.5 万台 Atlas；小鹏 IRON 官宣明年 1 月量产。研究侧，ScaleVLA 把视觉-语言-动作模型推到 552B 参数，TCP4D 与 Heave-Ho 分别在机器人操作和多机协作上取得突破；视频生成模型 FastFrames 首次实现交互式延迟。开源社区则涌现出本地推理优化、Agent 营销技能包等实用项目。</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-11-19</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261119.html</link>
