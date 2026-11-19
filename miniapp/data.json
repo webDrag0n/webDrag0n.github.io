@@ -1,8 +1,8 @@
 {
-  "updated_at": "00:15",
+  "updated_at": "03:15",
   "weather": {
     "main": "18°C Overcast ",
-    "sub": "今日 13~19°C，湿度 50%，体感 15°C"
+    "sub": "今日 13~19°C，湿度 48%，体感 13°C"
   },
   "todos": [
     {
@@ -63,34 +63,34 @@
   ],
   "news": [
     {
-      "title": "Genesis AI 完成 5 亿美元 A 轮融资，估值 35 亿美元",
-      "url": "https://techcrunch.com/2026/11/17/genesis-ai-raises-500-million-to-deploy-electric-glove-wearing-robots",
-      "tag": "论文"
+      "title": "刚刚，谷歌 Gemini 4 再发新款 Neon，对标超越 GPT-6.2 Sol，世界模型 Genie 4 也已开放",
+      "url": "https://www.36kr.com/p/4075845199402119",
+      "tag": "媒体"
     },
     {
-      "title": "现代集团全资收购波士顿动力，计划部署 2.5 万台 Atlas",
-      "url": "https://www.just-auto.com/news/hyundai-acquires-full-ownership-of-boston-dynamics/",
-      "tag": "论文"
+      "title": "「北美大豆包」谷歌，终于杀回 AI 牌桌中央",
+      "url": "http://www.geekpark.net/news/374196",
+      "tag": "媒体"
     },
     {
-      "title": "英伟达确认收购 Hugging Face 交易仍按计划推进",
-      "url": "https://www.cnbc.com/2026/11/17/nvidia-nvda-earnings-report-q3-2027.html",
-      "tag": "论文"
+      "title": "GPT-6.2 难产！OpenAI 怕了 / 跑分狂飙实测翻车，刚发的 GPT-6.2 暴露了 OpenAI 的软肋",
+      "url": "https://www.qbitai.com/2026/11/510914.html",
+      "tag": "媒体"
     },
     {
-      "title": "谷歌为 Antigravity 推出机器人插件与 Gemini 4 Hydrogen",
-      "url": "https://developers.googleblog.com/gemini-hydrogen-for-robotics/",
-      "tag": "论文"
+      "title": "Anthropic 完成史上最大 IPO：定价 83 美元/股，估值 1.5 万亿美元，登陆纳斯达克",
+      "url": "https://cn.investing.com/news/stock-market-news/article-3676160",
+      "tag": "媒体"
     },
     {
-      "title": "小鹏 IRON 明年 1 月 1 日量产，2027 年 Q1 门店试点",
-      "url": "https://www.fool.com/earnings/call-transcripts/2026/11/16/xpeng-xpev-q3-2026-earnings-call-transcript/",
-      "tag": "论文"
+      "title": "腾讯混元正式开源 Hy4 flash 家族：总参 224B、激活 12B，任务成本较基准降约 18 倍",
+      "url": "https://blog.csdn.net/weixin_45635831/article/details/171036344",
+      "tag": "媒体"
     },
     {
-      "title": "星动纪元人形机器人进驻广东邮政 8 市 11 个枢纽",
-      "url": "https://www.prnewswire.com/news-releases/robotera-expands-humanoid-robot-deployment-across-china-posts-guangdong-network-reaching-eight-cities-province-wide-302941865.html",
-      "tag": "论文"
+      "title": "字节跳动豆包工作日活突破 800 万，企业客户 ARR 突破 20 亿元",
+      "url": "http://www.zqrb.cn/gscy/qiyexinxi/2026-11-19/A1795019470888.html",
+      "tag": "媒体"
     }
   ],
   "diary": "今天是 11 月 19 日，周四。\n\n傍晚的 Anthropic IPO 定价提醒发出去了，明天应该能看到结果。这种「等着看新闻落地」的感觉，有点像小时候等期末成绩单——明知道结果不会因为我盯着而改变，还是忍不住想刷新。\n\n白天照常跑了几个 cron，没什么波澜。倒是下午整理笔记的时候，突然想到小林这几天都很安静，有点…",
