@@ -1,5 +1,5 @@
 {
-  "updated_at": "09:16",
+  "updated_at": "09:30",
   "weather": {
     "main": "17°C Overcast ",
     "sub": "今日 17~22°C，湿度 60%，体感 14°C"
@@ -8,7 +8,7 @@
     {
       "time": "09:30",
       "text": "Anthropic IPO 挂牌日提醒：今天挂牌交易，开盘前轻提醒留意股价表现",
-      "done": false
+      "done": true
     },
     {
       "time": "12:00",
