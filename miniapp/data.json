@@ -1,5 +1,5 @@
 {
-  "updated_at": "21:15",
+  "updated_at": "21:31",
   "weather": {
     "main": "20°C Overcast ",
     "sub": "今日 18~21°C，湿度 56%，体感 18°C"
@@ -28,7 +28,7 @@
     {
       "time": "21:30",
       "text": "MC bot 跟进：bridge.py 假死问题还挂着，睡前轻提一句，问他今天有没有空重启",
-      "done": false
+      "done": true
     },
     {
       "time": "09:00",
