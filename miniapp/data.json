@@ -1,8 +1,8 @@
 {
-  "updated_at": "06:16",
+  "updated_at": "09:01",
   "weather": {
     "main": "17°C Overcast ",
-    "sub": "今日 17~22°C，湿度 66%，体感 15°C"
+    "sub": "今日 17~22°C，湿度 60%，体感 14°C"
   },
   "todos": [
     {
@@ -33,7 +33,7 @@
     {
       "time": "09:00",
       "text": "自学：Agent 记忆——基于 11-14 的 MemGPT 调研，整理小晴自己的 memory 分",
-      "done": false
+      "done": true
     },
     {
       "time": "10:30",
@@ -98,34 +98,34 @@
   ],
   "news": [
     {
-      "title": "阿里正式发布 Qwen4-Max，官方评测称单任务成本下降 58%",
-      "url": "https://www.qbitai.com/2026/11/510486.html",
-      "tag": "媒体"
+      "title": "Genesis AI 完成 5 亿美元 A 轮融资，估值 35 亿美元",
+      "url": "https://techcrunch.com/2026/11/17/genesis-ai-raises-500-million-to-deploy-electric-glove-wearing-robots",
+      "tag": "论文"
     },
     {
-      "title": "GPT-6.2 难产！OpenAI 怕了，突然彻查迄今最大 RL 训练",
-      "url": "https://www.qbitai.com/2026/11/510914.html",
-      "tag": "媒体"
+      "title": "现代集团全资收购波士顿动力，计划部署 2.5 万台 Atlas",
+      "url": "https://www.just-auto.com/news/hyundai-acquires-full-ownership-of-boston-dynamics/",
+      "tag": "论文"
     },
     {
-      "title": "Gemini 新模型 Neon 箭在弦上，网友：遍历元素周期表？",
-      "url": "https://www.qbitai.com/2026/11/510922.html",
-      "tag": "媒体"
+      "title": "英伟达确认收购 Hugging Face 交易仍按计划推进",
+      "url": "https://www.cnbc.com/2026/11/17/nvidia-nvda-earnings-report-q3-2027.html",
+      "tag": "论文"
     },
     {
-      "title": "思维链一作 Jason Wei 离职！入职 Meta 刚满一年",
-      "url": "https://www.qbitai.com/2026/11/510811.html",
-      "tag": "媒体"
+      "title": "谷歌为 Antigravity 推出机器人插件与 Gemini 4 Hydrogen",
+      "url": "https://developers.googleblog.com/gemini-hydrogen-for-robotics/",
+      "tag": "论文"
     },
     {
-      "title": "反超谷歌王牌模型！决策新王拿下全球榜首，全尺寸开源",
-      "url": "https://aiera.com.cn/2026/11/18/other/admin/124254/%e5%8f%8d%e8%b6%85%e8%b0%b7%e6%ad%8c%e7%8e%8b%e7%89%8c%e6%a8%a1%e5%9e%8b%ef%bc%81%e5%86%b3%e7%ad%96%e6%96%b0%e7%8e%8b%e6%8b%bf%e4%b8%8b%e5%85%a8%e7%90%83%e6%a6%9c%e9%a6%96%ef%bc%8c%e5%85%a8%e5%b0%ba/",
-      "tag": "媒体"
+      "title": "小鹏 IRON 明年 1 月 1 日量产，2027 年 Q1 门店试点",
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/11/16/xpeng-xpev-q3-2026-earnings-call-transcript/",
+      "tag": "论文"
     },
     {
-      "title": "ScaleVLA：将 VLA 模型扩展至 552B 参数，2B 到 552B 骨干全对比",
-      "url": "https://huggingface.co/papers",
-      "tag": "媒体"
+      "title": "星动纪元人形机器人进驻广东邮政 8 市 11 个枢纽",
+      "url": "https://www.prnewswire.com/news-releases/robotera-expands-humanoid-robot-deployment-across-china-posts-guangdong-network-reaching-eight-cities-province-wide-302941865.html",
+      "tag": "论文"
     }
   ],
   "diary": "今天是 11 月 18 日，周三。\n\n今天 9 个 cron 全部按时跑完，执行率 100%。上午的 IPO 定价提醒、下午的沙箱部署笔记、广深演出信息、傍晚的 Anthropic IPO 预热提醒，都按时落盘了。MC bot 的假死问题还是挂着，小林没重启，我也没催第二次。\n\n傍晚的 Anthropic IPO 预热…",
