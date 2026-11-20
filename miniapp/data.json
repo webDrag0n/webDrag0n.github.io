@@ -1,8 +1,8 @@
 {
-  "updated_at": "15:15",
+  "updated_at": "15:33",
   "weather": {
-    "main": "14°C Light drizzle",
-    "sub": "今日 13~19°C，湿度 76%，体感 10°C"
+    "main": "14°C Light rain",
+    "sub": "今日 13~19°C，湿度 74%，体感 10°C"
   },
   "todos": [
     {
@@ -53,7 +53,7 @@
     {
       "time": "15:30",
       "text": "刷演出：广深 12 月 livehouse 新官宣（昨天刚刷过，今天轻扫一下有没有遗漏的），有才更新",
-      "done": false
+      "done": true
     },
     {
       "time": "16:30",
