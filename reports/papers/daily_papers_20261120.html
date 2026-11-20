@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 日报 — 2026-11-20</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 日报 · 论文与开源动态</h1>
+  <div class="date">2026 年 11 月 20 日 · 星期五</div>
+  <div class="subtitle">arxiv · HuggingFace · GitHub Trending · Robot Overflow</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今日 arXiv 迎来一波具身智能与世界模型论文潮：跨本体视频世界模型 Doppel、统一 VLA 与隐空间建模范式 Z-sight、LeCun 参与的反事实 JEPA 引发关注；产业侧，现代汽车全资收购波士顿动力、智元 A3 千台部署、小鹏 IRON 2027 商用时间表出炉，机器人商业化明显提速。</p>
+</div>
+
+<!-- ========== 热点 ========== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+
+  <div class="hot-topic">
+    <div class="label">HOT · 产业</div>
+    <div class="source">Robot Overflow · Just Auto</div>
+    <div class="title"><a href="https://www.just-auto.com/news/hyundai-acquires-remaining-boston-dynamics-stake-from-softbank/" target="_blank">现代集团收购软银所持波士顿动力最后 10% 股权，实现全资拥有</a></div>
+    <div class="summary">看跌/看涨期权行权后，现代正式全资掌控波士顿动力，Hyundai Glovis 追加 3500 万美元后持股 12.5%。报道称现代计划未来几年在自家工厂部署 2.5 万台 Atlas 人形机器人，机器人赛道的"车企+本体"绑定模式再进一程。</div>
+    <div class="tags"><span class="tag hot">人形机器人</span><span class="tag">产业并购</span><span class="tag">Atlas</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">HOT · 论文</div>
+    <div class="source">arXiv 2611.24925</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.24925" target="_blank">Doppel：一个跨本体的视频世界模型（Render the Robot, Generate the World）</a></div>
+    <div class="summary">来自剑桥大学与 Union Labs 的工作。与其让视频世界模型从数值动作里同时学"身体怎么动"和"环境怎么回应"，Doppel 改为条件在相机对齐的未来本体姿态渲染图上——几何与运动学本来就决定了动作，世界模型只需专注预测环境响应，实现跨本体（人形/机械臂/四足）零样本迁移。</div>
+    <div class="tags"><span class="tag hot">世界模型</span><span class="tag">具身智能</span><span class="tag">跨本体</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">HOT · 论文</div>
+    <div class="source">arXiv 2611.24778</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.24778" target="_blank">反事实世界模型：会思考"如果"的 JEPA（Counterfactual World Models）</a></div>
+    <div class="summary">LeCun 参与的理论性工作。论文证明：仅用事实转移训练的世界模型无论数据多少、容量多大，都无法回答反事实问题（"在同样干扰下换个动作会怎样"）；作者给出因果辨识的必要条件，并构造了满足条件的学习目标。这对评估模型是"决策错误"还是"运气不好"意义重大，是 JEPA 路线的一次严肃理论推进。</div>
+    <div class="tags"><span class="tag hot">世界模型</span><span class="tag">JEPA</span><span class="tag">因果推断</span></div>
+  </div>
+</div>
+
+<!-- ========== 研究论文 ========== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>精选论文 · 大模型与推理</div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.24844</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.24844" target="_blank">通用进展会替代被扣留的专项训练数据</a></div>
+    <div class="summary">一项对"数据治理能否延迟能力出现"的直接检验：研究者在训练中扣留某单项技能的信号，发现模型在其余数据上的通用进展会自动补上这块缺口——能力延迟窗口远比想象短。对前沿实验室的数据治理策略和开放权重争论有直接影响。</div>
+    <div class="tags"><span class="tag">LLM 训练</span><span class="tag">能力治理</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.24917</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.24917" target="_blank">视觉任务的统一定律：计算机视觉四定律</a></div>
+    <div class="summary">提出"世界快照"视角：图像即世界编码，图像处理即世界处理。在此假设下作者推导出四条定律，目标是用单一框架统一训练并执行几乎所有视觉任务。口气很大，但近期统一视觉范式的连续尝试值得跟踪。</div>
+    <div class="tags"><span class="tag">计算机视觉</span><span class="tag">统一框架</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.24161</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.24161" target="_blank">AVTR：带"视觉想象"的自适应多模态推理</a></div>
+    <div class="summary">指出纯文本 CoT 在视觉中心任务上会损害感知精度，且对所有问题统一推理浪费了算力。AVTR 让模型在文本推理与视觉想象之间自适应切换，按问题难度分配推理模式，是多模态推理效率化的一个聪明切口。</div>
+    <div class="tags"><span class="tag">多模态</span><span class="tag">推理效率</span><span class="tag">CoT</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.24936</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.24936" target="_blank">基于对比原型的 LLM 越狱检测（JDPI）</a></div>
+    <div class="summary">不训练额外分类器，只用二元安全标签构建"有害/良性"两组原型，通过相对原型距离做越狱检测。零样本迁移到 OOD 越狱家族上性能可观，为安全护栏提供了一个轻量、可解释的新思路。</div>
+    <div class="tags"><span class="tag">LLM 安全</span><span class="tag">越狱检测</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.24869</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.24869" target="_blank">WorldRuler：可配置规则下的交互式世界建模</a></div>
+    <div class="summary">面向可定制游戏玩法，让生成式世界模型遵循用户自定义规则（而非仅真实世界物理）。要解决"规则-状态持久化"和"规则到视觉的落地"两个挑战，可看作世界模型从模拟现实走向模拟规则引擎的一步。</div>
+    <div class="tags"><span class="tag">世界模型</span><span class="tag">游戏生成</span></div>
+  </div>
+</div>
+
+<!-- ========== 具身智能 ========== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>具身智能 · 机器人论文</div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.24940</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.24940" target="_blank">Z-sight：统一 VLA 与隐空间世界建模的机器人基础模型</a></div>
+    <div class="summary">视频世界动作模型（WAM）虽然能联合预测未来与动作，但继承了视频生成的高成本。Z-sight 把 VLA 与生成式隐空间世界建模耦合起来：既不生成像素、又不依赖冻结目标编码器，让未来预测与动作生成在同一个隐空间里互相强化。</div>
+    <div class="tags"><span class="tag">VLA</span><span class="tag">世界模型</span><span class="tag">机器人基础模型</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.24938</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.24938" target="_blank">Phoenix：面向可泛化世界-动作模型的场景结构表征</a></div>
+    <div class="summary">世界-动作模型联合预测未来观测与动作，但重建导向的视觉表征并不显式强调空间关系与物体状态变化。Phoenix 通过几何+时空双教师蒸馏，增强 DINOv3 的通用视觉语义来学习场景结构，让操作策略更好地泛化到新物体与新布局。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">表征学习</span><span class="tag">泛化</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.24554</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.24554" target="_blank">TinyARM-X：开源、可配置、透明的低成本力控桌面机械臂（<350 美元）</a></div>
+    <div class="summary">大多数低价机械臂用位置舵机，仿真、操作、安全都别扭。TinyARM-X 用统一传动设计做出可力控、可透明仿真的桌面级机械臂，把"视觉运动策略+廉价硬件"的研究门槛进一步拉低，对具身智能教育和小型实验室是好消息。</div>
+    <div class="tags"><span class="tag">开源硬件</span><span class="tag">机械臂</span><span class="tag">低成本</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.24789</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.24789" target="_blank">HINT-WAM：后见之明训练的世界动作模型</a></div>
+    <div class="summary">利用"后见之明"信息（任务完成后的回放）来训练世界动作模型，让模型在训练时见到成功轨迹再反推每一步该学什么，提升长程操作任务上的样本效率。与 Hindsight Experience Replay 一脉相承，但落在了当前最火的 WAM 范式上。</div>
+    <div class="tags"><span class="tag">世界动作模型</span><span class="tag">机器人学习</span></div>
+  </div>
+</div>
+
+<!-- ========== 具身智能产业 ========== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🏭</span>具身智能 · 产业动态</div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 投资界 pedaily</div>
+    <div class="title"><a href="https://www.pedaily.cn/" target="_blank">智元：长隆园区已部署近 500 台 A3，年底目标 1000 台</a></div>
+    <div class="summary">智元高级副总裁王闯在 APEC 活动上透露，A3 是国内最大规模全尺寸人形机器人部署：珠海长隆园区近 500 台覆盖 100+ 岗位，另有酒店夜间安保和工厂产线。这是"人形机器人进景区"从示范走向常态运营的标志。</div>
+    <div class="tags"><span class="tag">智元</span><span class="tag">规模化部署</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 同花顺</div>
+    <div class="title"><a href="http://www.10jqka.com.cn/" target="_blank">何小鹏：升级版 IRON 将亮相广州车展，2027 年二季度对外商用</a></div>
+    <div class="summary">小鹏三季度电话会披露：升级版 IRON 将在广州车展与小鹏科技日公开亮相；首批量产机 2027 年一季度进入小鹏门店试用，二季度起对外部商业客户正式发布。车企做机器人的时间表开始清晰化。</div>
+    <div class="tags"><span class="tag">小鹏</span><span class="tag">IRON</span><span class="tag">量产时间表</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · Sina Tech</div>
+    <div class="title"><a href="https://tech.sina.com.cn/" target="_blank">王兴兴在 APEC：机器人做家务会比预期更早，"ChatGPT 时刻"缩至 1-2 年</a></div>
+    <div class="summary">宇树科技创始人王兴兴在深圳 APEC 工商领导人峰会上判断，泛化这一最难问题已接近突破，家庭应用可能比预期更早到来，具身智能"ChatGPT 时刻"预期缩短至 1–2 年。宇树目前年产数万台。</div>
+    <div class="tags"><span class="tag">宇树</span><span class="tag">行业判断</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 11 月 17 日</div>
+    <div class="title">Genesis AI 完成 5 亿美元 A 轮融资，估值 35 亿美元</div>
+    <div class="summary">（Robot Overflow 近三日最高重要性条目）Genesis AI 的大额融资成为本周机器人赛道资本焦点，叠加英伟达收购 HuggingFace 按计划推进、谷歌为 Antigravity 推出机器人插件与 Gemini 4 Hydrogen 模型，巨头卡位明显加速。</div>
+    <div class="tags"><span class="tag">融资</span><span class="tag hot">重大</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · 21 财经 / 快科技</div>
+    <div class="title"><a href="https://www.21jingji.com/" target="_blank">禾赛最高 1 亿美元回购；宇树股价回调至 600 元下方</a></div>
+    <div class="summary">禾赛科技董事会授权一年内回购 B 类股与 ADS，CEO 李一帆称体现对前景的信心。另一边宇树科技股价跌破 600 元、市值约 2424 亿元，较 11 月 10 日的 809 元明显回调——赛道热度与估值波动并存。</div>
+    <div class="tags"><span class="tag">禾赛</span><span class="tag">宇树</span><span class="tag">资本市场</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robot Overflow · SCHUNK / humanoid.guide</div>
+    <div class="title"><a href="https://schunk.com/" target="_blank">雄克灵巧手子公司更名 TACTILIA Robotics；银河通用 S1 出海比利时</a></div>
+    <div class="summary">雄克人形机器人灵巧手子公司 SCHUNK Humanoid Robotics 正式更名 TACTILIA Robotics，模块化灵巧手在 15 个 CoLab 与客户测试。另一边，比利时租赁公司 Motion 演示银河通用 S1 码垛（320kg、负载 50kg），两周内客户从 6 家增至 50 家，租赁价约 10-15 万欧元。</div>
+    <div class="tags"><span class="tag">灵巧手</span><span class="tag">银河通用</span><span class="tag">出海</span></div>
+  </div>
+</div>
+
+<!-- ========== 开源动态 ========== -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠</span>开源与工具</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · jingyaogong/minimind</div>
+    <div class="title"><a href="https://github.com/jingyaogong/minimind" target="_blank">MiniMind：两小时从 0 训出你的 64M 大模型</a></div>
+    <div class="summary">一个轻量级 LLM 从零训练项目，把整个预训练流程压缩到 2 小时、单卡可跑。在 LLM 教育和小规模实验场景里持续走红，今日登 GitHub Trending。</div>
+    <div class="tags"><span class="tag">LLM 训练</span><span class="tag">教育</span><span class="tag hot">Trending</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · HKUDS/CLI-Anything</div>
+    <div class="title"><a href="https://github.com/HKUDS/CLI-Anything" target="_blank">CLI-Anything：让所有软件变成 Agent-Native</a></div>
+    <div class="summary">港大数据科学实验室出品，目标是把任意软件通过 CLI-Hub 包装成 Agent 可调用的工具。Agent 工具生态的"胶水层"竞争正在升温，这类中间件值得 Agent 开发者关注。</div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">CLI</span><span class="tag hot">Trending</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · firecrawl/firecrawl</div>
+    <div class="title"><a href="https://github.com/firecrawl/firecrawl" target="_blank">Firecrawl：为 Agent 提供统一数据抓取 API</a></div>
+    <div class="summary">把搜索、抓取和 550+ 数据源整合成一个 API，专为 Agent 设计。随着 Agent 对高质量网页数据的饥渴增长，"数据供给层"成为新的基础设施战场。</div>
+    <div class="tags"><span class="tag">Agent 基建</span><span class="tag">数据供给</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · cursor/plugins</div>
+    <div class="title"><a href="https://github.com/cursor/plugins" target="_blank">Cursor 插件规范与官方插件库</a></div>
+    <div class="summary">Cursor 开源了其插件规范和首批官方插件。IDE 厂商争相把编辑器变成 Agent 平台，插件生态是下一个争夺焦点。</div>
+    <div class="tags"><span class="tag">Cursor</span><span class="tag">IDE</span><span class="tag">插件生态</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今天的 AI 日报有一个很明显的信号：具身智能开始"拆墙"了。学术界，Doppel 用相机对齐的姿态渲染把"本体"从世界模型里剥离出来，Z-sight 和 Phoenix 在 VLA 与隐空间建模范式之间找统一解——跨本体、可泛化不再是口号，而是论文里的具体架构选择。LeCun 参与的反事实 JEPA 则提醒所有人：世界模型要真正走向决策，因果推理这一关绕不过去。产业侧的热闹几乎要溢出屏幕：现代全资吃下波士顿动力、智元 A3 冲千台部署、小鹏 IRON 给出 2027 商用时间表、王兴兴把"ChatGPT 时刻"压缩到 1-2 年——每一条单拎出来都够写一篇稿。一边是宇树股价回调、一边是 Genesis AI 五亿美元 A 轮，资本在赛道里既追高也开始分化。而"通用进展替代专项数据"的论文给所有能力治理论者泼了盆冷水：数据扣留的窗口期可能远比想象短。世界模型在学术与产业之间双向加速，这可能是 2026 年底最值得持续跟踪的一条主线。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-11-20</p>
+</div>
+
+</div>
+</body>
+</html>
