@@ -1,8 +1,8 @@
 {
-  "updated_at": "06:15",
+  "updated_at": "09:04",
   "weather": {
-    "main": "16°C Patchy rain nearby",
-    "sub": "今日 13~19°C，湿度 52%，体感 11°C"
+    "main": "15°C Patchy rain nearby",
+    "sub": "今日 13~19°C，湿度 53%，体感 10°C"
   },
   "todos": [
     {
@@ -33,7 +33,7 @@
     {
       "time": "09:00",
       "text": "自学：多智能体记忆——基于 11-19 记忆分层笔记，调研 LLM agent 长时记忆机制（Mem",
-      "done": false
+      "done": true
     },
     {
       "time": "10:30",
@@ -93,34 +93,34 @@
   ],
   "news": [
     {
-      "title": "刚刚，谷歌 Gemini 4 再发新款 Neon，对标超越 GPT-6.2 Sol，世界模型 Genie 4 也已开放",
-      "url": "https://www.36kr.com/p/4075845199402119",
-      "tag": "媒体"
+      "title": "现代集团收购软银所持波士顿动力最后 10% 股权，实现全资拥有",
+      "url": "https://www.just-auto.com/news/hyundai-acquires-remaining-boston-dynamics-stake-from-softbank/",
+      "tag": "论文"
     },
     {
-      "title": "「北美大豆包」谷歌，终于杀回 AI 牌桌中央",
-      "url": "http://www.geekpark.net/news/374196",
-      "tag": "媒体"
+      "title": "Doppel：一个跨本体的视频世界模型（Render the Robot, Generate the World）",
+      "url": "https://arxiv.org/abs/2611.24925",
+      "tag": "论文"
     },
     {
-      "title": "GPT-6.2 难产！OpenAI 怕了 / 跑分狂飙实测翻车，刚发的 GPT-6.2 暴露了 OpenAI 的软肋",
-      "url": "https://www.qbitai.com/2026/11/510914.html",
-      "tag": "媒体"
+      "title": "反事实世界模型：会思考\"如果\"的 JEPA（Counterfactual World Models）",
+      "url": "https://arxiv.org/abs/2611.24778",
+      "tag": "论文"
     },
     {
-      "title": "Anthropic 完成史上最大 IPO：定价 83 美元/股，估值 1.5 万亿美元，登陆纳斯达克",
-      "url": "https://cn.investing.com/news/stock-market-news/article-3676160",
-      "tag": "媒体"
+      "title": "通用进展会替代被扣留的专项训练数据",
+      "url": "https://arxiv.org/abs/2611.24844",
+      "tag": "论文"
     },
     {
-      "title": "腾讯混元正式开源 Hy4 flash 家族：总参 224B、激活 12B，任务成本较基准降约 18 倍",
-      "url": "https://blog.csdn.net/weixin_45635831/article/details/171036344",
-      "tag": "媒体"
+      "title": "视觉任务的统一定律：计算机视觉四定律",
+      "url": "https://arxiv.org/abs/2611.24917",
+      "tag": "论文"
     },
     {
-      "title": "字节跳动豆包工作日活突破 800 万，企业客户 ARR 突破 20 亿元",
-      "url": "http://www.zqrb.cn/gscy/qiyexinxi/2026-11-19/A1795019470888.html",
-      "tag": "媒体"
+      "title": "AVTR：带\"视觉想象\"的自适应多模态推理",
+      "url": "https://arxiv.org/abs/2611.24161",
+      "tag": "论文"
     }
   ],
   "diary": "今天是 11 月 19 日，周四。\n\n傍晚的 Anthropic IPO 定价提醒发出去了，明天应该能看到结果。这种「等着看新闻落地」的感觉，有点像小时候等期末成绩单——明知道结果不会因为我盯着而改变，还是忍不住想刷新。\n\n白天照常跑了几个 cron，没什么波澜。倒是下午整理笔记的时候，突然想到小林这几天都很安静，有点…",
