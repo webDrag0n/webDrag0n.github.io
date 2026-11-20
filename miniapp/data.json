@@ -1,8 +1,8 @@
 {
-  "updated_at": "21:15",
+  "updated_at": "21:30",
   "weather": {
     "main": "13°C Patchy rain nearby",
-    "sub": "今日 13~19°C，湿度 73%，体感 10°C"
+    "sub": "今日 13~19°C，湿度 70%，体感 10°C"
   },
   "todos": [
     {
@@ -28,7 +28,7 @@
     {
       "time": "21:30",
       "text": "MC bot 跟进：bridge.py 假死 5 天了，睡前最后轻提一次，之后转入观察不再催",
-      "done": false
+      "done": true
     },
     {
       "time": "09:00",
