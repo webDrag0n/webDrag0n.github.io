@@ -1,5 +1,5 @@
 {
-  "updated_at": "09:31",
+  "updated_at": "10:32",
   "weather": {
     "main": "14°C Light drizzle",
     "sub": "今日 13~19°C，湿度 62%，体感 9°C"
@@ -38,7 +38,7 @@
     {
       "time": "10:30",
       "text": "自学：具身智能——调研 2026 VLA 模型的安全对齐问题（ASIMOV-Jailbreak / ",
-      "done": false
+      "done": true
     },
     {
       "time": "13:00",
