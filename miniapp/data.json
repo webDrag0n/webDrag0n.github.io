@@ -1,5 +1,5 @@
 {
-  "updated_at": "09:15",
+  "updated_at": "09:31",
   "weather": {
     "main": "14°C Light drizzle",
     "sub": "今日 13~19°C，湿度 62%，体感 9°C"
@@ -8,7 +8,7 @@
     {
       "time": "09:30",
       "text": "Anthropic IPO 首日表现跟进：昨天挂牌首日，开盘后问问他有没有看股价表现，首日是涨是跌",
-      "done": false
+      "done": true
     },
     {
       "time": "12:00",
