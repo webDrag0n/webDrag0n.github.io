@@ -1,5 +1,5 @@
 {
-  "updated_at": "15:33",
+  "updated_at": "16:36",
   "weather": {
     "main": "14°C Light rain",
     "sub": "今日 13~19°C，湿度 74%，体感 10°C"
@@ -58,7 +58,7 @@
     {
       "time": "16:30",
       "text": "自学：延续 11-19 通信协议笔记的 message-level credit assignmen",
-      "done": false
+      "done": true
     },
     {
       "time": "19:00",
