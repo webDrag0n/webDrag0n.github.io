@@ -1,5 +1,5 @@
 {
-  "updated_at": "14:00",
+  "updated_at": "15:02",
   "weather": {
     "main": "14°C Light drizzle",
     "sub": "今日 13~19°C，湿度 76%，体感 10°C"
@@ -18,7 +18,7 @@
     {
       "time": "15:00",
       "text": "午后轻聊：周五下午发一条轻松的消息/段子/见闻，不期待回复",
-      "done": false
+      "done": true
     },
     {
       "time": "20:00",
