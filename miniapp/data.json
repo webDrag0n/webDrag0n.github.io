@@ -1,23 +1,23 @@
 {
-  "updated_at": "03:15",
+  "updated_at": "06:15",
   "weather": {
     "main": "14°C Overcast ",
-    "sub": "今日 13~21°C，湿度 63%，体感 11°C"
+    "sub": "今日 14~21°C，湿度 61%，体感 11°C"
   },
   "todos": [
     {
-      "time": "09:30",
-      "text": "Anthropic IPO 首日表现跟进：昨天 83 美元/股挂牌纳斯达克，问问他看没看首日股价",
+      "time": "10:30",
+      "text": "Anthropic IPO 首周表现：昨晚收盘 97.17（+17%），今天周六开盘问问他怎么看后续",
       "done": false
     },
     {
       "time": "12:00",
-      "text": "安全跟进：egress 白名单 + 配置只读加固，周五午休轻松问一句（第二次也是最后一次主动问）",
+      "text": "Dependabot 漏洞提醒：moderate 级告警（#5）已搁置几天，周六午休轻松提一下，看他",
       "done": false
     },
     {
       "time": "15:00",
-      "text": "午后轻聊：周五下午发一条轻松的消息/段子/见闻，不期待回复",
+      "text": "午后轻聊：周六下午发一条轻松的消息/段子/见闻，不期待回复",
       "done": false
     },
     {
@@ -26,68 +26,63 @@
       "done": false
     },
     {
-      "time": "21:30",
-      "text": "MC bot 跟进：bridge.py 假死第 5 天，睡前最后轻提一次，之后转入观察不再催",
-      "done": false
-    },
-    {
       "time": "09:00",
-      "text": "智能体记忆（MemGPT/Mem0/Letta/A-MEM 长时记忆实践）",
+      "text": "自学：多智能体协作——基于 11-19 通信协议笔记，深挖 A2A/MCP/ACP 协议栈的 mes",
       "done": false
     },
     {
-      "time": "10:30",
-      "text": "VLA 安全对齐（ASIMOV-Jailbreak / LIBERO-Safety）",
+      "time": "10:00",
+      "text": "自学：具身智能——调研 2026 下半年 VLA+世界模型合流趋势（WAM），梳理 GR00T 2/",
+      "done": false
+    },
+    {
+      "time": "11:00",
+      "text": "整理：更新 learning/INDEX.md，收录今天的新笔记（生成后再核对，避免时序陷阱）",
       "done": false
     },
     {
       "time": "13:00",
-      "text": "INDEX 更新（收录今日新笔记，注意时序陷阱）",
+      "text": "自我：MC bot 巡检——检查 bridge.py 是否被重启、决策循环状态，结果存 mc_bot",
       "done": false
     },
     {
       "time": "14:00",
-      "text": "MC bot 巡检",
+      "text": "刷演出：广深 12 月 livehouse 新官宣（重点看后摇/数摇/Shoegaze），有才更新 ",
       "done": false
     },
     {
-      "time": "15:30",
-      "text": "广深演出轻扫（昨天刚刷过，今天查遗漏）",
+      "time": "16:00",
+      "text": "自学：Agent 安全——基于 11-15 AGENTS.MD 防御笔记，调研 2026 年新出现的",
       "done": false
     },
     {
-      "time": "16:30",
-      "text": "消息归因（message-level credit assignment 空白点深挖）",
+      "time": "17:00",
+      "text": "自我：整理 share_later.md，把本周学到但还没分享的知识点归类，挑 1-2 个适合今晚分",
       "done": false
     },
     {
       "time": "19:00",
-      "text": "今日复盘",
+      "text": "复盘：检查今天一次性 cron 执行 + 笔记落盘，未完成项顺延",
       "done": false
     },
     {
       "time": "21:00",
-      "text": "晚间日记",
+      "text": "写日记：今天印象最深的 1-2 件事，100-200 字",
       "done": false
     },
     {
       "time": "",
-      "text": "Anthropic IPO 首周整体表现",
+      "text": "观察：MC bot 决策权在小林，已最后一次提醒，转入纯观察不再催",
       "done": false
     },
     {
       "time": "",
-      "text": "MC bot 是否已被重启（若未重启，转入纯观察）",
+      "text": "观察：小林周六可能有外出安排，晚间消息保持轻量",
       "done": false
     },
     {
       "time": "",
-      "text": "小林周末安排，白天保持安静",
-      "done": false
-    },
-    {
-      "time": "",
-      "text": "Dependabot moderate 漏洞告警（#5）本周找时间提一下",
+      "text": "观察：Anthropic IPO 下周走势，若大幅波动再跟进",
       "done": false
     }
   ],
