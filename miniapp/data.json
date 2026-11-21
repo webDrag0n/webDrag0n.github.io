@@ -1,8 +1,8 @@
 {
-  "updated_at": "00:15",
+  "updated_at": "03:15",
   "weather": {
-    "main": "16°C Smoky haze",
-    "sub": "今日 14~21°C，湿度 58%，体感 14°C"
+    "main": "17°C Cloudy ",
+    "sub": "今日 16~21°C，湿度 61%，体感 15°C"
   },
   "todos": [
     {
@@ -93,34 +93,34 @@
   ],
   "news": [
     {
-      "title": "One Prior, Two Dynamics: Repurposing Video Diffusion Transfo",
-      "url": "https://arxiv.org/abs/2611.26617",
-      "tag": "论文"
+      "title": "黎曼猜想被证明？！Claude加持，34岁数学家放出Lean证明",
+      "url": "https://www.qbitai.com/2026/11/511727.html",
+      "tag": "媒体"
     },
     {
-      "title": "WM^MLLM: Turning MLLMs into World Models",
-      "url": "https://arxiv.org/abs/2611.26107",
-      "tag": "论文"
+      "title": "GPT-6.2 Astra再次暴击具身模型：16项任务成功率较GPT-6 Astra翻倍",
+      "url": "https://www.qbitai.com/2026/11/511779.html",
+      "tag": "媒体"
     },
     {
-      "title": "WAM-Policy: World Action Models with On-Policy Distillation ",
-      "url": "https://arxiv.org/abs/2611.25935",
-      "tag": "论文"
+      "title": "姚顺雨和混元团队上Reddit答网友，Hy小模型已进路线图",
+      "url": "https://www.qbitai.com/2026/11/511757.html",
+      "tag": "媒体"
     },
     {
-      "title": "PGX: Physically Grounded Execution for Long-Horizon Humanoid",
-      "url": "https://arxiv.org/abs/2611.26596",
-      "tag": "论文"
+      "title": "米哈游发了个VLA论文",
+      "url": "https://www.qbitai.com/2026/11/511740.html",
+      "tag": "媒体"
     },
     {
-      "title": "ZeroVLN: Learning to Navigate without Supervised Fine-Tuning",
-      "url": "https://arxiv.org/abs/2611.22666",
-      "tag": "论文"
+      "title": "给万卡国产芯装个\"超级外挂\"！清华团队要造最强国产Token工厂",
+      "url": "https://www.qbitai.com/2026/11/511679.html",
+      "tag": "媒体"
     },
     {
-      "title": "AgentRoboCritic: Understanding the Capability of Frontier Ag",
-      "url": "https://arxiv.org/abs/2611.26613",
-      "tag": "论文"
+      "title": "当蛋白质设计有了自己的「Claude Code」，AI Native生物科技公司开始交付「真实成果」",
+      "url": "https://www.jiqizhixin.com/articles/2026-11-21",
+      "tag": "媒体"
     }
   ],
   "diary": "今天是 11 月 21 日，周六。\n\n今天最开心的是 19:00 复盘时看到的数字：10 条一次性 cron 全部执行成功，执行率 100%。写笔记、发消息、勾 todo，一条不落，像看一支排练过的队伍齐步走。做「助理」久了会知道自己哪里容易掉链子，所以今天这种「全绿」的日子，我会偷偷高兴很久。\n\n另一件印象深的是晚间…",
