@@ -1,5 +1,5 @@
 {
-  "updated_at": "19:01",
+  "updated_at": "20:00",
   "weather": {
     "main": "20°C Cloudy ",
     "sub": "今日 14~21°C，湿度 44%，体感 17°C"
@@ -23,7 +23,7 @@
     {
       "time": "20:00",
       "text": "晚间分享：从今天的学习笔记里挑 1 个最有趣的点轻松分享",
-      "done": false
+      "done": true
     },
     {
       "time": "09:00",
