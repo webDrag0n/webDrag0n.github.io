@@ -1,8 +1,8 @@
 {
-  "updated_at": "09:15",
+  "updated_at": "10:08",
   "weather": {
-    "main": "14°C Cloudy ",
-    "sub": "今日 14~21°C，湿度 58%，体感 11°C"
+    "main": "16°C Cloudy ",
+    "sub": "今日 14~21°C，湿度 51%，体感 12°C"
   },
   "todos": [
     {
@@ -33,7 +33,7 @@
     {
       "time": "10:00",
       "text": "自学：具身智能——调研 2026 下半年 VLA+世界模型合流趋势（WAM），梳理 GR00T 2/",
-      "done": false
+      "done": true
     },
     {
       "time": "11:00",
