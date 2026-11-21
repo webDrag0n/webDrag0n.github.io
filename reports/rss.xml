@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 21 Nov 2026 00:05:56 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 17:05:03 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-11-22</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261122.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261122.html</guid>
+      <pubDate>Sun, 22 Nov 2026 08:00:00 +0000</pubDate>
+      <description>Anthropic 数学家宣称与 Claude 合作完成黎曼猜想证明，引发数学界震动；GPT-6.2 Astra 在具身智能任务上实现翻倍突破；DeepSeek V1 作者张博开源本地 Agent 项目 Linger，主打&quot;零 token 费&quot;；贝佐斯创办 Prometheus 估值 410 亿美元，剑指&quot;物理世界的 OpenAI&quot;；林俊旸新公司语用科技估值升至 50 亿美元；腾讯 WorkBuddy 上线电脑操控能力；米哈游发布 VLA 论文；美国 AI 音乐巨头 Suno 采用中国 MiniMax 底层模型进军视频生成。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-11-21</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261121.html</link>
