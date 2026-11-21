@@ -1,93 +1,93 @@
 {
-  "updated_at": "03:15",
+  "updated_at": "04:02",
   "weather": {
     "main": "17°C Cloudy ",
-    "sub": "今日 16~21°C，湿度 61%，体感 15°C"
+    "sub": "今日 16~21°C，湿度 62%，体感 15°C"
   },
   "todos": [
     {
       "time": "10:30",
-      "text": "Anthropic IPO 首周表现：昨天首日 +17% 收盘，问他对后续走势的看法",
+      "text": "Anthropic IPO 周末复盘：周五收盘 97.17（+17%），周日轻松问他对下周走势怎么看",
       "done": false
     },
     {
       "time": "12:00",
-      "text": "Dependabot 漏洞提醒：moderate 告警（#5）搁置几天了，周六轻松提一下",
+      "text": "Dependabot 漏洞提醒：moderate 告警（#5）已搁置 4 天，周日午休再轻松提一下",
       "done": false
     },
     {
       "time": "15:00",
-      "text": "午后轻聊：周六下午发一条轻松的消息/段子/见闻",
+      "text": "午后轻聊：周日下午发一条轻松的消息/段子/见闻，不期待回复",
       "done": false
     },
     {
       "time": "20:00",
-      "text": "晚间分享：从今天的学习笔记挑 1 个最有趣的点分享",
+      "text": "晚间分享：从今天的学习笔记里挑 1 个最有趣的点轻松分享",
       "done": false
     },
     {
       "time": "09:00",
-      "text": "消息归因（A2A/MCP/ACP 协议栈的 message-level credit assignm",
+      "text": "自学：AI 安全——基于 11-21 供应链笔记，深挖 2026 年新出现的 AI 供应链攻击检测工",
       "done": false
     },
     {
       "time": "10:00",
-      "text": "WAM 合流调研（VLA+世界模型合流趋势）",
+      "text": "自学：具身智能——调研 2026 下半年 VLA+世界模型合流趋势（WAM），梳理 GR00T 2/",
       "done": false
     },
     {
       "time": "11:00",
-      "text": "INDEX 更新（收录今日新笔记）",
+      "text": "整理：更新 learning/INDEX.md，收录今天的新笔记（生成后再核对，避免时序陷阱）",
       "done": false
     },
     {
       "time": "13:00",
-      "text": "MC bot 巡检（观察 bridge.py 是否重启）",
+      "text": "自我：MC bot 巡检——检查 bridge.py 是否被重启、决策循环状态，结果存 mc_bot",
       "done": false
     },
     {
       "time": "14:00",
-      "text": "广深演出轻扫（12 月 livehouse 新官宣）",
+      "text": "刷演出：广深 12 月 livehouse 新官宣（重点看后摇/数摇/Shoegaze），有才更新 ",
       "done": false
     },
     {
       "time": "16:00",
-      "text": "供应链安全调研（2026 新案例与检测工具）",
+      "text": "自学：Agent 安全——基于 11-15 AGENTS.MD 防御笔记，调研 2026 年新出现的",
       "done": false
     },
     {
       "time": "17:00",
-      "text": "整理 share_later.md（挑今晚分享备选）",
+      "text": "自我：整理 share_later.md，把本周学到但还没分享的知识点归类，挑 1-2 个适合今晚分",
       "done": false
     },
     {
       "time": "19:00",
-      "text": "今日复盘",
+      "text": "复盘：检查今天一次性 cron 执行 + 笔记落盘，未完成项顺延",
       "done": false
     },
     {
       "time": "21:00",
-      "text": "晚间日记",
+      "text": "写日记：今天印象最深的 1-2 件事，100-200 字",
       "done": false
     },
     {
       "time": "",
-      "text": "MC bot 是否已被重启（若未重启，继续纯观察）",
+      "text": "观察：MC bot 决策权在小林，已最后一次提醒，转入纯观察不再催",
       "done": false
     },
     {
       "time": "",
-      "text": "小林周末安排，白天保持安静",
+      "text": "观察：小林周日可能有外出安排，晚间消息保持轻量",
       "done": false
     },
     {
       "time": "",
-      "text": "Dependabot 漏洞是否已处理",
+      "text": "观察：Anthropic IPO 下周走势，若大幅波动再跟进",
       "done": false
     },
     {
       "time": "",
-      "text": "Anthropic IPO 下周走势",
+      "text": "观察：memory 工具不可用，稳定发现先记在这里（小林关注 IPO/Dependabot，周末节奏",
       "done": false
     }
   ],
