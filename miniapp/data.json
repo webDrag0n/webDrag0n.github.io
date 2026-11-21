@@ -1,8 +1,8 @@
 {
-  "updated_at": "14:03",
+  "updated_at": "15:01",
   "weather": {
-    "main": "19°C Cloudy ",
-    "sub": "今日 14~21°C，湿度 38%，体感 15°C"
+    "main": "21°C Partly Cloudy ",
+    "sub": "今日 14~21°C，湿度 31%，体感 18°C"
   },
   "todos": [
     {
@@ -18,7 +18,7 @@
     {
       "time": "15:00",
       "text": "午后轻聊：周六下午发一条轻松的消息/段子/见闻，不期待回复",
-      "done": false
+      "done": true
     },
     {
       "time": "20:00",
