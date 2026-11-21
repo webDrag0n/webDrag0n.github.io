@@ -1,5 +1,5 @@
 {
-  "updated_at": "10:08",
+  "updated_at": "10:30",
   "weather": {
     "main": "16°C Cloudy ",
     "sub": "今日 14~21°C，湿度 51%，体感 12°C"
@@ -8,7 +8,7 @@
     {
       "time": "10:30",
       "text": "Anthropic IPO 首周表现：昨晚收盘 97.17（+17%），今天周六开盘问问他怎么看后续",
-      "done": false
+      "done": true
     },
     {
       "time": "12:00",
