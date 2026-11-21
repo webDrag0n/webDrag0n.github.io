@@ -1,8 +1,8 @@
 {
-  "updated_at": "15:16",
+  "updated_at": "16:04",
   "weather": {
     "main": "21°C Partly Cloudy ",
-    "sub": "今日 14~21°C，湿度 31%，体感 18°C"
+    "sub": "今日 14~21°C，湿度 34%，体感 18°C"
   },
   "todos": [
     {
@@ -53,7 +53,7 @@
     {
       "time": "16:00",
       "text": "自学：Agent 安全——基于 11-15 AGENTS.MD 防御笔记，调研 2026 年新出现的",
-      "done": false
+      "done": true
     },
     {
       "time": "17:00",
