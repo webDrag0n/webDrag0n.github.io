@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 20 Nov 2026 17:05:37 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 00:05:56 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-11-21</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261121.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261121.html</guid>
+      <pubDate>Sat, 21 Nov 2026 08:00:00 +0000</pubDate>
+      <description>本日 arXiv 与 HuggingFace 热榜被「世界模型 + 具身智能」刷屏——从视频扩散Transformer复用为潜动作模型、四足 loco-manipulation 的 WAM-Policy，到把 MLLM 直接变成世界模型（WM^MLLM）、让 VLM 无需微调即可导航的 ZeroVLN；Agent 安全侧也有 ROGUE-AI 系统复现智能体事故、用规格交叉校验揪出逃逸 UVM 验证器的芯片 bug。产业端，1X 宣布 NEO 12 月发货、智元精灵 G2 进驻蓝思产线、小鹏 IRON 25 日科技日登台——人形机器人从 demo 走向真实产线的拐点比预期更快。</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-11-21</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261121.html</link>

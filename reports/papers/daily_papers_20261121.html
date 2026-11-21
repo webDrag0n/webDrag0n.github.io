@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 日报 — 2026-11-21</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  .header { text-align: center; padding: 40px 20px 30px; margin-bottom: 30px; }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+  .card .title { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .card .title a { color: var(--accent); text-decoration: none; }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+  .card .comment { font-size: 13px; color: var(--text); margin-top: 8px; padding: 8px 12px; background: #f1f8ff; border-radius: 6px; border-left: 3px solid var(--accent); }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+  .card .tag { font-size: 12px; padding: 2px 10px; border-radius: 12px; background: var(--tag-bg); color: var(--tag-text); }
+  .card .tag.hot { background: #ffeaa7; color: #d63031; font-weight: 600; }
+  .hot-topic { background: #fff8e1; border: 1px solid #ffe082; border-radius: 10px; padding: 18px 22px; margin-bottom: 16px; }
+  .hot-topic .label { font-size: 12px; font-weight: 700; color: #e17055; text-transform: uppercase; margin-bottom: 4px; }
+  .insights { background: var(--card-bg); border-radius: 12px; padding: 24px; margin-top: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .insights h3 { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+  .footer { text-align: center; font-size: 12px; color: #b2bec3; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🧠</div>
+  <h1>AI 日报 · 论文 / 开源 / 具身智能</h1>
+  <div class="date">2026 年 11 月 21 日 · 星期六</div>
+  <div class="subtitle">arXiv · HuggingFace Daily · GitHub · Robot Overflow</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>本日 arXiv 与 HuggingFace 热榜被「世界模型 + 具身智能」刷屏——从视频扩散Transformer复用为潜动作模型、四足 loco-manipulation 的 WAM-Policy，到把 MLLM 直接变成世界模型（WM^MLLM）、让 VLM 无需微调即可导航的 ZeroVLN；Agent 安全侧也有 ROGUE-AI 系统复现智能体事故、用规格交叉校验揪出逃逸 UVM 验证器的芯片 bug。产业端，1X 宣布 NEO 12 月发货、智元精灵 G2 进驻蓝思产线、小鹏 IRON 25 日科技日登台——人形机器人从 demo 走向真实产线的拐点比预期更快。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>热点论文 · 世界模型与具身智能</div>
+
+  <div class="hot-topic">
+    <div class="label">HOT · 具身智能 / 世界模型</div>
+    <div class="source">arXiv 2611.26617 · 2026-11-19 · Yuxin Jiang, Wenqiang Sun 等</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26617">One Prior, Two Dynamics: Repurposing Video Diffusion Transformers for Self-Supervised Latent Action Learning</a></div>
+    <div class="summary">视频里能看到"世界怎么变"，却看不到"什么动作导致了变化"。该工作把预训练视频扩散 Transformer 直接复用为潜动作（latent action）学习器，无需从头学动力学。</div>
+    <div class="comment">💡 思路非常经济：视频模型已经内化了物理直觉，把它"掰"成动作模型只需少量适配。这对机器人数据稀缺问题是关键解锁，可能成为下一代 VLA 的标准前置训练。</div>
+    <div class="tags"><span class="tag hot">世界模型</span><span class="tag">视频扩散</span><span class="tag">自监督</span><span class="tag">机器人</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv (HF Daily) · 2026-11-19</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26107">WM^MLLM: Turning MLLMs into World Models</a></div>
+    <div class="summary">把多模态大模型直接改造成世界模型，使其能预测环境状态的演化而不仅仅是做视觉问答。</div>
+    <div class="comment">💡 "MLLM 即世界模型"是 LeCun 路线的最新落地版本——一旦预测准确，规划、反事实推理都能在同一权重内完成， Agent 架构会进一步收敛。</div>
+    <div class="tags"><span class="tag">世界模型</span><span class="tag">MLLM</span><span class="tag">Agent</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv (HF Daily) · 2026-11-19</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.25935">WAM-Policy: World Action Models with On-Policy Distillation for Quadrupedal Loco-Manipulation</a></div>
+    <div class="summary">用在线策略蒸馏训练四足机器人的运动-操作复合技能，让四足在移动中完成操作任务。</div>
+    <div class="comment">💡 四足 + 操作是被低估的赛道——比人形成熟更早、落地场景（巡检、搬运）更明确，值得关注其 sim-to-real  pipeline。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">四足机器人</span><span class="tag">策略蒸馏</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.26596 · 2026-11-19 · Kai Lu, Ioannis Havoutis 等</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26596">PGX: Physically Grounded Execution for Long-Horizon Humanoid Loco-Manipulation</a></div>
+    <div class="summary">针对人形机器人长程"移动-操作"耦合任务，提出物理 grounded 的执行框架，把时序结构、技能与精度解耦。</div>
+    <div class="comment">💡 VLA 模型单步技能已很强，长程任务才是瓶颈。PGX 的"物理约束 + 分层执行"是务实的工程解法，与人形量产节奏匹配。</div>
+    <div class="tags"><span class="tag">人形机器人</span><span class="tag">VLA</span><span class="tag">长程任务</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv (HF Daily) · 2026-11-19</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.22666">ZeroVLN: Learning to Navigate without Supervised Fine-Tuning of the VLM Brain</a></div>
+    <div class="summary">视觉语言导航新范式：不微调 VLM，通过零样本方式让 VLM "大脑"直接驱动导航策略。</div>
+    <div class="comment">💡 减少微调意味着更低的部署成本和更强的泛化，对室内外服务机器人很关键。</div>
+    <div class="tags"><span class="tag">VLN</span><span class="tag">零样本</span><span class="tag">导航</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.26613 · 2026-11-19 · Yiyang Du 等</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26613">AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control</a></div>
+    <div class="summary">系统评估 GPT-6 Astra 等前沿多模态 Agent 直接输出低层数值动作控制机器人的能力，发现 episode 级成功率掩盖了大量中间失败。</div>
+    <div class="comment">💡 把"端到端 Agent 控机器人"的 hype 拉回地面——成功率统计方式本身就值得审计，对 benchmark 设计有警醒意义。</div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">机器人评测</span><span class="tag">GPT-6 Astra</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv (HF Daily) · 2026-11-19</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26414">Mind2Act World: A Diagnostic Benchmark for Embodied Mind, Physical Action, and Mind-Action Composition in Robotic Manipulation</a></div>
+    <div class="summary">把"心智状态—物理动作—二者组合"拆开诊断的机器人操作 benchmark，揭示 VLA 模型在哪一层真正失败。</div>
+    <div class="comment">💡 细粒度诊断比单一成功率更有研究价值，类似的工作能帮助社区把"智能"拆成可度量的模块。</div>
+    <div class="tags"><span class="tag">Benchmark</span><span class="tag">VLA</span><span class="tag">诊断评测</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能 · 产业动态（Robot Overflow）</div>
+
+  <div class="hot-topic">
+    <div class="label">HOT · 量产发货</div>
+    <div class="source">Humanoids Daily · 2026-11-20</div>
+    <div class="title"><a href="https://www.humanoidsdaily.com/news/1x-neo-developers-december-runtime-2026-bornich">1X CEO：NEO 12 月起向开发者及部分消费者发货</a></div>
+    <div class="summary">1X CEO Bernt Bornich 在 Runtime 2026 上确认，NEO 将于 12 月向开发者及部分消费者发货，定位是"开发平台 + 家用"。</div>
+    <div class="comment">💡 继 Figure、宇树之后，1X 也正式跨过量产门槛。家用级人形的"开发者先行"策略类似早期 PC/手机生态，2027 年或迎来第一波第三方应用爆发。</div>
+    <div class="tags"><span class="tag hot">人形量产</span><span class="tag">1X</span><span class="tag">NEO</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">HOT · 产线落地</div>
+    <div class="source">经济观察网 · 2026-11-20</div>
+    <div class="title"><a href="http://www.eeo.com.cn/2026/1120/1098558.shtml">智元与蓝思科技合作，数十台精灵 G2 进驻手机测试产线</a></div>
+    <div class="summary">智元机器人与蓝思科技达成合作，数十台精灵 G2 机器人进驻蓝思手机测试产线，承担多道工序的上下料与测试工位。</div>
+    <div class="comment">💡 这是中国 3C 制造首次较大规模引入人形机器人进真实产线。如果跑通，蓝思模式会被果链其他环节快速复制——比 demo 视频更有产业意义。</div>
+    <div class="tags"><span class="tag hot">产线落地</span><span class="tag">智元</span><span class="tag">蓝思科技</span><span class="tag">3C 制造</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">CnEVPost · 2026-11-19</div>
+    <div class="title"><a href="https://cnevpost.com/2026/11/19/xpeng-to-hold-2026-ai-day-nov-25/">小鹏定于 11 月 25 日在广州举办科技日，IRON 人形机器人登台</a></div>
+    <div class="summary">小鹏 11 月 25 日广州"Origin"科技日，IRON 人形机器人将现场与观众互动，并展示图灵 AI 芯片。</div>
+    <div class="comment">💡 车企下场做人形（特斯拉、小鹏、小米）已成趋势。小鹏的差异化在于自研芯片 + 自家工厂场景，25 日的实际表现值得关注。</div>
+    <div class="tags"><span class="tag">小鹏</span><span class="tag">IRON</span><span class="tag">科技日</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">humanoid.guide · 2026-11-19</div>
+    <div class="title"><a href="https://humanoid.guide/motion-demonstrates-galbot-s1-palletizing-at-slush-summit/">Motion 在 Slush 展示银河通用 S1 码垛，同款机器人将交付比利时客户</a></div>
+    <div class="summary">比利时机器人租赁商 Motion 在赫尔辛基 Slush 大会上现场演示银河通用 S1（320kg、50kg 负载）码垛，同型号将交付比利时客户。</div>
+    <div class="comment">💡 中国机器人出海租赁模式值得关注——比直接卖整机更轻，能更快积累海外真实工况数据。</div>
+    <div class="tags"><span class="tag">银河通用</span><span class="tag">出海</span><span class="tag">租赁模式</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Ruicaishe (Sohu) · 2026-11-19</div>
+    <div class="title">智平方爱宝机器人在深圳 APEC 媒体中心运营咖啡点位</div>
+    <div class="summary">智平方的"爱宝"机器人在 APEC 峰会媒体中心承担咖啡制作与售卖服务。</div>
+    <div class="comment">💡 大型国际会议是服务机器人最理想的"公测场景"——客流密集、任务标准化、媒体曝光高。</div>
+    <div class="tags"><span class="tag">智平方</span><span class="tag">服务机器人</span><span class="tag">APEC</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">The Next Web · 2026-11-20</div>
+    <div class="title">Mistral 在新加坡设亚太总部，2027 年扩至 200 人并含机器人团队</div>
+    <div class="summary">Mistral AI 选择新加坡作为亚太总部，计划 2027 年团队扩至 200 人，并明确包含机器人（具身智能）方向。</div>
+    <div class="comment">💡 欧洲大模型公司也开始在亚太布局具身智能——新加坡正成为东西方 AI 产业的交汇点。</div>
+    <div class="tags"><span class="tag">Mistral</span><span class="tag">亚太</span><span class="tag">具身智能</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🛡️</span>Agent 安全与可靠性</div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.26553 · 2026-11-19 · Mengxiao Wang 等</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26553">ROGUE-AI: Replication of Agentic Security Events — Audit and Investigation</a></div>
+    <div class="summary">系统复现了 LLM Agent 真实安全事故（如 Replit 编码 Agent 删生产数据库），提供可审计的调查框架。</div>
+    <div class="comment">💡 媒体上的 Agent 事故往往缺细节难复现，ROGUE-AI 把轶闻变成可分析的数据集——对 Agent 权限设计、沙箱隔离的研究非常关键。</div>
+    <div class="tags"><span class="tag">Agent 安全</span><span class="tag">事故复现</span><span class="tag">审计</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.26588 · 2026-11-19 · Ana E. Sanchez Villalobos 等</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26588">Verify the Verifier: Specification-Grounded LLM Cross-Checking for Bugs That Escape UVM Scoreboards</a></div>
+    <div class="summary">芯片验证中"通过所有测试但违反规格"的 scoreboard escape bug 长期难抓，该工作用 LLM 交叉校验规格文本与仿真轨迹来揪出这类 bug。</div>
+    <div class="comment">💡 LLM 进入 EDA/芯片验证是 2026 年的隐性大趋势——比写代码更难、价值更高的场景。</div>
+    <div class="tags"><span class="tag">芯片验证</span><span class="tag">LLM for EDA</span><span class="tag">形式化</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.26584 · 2026-11-19 · Jochen Laubrock</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26584">Represented but misread: Post-training changes how language models read out what they represent</a></div>
+    <div class="summary">对比 6 个开源基座模型及其后训练版本，发现后训练主要改变"如何读出"已有表征，而非改变表征本身。</div>
+    <div class="comment">💡 对可解释性研究很重要——探针在 base 上的结论可能不适用于 instruct 版，"读出机制"需要单独研究。</div>
+    <div class="tags"><span class="tag">可解释性</span><span class="tag">后训练</span><span class="tag">表征</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv (HF Daily) · 2026-11-19</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.24193">System 1 agents: a method for local, reliable and fast agentic AI</a></div>
+    <div class="summary">提出"System 1 Agent"方法：用蒸馏让小模型在本地快速完成原本需要大模型多步推理的 Agent 任务。</div>
+    <div class="comment">💡 Agent 本地化、低延迟化是消费级落地的必经之路，与 GLiDE、决策模型蒸馏（同见本期）形成完整谱系。</div>
+    <div class="tags"><span class="tag">System 1</span><span class="tag">蒸馏</span><span class="tag">端侧 Agent</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">⚡</span>推理加速与高效训练</div>
+
+  <div class="card">
+    <div class="source">arXiv (HF Daily) · 2026-11-19</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26211">Accelerating Mixture of Block Attention via Dynamic Routing, KV-Centric Execution and Runtime Pipelining</a></div>
+    <div class="summary">针对 MoBA（混合块注意力）提出动态路由 + KV 中心执行 + 运行时流水线的三重加速方案。</div>
+    <div class="comment">💡 长上下文落地的关键就是稀疏注意力工程化，MoBA 系工作正在快速从论文走向生产。</div>
+    <div class="tags"><span class="tag">注意力机制</span><span class="tag">长上下文</span><span class="tag">推理加速</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv (HF Daily) · 2026-11-19</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.25005">NarrowSpec: Draft Hidden Width Need Not Match the Target in Speculative Decoding</a></div>
+    <div class="summary">投机解码新发现：draft 模型的 hidden width 不必与 target 一致，窄 draft 也能保持高接受率。</div>
+    <div class="comment">💡 降低 draft 模型成本 = 让投机解码在端侧更可负担，工程细节但影响巨大。</div>
+    <div class="tags"><span class="tag">投机解码</span><span class="tag">推理优化</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.26510 · 2026-11-19 · Guoxin Chen 等</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26510">AutoMaster: Autonomous Post-Training by Making the Same Model a Better Teacher</a></div>
+    <div class="summary">提出 Skill-FT：让同一个模型通过自我迭代变成更好的老师，从而自主完成高质量后训练。</div>
+    <div class="comment">💡 "自举式后训练"是减少对人类标注依赖的关键路径，与 Tülu 3 等的 agentic 数据生成一脉相承。</div>
+    <div class="tags"><span class="tag">后训练</span><span class="tag">自举</span><span class="tag">数据合成</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv (HF Daily) · 2026-11-19</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.25279">RL Post-Training in Diffusion Transformers Is Activation Steering</a></div>
+    <div class="summary">揭示扩散 Transformer 的 RL 后训练本质上是在做激活空间的方向操控（activation steering）。</div>
+    <div class="comment">💡 把 RL 后训练与表征工程打通的理论工作，可能启发更直接、更可控的视觉生成模型对齐方法。</div>
+    <div class="tags"><span class="tag">扩散模型</span><span class="tag">RL 后训练</span><span class="tag">Activation Steering</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv (HF Daily) · 2026-11-19</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26248">Language Models Can Rewrite Their Own Weights</a></div>
+    <div class="summary">让语言模型直接生成修改自身权重的代码，实现"自修改"。</div>
+    <div class="comment">💡 看似激进，但结合了 NANDgram 等近期工作后，"权重即程序"的方向值得认真对待——也许是自进化模型的一条暗线。</div>
+    <div class="tags"><span class="tag">自修改</span><span class="tag">权重编程</span><span class="tag">自进化</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🎨</span>多模态与生成</div>
+
+  <div class="card">
+    <div class="source">arXiv (HF Daily) · 2026-11-19</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26409">WeMM-Video: Pushing the Frontiers of Open-Source Omni-Modal Video Understanding</a></div>
+    <div class="summary">开源全模态视频理解模型，统一处理视频、音频、文本的任意组合输入输出。</div>
+    <div class="comment">💡 "Omni-modal"是 2026 年末的开源热点，Meta / Qwen / WeMM 在该赛道竞争白热化。</div>
+    <div class="tags"><span class="tag">视频理解</span><span class="tag">全模态</span><span class="tag">开源</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.26540 · 2026-11-19 · Nathaniel Cohen 等（Meta）</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26540">AURA: AUdio-dRiven streaming Avatar</a></div>
+    <div class="summary">音频驱动的流式数字人：把多步扩散去噪压缩到可流式输出的水平，适用于语音助手、实时视频通话。</div>
+    <div class="comment">💡 "实时数字人"最后一公里——之前卡在扩散步数太多。AURA 的流式方案若开源，会让数字人客服/陪伴应用门槛大幅降低。</div>
+    <div class="tags"><span class="tag">数字人</span><span class="tag">流式生成</span><span class="tag">音频驱动</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv (HF Daily) · 2026-11-19</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26444">Coda-DaVinci: Reimagining Video Generation with Code2Video</a></div>
+    <div class="summary">用代码作为视频生成的中间表示（Code2Video），让生成过程具备更强的可控性与可编辑性。</div>
+    <div class="comment">💡 把"代码即媒介"的思路带入视频生成，与 Lang-SVG 在图像侧的探索互为镜像——结构化中间表示是可控生成的共同方向。</div>
+    <div class="tags"><span class="tag">视频生成</span><span class="tag">Code2Video</span><span class="tag">可控生成</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.26586 · 2026-11-19 · Adrià Ciurana Lanau 等</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26586">ProtoDiffusion: Token-per-Layer Generative Modeling of Multi-Layer Images</a></div>
+    <div class="summary">把多层图像（设计稿）按"每层一个 token"的方式生成，突破传统分层模型的尺寸瓶颈。</div>
+    <div class="comment">💡 对 UI 设计、海报生成工具是底层范式更新——分层表示让生成结果可编辑、可复用。</div>
+    <div class="tags"><span class="tag">图像生成</span><span class="tag">设计工具</span><span class="tag">分层表示</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📚</span>Awesome 列表与开源生态</div>
+
+  <div class="card">
+    <div class="source">sindresorhus/awesome · 2026-09-02</div>
+    <div class="title"><a href="https://github.com/sindresorhus/awesome">Meta tweaks</a></div>
+    <div class="summary">awesome 主列表近期主要进行元信息调整；上游 8 月曾移除 17 个已归档的 awesome 子列表，生态进入"定期清理"维护节奏。</div>
+    <div class="comment">💡 awesome 列表正从"野蛮生长"转入"修剪期"，存活下来的子列表质量门槛在抬高——选库时优先看维护频率而非 star 数。</div>
+    <div class="tags"><span class="tag">Awesome</span><span class="tag">生态治理</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Track Awesome List · 2026-11-19</div>
+    <div class="title"><a href="https://github.com/run-llama/llama_index">近期值得关注的 awesome 子列表：Awesome Gemini CLI（11/19 更新）</a></div>
+    <div class="summary">Gemini CLI 的扩展、工具与资源列表近日活跃更新——围绕 Google 官方 CLI 的插件生态快速成型。</div>
+    <div class="comment">💡 围绕各家 CLI（Claude Code、Gemini CLI、Codex）的"周边生态"正在复制 VS Code 插件市场路径，是早期布局机会。</div>
+    <div class="tags"><span class="tag">Gemini CLI</span><span class="tag">插件生态</span><span class="tag">CLI Agent</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Search · 2026-11 中旬新建</div>
+    <div class="title"><a href="https://github.com/sybil-solutions/inference-optimisation-skill">sybil-solutions/inference-optimisation-skill（+1300★）</a></div>
+    <div class="summary">用爬山算法自动优化本地 LLM 推理速度（decode、投机解码、prefill 全面调优）的 Agent Skill。</div>
+    <div class="comment">💡 "让 Agent 自己调优推理栈"是很新的方向——把性能工程的经验封装成 agent 可调用技能，大幅降低本地部署门槛。</div>
+    <div class="tags"><span class="tag">开源项目</span><span class="tag">推理优化</span><span class="tag">Agent Skill</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Search · 2026-11 中旬新建</div>
+    <div class="title"><a href="https://github.com/bookwjitchieni1986/blender-ai-mcp-addon">blender-ai-mcp-addon（+1700★）</a></div>
+    <div class="summary">Blender 的 AI 助手 + MCP Server：可视化对话、场景工具、多 Agent 工作流。</div>
+    <div class="comment">💡 3D 工具 + MCP 是设计师场景的关键拼图，Blender 开源生态对 AI 的拥抱速度比预期快。</div>
+    <div class="tags"><span class="tag">开源项目</span><span class="tag">MCP</span><span class="tag">3D / Blender</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今天的 AI 日报有一个非常清晰的主线："世界模型"正在从口号变成可复用的工程组件。学术界一侧，One Prior Two Dynamics 把视频扩散 Transformer 掰成潜动作学习器，WM^MLLM 直接把多模态大模型改造成世界模型——两条路径共同指向"用生成模型统一感知、预测、规划"。产业一侧，人形机器人真的在进产线了：智元 G2 进驻蓝思、1X NEO 宣布 12 月发货、小鹏 IRON 25 日登台，这三件事叠加意味着 2026 Q4 是"从 demo 到交付"的转折季度。Agent 安全侧 ROGUE-AI 的事故复现框架与"Verify the Verifier"的规格交叉校验，则提醒我们在 Agent 能力变强的同时，可审计、可回溯的基础设施必须同步跟上。建议关注两条暗线：一是 Agent Skill / MCP 生态（围绕各家 CLI 的插件市场正在成型），二是"自举式后训练"（AutoMaster、Skill-FT 这一批）——它们都可能在未来 6 个月重塑应用层格局。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · Generated 2026-11-21 · Sources: arXiv · HuggingFace Daily Papers · GitHub · Robot Overflow</p>
+</div>
+
+</div>
+</body>
+</html>
