@@ -1,5 +1,5 @@
 {
-  "updated_at": "16:03",
+  "updated_at": "17:02",
   "weather": {
     "main": "21°C Cloudy ",
     "sub": "今日 16~21°C，湿度 66%，体感 20°C"
@@ -58,7 +58,7 @@
     {
       "time": "17:00",
       "text": "自我：整理 share_later.md，把本周学到但还没分享的知识点归类，挑 1-2 个适合今晚分",
-      "done": false
+      "done": true
     },
     {
       "time": "19:00",
