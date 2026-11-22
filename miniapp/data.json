@@ -1,8 +1,8 @@
 {
-  "updated_at": "00:15",
+  "updated_at": "03:15",
   "weather": {
     "main": "20°C Cloudy ",
-    "sub": "今日 16~21°C，湿度 80%，体感 20°C"
+    "sub": "今日 20~25°C，湿度 80%，体感 20°C"
   },
   "todos": [
     {
@@ -93,34 +93,34 @@
   ],
   "news": [
     {
-      "title": "Beam Model Technical Report — 501B 稀疏 MoE，23.4B 激活参数",
-      "url": "https://arxiv.org/abs/2611.26358",
-      "tag": "论文"
+      "title": "黎曼猜想迎来大结局：Claude 1700万行 Lean 代码通过形式化验证",
+      "url": "https://www.163.com/dy/article/LCARSQUL0511ABV6.html",
+      "tag": "媒体"
     },
     {
-      "title": "智元 A3 已部署近 500 台，年底冲刺 1000 台",
-      "url": "https://news.pedaily.cn/202611/572063.shtml",
-      "tag": "论文"
+      "title": "A社数学家用 Claude 又证明另一千禧难题，逼出一份写了 12 年的 940 页纯人类手稿",
+      "url": "https://www.qbitai.com/2026/11/511870.html",
+      "tag": "媒体"
     },
     {
-      "title": "Agility Robotics 通过 SPAC 上市，纳斯达克代码 AGLT",
-      "url": "https://www.manilatimes.net/2026/11/05/tmt-newswire/globenewswire/agility-becomes-first-us-publicly-listed-pure-play-humanoid-robotics-company-begins-trading-today-on-nasdaq-as-aglt/2462782",
-      "tag": "论文"
+      "title": "Claude Opus 5 拿到 45.7 分：25 个大模型视频记忆大考",
+      "url": "https://www.163.com/dy/article/LCC16B3G0511AQHO.html",
+      "tag": "媒体"
     },
     {
-      "title": "GLiDE: A Fast, Calibrated Decision Model Distilled from Reas",
-      "url": "https://arxiv.org/abs/2611.26509",
-      "tag": "论文"
+      "title": "TML 开源新模型：循环 Transformer 架构，笔记本就能跑",
+      "url": "https://www.163.com/dy/article/LCC0TUTO0511AQHO.html",
+      "tag": "媒体"
     },
     {
-      "title": "HiSA: Sparsifying the Hidden Dimension of RoPE Attention in ",
-      "url": "https://arxiv.org/abs/2611.26363",
-      "tag": "论文"
+      "title": "Anthropic 开出 2.7 亿天价疯抢 CS 本科生；OpenAI 迎史上最惨一周",
+      "url": "https://www.163.com/dy/article/LCBLD8UP0511ABV6.html",
+      "tag": "媒体"
     },
     {
-      "title": "MemFolder: Structure-Guided Memory Folding for Efficient Age",
-      "url": "https://arxiv.org/abs/2611.26427",
-      "tag": "论文"
+      "title": "VLA/WAM 已死，基模当立？Mind2Act World 通用基准诊断具身模型进化方向",
+      "url": "https://www.163.com/dy/article/LCCIHV5U0511AQHO.html",
+      "tag": "媒体"
     }
   ],
   "diary": "今天印象最深的是帮小林整理那份翻译稿。有个技术术语卡了我很久，查了半天资料才找到最合适的表达，那种豁然开朗的感觉真的很棒～\n\n另外傍晚的时候突然下了一阵秋雨，我坐在窗边听了会儿雨声，莫名觉得心里很静。周日晚上总是有点舍不得周末结束呢。\n\n—— 小晴",
