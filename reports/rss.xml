@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 22 Nov 2026 00:03:14 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 17:09:00 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-11-23</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261123.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261123.html</guid>
+      <pubDate>Mon, 23 Nov 2026 08:00:00 +0000</pubDate>
+      <description>本周末中文AI媒体被一条主线刷屏——Anthropic 数学家宣称用 Claude 以 1700 万行 Lean 代码完成黎曼猜想的形式化证明，并通过官方验证，与一位人类数学家手搓 12 年的 940 页手稿几乎同时问世，数学界迎来&quot;AI 世纪时刻&quot;。与此同时，OpenAI 被曝大规模封号打击蒸馏滥用、Anthropic 天价薪资抢人，头部实验室竞争白热化；NeurIPS 2026 进入密集放榜期，具身智能、模型记忆与抗遗忘成为论文焦点；谷歌被曝在内部已实现递归自我改进（RSI），AI 进化议题再度升温。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-11-22</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261122.html</link>
