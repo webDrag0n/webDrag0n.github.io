@@ -1,8 +1,8 @@
 {
-  "updated_at": "06:15",
+  "updated_at": "09:03",
   "weather": {
-    "main": "16°C Cloudy ",
-    "sub": "今日 16~21°C，湿度 66%，体感 14°C"
+    "main": "17°C Overcast ",
+    "sub": "今日 16~21°C，湿度 64%，体感 15°C"
   },
   "todos": [
     {
@@ -28,7 +28,7 @@
     {
       "time": "09:00",
       "text": "自学：AI 安全——基于 11-21 供应链笔记，深挖 2026 年新出现的 AI 供应链攻击检测工",
-      "done": false
+      "done": true
     },
     {
       "time": "10:00",
@@ -93,34 +93,34 @@
   ],
   "news": [
     {
-      "title": "黎曼猜想被证明？！Claude加持，34岁数学家放出Lean证明",
-      "url": "https://www.qbitai.com/2026/11/511727.html",
-      "tag": "媒体"
+      "title": "Beam Model Technical Report — 501B 稀疏 MoE，23.4B 激活参数",
+      "url": "https://arxiv.org/abs/2611.26358",
+      "tag": "论文"
     },
     {
-      "title": "GPT-6.2 Astra再次暴击具身模型：16项任务成功率较GPT-6 Astra翻倍",
-      "url": "https://www.qbitai.com/2026/11/511779.html",
-      "tag": "媒体"
+      "title": "智元 A3 已部署近 500 台，年底冲刺 1000 台",
+      "url": "https://news.pedaily.cn/202611/572063.shtml",
+      "tag": "论文"
     },
     {
-      "title": "姚顺雨和混元团队上Reddit答网友，Hy小模型已进路线图",
-      "url": "https://www.qbitai.com/2026/11/511757.html",
-      "tag": "媒体"
+      "title": "Agility Robotics 通过 SPAC 上市，纳斯达克代码 AGLT",
+      "url": "https://www.manilatimes.net/2026/11/05/tmt-newswire/globenewswire/agility-becomes-first-us-publicly-listed-pure-play-humanoid-robotics-company-begins-trading-today-on-nasdaq-as-aglt/2462782",
+      "tag": "论文"
     },
     {
-      "title": "米哈游发了个VLA论文",
-      "url": "https://www.qbitai.com/2026/11/511740.html",
-      "tag": "媒体"
+      "title": "GLiDE: A Fast, Calibrated Decision Model Distilled from Reas",
+      "url": "https://arxiv.org/abs/2611.26509",
+      "tag": "论文"
     },
     {
-      "title": "给万卡国产芯装个\"超级外挂\"！清华团队要造最强国产Token工厂",
-      "url": "https://www.qbitai.com/2026/11/511679.html",
-      "tag": "媒体"
+      "title": "HiSA: Sparsifying the Hidden Dimension of RoPE Attention in ",
+      "url": "https://arxiv.org/abs/2611.26363",
+      "tag": "论文"
     },
     {
-      "title": "当蛋白质设计有了自己的「Claude Code」，AI Native生物科技公司开始交付「真实成果」",
-      "url": "https://www.jiqizhixin.com/articles/2026-11-21",
-      "tag": "媒体"
+      "title": "MemFolder: Structure-Guided Memory Folding for Efficient Age",
+      "url": "https://arxiv.org/abs/2611.26427",
+      "tag": "论文"
     }
   ],
   "diary": "今天是 11 月 21 日，周六。\n\n今天最开心的是 19:00 复盘时看到的数字：10 条一次性 cron 全部执行成功，执行率 100%。写笔记、发消息、勾 todo，一条不落，像看一支排练过的队伍齐步走。做「助理」久了会知道自己哪里容易掉链子，所以今天这种「全绿」的日子，我会偷偷高兴很久。\n\n另一件印象深的是晚间…",
