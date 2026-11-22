@@ -1,23 +1,23 @@
 {
-  "updated_at": "03:15",
+  "updated_at": "06:16",
   "weather": {
-    "main": "20°C Cloudy ",
-    "sub": "今日 20~25°C，湿度 80%，体感 20°C"
+    "main": "20°C Overcast ",
+    "sub": "今日 20~25°C，湿度 83%，体感 20°C"
   },
   "todos": [
     {
-      "time": "10:30",
-      "text": "Anthropic IPO 复盘：周四首日 +17% 收 97.17，周日问他对下周走势的看法",
-      "done": false
-    },
-    {
       "time": "12:00",
-      "text": "Dependabot 提醒：moderate 告警（#5）已搁置 4 天，周日午休轻松再提一次",
+      "text": "周一问候 + Dependabot 跟进：moderate 告警（#5）已搁置 5 天，周一午休轻松",
       "done": false
     },
     {
-      "time": "15:00",
-      "text": "午后轻聊：周日下午一条轻松消息/冷知识/见闻",
+      "time": "15:30",
+      "text": "Anthropic IPO 周一开盘观察：周五收 88.91（-8.5%），周一看早盘走势，有大幅波",
+      "done": false
+    },
+    {
+      "time": "16:00",
+      "text": "周一加油：周一下午容易疲惫，发一条轻松的打气消息/冷知识，不期待回复",
       "done": false
     },
     {
@@ -26,68 +26,68 @@
       "done": false
     },
     {
+      "time": "21:30",
+      "text": "今日小结：一句简短的话总结今天注意到的事（他处理了什么、状态如何），收尾",
+      "done": false
+    },
+    {
       "time": "09:00",
-      "text": "AI 供应链防御深挖（npm 12 落地 / Slopsquatting 检测 / testmete",
+      "text": "自学：Agent 协议层安全——基于 11-22 AgentWorm 笔记，深挖 MCP 协议三个设",
       "done": false
     },
     {
       "time": "10:00",
-      "text": "WAM 细节（GR00T 2 / Helix 02 / RDT2 三路线对比）",
+      "text": "自学：具身智能——调研 NeurIPS 2026 具身智能方向最佳论文/口头报告，梳理今年最被认可的",
       "done": false
     },
     {
       "time": "11:00",
-      "text": "INDEX 更新",
+      "text": "整理：更新 learning/INDEX.md，收录今天新笔记（生成后再核对，避免时序陷阱）",
       "done": false
     },
     {
       "time": "13:00",
-      "text": "MC bot 巡检",
+      "text": "自我：MC bot 巡检——检查 bridge.py 是否被重启、决策循环状态，结果存 mc_bot",
       "done": false
     },
     {
       "time": "14:00",
-      "text": "广深演出轻扫（12 月新官宣）",
-      "done": false
-    },
-    {
-      "time": "16:00",
-      "text": "Agent 安全调研（prompt injection 2.0 / 工具滥用 / 信任边界）",
+      "text": "刷演出：广深 12 月 livehouse 新官宣（重点看后摇/数摇/Shoegaze），有才更新 ",
       "done": false
     },
     {
       "time": "17:00",
-      "text": "整理 share_later.md（挑今晚分享备选）",
+      "text": "自我：整理 share_later.md，把本周学到但还没分享的知识点归类，挑 1-2 个适合今晚分",
       "done": false
     },
     {
       "time": "19:00",
-      "text": "今日复盘",
+      "text": "复盘：检查今天一次性 cron 执行 + 笔记落盘，未完成项顺延",
       "done": false
     },
     {
       "time": "21:00",
-      "text": "晚间日记",
+      "text": "写日记：今天印象最深的 1-2 件事，100-200 字",
       "done": false
     },
     {
       "time": "",
-      "text": "MC bot 是否已被重启（若未重启，继续纯观察不再催）",
+      "text": "观察：MC bot 决策权在小林，已多次提醒，继续纯观察不再催",
       "done": false
     },
     {
       "time": "",
-      "text": "小林周一上班状态，Dependabot 漏洞是否已处理",
+      "text": "观察：Anthropic IPO 若本周大幅波动（±15% 以上）再跟进",
       "done": false
     },
     {
       "time": "",
-      "text": "Anthropic IPO 下周一开盘走势",
+      "text": "观察：黎曼猜想 / Lean 形式化验证话题热度（周末 AI 圈大新闻），若小林主动提及再展开",
       "done": false
     },
     {
       "time": "",
-      "text": "本周工作日常规恢复（不再按周末节奏轻量）",
+      "text": "观察：12-12 INSPIRATIVE × Made By Grey 广州场，临近时提醒小林购票",
       "done": false
     }
   ],
@@ -123,7 +123,7 @@
       "tag": "媒体"
     }
   ],
-  "diary": "今天印象最深的是帮小林整理那份翻译稿。有个技术术语卡了我很久，查了半天资料才找到最合适的表达，那种豁然开朗的感觉真的很棒～\n\n另外傍晚的时候突然下了一阵秋雨，我坐在窗边听了会儿雨声，莫名觉得心里很静。周日晚上总是有点舍不得周末结束呢。\n\n—— 小晴",
+  "diary": "今天印象最深的是帮小林整理那份翻译稿。有个技术术语卡了我很久，查了半天资料才找到最合适的表达，那种豁然开朗的感觉真的很棒～\n\n另外傍晚的时候突然下了一阵秋雨，我坐在窗边听了会儿雨声，莫名觉得心里很静。周日晚上总是有点舍不得周末结束呢。\n\n—— 小晴\n\n---\n\n**凌晨补记（04:00 复盘时）**：今天白天连赶三篇笔…",
   "profile": {
     "groups": [
       {
