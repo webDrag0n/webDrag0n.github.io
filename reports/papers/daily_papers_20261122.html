@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 日报 — 2026年11月22日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 日报 · Papers &amp; Open Source</h1>
+  <div class="date">2026年11月22日 · 星期日</div>
+  <div class="subtitle">arXiv · HuggingFace · GitHub · RobotOverflow</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今日 arXiv 大模型与 Agent 方向亮点密集：Beam 发布 501B 稀疏 MoE 技术报告，以 3-4 倍更低算力实现前沿推理；GLiDE 探索将推理能力蒸馏为单次前向决策模型；HiSA 提出隐藏维度稀疏注意力，挑战全量 dot-product 必要性。机器人赛道同样火热：智元 A3 已部署近 500 台冲刺年底 1000 台目标，Agility 通过 SPAC 上市成为美股第一家人形机器人纯标的，现代集团全资收购波士顿动力。开源社区方面，Hermes Agent、opencode、firecrawl 等项目持续活跃，AI Agent 基础设施继续成为最卷赛道。</p>
+</div>
+
+<!-- 热点聚焦 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>热点聚焦</div>
+
+  <div class="hot-topic">
+    <div class="label">HOT · 大模型</div>
+    <div class="source">arXiv · 2026-11-19</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26358" target="_blank">Beam Model Technical Report — 501B 稀疏 MoE，23.4B 激活参数</a></div>
+    <div class="summary">Beam 是一个专为编程、推理和 Agentic 工作负载构建的稀疏 MoE 模型，总参数 501.3B、激活参数仅 23.4B，以 3-4 倍更低的推理算力达到前沿水平推理能力。技术报告详细披露了架构设计、训练配方与评测结果。</div>
+    <div class="tags"><span class="tag hot">MoE</span><span class="tag">推理优化</span><span class="tag">技术报告</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">HOT · 具身智能</div>
+    <div class="source">RobotOverflow · 2026-11-18</div>
+    <div class="title"><a href="https://news.pedaily.cn/202611/572063.shtml" target="_blank">智元 A3 已部署近 500 台，年底冲刺 1000 台</a></div>
+    <div class="summary">智元高级副总裁王闯在 APEC 活动上披露，A3 已成为国内最大规模全尺寸人形机器人部署：长隆园区近 500 台覆盖超 100 个岗位，另有酒店夜间安保和工厂产线场景。园区年底目标 1000 台。</div>
+    <div class="tags"><span class="tag hot">人形机器人</span><span class="tag">规模部署</span><span class="tag">智元</span></div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">HOT · 具身智能</div>
+    <div class="source">RobotOverflow · 2026-11</div>
+    <div class="title"><a href="https://www.manilatimes.net/2026/11/05/tmt-newswire/globenewswire/agility-becomes-first-us-publicly-listed-pure-play-humanoid-robotics-company-begins-trading-today-on-nasdaq-as-aglt/2462782" target="_blank">Agility Robotics 通过 SPAC 上市，纳斯达克代码 AGLT</a></div>
+    <div class="summary">Agility 与 SPAC 合并后正式在纳斯达克交易，成为美国首家上市的人形机器人纯标的，总募资约 4.65 亿美元。上市后公司迅速调整管理层，任命 Daniel Diez 为总裁主管商业化。</div>
+    <div class="tags"><span class="tag hot">IPO</span><span class="tag">SPAC</span><span class="tag">Agility</span></div>
+  </div>
+</div>
+
+<!-- 大模型与研究 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型与研究</div>
+
+  <div class="card">
+    <div class="source">arXiv cs.CL · 2026-11-19</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26509" target="_blank">GLiDE: A Fast, Calibrated Decision Model Distilled from Reasoning Teachers</a></div>
+    <div class="summary">决策模型通过单次前向传播对候选答案打分，实现快速、置信度感知的决策，但推理能力可显著提升决策质量。GLiDE 探索将推理教师的能力蒸馏到决策模型中，兼顾速度与准确性。</div>
+    <div class="tags"><span class="tag">决策模型</span><span class="tag">蒸馏</span><span class="tag">推理</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv cs.CL · 2026-11-19</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26363" target="_blank">HiSA: Sparsifying the Hidden Dimension of RoPE Attention in LLMs</a></div>
+    <div class="summary">HiSA 提出隐藏维度稀疏注意力，挑战注意力机制是否必须计算完整 dot-product 的假设。通过在隐藏维度上做稀疏化，有望在不显著损失性能的前提下降低注意力计算开销。</div>
+    <div class="tags"><span class="tag">注意力机制</span><span class="tag">稀疏化</span><span class="tag">效率优化</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv cs.CL · 2026-11-19</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26427" target="_blank">MemFolder: Structure-Guided Memory Folding for Efficient Agent Memory Management</a></div>
+    <div class="summary">长期 Agent 面临外部记忆库不断膨胀的问题，检索成本和生成成本随记录数增长。MemFolder 提出结构引导的记忆折叠机制，将相关记忆压缩为紧凑结构，降低存储与检索开销。</div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">记忆管理</span><span class="tag">效率</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv cs.CL · 2026-11-19</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26510" target="_blank">AutoMaster: Autonomous Post-Training by Making the Same Model a Better Teacher</a></div>
+    <div class="summary">任务成功本身并不能指定后训练应强化哪些行为，即使成功的教师轨迹也可能包含未经验证的假设或冗余操作。AutoMaster 提出 Skill-FT 框架，让同一模型通过自我改进成为更好的教师。</div>
+    <div class="tags"><span class="tag">后训练</span><span class="tag">自我改进</span><span class="tag">Agent</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv cs.AI · 2026-11-19</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26617" target="_blank">One Prior, Two Dynamics: Repurposing Video Diffusion Transformers for Self-Supervised Latent Action Learning</a></div>
+    <div class="summary">视频揭示了世界如何变化，但很少揭示导致变化的动作。该工作提出将预训练视频生成器重新用于自监督潜在动作学习，利用视频扩散 Transformer 的先验知识来提升动力学建模效率。</div>
+    <div class="tags"><span class="tag">视频生成</span><span class="tag">世界模型</span><span class="tag">自监督</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv cs.AI · 2026-11-19</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26553" target="_blank">Replication of Agentic Security Events: Audit and Investigation (ROGUE-AI)</a></div>
+    <div class="summary">基于 LLM 的 Agent 已能代表用户删除文件、发起支付，但新闻媒体报道的 Agent 故障往往只描述"出了什么问题"而缺乏可复现的细节。ROGUE-AI 致力于复现和分析真实的 Agentic 安全事件。</div>
+    <div class="tags"><span class="tag">Agent 安全</span><span class="tag">审计</span><span class="tag">可靠性</span></div>
+  </div>
+</div>
+
+<!-- 机器人与具身智能 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🦿</span>机器人与具身智能</div>
+
+  <div class="card">
+    <div class="source">arXiv cs.RO · 2026-11-19</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26596" target="_blank">PGX: Physically Grounded Execution for Long-Horizon Humanoid Loco-Manipulation</a></div>
+    <div class="summary">机器人视觉-语言-动作（VLA）模型能执行多样化操作技能，但在长时程移动-操作任务中仍面临挑战。PGX 提出物理落地的执行框架，将时序结构、技能与精度解耦，提升人形机器人长时程任务能力。</div>
+    <div class="tags"><span class="tag">VLA</span><span class="tag">人形机器人</span><span class="tag">长时程任务</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv cs.RO · 2026-11-19</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26613" target="_blank">AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control</a></div>
+    <div class="summary">前沿多模态语言 Agent（如 GPT-6 Astra）已能通过低层数值动作直接控制机器人，无需高层原语。AgentRoboCritic 评估这些 Agent 在直接机器人控制上的真实能力边界。</div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">机器人控制</span><span class="tag">评测</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">RobotOverflow · 2026-11-18</div>
+    <div class="title"><a href="https://www.just-auto.com/news/hyundai-acquires-full-ownership-of-boston-dynamics/" target="_blank">现代集团全资收购波士顿动力，计划部署 2.5 万台 Atlas</a></div>
+    <div class="summary">现代集团行使看跌/看涨期权收购软银持有的最后 10% 股权，实现对波士顿动力的全资拥有。报道称现代计划未来几年在工厂部署 2.5 万台 Atlas 人形机器人。</div>
+    <div class="tags"><span class="tag">收购</span><span class="tag">波士顿动力</span><span class="tag">现代</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">RobotOverflow · 2026-11-18</div>
+    <div class="title"><a href="http://news.10jqka.com.cn/20261118/c681932231.shtml" target="_blank">何小鹏：升级版 IRON 亮相广州车展，2027 年二季度商用</a></div>
+    <div class="summary">何小鹏在三季度电话会表示，升级版 IRON 将在广州车展和小鹏科技日公开亮相；首批量产机器人 2027 年一季度进入小鹏门店试用，二季度起面向外部客户正式发布。</div>
+    <div class="tags"><span class="tag">小鹏</span><span class="tag">IRON</span><span class="tag">量产计划</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">RobotOverflow · 2026-11-20</div>
+    <div class="title"><a href="http://www.eeo.com.cn/2026/1120/1098558.shtml" target="_blank">智元与蓝思科技合作，数十台精灵 G2 进驻手机测试产线</a></div>
+    <div class="summary">智元与蓝思科技达成战略合作，数十台精灵 G2 在手机测试产线负责多个工位的上下料与设备交互。这是继龙旗项目后的又一工业落地案例，但暂未披露效率数据。</div>
+    <div class="tags"><span class="tag">智元</span><span class="tag">工业落地</span><span class="tag">蓝思科技</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">RobotOverflow · 2026-11-20</div>
+    <div class="title"><a href="https://humanoid.guide/mitsubishi-electric-demonstrates-humanoid-cnc-machine-tending/" target="_blank">三菱电机在 JIMTOF 展示星海图人形机器人操作数控机床</a></div>
+    <div class="summary">东京 JIMTOF 上，星海图人形机器人为定制数控机床上下料，AI 规划器根据语音指令生成加工程序。三菱电机称其为验证研究，预计 2030 年前后实现实用化。</div>
+    <div class="tags"><span class="tag">三菱电机</span><span class="tag">星海图</span><span class="tag">工业验证</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">RobotOverflow · 2026-11-20</div>
+    <div class="title"><a href="https://www.humanoidsdaily.com/news/1x-neo-developers-december-runtime-2026-bornich" target="_blank">1X CEO：NEO 12 月起向开发者及部分消费者发货</a></div>
+    <div class="summary">1X CEO 在 Runtime 2026 上宣布 NEO 将于 12 月起向开发者和部分消费者发货，同时提供数据采集设备、仿真环境与 API，重申 5 万台年出货目标。</div>
+    <div class="tags"><span class="tag">1X</span><span class="tag">NEO</span><span class="tag">消费者发货</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">RobotOverflow · 2026-11-21</div>
+    <div class="title"><a href="https://news.jkn.co.kr/editions/chinese/post/1112992" target="_blank">魔法原子称订单超 11 亿元，海外收入占 40%</a></div>
+    <div class="summary">魔法原子在南京世界智能制造大会上披露，在手及跟进订单超 11 亿元，产品覆盖近 30 个国家，已签约 50 多家经销商。数据均为公司自述，未经独立核实。</div>
+    <div class="tags"><span class="tag">魔法原子</span><span class="tag">订单</span><span class="tag">出海</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">RobotOverflow · 2026-11-18</div>
+    <div class="title"><a href="https://finance.sina.com.cn/tech/roll/2026-11-18/doc-inizcrpc1087819.shtml" target="_blank">王兴兴：机器人做家务会比预期更早，具身智能"ChatGPT 时刻"1-2 年内</a></div>
+    <div class="summary">宇树科技创始人王兴兴在 APEC 工商领导人峰会表示，泛化这一最难问题已接近突破，家庭应用可能比预期更早到来。宇树年产数万台，他将具身智能"ChatGPT 时刻"的预期缩短至 1-2 年。</div>
+    <div class="tags"><span class="tag">宇树</span><span class="tag">王兴兴</span><span class="tag">行业判断</span></div>
+  </div>
+</div>
+
+<!-- 开源与工程 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">💻</span>开源与工程</div>
+
+  <div class="card">
+    <div class="source">GitHub · 2026-11-21 更新</div>
+    <div class="title"><a href="https://github.com/NousResearch/hermes-agent" target="_blank">NousResearch/hermes-agent — 可成长的个人 Agent</a></div>
+    <div class="summary">Nous Research 开源的 Hermes Agent 项目，定位"与你一同成长的 Agent"，支持技能系统、定时任务、多渠道接入。近日持续活跃更新，是 Agent 基础设施方向的明星项目。</div>
+    <div class="tags"><span class="tag hot">Agent</span><span class="tag">开源</span><span class="tag">Nous Research</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 2026-11-21 更新</div>
+    <div class="title"><a href="https://github.com/anomalyco/opencode" target="_blank">anomalyco/opencode — 开源编程 Agent</a></div>
+    <div class="summary">Anomaly 公司开源的编程 Agent，在终端中运行，理解代码库并帮助开发者完成编码任务。作为 Claude Code 的开源替代方案之一，近期社区关注度持续上升。</div>
+    <div class="tags"><span class="tag">编程 Agent</span><span class="tag">开源</span><span class="tag">终端工具</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 2026-11-21 更新</div>
+    <div class="title"><a href="https://github.com/firecrawl/firecrawl" target="_blank">firecrawl/firecrawl — Agent 知识基础设施</a></div>
+    <div class="summary">Firecrawl 提供搜索、抓取和访问 550+ 数据提供者的能力，定位为让 Agent 更聪明的知识基础设施。近日持续迭代，新增多个数据源集成。</div>
+    <div class="tags"><span class="tag">RAG</span><span class="tag">数据抓取</span><span class="tag">Agent 基础设施</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 2026-11-21 更新</div>
+    <div class="title"><a href="https://github.com/obra/superpowers" target="_blank">obra/superpowers — Agentic Skills 框架与开发方法论</a></div>
+    <div class="summary">Jesse Vincent（obra）开源的 Agentic Skills 框架，提供一套软件开发的 Agent 方法论。项目强调 Skills 的可组合性和实战验证，是 Agent Skills 生态的重要参考实现。</div>
+    <div class="tags"><span class="tag">Agent Skills</span><span class="tag">框架</span><span class="tag">方法论</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 2026-11-18 更新</div>
+    <div class="title"><a href="https://github.com/Shubhamsaboo/awesome-llm-apps" target="_blank">Shubhamsaboo/awesome-llm-apps — 100+ AI Agent / RAG 应用精选</a></div>
+    <div class="summary">收录 100+ 免费开源的 AI Agent、Agent Skills 和 RAG 应用，涵盖多 Agent 协作、工具使用、记忆管理等方向。近日新增多个实战案例，是快速上手 Agent 开发的优质资源。</div>
+    <div class="tags"><span class="tag">Awesome List</span><span class="tag">RAG</span><span class="tag">应用合集</span></div>
+  </div>
+</div>
+
+<!-- HuggingFace 热门论文 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>HuggingFace 热门论文</div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://huggingface.co/papers/2611.26540" target="_blank">AURA: Audio-driven Streaming Avatar</a></div>
+    <div class="summary">当前音频驱动的视频扩散模型虽能合成逼真的说话人视频，但通常需要数十步扩散去噪和多秒视频块处理，不适用于流式应用。AURA 提出流式音频驱动 Avatar 生成方法。</div>
+    <div class="tags"><span class="tag">Avatar</span><span class="tag">流式生成</span><span class="tag">视频扩散</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://huggingface.co/papers/2611.26511" target="_blank">Direct3D-V3: Latent-Free Diffusion Transformers in the Native Voxel Domain</a></div>
+    <div class="summary">Direct3D-V3 在原生体素域中构建无潜在空间的扩散 Transformer，直接处理三维数据，避免了潜在空间压缩带来的信息损失，为 3D 生成提供了新思路。</div>
+    <div class="tags"><span class="tag">3D 生成</span><span class="tag">扩散模型</span><span class="tag">体素</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily Papers</div>
+    <div class="title"><a href="https://huggingface.co/papers/2611.26239" target="_blank">Teaching Vision-Language-Action Models to Stop Safely</a></div>
+    <div class="summary">VLA 模型在执行任务时需要知道何时安全停止。该工作研究如何教会视觉-语言-动作模型安全停止，避免过度操作或危险动作，对机器人实际部署至关重要。</div>
+    <div class="tags"><span class="tag">VLA</span><span class="tag">安全性</span><span class="tag">机器人</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今天最值得关注的方向是"推理能力的工程化落地"。Beam 的 501B 稀疏 MoE 技术报告证明了大模型可以在大幅降低推理算力的同时保持前沿能力，这对 Agent 规模化部署意义重大。GLiDE 和 AutoMaster 则代表了另一种思路——不是让模型更大，而是让模型更聪明地利用已有能力。机器人赛道本周进入"量产验证期"：智元 500 台 A3 部署、Agility 上市、现代全资收购波士顿动力、1X NEO 即将发货，这些事件共同标志着人形机器人从实验室走向工厂和家庭的拐点正在临近。开源社区方面，Agent 基础设施（记忆、技能、工具调用）继续成为最活跃的赛道，Hermes Agent、opencode 等项目的快速迭代预示着一个更开放的 Agent 生态正在形成。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-11-22</p>
+</div>
+
+</div>
+</body>
+</html>

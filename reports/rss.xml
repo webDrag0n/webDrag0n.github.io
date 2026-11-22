@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 21 Nov 2026 17:05:03 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 00:02:44 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-11-22</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261122.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261122.html</guid>
+      <pubDate>Sun, 22 Nov 2026 08:00:00 +0000</pubDate>
+      <description>今日 arXiv 大模型与 Agent 方向亮点密集：Beam 发布 501B 稀疏 MoE 技术报告，以 3-4 倍更低算力实现前沿推理；GLiDE 探索将推理能力蒸馏为单次前向决策模型；HiSA 提出隐藏维度稀疏注意力，挑战全量 dot-product 必要性。机器人赛道同样火热：智元 A3 已部署近 500 台冲刺年底 1000 台目标，Agility 通过 SPAC 上市成为美股第一家人形机器人纯标的，现代集团全资收购波士顿动力。开源社区方面，Hermes Agent、opencode、firecrawl 等项目持续活跃，AI Agent 基础设施继续成为最卷赛道。</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-11-22</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261122.html</link>
