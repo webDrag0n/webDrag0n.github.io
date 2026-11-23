@@ -1,14 +1,14 @@
 {
-  "updated_at": "11:01",
+  "updated_at": "12:03",
   "weather": {
-    "main": "22°C Partly Cloudy ",
-    "sub": "今日 20~25°C，湿度 76%，体感 21°C"
+    "main": "24°C Cloudy ",
+    "sub": "今日 20~24°C，湿度 72%，体感 24°C"
   },
   "todos": [
     {
       "time": "12:00",
       "text": "周一问候 + Dependabot 跟进：moderate 告警（#5）已搁置 5 天，周一午休轻松",
-      "done": false
+      "done": true
     },
     {
       "time": "15:30",
