@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 22 Nov 2026 17:09:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 00:04:17 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-11-23</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261123.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261123.html</guid>
+      <pubDate>Mon, 23 Nov 2026 08:00:00 +0000</pubDate>
+      <description>本周末 arXiv 的「模型自改写权重」与「System 1 无幻觉 Agent」两篇论文把自进化与可靠性推上前台；具身智能赛道持续高热——小鹏 IRON 即将登台科技日、1X NEO 宣布 12 月发货、智元精灵 G2 进驻蓝思产线；开源侧轻量 Agent 工具与人形 VLA/全身控制平台持续升温。</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-11-23</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261123.html</link>

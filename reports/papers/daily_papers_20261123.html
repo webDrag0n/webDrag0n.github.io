@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 日报 — 2026年11月23日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  .header { text-align: center; padding: 40px 20px 30px; margin-bottom: 30px; }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+  .summary-banner {
+    background: var(--card-bg); border-radius: 12px; padding: 20px 24px;
+    margin-bottom: 24px; border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px; font-weight: 700; color: var(--text);
+    margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+  .card {
+    background: var(--card-bg); border-radius: 10px; padding: 18px 22px;
+    margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+  .card .title { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .card .title a { color: var(--accent); text-decoration: none; }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px; padding: 2px 10px; border-radius: 12px;
+    background: var(--tag-bg); color: var(--tag-text);
+  }
+  .card .tag.hot { background: #ffeaa7; color: #d63031; font-weight: 600; }
+  .hot-topic {
+    background: #fff8e1; border: 1px solid #ffe082; border-radius: 10px;
+    padding: 18px 22px; margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px; font-weight: 700; color: #e17055;
+    text-transform: uppercase; margin-bottom: 4px;
+  }
+  .hot-topic .source { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+  .hot-topic .title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .hot-topic .title a { color: var(--accent); text-decoration: none; }
+  .hot-topic .title a:hover { text-decoration: underline; }
+  .hot-topic .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+  .hot-topic .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .hot-topic .tag {
+    font-size: 12px; padding: 2px 10px; border-radius: 12px;
+    background: var(--tag-bg); color: var(--tag-text);
+  }
+  .hot-topic .tag.hot { background: #ffeaa7; color: #d63031; font-weight: 600; }
+  .insights {
+    background: var(--card-bg); border-radius: 12px; padding: 24px; margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+  .footer {
+    text-align: center; font-size: 12px; color: #b2bec3;
+    margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🧠</div>
+  <h1>AI 日报 · 论文 · 具身智能 · 开源动态</h1>
+  <div class="date">2026年11月23日</div>
+  <div class="subtitle">arXiv · HuggingFace · GitHub · RobotOverflow 多源聚合</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>本周末 arXiv 的「模型自改写权重」与「System 1 无幻觉 Agent」两篇论文把自进化与可靠性推上前台；具身智能赛道持续高热——小鹏 IRON 即将登台科技日、1X NEO 宣布 12 月发货、智元精灵 G2 进驻蓝思产线；开源侧轻量 Agent 工具与人形 VLA/全身控制平台持续升温。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>学术研究 · 今日论文精选</div>
+  <div class="card">
+    <div class="source">arXiv 2611.21885</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.21885" target="_blank">Language Models Can Rewrite Their Own Weights</a></div>
+    <div class="summary">提出一种无需梯度、无需额外训练的方法：让语言模型通过自己的推理直接改写自身权重，从而持续自我改进。这是对「训练一次终身冻结」范式的直接挑战。</div>
+    <div class="summary" style="color:#0984e3;">💡 如果路线被验证，模型自进化将从「推理时外挂」走向「权重层面」，对安全性和可控性研究提出全新命题。</div>
+    <div class="tags"><span class="tag">大模型</span><span class="tag">自改进</span><span class="tag hot">热点</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2611.21053</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.21053" target="_blank">System 1 Agents: a method for local, reliable and fast agentic AI</a></div>
+    <div class="summary">面向医疗等敏感场景的本地 Agent：不生成文本、直接调用工具的 System 1 式架构，避免幻觉值在工具调用链中传播，兼顾隐私与可靠性。</div>
+    <div class="summary" style="color:#0984e3;">💡 Agent 落地医疗的关键障碍是幻觉与数据出域，「无文本直接调用」是很大胆但务实的取舍。</div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">隐私计算</span><span class="tag">医疗AI</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2611.26617</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26617" target="_blank">One Prior, Two Dynamics: Repurposing Video Diffusion Transformers for Self-Supervised Latent Action Learning</a></div>
+    <div class="summary">O²LaF：将预训练视频扩散 Transformer 同时用作逆动力学与正向动力学先验，从视觉变化中自监督学习潜在动作，机器人可从中提取操作监督信号。</div>
+    <div class="summary" style="color:#0984e3;">💡 视频生成模型的「副产品」正成为机器人学习的关键基础设施，生成与具身的边界在消融。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">世界模型</span><span class="tag">自监督</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2611.26510</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26510" target="_blank">AutoMaster: Autonomous Post-Training by Making the Same Model a Better Teacher</a></div>
+    <div class="summary">Skill-FT：用自然语言技能描述抑制后训练轨迹中的坏习惯（无依据假设、重复、表面验证），让同一模型自主完成更好的自我教学。</div>
+    <div class="summary" style="color:#0984e3;">💡 「成功 ≠ 该强化的行为」这个观察很锐利，技能引导的轨迹筛选可能成为后训练新标配。</div>
+    <div class="tags"><span class="tag">后训练</span><span class="tag">自举训练</span><span class="tag">RL</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2611.26540</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26540" target="_blank">AURA: AUdio-dRiven streaming Avatar</a></div>
+    <div class="summary">流式音频驱动数字人：逐块因果生成、低延迟，突破传统扩散 talking-head 需多步去噪、不适合在线场景的局限。</div>
+    <div class="summary" style="color:#0984e3;">💡 语音助手和实时虚拟形象的延迟瓶颈被正面解决，数字人进入「可对话」阶段。</div>
+    <div class="tags"><span class="tag">多模态</span><span class="tag">数字人</span><span class="tag">视频生成</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2611.26211</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26211" target="_blank">SpecWM: Turning Verification into Refinement for Streaming World Models</a></div>
+    <div class="summary">投机式流式世界模型：小模型快速起草、大模型按奖励信号选择性重生成，把验证环节直接转化为精炼环节。</div>
+    <div class="summary" style="color:#0984e3;">💡 「验证即精炼」的思路把投机解码从 LLM 文本推理迁移到视频生成，推理加速方法论在跨域复用。</div>
+    <div class="tags"><span class="tag">世界模型</span><span class="tag">推理加速</span><span class="tag">投机解码</span></div>
+  </div>
+  <div class="card">
+    <div class="source">arXiv 2611.26613</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26613" target="_blank">AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control</a></div>
+    <div class="summary">系统评测前沿 Agent 直接控制机器人的能力边界，揭示当前模型在真实机器人控制上的短板。</div>
+    <div class="summary" style="color:#0984e3;">💡 给「Agent 能否直接开机器人」提供了量化的冷水与路标，具身 Agent 评测体系正在成型。</div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">机器人评测</span><span class="tag hot">热点</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>机器人 / 具身智能动态</div>
+  <div class="hot-topic">
+    <div class="label">🔥 热点追踪</div>
+    <div class="source">RobotOverflow · CnEVPost</div>
+    <div class="title"><a href="https://cnevpost.com/2026/11/19/xpeng-to-hold-2026-ai-day-nov-25/" target="_blank">小鹏 11 月 25 日广州科技日：IRON 人形机器人登台</a></div>
+    <div class="summary">小鹏「Origin」科技日将于 11 月 25 日举行，IRON 人形机器人将现场互动并展示图灵 AI 芯片，产线 9 月已投入运行。</div>
+    <div class="summary" style="color:#0984e3;">💡 车企造机器人进入「量产+舞台展示」阶段，两天后值得关注实际演示水平。</div>
+    <div class="tags"><span class="tag">人形机器人</span><span class="tag hot">热点</span></div>
+  </div>
+  <div class="hot-topic">
+    <div class="label">🔥 热点追踪</div>
+    <div class="source">RobotOverflow · Humanoids Daily</div>
+    <div class="title"><a href="https://www.humanoidsdaily.com/news/1x-neo-developers-december-runtime-2026-bornich" target="_blank">1X CEO：NEO 12 月起向开发者及部分消费者发货</a></div>
+    <div class="summary">1X 在 Runtime 2026 上宣布 NEO 12 月起发货，配套数据采集设备、仿真环境与 API，重申 5 万台年目标。</div>
+    <div class="summary" style="color:#0984e3;">💡 海外人形机器人开始走「开发者生态」路线，类似早期自动驾驶的开放平台打法。</div>
+    <div class="tags"><span class="tag">人形机器人</span><span class="tag">商业化</span><span class="tag hot">热点</span></div>
+  </div>
+  <div class="card">
+    <div class="source">RobotOverflow · 经济观察网</div>
+    <div class="title"><a href="http://www.eeo.com.cn/2026/1120/1098558.shtml" target="_blank">智元 × 蓝思科技：数十台精灵 G2 进驻手机测试产线</a></div>
+    <div class="summary">智元与蓝思科技战略合作，精灵 G2 在手机测试产线承担上下料与设备交互，是继龙旗项目后的又一工业落地。</div>
+    <div class="summary" style="color:#0984e3;">💡 3C 测试产线成为国产人形机器人最确定的落地场景之一，规模化复制值得跟踪。</div>
+    <div class="tags"><span class="tag">工业落地</span><span class="tag">智元</span></div>
+  </div>
+  <div class="card">
+    <div class="source">RobotOverflow · 搜狐</div>
+    <div class="title"><a href="https://www.sohu.com/a/1104181705_121071031" target="_blank">千寻智能 × 华为云：共建昇腾算力底座</a></div>
+    <div class="summary">千寻智能与华为云签署战略合作，围绕昇腾算力生态与具身模型训练推理加速展开合作。</div>
+    <div class="summary" style="color:#0984e3;">💡 具身智能训练算力的国产化配套正在补齐，昇腾生态的机器人故事加速。</div>
+    <div class="tags"><span class="tag">具身模型</span><span class="tag">算力</span><span class="tag">国产芯片</span></div>
+  </div>
+  <div class="card">
+    <div class="source">RobotOverflow · JKNews</div>
+    <div class="title"><a href="https://news.jkn.co.kr/editions/chinese/post/1112992" target="_blank">魔法原子：在手及跟进订单超 11 亿元，海外收入占 40%</a></div>
+    <div class="summary">魔法原子在世界智能制造大会上披露，订单覆盖近 30 个国家，签约 50 多家经销商（公司自述数据，未经独立核实）。</div>
+    <div class="summary" style="color:#0984e3;">💡 国产机器人出海势头凶猛，但「自述订单」需谨慎看待，交付与回款才是硬指标。</div>
+    <div class="tags"><span class="tag">商业化</span><span class="tag">出海</span></div>
+  </div>
+  <div class="card">
+    <div class="source">RobotOverflow · Reuters</div>
+    <div class="title"><a href="https://finance.yahoo.com/technology/ai/articles/exclusive-abb-considers-robotics-listing-162853291.html" target="_blank">若软银收购告吹，ABB 考虑将机器人业务单独上市</a></div>
+    <div class="summary">路透援引消息人士：若中国否决的 54 亿美元软银收购无法挽回，ABB 或分拆/上市机器人业务，剥离约 30% 中国业务也在考虑中。</div>
+    <div class="summary" style="color:#0984e3;">💡 全球机器人巨头的资本运作折射地缘政治变量，产业格局可能就此重排。</div>
+    <div class="tags"><span class="tag">资本运作</span><span class="tag">行业格局</span></div>
+  </div>
+  <div class="card">
+    <div class="source">RobotOverflow · Humanoid.guide</div>
+    <div class="title"><a href="https://humanoid.guide/mitsubishi-electric-demonstrates-humanoid-cnc-machine-tending/" target="_blank">三菱电机 JIMTOF 展示星海图人形机器人操作数控机床</a></div>
+    <div class="summary">东京机床展上，星海图人形机器人为定制数控机床上下料，AI 规划器根据语音指令生成加工程序，预计 2030 年前后实用化。</div>
+    <div class="summary" style="color:#0984e3;">💡 日本制造业对人形机器人持「验证研究」的务实态度，2030 实用化的时间表值得记录。</div>
+    <div class="tags"><span class="tag">工业落地</span><span class="tag">海外合作</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源项目与生态</div>
+  <div class="card">
+    <div class="source">GitHub</div>
+    <div class="title"><a href="https://github.com/earendil-works/pi" target="_blank">earendil-works/pi</a></div>
+    <div class="summary">AI agent 工具包：统一 LLM API、agent 循环、TUI 与 coding agent CLI，近期热度快速攀升（123k★）。</div>
+    <div class="summary" style="color:#0984e3;">💡 轻量 Agent 基础设施持续受追捧，「统一接口+本地优先」成为开发者新偏好。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">Agent工具链</span></div>
+  </div>
+  <div class="card">
+    <div class="source">GitHub</div>
+    <div class="title"><a href="https://github.com/physical-superintelligence-lab/Psi0" target="_blank">physical-superintelligence-lab/Psi0</a></div>
+    <div class="summary">RSS'26 论文配套开源：面向通用人类智能的人形 VLA 模型 Psi-Zero。</div>
+    <div class="summary" style="color:#0984e3;">💡 学术界的人形 VLA 开源节奏明显加快，复现门槛在被迅速拉低。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">VLA</span><span class="tag">开源</span></div>
+  </div>
+  <div class="card">
+    <div class="source">GitHub</div>
+    <div class="title"><a href="https://github.com/NVlabs/GR00T-WholeBodyControl" target="_blank">NVlabs/GR00T-WholeBodyControl</a></div>
+    <div class="summary">NVIDIA GR00T 全身控制统一平台，用于人形机器人 whole-body 控制策略的开发与部署。</div>
+    <div class="summary" style="color:#0984e3;">💡 英伟达继续在具身智能栈上「修高速公路」，生态位锁定意图明显。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">NVIDIA</span></div>
+  </div>
+  <div class="card">
+    <div class="source">GitHub</div>
+    <div class="title"><a href="https://github.com/enactic/openarm" target="_blank">enactic/openarm</a></div>
+    <div class="summary">完全开源的人形手臂，面向接触丰富的物理 AI 研究与部署。</div>
+    <div class="summary" style="color:#0984e3;">💡 开源硬件+AI 的组合正在复制开源软件的成功路径，研究成本会进一步下探。</div>
+    <div class="tags"><span class="tag">开源硬件</span><span class="tag">人形机器人</span></div>
+  </div>
+</div>
+
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>这一期最值得玩味的是两条暗线的交汇：一条是模型开始「动自己的权重」——从自我教学到权重自改写，自进化的边界正在被重新定义，安全问题也随之从对齐层面下沉到权重完整性层面；另一条是机器人终于从展台走向产线——蓝思的手机测试线、三菱的机床上下料、魔法原子的海外订单，落地叙事第一次跑在了融资叙事前面。建议关注两个信号：一是视频生成世界模型向机器人策略迁移的论文密度，它在悄悄重构具身智能的数据管线；二是国产机器人「自述订单」与实际交付的剪刀差，行业很快会进入兑现期。对研究者来说，现在可能是近三年里做具身智能最好的窗口：开源硬件、开源 VLA、仿真平台都齐了，缺的是有真实场景闭环想法的人。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-11-23</p>
+</div>
+
+</div>
+</body>
+</html>
