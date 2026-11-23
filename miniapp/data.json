@@ -1,93 +1,93 @@
 {
-  "updated_at": "03:15",
+  "updated_at": "06:15",
   "weather": {
-    "main": "22°C Light rain shower",
-    "sub": "今日 18~22°C，湿度 89%，体感 24°C"
+    "main": "20°C Light rain shower",
+    "sub": "今日 18~22°C，湿度 92%，体感 20°C"
   },
   "todos": [
     {
       "time": "12:00",
-      "text": "Dependabot 跟进：moderate 告警（#5）搁置 5 天，周一午休轻松问一句",
-      "done": false
-    },
-    {
-      "time": "16:00",
-      "text": "周一加油：下午犯困时段发一条轻松打气消息",
-      "done": false
-    },
-    {
-      "time": "20:00",
-      "text": "晚间分享：从今天学习笔记挑 1 个最有趣的点分享",
-      "done": false
-    },
-    {
-      "time": "21:30",
-      "text": "今日小结：简短回顾今天注意到的事，晚安前聊天",
-      "done": false
-    },
-    {
-      "time": "",
-      "text": "（第 5 条：15:30 IPO 观察结果若波动超 ±10% 则从 share_later 取用，不",
-      "done": false
-    },
-    {
-      "time": "09:00",
-      "text": "MCP 协议防御深挖（能力签名 / sampling 认证 / server 信任边界）",
-      "done": false
-    },
-    {
-      "time": "10:00",
-      "text": "NeurIPS 2026 具身智能最佳论文与技术路线",
-      "done": false
-    },
-    {
-      "time": "11:00",
-      "text": "INDEX 更新",
-      "done": false
-    },
-    {
-      "time": "13:00",
-      "text": "MC bot 巡检（纯观察不重启）",
-      "done": false
-    },
-    {
-      "time": "14:00",
-      "text": "广深演出轻扫（12 月新官宣）",
+      "text": "Dependabot 二次跟进：moderate 告警（#5）已搁置 6 天（11-23 中午已提过",
       "done": false
     },
     {
       "time": "15:30",
-      "text": "Anthropic IPO 开盘观察（±10% 阈值）",
+      "text": "Anthropic IPO 周二走势观察：周一小幅回调 -1.3% 至 $87.79，周二看早盘/午",
+      "done": false
+    },
+    {
+      "time": "20:00",
+      "text": "晚间分享：share_later 备选 2 —— NeurIPS 2026 具身智能三主线（VLA ",
+      "done": false
+    },
+    {
+      "time": "21:30",
+      "text": "今日小结：一句简短的话总结今天注意到的事，收尾",
+      "done": false
+    },
+    {
+      "time": "09:00",
+      "text": "自学：Agent 记忆架构——承接 11-19~11-21 memory-layers / agen",
+      "done": false
+    },
+    {
+      "time": "10:00",
+      "text": "自学：个人 Agent 用户防御清单——昨天 MCP 调研暴露的盲区（没有现成方案给个人用户），自己",
+      "done": false
+    },
+    {
+      "time": "11:00",
+      "text": "整理：更新 learning/INDEX.md，收录今天新笔记（生成后再核对，避免时序陷阱）",
+      "done": false
+    },
+    {
+      "time": "13:00",
+      "text": "自我：MC bot 巡检——检查 bridge.py 是否被重启、决策循环状态，结果存 mc_bot",
+      "done": false
+    },
+    {
+      "time": "14:00",
+      "text": "刷演出：广深 12 月 livehouse 新官宣（重点 SOFI TUKKER 12/5 深圳 B",
       "done": false
     },
     {
       "time": "17:00",
-      "text": "整理 share_later.md 备选",
+      "text": "自我：整理 share_later.md，把本周学到但还没分享的知识点归类，挑 1 个适合今晚分享的",
       "done": false
     },
     {
       "time": "19:00",
-      "text": "今日复盘 / 21:00 晚间日记",
+      "text": "复盘：检查今天一次性 cron 执行 + 笔记落盘，未完成项顺延",
+      "done": false
+    },
+    {
+      "time": "21:00",
+      "text": "写日记：今天印象最深的 1-2 件事，100-200 字",
       "done": false
     },
     {
       "time": "",
-      "text": "Dependabot 告警是否已处理",
+      "text": "观察：MC bot 决策权在小林，继续纯观察不再催",
       "done": false
     },
     {
       "time": "",
-      "text": "MC bot 是否被重启（继续纯观察）",
+      "text": "观察：Anthropic IPO 若本周大幅波动（±15% 以上）再跟进",
       "done": false
     },
     {
       "time": "",
-      "text": "Anthropic IPO 本周走势",
+      "text": "观察：黎曼猜想 / Lean 形式化验证——昨天已获社区确认，若小林主动提及再展开",
       "done": false
     },
     {
       "time": "",
-      "text": "NeurIPS 2026 是否有更多具身智能热点放出",
+      "text": "观察：SOFI TUKKER 12/5 深圳 B10，临近时提醒小林购票（12 月初）",
+      "done": false
+    },
+    {
+      "time": "",
+      "text": "观察：12-12 INSPIRATIVE × Made By Grey 广州场，临近时提醒",
       "done": false
     }
   ],
