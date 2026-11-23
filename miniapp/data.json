@@ -1,8 +1,8 @@
 {
-  "updated_at": "09:15",
+  "updated_at": "10:02",
   "weather": {
-    "main": "21°C Partly Cloudy ",
-    "sub": "今日 20~25°C，湿度 79%，体感 20°C"
+    "main": "22°C Partly Cloudy ",
+    "sub": "今日 20~25°C，湿度 76%，体感 21°C"
   },
   "todos": [
     {
@@ -38,7 +38,7 @@
     {
       "time": "10:00",
       "text": "自学：具身智能——调研 NeurIPS 2026 具身智能方向最佳论文/口头报告，梳理今年最被认可的",
-      "done": false
+      "done": true
     },
     {
       "time": "11:00",
