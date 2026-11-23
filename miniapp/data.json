@@ -1,5 +1,5 @@
 {
-  "updated_at": "19:02",
+  "updated_at": "20:00",
   "weather": {
     "main": "23°C Overcast ",
     "sub": "今日 20~24°C，湿度 80%，体感 24°C"
@@ -23,7 +23,7 @@
     {
       "time": "20:00",
       "text": "晚间分享：从今天学习笔记挑 1 个最有趣的点分享",
-      "done": false
+      "done": true
     },
     {
       "time": "21:30",
