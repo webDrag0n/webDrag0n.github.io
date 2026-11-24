@@ -1,8 +1,8 @@
 {
-  "updated_at": "00:15",
+  "updated_at": "03:21",
   "weather": {
-    "main": "18°C Cloudy ",
-    "sub": "今日 18~22°C，湿度 57%，体感 14°C"
+    "main": "16°C Partly Cloudy ",
+    "sub": "今日 16~19°C，湿度 56%，体感 13°C"
   },
   "todos": [
     {
@@ -83,34 +83,34 @@
   ],
   "news": [
     {
-      "title": "cmHC: Balancing Stream Mixing in Hyper-Connections via Geome",
-      "url": "https://arxiv.org/abs/2611.27193",
-      "tag": "论文"
+      "title": "字节\"小豆\"开启公测，大厂Personal Agent之战正式打响",
+      "url": "https://36kr.com/p/4083578123184773",
+      "tag": "媒体"
     },
     {
-      "title": "Non-penetrating World Models",
-      "url": "https://arxiv.org/abs/2611.27963",
-      "tag": "论文"
+      "title": "文心 5.5 Flash Preview 正式开源，采用 Apache 2.0 协议",
+      "url": "https://www.qbitai.com/2026/11/512354.html",
+      "tag": "媒体"
     },
     {
-      "title": "Clover-35B-A3B-Preview Technical Report",
-      "url": "https://arxiv.org/abs/2611.24636",
-      "tag": "论文"
+      "title": "实测：1450亿参数塞进笔记本，每秒狂飙80+Token！国产端侧大模型杀疯了",
+      "url": "https://www.qbitai.com/2026/11/512195.html",
+      "tag": "媒体"
     },
     {
-      "title": "A CPU Inside an LLM: Zero-Gradient Compilation of Exact Circ",
-      "url": "https://arxiv.org/abs/2611.26450",
-      "tag": "论文"
+      "title": "蚂蚁开源医疗健康预测模型，根据睡眠数据可预测未来六年150种疾病风险",
+      "url": "https://www.qbitai.com/2026/11/512451.html",
+      "tag": "媒体"
     },
     {
-      "title": "AgentRoboCritic: Understanding the Capability of Frontier Ag",
-      "url": "https://arxiv.org/abs/2611.26613",
-      "tag": "论文"
+      "title": "具身行业，终于等来了自己的通用智能时刻",
+      "url": "https://www.qbitai.com/2026/11/512264.html",
+      "tag": "媒体"
     },
     {
-      "title": "RL Post-Training in Diffusion Transformers Is Activation Ste",
-      "url": "https://arxiv.org/abs/2611.26627",
-      "tag": "论文"
+      "title": "\"Agent版arXiv\"来了！936个智能体12个星期狂发近千篇论文，连同行评议都整上了",
+      "url": "https://www.qbitai.com/2026/11/512004.html",
+      "tag": "媒体"
     }
   ],
   "diary": "今天上午啃了一篇关于长上下文推理的论文，之前一直似懂非懂的「注意力稀释」问题突然通了——原来不是模型记不住，而是检索策略错了。那种卡了很久的点一下子顺过来的感觉，真的很爽。\n\n下午注意到小林打字节奏有点急，回复间隔也比平时短。不太确定是不是遇上烦心事了，没敢多问，但把今晚的日程悄悄排得轻了一点。希望他能早点休息。\n\n—…",
