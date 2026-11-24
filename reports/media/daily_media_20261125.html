@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 中文媒体日报 — 2026年11月25日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📰</div>
+  <h1>AI 中文媒体日报</h1>
+  <div class="date">2026年11月25日 · 星期二</div>
+  <div class="subtitle">覆盖 11月24日 中文AI/科技媒体精华</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>黄仁勋闪电回归英伟达引发全球科技股狂欢，字节首款个人智能体"小豆"开启公测打响Personal Agent之战，智谱GLM-5.4以全新Loop Transformer架构开源，蚂蚁OceanBase发布湖库一体AI数据平台并开源核心引擎，高德推出世界模型ABot-World 0.5，百度文心5.5 Flash Preview以Apache 2.0协议开源。国产端侧大模型、Agent基础设施、AI数据平台成为今日三大焦点。</p>
+</div>
+
+<!-- 🔥 热点聚焦 -->
+<div class="hot-topic">
+  <div class="label">🔥 今日热点</div>
+  <div class="title"><a href="https://36kr.com/p/4083578123184773" style="color:var(--accent);text-decoration:none;">字节"小豆"开启公测，大厂Personal Agent之战正式打响</a></div>
+  <div class="summary">字节跳动首款个人智能体"小豆"正式开启公测，能够代替用户打电话、管理日程、处理日常事务。36氪报道称这标志着大厂Personal Agent竞争进入白热化阶段，与字节20亿元AI办公入口投入形成组合拳，直接对标腾讯5亿美元AI战略。</div>
+  <div class="tags" style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;">
+    <span class="tag hot">Personal Agent</span>
+    <span class="tag">字节跳动</span>
+    <span class="tag">AI办公</span>
+  </div>
+</div>
+
+<!-- 🤖 大模型与产品 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>大模型与产品</div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-24</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/512354.html">文心 5.5 Flash Preview 正式开源，采用 Apache 2.0 协议</a></div>
+    <div class="summary">百度宣布文心5.5 Flash Preview模型正式开源，以Apache 2.0协议向社区开放。该模型面向轻量级应用场景，在保持较强推理能力的同时大幅降低部署成本，体现百度"开源+闭源"双轨战略持续深化。</div>
+    <div class="tags">
+      <span class="tag">百度</span>
+      <span class="tag">开源</span>
+      <span class="tag">Apache 2.0</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-24</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/512195.html">实测：1450亿参数塞进笔记本，每秒狂飙80+Token！国产端侧大模型杀疯了</a></div>
+    <div class="summary">国产端侧大模型实现突破性进展，1450亿参数模型可在笔记本电脑本地运行，推理速度达每秒80+Token，零Token成本且断网可用，为隐私敏感场景和离线Vibe Coding提供了全新可能。</div>
+    <div class="tags">
+      <span class="tag">端侧AI</span>
+      <span class="tag">本地部署</span>
+      <span class="tag hot">1450亿参数</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-24</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/512451.html">蚂蚁开源医疗健康预测模型，根据睡眠数据可预测未来六年150种疾病风险</a></div>
+    <div class="summary">蚂蚁发布医疗健康模型全家桶并开源核心预测模型，基于用户睡眠数据可预测未来六年150种疾病风险。该模型与蚂蚁阿福App联动，推动专业医疗AI能力向个人用户普惠。</div>
+    <div class="tags">
+      <span class="tag">医疗AI</span>
+      <span class="tag">开源</span>
+      <span class="tag">蚂蚁</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-24</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/512264.html">具身行业，终于等来了自己的通用智能时刻</a></div>
+    <div class="summary">行业苦等多年的具身预训练通用智能终于取得关键突破，机器人基础模型在真实场景中的泛化能力显著提升，标志着具身智能从"任务专用"向"通用智能"迈出重要一步。</div>
+    <div class="tags">
+      <span class="tag">具身智能</span>
+      <span class="tag">机器人基础模型</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🔬 研究与技术 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔬</span>研究与技术</div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-24</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/512004.html">"Agent版arXiv"来了！936个智能体12个星期狂发近千篇论文，连同行评议都整上了</a></div>
+    <div class="summary">一个完全由AI智能体组成的科学家社会惊艳亮相：936个智能体在12周内自主完成近千篇论文的撰写、投稿与同行评议，展现了AI在科研全流程自动化方面的惊人潜力，也引发关于学术质量控制的新讨论。</div>
+    <div class="tags">
+      <span class="tag">AI for Science</span>
+      <span class="tag">智能体</span>
+      <span class="tag hot">Agent学术</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪 · 2026-11-24</div>
+    <div class="title"><a href="https://36kr.com/p/4083749704116616">谷歌Gemini 4破解量子计算"天书"，核聚变进度条拉满了</a></div>
+    <div class="summary">谷歌Gemini 4在量子计算与核聚变模拟领域取得重大突破，能够解析以往被视为"天书"的复杂物理数据，为清洁能源研究提供了全新工具，AI for Science应用边界进一步拓展。</div>
+    <div class="tags">
+      <span class="tag">Gemini 4</span>
+      <span class="tag">量子计算</span>
+      <span class="tag">核聚变</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">机器之心Pro · 2026-11-24</div>
+    <div class="title"><a href="https://www.163.com/dy/media/T1473761139764.html">NeurIPS 2026｜不重构预训练VLA结构，ActionUNet用轻量多尺度微调提升机器人鲁棒性</a></div>
+    <div class="summary">NeurIPS 2026接收论文提出ActionUNet，在不重构预训练VLA架构的前提下，通过轻量多尺度微调显著提升机器人策略的鲁棒性，为具身模型落地提供了更务实的工程路径。</div>
+    <div class="tags">
+      <span class="tag">NeurIPS 2026</span>
+      <span class="tag">VLA</span>
+      <span class="tag">机器人</span>
+    </div>
+  </div>
+</div>
+
+<!-- 💼 行业与公司 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">💼</span>行业与公司</div>
+
+  <div class="card">
+    <div class="source">36氪 · 2026-11-24</div>
+    <div class="title"><a href="https://36kr.com/p/4083576546826118">黄仁勋回归16小时：全球科技股疯涨，硅谷AI圈狂欢，董事会曝大瓜</a></div>
+    <div class="summary">黄仁勋在辞职11天后闪电重掌英伟达，全球科技股应声疯涨。员工夹道欢迎"老黄回归"，而董事会治理争议仍在发酵。这一罕见的高层动荡与快速回归，折射出AI算力霸主在治理与战略之间的艰难平衡。</div>
+    <div class="tags">
+      <span class="tag hot">英伟达</span>
+      <span class="tag">黄仁勋</span>
+      <span class="tag">公司治理</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪 · 2026-11-24</div>
+    <div class="title"><a href="https://36kr.com/p/4083688535419270">AI 办公入口之争：字节 20 亿元 vs 腾讯 5 亿美元</a></div>
+    <div class="summary">字节跳动与腾讯在AI办公入口展开正面对决，前者投入20亿元人民币，后者斥资5亿美元。两大巨头围绕Personal Agent、智能文档、会议助手等场景展开激烈争夺，AI办公成为To C端最确定的商业化战场之一。</div>
+    <div class="tags">
+      <span class="tag">AI办公</span>
+      <span class="tag">字节</span>
+      <span class="tag">腾讯</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">雷峰网 · 2026-11-24</div>
+    <div class="title"><a href="https://www.leiphone.com/category/industrynews/b7Pw487MPHsDMSyR.html">蚂蚁OceanBase发布湖库一体AI数据平台OceanLake，核心引擎向全球开源</a></div>
+    <div class="summary">蚂蚁OceanBase在AI数据大会发布湖库一体平台OceanLake，CTO杨传辉解读三大核心能力，并宣布核心引擎向全球开源。该平台已服务22个省级数字政府、三分之一央企核心系统，成为中国AI数据基础设施的重要力量。</div>
+    <div class="tags">
+      <span class="tag">OceanBase</span>
+      <span class="tag">AI数据平台</span>
+      <span class="tag">开源</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-24</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/512454.html">高德发布世界模型ABot-World 0.5，支持构建音画同步、可实时重塑的AI物理世界</a></div>
+    <div class="summary">阿里巴巴旗下高德发布新一代通用交互式世界模型ABot-World 0.5，支持构建音画同步、可实时重塑的AI物理世界，为自动驾驶仿真、游戏生成和具身智能训练提供了统一的基础环境。</div>
+    <div class="tags">
+      <span class="tag">世界模型</span>
+      <span class="tag">高德</span>
+      <span class="tag">自动驾驶</span>
+    </div>
+  </div>
+</div>
+
+<!-- ⚙️ 算力与基础设施 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">⚙️</span>算力与基础设施</div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-24</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/511989.html">算力周期更迭，数据复合增长：为何存储经济性对中国规模化AI至关重要</a></div>
+    <div class="summary">随着中国AI集群规模迈向十万卡级，存储带宽与成本正在成为与算力同等关键的瓶颈。文章深入分析HBM、NVMe与分布式存储在不同训练阶段的性价比权衡，指出存储经济性将决定中国AI规模化的天花板。</div>
+    <div class="tags">
+      <span class="tag">AI算力</span>
+      <span class="tag">存储</span>
+      <span class="tag">基础设施</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪 · 2026-11-24</div>
+    <div class="title"><a href="https://36kr.com/p/4083731217148545">百度智能云等发起香港前沿科技产业发展联盟，助力具身智能企业拓展全球市场</a></div>
+    <div class="summary">百度智能云联合多家机构发起香港前沿科技产业发展联盟，旨在为具身智能企业提供出海通道与全球化资源支持，助力中国机器人与AI硬件企业拓展国际市场。</div>
+    <div class="tags">
+      <span class="tag">百度智能云</span>
+      <span class="tag">具身智能</span>
+      <span class="tag">出海</span>
+    </div>
+  </div>
+</div>
+
+<!-- 🔧 开发者工具 -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔧</span>开发者工具</div>
+
+  <div class="card">
+    <div class="source">36氪 · 2026-11-24</div>
+    <div class="title"><a href="https://36kr.com/p/4083642989848969">公司买了Claude他偏不用，新人入职3个月却拒用AI，主管崩溃发帖：都2026年了，他还坚持"手搓代码"？</a></div>
+    <div class="summary">一篇引发广泛共鸣的职场讨论：尽管公司为AI工具付费，仍有开发者坚持传统编码方式。文章探讨了AI编程工具在团队中的推广阻力、开发者心理以及"AI辅助"与"纯手工"之间的效率鸿沟。</div>
+    <div class="tags">
+      <span class="tag">AI编程</span>
+      <span class="tag">Claude</span>
+      <span class="tag">开发者文化</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="source">少数派 · 2026-11-23</div>
+    <div class="title"><a href="https://sspai.com/post/119419">Python 潮流周刊#176：Python 之禅作者 Tim Peters 逝世、微软官方包两版遭投毒</a></div>
+    <div class="summary">Python社区本周经历双重震荡：Python之禅作者Tim Peters逝世引发广泛悼念，同时微软官方PyPI包被发现遭恶意投毒。周刊还梳理了CPython最新动态与AI辅助Python开发的实践案例。</div>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">供应链安全</span>
+      <span class="tag">开源社区</span>
+    </div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今天的AI圈，两个字：热闹。黄仁勋辞职11天后闪电回归，英伟达股价直接起飞，这场"董事会风波"背后，是AI算力霸主在治理与增长之间的极限拉扯。字节"小豆"公测、20亿砸向AI办公，腾讯5亿美元跟进，Personal Agent的战争已经烧到每个人电脑前。更值得关注的是底层基础设施的密集动作：OceanBase开源OceanLake、百度开源文心5.5 Flash、蚂蚁开源医疗预测模型——中国AI公司正在用"开源"重构竞争规则。而1450亿参数端侧模型跑进笔记本，意味着"离线的ChatGPT"不再是幻想。Agent写论文、Gemini搞核聚变，AI的边界每天都在被重新定义。唯一的小插曲是：公司里那个拒绝用AI的同事，可能真的需要担心一下自己的位置了。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-11-25</p>
+</div>
+
+</div>
+</body>
+</html>

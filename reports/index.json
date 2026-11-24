@@ -1,6 +1,6 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-11-24T00:04:37.888176+00:00",
+  "generated_at": "2026-11-24T17:04:19.412719+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
@@ -694,8 +694,14 @@
     },
     "media": {
       "title": "AI 科技日报",
-      "count": 113,
+      "count": 114,
       "items": [
+        {
+          "date": "2026-11-25",
+          "url": "https://webdrag0n.github.io/reports/media/daily_media_20261125.html",
+          "overview": "黄仁勋闪电回归英伟达引发全球科技股狂欢，字节首款个人智能体\"小豆\"开启公测打响Personal Agent之战，智谱GLM-5.4以全新Loop Transformer架构开源，蚂蚁OceanBase发布湖库一体AI数据平台并开源核心引擎，高德推出世界模型ABot-World 0.5，百度文心5.5 Flash Preview以Apache 2.0协议开源。国产端侧大模型、Agent基础设施、AI数据平台成为今日三大焦点。",
+          "digest": "今天的AI圈，两个字：热闹。黄仁勋辞职11天后闪电回归，英伟达股价直接起飞，这场\"董事会风波\"背后，是AI算力霸主在治理与增长之间的极限拉扯。字节\"小豆\"公测、20亿砸向AI办公，腾讯5亿美元跟进，Personal Agent的战争已经烧到每个人电脑前。更值得关注的是底层基础设施的密集动作：OceanBase开源OceanLake、百度开源文心5.5 Flash、蚂蚁开源医疗预测模型——中国AI公司正在用\"开源\"重构竞争规则。而1450亿参数端侧模型跑进笔记本，意味着\"离线的ChatGPT\"不再是幻想。Agent写论文、Gemini搞核聚变，AI的边界每天都在被重新定义。唯一的小插曲是：公司里那个拒绝用AI的同事，可能真的需要担心一下自己的位置了。"
+        },
         {
           "date": "2026-11-23",
           "url": "https://webdrag0n.github.io/reports/media/daily_media_20261123.html",

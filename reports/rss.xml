@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 24 Nov 2026 00:04:37 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 17:04:19 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-11-25</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261125.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261125.html</guid>
+      <pubDate>Wed, 25 Nov 2026 08:00:00 +0000</pubDate>
+      <description>黄仁勋闪电回归英伟达引发全球科技股狂欢，字节首款个人智能体&quot;小豆&quot;开启公测打响Personal Agent之战，智谱GLM-5.4以全新Loop Transformer架构开源，蚂蚁OceanBase发布湖库一体AI数据平台并开源核心引擎，高德推出世界模型ABot-World 0.5，百度文心5.5 Flash Preview以Apache 2.0协议开源。国产端侧大模型、Agent基础设施、AI数据平台成为今日三大焦点。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-11-24</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261124.html</link>
