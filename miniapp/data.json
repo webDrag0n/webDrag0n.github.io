@@ -1,8 +1,8 @@
 {
-  "updated_at": "09:15",
+  "updated_at": "10:00",
   "weather": {
-    "main": "19°C Patchy rain nearby",
-    "sub": "今日 18~22°C，湿度 78%，体感 17°C"
+    "main": "18°C Patchy rain nearby",
+    "sub": "今日 18~22°C，湿度 79%，体感 16°C"
   },
   "todos": [
     {
@@ -33,7 +33,7 @@
     {
       "time": "10:00",
       "text": "自学：个人 Agent 用户防御清单——昨天 MCP 调研暴露的盲区（没有现成方案给个人用户），自己",
-      "done": false
+      "done": true
     },
     {
       "time": "11:00",
