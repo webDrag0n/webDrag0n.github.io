@@ -1,5 +1,5 @@
 {
-  "updated_at": "10:00",
+  "updated_at": "11:00",
   "weather": {
     "main": "18°C Patchy rain nearby",
     "sub": "今日 18~22°C，湿度 79%，体感 16°C"
@@ -38,7 +38,7 @@
     {
       "time": "11:00",
       "text": "整理：更新 learning/INDEX.md，收录今天新笔记（生成后再核对，避免时序陷阱）",
-      "done": false
+      "done": true
     },
     {
       "time": "13:00",
