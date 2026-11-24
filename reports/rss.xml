@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 23 Nov 2026 17:06:37 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 00:04:37 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-11-24</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261124.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261124.html</guid>
+      <pubDate>Tue, 24 Nov 2026 08:00:00 +0000</pubDate>
+      <description>今日 HuggingFace 热度最高的是流形约束超连接 cmHC（88 赞）与防穿透世界模型 Non-penetrating World Models（54 赞），扩散语言模型 Clover-35B 与「LLM 内嵌 CPU」继续引发讨论；具身智能侧英伟达在柏林 GTC 推出 Agile ONE SN 参考人形、魔法原子披露订单超 11 亿元、小鹏科技日明晚开幕；开源侧本地多 Agent 桌面组 PiBot（499★）与闲置算力训练引擎 songe 表现抢眼。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-11-23</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261123.html</link>

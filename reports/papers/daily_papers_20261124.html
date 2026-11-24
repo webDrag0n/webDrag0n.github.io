@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 日报 · 论文 · 具身智能 · 开源动态 — 2026年11月24日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  .header { text-align: center; padding: 40px 20px 30px; margin-bottom: 30px; }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+  .summary-banner {
+    background: var(--card-bg); border-radius: 12px; padding: 20px 24px; margin-bottom: 24px;
+    border-left: 4px solid var(--accent); box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 14px;
+    padding-bottom: 8px; border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+  .card {
+    background: var(--card-bg); border-radius: 10px; padding: 18px 22px;
+    margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+  .card .title { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .card .title a { color: var(--accent); text-decoration: none; }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px; padding: 2px 10px; border-radius: 12px;
+    background: var(--tag-bg); color: var(--tag-text);
+  }
+  .card .tag.hot { background: #ffeaa7; color: #d63031; font-weight: 600; }
+  .hot-topic {
+    background: #fff8e1; border: 1px solid #ffe082; border-radius: 10px;
+    padding: 18px 22px; margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px; font-weight: 700; color: #e17055;
+    text-transform: uppercase; margin-bottom: 4px;
+  }
+  .hot-topic .source { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+  .hot-topic .title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .hot-topic .title a { color: var(--accent); text-decoration: none; }
+  .hot-topic .title a:hover { text-decoration: underline; }
+  .hot-topic .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+  .hot-topic .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .hot-topic .tag {
+    font-size: 12px; padding: 2px 10px; border-radius: 12px;
+    background: var(--tag-bg); color: var(--tag-text);
+  }
+  .hot-topic .tag.hot { background: #ffeaa7; color: #d63031; font-weight: 600; }
+  .insights {
+    background: var(--card-bg); border-radius: 12px; padding: 24px; margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+  .footer {
+    text-align: center; font-size: 12px; color: #b2bec3;
+    margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🧠</div>
+  <h1>AI 日报 · 论文 · 具身智能 · 开源动态</h1>
+  <div class="date">2026年11月24日</div>
+  <div class="subtitle">arXiv · HuggingFace · GitHub · RobotOverflow 多源聚合</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今日 HuggingFace 热度最高的是流形约束超连接 <strong>cmHC</strong>（88 赞）与防穿透世界模型 <strong>Non-penetrating World Models</strong>（54 赞），扩散语言模型 Clover-35B 与「LLM 内嵌 CPU」继续引发讨论；具身智能侧英伟达在柏林 GTC 推出 Agile ONE SN 参考人形、魔法原子披露订单超 11 亿元、小鹏科技日明晚开幕；开源侧本地多 Agent 桌面组 <strong>PiBot</strong>（499★）与闲置算力训练引擎 <strong>songe</strong> 表现抢眼。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>学术研究 · 今日论文精选</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 今日最热</div>
+    <div class="source">arXiv 2611.27193 · HuggingFace 88 赞</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.27193" target="_blank">cmHC: Balancing Stream Mixing in Hyper-Connections via Geometric Contraction</a></div>
+    <div class="summary">在流形超连接（mHC）基础上提出几何收缩约束（cmHC），把多路残差混合约束到流形上，稳定深层残差传播。报告在主流开源模型规模上训练/推理吞吐与最终 loss 均有改善。</div>
+    <div class="summary" style="color:#0984e3;">💡 残差连接的多流混合是 MoE/深层模型稳定性的老问题，用微分几何工具约束优化轨迹的思路很可能被下一批旗舰模型借鉴。</div>
+    <div class="tags"><span class="tag">大模型架构</span><span class="tag">训练稳定性</span><span class="tag hot">热点</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.27963 · HuggingFace 54 赞</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.27963" target="_blank">Non-penetrating World Models</a></div>
+    <div class="summary">首次系统研究交互式视频世界模型中的物体穿透问题，建立穿透评测基准，并给出防穿透训练/推理策略，显著提升物理一致性。</div>
+    <div class="summary" style="color:#0984e3;">💡 世界模型要服务机器人闭环训练，「不穿透」是底线物理常识，这个基准会成为视频世界模型的必测项。</div>
+    <div class="tags"><span class="tag">世界模型</span><span class="tag">视频生成</span><span class="tag">物理一致性</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.24636 · HuggingFace 36 赞</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.24636" target="_blank">Clover-35B-A3B-Preview Technical Report</a></div>
+    <div class="summary">Mixture-of-Experts 扩散语言模型：总参数 350 亿、激活 30 亿，在保持小激活成本的同时逼近稠密模型的生成质量。</div>
+    <div class="summary" style="color:#0984e3;">💡 MoE+扩散语言模型的组合把「推理便宜、生成多样」两条路线合流，低成本部署场景的吸引力很大。</div>
+    <div class="tags"><span class="tag">扩散语言模型</span><span class="tag">MoE</span><span class="tag">高效推理</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.26450 · HuggingFace 7 赞</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26450" target="_blank">A CPU Inside an LLM: Zero-Gradient Compilation of Exact Circuits into Pretrained Weights</a></div>
+    <div class="summary">不微调、零梯度地把精确算术/逻辑电路直接编译进预训练权重，让 LLM 在权重层面获得确定性的计算能力。</div>
+    <div class="summary" style="color:#0984e3;">💡 与前几日「模型自改写权重」一脉相承：权重空间还有大量可编程性没被挖掘，可能改变工具调用与长链推理的实现方式。</div>
+    <div class="tags"><span class="tag">大模型</span><span class="tag">权重编程</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.26613 · HuggingFace 8 赞</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26613" target="_blank">AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control</a></div>
+    <div class="summary">系统评估 GPT-6 Astra 等前沿多模态 Agent 直接输出低层数值动作控制机器人的能力边界，给出失败模式分类。</div>
+    <div class="summary" style="color:#0984e3;">💡 用通用 Agent 直接控机器人是近期最热也最争议的路线，这篇的「失败模式分类」比能力展示更有参考价值。</div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">具身智能</span><span class="tag">评测</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.26627 · HuggingFace 22 赞</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26627" target="_blank">RL Post-Training in Diffusion Transformers Is Activation Steering</a></div>
+    <div class="summary">证明扩散 Transformer 的 RL 后训练在机制上等价于激活引导（activation steering），为理解和改进扩散模型的对齐提供了新视角。</div>
+    <div class="summary" style="color:#0984e3;">💡 把「训练」还原成「推理时的激活操作」意味着对齐成本可能大幅下降，对视频/图像生成对齐尤其重要。</div>
+    <div class="tags"><span class="tag">扩散模型</span><span class="tag">RL后训练</span><span class="tag">可解释性</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.27973 · HuggingFace 18 赞</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.27973" target="_blank">MemOnce: A Scalable Memory Architecture for Large Language Models</a></div>
+    <div class="summary">面向长程持续交互的可复用记忆状态架构，让 LLM 在多轮/跨会话场景中保留可检索的记忆，支持未来推理复用。</div>
+    <div class="summary" style="color:#0984e3;">💡 Agent 产品化的隐性瓶颈就是记忆架构，这类工作比「更大的上下文窗口」更接近问题本质。</div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">记忆架构</span><span class="tag">长上下文</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.26590 · HuggingFace 36 赞</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.26590" target="_blank">Probing the "Conscious" Mind: Selective Access and Global Workspace in Vision-Language Models</a></div>
+    <div class="summary">用认知科学的「全局工作空间」与「选择性通达」框架探测 VLM，发现部分模型呈现出类似全局广播的信息整合现象。</div>
+    <div class="summary" style="color:#0984e3;">💡 把认知科学范式系统地搬进多模态模型评测，比单纯刷榜更能推动我们对模型内部机制的尊重与理解。</div>
+    <div class="tags"><span class="tag">多模态</span><span class="tag">可解释性</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.25005 · HuggingFace</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.25005" target="_blank">Inhabitant: An Agent Framework for Long-Horizon Human-Scene Interaction</a></div>
+    <div class="summary">面向长程人-场景交互的 Agent 框架，结合空间控制与质量评估，让 Agent 在复杂三维环境中完成持续交互任务。</div>
+    <div class="summary" style="color:#0984e3;">💡 长程交互是具身 Agent 的下一道关卡，「空间控制+质量评估」的组合框架值得跟进。</div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">空间智能</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能 · 机器人赛道动态</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 重点关注</div>
+    <div class="source">RobotOverflow · 2026-11-22 · 重要性 2/3</div>
+    <div class="title"><a href="https://www.nvidia.com/gtc/" target="_blank">英伟达柏林 GTC 扩展 Isaac 平台，推出 Agile ONE SN 参考人形机器人</a></div>
+    <div class="summary">GTC 欧洲站上英伟达发布 Agile ONE SN 参考人形设计并扩充 Isaac 平台工具链，继续把「芯片-仿真-参考设计」的全栈打法复制到欧洲市场。</div>
+    <div class="summary" style="color:#0984e3;">💡 参考设计的意义在于把行业默认形态向英伟达栈对齐——这比任何单点发布都更能锁定生态。</div>
+    <div class="tags"><span class="tag">英伟达</span><span class="tag">Isaac</span><span class="tag">参考设计</span><span class="tag hot">热点</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">RobotOverflow · 2026-11-21 · 重要性 2/3</div>
+    <div class="title"><a href="https://www.36kr.com/" target="_blank">魔法原子披露订单超 11 亿元，海外收入占比 40%</a></div>
+    <div class="summary">魔法原子（MagicLab）公布累计订单突破 11 亿元，其中海外收入占比约 40%，人形与轮式双臂产品线均已批量交付。</div>
+    <div class="summary" style="color:#0984e3;">💡 「订单结构」比订单总额更值得关注——海外占比四成说明国产机器人出海已经不是故事而是营收。</div>
+    <div class="tags"><span class="tag">商业落地</span><span class="tag">出海</span><span class="tag hot">热点</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">RobotOverflow · 2026-11-20 · 重要性 2/3</div>
+    <div class="title"><a href="https://www.1x.tech/discover" target="_blank">1X CEO：NEO 12 月起向开发者及部分消费者发货</a></div>
+    <div class="summary">1X 宣布家用双足机器人 NEO 将于 12 月开始向开发者与部分消费者发货，家庭场景正式进入小规模真实交付阶段。</div>
+    <div class="summary" style="color:#0984e3;">💡 家庭机器人从 demo 走向交付是具身智能的「成人礼」，真实家庭数据回流将加速下一代模型迭代。</div>
+    <div class="tags"><span class="tag">1X</span><span class="tag">NEO</span><span class="tag">家庭机器人</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">RobotOverflow · 2026-11-19 · 重要性 2/3</div>
+    <div class="title"><a href="https://www.xiaopeng.com/" target="_blank">小鹏科技日定于 11 月 25 日，IRON 人形机器人登台</a></div>
+    <div class="summary">小鹏宣布 11 月 25 日广州科技日，升级版 IRON 人形机器人将正式亮相，此前何小鹏透露 2027 年 Q2 对外商用。</div>
+    <div class="summary" style="color:#0984e3;">💡 车企造机器人正在形成「第二曲线」，明晚的 IRON 升级款值得重点关注运控与交互能力。</div>
+    <div class="tags"><span class="tag">小鹏</span><span class="tag">IRON</span><span class="tag hot">热点</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">RobotOverflow · 2026-11-17 · 重要性 3/3</div>
+    <div class="title"><a href="https://techcrunch.com/2026/11/17/genesis-ai-raises-500-million-to-deploy-electric-glove-wearing-robots" target="_blank">Genesis AI 完成 5 亿美元 A 轮融资，估值 35 亿美元</a></div>
+    <div class="summary">通用机器人基础模型公司 Genesis AI 宣布 5 亿美元 A 轮，用于部署其配备电动触觉手套的机器人平台，是近期具身智能赛道最大单笔融资之一。</div>
+    <div class="summary" style="color:#0984e3;">💡 触觉+基础模型的组合是本轮具身智能融资的新叙事高地，资本正在押注「感知层突破」。</div>
+    <div class="tags"><span class="tag">融资</span><span class="tag">Genesis AI</span><span class="tag">触觉感知</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">RobotOverflow · 2026-11-18 · 重要性 2/3</div>
+    <div class="title"><a href="https://www.zdnet.com/" target="_blank">智元高管：长隆园区已部署近 500 台 A3，年底目标 1000 台</a></div>
+    <div class="summary">智元机器人披露在广州长隆园区已部署近 500 台 A3 机器人承担导览与互动任务，年底目标是 1000 台。</div>
+    <div class="summary" style="color:#0984e3;">💡 单一场景数百台级的部署在行业内仍是罕见规模，长期运行数据对模型迭代的价值不可估量。</div>
+    <div class="tags"><span class="tag">智元</span><span class="tag">批量部署</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">RobotOverflow · 2026-11-20 · 重要性 2/3</div>
+    <div class="title"><a href="https://www.cls.cn/" target="_blank">智元与蓝思科技合作，数十台精灵 G2 进驻手机测试产线</a></div>
+    <div class="summary">智元精灵 G2 机器人进入蓝思科技手机测试产线，承担上下料与检测辅助工序，开启 3C 制造场景规模化验证。</div>
+    <div class="summary" style="color:#0984e3;">💡 3C 产线对节拍与良率要求极高，能通过验证意味着国产机器人在工业场景的壁垒又被打破一层。</div>
+    <div class="tags"><span class="tag">智元</span><span class="tag">蓝思科技</span><span class="tag">工业落地</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">RobotOverflow · 2026-11-20 · 重要性 2/3</div>
+    <div class="title"><a href="https://www.reuters.com/" target="_blank">现代集团收购软银所持波士顿动力最后 10% 股权，实现全资拥有</a></div>
+    <div class="summary">现代汽车集团完成对波士顿动力的 100% 控股，软银正式退出。Atlas 电动版的商业化进程将由现代主导。</div>
+    <div class="summary" style="color:#0984e3;">💡 波士顿动力的「学术派」基因遇上现代的制造业规模，人形机器人的量产叙事值得重新评估。</div>
+    <div class="tags"><span class="tag">波士顿动力</span><span class="tag">现代</span><span class="tag">资本运作</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源项目与生态</div>
+
+  <div class="card">
+    <div class="source">GitHub · 499★</div>
+    <div class="title"><a href="https://github.com/w01fb0ss/PiBot" target="_blank">w01fb0ss/PiBot</a></div>
+    <div class="summary">本地优先的开源 AI Agent 团队桌面应用：多 Agent 群聊、电脑使用自动化，强调数据不出本机。</div>
+    <div class="summary" style="color:#0984e3;">💡 「本地优先 + 多 Agent 协作」正在成为桌面 Agent 的新默认形态，一周近 500 星说明需求真实存在。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">Agent</span><span class="tag">本地优先</span><span class="tag hot">热点</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 301★</div>
+    <div class="title"><a href="https://github.com/sous-labs/songe" target="_blank">sous-labs/songe</a></div>
+    <div class="summary">利用闲置算力在本地训练专属模型的训练引擎，把个人设备的碎片算力变成可持续的微调资源。</div>
+    <div class="summary" style="color:#0984e3;">💡 个人模型训练的算力门槛正在被工具层抹平，「闲时训练」可能成为下一波个性化 AI 的基础设施。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">本地训练</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 36★</div>
+    <div class="title"><a href="https://github.com/PlantPotatoOnMoon/TwoPass" target="_blank">PlantPotatoOnMoon/TwoPass</a></div>
+    <div class="summary">TwoPass：面向机器人操作任务的草稿引导少步视频预测方法，配套论文已开源代码。</div>
+    <div class="summary" style="color:#0984e3;">💡 视频预测与机器人操作的交叉点上，「少步+草稿引导」是降低推理成本的一个聪明切口。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">视频预测</span><span class="tag">开源</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 29★</div>
+    <div class="title"><a href="https://github.com/yuhangdai427/NoPeWorld" target="_blank">yuhangdai427/NoPeWorld</a></div>
+    <div class="summary">Non-penetrating World Models 的官方实现，含防穿透评测基准与训练代码。</div>
+    <div class="summary" style="color:#0984e3;">💡 论文与代码同天放出，物理一致性评测有望快速成为社区标配。</div>
+    <div class="tags"><span class="tag">世界模型</span><span class="tag">开源</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 146★</div>
+    <div class="title"><a href="https://github.com/Carol-lyh/Jeveration" target="_blank">Carol-lyh/Jeveration</a></div>
+    <div class="summary">arXiv 论文 Jeveration（System One Models Now Generate）官方实现：让 System 1 风格的模型直接进行生成式输出。</div>
+    <div class="summary" style="color:#0984e3;">💡 论文+代码的快速开源节奏说明「快系统生成」这条路线在学术社区已有相当共识。</div>
+    <div class="tags"><span class="tag">大模型</span><span class="tag">开源</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 16★</div>
+    <div class="title"><a href="https://github.com/showlab/o2laf" target="_blank">showlab/o2laf</a></div>
+    <div class="summary">One Prior, Two Dynamics：复用视频扩散 Transformer 做自监督潜在动作学习，配套论文已开源。</div>
+    <div class="summary" style="color:#0984e3;">💡 视频生成大模型向机器人策略迁移的代表作，预示「预训练视频先验」将成为 VLA 的标准起点。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">VLA</span><span class="tag">开源</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今天这份日报有两条主线特别值得小林留意。第一条是「世界模型的物理化」：Non-penetrating World Models 拿下 54 赞并同步开源，加上 TwoPass、o2laf 这类把视频生成能力直接搬进机器人操作的工作，视频世界模型正在从「好看」转向「能闭环训练机器人」，这条数据管线的重构可能比任何单点模型突破影响都深远。第二条是具身智能的「交付密度」突然上来了：英伟达发参考人形、魔法原子订单破 11 亿、1X NEO 下月发货、智元在长隆和蓝思两处数百台级部署，再加上 Genesis AI 的 5 亿美元 A 轮，赛道已经从「讲故事」切换到「交作业」阶段。明晚小鹏科技日的 IRON 升级款是个观察窗口——车企系人形机器人能否在运控和交互上给出惊喜，将直接影响市场对这条路线的信心。研究侧的 cmHC 和「LLM 内嵌 CPU」则提醒我们：架构层面的创新远未枯竭，2027 年的模型可能长得跟今天很不一样。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 2026-11-24</p>
+</div>
+
+</div>
+</body>
+</html>

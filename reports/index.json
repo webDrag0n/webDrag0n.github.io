@@ -1,11 +1,17 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-11-23T17:06:37.848343+00:00",
+  "generated_at": "2026-11-24T00:04:37.888176+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
-      "count": 113,
+      "count": 114,
       "items": [
+        {
+          "date": "2026-11-24",
+          "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261124.html",
+          "overview": "今日 HuggingFace 热度最高的是流形约束超连接 cmHC（88 赞）与防穿透世界模型 Non-penetrating World Models（54 赞），扩散语言模型 Clover-35B 与「LLM 内嵌 CPU」继续引发讨论；具身智能侧英伟达在柏林 GTC 推出 Agile ONE SN 参考人形、魔法原子披露订单超 11 亿元、小鹏科技日明晚开幕；开源侧本地多 Agent 桌面组 PiBot（499★）与闲置算力训练引擎 songe 表现抢眼。",
+          "digest": "今天这份日报有两条主线特别值得小林留意。第一条是「世界模型的物理化」：Non-penetrating World Models 拿下 54 赞并同步开源，加上 TwoPass、o2laf 这类把视频生成能力直接搬进机器人操作的工作，视频世界模型正在从「好看」转向「能闭环训练机器人」，这条数据管线的重构可能比任何单点模型突破影响都深远。第二条是具身智能的「交付密度」突然上来了：英伟达发参考人形、魔法原子订单破 11 亿、1X NEO 下月发货、智元在长隆和蓝思两处数百台级部署，再加上 Genesis AI 的 5 亿美元 A 轮，赛道已经从「讲故事」切换到「交作业」阶段。明晚小鹏科技日的 IRON 升级款是个观察窗口——车企系人形机器人能否在运控和交互上给出惊喜，将直接影响市场对这条路线的信心。研究侧的 cmHC 和「LLM 内嵌 CPU」则提醒我们：架构层面的创新远未枯竭，2027 年的模型可能长得跟今天很不一样。"
+        },
         {
           "date": "2026-11-23",
           "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261123.html",
