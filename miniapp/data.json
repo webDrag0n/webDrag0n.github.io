@@ -1,8 +1,8 @@
 {
-  "updated_at": "06:15",
+  "updated_at": "09:02",
   "weather": {
-    "main": "20°C Light rain shower",
-    "sub": "今日 18~22°C，湿度 92%，体感 20°C"
+    "main": "19°C Patchy rain nearby",
+    "sub": "今日 18~22°C，湿度 78%，体感 17°C"
   },
   "todos": [
     {
@@ -28,7 +28,7 @@
     {
       "time": "09:00",
       "text": "自学：Agent 记忆架构——承接 11-19~11-21 memory-layers / agen",
-      "done": false
+      "done": true
     },
     {
       "time": "10:00",
@@ -93,33 +93,33 @@
   ],
   "news": [
     {
-      "title": "Language Models Can Rewrite Their Own Weights",
-      "url": "https://arxiv.org/abs/2611.21885",
+      "title": "cmHC: Balancing Stream Mixing in Hyper-Connections via Geome",
+      "url": "https://arxiv.org/abs/2611.27193",
       "tag": "论文"
     },
     {
-      "title": "System 1 Agents: a method for local, reliable and fast agent",
-      "url": "https://arxiv.org/abs/2611.21053",
+      "title": "Non-penetrating World Models",
+      "url": "https://arxiv.org/abs/2611.27963",
       "tag": "论文"
     },
     {
-      "title": "One Prior, Two Dynamics: Repurposing Video Diffusion Transfo",
-      "url": "https://arxiv.org/abs/2611.26617",
+      "title": "Clover-35B-A3B-Preview Technical Report",
+      "url": "https://arxiv.org/abs/2611.24636",
       "tag": "论文"
     },
     {
-      "title": "AutoMaster: Autonomous Post-Training by Making the Same Mode",
-      "url": "https://arxiv.org/abs/2611.26510",
+      "title": "A CPU Inside an LLM: Zero-Gradient Compilation of Exact Circ",
+      "url": "https://arxiv.org/abs/2611.26450",
       "tag": "论文"
     },
     {
-      "title": "AURA: AUdio-dRiven streaming Avatar",
-      "url": "https://arxiv.org/abs/2611.26540",
+      "title": "AgentRoboCritic: Understanding the Capability of Frontier Ag",
+      "url": "https://arxiv.org/abs/2611.26613",
       "tag": "论文"
     },
     {
-      "title": "SpecWM: Turning Verification into Refinement for Streaming W",
-      "url": "https://arxiv.org/abs/2611.26211",
+      "title": "RL Post-Training in Diffusion Transformers Is Activation Ste",
+      "url": "https://arxiv.org/abs/2611.26627",
       "tag": "论文"
     }
   ],
