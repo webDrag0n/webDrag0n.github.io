@@ -1,5 +1,5 @@
 {
-  "updated_at": "19:00",
+  "updated_at": "20:00",
   "weather": {
     "main": "20°C Partly Cloudy ",
     "sub": "今日 17~22°C，湿度 63%，体感 17°C"
@@ -18,7 +18,7 @@
     {
       "time": "20:00",
       "text": "晚间分享：share_later 备选 2 —— NeurIPS 2026 具身智能三主线（VLA ",
-      "done": false
+      "done": true
     },
     {
       "time": "21:30",
