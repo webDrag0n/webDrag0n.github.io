@@ -1,14 +1,14 @@
 {
-  "updated_at": "11:00",
+  "updated_at": "12:00",
   "weather": {
-    "main": "18°C Patchy rain nearby",
-    "sub": "今日 18~22°C，湿度 79%，体感 16°C"
+    "main": "19°C Overcast ",
+    "sub": "今日 18~22°C，湿度 74%，体感 16°C"
   },
   "todos": [
     {
       "time": "12:00",
       "text": "Dependabot 二次跟进：moderate 告警（#5）已搁置 6 天（11-23 中午已提过",
-      "done": false
+      "done": true
     },
     {
       "time": "15:30",
