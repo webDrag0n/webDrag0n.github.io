@@ -1,11 +1,17 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-11-24T17:04:19.412719+00:00",
+  "generated_at": "2026-11-25T00:06:35.174971+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
-      "count": 114,
+      "count": 115,
       "items": [
+        {
+          "date": "2026-11-25",
+          "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261125.html",
+          "overview": "今日 arXiv 上具身智能热度爆炸，Embo-Harness（90 票）与 WorldLeague（87 票）两篇机器人基准/框架论文登顶 HuggingFace Daily Papers，「前沿多模态模型即策略」范式正在重塑机器人学；产业侧英伟达 GTC 柏林站发布 Isaac OS 与 Agile ONE SN 参考人形机器人，黄仁勋在辞职 11 天后戏剧化复任 CEO；国内宇树科技股价涨停市值冲至 2864 亿元，自变量机器人开源具身基础模型 WALL-OSS-1.0，赛道进入「基础模型 + 整机订单」双轮驱动的阶段。",
+          "digest": "今天的 AI 日报有一个非常清晰的主线：具身智能正在完成从「研究话题」到「产业基础设施」的惊险一跃。学术侧，Embo-Harness 和 WorldLeague 双双冲上 HuggingFace 热榜，意味着「前沿模型直接当机器人策略」已经从少数派的浪漫想象变成社区共识，接下来一年我们会看到大量基于通用多模态模型的机器人栈重构。产业侧的信号同样密集——英伟达在柏林 GTC 把 Isaac OS、Human 1M 数据集和参考人形一口气全部开源，是在复刻 Android 当年的生态卡位战；宇树市值冲到 2800 亿、魔法原子海外订单占比 40%、智元精灵 G2 进驻蓝思产线，则说明中国整机厂已经在商业化落地上跑出了真实差距。值得一提的是今天下午小鹏科技日的 IRON，值得在晚间新闻里再确认一下演示成色。整体而言，2026 年底的机器人产业已经不是「要不要做」的问题，而是「谁的生态位更稳」的问题——对研究者和从业者来说，现在进场仍然不晚，但窗口正在以月为单位快速关闭。"
+        },
         {
           "date": "2026-11-24",
           "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261124.html",

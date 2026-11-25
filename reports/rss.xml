@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 24 Nov 2026 17:04:19 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 00:06:35 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-11-25</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261125.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261125.html</guid>
+      <pubDate>Wed, 25 Nov 2026 08:00:00 +0000</pubDate>
+      <description>今日 arXiv 上具身智能热度爆炸，Embo-Harness（90 票）与 WorldLeague（87 票）两篇机器人基准/框架论文登顶 HuggingFace Daily Papers，「前沿多模态模型即策略」范式正在重塑机器人学；产业侧英伟达 GTC 柏林站发布 Isaac OS 与 Agile ONE SN 参考人形机器人，黄仁勋在辞职 11 天后戏剧化复任 CEO；国内宇树科技股价涨停市值冲至 2864 亿元，自变量机器人开源具身基础模型 WALL-OSS-1.0，赛道进入「基础模型 + 整机订单」双轮驱动的阶段。</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-11-25</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261125.html</link>

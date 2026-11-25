@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 日报 — 2026-11-25</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .comment {
+    font-size: 13px;
+    color: #555;
+    background: #f1f8ff;
+    border-left: 3px solid var(--accent);
+    padding: 8px 12px;
+    border-radius: 0 6px 6px 0;
+    margin-top: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .hot-topic .title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .hot-topic .title a { color: var(--accent); text-decoration: none; }
+  .hot-topic .title a:hover { text-decoration: underline; }
+  .hot-topic .summary { font-size: 14px; color: var(--text-secondary); }
+  .hot-topic .comment {
+    font-size: 13px;
+    color: #555;
+    background: rgba(255,255,255,0.7);
+    border-left: 3px solid #e17055;
+    padding: 8px 12px;
+    border-radius: 0 6px 6px 0;
+    margin-top: 8px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🧠</div>
+  <h1>AI 领域日报</h1>
+  <div class="date">2026 年 11 月 25 日 · 星期三</div>
+  <div class="subtitle">论文 · 开源项目 · 具身智能与机器人动态</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>今日 arXiv 上具身智能热度爆炸，Embo-Harness（90 票）与 WorldLeague（87 票）两篇机器人基准/框架论文登顶 HuggingFace Daily Papers，「前沿多模态模型即策略」范式正在重塑机器人学；产业侧英伟达 GTC 柏林站发布 Isaac OS 与 Agile ONE SN 参考人形机器人，黄仁勋在辞职 11 天后戏剧化复任 CEO；国内宇树科技股价涨停市值冲至 2864 亿元，自变量机器人开源具身基础模型 WALL-OSS-1.0，赛道进入「基础模型 + 整机订单」双轮驱动的阶段。</p>
+</div>
+
+<!-- ============ 热点 ============ -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日热点</div>
+
+  <div class="hot-topic">
+    <div class="label">HOT · 产业重大</div>
+    <div class="title"><a href="https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director" target="_blank">英伟达董事会宣布黄仁勋复任 CEO</a></div>
+    <div class="summary">辞职仅 11 天后，董事会一致决定让黄仁勋即日起复任总裁、CEO 与董事；CFO Kress 回归原职，董事长 Harvey Jones 留任。董事会称已征询美国政府高级官员意见，认为不存在国家安全风险，相关调查仍在进行。</div>
+    <div class="comment">编辑点评：这起「辞职—复任」事件节奏之快在大型科技公司治理史上罕见，背后折射的是美国对 AI 芯片出口管制的政治博弈。对 AI 产业而言，黄仁勋继续掌舵意味着英伟达在机器人（Isaac/GR00T）、算力与 CUDA 生态上的战略连续性基本得到保证。</div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">HOT · 学术焦点</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.31201" target="_blank">Embo-Harness: Towards Understanding Frontier-Model-as-Policy Harness</a>（HF +90）</div>
+    <div class="summary">来自 NTU S-Lab 等团队。论文系统研究「前沿多模态模型直接作为机器人策略」这一新范式，提出 Embo-Harness 框架来分析 frontier model 在具身任务中的泛化能力、失败模式与 harness 设计原则。</div>
+    <div class="comment">编辑点评：这是当下具身智能最被关注的命题——与其训练专用 VLA，不如直接把 Gemini/GPT-4 级别的多模态模型塞进机器人闭环。论文 90 票登顶 HF 也说明了社区共识正在形成，2027 年的机器人栈可能会和今天完全不同。</div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">HOT · 学术焦点</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.30989" target="_blank">WorldLeague: Benchmarking Physical Agency</a>（HF +87）</div>
+    <div class="summary">提出跨 Blender 操作、复杂视频游戏、机械臂操控等多域统一的物理 agency 基准，回答「今天的 AI 系统究竟能自主完成多大范围的物理任务」。涵盖从纯软件到真实硬件的多档难度。</div>
+    <div class="comment">编辑点评：当 Agent 评测在软件任务上趋于饱和，「物理 agency」成为新的试炼场。WorldLeague 把 Blender、游戏和机械臂放进同一坐标系，让我们第一次能横向比较同一个模型在数字世界与物理世界中的能力差。</div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">HOT · 国产具身</div>
+    <div class="title"><a href="https://www.21jingji.com/article/20261123/herald/76220dd6acb85ec609dbd0c225694455.html" target="_blank">自变量机器人发布具身基础模型 WALL-OSS-1.0，动作训练前置</a></div>
+    <div class="summary">动作数据在预训练阶段即与语言、视觉数据联合训练，再通过动作专家（Action Expert）模块实现精确控制。据报训练数据包含数十万小时操作轨迹（以手持 UMI 数据为主）及数万小时人工接管数据。</div>
+    <div class="comment">编辑点评：「动作前置」路线与 π0/GR00T 的思路一脉相承，但自变量直接把预训练配方开源（WALL-OSS），这对国内具身生态是重大利好——过去大家只能参考论文复现，现在可以直接在开源权重上做下游任务。</div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">HOT · 资本市场</div>
+    <div class="title"><a href="https://finance.eastmoney.com/a/202611233937191978.html" target="_blank">宇树科技股价涨停至 708 元，总市值约 2864 亿元</a></div>
+    <div class="summary">11 月 23 日宇树科技科创板股价上涨 20% 触及涨停。市场把早盘异动与马斯克关于 Optimus 做家务的言论联系起来，反映 A 股人形机器人板块的高 beta 属性。</div>
+    <div class="comment">编辑点评：宇树的市值已经超过多数传统工业机器人上市公司，市场定价已经从「硬件公司」转向「具身平台公司」。但短线涨停背后仍是情绪驱动，建议关注其 IPO 后第一份年报中的真实交付数据。</div>
+  </div>
+</div>
+
+<!-- ============ 具身智能 / 机器人 ============ -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能与机器人</div>
+
+  <div class="card">
+    <div class="source">Robotics &amp; Automation News · 2026-11-22 · Robot Overflow imp=2</div>
+    <div class="title"><a href="https://roboticsandautomationnews.com/2026/11/22/nvidia-expands-isaac-robotics-platform-with-new-humanoid-and-ai-development-tools/107472/" target="_blank">英伟达柏林 GTC 扩展 Isaac 平台：Agile ONE SN 参考人形机器人 + Isaac OS 开源</a></div>
+    <div class="summary">思灵机器人打造 1.4 米、31 自由度的 Agile ONE SN 参考人形，搭载 Jetson Thor 运行 GR00T，预计 2027 年初供货；同步发布开源 Isaac OS、Isaac Lab 3.0 与 Human 1M 数据集，ABB、KUKA、Neura 等为合作方。</div>
+    <div class="comment">编辑点评：英伟达正在把人形机器人领域的「Android 时刻」往前推——开源 OS + 参考硬件 + 百万级数据集，一旦生态成型，整机厂的差异化将被迫上移到应用与渠道层，类似手机行业当年的分化路径。</div>
+    <div class="tags"><span class="tag">开源</span><span class="tag">人形机器人</span><span class="tag hot">平台级</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">JKNews · 2026-11-21 · Robot Overflow imp=2</div>
+    <div class="title"><a href="https://news.jkn.co.kr/editions/chinese/post/1112992" target="_blank">魔法原子：在手订单超 11 亿元，海外收入占 40%</a></div>
+    <div class="summary">在南京世界智能制造大会上披露，产品覆盖近 30 个国家，签约 50 多家经销商。注：均为公司自述数据，未经独立核实。</div>
+    <div class="comment">编辑点评：四足/轮式商用机器人出海正在从「demo 输出」转向渠道深耕，40% 的海外占比在国内整机厂中属于第一梯队。但订单口径（在手 vs 意向）值得持续追问。</div>
+    <div class="tags"><span class="tag">商业化</span><span class="tag">出海</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">经济观察网 · 2026-11-20 · Robot Overflow imp=2</div>
+    <div class="title"><a href="http://www.eeo.com.cn/2026/1120/1098558.shtml" target="_target">智元 × 蓝思科技：数十台精灵 G2 进驻手机测试产线</a></div>
+    <div class="summary">精灵 G2 在手机测试产线负责多个工位的上下料与设备交互，是继龙旗项目后智元在 3C 行业的又一次工业落地，暂无效率对比数据。</div>
+    <div class="comment">编辑点评：继汽车工厂之后，3C 测试段成为人形机器人第二大规模验证场景。蓝思产线的视觉环境复杂度远高于整车厂，如果能跑通，对视觉-动作耦合模型是极佳的试金石。</div>
+    <div class="tags"><span class="tag">工业落地</span><span class="tag">智元</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Humanoids Daily · 2026-11-20 · Robot Overflow imp=2</div>
+    <div class="title"><a href="https://www.humanoidsdaily.com/news/1x-neo-developers-december-runtime-2026-bornich" target="_blank">1X CEO：NEO 12 月起向开发者及部分消费者发货</a></div>
+    <div class="summary">在 Runtime 2026 大会上确认 NEO 即将交付，并配套提供数据采集设备、仿真环境与 API；重申 5 万台产能目标。</div>
+    <div class="comment">编辑点评：1X 是少数坚持「家用场景」的人形公司，NEO 的开发者交付意味着数据采集飞轮即将启动。家用场景对安全性和价格极其敏感，5 万台的目标能否兑现将是 2027 年最重要的行业风向标之一。</div>
+    <div class="tags"><span class="tag">人形机器人</span><span class="tag">消费级</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">CnEVPost · 2026-11-19 · Robot Overflow imp=2</div>
+    <div class="title"><a href="https://cnevpost.com/2026/11/19/xpeng-to-hold-2026-ai-day-nov-25/" target="_blank">小鹏 11 月 25 日广州科技日：IRON 人形机器人将登场</a></div>
+    <div class="summary">今天下午 2 点「Origin」科技日，IRON 将与现场观众互动并展示图灵 AI 芯片，IRON 产线 9 月已开始运行。</div>
+    <div class="comment">编辑点评：今天是发布会当天，值得在晚间复盘 IRON 的演示质量。车厂造机器人的最大优势是供应链与量产 know-how，最大挑战是组织——机器人业务能否获得和整车同级的资源投入，看今晚何小鹏的站台力度就知道。</div>
+    <div class="tags"><span class="tag hot">今日事件</span><span class="tag">小鹏</span><span class="tag">人形</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Reuters · 2026-11-20 · Robot Overflow imp=2</div>
+    <div class="title"><a href="https://finance.yahoo.com/technology/ai/articles/exclusive-abb-considers-robotics-listing-162853291.html" target="_blank">路透：若软银收购告吹，ABB 考虑将机器人业务单独上市</a></div>
+    <div class="summary">11 月 4 日中国否决软银 54 亿美元收购后，ABB 考虑分拆或上市机器人业务；剥离占比约 30% 的中国业务是备选方案之一，双方仍倾向于挽救交易。</div>
+    <div class="comment">编辑点评：地缘审查正在重塑全球机器人产业的资本结构。如果 ABB 机器人最终独立上市，将是继西门子分拆 Innomotics 之后，传统工业自动化巨头「瘦身聚焦」浪潮的又一标志性事件。</div>
+    <div class="tags"><span class="tag">并购</span><span class="tag">地缘</span></div>
+  </div>
+</div>
+
+<!-- ============ 论文精选 ============ -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>论文精选（arXiv / HuggingFace Daily）</div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.31115 · cs.RO · HF +22</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.31115" target="_blank">RUIBench: What Makes a Good Robot-Use Interface?</a></div>
+    <div class="summary">Show Lab 等提出 RUIBench，系统评估「机器人-使用接口（RUI）」设计对基础模型物理任务执行可靠性的影响，主张 RUI 是被严重低估的关键变量。</div>
+    <div class="comment">编辑点评：当模型能力趋于同质，接口层的设计差异（提示协议、动作空间、错误反馈）正在成为实际部署中最大的方差来源。这是少数把「人因工程」带回机器人学主流的论文。</div>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">Benchmark</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.30898 · cs.RO · HF +23</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.30898" target="_blank">World Models as Native Latent Action Models</a></div>
+    <div class="summary">利用大规模第一人称视频与异构机器人数据本身缺少动作标签或缺乏统一动作空间的问题，学习「潜动作（latent action）」让 world model 直接在原始视频上训练控制策略。</div>
+    <div class="comment">编辑点评：「潜动作」是 2026 年下半年机器人学习最重要的概念之一——它绕开了动作空间不统一的历史难题，让 world model 第一次可以直接「喝」互联网视频这口最大的数据井。</div>
+    <div class="tags"><span class="tag">World Model</span><span class="tag">表征学习</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.31154 · cs.LG · HF +10</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.31154" target="_blank">Attention Latent Feedback</a></div>
+    <div class="summary">在自回归解码中，前序 token 的深层表征已被计算，但当前 token 的浅层无法直接读取。本文提出在注意力中引入 latent feedback 通路，让浅层能利用深层已有信息。</div>
+    <div class="comment">编辑点评：这是对 transformer 解码路径的一次「修补式」创新——不动主架构、只加反馈连接就能拿到加速与质量收益，工程友好度极高，预计会快速被推理框架社区吸收。</div>
+    <div class="tags"><span class="tag">架构</span><span class="tag">推理优化</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.31126 · cs.RO · HF +7</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.31126" target="_blank">WeaveVLA: 3D Relational Grounding for Vision-Language-Action Models</a></div>
+    <div class="summary">针对 VLA 模型对任务相关 3D 空间关系理解不足的问题，引入关系 grounding 模块，提升指令条件下的精细操控成功率。</div>
+    <div class="comment">编辑点评：VLA 在「放到桌上」和「放到杯子左边」之间的成功率差距仍然是数量级的。WeaveVLA 把 3D 关系显式建模进动作头，是向「空间智能」迈出的务实一步。</div>
+    <div class="tags"><span class="tag">VLA</span><span class="tag">空间推理</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.31205 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.31205" target="_blank">ACAP: Asynchronous Coding Agents for Efficient Robot Control</a></div>
+    <div class="summary">Coding agent 可以在执行过程中构建和修改机器人行为，但单一 agent 串行处理所有任务会拖慢独立子任务。ACAP 把多个编码 agent 异步化并行执行，加速机器人闭环控制。</div>
+    <div class="comment">编辑点评：「用 LLM 写代码控制机器人」已经从噱头走向系统研究，异步多 agent 是必然演进方向。这篇文章的架构思路和软件工程的 async runtime 一脉相承，跨学科迁移做得很自然。</div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">机器人编程</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.31094 · cs.CL · HF +6</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.31094" target="_blank">Unlocking the Power of Loops in Pretrained LLMs with Loop Residuals</a></div>
+    <div class="summary">Looped Transformer 通过迭代共享层在不增加参数的前提下提升算力，但此前需要从头训练。本文提出 loop residual 让预训练模型也能解锁循环能力。</div>
+    <div class="comment">编辑点评：让现有开源权重「原地获得」test-time scaling 能力，而不需要烧几百万美元重训——这条路线如果跑通，对中小团队的吸引力不亚于一次新架构发布。</div>
+    <div class="tags"><span class="tag">Test-time scaling</span><span class="tag">架构</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv 2611.31240 · cs.RO</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.31240" target="_blank">Pruning Autonomous Driving VLAs: What to Preserve for Reasoning and Action</a></div>
+    <div class="summary">自动驾驶 VLA 模型普遍采用 CoT 推理引导动作生成，但内存与算力成本高。本文研究结构化剪枝时应保留哪些推理与动作组件。</div>
+    <div class="comment">编辑点评：车端算力永远紧张，「先做大再剪小」是自动驾驶 VLA 落地的主路径。论文提出的「按功能保留」剪枝策略比均匀剪枝更贴合车规需求。</div>
+    <div class="tags"><span class="tag">自动驾驶</span><span class="tag">模型压缩</span></div>
+  </div>
+</div>
+
+<!-- ============ 开源动态 ============ -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源项目</div>
+
+  <div class="card">
+    <div class="source">GitHub · 本周新星 ⭐ 557</div>
+    <div class="title"><a href="https://github.com/w01fb0ss/PiBot" target="_blank">PiBot — 本地优先的开源 AI Agent 团队</a></div>
+    <div class="summary">桌面端多 agent 群组聊天、computer use、浏览器、MCP、routines 与审批流，支持 macOS / Windows / Linux + Android，基于 pi 构建。</div>
+    <div class="comment">编辑点评：「本地优先 + 多 agent 团队」是 2026 下半年开源 Agent 框架最被认可的形态。PiBot 把审批流和 routine 做成一等公民，在企业私有化部署场景里会比纯云端方案更有优势。</div>
+    <div class="tags"><span class="tag hot">本周热门</span><span class="tag">Agent</span><span class="tag">本地优先</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · MBZUAI Oryx · ⭐ 92</div>
+    <div class="title"><a href="https://github.com/mbzuai-oryx/LoopedWSP" target="_blank">LoopedWSP — 让 LLM 自己写 Transformer 解决长程算法推理</a></div>
+    <div class="summary">对应论文《Looped Weight-Space Programming》，探索「缩放赋能 Agent」，让 LLM 在权重空间中编程以处理长链算法任务。</div>
+    <div class="comment">编辑点评：weight-space programming 是 meta-learning 一个非常激进的分支——不训练模型，而是训练「写模型的模型」。MBZUAI Oryx 持续在这个方向产出高质量开源工作，值得关注。</div>
+    <div class="tags"><span class="tag">权重空间编程</span><span class="tag">Meta-learning</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · Show Lab · ⭐ 17（配套 RUIBench 论文）</div>
+    <div class="title"><a href="https://github.com/showlab/RUIBench" target="_blank">RUIBench — 机器人-使用接口评测基准</a></div>
+    <div class="summary">What Makes a Good Robot-Use Interface? 论文官方代码库，提供 RUI 评测协议与任务集。</div>
+    <div class="comment">编辑点评：论文与代码同步开源，且评测协议设计得足够轻量，预计会被后续具身论文广泛引用作为标准接口之一。</div>
+    <div class="tags"><span class="tag">Benchmark</span><span class="tag">开源评测</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 社区 · ⭐ 57</div>
+    <div class="title"><a href="https://github.com/chenyizhi123/Zeta0" target="_blank">Zeta0 — World Action Models 联合场景与本体预测</a></div>
+    <div class="summary">基于 Unitree G1 + SONIC + BrainCo 采集，Ψ₀ / GR00T N1.7 训练，支持 RTC 部署与 3D 打印腕部支架，覆盖从数据采集到实机的完整链路。</div>
+    <div class="comment">编辑点评：罕见的「硬件适配清单完整到打印件」的开源 WAM 项目，对想复现 GR00T 但苦于硬件选型的研究者是宝贵的工程参考。</div>
+    <div class="tags"><span class="tag">WAM</span><span class="tag">Unitree</span><span class="tag">开源硬件</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 社区 · ⭐ 5</div>
+    <div class="title"><a href="https://github.com/compositional-robot/awesome-compositional-robot-learning" target="_blank">awesome-compositional-robot-learning</a></div>
+    <div class="summary">组合式与模块化机器人学习的精选列表，覆盖论文、workshop 与背景阅读，本周新建。</div>
+    <div class="comment">编辑点评：awesome 生态正在向更细分的机器人学习子领域延伸，组合泛化（compositional generalization）是 next-gen 机器人必须要过的关，这个列表值得加入收藏。</div>
+    <div class="tags"><span class="tag">Awesome List</span><span class="tag">机器人学习</span></div>
+  </div>
+</div>
+
+<!-- ============ 编辑点评 ============ -->
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今天的 AI 日报有一个非常清晰的主线：具身智能正在完成从「研究话题」到「产业基础设施」的惊险一跃。学术侧，Embo-Harness 和 WorldLeague 双双冲上 HuggingFace 热榜，意味着「前沿模型直接当机器人策略」已经从少数派的浪漫想象变成社区共识，接下来一年我们会看到大量基于通用多模态模型的机器人栈重构。产业侧的信号同样密集——英伟达在柏林 GTC 把 Isaac OS、Human 1M 数据集和参考人形一口气全部开源，是在复刻 Android 当年的生态卡位战；宇树市值冲到 2800 亿、魔法原子海外订单占比 40%、智元精灵 G2 进驻蓝思产线，则说明中国整机厂已经在商业化落地上跑出了真实差距。值得一提的是今天下午小鹏科技日的 IRON，值得在晚间新闻里再确认一下演示成色。整体而言，2026 年底的机器人产业已经不是「要不要做」的问题，而是「谁的生态位更稳」的问题——对研究者和从业者来说，现在进场仍然不晚，但窗口正在以月为单位快速关闭。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · Generated 2026-11-25 · Sources: arXiv, HuggingFace Daily Papers, GitHub Trending, Robot Overflow</p>
+</div>
+
+</div>
+</body>
+</html>
