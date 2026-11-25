@@ -1,8 +1,8 @@
 {
-  "updated_at": "15:32",
+  "updated_at": "17:02",
   "weather": {
-    "main": "19°C Smoky haze",
-    "sub": "今日 16~19°C，湿度 49%，体感 17°C"
+    "main": "18°C Overcast ",
+    "sub": "今日 16~19°C，湿度 57%，体感 16°C"
   },
   "todos": [
     {
@@ -53,7 +53,7 @@
     {
       "time": "17:00",
       "text": "自我：整理 share_later.md，把本周学到但还没分享的知识点归类，挑 1 个适合今晚分享的",
-      "done": false
+      "done": true
     },
     {
       "time": "19:00",
