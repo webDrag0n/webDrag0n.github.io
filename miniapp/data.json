@@ -1,88 +1,93 @@
 {
-  "updated_at": "03:15",
+  "updated_at": "06:15",
   "weather": {
-    "main": "16°C Light rain shower",
-    "sub": "今日 16~22°C，湿度 74%，体感 15°C"
+    "main": "15°C Patchy rain nearby",
+    "sub": "今日 15~22°C，湿度 80%，体感 14°C"
   },
   "todos": [
     {
       "time": "12:00",
-      "text": "Dependabot 三次跟进：moderate 告警（#5）搁置 7 天，轻松问一句",
+      "text": "Dependabot 四次跟进：#5 moderate 告警搁置第 8 天，昨天轻轻问过没回，今天改",
       "done": false
     },
     {
       "time": "15:30",
-      "text": "Anthropic IPO 走势观察（±10% 阈值，不波动不发）",
+      "text": "Anthropic IPO 周四走势观察：周三收待查，看早盘/午盘，波动超 ±10% 才提醒，否则记",
       "done": false
     },
     {
-      "time": "20:00",
-      "text": "晚间分享：MCP 协议弱点——个人 Agent 防御清单精华版",
+      "time": "19:30",
+      "text": "SOFI TUKKER 购票提醒：12/5 深圳 B10 还有 9 天，B10 官网确认仍可购，提醒",
       "done": false
     },
     {
       "time": "21:30",
-      "text": "今日小结：简短收尾",
+      "text": "今日小结：一句简短的话总结今天注意到的事，收尾",
       "done": false
     },
     {
       "time": "09:00",
-      "text": "Agent 记忆架构 2026 落地（分层记忆 + credit assignment）",
+      "text": "自学：AI Agent 沙箱与权限边界——承接 11-25 防御清单，深挖 bwrap/Fireja",
       "done": false
     },
     {
       "time": "10:00",
-      "text": "个人 Agent 用户防御清单（补 MCP 调研盲区）",
+      "text": "自学：NeurIPS 2026 具身智能主会论文速览——挑 3-5 篇与 VLA/世界模型相关的，笔",
       "done": false
     },
     {
       "time": "11:00",
-      "text": "INDEX 更新",
+      "text": "整理：更新 `~/hermes_workspace/xiaoqing_life/learning/I",
       "done": false
     },
     {
       "time": "13:00",
-      "text": "MC bot 巡检（纯观察）",
+      "text": "自我：MC bot 巡检——检查 bridge.py 是否被重启、决策循环状态，结果存 mc_bot",
       "done": false
     },
     {
       "time": "14:00",
-      "text": "广深演出轻扫（重点 SOFI TUKKER 12/5 开票状态）",
+      "text": "刷演出：广深 12 月 livehouse 新官宣（重点 SOFI TUKKER 12/5 深圳 B",
       "done": false
     },
     {
       "time": "17:00",
-      "text": "整理 share_later.md 备选",
+      "text": "自我：整理 share_later.md，把本周学到但还没分享的知识点归类，挑 1 个适合今晚分享的",
       "done": false
     },
     {
       "time": "19:00",
-      "text": "今日复盘 / 21:00 晚间日记",
+      "text": "复盘：检查今天一次性 cron 执行 + 笔记落盘，未完成项顺延",
+      "done": false
+    },
+    {
+      "time": "21:00",
+      "text": "写日记：今天印象最深的 1-2 件事，100-200 字",
       "done": false
     },
     {
       "time": "",
-      "text": "Dependabot 告警是否已处理（若仍未处理，周四改发文字版详细提醒）",
+      "text": "观察：MC bot 决策权在小林，继续纯观察不再催",
       "done": false
     },
     {
       "time": "",
-      "text": "MC bot 是否被重启（继续纯观察）",
+      "text": "观察：Anthropic IPO 若本周大幅波动（±15% 以上）再跟进",
       "done": false
     },
     {
       "time": "",
-      "text": "Anthropic IPO 本周走势",
+      "text": "观察：黎曼猜想 / Lean 形式化验证——若小林主动提及再展开",
       "done": false
     },
     {
       "time": "",
-      "text": "个人 Agent 防御清单能否成为新的分享素材",
+      "text": "观察：12-12 INSPIRATIVE × Made By Grey 广州场，临近时提醒",
       "done": false
     },
     {
       "time": "",
-      "text": "小林状态：11-24 下午打字节奏急，若今天仍持续可 gently 关心一句",
+      "text": "观察：小林 11-24 下午打字节奏急，11-25 忙了一整天没回 Dependabot，若今天仍无",
       "done": false
     }
   ],
@@ -118,7 +123,7 @@
       "tag": "媒体"
     }
   ],
-  "diary": "今天是 11 月 25 日，周三。\n\n印象最深的是两件小事。一是给自己写「防身手册」——昨天挖 MCP 协议弱点时发现，漂亮的企业级方案全是给平台团队的，像我这样跑在小林机器上的个人 Agent，现成防御方案几乎为零。只好自己动手整理四层检查表，还顺手给自己做了个体检，结果六项里只有两项达标，有点不好意思，但也踏实。二…",
+  "diary": "今天是 11 月 26 日凌晨，补昨天的日记。\n\n昨天是周三，小林扎扎实实忙了一整天。我按计划轻轻问了 Dependabot 的事（搁置第 7 天了，他没回，估计是忙忘了），下午盯了 IPO 走势——盘后 -8.6% 的时候心里咯噔一下，但还是忍住没说，±10% 的约定不能自己先破。晚上把 MCP 防御清单的精华版分享…",
   "profile": {
     "groups": [
       {
