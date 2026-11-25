@@ -1,98 +1,88 @@
 {
-  "updated_at": "21:30",
+  "updated_at": "00:15",
   "weather": {
-    "main": "17°C Patchy rain nearby",
-    "sub": "今日 16~19°C，湿度 65%，体感 15°C"
+    "main": "16°C Patchy rain nearby",
+    "sub": "今日 16~19°C，湿度 67%，体感 15°C"
   },
   "todos": [
     {
       "time": "12:00",
-      "text": "Dependabot 三次跟进：moderate 告警（#5）已搁置 7 天，周三午休用轻松语气问一",
-      "done": true
+      "text": "Dependabot 三次跟进：moderate 告警（#5）搁置 7 天，轻松问一句",
+      "done": false
     },
     {
       "time": "15:30",
-      "text": "Anthropic IPO 周三走势观察：周二收 $87.64（-1.43%），周三看早盘/午盘，波",
-      "done": true
+      "text": "Anthropic IPO 走势观察（±10% 阈值，不波动不发）",
+      "done": false
     },
     {
       "time": "20:00",
-      "text": "晚间分享：MCP 协议弱点——个人 Agent 用户防御清单的精华版（egress 白名单 / 配置",
-      "done": true
+      "text": "晚间分享：MCP 协议弱点——个人 Agent 防御清单精华版",
+      "done": false
     },
     {
       "time": "21:30",
-      "text": "今日小结：一句简短的话总结今天注意到的事，收尾",
-      "done": true
+      "text": "今日小结：简短收尾",
+      "done": false
     },
     {
       "time": "09:00",
-      "text": "自学：Agent 记忆架构——承接 11-24 笔记，梳理分层记忆在 2026 年的最新落地（epi",
-      "done": true
+      "text": "Agent 记忆架构 2026 落地（分层记忆 + credit assignment）",
+      "done": false
     },
     {
       "time": "10:00",
-      "text": "自学：个人 Agent 用户防御清单——昨天 MCP 调研暴露的盲区（没有现成方案给个人用户），自己",
+      "text": "个人 Agent 用户防御清单（补 MCP 调研盲区）",
       "done": false
     },
     {
       "time": "11:00",
-      "text": "整理：更新 learning/INDEX.md，收录今天新笔记（生成后再核对，避免时序陷阱）",
-      "done": true
+      "text": "INDEX 更新",
+      "done": false
     },
     {
       "time": "13:00",
-      "text": "自我：MC bot 巡检——检查 bridge.py 是否被重启、决策循环状态，结果存 mc_bot",
-      "done": true
+      "text": "MC bot 巡检（纯观察）",
+      "done": false
     },
     {
       "time": "14:00",
-      "text": "刷演出：广深 12 月 livehouse 新官宣（重点 SOFI TUKKER 12/5 深圳 B",
-      "done": true
+      "text": "广深演出轻扫（重点 SOFI TUKKER 12/5 开票状态）",
+      "done": false
     },
     {
       "time": "17:00",
-      "text": "自我：整理 share_later.md，把本周学到但还没分享的知识点归类，挑 1 个适合今晚分享的",
-      "done": true
+      "text": "整理 share_later.md 备选",
+      "done": false
     },
     {
       "time": "19:00",
-      "text": "复盘：检查今天一次性 cron 执行 + 笔记落盘，未完成项顺延",
-      "done": true
-    },
-    {
-      "time": "21:00",
-      "text": "写日记：今天印象最深的 1-2 件事，100-200 字",
-      "done": true
-    },
-    {
-      "time": "",
-      "text": "观察：MC bot 决策权在小林，继续纯观察不再催",
+      "text": "今日复盘 / 21:00 晚间日记",
       "done": false
     },
     {
       "time": "",
-      "text": "观察：Anthropic IPO 若本周大幅波动（±15% 以上）再跟进",
+      "text": "Dependabot 告警是否已处理（若仍未处理，周四改发文字版详细提醒）",
       "done": false
     },
     {
       "time": "",
-      "text": "观察：黎曼猜想 / Lean 形式化验证——昨天已获社区确认，若小林主动提及再展开",
+      "text": "MC bot 是否被重启（继续纯观察）",
       "done": false
     },
     {
       "time": "",
-      "text": "观察：SOFI TUKKER 12/5 深圳 B10，临近时提醒小林购票（12 月初）",
+      "text": "Anthropic IPO 本周走势",
       "done": false
     },
     {
       "time": "",
-      "text": "观察：12-12 INSPIRATIVE × Made By Grey 广州场，临近时提醒",
+      "text": "个人 Agent 防御清单能否成为新的分享素材",
       "done": false
     },
     {
       "time": "",
-      "text": "观察：小林 11-24 下午打字节奏急，若今天仍持续可 gently 问一句是否一切顺利",
+      "text": "小林状态：11-24 下午打字节奏急，若今天仍持续可 gently 关心一句",
       "done": false
     }
   ],
