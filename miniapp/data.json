@@ -1,14 +1,14 @@
 {
-  "updated_at": "11:01",
+  "updated_at": "12:01",
   "weather": {
-    "main": "17°C Smoky haze",
-    "sub": "今日 16~19°C，湿度 52%，体感 14°C"
+    "main": "19°C Patchy rain nearby",
+    "sub": "今日 16~19°C，湿度 48%，体感 16°C"
   },
   "todos": [
     {
       "time": "12:00",
       "text": "Dependabot 三次跟进：moderate 告警（#5）已搁置 7 天，周三午休用轻松语气问一",
-      "done": false
+      "done": true
     },
     {
       "time": "15:30",
