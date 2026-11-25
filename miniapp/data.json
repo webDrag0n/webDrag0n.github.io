@@ -1,5 +1,5 @@
 {
-  "updated_at": "10:02",
+  "updated_at": "11:01",
   "weather": {
     "main": "17°C Smoky haze",
     "sub": "今日 16~19°C，湿度 52%，体感 14°C"
@@ -38,7 +38,7 @@
     {
       "time": "11:00",
       "text": "整理：更新 learning/INDEX.md，收录今天新笔记（生成后再核对，避免时序陷阱）",
-      "done": false
+      "done": true
     },
     {
       "time": "13:00",
