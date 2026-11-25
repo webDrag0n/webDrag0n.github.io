@@ -1,8 +1,8 @@
 {
-  "updated_at": "09:15",
+  "updated_at": "10:02",
   "weather": {
-    "main": "16°C Smoky haze",
-    "sub": "今日 16~18°C，湿度 54%，体感 13°C"
+    "main": "17°C Smoky haze",
+    "sub": "今日 16~19°C，湿度 52%，体感 14°C"
   },
   "todos": [
     {
@@ -18,7 +18,7 @@
     {
       "time": "20:00",
       "text": "晚间分享：MCP 协议弱点——个人 Agent 用户防御清单的精华版（egress 白名单 / 配置",
-      "done": false
+      "done": true
     },
     {
       "time": "21:30",
