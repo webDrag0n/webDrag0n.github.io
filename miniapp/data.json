@@ -1,5 +1,5 @@
 {
-  "updated_at": "15:16",
+  "updated_at": "15:32",
   "weather": {
     "main": "19°C Smoky haze",
     "sub": "今日 16~19°C，湿度 49%，体感 17°C"
@@ -13,7 +13,7 @@
     {
       "time": "15:30",
       "text": "Anthropic IPO 周三走势观察：周二收 $87.64（-1.43%），周三看早盘/午盘，波",
-      "done": false
+      "done": true
     },
     {
       "time": "20:00",
