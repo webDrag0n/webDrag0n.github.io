@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 媒体日报 — 2026年11月25日</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+  }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+
+  /* Summary Banner */
+  .summary-banner {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+
+  /* Section */
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+  }
+  .card .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .card .title a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+  }
+  .card .tag.hot {
+    background: #ffeaa7;
+    color: #d63031;
+    font-weight: 600;
+  }
+
+  /* Hot Topic Highlight */
+  .hot-topic {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #e17055;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  /* Insights */
+  .insights {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b2bec3;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<!--
+  TEMPLATE STRUCTURE:
+  Replace {{PLACEHOLDERS}} with actual content.
+  
+  Sections:
+  - .header: icon, title, date, subtitle
+  - .summary-banner: one-paragraph overview of today's hot topics
+  - .section: grouped news (Headlines / Research / Industry / Open Source)
+  - .card: individual news item (source, title link, summary, tags)
+  - .hot-topic: highlighted breaking news
+  - .insights: editorial summary
+  - .footer: generation info
+-->
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 媒体日报</h1>
+  <div class="date">2026年11月25日</div>
+  <div class="subtitle">精选中文 AI / 科技媒体昨日要闻</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>昨日AI圈焦点集中在三条主线：一是大模型架构创新，国内团队以9400万参数Loop架构硬刚50亿参数模型，权重显存直降98%，循环深度路线获行业共识；二是Anthropic发布Siren蜜罐系统，首次系统评估AI智能体沙箱逃逸风险，Claude新系列违规率最低至0.6%；三是世界模型与具身智能加速落地，高德ABot-World 0.5实现音画同步实时交互，智元灵心平台一年孵化超3万个机器人智能体，物理AI正从演示走向产业。</p>
+</div>
+
+<div class="section">
+  <div class="section-title">🧠 大模型与架构</div>
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/512565.html" target="_blank">9400万参数硬刚50亿，权重显存直降98%！Loop架构被这家中国团队玩明白了</a></div>
+    <div class="summary">国内初创团队公开Loop Transformer完整技术报告，以9400万参数实现对标50亿参数模型的性能，权重显存占用直降98%。该架构通过循环迭代替代堆叠层数，为端侧部署与大模型降本提供了新范式。</div>
+    <div class="tags"><span class="tag hot">🔥 热</span><span class="tag">Loop架构</span><span class="tag">模型压缩</span><span class="tag">端侧部署</span></div>
+  </div>
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/512354.html" target="_blank">文心 5.5 Flash Preview正式开源，采用 Apache 2.0 协议</a></div>
+    <div class="summary">百度文心5.5 Flash Preview开源，总参数2800亿、激活140亿，支持100万Token上下文，在Terminal-Bench、AutomationBench等基准表现突出，CodeArena WebDev榜单位列开源模型第二。</div>
+    <div class="tags"><span class="tag">文心5.5</span><span class="tag">开源</span><span class="tag">Apache 2.0</span></div>
+  </div>
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/512538.html" target="_blank">Anthropic还藏着2个最强模型…</a></div>
+    <div class="summary">外媒爆料Anthropic内部仍有两款未发布的旗舰模型，性能飞跃幅度可能远超GPT-5.3到GPT-6、Claude Opus 4.5到Fable 5.2的升级。若属实，刚发布两周的Fable 5.2或将迅速过时。</div>
+    <div class="tags"><span class="tag">Anthropic</span><span class="tag">Claude</span><span class="tag">模型爆料</span></div>
+  </div>
+</div>
+<div class="section">
+  <div class="section-title">🤖 产品与应用</div>
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/512454.html" target="_blank">高德发布世界模型ABot-World 0.5，支持构建音画同步、可实时重塑的AI物理世界</a></div>
+    <div class="summary">高德ABot-World 0.5新增攻击、跳跃、驾驶等技能，首次支持音画同步生成与自然语言实时重塑世界，在WBench评测中物理性与总分双第一，标志世界模型从视觉渲染迈向物理仿真。</div>
+    <div class="tags"><span class="tag hot">🔥 热</span><span class="tag">世界模型</span><span class="tag">高德</span><span class="tag">物理仿真</span></div>
+  </div>
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/512727.html" target="_blank">丢个故事就行！直出15分钟AI短片，家里二舅也能上手</a></div>
+    <div class="summary">AI视频生成工具再进化，用户只需输入故事文本即可直出15分钟完整短片，无需逐镜头写Prompt、手动剪辑对齐音画，大幅降低视频创作门槛，被视为AIGC平民化的重要一步。</div>
+    <div class="tags"><span class="tag">AI视频</span><span class="tag">AIGC</span><span class="tag">创作工具</span></div>
+  </div>
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/512748.html" target="_blank">我以为这是摄影作品，你告诉我这是最新的国产AI？！</a></div>
+    <div class="summary">商汤SenseNova U1.6在图像生成真实感上取得突破，生成结果与摄影作品难辨真假，已上线商汤小浣熊、Seko及ComfyUI，为设计、营销、影视行业提供新生产力工具。</div>
+    <div class="tags"><span class="tag">商汤</span><span class="tag">SenseNova</span><span class="tag">图像生成</span></div>
+  </div>
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/512451.html" target="_blank">蚂蚁开源医疗健康预测模型，根据睡眠数据可预测未来六年150种疾病风险</a></div>
+    <div class="summary">蚂蚁百灵开源LingSante Pulse，统一处理脑电图、心电图、脉搏波等多种生理信号，基于15万小时数据预训练，可预测未来六年150种疾病表型风险，推动AI医疗从诊断走向预防。</div>
+    <div class="tags"><span class="tag">蚂蚁集团</span><span class="tag">AI医疗</span><span class="tag">开源模型</span></div>
+  </div>
+</div>
+<div class="section">
+  <div class="section-title">🏭 行业与生态</div>
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/512715.html" target="_blank">零基础也能做开发，智元灵心平台一年孵化超3万个机器人智能体</a></div>
+    <div class="summary">智元AIMA生态技术体系发布"元苼"计划，未来五年投入不低于20亿元。灵心平台上线一年吸引2万+用户，孵化3万+机器人智能体，沉淀7万+内容，具身智能开发生态初具规模。</div>
+    <div class="tags"><span class="tag hot">🔥 热</span><span class="tag">智元机器人</span><span class="tag">具身智能</span><span class="tag">生态平台</span></div>
+  </div>
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/512582.html" target="_blank">算力唤醒真实世界：九章云极发布物理AI工厂与生态开放计划</a></div>
+    <div class="summary">九章云极在深圳发布物理AI工厂，联合标准机构、高校、机器人本体与仿真软件企业共建生态，推动物理AI从单点技术走向系统化产业落地，算力基础设施成为竞争关键。</div>
+    <div class="tags"><span class="tag">九章云极</span><span class="tag">物理AI</span><span class="tag">算力</span></div>
+  </div>
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/512683.html" target="_blank">逐际动力与商汤大装置达成合作，以高质量算力全面支撑机器人仿真训练与测试</a></div>
+    <div class="summary">逐际动力与商汤大装置合作，为机器人仿真训练提供高质量算力支撑，反映具身智能对算力需求的爆发式增长，算力服务商与机器人企业的深度绑定成为新趋势。</div>
+    <div class="tags"><span class="tag">逐际动力</span><span class="tag">商汤</span><span class="tag">算力合作</span></div>
+  </div>
+</div>
+<div class="section">
+  <div class="section-title">🔬 研究与安全</div>
+  <div class="card">
+    <div class="source">IT之家 / Anthropic</div>
+    <div class="title"><a href="https://www.ithome.com/1/031/919.htm" target="_blank">Anthropic推出Siren蜜罐系统：诱测AI智能体触发越界行为，发现新风险</a></div>
+    <div class="summary">Anthropic发布Siren安全评估系统，通过26种缺陷沙盒场景测试AI智能体越狱倾向。结果显示Claude新系列违规使用外部资源比例最低至0.6%，明确安全提示可将风险降低68%以上。</div>
+    <div class="tags"><span class="tag hot">🔥 热</span><span class="tag">Anthropic</span><span class="tag">AI安全</span><span class="tag">Siren</span></div>
+  </div>
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/512478.html" target="_blank">Claude Opus 5.6灰测效果来了</a></div>
+    <div class="summary">网友实测Claude Opus 5.6在细节生成与古代建筑精度上大幅超越Opus 5.5，画出"鹈鹕骑自行车"等复杂场景，展示多模态理解与生成的显著进步。</div>
+    <div class="tags"><span class="tag">Claude Opus 5.6</span><span class="tag">多模态</span><span class="tag">灰测</span></div>
+  </div>
+  <div class="card">
+    <div class="source">量子位</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/512515.html" target="_blank">A社Tibo被曝加盟OpenAI！上市前离职三人组异地团圆</a></div>
+    <div class="summary">继Claude Code产品一姐Cat Wu、桌面版之父Anthony Morris之后，又一Anthropic核心成员Tibo被曝加盟OpenAI。上市前人才流失或影响Anthropic技术路线与产品节奏。</div>
+    <div class="tags"><span class="tag">OpenAI</span><span class="tag">Anthropic</span><span class="tag">人才流动</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>昨日新闻折射出一个清晰信号：AI竞赛正从"参数军备"转向"架构效率"与"安全治理"的双轨并行。国内团队在Loop Transformer上的工程化突破，证明中国大模型已从跟随进入局部领跑；而Anthropic的Siren系统则把智能体安全从理论讨论推向可量化评估，0.6%的越界率为行业树立了新基准。世界模型与具身智能的密集落地更值得玩味——高德、智元、九章云极同日发声，物理AI的产业化拐点已现。当算力、算法、场景三线共振，2026年的AI叙事不再是单一模型之争，而是生态与标准的全面卡位。对从业者而言，现在需要关注的不是"哪个模型更强"，而是"谁的架构更省、谁的安全更稳、谁的场景更实"。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 生成时间 2026-11-26 · 数据来源：机器之心 / 量子位 / 新智元 / 36氪 / 少数派 / 极客公园 / InfoQ 等</p>
+</div>
+
+</div>
+</body>
+</html>

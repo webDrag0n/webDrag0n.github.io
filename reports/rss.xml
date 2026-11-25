@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 25 Nov 2026 00:06:35 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 17:03:28 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-11-26</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261126.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261126.html</guid>
+      <pubDate>Thu, 26 Nov 2026 08:00:00 +0000</pubDate>
+      <description>昨日AI圈焦点集中在三条主线：一是大模型架构创新，国内团队以9400万参数Loop架构硬刚50亿参数模型，权重显存直降98%，循环深度路线获行业共识；二是Anthropic发布Siren蜜罐系统，首次系统评估AI智能体沙箱逃逸风险，Claude新系列违规率最低至0.6%；三是世界模型与具身智能加速落地，高德ABot-World 0.5实现音画同步实时交互，智元灵心平台一年孵化超3万个机器人智能体，物理AI正从演示走向产业。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-11-25</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261125.html</link>
