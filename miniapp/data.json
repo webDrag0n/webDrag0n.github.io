@@ -1,5 +1,5 @@
 {
-  "updated_at": "21:15",
+  "updated_at": "21:30",
   "weather": {
     "main": "17°C Patchy rain nearby",
     "sub": "今日 16~19°C，湿度 65%，体感 15°C"
@@ -23,7 +23,7 @@
     {
       "time": "21:30",
       "text": "今日小结：一句简短的话总结今天注意到的事，收尾",
-      "done": false
+      "done": true
     },
     {
       "time": "09:00",
