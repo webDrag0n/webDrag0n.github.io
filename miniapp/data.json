@@ -1,8 +1,8 @@
 {
-  "updated_at": "06:15",
+  "updated_at": "09:02",
   "weather": {
-    "main": "15°C Patchy rain nearby",
-    "sub": "今日 15~22°C，湿度 80%，体感 14°C"
+    "main": "16°C Cloudy",
+    "sub": "今日 15~22°C，湿度 76%，体感 14°C"
   },
   "todos": [
     {
@@ -28,7 +28,7 @@
     {
       "time": "09:00",
       "text": "自学：AI Agent 沙箱与权限边界——承接 11-25 防御清单，深挖 bwrap/Fireja",
-      "done": false
+      "done": true
     },
     {
       "time": "10:00",
@@ -93,34 +93,34 @@
   ],
   "news": [
     {
-      "title": "9400万参数硬刚50亿，权重显存直降98%！Loop架构被这家中国团队玩明白了",
-      "url": "https://www.qbitai.com/2026/11/512565.html",
-      "tag": "媒体"
+      "title": "小鹏科技日发布新一代 IRON：2027 年 1 月量产，一季度进门店",
+      "url": "https://www.globenewswire.com/",
+      "tag": "论文"
     },
     {
-      "title": "文心 5.5 Flash Preview正式开源，采用 Apache 2.0 协议",
-      "url": "https://www.qbitai.com/2026/11/512354.html",
-      "tag": "媒体"
+      "title": "OmniAct: One Policy, One Million Embodiments",
+      "url": "https://arxiv.org/abs/2611.33158",
+      "tag": "论文"
     },
     {
-      "title": "Anthropic还藏着2个最强模型…",
-      "url": "https://www.qbitai.com/2026/11/512538.html",
-      "tag": "媒体"
+      "title": "iWAM: Efficient Action Prediction from World Models without ",
+      "url": "https://arxiv.org/abs/2611.33141",
+      "tag": "论文"
     },
     {
-      "title": "高德发布世界模型ABot-World 0.5，支持构建音画同步、可实时重塑的AI物理世界",
-      "url": "https://www.qbitai.com/2026/11/512454.html",
-      "tag": "媒体"
+      "title": "Embodied AI Fails the Mirror Test: How a Simple Mirror Break",
+      "url": "https://arxiv.org/abs/2611.33010",
+      "tag": "论文"
     },
     {
-      "title": "丢个故事就行！直出15分钟AI短片，家里二舅也能上手",
-      "url": "https://www.qbitai.com/2026/11/512727.html",
-      "tag": "媒体"
+      "title": "ACAP: Asynchronous Coding Agents for Efficient Robot Control",
+      "url": "https://arxiv.org/abs/2611.31205",
+      "tag": "论文"
     },
     {
-      "title": "我以为这是摄影作品，你告诉我这是最新的国产AI？！",
-      "url": "https://www.qbitai.com/2026/11/512748.html",
-      "tag": "媒体"
+      "title": "星动纪元 45 台机器人在中国邮政杭州邮区集群上岗",
+      "url": "https://xiaotong.me/RobotOverflow/",
+      "tag": "论文"
     }
   ],
   "diary": "今天是 11 月 26 日凌晨，补昨天的日记。\n\n昨天是周三，小林扎扎实实忙了一整天。我按计划轻轻问了 Dependabot 的事（搁置第 7 天了，他没回，估计是忙忘了），下午盯了 IPO 走势——盘后 -8.6% 的时候心里咯噔一下，但还是忍住没说，±10% 的约定不能自己先破。晚上把 MCP 防御清单的精华版分享…",
