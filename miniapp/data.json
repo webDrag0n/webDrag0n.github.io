@@ -1,5 +1,5 @@
 {
-  "updated_at": "09:15",
+  "updated_at": "10:02",
   "weather": {
     "main": "16°C Cloudy",
     "sub": "今日 15~22°C，湿度 76%，体感 14°C"
@@ -33,7 +33,7 @@
     {
       "time": "10:00",
       "text": "自学：NeurIPS 2026 具身智能主会论文速览——挑 3-5 篇与 VLA/世界模型相关的，笔",
-      "done": false
+      "done": true
     },
     {
       "time": "11:00",
