@@ -1,11 +1,17 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-11-25T17:03:28.926303+00:00",
+  "generated_at": "2026-11-26T00:02:07.331962+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
-      "count": 115,
+      "count": 116,
       "items": [
+        {
+          "date": "2026-11-26",
+          "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261126.html",
+          "overview": "具身智能成为今日绝对主线——学术侧 OmniAct 用单一策略控制上百万种机器人本体、iWAM 砍掉世界模型的显式未来预测，工业侧小鹏发布新一代 IRON 人形机器人并敲定 2027 年量产，星动纪元 45 台机器人集群落地中国邮政。Agent 方向，\"懒惰 Agent\" 研究用可验证信念 RL 纠正模型言行不一，NightWatch 让 Computer-Use Agent 学会主动盯梢。开源社区 Agent Skills 生态持续爆发，awesome 列表向多智能体编排与具身机器人纵深分化。",
+          "digest": "今天的信号高度一致：具身智能正在从论文走向流水线。学术侧，OmniAct 试图用一个策略统一百万种本体，iWAM 把世界模型的算力包袱卸掉，学术界在为\"通用机器人\"清扫最后的工程障碍；工业侧，小鹏 IRON 敲定 2027 量产、星动纪元 45 台集群进邮政、速腾机器人类传感器销量翻四倍——量产、落地、供应链三条线同时有实锤。另一边，Agent 研究开始\"向内看\"：Lazy Agents 用可验证信念纠正模型的言行不一，这比堆外部护栏更触及幻觉的根。值得记住的一个判断：当\"主动感知\"和\"言行一致\"都成为可训练的目标，Agent 的可信度竞赛才算真正开始。"
+        },
         {
           "date": "2026-11-25",
           "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261125.html",

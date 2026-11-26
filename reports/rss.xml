@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 25 Nov 2026 17:03:28 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 00:02:07 +0000</lastBuildDate>
+    <item>
+      <title>AI 论文速递 — 2026-11-26</title>
+      <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261126.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/papers/daily_papers_20261126.html</guid>
+      <pubDate>Thu, 26 Nov 2026 08:00:00 +0000</pubDate>
+      <description>具身智能成为今日绝对主线——学术侧 OmniAct 用单一策略控制上百万种机器人本体、iWAM 砍掉世界模型的显式未来预测，工业侧小鹏发布新一代 IRON 人形机器人并敲定 2027 年量产，星动纪元 45 台机器人集群落地中国邮政。Agent 方向，&quot;懒惰 Agent&quot; 研究用可验证信念 RL 纠正模型言行不一，NightWatch 让 Computer-Use Agent 学会主动盯梢。开源社区 Agent Skills 生态持续爆发，awesome 列表向多智能体编排与具身机器人纵深分化。</description>
+    </item>
     <item>
       <title>AI 科技日报 — 2026-11-26</title>
       <link>https://webdrag0n.github.io/reports/media/daily_media_20261126.html</link>

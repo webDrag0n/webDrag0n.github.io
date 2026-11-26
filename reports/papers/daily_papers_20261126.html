@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 每日论文与行业动态 — 2026-11-26</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  .header { text-align: center; padding: 40px 20px 30px; margin-bottom: 30px; }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+  .summary-banner {
+    background: var(--card-bg); border-radius: 12px; padding: 20px 24px;
+    margin-bottom: 24px; border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px; font-weight: 700; color: var(--text);
+    margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+  .card {
+    background: var(--card-bg); border-radius: 10px; padding: 18px 22px;
+    margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+  .card .title { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .card .title a { color: var(--accent); text-decoration: none; }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px; padding: 2px 10px; border-radius: 12px;
+    background: var(--tag-bg); color: var(--tag-text);
+  }
+  .card .tag.hot { background: #ffeaa7; color: #d63031; font-weight: 600; }
+  .hot-topic {
+    background: #fff8e1; border: 1px solid #ffe082; border-radius: 10px;
+    padding: 18px 22px; margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px; font-weight: 700; color: #e17055;
+    text-transform: uppercase; margin-bottom: 4px;
+  }
+  .hot-topic .title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  .hot-topic .title a { color: var(--accent); text-decoration: none; }
+  .hot-topic .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+  .insights {
+    background: var(--card-bg); border-radius: 12px; padding: 24px;
+    margin-top: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+  .footer {
+    text-align: center; font-size: 12px; color: #b2bec3;
+    margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">📡</div>
+  <h1>AI 每日论文与行业动态</h1>
+  <div class="date">2026 年 11 月 26 日 · 星期四</div>
+  <div class="subtitle">arXiv · HuggingFace Daily Papers · GitHub Trending · RobotOverflow</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>具身智能成为今日绝对主线——学术侧 OmniAct 用单一策略控制上百万种机器人本体、iWAM 砍掉世界模型的显式未来预测，工业侧小鹏发布新一代 IRON 人形机器人并敲定 2027 年量产，星动纪元 45 台机器人集群落地中国邮政。Agent 方向，"懒惰 Agent" 研究用可验证信念 RL 纠正模型言行不一，NightWatch 让 Computer-Use Agent 学会主动盯梢。开源社区 Agent Skills 生态持续爆发，awesome 列表向多智能体编排与具身机器人纵深分化。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能 · 机器人</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · 工业落地</div>
+    <div class="title"><a href="https://www.globenewswire.com/" target="_blank">小鹏科技日发布新一代 IRON：2027 年 1 月量产，一季度进门店</a></div>
+    <div class="summary">新一代 IRON 身高 170cm、重 62kg，全身 76 个自由度，搭载三颗自研图灵芯片。计划 2027 年 1 月量产，一季度先进门店做导购，二季度面向商业场景发布。小鹏把"车企造人形"的路线又往前推了一大步，量产时间表在国内厂商中最为激进。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.RO · 2026-11-24</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.33158" target="_blank">OmniAct: One Policy, One Million Embodiments</a></div>
+    <div class="summary">提出单一策略控制多样化机器人本体的框架，不仅跨本体迁移任务知识，还能根据每个机器人的能力自适应调整行为。<strong>解读：</strong>"一个策略通吃百万本体"直指具身智能的数据碎片化痛点，若成立将大幅降低新本体接入成本，是通用机器人基础模型方向的重要探索。</div>
+    <div class="tags"><span class="tag hot">热点</span><span class="tag">具身智能</span><span class="tag">机器人基础模型</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.RO · 2026-11-24</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.33141" target="_blank">iWAM: Efficient Action Prediction from World Models without Explicit Future Prediction</a></div>
+    <div class="summary">世界动作模型（WAM）依赖视频生成模型预测场景演化，但生成未来帧代价高昂。iWAM 在不显式预测未来的前提下实现高效动作预测。<strong>解读：</strong>砍掉了世界模型最烧算力的环节，让"想象式规划"更接近实时机器人控制的工程可行性。</div>
+    <div class="tags"><span class="tag">世界模型</span><span class="tag">机器人策略</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily Papers · upvotes 27</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.33010" target="_blank">Embodied AI Fails the Mirror Test: How a Simple Mirror Breaks Robot Policies</a></div>
+    <div class="summary">一面简单的镜子就能让当前机器人策略失效——研究系统揭示了具身 AI 在镜像反射场景下的脆弱性。<strong>解读：</strong>呼应了动物认知里的"镜子测试"，提醒业界 VLA 模型对训练分布外的视觉干扰依然敏感，真实家庭部署前这类鲁棒性评估不可或缺。</div>
+    <div class="tags"><span class="tag">VLA</span><span class="tag">鲁棒性</span><span class="tag">评测</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily Papers · upvotes 61</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.31205" target="_blank">ACAP: Asynchronous Coding Agents for Efficient Robot Control</a></div>
+    <div class="summary">用异步编码 Agent 实现高效机器人控制，让高层规划与底层执行解耦并行。<strong>解读：</strong>"会写代码的 Agent"正在成为机器人控制的新范式，异步架构则进一步压缩了决策延迟，值得关注其与 VLA 路线的合流趋势。</div>
+    <div class="tags"><span class="tag">Agent</span><span class="tag">代码即策略</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">RobotOverflow · 北京商报 via 同花顺 · 2026-11-25 · 重要性 ★★</div>
+    <div class="title"><a href="https://xiaotong.me/RobotOverflow/" target="_blank">星动纪元 45 台机器人在中国邮政杭州邮区集群上岗</a></div>
+    <div class="summary">中国邮政杭州分公司、星动纪元与我能具身部署 45 台 M7 机器人做小件供包，供件效率从 1200 件/小时提升至超 1500 件/小时。星动纪元称其为物流领域首个具身智能大规模集群。<strong>解读：</strong>具身智能从"单点演示"走向"集群作战"，物流分拣是被验证最快的变现场景之一。</div>
+    <div class="tags"><span class="tag hot">落地</span><span class="tag">物流</span><span class="tag">集群部署</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">RobotOverflow · 投资界 · 2026-11-25 · 重要性 ★★</div>
+    <div class="title"><a href="https://xiaotong.me/RobotOverflow/" target="_blank">速腾聚创三季度激光雷达销量创纪录，预计四季度破百万台</a></div>
+    <div class="summary">三季度营收 6.73 亿元（+65.2%），激光雷达销量达 57.55 万台创纪录；前三季度机器人类销量 42.78 万台（+423%），预计四季度总销量破百万台。<strong>解读：</strong>机器人类传感器 4 倍多的增速说明具身智能供应链已开始兑现收入，上游"卖铲人"先于整机厂盈利。</div>
+    <div class="tags"><span class="tag">供应链</span><span class="tag">激光雷达</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🧠</span>大模型 · Agent · 推理</div>
+
+  <div class="hot-topic">
+    <div class="label">🔥 今日热点 · Agent 可信度</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.32884" target="_blank">Lazy Agents Answer Against Their Own Beliefs: Reinforcement Learning with Verifiable Beliefs Teaches Them to Act on What They Believe</a></div>
+    <div class="summary">研究发现 Agent 经常"言不由衷"——回答与自己内部信念相悖。作者提出可验证信念的强化学习（RLVB），教会模型按自己真实相信的内容行动。已开源（declare-lab/RLVB）。<strong>解读：</strong>这是 Agent 可靠性研究里少见的"向内看"工作：与其外部对齐，不如先让模型的表达与内部状态一致，为幻觉治理提供了新视角。</div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily Papers · upvotes 85</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.28947" target="_blank">Don't Sleep, Keep Watch: Proactive Perception for Computer-Use Agents</a></div>
+    <div class="summary">Computer-Use Agent 通常是"被动响应式"的，NightWatch 让 Agent 具备主动感知能力，持续监控环境变化并适时介入。<strong>解读：</strong>从"你问我答"到"主动盯梢"，是 GUI Agent 走向真实值守场景（监控、运维、客服）的关键一步。</div>
+    <div class="tags"><span class="tag">Computer-Use</span><span class="tag">主动感知</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CL · 2026-11-24</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.33148" target="_blank">CoT-Proxy: Cross-Format Transfer for Distilling Long-Horizon Policies</a></div>
+    <div class="summary">推理模型通过 RL 或蒸馏教师轨迹成为长程 Agent，但教师 CoT 的格式与学生模型往往不匹配。CoT-Proxy 研究跨格式迁移的长程策略蒸馏。<strong>解读：</strong>直指"蒸馏教师轨迹"这条廉价 Agent 训练路线中的格式错配问题，对想用中小模型复现长程推理能力的团队很实用。</div>
+    <div class="tags"><span class="tag">推理蒸馏</span><span class="tag">长程 Agent</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.LG · 2026-11-24</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.33102" target="_blank">Reinforcement Learning Can Be Recovered From Its Own Rollouts</a></div>
+    <div class="summary">RL 后训练把算力转化为能力，但 rollout 数据通常用完即弃。本文证明可以从自身的 rollout 中恢复 RL 训练信号。<strong>解读：</strong>如果 rollout 可以复用回收，RL 后训练的样本效率还有可观的挖掘空间——对算力敏感的大模型团队是个好消息。</div>
+    <div class="tags"><span class="tag">RL 后训练</span><span class="tag">样本效率</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily Papers · upvotes 85</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.30634" target="_blank">Rewirable Circuits in Transformers with Loom Attention</a></div>
+    <div class="summary">提出 Loom Attention 机制，让 Transformer 内部的回路可以动态重构。<strong>解读：</strong>注意力机制的架构创新仍在继续，"可重构回路"的思路为条件计算和推理时自适应提供了新工具。</div>
+    <div class="tags"><span class="tag">架构创新</span><span class="tag">注意力机制</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.LG · 2026-11-24</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.33064" target="_blank">U-Statistics-Powered LLM Reasoning</a></div>
+    <div class="summary">自 DeepSeek 提出 GRPO 以来其变体层出不穷，本文将 U-统计量引入 LLM 推理训练目标。<strong>解读：</strong>GRPO 家族仍在快速演化，统计理论工具的引入有望让组相对优化更稳健，值得跟踪其与传统方差缩减方法的关系。</div>
+    <div class="tags"><span class="tag">GRPO</span><span class="tag">推理训练</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.AI · 2026-11-24</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.33098" target="_blank">Delegent: A Multi-Agent Harness That Reduces Cost without Sacrificing Performance</a></div>
+    <div class="summary">前沿模型构建的 Agent 成本高：每一步都重读全部上下文、无论子任务难易都由旗舰模型执行。Delegent 通过多智能体分工在不牺牲性能的前提下降低成本。<strong>解读：</strong>"杀鸡不用牛刀"的工程智慧，分层调度模型是 Agent 降本最现实的路径之一。</div>
+    <div class="tags"><span class="tag">多智能体</span><span class="tag">降本</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源项目 · 社区动态</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 日榜</div>
+    <div class="title"><a href="https://github.com/obra/superpowers" target="_blank">obra/superpowers</a></div>
+    <div class="summary">给 Claude Code 等编码 Agent 赋予"超能力"的技能框架，今日持续霸榜。<strong>解读：</strong>Agent Skills 生态（SKILL.md 式的可插拔能力包）正在取代提示词工程成为新的社区焦点，技能市场雏形已现。</div>
+    <div class="tags"><span class="tag">Agent Skills</span><span class="tag">编码 Agent</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 日榜</div>
+    <div class="title"><a href="https://github.com/jingyaogong/minimind" target="_blank">jingyaogong/minimind</a></div>
+    <div class="summary">从零开始训练超小语言模型的中文开源项目，长期位居趋势榜。<strong>解读：</strong>教学级小模型项目热度不减，说明"亲手炼一个 LLM"仍是社区理解大模型原理的最佳入口。</div>
+    <div class="tags"><span class="tag">小模型</span><span class="tag">教程</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 日榜</div>
+    <div class="title"><a href="https://github.com/HKUDS/CLI-Anything" target="_blank">HKUDS/CLI-Anything</a></div>
+    <div class="summary">把任意软件变成命令行工具供 Agent 调用的框架。<strong>解读：</strong>MCP 之外的另一条工具化路线——GUI 软件 CLI 化能直接盘活存量软件生态，对 Agent 落地意义不小。</div>
+    <div class="tags"><span class="tag">工具调用</span><span class="tag">Agent 基建</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Awesome List 动态 · GitHub</div>
+    <div class="title"><a href="https://github.com/0xWelt/Awesome-Agent-Ecosystem" target="_blank">0xWelt/Awesome-Agent-Ecosystem</a>（★123）· <a href="https://github.com/w-xb/awesome-agentic-robotics" target="_blank">w-xb/awesome-agentic-robotics</a>（★33）</div>
+    <div class="summary">Awesome 生态持续向 Agent 纵深分化：前者收录编码 harness、vibe-coding 社区与个人 Agent 工具链；后者是具身智能体的专题综述列表，覆盖机器人记忆、规划、世界模型与失败案例。另有 <a href="https://github.com/shaftoe/awesome-pi-coding-agent" target="_blank">awesome-pi-coding-agent</a>（★190）用 LLM 自动策展编码 Agent 资源、每日更新。<strong>解读：</strong>awesome 列表本身也在被 AI 自动策展，人工精选与 LLM 挖掘的边界正在消融。</div>
+    <div class="tags"><span class="tag">Awesome</span><span class="tag">Agent 生态</span><span class="tag">具身智能</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今天的信号高度一致：具身智能正在从论文走向流水线。学术侧，OmniAct 试图用一个策略统一百万种本体，iWAM 把世界模型的算力包袱卸掉，学术界在为"通用机器人"清扫最后的工程障碍；工业侧，小鹏 IRON 敲定 2027 量产、星动纪元 45 台集群进邮政、速腾机器人类传感器销量翻四倍——量产、落地、供应链三条线同时有实锤。另一边，Agent 研究开始"向内看"：Lazy Agents 用可验证信念纠正模型的言行不一，这比堆外部护栏更触及幻觉的根。值得记住的一个判断：当"主动感知"和"言行一致"都成为可训练的目标，Agent 的可信度竞赛才算真正开始。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 生成于 2026-11-26 · 数据来源：arXiv / HuggingFace / GitHub / RobotOverflow</p>
+</div>
+
+</div>
+</body>
+</html>
