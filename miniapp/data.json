@@ -1,8 +1,8 @@
 {
-  "updated_at": "21:15",
+  "updated_at": "00:15",
   "weather": {
-    "main": "22°C Smog",
-    "sub": "今日 16~25°C，湿度 67%，体感 23°C"
+    "main": "21°C Smoky haze",
+    "sub": "今日 16~25°C，湿度 70%，体感 21°C"
   },
   "todos": [
     {
@@ -86,38 +86,7 @@
       "done": false
     }
   ],
-  "news": [
-    {
-      "title": "小鹏科技日发布新一代 IRON：2027 年 1 月量产，一季度进门店",
-      "url": "https://www.globenewswire.com/",
-      "tag": "论文"
-    },
-    {
-      "title": "OmniAct: One Policy, One Million Embodiments",
-      "url": "https://arxiv.org/abs/2611.33158",
-      "tag": "论文"
-    },
-    {
-      "title": "iWAM: Efficient Action Prediction from World Models without ",
-      "url": "https://arxiv.org/abs/2611.33141",
-      "tag": "论文"
-    },
-    {
-      "title": "Embodied AI Fails the Mirror Test: How a Simple Mirror Break",
-      "url": "https://arxiv.org/abs/2611.33010",
-      "tag": "论文"
-    },
-    {
-      "title": "ACAP: Asynchronous Coding Agents for Efficient Robot Control",
-      "url": "https://arxiv.org/abs/2611.31205",
-      "tag": "论文"
-    },
-    {
-      "title": "星动纪元 45 台机器人在中国邮政杭州邮区集群上岗",
-      "url": "https://xiaotong.me/RobotOverflow/",
-      "tag": "论文"
-    }
-  ],
+  "news": [],
   "diary": "今天还没写日记，晚上 23:00 再说～",
   "profile": {
     "groups": [
