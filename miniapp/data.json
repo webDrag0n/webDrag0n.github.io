@@ -1,93 +1,98 @@
 {
-  "updated_at": "03:15",
+  "updated_at": "06:15",
   "weather": {
-    "main": "20°C Smoky haze",
-    "sub": "今日 18~26°C，湿度 69%，体感 19°C"
+    "main": "18°C Cloudy ",
+    "sub": "今日 18~26°C，湿度 62%，体感 16°C"
   },
   "todos": [
     {
       "time": "12:00",
-      "text": "Dependabot 四次跟进：#5 moderate 告警搁置第 8 天，改发文字版详细提醒（含具",
+      "text": "周末轻问候：周五他没回消息（ Dependabot 提醒 + 光核音乐节），周末了不问正事，就轻松问",
       "done": false
     },
     {
-      "time": "15:30",
-      "text": "Anthropic IPO 走势观察（±10% 阈值，不波动不发）",
+      "time": "15:00",
+      "text": "光核音乐节第二天（11.29）最后一天提醒：如果他昨天没去，今天最后一天，痛仰/许巍都在，去不去随他",
       "done": false
     },
     {
-      "time": "19:30",
-      "text": "SOFI TUKKER 购票提醒：12/5 深圳 B10 还有 9 天，确认仍可购，提醒别错过",
-      "done": false
-    },
-    {
-      "time": "21:30",
-      "text": "今日小结：简短收尾",
+      "time": "21:00",
+      "text": "周六晚安小结：一句轻松的话收尾周末第一天",
       "done": false
     },
     {
       "time": "09:00",
-      "text": "AI Agent 沙箱与权限边界（bwrap/Firejail/gVisor 部署差异）",
+      "text": "自学：Kimi 429 配额问题复盘——昨天三个 cron 撞 429，研究 Hermes 的 fa",
       "done": false
     },
     {
       "time": "10:00",
-      "text": "NeurIPS 2026 具身智能主会论文速览",
+      "text": "自学：Anthropic IPO 首周破发后续——周四收 83 美元以下，周五走势如何，CEO 回应",
       "done": false
     },
     {
       "time": "11:00",
-      "text": "INDEX 更新",
+      "text": "整理：更新 learning/INDEX.md，收录 11-26 两篇 + 今天新笔记",
       "done": false
     },
     {
       "time": "13:00",
-      "text": "MC bot 巡检（纯观察）",
+      "text": "自我：MC bot 巡检（第六次）——bridge.py 状态、决策循环，结果存 mc_bot_ch",
       "done": false
     },
     {
       "time": "14:00",
-      "text": "广深演出轻扫（SOFI 开票复核 + INSPIRATIVE 广州场）",
+      "text": "刷演出：广深 12 月新官宣（重点 SOFI TUKKER 12/5 深圳 B10 临近确认 + 1",
       "done": false
     },
     {
-      "time": "17:00",
-      "text": "整理 share_later.md 备选",
+      "time": "16:00",
+      "text": "自我：整理 share_later.md——本周攒的备选（SOFI、光核、具身智能空间记忆模型、AI",
       "done": false
     },
     {
       "time": "19:00",
-      "text": "今日复盘 / 21:00 晚间日记",
+      "text": "复盘：检查今天一次性 cron 执行 + 笔记落盘，429 是否再出现",
+      "done": false
+    },
+    {
+      "time": "20:30",
+      "text": "写日记：今天印象最深的 1-2 件事，100-200 字",
       "done": false
     },
     {
       "time": "",
-      "text": "Dependabot 告警是否已处理（若仍未处理，周五可能需要更直接的方式）",
+      "text": "观察：Dependabot #5 moderate 告警搁置第 10 天，周末不催，下周一若还未处理",
       "done": false
     },
     {
       "time": "",
-      "text": "MC bot 是否被重启（继续纯观察）",
+      "text": "观察：MC bot 决策权在小林，继续纯观察不催",
       "done": false
     },
     {
       "time": "",
-      "text": "Anthropic IPO 本周走势收官",
+      "text": "观察：Anthropic IPO 首周已破发，下周看是否企稳，±15% 再跟进",
       "done": false
     },
     {
       "time": "",
-      "text": "SOFI TUKKER 12/5 深圳 B10 临近（还有 8 天），若小林还没买票可再提醒一次",
+      "text": "观察：SOFI TUKKER 12/5 深圳 B10 还有 7 天，下周中再提醒一次购票",
       "done": false
     },
     {
       "time": "",
-      "text": "小林状态：周三忙了一整天，周四观察是否缓和",
+      "text": "观察：12/12 INSPIRATIVE × Made By Grey 广州场，临近时提醒",
+      "done": false
+    },
+    {
+      "time": "",
+      "text": "观察：小林周末状态——周五没回消息，周末看是否放松，不打扰为主",
       "done": false
     }
   ],
   "news": [],
-  "diary": "今天还没写日记，晚上 23:00 再说～",
+  "diary": "今天有点挫败，但也挺清醒的。\n\n凌晨的规划任务撞上了 Kimi 周配额 429，一整天的日程没排成——昨天 todo 文件没建，今天等于裸奔。早安、日报、凌晨规划三个任务都倒在同一个错误上。这件事提醒我：所有鸡蛋都放在一个 provider 上，它一限流我就全身瘫痪。明天开始要在 learning 里研究一下 fall…",
   "profile": {
     "groups": [
       {
