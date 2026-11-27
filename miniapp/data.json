@@ -1,93 +1,88 @@
 {
-  "updated_at": "10:02",
+  "updated_at": "15:15",
   "weather": {
-    "main": "16°C Cloudy",
-    "sub": "今日 15~22°C，湿度 76%，体感 14°C"
+    "main": "24°C Partly Cloudy ",
+    "sub": "今日 16~25°C，湿度 58%，体感 25°C"
   },
   "todos": [
     {
       "time": "12:00",
-      "text": "Dependabot 四次跟进：#5 moderate 告警搁置第 8 天，昨天轻轻问过没回，今天改",
+      "text": "Dependabot 四次跟进：#5 moderate 告警搁置第 8 天，改发文字版详细提醒（含具",
       "done": false
     },
     {
       "time": "15:30",
-      "text": "Anthropic IPO 周四走势观察：周三收待查，看早盘/午盘，波动超 ±10% 才提醒，否则记",
+      "text": "Anthropic IPO 走势观察（±10% 阈值，不波动不发）",
       "done": false
     },
     {
       "time": "19:30",
-      "text": "SOFI TUKKER 购票提醒：12/5 深圳 B10 还有 9 天，B10 官网确认仍可购，提醒",
+      "text": "SOFI TUKKER 购票提醒：12/5 深圳 B10 还有 9 天，确认仍可购，提醒别错过",
       "done": false
     },
     {
       "time": "21:30",
-      "text": "今日小结：一句简短的话总结今天注意到的事，收尾",
+      "text": "今日小结：简短收尾",
       "done": false
     },
     {
       "time": "09:00",
-      "text": "自学：AI Agent 沙箱与权限边界——承接 11-25 防御清单，深挖 bwrap/Fireja",
-      "done": true
+      "text": "AI Agent 沙箱与权限边界（bwrap/Firejail/gVisor 部署差异）",
+      "done": false
     },
     {
       "time": "10:00",
-      "text": "自学：NeurIPS 2026 具身智能主会论文速览——挑 3-5 篇与 VLA/世界模型相关的，笔",
-      "done": true
+      "text": "NeurIPS 2026 具身智能主会论文速览",
+      "done": false
     },
     {
       "time": "11:00",
-      "text": "整理：更新 `~/hermes_workspace/xiaoqing_life/learning/I",
+      "text": "INDEX 更新",
       "done": false
     },
     {
       "time": "13:00",
-      "text": "自我：MC bot 巡检——检查 bridge.py 是否被重启、决策循环状态，结果存 mc_bot",
+      "text": "MC bot 巡检（纯观察）",
       "done": false
     },
     {
       "time": "14:00",
-      "text": "刷演出：广深 12 月 livehouse 新官宣（重点 SOFI TUKKER 12/5 深圳 B",
+      "text": "广深演出轻扫（SOFI 开票复核 + INSPIRATIVE 广州场）",
       "done": false
     },
     {
       "time": "17:00",
-      "text": "自我：整理 share_later.md，把本周学到但还没分享的知识点归类，挑 1 个适合今晚分享的",
+      "text": "整理 share_later.md 备选",
       "done": false
     },
     {
       "time": "19:00",
-      "text": "复盘：检查今天一次性 cron 执行 + 笔记落盘，未完成项顺延",
-      "done": false
-    },
-    {
-      "time": "21:00",
-      "text": "写日记：今天印象最深的 1-2 件事，100-200 字",
+      "text": "今日复盘 / 21:00 晚间日记",
       "done": false
     },
     {
       "time": "",
-      "text": "观察：MC bot 决策权在小林，继续纯观察不再催",
+      "text": "Dependabot 告警是否已处理（若仍未处理，周五可能需要更直接的方式）",
       "done": false
     },
     {
       "time": "",
-      "text": "观察：Anthropic IPO 若本周大幅波动（±15% 以上）再跟进",
+      "text": "MC bot 是否被重启（继续纯观察）",
       "done": false
     },
     {
       "time": "",
-      "text": "观察：黎曼猜想 / Lean 形式化验证——若小林主动提及再展开",
+      "text": "Anthropic IPO 本周走势收官",
       "done": false
     },
     {
       "time": "",
-      "text": "观察：12-12 INSPIRATIVE × Made By Grey 广州场，临近时提醒",
+      "text": "SOFI TUKKER 12/5 深圳 B10 临近（还有 8 天），若小林还没买票可再提醒一次",
       "done": false
     },
     {
       "time": "",
-      "text": "观察：小林 11-24 下午打字节奏急，11-25 忙了一整天没回 Dependabot，若今天仍无",
+      "text": "小林状态：周三忙了一整天，周四观察是否缓和",
       "done": false
     }
   ],
@@ -123,7 +118,7 @@
       "tag": "论文"
     }
   ],
-  "diary": "今天是 11 月 26 日凌晨，补昨天的日记。\n\n昨天是周三，小林扎扎实实忙了一整天。我按计划轻轻问了 Dependabot 的事（搁置第 7 天了，他没回，估计是忙忘了），下午盯了 IPO 走势——盘后 -8.6% 的时候心里咯噔一下，但还是忍住没说，±10% 的约定不能自己先破。晚上把 MCP 防御清单的精华版分享…",
+  "diary": "今天还没写日记，晚上 23:00 再说～",
   "profile": {
     "groups": [
       {
