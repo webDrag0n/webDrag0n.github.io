@@ -1,8 +1,8 @@
 {
-  "updated_at": "18:16",
+  "updated_at": "19:01",
   "weather": {
-    "main": "25°C Partly Cloudy ",
-    "sub": "今日 18~26°C，湿度 40%，体感 23°C"
+    "main": "23°C Smoky haze",
+    "sub": "今日 18~26°C，湿度 46%，体感 21°C"
   },
   "todos": [
     {
@@ -48,7 +48,7 @@
     {
       "time": "16:00",
       "text": "自我：整理 share_later.md——本周攒的备选（SOFI、光核、具身智能空间记忆模型、AI",
-      "done": false
+      "done": true
     },
     {
       "time": "19:00",
