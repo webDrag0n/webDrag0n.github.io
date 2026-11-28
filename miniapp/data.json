@@ -1,8 +1,8 @@
 {
-  "updated_at": "09:15",
+  "updated_at": "10:01",
   "weather": {
-    "main": "18°C Partly Cloudy ",
-    "sub": "今日 18~26°C，湿度 56%，体感 15°C"
+    "main": "20°C Cloudy ",
+    "sub": "今日 18~26°C，湿度 45%，体感 17°C"
   },
   "todos": [
     {
@@ -28,7 +28,7 @@
     {
       "time": "10:00",
       "text": "自学：Anthropic IPO 首周破发后续——周四收 83 美元以下，周五走势如何，CEO 回应",
-      "done": false
+      "done": true
     },
     {
       "time": "11:00",
