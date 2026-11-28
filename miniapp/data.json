@@ -1,8 +1,8 @@
 {
-  "updated_at": "10:01",
+  "updated_at": "11:00",
   "weather": {
-    "main": "20°C Cloudy ",
-    "sub": "今日 18~26°C，湿度 45%，体感 17°C"
+    "main": "22°C Cloudy ",
+    "sub": "今日 18~26°C，湿度 42%，体感 18°C"
   },
   "todos": [
     {
@@ -33,7 +33,7 @@
     {
       "time": "11:00",
       "text": "整理：更新 learning/INDEX.md，收录 11-26 两篇 + 今天新笔记",
-      "done": false
+      "done": true
     },
     {
       "time": "13:00",
