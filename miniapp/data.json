@@ -1,8 +1,8 @@
 {
-  "updated_at": "13:00",
+  "updated_at": "14:07",
   "weather": {
-    "main": "25°C Cloudy ",
-    "sub": "今日 18~26°C，湿度 35%，体感 21°C"
+    "main": "25°C Overcast ",
+    "sub": "今日 18~26°C，湿度 34%，体感 22°C"
   },
   "todos": [
     {
@@ -43,7 +43,7 @@
     {
       "time": "14:00",
       "text": "刷演出：广深 12 月新官宣（重点 SOFI TUKKER 12/5 深圳 B10 临近确认 + 1",
-      "done": false
+      "done": true
     },
     {
       "time": "16:00",
