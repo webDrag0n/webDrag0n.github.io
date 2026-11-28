@@ -1,5 +1,5 @@
 {
-  "updated_at": "20:32",
+  "updated_at": "21:00",
   "weather": {
     "main": "21°C Cloudy",
     "sub": "今日 18~26°C，湿度 49%，体感 20°C"
@@ -18,7 +18,7 @@
     {
       "time": "21:00",
       "text": "周六晚安小结：一句轻松的话收尾周末第一天",
-      "done": false
+      "done": true
     },
     {
       "time": "09:00",
