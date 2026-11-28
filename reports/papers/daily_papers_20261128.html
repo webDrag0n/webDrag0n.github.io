@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 每日前沿速递 — 2026-11-28</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  .header { text-align: center; padding: 40px 20px 30px; margin-bottom: 30px; }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+  .summary-banner {
+    background: var(--card-bg); border-radius: 12px; padding: 20px 24px;
+    margin-bottom: 24px; border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px; font-weight: 700; color: var(--text);
+    margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+  .card {
+    background: var(--card-bg); border-radius: 10px; padding: 18px 22px;
+    margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+  .card .title { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .card .title a { color: var(--accent); text-decoration: none; }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px; padding: 2px 10px; border-radius: 12px;
+    background: var(--tag-bg); color: var(--tag-text);
+  }
+  .card .tag.hot { background: #ffeaa7; color: #d63031; font-weight: 600; }
+  .hot-topic {
+    background: #fff8e1; border: 1px solid #ffe082; border-radius: 10px;
+    padding: 18px 22px; margin-bottom: 16px;
+  }
+  .hot-topic .label {
+    font-size: 12px; font-weight: 700; color: #e17055;
+    text-transform: uppercase; margin-bottom: 4px;
+  }
+  .insights {
+    background: var(--card-bg); border-radius: 12px; padding: 24px;
+    margin-top: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+  .footer {
+    text-align: center; font-size: 12px; color: #b2bec3;
+    margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🤖</div>
+  <h1>AI 每日前沿速递</h1>
+  <div class="date">2026 年 11 月 28 日 · 星期六</div>
+  <div class="subtitle">论文 · 开源 · 具身智能 · 产业动态</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>具身智能赛道持续升温——小鹏宣布 IRON 人形机器人 2027 年 1 月量产、星动纪元 45 台机器人集群在中国邮政上岗；论文方面，computer-using agent 基准 OS-Omni（HF 热度 103）与「用代码解视觉」的编程智能体研究引发关注；开源社区 minimind、superpowers 等 agent 工具链项目霸榜 GitHub Trending。</p>
+</div>
+
+<!-- ============ 头条热点 ============ -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🔥</span>今日头条</div>
+
+  <div class="hot-topic">
+    <div class="label">BREAKING · 量产时间表</div>
+    <div class="card" style="margin-bottom:0; box-shadow:none; border:none; background:transparent; padding:0;">
+      <div class="source">CnEVPost / N Globe · 2026-11-25</div>
+      <div class="title"><a href="https://cnevpost.com/2026/11/25/xpeng-ramps-up-physical-ai-push-2026-ai-day">小鹏科技日：新一代 IRON 人形机器人定档 2027 年 1 月量产</a></div>
+      <div class="summary">小鹏在 AI 日公布：新一代 IRON 身高 170cm、重 62kg，76 个自由度，搭载三颗自研图灵芯片；2027 年 1 月硬件量产，一季度先进入国内门店担任导购，二季度面向商业客户正式发布。<strong>编辑点评：</strong>量产节点较此前"2026 年底"口径有所后移，但给出了明确的门店落地路径——先做导购员积累真实交互数据，是车企系人形机器人最务实的冷启动策略。</div>
+      <div class="tags"><span class="tag hot">人形机器人</span><span class="tag">量产</span><span class="tag">小鹏</span></div>
+    </div>
+  </div>
+
+  <div class="hot-topic">
+    <div class="label">BREAKING · 规模化部署</div>
+    <div class="card" style="margin-bottom:0; box-shadow:none; border:none; background:transparent; padding:0;">
+      <div class="source">PR Newswire / 同花顺 · 2026-11-25</div>
+      <div class="title"><a href="https://www.prnewswire.com/news-releases/robotera-puts-45-humanoid-robots-into-large-scale-fleet-operations-at-china-post-302951216.html">星动纪元 45 台人形机器人在中国邮政杭州中心集群上岗</a></div>
+      <div class="summary">中国邮政杭州邮区中心部署 45 台星动纪元 M7 机器人负责小件供包，包裹上料效率由每小时 500–600 件提升至约 1200–1500 件。公司称这是物流领域首个具身智能大规模集群（数据为公司自报）。<strong>编辑点评：</strong>从单点试点到 45 台集群，物流分拣正在成为人形机器人第一个跑通 ROI 的场景——效率数字虽然自报，但"邮政体系愿意复购扩容"本身就是最强的信号。</div>
+      <div class="tags"><span class="tag hot">具身智能</span><span class="tag">物流</span><span class="tag">规模化</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 具身智能 ============ -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🦾</span>机器人与具身智能</div>
+
+  <div class="card">
+    <div class="source">Science and Technology Daily · 2026-11-25</div>
+    <div class="title"><a href="https://www.stdaily.com/web/gdxw/2026-11/26/content_619758.html">众擎机器人首届开发者大会：发布双模型，承诺 10 亿元生态支持</a></div>
+    <div class="summary">众擎在深圳发布 Awaken-HI 与 EngineAI-BFM 模型、全身遥操作平台和巡检方案，联合河南相关产业基金承诺为商业化应用伙伴提供不少于 10 亿元支持（属生态投入而非公司融资）。<strong>编辑点评：</strong>整机厂开始用"基金+模型+平台"三件套绑定开发者，人形机器人行业正在复制智能手机时代的生态打法。</div>
+    <div class="tags"><span class="tag">生态</span><span class="tag">开发者</span><span class="tag">EngineAI</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Gasgoo · 2026-11-24</div>
+    <div class="title"><a href="https://autonews.gasgoo.com/articles/news/ace-robotics-releases-embodied-general-model-ace-brain-07-2125486828257525760">大晓机器人发布具身通用模型 ACE-Brain-0.7</a></div>
+    <div class="summary">ACE-Brain-0.7 可根据每一步的真实执行状态（未开始/运行中/完成/失败）进行推理，官方报告六项推理基准平均 76.5 分，高于其列出的两个竞品模型的 72.7 与 73.5（公司自报数据）。<strong>编辑点评：</strong>"按执行状态推理"切中了具身模型常见的幻觉式执行问题，但自报基准仍需第三方复测验证。</div>
+    <div class="tags"><span class="tag">具身模型</span><span class="tag">推理</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">Robotics &amp; Automation News · 2026-11-27</div>
+    <div class="title"><a href="https://roboticsandautomationnews.com/2026/11/27/turning-industrial-knowledge-into-robotic-skills-neura-robotics-partners-with-costa-group-to-develop-aragons-physical-ai-ambitions/107778/">NEURA 联手西班牙阿拉贡政府与 Costa 集团共建 NEURA Gym 训练园区</a></div>
+    <div class="summary">NEURA Robotics 将牵头投资数千万欧元，在阿拉贡建设机器人训练设施与物理 AI 模型园区，目标 2027 年中开放，把农业食品产业知识转化为机器人技能。<strong>编辑点评：</strong>"Gym 模式"正在欧洲落地——真实产业场景变成数据采集场，这与国内"机器人进厂实训"思路异曲同工。</div>
+    <div class="tags"><span class="tag">物理AI</span><span class="tag">数据采集</span><span class="tag">欧洲</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">投资界 · 2026-11-25</div>
+    <div class="title"><a href="https://news.pedaily.cn/202611/572409.shtml">速腾聚创三季度激光雷达销量创纪录，机器人类销量同比 +423%</a></div>
+    <div class="summary">速腾聚创 Q3 营收 6.73 亿元（+65.2%），激光雷达销量 57.55 万台创纪录，前三季度机器人类销量 42.78 万台（+423%），公司预计四季度总销量破百万台。<strong>编辑点评：</strong>机器人业务 4 倍增速说明具身智能已经开始反哺上游传感器供应链，"卖铲子"的先于"挖金矿"的兑现业绩。</div>
+    <div class="tags"><span class="tag">供应链</span><span class="tag">激光雷达</span><span class="tag">财报</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">TechCrunch / Technode · 2026-11</div>
+    <div class="title"><a href="https://techcrunch.com/2026/11/17/genesis-ai-raises-500-million-to-deploy-electric-glove-wearing-robots">本月具身赛道融资密集：Genesis AI 5 亿美元、Simplexity 1 亿美元、Agile Robots 5 亿美元</a></div>
+    <div class="summary">11 月融资一览：Genesis AI 完成 5 亿美元 A 轮用于部署"戴电子手套"的机器人；蚂蚁集团领投人形初创 Simplexity（简元）1 亿美元 Pre-A；软银 5 亿美元加持 Agile Robots；Agility Robotics 通过 SPAC 合并募资约 4.65 亿美元。<strong>编辑点评：</strong>资本显然在押注"2027 量产元年"叙事，头部标的估值快速抬升，但交付能力将决定这轮估值能否站住。</div>
+    <div class="tags"><span class="tag hot">融资</span><span class="tag">产业</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.RO · 2026-11-25</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.34864">RePace: 通过推理演示加速获得更快的 VLA 策略</a></div>
+    <div class="summary">VLA 策略容易继承人类演示的缓慢节奏。RePace 在微调前对演示轨迹做推理式加速，无需部署时的速度选择模块即可得到更快的策略。<strong>编辑点评：</strong>思路很巧妙——把"快慢"从策略网络里剥离成数据预处理问题，低成本提速路线对工业落地很友好。</div>
+    <div class="tags"><span class="tag">VLA</span><span class="tag">论文</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.RO · 2026-11-25</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.34936">DexLink: 从链式手-物位姿合成灵巧操作行为</a></div>
+    <div class="summary">现有仿真灵巧操作依赖难以扩展的人类演示或控制力有限的通用奖励。DexLink 通过链式手-物位姿序列合成多样化灵巧行为，摆脱对演示数据的依赖。<strong>编辑点评：</strong>灵巧手数据稀缺是全行业瓶颈，"位姿链合成"如果泛化性达标，价值不亚于一个新的遥操作范式。</div>
+    <div class="tags"><span class="tag">灵巧手</span><span class="tag">论文</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.RO · 2026-11-25</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.34750">SOLVE: 稀疏有序关键位姿让 LLM Agent 成为高效机械臂操作员</a></div>
+    <div class="summary">SOLVE 免训练：多模态 LLM agent 直接写出稀疏有序的 6-DoF 末端关键位姿序列，解决逐步密集控制带来的推理昂贵与工具瓶颈问题。<strong>编辑点评：</strong>把 LLM 从"高频控制器"降级为"低频规划器"，是 agentic robotics 目前最现实的算力分配方式。</div>
+    <div class="tags"><span class="tag">LLM Agent</span><span class="tag">操作</span><span class="tag">论文</span></div>
+  </div>
+</div>
+
+<!-- ============ 论文精选 ============ -->
+<div class="section">
+  <div class="section-title"><span class="emoji">📄</span>论文精选</div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily #1 · arXiv:2611.34232 · 热度 103↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.34232">OS-Omni: 跨平台长程工作流上的通用 Computer-Using Agent 基准</a></div>
+    <div class="summary">现有 CUA 基准通常把 Web、移动端、桌面隔离开评测，OS-Omni 检验单一通用 agent 能否在真实用户目标下跨平台完成长程任务。<strong>编辑点评：</strong>今日 HF 热度第一。"全能型 GUI agent"是各家落地竞速的方向，统一跨平台评测正好是行业最缺的尺子。</div>
+    <div class="tags"><span class="tag hot">Agent</span><span class="tag">基准</span><span class="tag">CUA</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily · arXiv:2611.34813 · 热度 59↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.34813">Solve Vision with Code: 编程智能体是比视频模型更强的视觉推理者</a></div>
+    <div class="summary">给定首帧和语言指令、让视频生成模型"演算"任务的做法被重新检验：作者发现编程 agent 生成代码来解决视觉问题，效果优于让视频模型直接在像素空间推理。<strong>编辑点评：</strong>又一个"代码即推理"的证据——显式符号操作对空间/因果类视觉任务可能比隐式像素生成更可靠。</div>
+    <div class="tags"><span class="tag hot">视觉推理</span><span class="tag">代码智能体</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily · arXiv:2611.34290 · 热度 27↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.34290">StateWeaver: 面向长程视频生成的多智能体故事状态协同</a></div>
+    <div class="summary">长视频一致性与事件驱动的状态变化仍是难点。StateWeaver 用多智能体协同管理故事状态转移，缓解持续规划与修复带来的长程漂移。<strong>编辑点评：</strong>长视频生成的竞争焦点正从"单帧画质"转向"叙事状态管理"，多 agent 分工是必然路径之一。</div>
+    <div class="tags"><span class="tag">视频生成</span><span class="tag">多智能体</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">HuggingFace Daily · arXiv:2611.34852 · 热度 24↑</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.34852">DRBench Pro: 面向专业 Deep Research 智能体的知识中心基准</a></div>
+    <div class="summary">现有 deep research 基准评估报告质量但不评估"覆盖了哪些研究方向、挖掘多深"。DRBench Pro 以知识为中心，专门度量专业研究 agent 的方向覆盖与研究深度。<strong>编辑点评：</strong>Deep research 产品满天飞，但"报告看着漂亮 ≠ 研究做得深"，这个基准补上了评估盲区。</div>
+    <div class="tags"><span class="tag">Deep Research</span><span class="tag">基准</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CL · 2026-11-25</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.34923">Mixture-of-Loops Transformer：重新审视循环层之间该传递什么</a></div>
+    <div class="summary">Looped Transformer 通过跨循环共享层提升表达力但牺牲效率。MoLT 重新设计相邻循环间的连接机制，推进表达力-效率前沿。<strong>编辑点评：</strong>与 LoopTitan 同期出现，"循环复用参数"正在成为后 MoE 时代架构探索的一条活跃支线。</div>
+    <div class="tags"><span class="tag">架构</span><span class="tag">Transformer</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CL · 2026-11-25</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.34928">面向数学难题的多样化替代推理轨迹</a></div>
+    <div class="summary">数学后训练依赖"答案通过验证器"的推理轨迹，但难题在独立采样下此类轨迹稀缺。作者提出多样化替代推理轨迹方法，提升难题上的轨迹获取效率。<strong>编辑点评：</strong>数据瓶颈而非算法瓶颈是当前数学推理训练的真实约束，轨迹合成质量的边际收益会越来越大。</div>
+    <div class="tags"><span class="tag">推理</span><span class="tag">数学</span><span class="tag">后训练</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">arXiv · cs.CL · 2026-11-25</div>
+    <div class="title"><a href="https://arxiv.org/abs/2611.34920">μ-Bench: 共享空间语音智能体的多用户任务完成基准</a></div>
+    <div class="summary">共享空间中的语音 agent 必须同时满足相互依赖的多用户请求，并维护逐用户的权限、隐私与任务约束。μ-Bench 评测参与者全程互动下的联合任务完成能力。<strong>编辑点评：</strong>家用/车载语音 agent 走向"多人共处于同一空间"是必然，权限与隐私维度的评测设计值得产品团队参考。</div>
+    <div class="tags"><span class="tag">语音</span><span class="tag">Agent</span><span class="tag">隐私</span></div>
+  </div>
+</div>
+
+<!-- ============ 开源动态 ============ -->
+<div class="section">
+  <div class="section-title"><span class="emoji">🛠️</span>开源与社区动态</div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 今日榜</div>
+    <div class="title"><a href="https://github.com/jingyaogong/minimind">minimind — 从 0 训练 64M 超小语言模型</a></div>
+    <div class="summary">国产开源明星项目持续霸榜：3 小时、极低成本从零训练一个 64M 参数小模型，覆盖 tokenizer、预训练、SFT、LoRA、DPO 全链路，是学习 LLM 全流程的热门教材级仓库。<strong>编辑点评：</strong>"小模型+全链路透明"的教育价值远大于参数规模本身，也是中文社区入门 LLM 工程的事实标准之一。</div>
+    <div class="tags"><span class="tag hot">LLM</span><span class="tag">教育</span><span class="tag">中文社区</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub Trending · 今日榜</div>
+    <div class="title"><a href="https://github.com/obra/superpowers">superpowers — 给编码智能体装上"超能力"的技能框架</a></div>
+    <div class="summary">Agent 技能（skills）框架持续走热，superpowers 为编码 agent 提供可组合的技能加载与规划工作流；同榜还有 HKUDS/CLI-Anything（让一切软件 CLI 化供 agent 调用）与 mvanhorn/last30days-skill 等技能类项目。<strong>编辑点评：</strong>GitHub 趋势榜近半被 agent 工具链占据，"技能生态"正在取代"提示词工程"成为 agent 能力扩展的主战场。</div>
+    <div class="tags"><span class="tag hot">Agent Skills</span><span class="tag">编码智能体</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">GitHub · 新项目（本周创建）</div>
+    <div class="title"><a href="https://github.com/sthamann/awesome-agentic-commerce">awesome-agentic-commerce — 智能体商务协议精选列表</a></div>
+    <div class="summary">11 月新建的 awesome 列表，每日更新：收录 UCP、ACP、AP2、MCP、x402 等 agentic commerce 协议、SDK 与支付服务商，已获 130+ star。另有 Awesome-AI-for-Astronomy（AI 天文论文集，423⭐）等新列表冒头。<strong>编辑点评：</strong>从 awesome 列表的涌现方向看，"agent 自主完成支付与交易"正从概念走向协议标准化，值得提前跟踪。</div>
+    <div class="tags"><span class="tag">Awesome</span><span class="tag">Agentic Commerce</span><span class="tag">协议</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>今天的关键词是「落地」。小鹏给出 IRON 的量产与进店时间表，星动纪元把 45 台机器人铺进邮政分拣中心，Genesis AI、Simplexity、Agile Robots 一个月拿下超 10 亿美元融资——具身智能正在从 demo 视频走向排产表和财务报表。学术侧同样呼应这一趋势：VLA 提速（RePace）、灵巧行为合成（DexLink）、LLM 低频规划（SOLVE）都在解决"真实部署太贵太慢"的工程问题；而 OS-Omni、DRBench Pro 等基准的涌现，则说明 agent 能力的评估体系正在快速补齐。值得关注的是开源社区的风向：GitHub 趋势榜近半是 agent 技能与工具链项目，awesome 列表里 agentic commerce 协议开始冒头——智能体经济的基建竞赛，或许比模型竞赛更早分出胜负。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 生成于 2026-11-28 · 数据源：arXiv / HuggingFace / GitHub / RobotOverflow</p>
+</div>
+
+</div>
+</body>
+</html>

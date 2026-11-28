@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-26T00:02:07.335364+00:00",
+  "generated_at": "2026-11-28T00:02:44.894704+00:00",
   "papers": {
-    "date": "2026-11-26",
-    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261126.html",
-    "overview": "具身智能成为今日绝对主线——学术侧 OmniAct 用单一策略控制上百万种机器人本体、iWAM 砍掉世界模型的显式未来预测，工业侧小鹏发布新一代 IRON 人形机器人并敲定 2027 年量产，星动纪元 45 台机器人集群落地中国邮政。Agent 方向，\"懒惰 Agent\" 研究用可验证信念 RL 纠正模型言行不一，NightWatch 让 Computer-Use Agent 学会主动盯梢。开源社区 Agent Skills 生态持续爆发，awesome 列表向多智能体编排与具身机器人纵深分化。",
-    "digest": "今天的信号高度一致：具身智能正在从论文走向流水线。学术侧，OmniAct 试图用一个策略统一百万种本体，iWAM 把世界模型的算力包袱卸掉，学术界在为\"通用机器人\"清扫最后的工程障碍；工业侧，小鹏 IRON 敲定 2027 量产、星动纪元 45 台集群进邮政、速腾机器人类传感器销量翻四倍——量产、落地、供应链三条线同时有实锤。另一边，Agent 研究开始\"向内看\"：Lazy Agents 用可验证信念纠正模型的言行不一，这比堆外部护栏更触及幻觉的根。值得记住的一个判断：当\"主动感知\"和\"言行一致\"都成为可训练的目标，Agent 的可信度竞赛才算真正开始。"
+    "date": "2026-11-28",
+    "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261128.html",
+    "overview": "具身智能赛道持续升温——小鹏宣布 IRON 人形机器人 2027 年 1 月量产、星动纪元 45 台机器人集群在中国邮政上岗；论文方面，computer-using agent 基准 OS-Omni（HF 热度 103）与「用代码解视觉」的编程智能体研究引发关注；开源社区 minimind、superpowers 等 agent 工具链项目霸榜 GitHub Trending。",
+    "digest": "今天的关键词是「落地」。小鹏给出 IRON 的量产与进店时间表，星动纪元把 45 台机器人铺进邮政分拣中心，Genesis AI、Simplexity、Agile Robots 一个月拿下超 10 亿美元融资——具身智能正在从 demo 视频走向排产表和财务报表。学术侧同样呼应这一趋势：VLA 提速（RePace）、灵巧行为合成（DexLink）、LLM 低频规划（SOLVE）都在解决\"真实部署太贵太慢\"的工程问题；而 OS-Omni、DRBench Pro 等基准的涌现，则说明 agent 能力的评估体系正在快速补齐。值得关注的是开源社区的风向：GitHub 趋势榜近半是 agent 技能与工具链项目，awesome 列表里 agentic commerce 协议开始冒头——智能体经济的基建竞赛，或许比模型竞赛更早分出胜负。"
   },
   "media": {
     "date": "2026-11-26",

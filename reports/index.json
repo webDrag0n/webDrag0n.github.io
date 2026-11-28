@@ -1,11 +1,17 @@
 {
   "site": "https://webdrag0n.github.io/reports",
-  "generated_at": "2026-11-26T00:02:07.331962+00:00",
+  "generated_at": "2026-11-28T00:02:44.891043+00:00",
   "series": {
     "papers": {
       "title": "AI 论文速递",
-      "count": 116,
+      "count": 117,
       "items": [
+        {
+          "date": "2026-11-28",
+          "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261128.html",
+          "overview": "具身智能赛道持续升温——小鹏宣布 IRON 人形机器人 2027 年 1 月量产、星动纪元 45 台机器人集群在中国邮政上岗；论文方面，computer-using agent 基准 OS-Omni（HF 热度 103）与「用代码解视觉」的编程智能体研究引发关注；开源社区 minimind、superpowers 等 agent 工具链项目霸榜 GitHub Trending。",
+          "digest": "今天的关键词是「落地」。小鹏给出 IRON 的量产与进店时间表，星动纪元把 45 台机器人铺进邮政分拣中心，Genesis AI、Simplexity、Agile Robots 一个月拿下超 10 亿美元融资——具身智能正在从 demo 视频走向排产表和财务报表。学术侧同样呼应这一趋势：VLA 提速（RePace）、灵巧行为合成（DexLink）、LLM 低频规划（SOLVE）都在解决\"真实部署太贵太慢\"的工程问题；而 OS-Omni、DRBench Pro 等基准的涌现，则说明 agent 能力的评估体系正在快速补齐。值得关注的是开源社区的风向：GitHub 趋势榜近半是 agent 技能与工具链项目，awesome 列表里 agentic commerce 协议开始冒头——智能体经济的基建竞赛，或许比模型竞赛更早分出胜负。"
+        },
         {
           "date": "2026-11-26",
           "url": "https://webdrag0n.github.io/reports/papers/daily_papers_20261126.html",
