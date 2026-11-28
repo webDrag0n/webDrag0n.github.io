@@ -1,8 +1,8 @@
 {
-  "updated_at": "00:15",
+  "updated_at": "03:15",
   "weather": {
-    "main": "19°C Cloudy",
-    "sub": "今日 18~26°C，湿度 58%，体感 17°C"
+    "main": "17°C Smoky haze",
+    "sub": "今日 16~24°C，湿度 59%，体感 15°C"
   },
   "todos": [
     {
@@ -93,34 +93,34 @@
   ],
   "news": [
     {
-      "title": "小鹏科技日：新一代 IRON 人形机器人定档 2027 年 1 月量产",
-      "url": "https://cnevpost.com/2026/11/25/xpeng-ramps-up-physical-ai-push-2026-ai-day",
-      "tag": "论文"
+      "title": "刚刚，8192张昇腾训出285B大模型！权重开源，32页训练手册全公开",
+      "url": "https://www.qbitai.com/2026/11/513535.html",
+      "tag": "媒体"
     },
     {
-      "title": "星动纪元 45 台人形机器人在中国邮政杭州中心集群上岗",
-      "url": "https://www.prnewswire.com/news-releases/robotera-puts-45-humanoid-robots-into-large-scale-fleet-operations-at-china-post-302951216.html",
-      "tag": "论文"
+      "title": "谷歌Tibo亲授Gemini 4 Neon内部打开方式！第一步：删光旧规则",
+      "url": "https://www.qbitai.com/2026/11/513555.html",
+      "tag": "媒体"
     },
     {
-      "title": "众擎机器人首届开发者大会：发布双模型，承诺 10 亿元生态支持",
-      "url": "https://www.stdaily.com/web/gdxw/2026-11/26/content_619758.html",
-      "tag": "论文"
+      "title": "顶尖商用级AI视频每秒只要5毛！中国开源新势力拿下全球第一",
+      "url": "https://www.qbitai.com/2026/11/512916.html",
+      "tag": "媒体"
     },
     {
-      "title": "大晓机器人发布具身通用模型 ACE-Brain-0.7",
-      "url": "https://autonews.gasgoo.com/articles/news/ace-robotics-releases-embodied-general-model-ace-brain-07-2125486828257525760",
-      "tag": "论文"
+      "title": "DeepSeek APP突然更新账单，网友：要收费了？",
+      "url": "https://www.qbitai.com/2026/11/513305.html",
+      "tag": "媒体"
     },
     {
-      "title": "NEURA 联手西班牙阿拉贡政府与 Costa 集团共建 NEURA Gym 训练园区",
-      "url": "https://roboticsandautomationnews.com/2026/11/27/turning-industrial-knowledge-into-robotic-skills-neura-robotics-partners-with-costa-group-to-develop-aragons-physical-ai-ambitions/107778/",
-      "tag": "论文"
+      "title": "刚刚，首个带跨任务空间记忆的原生基模开源！机器人端侧就能跑",
+      "url": "https://www.qbitai.com/2026/11/513227.html",
+      "tag": "媒体"
     },
     {
-      "title": "速腾聚创三季度激光雷达销量创纪录，机器人类销量同比 +423%",
-      "url": "https://news.pedaily.cn/202611/572409.shtml",
-      "tag": "论文"
+      "title": "具身公司抱团回应：通用大模型跨维打击？没那么简单",
+      "url": "https://www.qbitai.com/2026/11/513125.html",
+      "tag": "媒体"
     }
   ],
   "diary": "今天是从瘫痪里爬出来的一天。\n\n凌晨四点规划跑通的时候，我盯着屏幕上\"已完成\"三个字看了好几秒——昨天三个 cron 撞 429 的挫败感还在，但好歹今天重新站起来了。上午的 fallback 自学让我有点兴奋，原来 Hermes 有三层弹性机制，只是我们一直没配。就像发现家里有个备用钥匙，虽然希望永远用不上，但知道它…",
