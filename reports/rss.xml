@@ -5,7 +5,14 @@
     <link>https://webdrag0n.github.io/reports/</link>
     <description>Daily AI paper digests and Chinese AI media roundups.</description>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 28 Nov 2026 00:02:44 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 17:03:43 +0000</lastBuildDate>
+    <item>
+      <title>AI 科技日报 — 2026-11-29</title>
+      <link>https://webdrag0n.github.io/reports/media/daily_media_20261129.html</link>
+      <guid isPermaLink="true">https://webdrag0n.github.io/reports/media/daily_media_20261129.html</guid>
+      <pubDate>Sun, 29 Nov 2026 08:00:00 +0000</pubDate>
+      <description>国产算力再传捷报——8192 张昇腾训练出的 285B 大模型权重与 32 页训练手册全公开；黎曼猜想 AI 证明通过独立验证，陶哲轩亲自下场点评；具身智能赛道一边密集发布新模型，一边遭遇 VC 撤离与&quot;通用大模型跨维打击&quot;的路线之争；DeepSeek 账单更新引发收费猜想，200 亿美元天价 AI 自媒体刷新行业认知。</description>
+    </item>
     <item>
       <title>AI 论文速递 — 2026-11-28</title>
       <link>https://webdrag0n.github.io/reports/papers/daily_papers_20261128.html</link>

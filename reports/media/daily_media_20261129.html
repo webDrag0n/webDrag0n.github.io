@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 媒体日报 — 2026-11-29</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-secondary: #636e72;
+    --accent: #0984e3;
+    --border: #dfe6e9;
+    --tag-bg: #e8f4fd;
+    --tag-text: #0984e3;
+    --highlight: #ffeaa7;
+    --danger: #d63031;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  .header { text-align: center; padding: 40px 20px 30px; margin-bottom: 30px; }
+  .header .icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: var(--text); }
+  .header .date { font-size: 14px; color: var(--text-secondary); margin-top: 8px; }
+  .header .subtitle { font-size: 14px; color: var(--text-secondary); margin-top: 4px; }
+  .summary-banner {
+    background: var(--card-bg); border-radius: 12px; padding: 20px 24px;
+    margin-bottom: 24px; border-left: 4px solid var(--accent);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .summary-banner p { font-size: 15px; color: var(--text); }
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: 18px; font-weight: 700; color: var(--text);
+    margin-bottom: 14px; padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-title .emoji { margin-right: 6px; }
+  .card {
+    background: var(--card-bg); border-radius: 10px; padding: 18px 22px;
+    margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .source { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+  .card .title { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .card .title a { color: var(--accent); text-decoration: none; }
+  .card .title a:hover { text-decoration: underline; }
+  .card .summary { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
+  .card .comment { font-size: 13px; color: var(--text); background: #f1f6fb; border-radius: 8px; padding: 10px 14px; margin-bottom: 8px; }
+  .card .comment::before { content: "编辑点评 · "; font-weight: 700; color: var(--accent); }
+  .card .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .card .tag {
+    font-size: 12px; padding: 2px 10px; border-radius: 12px;
+    background: var(--tag-bg); color: var(--tag-text);
+  }
+  .card .tag.hot { background: #ffeaa7; color: #d63031; font-weight: 600; }
+  .insights {
+    background: var(--card-bg); border-radius: 12px; padding: 24px;
+    margin-top: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .insights h3 { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+  .insights p { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+  .footer {
+    text-align: center; font-size: 12px; color: #b2bec3;
+    margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="icon">🛰️</div>
+  <h1>AI 媒体日报</h1>
+  <div class="date">2026年11月29日 · 星期日</div>
+  <div class="subtitle">聚合机器之心 / 量子位 / 36氪 / 智东西 / 极客公园 / InfoQ / 少数派等昨日更新</div>
+</div>
+
+<div class="summary-banner">
+  <p><strong>📌 今日速览：</strong>国产算力再传捷报——8192 张昇腾训练出的 285B 大模型权重与 32 页训练手册全公开；黎曼猜想 AI 证明通过独立验证，陶哲轩亲自下场点评；具身智能赛道一边密集发布新模型，一边遭遇 VC 撤离与"通用大模型跨维打击"的路线之争；DeepSeek 账单更新引发收费猜想，200 亿美元天价 AI 自媒体刷新行业认知。</p>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🚀</span>大模型与算力</div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-29</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/513535.html">刚刚，8192张昇腾训出285B大模型！权重开源，32页训练手册全公开</a></div>
+    <div class="summary">基于纯国产昇腾算力集群完成 285B 参数模型训练，模型权重与完整训练手册同步开放，覆盖数据配比、并行策略与故障恢复细节。</div>
+    <div class="comment">把"炼丹手册"连同权重一起公开，比单纯刷榜更有行业价值——国产算力生态的可复制性，正是当下最稀缺的资产。</div>
+    <div class="tags"><span class="tag hot">头条</span><span class="tag">国产算力</span><span class="tag">开源</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-28</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/513555.html">谷歌Tibo亲授Gemini 4 Neon内部打开方式！第一步：删光旧规则</a></div>
+    <div class="summary">Google DeepMind 研究员 Tibo 分享 Gemini 4 Neon 的内部使用心法，核心思路是抛弃旧有提示词范式、按新模型的推理特性重新设计交互。</div>
+    <div class="comment">"删光旧规则"四个字值得每个提示词工程师细品——每一代基模跃迁，都意味着上一代的技巧资产归零。</div>
+    <div class="tags"><span class="tag">Gemini</span><span class="tag">使用技巧</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-28</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/512916.html">顶尖商用级AI视频每秒只要5毛！中国开源新势力拿下全球第一</a></div>
+    <div class="summary">国产开源视频生成模型以商用级画质把生成成本压到每秒约 0.5 元，并在权威榜单上登顶全球第一，大幅拉低视频内容的工业化门槛。</div>
+    <div class="comment">成本降到"按毛计费"，意味着 AI 视频从 demo 玩具正式进入流水线生产环节，内容行业的成本结构将被重写。</div>
+    <div class="tags"><span class="tag">视频生成</span><span class="tag">开源</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-28</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/513305.html">DeepSeek APP突然更新账单，网友：要收费了？</a></div>
+    <div class="summary">DeepSeek App 更新账单页面并调整使用额度，部分用户连续使用约两小时即触发限流，社区开始讨论其商业化走向。</div>
+    <div class="comment">免费换增长的阶段正在收尾，"限流+账单"是通向订阅制的标准前奏。对重度用户来说，是时候重新评估工具链的备选方案了。</div>
+    <div class="tags"><span class="tag">DeepSeek</span><span class="tag">商业化</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🤖</span>具身智能与机器人</div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-28</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/513227.html">刚刚，首个带跨任务空间记忆的原生基模开源！机器人端侧就能跑</a></div>
+    <div class="summary">业界首个具备跨任务空间记忆能力的原生基座模型开源发布，可在机器人端侧直接部署，让机器人跨场景复用对物理空间的理解。</div>
+    <div class="comment">空间记忆一直是具身智能的短板，端侧可跑+跨任务复用两个特性叠加，直接降低了家庭与商用场景的落地门槛。</div>
+    <div class="tags"><span class="tag hot">具身智能</span><span class="tag">开源</span><span class="tag">端侧部署</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-28</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/513125.html">具身公司抱团回应：通用大模型跨维打击？没那么简单</a></div>
+    <div class="summary">面对"通用大模型将跨维打击具身公司"的论断，多家头部具身智能企业公开回应，强调物理交互数据、硬件本体与场景 know-how 构成的护城河。</div>
+    <div class="comment">这场争论的本质是"数据从哪来"：仿真与真实世界之间的鸿沟，仍不是靠模型规模就能填平的。路线之争值得持续跟踪。</div>
+    <div class="tags"><span class="tag">行业争论</span><span class="tag">具身智能</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-28</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/513352.html">人形机器人开发者集合！众擎开放大小脑，10亿产业级生态支持计划也来了</a></div>
+    <div class="summary">众擎机器人宣布开放人形机器人"大小脑"技术栈，并推出 10 亿元规模的产业级生态支持计划，向开发者开放核心能力。</div>
+    <div class="comment">本体厂商开放"大小脑"等同手机行业的开放 ROM——生态位之争已经开始，先入场的开发者将吃到平台红利。</div>
+    <div class="tags"><span class="tag">人形机器人</span><span class="tag">开发者生态</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 / InfoQ · 2026-11-28</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/513211.html">蚂蚁灵波发布LingBot-Map 2.0，模型自己修正"空间记忆"，把地图画更准</a></div>
+    <div class="summary">蚂蚁灵波科技发布 LingBot-Map 2.0 与 LingBot-Navi 两大模型：前者实现单目视频流式三维重建并实时校正漂移，后者基于可复用空间记忆支持自然语言驱动的端到端导航。</div>
+    <div class="comment">"走偏"与"健忘"是长距离导航的两大顽疾，实时漂移校正+跨任务记忆复用的组合拳，让服务机器人走出实验室又近一步。</div>
+    <div class="tags"><span class="tag">空间智能</span><span class="tag">导航</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">🔬</span>AI for Science 与数学</div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-28</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/513484.html">最新：黎曼猜想证明通过独立验证！陶哲轩下场点评</a></div>
+    <div class="summary">此前由 AI 辅助完成的黎曼猜想证明代码通过独立验证，证明代码量一度暴砍 99.5% 至 7.6 万行；陶哲轩公开评论，称"AI 批量吐证明就像发电厂排核废料"，引发数学界对 AI 证明范式的大讨论。</div>
+    <div class="comment">验证通过是里程碑，但陶哲轩的"核废料"比喻同样值得深思：机器生成的证明若无法被人类理解，数学的"解释功能"将何去何从？</div>
+    <div class="tags"><span class="tag hot">黎曼猜想</span><span class="tag">AI数学</span><span class="tag">陶哲轩</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪 · 2026-11-29</div>
+    <div class="title"><a href="https://www.36kr.com/p/4087817299573129">AI发现物理学"大一统理论"？斯坦福学者联手GPT-6 Astra，提出量子引力新框架</a></div>
+    <div class="summary">斯坦福大学物理学家与 GPT-6 Astra 合作开展量子引力研究，提出新的理论框架，被视为 AI 参与前沿基础科学研究的标志性案例。</div>
+    <div class="comment">从"AI 辅助计算"到"AI 参与理论构建"，科研范式的重心正在移动。真正的问题是：人类物理学家还能在多大程度上"审稿"？</div>
+    <div class="tags"><span class="tag">AI4S</span><span class="tag">量子引力</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title"><span class="emoji">💼</span>行业观察与商业</div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-28</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/513577.html">200亿美元…史上最贵AI自媒体</a></div>
+    <div class="summary">一起涉及 AI 内容资产的天价交易浮出水面，标的估值高达 200 亿美元，被戏称为"史上最贵 AI 自媒体"，折射出 AI 内容资产定价体系的疯狂与泡沫争议。</div>
+    <div class="comment">当天价开始以"百亿"为单位计量内容资产，我们更应冷静追问：估值锚定的究竟是影响力、数据，还是单纯的流动性叙事？</div>
+    <div class="tags"><span class="tag">行业</span><span class="tag">资本</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">36氪 · 2026-11-29</div>
+    <div class="title"><a href="https://www.36kr.com/p/4087875673356934">具身智能还在等突破，VC已经换赛道了</a></div>
+    <div class="summary">多位人民币基金从业者透露，下半年开始明显减少具身智能项目的关注，资金正在向 AI 应用、AI4S 等回报周期更短的赛道迁移。</div>
+    <div class="comment">资本耐心与技术成熟周期错配，是硬科技赛道的常态。短期退烧未必是坏事——泡沫挤出后，真正扎实的数据闭环公司会浮出水面。</div>
+    <div class="tags"><span class="tag">创投</span><span class="tag">具身智能</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">量子位 · 2026-11-28</div>
+    <div class="title"><a href="https://www.qbitai.com/2026/11/513428.html">亏贼！卡帕西用Claude搓出"美国版《文明》"，网友直接玩成全球接力赛</a></div>
+    <div class="summary">Andrej Karpathy 用 Claude 在数小时内构建出以真实美国地理经济数据为底图的"文明"风格交互网页游戏，引发全球网友接力二创。</div>
+    <div class="comment">一个人+一个模型+七小时=一款全球传播的游戏。这不仅是编程民主化的注脚，也预示着小体量创意产品对中型工作室的挤压。</div>
+    <div class="tags"><span class="tag">Karpathy</span><span class="tag">Claude</span><span class="tag">Vibe Coding</span></div>
+  </div>
+
+  <div class="card">
+    <div class="source">极客公园 · 2026-11-28</div>
+    <div class="title"><a href="https://www.geekpark.net/news/374621">AI 硬件竞争白热化，OpenAI 反诉苹果窃密；iPhone 18 量产再度推迟</a></div>
+    <div class="summary">OpenAI 与苹果围绕硬件人才与机密的诉讼战升级；iPhone 18 量产再度推迟；何小鹏透露 IRON 机器人将打通全身触觉。多条硬件战线同时升温。</div>
+    <div class="comment">AI 公司的尽头似乎都是硬件——当模型能力趋同，承载模型的"身体"与"入口"就成了新的必争之地。</div>
+    <div class="tags"><span class="tag">AI硬件</span><span class="tag">OpenAI</span><span class="tag">苹果</span></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h3>📝 编辑点评</h3>
+  <p>这周末的 AI 圈有种奇妙的撕裂感：一边是 8192 张昇腾跑出 285B 大模型、黎曼猜想证明通过独立验证，技术叙事一路高歌；另一边是 VC 悄悄撤离具身赛道、DeepSeek 开始算账、200 亿美元的"最贵自媒体"刷新认知——资本的闹钟永远比技术响得早。最值得玩味的是陶哲轩那句"AI 批量吐证明就像发电厂排核废料"：当机器产出的知识多到人类无法消化，"理解"本身会不会成为新的稀缺资源？或许下一阶段的竞争力，不在于谁能生成更多，而在于谁能解释清楚。技术狂飙时，保持一份清醒的审视，比追赶每一个热点更重要。</p>
+</div>
+
+<div class="footer">
+  <p>AI Daily Digest · 生成于 2026-11-29 · 数据来源：量子位 / 36氪 / 极客公园 / 智东西 / InfoQ / 少数派等公开报道</p>
+</div>
+
+</div>
+</body>
+</html>
