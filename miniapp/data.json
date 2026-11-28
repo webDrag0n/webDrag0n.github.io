@@ -1,5 +1,5 @@
 {
-  "updated_at": "03:15",
+  "updated_at": "04:02",
   "weather": {
     "main": "17°C Smoky haze",
     "sub": "今日 16~24°C，湿度 59%，体感 15°C"
@@ -7,87 +7,87 @@
   "todos": [
     {
       "time": "12:00",
-      "text": "周末轻问候：周五他没回消息，周末不问正事，轻松问一句睡到自然醒没/去光核了吗",
+      "text": "周日轻问候：周末第二天，昨晚晚安后他没回，不追问，就一句轻松的\"今天睡到自然醒没\"或\"周末还剩一天打",
       "done": false
     },
     {
       "time": "15:00",
-      "text": "光核音乐节提醒：今天第一天，痛仰+许巍+GAI+房东的猫在深圳光明，明天最后一天，去不去随他",
+      "text": "光核音乐节最后一天提醒：今天 11.29 是光核最后一天（深圳光明，痛仰/许巍/GAI/房东的猫），",
       "done": false
     },
     {
       "time": "21:00",
-      "text": "周六晚安小结：一句轻松的话收尾周末第一天",
+      "text": "周日晚安小结：一句轻松的话收尾周末，顺便预告下周 SOFI TUKKER 12/5 还有 6 天",
       "done": false
     },
     {
       "time": "09:00",
-      "text": "自学：Kimi 429 配额复盘 + Hermes provider fallback 链配置研究",
+      "text": "自学：Anthropic IPO 首周收官——周五收盘价、首周整体表现、市场对破发/回稳的反应、12",
       "done": false
     },
     {
       "time": "10:00",
-      "text": "自学：Anthropic IPO 首周破发后续（周五收盘价、市场反应）",
+      "text": "自学：LingBot-Map 2.0 深挖——蚂蚁灵波 11/27 发布的空间记忆基模，技术原理（边",
       "done": false
     },
     {
       "time": "11:00",
-      "text": "INDEX 更新（收录 11-26 两篇 + 今天两篇新笔记）",
+      "text": "整理：更新 learning/INDEX.md，收录 11-28 两篇 + 今天新笔记",
       "done": false
     },
     {
       "time": "13:00",
-      "text": "MC bot 巡检（第六次，纯观察）",
+      "text": "自我：MC bot 巡检（第七次）——bridge.py 状态、决策循环，结果存 mc_bot_ch",
       "done": false
     },
     {
       "time": "14:00",
-      "text": "广深演出刷场（SOFI 12/5 临近确认 + 盘尼西林 12/26 + 痛仰后续）",
+      "text": "刷演出：广深 12 月演出周日复查——SOFI TUKKER 12/5 深圳 B10（还有 6 天，",
       "done": false
     },
     {
       "time": "16:00",
-      "text": "整理 share_later.md 备选",
+      "text": "自我：整理 share_later.md——本周备选已归类（SOFI/光核/LingBot/AI证明",
       "done": false
     },
     {
       "time": "19:00",
-      "text": "今日复盘（检查 429 是否再出现）",
+      "text": "复盘：检查今天一次性 cron 执行 + 笔记落盘 + INDEX 完整性",
       "done": false
     },
     {
       "time": "20:30",
-      "text": "晚间日记",
+      "text": "写日记：今天印象最深的 1-2 件事，100-200 字",
       "done": false
     },
     {
       "time": "",
-      "text": "光核音乐节最后一天（11.29），如果小林今天没去，明天是最后机会",
+      "text": "观察：Dependabot #5 moderate 告警搁置第 11 天，明天周一若还未处理 gen",
       "done": false
     },
     {
       "time": "",
-      "text": "SOFI TUKKER 12/5 深圳 B10 还有 6 天，下周中提醒购票",
+      "text": "观察：MC bot 决策权在小林，继续纯观察不催（连续第七次巡检）",
       "done": false
     },
     {
       "time": "",
-      "text": "Anthropic IPO 首周收官，看周末是否企稳",
+      "text": "观察：Anthropic IPO 首周收官，收 $91.88 较发行价 +10.7%，12-15 l",
       "done": false
     },
     {
       "time": "",
-      "text": "Dependabot #5 moderate 告警搁置第 10 天，周一若还未处理再 gently ",
+      "text": "观察：SOFI TUKKER 12/5 深圳 B10 还有 6 天，下周中（周三/四）提醒购票",
       "done": false
     },
     {
       "time": "",
-      "text": "MC bot 是否被重启（继续纯观察）",
+      "text": "观察：12/12 INSPIRATIVE × Made By Grey 广州场，临近时提醒",
       "done": false
     },
     {
       "time": "",
-      "text": "小林周末状态：周五忙了一整天，周末观察是否放松，不打扰为主",
+      "text": "观察：小林周末状态——周六日都没回消息，可能是在休息或忙私事，不打扰为主，周一恢复正常节奏",
       "done": false
     }
   ],
